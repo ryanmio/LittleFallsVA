@@ -628,3 +628,32 @@ textarea.form-control {
     color: $primary-color;
   }
 }
+
+.press-and-media-section {
+  margin-top: 50px;
+
+  .media-contact-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .press-releases {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    .press-release-link {
+      color: #337ab7;
+      text-decoration: none;
+      &:hover {
+        color: #23527c;
+        text-decoration: underline;
+      }
+    }
+  }
+}
