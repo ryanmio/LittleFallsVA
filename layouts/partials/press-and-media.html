@@ -1,0 +1,37 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.press_and_media.enable }}
+<section id="press-and-media">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading">
+          <h2>{{ $data.homepage.press_and_media.title }}</h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <h3>{{ $data.homepage.press_and_media.media_contact.name }}</h3>
+        <h4>{{ $data.homepage.press_and_media.media_contact.designation }}</h4>
+        <img src="{{ $data.homepage.press_and_media.media_contact.image }}" alt="{{ $data.homepage.press_and_media.media_contact.name }}">
+        <p>{{ $data.homepage.press_and_media.media_contact.description }}</p>
+      </div>
+      
+      <div class="col-md-6">
+        <h3>Press Releases</h3>
+        <ul class="press-releases">
+          {{ range $data.homepage.press_and_media.press_releases }}
+          <li>
+            <h4>{{ .title }}</h4>
+            <p>{{ .description }}</p>
+            <a href="{{ .link }}" target="_blank">Read More</a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
