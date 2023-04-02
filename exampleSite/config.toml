@@ -1,6 +1,6 @@
 ################################### Default Configuration ############################
-baseurl = "https://demo.gethugothemes.com/vex/examplesite/"
-title = "Vex | hugo landing page template"
+baseurl = "https://littlefallsva.com"
+title = "Little Falls VA"
 theme = "vex-hugo"
 # post excert
 summarylength = "20"
