@@ -1,5 +1,5 @@
 ---
-title: "Our Latest Post"
+title: "Test Post"
 description : "this is a meta description"
 draft: false
 ---

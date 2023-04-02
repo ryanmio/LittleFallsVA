@@ -1,126 +1,91 @@
 ############################# banner ############################
 banner:
   enable: true
-  title: "Believe in Technology, Make the change"
-  content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, modi fugit in veritatis labore perferendis. Minima hic at, nostrum nihil!"
+  title: "Little Falls, VA"
+  content: "Little Falls, VA: A Name for All"
   image: "images/watch.png"
   button:
     enable: true
-    label: "Browse All Products"
+    label: "Join the Cause"
     link: "products/"
 
 ############################# Feature ############################
 features:
   enable: true
-  title: "Our Core Features"
+  title: "Why Rename to Little Falls?"
   image: "images/watch-2.png"
 
   # feature at the left of the image
   left_side:
     # feature item loop
-    - title: "Smooth Touch"
+    - title: "Inclusivity"
       icon: "tf-ion-ios-alarm-outline"
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+      content: "Removing the connection to a specific church and religion, making the city more welcoming to people of all faiths and beliefs."
 
-      # feature item loop
-    - title: "Elegant Design"
+    - title: "Historical and Geographical Connections"
       icon: "tf-ion-ios-bell-outline"
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+      content: "Emphasizing the city's proximity to the great falls of the Potomac River and its origins at the intersection of significant Native American trails."
 
-      # feature item loop
-    - title: "Easy Pricing"
+    - title: "Growth"
       icon: "tf-ion-ios-cart-outline"
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+      content: "Adopting the name \"Little Falls\" symbolizes a fresh start and a commitment to embracing continued growth and development in the city."
 
   # feature at the right of the image
   right_side:
     # feature item loop
-    - title: "Smooth Touch"
+    - title: "Community Engagement"
       icon: "tf-ion-ios-alarm-outline"
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-
-      # feature item loop
-    - title: "Elegant Design"
-      icon: "tf-ion-ios-bell-outline"
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-
-      # feature item loop
-    - title: "Easy Pricing"
-      icon: "tf-ion-ios-cart-outline"
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-
-############################# promo ############################
-promo:
-  enable: true
-  image: "images/watch.png"
-  title: "Designed by professional , the benefit for creative gigs"
-  content:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vel labore, deleniti minima
-    nisi, velit atque quaerat impedit ea maxime sunt accusamus at obcaecati dolor iure iusto omnis quis eum.
-    <br><br>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis commodi odit, illo, qui aliquam dol"
-
-############################# About Product #######################
-about_product:
-  enable: true
-  title: "Why Choose Apple Watch"
-  items:
-    # about product item loop
-    - image: "images/showcase/showcase-4.png"
-      title: "Lorem ipsum dolor sit amet."
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, sed, assumenda. Tenetur
-        sed esse, voluptas voluptate est veniam numquam, quis magni. Architecto minus suscipit
-        quas, quo harum deserunt consequatur cumque!"
-      button:
-        enable: false
-        label: "Check Features"
-        link: "#/"
-
-    # about product item loop
-    - image: "images/showcase/showcase-3.png"
-      title: "Lorem ipsum dolor sit amet."
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, sed, assumenda. Tenetur
-        sed esse, voluptas voluptate est veniam numquam, quis magni. Architecto minus suscipit
-        quas, quo harum deserunt consequatur cumque!"
-      button:
-        enable: false
-        label: "Check Features"
-        link: "#/"
+      content: "Encouraging residents and the surrounding community to participate in the decision-making process for a more inclusive city."
 
 #################################### Products ########################
 products:
   enable: true
-  title: "Checkout Our All Products"
+  title: "Support the Movement with Little Falls Merchandise"
+  items:
+    - image: "[T-shirt image]"
+      title: "Little Falls T-Shirt"
+      content: "Show your support for the renaming movement with a comfortable and stylish Little Falls T-shirt."
+
+    - image: "[Tote bag image]"
+      title: "Little Falls Tote Bag"
+      content: "Carry your essentials in a reusable Little Falls tote bag, spreading awareness for the cause."
+
+    - image: "[Button image]"
+      title: "Little Falls Button"
+      content: "Wear a Little Falls button to show your support and spark conversations about the renaming movement."
+
+#################################### Testimonial ####################
+testimonial:
+  enable: true
+  title: "Press Releases and Media Contacts"
+  testimonial_item:
+    - name: "[Your Name]"
+      designation: "Organizer and Media Contact"
+      image: "images/avater.png"
+      content: "For media inquiries or to request an interview, please contact [Your Name] at [Your Email Address]."
+
+    - name: "Press Release: Renaming Movement Launch"
+      designation: "Press Release"
+      image: "images/avater.png"
+      content: "Announcing the launch of the movement to rename Falls Church to Little Falls, inviting community members to get involved."
+
+    - name: "Press Release: Community Outreach Events"
+      designation: "Press Release"
+      image: "images/avater.png"
+      content: "Upcoming community outreach events to engage residents in the renaming movement and foster conversations about inclusivity."
 
 ################################## Subscription ###################
 subscription:
   enable: true
   bg_image: "images/call-to-action.jpg"
-  title: "Get Product Updates"
-  content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod"
-  placeholder: "Your Email Address Here"
+  title: "Stay Updated and Get Involved"
+  content: "Sign up for our newsletter to receive updates on the renaming movement, upcoming events, and ways you can help create a more inclusive city."
+  placeholder: "Enter your email address"
 
-############################## Testimonial ##########################
-testimonial:
-  enable: true
-  title: "Watch Review"
-  testimonial_item:
-    # testimonial item loop
-    - name: "Jonathon Andrew"
-      designation: "CEO, Themefisher"
-      image: "images/avater.png"
-      content: "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."
+############################## Promo (disabled) ##########################
+promo:
+enable: false
 
-    # testimonial item loop
-    - name: "Jonathon Andrew"
-      designation: "CEO, Themefisher"
-      image: "images/avater.png"
-      content: "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."
-
-    # testimonial item loop
-    - name: "Jonathon Andrew"
-      designation: "CEO, Themefisher"
-      image: "images/avater.png"
-      content: "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."
+############################## About Product (disabled) #######################
+about_product:
+enable: false
