@@ -60,11 +60,10 @@ press_and_media:
   title: "Press Releases and Media Contacts"
 
   media_contact:
-    name: "[Your Name]"
+    name: "Press and Media Inquiries"
     designation: "Organizer and Media Contact"
-    image: "[Your Image]"
-    email: "[Your Email Address]"
-    description: "For media inquiries or to request an interview, please contact [Your Name] at [Your Email Address]."
+    email: "hello@littlefallsva.com"
+    description: "For media inquiries or to request an interview, please contact us at hello@littlefallsva.com."
 
   press_releases:
     - title: "Renaming Movement Launch"
