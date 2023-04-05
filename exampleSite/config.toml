@@ -47,46 +47,30 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "Products"
-url = "products/"
+name = "Press & Media"
+url = "press/"
 weight = 2
 
 [[menu.main]]
-name = "Blog"
-url = "blog/"
+name = "Merch"
+url = "store/"
 weight = 3
-
-[[menu.main]]
-name = "Review"
-pre = "#"
-url = "testimonial"
-weight = 4
-
-[[menu.main]]
-name = "Contact"
-url = "contact/"
-weight = 5
 
 # footer menu
 [[menu.footer]]
-name = "Blog"
-url = "blog/"
+name = "Press & Media"
+url = "press/"
 weight = 1
-
-[[menu.footer]]
-name = "Contact"
-url = "contact/"
-weight = 2
 
 [[menu.footer]]
 name = "Terms & Conditions"
 url = "terms-conditions/"
-weight = 3
+weight = 2
 
 [[menu.footer]]
 name = "Privacy Policy"
 url = "privacy-policy/"
-weight = 4
+weight = 3
 
 
 ########################### Default parameters ##########################
@@ -95,7 +79,7 @@ logo = "images/logo.png"
 logo_width = "100px"
 # Meta data
 description = "This is meta description"
-author = "Themefisher"
+author = "Little Falls"
 # currency
 currency = "$"
 # contact form action
