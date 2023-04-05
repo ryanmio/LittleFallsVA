@@ -55,12 +55,13 @@ store:
       content: "Wear a Little Falls button to show your support and spark conversations about the renaming movement."
 
 ############################## Press and Media ##########################
-press:
+press_and_media:
   enable: true
   title: "Press Releases and Media Contacts"
 
   media_contact:
     name: "Press and Media Inquiries"
+    designation: "Organizer and Media Contact"
     email: "hello@littlefallsva.com"
     description: "For media inquiries or to request an interview, please contact us at hello@littlefallsva.com."
 
