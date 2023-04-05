@@ -38,7 +38,7 @@ features:
       content: "Encouraging residents and the surrounding community to participate in the decision-making process for a more inclusive city."
 
 #################################### Products ########################
-products:
+store:
   enable: true
   title: "Support the Movement with Little Falls Merchandise"
   items:
