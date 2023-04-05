@@ -65,14 +65,12 @@ press_and_media:
     email: "hello@littlefallsva.com"
     description: "For media inquiries or to request an interview, please contact us at hello@littlefallsva.com."
 
-  press_releases:
-    - title: "Renaming Movement Launch"
-      description: "Announcing the launch of the movement to rename Falls Church to Little Falls, inviting community members to get involved."
-      link: "[Link to Press Release]"
+press_releases:
+  - title: "Renaming Movement Launch"
+    slug: "renaming-movement-launch"
+  - title: "Community Outreach Events"
+    slug: "community-outreach-events"
 
-    - title: "Community Outreach Events"
-      description: "Upcoming community outreach events to engage residents in the renaming movement and foster conversations about inclusivity."
-      link: "[Link to Press Release]"
 
 ################################## Subscription ###################
 subscription:

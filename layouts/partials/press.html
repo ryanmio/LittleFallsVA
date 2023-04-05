@@ -21,11 +21,11 @@
       <div class="col-md-8">
         <h3>Press Releases</h3>
         <ul class="press-releases">
-          {{ range $data.homepage.press_and_media.press_releases }}
+          {{ range (where .Site.RegularPages "Section" "press") }}
           <li>
-            <h4>{{ .title }}</h4>
-            <p>{{ .description }}</p>
-            <a href="{{ .link }}" target="_blank" class="press-release-link">Read More</a>
+            <h4>{{ .Title }}</h4>
+            <p>{{ .Params.description }}</p>
+            <a href="{{ .Permalink }}" class="press-release-link">Read More</a>
           </li>
           {{ end }}
         </ul>
