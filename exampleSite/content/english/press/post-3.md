@@ -1,13 +1,11 @@
 ---
-title: "Release 2"
+title: "A Name For All"
 date: 2019-10-17T11:22:16+06:00
 image: "images/showcase/showcase-2.png"
 description : "The Committee for Little Falls is proud to announce the formation of a new sub-committee, focused on recruiting volunteers, maintaining the website, and drafting press releases to drive support for the proposed name change from Falls Church, Virginia to Little Falls."
 draft: false
 weight: 8
 ---
-
-FOR IMMEDIATE RELEASE
 
 FOR IMMEDIATE RELEASE
 
