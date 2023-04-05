@@ -656,4 +656,19 @@ textarea.form-control {
       }
     }
   }
+
+  .press-and-media-left,
+  .press-and-media-right {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 992px) {
+    .press-and-media-left {
+      margin-right: 30px;
+    }
+
+    .press-and-media-right {
+      margin-left: 30px;
+    }
+  }
 }
