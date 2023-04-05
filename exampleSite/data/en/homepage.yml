@@ -55,7 +55,7 @@ store:
       content: "Wear a Little Falls button to show your support and spark conversations about the renaming movement."
 
 ############################## Press and Media ##########################
-press_and_media:
+press:
   enable: true
   title: "Press Releases and Media Contacts"
 
