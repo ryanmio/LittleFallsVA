@@ -11,14 +11,14 @@
       </div>
     </div>
     
-    <div class="row">
-      <div class="col-md-4 press-and-media-left">
+    <div class="row gx-md-5">
+      <div class="col-md-4">
         <h3>{{ $data.homepage.press_and_media.media_contact.name }}</h3>
         <h4>{{ $data.homepage.press_and_media.media_contact.designation }}</h4>
         <p>{{ $data.homepage.press_and_media.media_contact.description }}</p>
       </div>
       
-      <div class="col-md-8 press-and-media-right">
+      <div class="col-md-8">
         <h3>Press Releases</h3>
         <ul class="press-releases">
           {{ range first 3 (where .Site.RegularPages.ByWeight "Section" "press") }}
