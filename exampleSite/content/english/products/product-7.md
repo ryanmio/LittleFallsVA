@@ -4,13 +4,14 @@ date: 2019-10-17T11:22:16+06:00
 images: 
   - "images/showcase/showcase-7.png"
   - "images/showcase/grayshirt.png"
+  - "images/showcase/greentshirt.jpg"
+  - "images/showcase/tanshirt.jpg"
 
 # meta description
 description : "this is meta description"
 
 # product Price
-price: "30.00"
-discount_price: "25.00"
+price: "25.00"
 
 # product variation
 colors : ["blue","white","green","tan"]
