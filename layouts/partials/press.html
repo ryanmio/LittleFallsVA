@@ -21,7 +21,7 @@
       <div class="col-md-8">
         <h3>Press Releases</h3>
         <ul class="press-releases">
-          {{ range (where .Site.RegularPages "Section" "press") }}
+          {{ range first 3 (where .Site.RegularPages.ByWeight "Section" "press") }}
           <li>
             <h4>{{ .Title }}</h4>
             <p>{{ .Params.description }}</p>
