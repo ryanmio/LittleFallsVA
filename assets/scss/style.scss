@@ -59,7 +59,7 @@ h2,
 h3,
 .h3 {
   font-size: 23px;
-  line-height: 35px;
+  line-height: 25px;
 }
 
 h4,
@@ -654,21 +654,6 @@ textarea.form-control {
         color: #23527c;
         text-decoration: underline;
       }
-    }
-  }
-
-  .press-and-media-left,
-  .press-and-media-right {
-    margin-bottom: 30px;
-  }
-
-  @media (min-width: 992px) {
-    .press-and-media-left {
-      margin-right: 30px;
-    }
-
-    .press-and-media-right {
-      margin-left: 30px;
     }
   }
 }
