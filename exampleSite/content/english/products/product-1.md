@@ -21,4 +21,4 @@ button_link: "#"
 draft: false
 ---
 
-Grab a Little Falls sticker to show your support and spark conversations about the renaming movement.
+Grab a Little Falls sticker to show your support and spark conversations about the renaming movement. On sale during launch!
