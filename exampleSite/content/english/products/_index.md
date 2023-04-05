@@ -1,6 +1,6 @@
 ---
-title: "All latest Smart Watch"
-description : "this is a meta description"
+title: "Little Falls movement store"
+description : "little falls movement store"
 draft: false
 ---
 
