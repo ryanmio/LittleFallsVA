@@ -657,3 +657,9 @@ textarea.form-control {
     }
   }
 }
+.custom-gutter > .col-md-4,
+.custom-gutter > .col-md-8 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
