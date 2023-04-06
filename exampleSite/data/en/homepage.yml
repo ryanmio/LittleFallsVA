@@ -18,24 +18,32 @@ features:
   # feature at the left of the image
   left_side:
     # feature item loop
-    - title: "Inclusivity"
-      icon: "tf-ion-ios-alarm-outline"
-      content: "Removing the connection to a specific church and religion, making the city more welcoming to people of all faiths and beliefs."
+    - title: "Acknowledging Indigenous Heritage"
+      icon: "feather-icon"
+      content: "Recognizing the native peoples who inhabited the region before colonization and celebrating their unique cultural contributions."
 
-    - title: "Historical and Geographical Connections"
+    - title: "Promoting Environmental Stewardship"
       icon: "tf-ion-ios-bell-outline"
-      content: "Emphasizing the city's proximity to the great falls of the Potomac River and its origins at the intersection of significant Native American trails."
+      content: "Drawing attention to the natural beauty of the Potomac River and its falls, fostering a sense of responsibility to protect our natural resources."
 
-    - title: "Growth"
+    - title: "Encouraging Dialogue"
       icon: "tf-ion-ios-cart-outline"
-      content: "Adopting the name \"Little Falls\" symbolizes a fresh start and a commitment to embracing continued growth and development in the city."
+      content: "Creating opportunities for residents to engage in meaningful conversations about our city's history, values, and future direction."
 
   # feature at the right of the image
   right_side:
     # feature item loop
-    - title: "Community Engagement"
+    - title: "Unity and Identity"
       icon: "tf-ion-ios-alarm-outline"
-      content: "Encouraging residents and the surrounding community to participate in the decision-making process for a more inclusive city."
+      content: "Fostering a sense of shared identity and unity among residents by embracing a name that reflects our community's collective spirit."
+
+    - title: "Cultural Appreciation"
+      icon: "tf-ion-ios-bell-outline"
+      content: "Showcasing the diverse cultural influences that have shaped our city over time and supporting ongoing cultural exchange and enrichment."
+
+    - title: "Educational Opportunities"
+      icon: "tf-ion-ios-cart-outline"
+      content: "Encouraging exploration and learning about the area's rich history, fostering a deeper understanding of our community's origins and development."
 
 #################################### Products ########################
 store:
