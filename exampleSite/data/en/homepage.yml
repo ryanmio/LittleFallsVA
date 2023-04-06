@@ -19,7 +19,7 @@ features:
   left_side:
     # feature item loop
     - title: "Acknowledging Indigenous Heritage"
-      icon: "feather-icon"
+      icon: "custom-icon1" 
       content: "Recognizing the native peoples who inhabited the region before colonization and celebrating their unique cultural contributions."
 
     - title: "Promoting Environmental Stewardship"
