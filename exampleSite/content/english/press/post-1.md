@@ -1,6 +1,7 @@
 ---
 title: "Renaming Movement Launch"
 date: 2023-04-02
+image: "images/showcase/logo.png"
 description : "Little Falls, VA - April 15, 2023 - The Committee for Little Falls, a dedicated group of residents, announces the launch of a new initiative to change the name of Falls Church, Virginia, to Little Falls."
 weight: 10
 ---
@@ -15,4 +16,4 @@ The proposed name change aims to distance the city from its association with a s
 
 The Committee for Little Falls invites residents of the city and those living in the surrounding areas that share Falls Church mailing addresses to sign the petition and support the renaming initiative. The committee is committed to engaging with the community, addressing concerns, and working together towards a more inclusive future for all.
 
-/###
+\#\#\#
