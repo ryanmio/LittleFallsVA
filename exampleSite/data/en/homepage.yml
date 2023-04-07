@@ -19,30 +19,30 @@ features:
 left_side:
   # feature item loop
   - title: "Inclusivity"
-    icon: images/interfaith-icon.png
+    icon: "custom-icon2"
     content: "Removing the connection to a specific church and religion, making the city more welcoming to people of all faiths, beliefs, and non-believers."
 
   - title: "Honoring Indigenous Heritage"
-    icon: images/feather-icon-1.png
+    icon: "custom-icon2"
     content: "Highlighting the significance of the Native American peoples who inhabited the area and valued the Little Falls of the Potomac River."
 
   - title: "Embracing Diversity"
-    icon: images/diversity-icon.png
+    icon: "custom-icon3"
     content: "Acknowledging the city's evolution from a single colonial church to a community encompassing various denominations and secular perspectives."
 
 # feature at the right of the image
 right_side:
   # feature item loop
   - title: "Reconnecting with Geographical Roots"
-    icon: images/geographical-roots-icon.png
+    icon: "custom-icon4"
     content: "Drawing attention to the city's proximity to the Little Falls and its origins at the intersection of significant Native American trails."
 
   - title: "Recognizing Enslaved People's Contributions"
-    icon: images/chains-icon.png
+    icon: "custom-icon5"
     content: "Acknowledging the enslaved labor that played a crucial role in building the original wooden church and the current brick Falls Church."
 
   - title: "Fostering Community Dialogue"
-    icon: images/dialogue-icon.png
+    icon: "custom-icon6"
     content: "Encouraging residents to participate in the decision-making process and engage in meaningful conversations about the city's history and future."
 
 
