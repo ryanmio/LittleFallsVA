@@ -8,12 +8,12 @@ summarylength = "20"
 googleAnalytics = "" # Ex: UA-123-45
 # disable language
 disableLanguages = [] # disable language from here
+pluralizelisttitles = false
 
 # unsafe html
 [markup.goldmark.renderer]
 unsafe = true
 
-pluralizelisttitles = false
 
 #################################### Plugins ##########################################
 
