@@ -7,7 +7,7 @@ banner:
   button:
     enable: true
     label: "Join the Cause"
-    link: "products/"
+    link: "petition/"
 
 ############################# Feature ############################
 features:
