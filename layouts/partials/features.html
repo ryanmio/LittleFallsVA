@@ -11,24 +11,27 @@
         </div>
       </div>
       <div class="col-md-4">
-<!-- Left side features -->
-{{ range .left_side }}
-<div class="mb-40 text-center text-md-left">
-  <img class="d-inline-block custom-icon mb-10" src="{{ .icon | absURL }}" alt="">
-  <h4 class="font-weight-bold mb-2">{{ .title | markdownify }}</h4>
-  <p>{{ .content | markdownify }}</p>
-</div>
-{{ end }}
-
-<!-- Right side features -->
-{{ range .right_side }}
-<div class="mb-40 text-center text-md-left">
-  <img class="d-inline-block custom-icon mb-10" src="{{ .icon | absURL }}" alt="">
-  <h4 class="font-weight-bold mb-2">{{ .title | markdownify }}</h4>
-  <p>{{ .content | markdownify }}</p>
-</div>
-{{ end }}
-
+        <!-- Left side features -->
+        {{ range .left_side }}
+        <div class="mb-40 text-center text-md-left">
+          <img class="d-inline-block custom-icon mb-10" src="{{ .icon | absURL }}" alt="{{ .title }}">
+          <h4 class="font-weight-bold mb-2">{{ .title | markdownify }}</h4>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+        {{ end }}
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="{{ .image }}" alt="{{ .title }}">
+      </div>
+      <div class="col-md-4">
+        <!-- Right side features -->
+        {{ range .right_side }}
+        <div class="mb-40 text-center text-md-left">
+          <img class="d-inline-block custom-icon mb-10" src="{{ .icon | absURL }}" alt="{{ .title }}">
+          <h4 class="font-weight-bold mb-2">{{ .title | markdownify }}</h4>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+        {{ end }}
       </div>
     </div>
   </div><!-- .container close -->
