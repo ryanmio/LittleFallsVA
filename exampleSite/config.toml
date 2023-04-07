@@ -13,7 +13,7 @@ disableLanguages = [] # disable language from here
 [markup.goldmark.renderer]
 unsafe = true
 
-pluralizelisttitles = false
+pluralizeListTitles:         false
 
 #################################### Plugins ##########################################
 
