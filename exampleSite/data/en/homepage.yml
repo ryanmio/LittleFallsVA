@@ -2,7 +2,7 @@
 banner:
   enable: true
   title: "Little Falls, VA"
-  content: "Little Falls, VA: A Name for All"
+  content: "A Name for All"
   image: "images/watch.png"
   button:
     enable: true
