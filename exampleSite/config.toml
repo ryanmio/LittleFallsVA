@@ -71,14 +71,19 @@ url = "press/"
 weight = 1
 
 [[menu.footer]]
+name = "About Us"
+url = "about-us/"
+weight = 2
+
+[[menu.footer]]
 name = "Terms & Conditions"
 url = "terms-conditions/"
-weight = 2
+weight = 3
 
 [[menu.footer]]
 name = "Privacy Policy"
 url = "privacy-policy/"
-weight = 3
+weight = 4
 
 
 ########################### Default parameters ##########################
