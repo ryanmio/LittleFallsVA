@@ -1,3 +1,5 @@
+/* global window, document, console, fetch, URLSearchParams, $, jQuery */
+
 // Preloader js    
 $(window).on('load', function () {
   $('.preloader').fadeOut(100);
@@ -49,3 +51,49 @@ $(window).on('load', function () {
   });
 
 })(jQuery);
+
+document.getElementById("petition-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  var firstName = document.getElementById("first-name").value;
+  var email = document.getElementById("email").value;
+  var zipCode = document.getElementById("zip-code").value;
+
+  var data = {
+    api_key: "V3llrOygSJMujjCNQ8k9Q1px",
+    key: "ywPjjLTOwbzGf2kojonJBTBROiYlFSNKWxeAh48GTfE",
+    json: JSON.stringify({
+      sequential: 1,
+      contact_type: "Individual",
+      first_name: firstName,
+      email: email,
+      location_type_id: 1,
+      postal_code: zipCode,
+    }),
+  };
+
+  fetch("https://[your_civicrm_domain]/civicrm/extern/rest.php?entity=Contact&action=create", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams(data),
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (data.is_error) {
+        // eslint-disable-next-line no-console  
+        console.error("Error creating contact:", data.error_message);
+      } else {
+        // eslint-disable-next-line no-console
+          console.log("Contact created successfully:", data);
+        // Add your code to update the counter here
+      }
+    })
+    .catch(function (error) {
+      // eslint-disable-next-line no-console
+      console.error("Error submitting form:", error);
+    });
+});
