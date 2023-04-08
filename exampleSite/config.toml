@@ -63,6 +63,7 @@ weight = 3
   name = "Petition"
   url = "/petition/"
   weight = 4
+  extra_classes = "btn btn-primary btn-lg ml-3"
 
 # footer menu
 [[menu.footer]]
