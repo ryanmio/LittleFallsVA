@@ -5,10 +5,29 @@
         <div class="col-lg-8 mx-auto">
           <h1>Sign the Petition</h1>
           <p>Sign our petition and support the renaming movement!</p>
-          <!-- Embed the CiviCRM petition form using an iframe or the provided embed code -->
-        <script src="http://crm.littlefallsva.com/wp-content/uploads/civicrm/inlay-e4ee8053b1d8.js" data-inlay-id="e4ee8053b1d8" ></script>
+
+          <!-- Custom Petition Form -->
+          <form id="petition-form">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="zip-code">Zip Code:</label>
+            <input type="text" id="zip-code" name="zip-code" required>
+
+            <button type="submit">Sign the Petition</button>
+          </form>
+          <div id="counter"></div>
+          <!-- End of Custom Petition Form -->
+
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    // Add the JavaScript code here
+  </script>
 {{ end }}
