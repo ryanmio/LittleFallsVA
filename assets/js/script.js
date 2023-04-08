@@ -72,6 +72,8 @@ document.getElementById("petition-form").addEventListener("submit", function (ev
     }),
   };
 
+ // console.log(data); // Log the data object to the console
+
   fetch("https://crm.littlefallsva.com/civicrm/extern/rest.php?entity=Contact&action=create", {
     method: "POST",
     headers: {
@@ -80,9 +82,11 @@ document.getElementById("petition-form").addEventListener("submit", function (ev
     body: new URLSearchParams(data),
   })
     .then(function (response) {
+    //  console.log(response); // Log the response object to the console
       return response.json();
     })
     .then(function (data) {
+   //   console.log(data); // Log the parsed JSON data to the console
       if (data.is_error) {
         // eslint-disable-next-line no-console  
         console.error("Error creating contact:", data.error_message);
@@ -93,6 +97,7 @@ document.getElementById("petition-form").addEventListener("submit", function (ev
       }
     })
     .catch(function (error) {
+    //  console.log(error); // Log the error to the console
       // eslint-disable-next-line no-console
       console.error("Error submitting form:", error);
     });
