@@ -72,7 +72,7 @@ document.getElementById("petition-form").addEventListener("submit", function (ev
     }),
   };
 
-  fetch("https://crm.littlefallsva.com/civicrm/extern/rest.php?entity=Contact&action=create", {
+  fetch("http://crm.littlefallsva.com/civicrm/extern/rest.php?entity=Contact&action=create", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
