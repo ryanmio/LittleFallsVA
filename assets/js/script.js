@@ -71,3 +71,42 @@ var sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ8pwb9De5aggU6
 
     updateSignaturesCount();
     setInterval(updateSignaturesCount, 60000); // Update every 1 minute
+
+
+
+document.getElementById('petition-form').addEventListener('submit', submitForm);
+
+document.getElementById('petition-form').addEventListener('submit', submitForm);
+
+function submitForm(event) {
+    event.preventDefault();
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+
+    var sheetId = '1AgA0OYRkBZRK-MkkQWvnqjRbEyIO9nhflJ14htPgD4k';
+    var sheetName = 'Sheet1';
+    var apiKey = 'AIzaSyAusLooLkp9pIhZoobqxNfBGQBLCGq2zYo';
+
+    var newRowData = {
+        "range": sheetName,
+        "majorDimension": "ROWS",
+        "values": [
+            [name, email]
+        ]
+    };
+
+     fetch('https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/' + sheetName + ':append?valueInputOption=RAW&insertDataOption=INSERT_ROWS&key=' + apiKey, {
+        method: 'POST',
+        body: JSON.stringify(newRowData),
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        })
+    }).then(function(response) {
+        if (response.ok) {
+            alert('Petition signed successfully!');
+            document.getElementById('petition-form').reset();
+        } else {
+            alert('Error signing the petition. Please try again later.');
+        }
+    });
+}
