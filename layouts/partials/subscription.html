@@ -9,7 +9,8 @@
         <h2 class="subheading text-white">{{ .title | markdownify }}</h2>
         <p class="text-white">{{ .content | markdownify }}</p>
         <div class="input-group">
-          <form id="subscription-form" class="w-100">
+          <form action="https://formsubmit.co/el/boweno" method="POST" class="w-100">
+            <input type="hidden" name="_subject" value="New subscription">
             <input type="email" id="email" class="form-control" name="email" placeholder="{{ .placeholder }}"
               required>
             <button class="btn btn-main btn-submit" type="submit" name="subscribe">{{i18n "subscribe"}}</button>
@@ -19,24 +20,5 @@
     </div>
   </div>
 </section><!-- #call-to-action close -->
-
-<script>
-  document.getElementById('subscription-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    var formData = {
-      email: document.getElementById('email').value
-    };
-
-    google.script.run.withSuccessHandler(function(response) {
-      if (response.success) {
-        alert('Subscription successful!');
-        document.getElementById('subscription-form').reset();
-      } else {
-        alert('Error subscribing. Please try again later.');
-      }
-    }).submitSubscriptionForm(formData);
-  });
-</script>
 {{- end }}
 {{- end }}
