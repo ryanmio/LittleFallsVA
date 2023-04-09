@@ -54,7 +54,8 @@ $(window).on('load', function () {
 })(jQuery);
 
 var sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ8pwb9De5aggU61jQwEP5SQs9VfnA7_YQPskQn0TzI6cIG7O_vHP9q2wL1F22wa9sleGhJor106EH/pub?gid=0&single=true&output=csv';
-var signaturesCountElements = document.getElementsByClassName('signaturesCount');
+var signaturesCountTopElement = document.getElementById('signaturesCount');
+var signaturesCountBottomElement = document.getElementById('signaturesCountBottom');
 
 function updateSignaturesCount() {
   var xhr = new XMLHttpRequest();
@@ -62,9 +63,8 @@ function updateSignaturesCount() {
     if (xhr.readyState === 4 && xhr.status === 200) {
       var lines = xhr.responseText.split('\n');
       var signaturesCount = lines.length - 1; // Subtract the header line
-      for (var i = 0; i < signaturesCountElements.length; i++) {
-        signaturesCountElements[i].innerText = signaturesCount;
-      }
+      signaturesCountTopElement.innerText = signaturesCount;
+      signaturesCountBottomElement.innerText = signaturesCount;
     }
   };
   xhr.open('GET', sheetUrl, true);
