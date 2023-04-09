@@ -106,7 +106,7 @@ function submitForm(event) {
         })
     }).then(function(response) {
         if (response.ok) {
-            alert('Petition signed successfully!');
+            alert('Petition signed!');
             document.getElementById('petition-form').reset();
         } else {
             alert('Error signing the petition. Please try again later.');
