@@ -1,4 +1,5 @@
 /* global window, document, console, fetch, URLSearchParams, $, jQuery */
+/* eslint no-unused-vars: "off", no-undef: "off" */
 
 // Preloader js    
 $(window).on('load', function () {
@@ -52,53 +53,21 @@ $(window).on('load', function () {
 
 })(jQuery);
 
-document.getElementById("petition-form").addEventListener("submit", function (event) {
-  event.preventDefault();
+var sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ8pwb9De5aggU61jQwEP5SQs9VfnA7_YQPskQn0TzI6cIG7O_vHP9q2wL1F22wa9sleGhJor106EH/pub?gid=0&single=true&output=csv';
+    var signaturesCountElement = document.getElementById('signaturesCount');
 
-  var firstName = document.getElementById("first-name").value;
-  var email = document.getElementById("email").value;
-  var zipCode = document.getElementById("zip-code").value;
+    function updateSignaturesCount() {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var lines = xhr.responseText.split('\n');
+          var signaturesCount = lines.length - 1; // Subtract the header line
+          signaturesCountElement.innerText = signaturesCount;
+        }
+      };
+      xhr.open('GET', sheetUrl, true);
+      xhr.send();
+    }
 
-  var data = {
-    api_key: "V3llrOygSJMujjCNQ8k9Q1px",
-    key: "ywPjjLTOwbzGf2kojonJBTBROiYlFSNKWxeAh48GTfE",
-    json: JSON.stringify({
-      sequential: 1,
-      contact_type: "Individual",
-      first_name: firstName,
-      email: email,
-      location_type_id: 1,
-      postal_code: zipCode,
-    }),
-  };
-
- // console.log(data); // Log the data object to the console
-
-  fetch("https://crm.littlefallsva.com/civicrm/extern/rest.php?entity=Contact&action=create", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: new URLSearchParams(data),
-  })
-    .then(function (response) {
-    //  console.log(response); // Log the response object to the console
-      return response.json();
-    })
-    .then(function (data) {
-   //   console.log(data); // Log the parsed JSON data to the console
-      if (data.is_error) {
-        // eslint-disable-next-line no-console  
-        console.error("Error creating contact:", data.error_message);
-      } else {
-        // eslint-disable-next-line no-console
-          console.log("Contact created successfully:", data);
-        // Add your code to update the counter here
-      }
-    })
-    .catch(function (error) {
-    //  console.log(error); // Log the error to the console
-      // eslint-disable-next-line no-console
-      console.error("Error submitting form:", error);
-    });
-});
+    updateSignaturesCount();
+    setInterval(updateSignaturesCount, 60000); // Update every 1 minute
