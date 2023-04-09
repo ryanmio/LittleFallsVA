@@ -85,7 +85,7 @@ function submitForm(event) {
 
     var sheetId = '1AgA0OYRkBZRK-MkkQWvnqjRbEyIO9nhflJ14htPgD4k';
     var sheetName = 'Sheet1';
-    var apiKey = 'AIzaSyAusLooLkp9pIhZoobqxNfBGQBLCGq2zYo';
+    var apiKey = 'AIzaSyD1G33z5ybsx9XoKbqWqx2QvtHgY9s0pc0';
 
     var newRowData = {
         "range": sheetName,
