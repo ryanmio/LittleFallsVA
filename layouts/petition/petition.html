@@ -6,7 +6,16 @@
           <h1>Sign the Petition</h1>
           <p>Sign our petition and support the renaming movement!</p>
 <div id="counter">Signatures: <span id="signaturesCount">0</span></div>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfsu1wpfvSt9ERMpvb0BsvqUV-wkvpEUqZsLZXouvK4NPWjug/viewform?embedded=true" width="640" height="574" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+ <form id="petition-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <button type="submit">Sign Petition</button>
+    </form>
+    <script src="submit-form.js"></script>
             <br><br><br><br>
           <!-- End of Custom Petition Form -->
 
