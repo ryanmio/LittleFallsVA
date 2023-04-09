@@ -6,7 +6,7 @@ banner:
   image: "images/watch.png"
   button:
     enable: true
-    label: "Join the Cause"
+    label: "Sign the Petition"
     link: "petition/"
 
 ############################# Feature ############################
