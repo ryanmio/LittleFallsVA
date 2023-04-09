@@ -79,8 +79,6 @@ setInterval(updateSignaturesCount, 60000); // Update every 1 minute
 
 document.getElementById('petition-form').addEventListener('submit', submitForm);
 
-document.getElementById('petition-form').addEventListener('submit', submitForm);
-
 function submitForm(event) {
     event.preventDefault();
     var name = document.getElementById('name').value;
@@ -115,25 +113,29 @@ function submitForm(event) {
 }
 
 // Subscription form submission
-document.getElementById("subscription-form").addEventListener("submit", function (event) {
-  event.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('petition-form').addEventListener('submit', submitForm);
 
-  var formData = new FormData(event.target);
-  formData.append("_subject", "New subscription");
+    document.getElementById("subscription-form").addEventListener("submit", function (event) {
+        event.preventDefault();
 
-  fetch("https://formsubmit.co/ajax/boweno", {
-    method: "POST",
-    body: formData,
-  })
-    .then(function (response) {
-      if (response.ok) {
-        document.getElementById("subscription-message").innerText = "Subscription successful!";
-      } else {
-        throw new Error("Form submission failed");
-      }
-    })
-    .catch(function (error) {
-      //console.error("Error:", error);
-      document.getElementById("subscription-message").innerText = "Subscription failed. Please try again.";
+        var formData = new FormData(event.target);
+        formData.append("_subject", "New subscription");
+
+        fetch("https://formsubmit.co/ajax/boweno", {
+            method: "POST",
+            body: formData,
+        })
+            .then(function (response) {
+                if (response.ok) {
+                    document.getElementById("subscription-message").innerText = "Subscription successful!";
+                } else {
+                    throw new Error("Form submission failed");
+                }
+            })
+            .catch(function (error) {
+                //console.error("Error:", error);
+                document.getElementById("subscription-message").innerText = "Subscription failed. Please try again.";
+            });
     });
 });
