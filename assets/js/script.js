@@ -114,28 +114,30 @@ function submitForm(event) {
 
 // Subscription form submission
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('petition-form').addEventListener('submit', submitForm);
+  var subscriptionFormElement = document.getElementById("subscription-form");
+  var subscriptionMessageElement = document.getElementById("subscription-message");
 
-    document.getElementById("subscription-form").addEventListener("submit", function (event) {
-        event.preventDefault();
+  if (subscriptionFormElement && subscriptionMessageElement) {
+    subscriptionFormElement.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-        var formData = new FormData(event.target);
-        formData.append("_subject", "New subscription");
+      var formData = new FormData(event.target);
+      formData.append("_subject", "New subscription");
 
-        fetch("https://formsubmit.co/ajax/boweno", {
-            method: "POST",
-            body: formData,
+      fetch("https://formsubmit.co/ajax/boweno", {
+        method: "POST",
+        body: formData,
+      })
+        .then(function (response) {
+          if (response.ok) {
+            subscriptionMessageElement.innerText = "Subscription successful!";
+          } else {
+            throw new Error("Form submission failed");
+          }
         })
-            .then(function (response) {
-                if (response.ok) {
-                    document.getElementById("subscription-message").innerText = "Subscription successful!";
-                } else {
-                    throw new Error("Form submission failed");
-                }
-            })
-            .catch(function (error) {
-                //console.error("Error:", error);
-                document.getElementById("subscription-message").innerText = "Subscription failed. Please try again.";
-            });
+        .catch(function (error) {
+          subscriptionMessageElement.innerText = "Subscription failed. Please try again.";
+        });
     });
+  }
 });
