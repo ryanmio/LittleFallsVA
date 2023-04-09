@@ -20,12 +20,33 @@
             </div>
           </div>
 
-          <h2>Fact Sheet</h2>
-          <p>Access key facts and figures about our organization, products, or events.</p>
-          <pre id="fact-sheet" contenteditable="true">
-          <p> fact sheet here </p>
-          </pre>
-          <button onclick="copyToClipboard('fact-sheet')">Copy Fact Sheet</button>
+          <!-- Fact Sheet -->
+            <h2>Fact Sheet</h2>
+            <p>Access key facts and figures about our organization, products, or events.</p>
+            <embed src="/downloads/fact-sheet.pdf" type="application/pdf" width="100%" height="600px">
+            <div class="download-fact-sheet">
+              <a href="/downloads/fact-sheet.pdf" download class="btn btn-primary">Download Fact Sheet</a>
+            </div>
+
+            <!-- Quotes -->
+            <h2>Quotes</h2>
+            <p>Here are some quotes that you can copy and use in your articles:</p>
+
+            <pre id="quote-1" contenteditable="true">
+              <p> Quote 1 here </p>
+            </pre>
+            <button onclick="copyToClipboard('quote-1')">Copy Quote 1</button>
+
+            <pre id="quote-2" contenteditable="true">
+              <p> Quote 2 here </p>
+            </pre>
+            <button onclick="copyToClipboard('quote-2')">Copy Quote 2</button>
+
+            <pre id="quote-3" contenteditable="true">
+              <p> Quote 3 here </p>
+            </pre>
+            <button onclick="copyToClipboard('quote-3')">Copy Quote 3</button>
+
 
           <h2>Infographics</h2>
           <p>Download our informative infographics for use in your articles or publications.</p>
@@ -50,14 +71,21 @@
             <h2>Downloadables</h2>
             <p>Access our downloadable resources to help you with your coverage:</p>
 
-            <div class="downloadables">
-              <a href="/downloads/press-release-template.docx" download class="btn btn-primary">Download Press Release Template</a>
-              <a href="/downloads/key-statistics.pdf" download class="btn btn-primary">Download Key Statistics</a>
+            <div class="row">
+              <div class="col-md-6">
+                <a href="/downloads/press-release-template.docx" download class="btn btn-primary">Download Press Release Template</a>
+              </div>
+              <div class="col-md-6">
+                <a href="/downloads/key-statistics.pdf" download class="btn btn-primary">Download Key Statistics</a>
+              </div>
               <!-- Add more download links here as needed -->
-              <a href="/downloads/resource-1.pdf" download class="btn btn-primary">Download Resource 1</a>
-              <a href="/downloads/resource-2.pdf" download class="btn btn-primary">Download Resource 2</a>
+              <div class="col-md-6">
+                <a href="/downloads/resource-1.pdf" download class="btn btn-primary">Download Resource 1</a>
+              </div>
+              <div class="col-md-6">
+                <a href="/downloads/resource-2.pdf" download class="btn btn-primary">Download Resource 2</a>
+              </div>
             </div>
-
             
         </div>
       </div>
