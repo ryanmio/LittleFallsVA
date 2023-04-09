@@ -5,7 +5,6 @@
         {{ $paginator := .Paginate (where .Site.RegularPages "Section" "press") }}
         {{ range $paginator.Pages }}
           <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-          <p class="post-meta">{{ .Date.Format "January 2, 2006" }}</p>
           <p>{{ .Params.description }}</p>
         {{ end }}
       </div>
