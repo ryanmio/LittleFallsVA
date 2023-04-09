@@ -113,3 +113,27 @@ function submitForm(event) {
         }
     });
 }
+
+// Subscription form submission
+document.getElementById("subscription-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  var formData = new FormData(event.target);
+  formData.append("_subject", "New subscription");
+
+  fetch("https://formsubmit.co/ajax/boweno", {
+    method: "POST",
+    body: formData,
+  })
+    .then(function (response) {
+      if (response.ok) {
+        document.getElementById("subscription-message").innerText = "Subscription successful!";
+      } else {
+        throw new Error("Form submission failed");
+      }
+    })
+    .catch(function (error) {
+      //console.error("Error:", error);
+      document.getElementById("subscription-message").innerText = "Subscription failed. Please try again.";
+    });
+});
