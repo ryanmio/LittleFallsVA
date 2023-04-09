@@ -4,7 +4,7 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         {{ $paginator := .Paginate (where .Site.RegularPages "Section" "press") }}
         {{ range $paginator.Pages }}
-          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <br><h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
           <p>{{ .Params.description }}</p>
         {{ end }}
       </div>
