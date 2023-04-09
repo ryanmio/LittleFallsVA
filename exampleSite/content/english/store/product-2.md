@@ -12,7 +12,7 @@ description : "this is meta description"
 price: "32.00"
 
 # product variation
-colors : ["blue","black","gray"]
+colors : ["blue","pink"]
 sizes : ["small","medium","large","XL","XXL"]
 
 # button link if you don't want to use snipcart. empty link will not show button
