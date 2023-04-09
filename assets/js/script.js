@@ -54,23 +54,26 @@ $(window).on('load', function () {
 })(jQuery);
 
 var sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ8pwb9De5aggU61jQwEP5SQs9VfnA7_YQPskQn0TzI6cIG7O_vHP9q2wL1F22wa9sleGhJor106EH/pub?gid=0&single=true&output=csv';
-    var signaturesCountElement = document.getElementById('signaturesCount');
+var signaturesCountElements = document.getElementsByClassName('signaturesCount');
 
-    function updateSignaturesCount() {
-      var xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          var lines = xhr.responseText.split('\n');
-          var signaturesCount = lines.length - 1; // Subtract the header line
-          signaturesCountElement.innerText = signaturesCount;
-        }
-      };
-      xhr.open('GET', sheetUrl, true);
-      xhr.send();
+function updateSignaturesCount() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var lines = xhr.responseText.split('\n');
+      var signaturesCount = lines.length - 1; // Subtract the header line
+      for (var i = 0; i < signaturesCountElements.length; i++) {
+        signaturesCountElements[i].innerText = signaturesCount;
+      }
     }
+  };
+  xhr.open('GET', sheetUrl, true);
+  xhr.send();
+}
 
-    updateSignaturesCount();
-    setInterval(updateSignaturesCount, 60000); // Update every 1 minute
+updateSignaturesCount();
+setInterval(updateSignaturesCount, 60000); // Update every 1 minute
+
 
 
 
