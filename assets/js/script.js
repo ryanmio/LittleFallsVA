@@ -119,8 +119,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var subscriptionFormElement = document.getElementById("subscription-form");
   var subscriptionMessageElement = document.getElementById("subscription-message");
-  // ...
-});
 
   if (subscriptionFormElement && subscriptionMessageElement) {
     subscriptionFormElement.addEventListener("submit", function (event) {
@@ -151,4 +149,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
   }
-});
+}); // Close the DOMContentLoaded event listener
