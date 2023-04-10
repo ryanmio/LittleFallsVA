@@ -10,11 +10,14 @@
         <p class="text-white">{{ .content | markdownify }}</p>
         <div class="input-group">
             <p id="subscription-message" class="text-white"></p>
-            <form id="subscription-form" method="POST" class="w-100">
-              <input type="hidden" name="_subject" value="New subscription">
-              <input type="email" id="email" class="form-control" name="email" placeholder="{{ .placeholder }}" required>
-              <button class="btn btn-main btn-submit" type="submit" name="subscribe">{{i18n "subscribe"}}</button>
+            <form id="subscription-form">
+              <div class="input-group"> <!-- Add this div -->
+                <input type="email" name="email" id="subscription-email" class="form-control" placeholder="Your Email Address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </div> <!-- Close the div -->
+              <p id="subscription-message" class="text-center mt-2"></p>
             </form>
+
         </div><!-- /input-group -->
       </div>
     </div>
