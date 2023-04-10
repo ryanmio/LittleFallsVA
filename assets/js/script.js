@@ -9,7 +9,6 @@ $(window).on('load', function () {
 (function ($) {
   'use strict';
 
-  
   // product Slider
   $('.product-image-slider').slick({
     autoplay: false,
@@ -53,31 +52,65 @@ $(window).on('load', function () {
 
 })(jQuery);
 
-var sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ8pwb9De5aggU61jQwEP5SQs9VfnA7_YQPskQn0TzI6cIG7O_vHP9q2wL1F22wa9sleGhJor106EH/pub?gid=0&single=true&output=csv';
-var signaturesCountTopElement = document.getElementById('signaturesCount');
-var signaturesCountBottomElement = document.getElementById('signaturesCountBottom');
+document.addEventListener('DOMContentLoaded', function () {
+  // Petition form
+  var petitionFormElement = document.getElementById('petition-form');
+  if (petitionFormElement) {
+    petitionFormElement.addEventListener('submit', submitForm);
+  }
 
-function updateSignaturesCount() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      var lines = xhr.responseText.split('\n');
-      var signaturesCount = lines.length - 1; // Subtract the header line
-      signaturesCountTopElement.innerText = signaturesCount;
-      signaturesCountBottomElement.innerText = signaturesCount;
+  // Subscription form
+  var subscriptionFormElement = document.getElementById("subscription-form");
+  var subscriptionMessageElement = document.getElementById("subscription-message");
+
+  if (subscriptionFormElement && subscriptionMessageElement) {
+    subscriptionFormElement.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var formData = new FormData(event.target);
+      formData.append("_subject", "New subscription");
+
+      fetch("https://formsubmit.co/ajax/boweno", {
+        method: "POST",
+        body: formData,
+      })
+        .then(function (response) {
+          if (response.ok) {
+            subscriptionMessageElement.innerText = "Subscription successful!";
+          } else {
+            throw new Error("Form submission failed");
+          }
+        })
+        .catch(function (error) {
+          subscriptionMessageElement.innerText = "Subscription failed. Please try again.";
+        });
+    });
+  }
+
+  // Signatures counter
+  var sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ8pwb9De5aggU61jQwEP5SQs9VfnA7_YQPskQn0TzI6cIG7O_vHP9q2wL1F22wa9sleGhJor106EH/pub?gid=0&single=true&output=csv';
+  var signaturesCountTopElement = document.getElementById('signaturesCount');
+  var signaturesCountBottomElement = document.getElementById('signaturesCountBottom');
+
+  if (signaturesCountTopElement && signaturesCountBottomElement) {
+    function updateSignaturesCount() {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var lines = xhr.responseText.split('\n');
+          var signaturesCount = lines.length - 1; // Subtract the header line
+          signaturesCountTopElement.innerText = signaturesCount;
+          signaturesCountBottomElement.innerText = signaturesCount;
+        }
+      };
+      xhr.open('GET', sheetUrl, true);
+      xhr.send();
     }
-  };
-  xhr.open('GET', sheetUrl, true);
-  xhr.send();
-}
 
-updateSignaturesCount();
-setInterval(updateSignaturesCount, 60000); // Update every 1 minute
-
-
-
-
-document.getElementById('petition-form').addEventListener('submit', submitForm);
+    updateSignaturesCount();
+    setInterval(updateSignaturesCount, 60000); // Update every 1 minute
+  }
+}); // Close the DOMContentLoaded event listener
 
 function submitForm(event) {
     event.preventDefault();
@@ -111,42 +144,3 @@ function submitForm(event) {
         }
     });
 }
-
-// Subscription form submission
-document.addEventListener('DOMContentLoaded', function () {
-  // eslint-disable-next-line no-console
-  console.log("DOMContentLoaded event fired"); // Add this line to check if the event is triggered
-
-  var subscriptionFormElement = document.getElementById("subscription-form");
-  var subscriptionMessageElement = document.getElementById("subscription-message");
-
-  if (subscriptionFormElement && subscriptionMessageElement) {
-    subscriptionFormElement.addEventListener("submit", function (event) {
-      // eslint-disable-next-line no-console
-      console.log("Form submission triggered"); // Log when the form is submitted
-      event.preventDefault();
-
-      var formData = new FormData(event.target);
-      formData.append("_subject", "New subscription");
-
-      fetch("https://formsubmit.co/ajax/boweno", {
-        method: "POST",
-        body: formData,
-      })
-        .then(function (response) {
-          // eslint-disable-next-line no-console
-          console.log("Form submission response:", response); // Log the response from the server
-          if (response.ok) {
-            subscriptionMessageElement.innerText = "Subscription successful!";
-          } else {
-            throw new Error("Form submission failed");
-          }
-        })
-        .catch(function (error) {
-          // eslint-disable-next-line no-console
-          console.log("Form submission error:", error); // Log any errors that occur during form submission
-          subscriptionMessageElement.innerText = "Subscription failed. Please try again.";
-        });
-    });
-  }
-}); // Close the DOMContentLoaded event listener
