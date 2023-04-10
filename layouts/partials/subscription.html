@@ -9,14 +9,11 @@
         <h2 class="subheading text-white">{{ .title | markdownify }}</h2>
         <p class="text-white">{{ .content | markdownify }}</p>
         <div class="input-group">
-            <p id="subscription-message" class="text-white"></p>
-            <form id="subscription-form">
-              <div class="input-group"> <!-- Add this div -->
-                <input type="email" name="email" id="subscription-email" class="form-control" placeholder="Your Email Address" required>
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-              </div> <!-- Close the div -->
-              <p id="subscription-message" class="text-center mt-2"></p>
-            </form>
+        <form id="subscription-form" class="position-relative" method="POST">
+          <input type="email" name="email" id="subscription-email" class="form-control" placeholder="Your Email Address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+          <p id="subscription-message" class="text-center mt-2 position-absolute w-100" style="top: 100%;"></p>
+        </form>
 
         </div><!-- /input-group -->
       </div>

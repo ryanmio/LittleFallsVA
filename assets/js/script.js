@@ -52,6 +52,20 @@ $(window).on('load', function () {
 
 })(jQuery);
 
+function updateSignaturesCount() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var lines = xhr.responseText.split('\n');
+      var signaturesCount = lines.length - 1; // Subtract the header line
+      signaturesCountTopElement.innerText = signaturesCount;
+      signaturesCountBottomElement.innerText = signaturesCount;
+    }
+  };
+  xhr.open('GET', sheetUrl, true);
+  xhr.send();
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   // Petition form
   var petitionFormElement = document.getElementById('petition-form');
@@ -93,24 +107,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var signaturesCountBottomElement = document.getElementById('signaturesCountBottom');
 
   if (signaturesCountTopElement && signaturesCountBottomElement) {
-    function updateSignaturesCount() {
-      var xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          var lines = xhr.responseText.split('\n');
-          var signaturesCount = lines.length - 1; // Subtract the header line
-          signaturesCountTopElement.innerText = signaturesCount;
-          signaturesCountBottomElement.innerText = signaturesCount;
-        }
-      };
-      xhr.open('GET', sheetUrl, true);
-      xhr.send();
-    }
-
     updateSignaturesCount();
     setInterval(updateSignaturesCount, 60000); // Update every 1 minute
   }
 }); // Close the DOMContentLoaded event listener
+
 
 function submitForm(event) {
     event.preventDefault();
