@@ -119,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (subscriptionFormElement && subscriptionMessageElement) {
     subscriptionFormElement.addEventListener("submit", function (event) {
+     // console.log("Form submission triggered"); // Log when the form is submitted
       event.preventDefault();
 
       var formData = new FormData(event.target);
@@ -129,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
         body: formData,
       })
         .then(function (response) {
+       //   console.log("Form submission response:", response); // Log the response from the server
           if (response.ok) {
             subscriptionMessageElement.innerText = "Subscription successful!";
           } else {
@@ -136,8 +138,10 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         })
         .catch(function (error) {
+        //  console.log("Form submission error:", error); // Log any errors that occur during form submission
           subscriptionMessageElement.innerText = "Subscription failed. Please try again.";
         });
     });
   }
 });
+
