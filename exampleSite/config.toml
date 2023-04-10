@@ -95,8 +95,6 @@ description = "This is meta description"
 author = "Little Falls"
 # currency
 currency = "$"
-# contact form action
-contact_form_action = "#" # contact form works with https://formspree.io
 
 # Preloader
 [params.preloader]
