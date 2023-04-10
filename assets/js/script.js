@@ -114,12 +114,18 @@ function submitForm(event) {
 
 // Subscription form submission
 document.addEventListener('DOMContentLoaded', function () {
+  // eslint-disable-next-line no-console
+  console.log("DOMContentLoaded event fired"); // Add this line to check if the event is triggered
+
   var subscriptionFormElement = document.getElementById("subscription-form");
   var subscriptionMessageElement = document.getElementById("subscription-message");
+  // ...
+});
 
   if (subscriptionFormElement && subscriptionMessageElement) {
     subscriptionFormElement.addEventListener("submit", function (event) {
-      //console.log("Form submission triggered"); // Log when the form is submitted
+      // eslint-disable-next-line no-console
+      console.log("Form submission triggered"); // Log when the form is submitted
       event.preventDefault();
 
       var formData = new FormData(event.target);
@@ -130,7 +136,8 @@ document.addEventListener('DOMContentLoaded', function () {
         body: formData,
       })
         .then(function (response) {
-          //console.log("Form submission response:", response); // Log the response from the server
+          // eslint-disable-next-line no-console
+          console.log("Form submission response:", response); // Log the response from the server
           if (response.ok) {
             subscriptionMessageElement.innerText = "Subscription successful!";
           } else {
@@ -138,6 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         })
         .catch(function (error) {
+          // eslint-disable-next-line no-console
           console.log("Form submission error:", error); // Log any errors that occur during form submission
           subscriptionMessageElement.innerText = "Subscription failed. Please try again.";
         });
