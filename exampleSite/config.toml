@@ -125,3 +125,7 @@ contentDir = "content/Spanish"
 weight = 2
 # copyright
 copyright = "©2023 Committe for Little Falls"
+
+
+[permalinks]
+  press = "/press/release/:year/:month/:day/:slug/"
