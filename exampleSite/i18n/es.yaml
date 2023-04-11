@@ -1,20 +1,20 @@
 - id: "add_to_cart"
-  translation: "Add to Cart"
-  
+  translation: "Añadir al carrito"
+
 - id: "send"
-  translation: "Send Now"
-  
+  translation: "Enviar ahora"
+
 - id: "subscribe"
-  translation: "Subscribe"
-  
+  translation: "Suscribirse"
+
 - id: "read_more"
-  translation: "Read More"
-  
+  translation: "Leer más"
+
 - id: "subscribe"
-  translation: "Subscribe"
-  
+  translation: "Suscribirse"
+
 - id: "subscribe"
-  translation: "Subscribe"
-  
+  translation: "Suscribirse"
+
 - id: "subscribe"
-  translation: "Subscribe"
+  translation: "Suscribirse"
