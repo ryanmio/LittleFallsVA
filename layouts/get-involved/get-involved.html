@@ -1,45 +1,73 @@
 {{ define "main" }}
+  <style>
+    .get-involved-section h2 {
+      margin-top: 50px;
+    }
+    .position-list {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .position-list li {
+      margin-bottom: 15px;
+    }
+    .social-button {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .scrolling-container {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      margin-bottom: 20px;
+    }
+    .scrolling-container img {
+      margin-right: 10px;
+    }
+  </style>
+
   <section class="get-involved-section">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
+          <br><hr>
+          <h1>Get Involved</h1>
+
+          <h2>Our Plan</h2>
+          <div class="scrolling-container">
+            <img src="/images/our-plan/plan-1.jpg" alt="Plan 1">
+            <img src="/images/our-plan/plan-2.jpg" alt="Plan 2">
+            <img src="/images/our-plan/plan-3.jpg" alt="Plan 3">
+          </div>
+
           <h2>Get Involved in the Little Falls Movement</h2>
           <p>Placeholder copy</p>
 
           <h2>Available Positions</h2>
           <p>If you are willing to volunteer your talents, our movement is looking for more support:</p>
-          <ul>
+          <ul class="position-list">
             <li>
               Press Officer: Responsible for managing media relations and promoting our cause to the public.
-              <a href="mailto:hello@littlefallsva.com?subject=Press Officer">I'm interested</a>
+              <a href="mailto:hello@littlefallsva.com?subject=Press Officer">I'm interested 📧»</a>
             </li>
             <li>
               Social Media Director: Oversees our social media presence and engages with the community online.
-              <a href="mailto:hello@littlefallsva.com?subject=Social Media Director">I'm interested</a>
+              <a href="mailto:hello@littlefallsva.com?subject=Social Media Director">I'm interested 📧»</a>
             </li>
             <li>
               Graphic Designer: Creates visually appealing graphics for our promotional materials and social media.
-              <a href="mailto:hello@littlefallsva.com?subject=Graphic Designer">I'm interested</a>
+              <a href="mailto:hello@littlefallsva.com?subject=Graphic Designer">I'm interested 📧»</a>
             </li>
             <li>
               Community Organizer: Organizes events, rallies, and other community activities to support our cause.
-              <a href="mailto:hello@littlefallsva.com?subject=Community Organizer">I'm interested</a>
+              <a href="mailto:hello@littlefallsva.com?subject=Community Organizer">I'm interested 📧»</a>
             </li>
           </ul>
 
-          <h2>Share on Social Media</h2>
+                    <h2>Share on Social Media</h2>
           <p>Help spread the word about the Little Falls movement by sharing on your favorite social media platforms:</p>
-          <ul>
-            <li>
-              <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Site.BaseURL }}" target="_blank" rel="noopener noreferrer">Share on Facebook</a>
-            </li>
-            <li>
-              <a href="https://twitter.com/intent/tweet?url={{ .Site.BaseURL }}&text=Join%20the%20Little%20Falls%20movement%20and%20help%20rename%20Falls%20Church,%20Virginia%20to%20Little%20Falls!" target="_blank" rel="noopener noreferrer">Share on Twitter</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Site.BaseURL }}&title=Join%20the%20Little%20Falls%20movement&summary=Help%20rename%20Falls%20Church,%20Virginia%20to%20Little%20Falls!" target="_blank" rel="noopener noreferrer">Share on LinkedIn</a>
-            </li>
-          </ul>
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Site.BaseURL }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary social-button">Share on Facebook</a>
+          <a href="https://twitter.com/intent/tweet?url={{ .Site.BaseURL }}&text=Join%20the%20Little%20Falls%20movement%20and%20help%20rename%20Falls%20Church,%20Virginia%20to%20Little%20Falls!" target="_blank" rel="noopener noreferrer" class="btn btn-primary social-button">Share on Twitter</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Site.BaseURL }}&title=Join%20the%20Little%20Falls%20movement&summary=Help%20rename%20Falls%20Church,%20Virginia%20to%20Little%20Falls!" target="_blank" rel="noopener noreferrer" class="btn btn-primary social-button">Share on LinkedIn</a>
         </div>
       </div>
     </div>
