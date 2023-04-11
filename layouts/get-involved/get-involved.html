@@ -66,15 +66,15 @@
 
                  <h2>Share on Social Media</h2>
             <p>Help spread the word about the Little Falls movement by sharing on your favorite social media platforms:</p>
-            <input type="text" readonly value="I'm supporting the Little Falls movement to rename Falls Church, VA! Join us at {{ .Site.BaseURL }}" style="width: 100%; margin-bottom: 5px;">
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Site.BaseURL }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary social-button">Share on Facebook</a>
+            <input type="text" readonly value="I'm supporting the Little Falls movement to rename Falls Church, VA! Learn more at littlefallsva.com" style="width: 100%; margin-bottom: 5px;">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://littlefallsva.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary social-button">Share on Facebook</a>
             <br><br>
-            <input type="text" readonly value="Join the Little Falls movement and help rename Falls Church, VA to Little Falls! {{ .Site.BaseURL }}" style="width: 100%; margin-bottom: 5px;">
-            <a href="https://twitter.com/intent/tweet?url={{ .Site.BaseURL }}&text=Join%20the%20Little%20Falls%20movement%20and%20help%20rename%20Falls%20Church,%20Virginia%20to%20Little%20Falls!" target="_blank" rel="noopener noreferrer" class="btn btn-primary social-button">Share on Twitter</a>
+            <input type="text" readonly value="Join the Little Falls movement and help rename Falls Church, VA to Little Falls! Learn more at littlefallsva.com" style="width: 100%; margin-bottom: 5px;">
+            <a href="https://twitter.com/intent/tweet?url=https://littlefallsva.com&text=Join%20the%20Little%20Falls%20movement%20and%20help%20rename%20Falls%20Church,%20Virginia%20to%20Little%20Falls!" target="_blank" rel="noopener noreferrer" class="btn btn-primary social-button">Share on Twitter</a>
             <br><br>
             <!-- Note: Nextdoor does not provide a direct sharing API or URL. Instead, users can copy the text and paste it into a Nextdoor post manually. -->
-            <input type="text" id="nextdoor-text" readonly value="Support the Little Falls movement to rename Falls Church, VA! Learn more and join us at {{ .Site.BaseURL }}" style="width: 100%; margin-bottom: 5px;">
-            <button onclick="copyToClipboard('nextdoor-text')" class="btn btn-primary social-button">Copy Text for Nextdoor</button>
+            <input type="text" id="nextdoor-text" readonly value="Support the Little Falls movement to rename Falls Church, VA! Learn more and join us at littlefallsva.com" style="width: 100%; margin-bottom: 5px;">
+            <button onclick="copyAndOpenNextdoor('nextdoor-text')" class="btn btn-primary social-button">Copy Text for Nextdoor</button>
 
             <script>
               function copyToClipboard(elementId) {
@@ -83,10 +83,14 @@
                 document.execCommand('copy');
                 alert('Copied to Clipboard');
               }
-            </script>
 
-        </div>
-      </div>
-    </div>
-  </section>
-{{ end }}
+              function copyAndOpenNextdoor(elementId) {
+                copyToClipboard(elementId);
+                window.open('https://nextdoor.com', '_blank');
+              }
+            </script>
+            </div>
+            </div>
+            </div>
+            </section>
+            {{ end }}
