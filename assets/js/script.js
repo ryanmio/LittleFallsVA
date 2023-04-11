@@ -101,15 +101,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Signatures counter
-  var sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ8pwb9De5aggU61jQwEP5SQs9VfnA7_YQPskQn0TzI6cIG7O_vHP9q2wL1F22wa9sleGhJor106EH/pub?gid=0&single=true&output=csv';
-  var signaturesCountTopElement = document.getElementById('signaturesCount');
-  var signaturesCountBottomElement = document.getElementById('signaturesCountBottom');
+// Signatures counter
+var sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ8pwb9De5aggU61jQwEP5SQs9VfnA7_YQPskQn0TzI6cIG7O_vHP9q2wL1F22wa9sleGhJor106EH/pub?gid=0&single=true&output=csv';
+var signaturesCountTopElement = document.getElementById('signaturesCount');
+var signaturesCountBottomElement = document.getElementById('signaturesCountBottom');
 
-  if (signaturesCountTopElement && signaturesCountBottomElement) {
-    updateSignaturesCount();
-    setInterval(updateSignaturesCount, 60000); // Update every 1 minute
-  }
+function updateSignaturesCount() {
+  fetch(sheetUrl)
+    .then(function (response) {
+      return response.text();
+    })
+    .then(function (csvData) {
+      var signatures = csvData.trim().split('\n');
+      var count = signatures.length - 1; // Subtract 1 to exclude the header row
+      if (signaturesCountTopElement) {
+        signaturesCountTopElement.innerText = count;
+      }
+      if (signaturesCountBottomElement) {
+        signaturesCountBottomElement.innerText = count;
+      }
+    })
+    .catch(function (error) {
+      handleError('Error fetching signature count:', error);
+    });
+}
+
+
+
+
+if (signaturesCountTopElement && signaturesCountBottomElement) {
+  updateSignaturesCount();
+  setInterval(updateSignaturesCount, 60000); // Update every 1 minute
+}
 }); // Close the DOMContentLoaded event listener
 
 
