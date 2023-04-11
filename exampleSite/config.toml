@@ -120,7 +120,7 @@ copyright = "©2023 Committe for Little Falls"
 ################################### Spanish language #####################################
 [Languages.es]
 languageName = "ES"
-languageCode = "es-es"
+languageCode = "es"
 contentDir = "content/Spanish"
 weight = 2
 # copyright
