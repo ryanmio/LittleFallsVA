@@ -131,7 +131,7 @@
 
   // Load markers from DynamoDB
   function loadMarkers() {
-    const apiUrl = 'https://ga0kkm2jp8.execute-api.us-east-2.amazonaws.com/prod/markers';
+    const apiUrl = 'https://ga0kkm2jp8.execute-api.us-east-2.amazonaws.com/prod';
 
     fetch(apiUrl)
       .then(response => response.json())
@@ -140,14 +140,9 @@
         data.Items.forEach(item => {
           console.log('Latitude:', item.lat, 'Longitude:', item.lng); // Add this line to debug
           const latLng = L.latLng(item.lat, item.lng);
-          L.circleMarker(latLng, {
-            color: 'blue',
-            fillColor: '#30f',
-            fillOpacity: 0.5,
-            radius: 100,
-          })
-            .addTo(map)
-            .bindPopup(item.message);
+         L.marker(latLng)
+  .addTo(map)
+  .bindPopup(item.message);
         });
       })
       .catch(error => {
