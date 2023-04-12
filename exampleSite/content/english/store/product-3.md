@@ -7,7 +7,7 @@ images:
   - "images/showcase/tote-3.png"
 
 # meta description
-description : "this is meta description"
+description : "Carry your essentials in our eco-friendly tote bag supporting the Little Falls renaming movement"
 
 # product Price
 price: "25.00"
@@ -20,4 +20,4 @@ button_link: "#"
 draft: false
 ---
 
-Carry your essentials in a reusable Little Falls tote bag, spreading awareness for the cause.
+Show your support for the Little Falls renaming movement with this eco-friendly tote bag. Carry your essentials while promoting a more inclusive and historically aware community.

@@ -7,7 +7,7 @@ images:
   - "images/showcase/crewneck-blue-3.png"
 
 # meta description
-description : "this is meta description"
+description : "Stay warm and stylish with our blue crew neck sweatshirt supporting the Little Falls renaming movement"
 
 # product Price
 price: "40.00"
@@ -21,4 +21,4 @@ button_link: "#"
 draft: false
 ---
 
-Show your support for the renaming movement with a comfortable and stylish Little Falls crew neck sweatshirt.
+Cozy up in this blue crew neck sweatshirt while showing your support for the renaming movement to Little Falls. Stay warm and stylish as you advocate for a more inclusive community.

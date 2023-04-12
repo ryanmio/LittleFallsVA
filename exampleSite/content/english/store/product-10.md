@@ -9,7 +9,7 @@ images:
   - "images/showcase/dad-hat-5.png"  
 
 # meta description
-description : "this is meta description"
+description : "Sport our organic dad hat and represent the Little Falls renaming movement with pride"
 
 # product Price
 price: "25.00"
@@ -22,4 +22,4 @@ button_link: "#"
 draft: false
 ---
 
-Show your support for the renaming movement with a Little Falls baseball cap.
+This organic dad hat is an eco-friendly way to represent the Little Falls renaming movement. Stay fashionable and environmentally conscious while supporting a more inclusive city name.

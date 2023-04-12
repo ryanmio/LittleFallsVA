@@ -9,7 +9,7 @@ images:
   - "images/showcase/tshirt-tan-6.jpg"  
 
 # meta description
-description : "this is meta description"
+description : "Support the Little Falls renaming movement with our versatile tan unisex t-shirt"
 
 # product Price
 price: "25.00"
@@ -23,4 +23,5 @@ button_link: "#"
 draft: false
 ---
 
-Show your support for the renaming movement with a comfortable and stylish Little Falls T-shirt.
+This versatile tan unisex t-shirt is perfect for showing your support for the Little Falls renaming movement. Embrace comfort and style while promoting a more inclusive community.
+

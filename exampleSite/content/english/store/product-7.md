@@ -9,7 +9,7 @@ images:
   - "images/showcase/tshirt-blue-5.png"
 
 # meta description
-description : "this is meta description"
+description : "Embrace comfort and style with our blue unisex t-shirt supporting the Little Falls renaming movement"
 
 # product Price
 price: "25.00"
@@ -23,4 +23,4 @@ button_link: "#"
 draft: false
 ---
 
-Show your support for the renaming movement with a comfortable and stylish Little Falls T-shirt.
+Wear this comfortable and stylish blue unisex t-shirt to show your support for the renaming movement to Little Falls. Spread the message of inclusivity and historical awareness.
