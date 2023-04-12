@@ -121,6 +121,10 @@ weight = 1
 # copyright
 copyright = "©2023 Committe for Little Falls"
 
+[permalinks]
+  press = "/press/release/:year/:month/:day/:slug/"
+  store = "/products/:title"
+
 
 ################################### Spanish language #####################################
 [Languages.es]
@@ -131,8 +135,9 @@ weight = 2
 # copyright
 copyright = "©2023 Committe for Little Falls"
 
+[Languages.es.permalinks]
+  store = "/productos/:title"
 
-[permalinks]
-  press = "/press/release/:year/:month/:day/:slug/"
-  store = "/products/:title"
+
+
 

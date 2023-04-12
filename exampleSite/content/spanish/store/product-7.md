@@ -1,21 +1,22 @@
 ---
-title: "Camiseta Unisex - Azul"
+title: "Pegatina Little Falls"
 date: 2019-10-17T11:22:16+06:00
 images: 
-  - "images/showcase/tshirt-blue-1.png"
-  - "images/showcase/tshirt-blue-2.png"
-  - "images/showcase/tshirt-blue-3.png"
-  - "images/showcase/tshirt-blue-4.png"
-  - "images/showcase/tshirt-blue-5.png"
+  - "images/showcase/sticker-1.png"
+  - "images/showcase/sticker-2.png"
+  - "images/showcase/sticker-3.png"
+  - "images/showcase/sticker-4.png"
+  - "images/showcase/sticker-5.png"
 
 # meta description
-description : "Disfruta de la comodidad y el estilo con nuestra camiseta unisex azul que apoya el movimiento de cambio de nombre de Little Falls"
+description : "Pegatina"
 
 # product Price
-price: "25.00"
+price: "3.00"
+discount_price: "2.50"
 
 # product variation
-sizes : ["pequeña","mediana","grande","XL","XXL"]
+sizes : ["3x3"]
 
 # button link if you don't want to use snipcart. empty link will not show button
 button_link: "#"
@@ -23,4 +24,4 @@ button_link: "#"
 draft: false
 ---
 
-Viste esta cómoda y elegante camiseta unisex azul para mostrar tu apoyo al movimiento de cambio de nombre a Little Falls. Difunde el mensaje de inclusión y conciencia histórica.
+Consigue una pegatina de Little Falls para mostrar tu apoyo e iniciar conversaciones sobre el movimiento de cambio de nombre. ¡En oferta durante el lanzamiento!
