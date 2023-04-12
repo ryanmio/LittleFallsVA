@@ -674,3 +674,14 @@ textarea.form-control {
     max-width: 200px; /* Adjust this value as needed */
   }
 
+.position-list li {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.position-list li a {
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: underline;
+}
