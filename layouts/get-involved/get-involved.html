@@ -1,29 +1,13 @@
 {{ define "main" }}
-  <style>
-    .get-involved-section h2 {
-      margin-top: 50px;
-    }
-    .position-list {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-    .position-list li {
-      margin-bottom: 15px;
-    }
-    .social-button {
-      margin-right: 10px;
-      margin-bottom: 10px;
-    }
-    .scrolling-container {
-      display: flex;
-      overflow-x: auto;
-      white-space: nowrap;
-      margin-bottom: 20px;
-    }
-    .scrolling-container img {
-      margin-right: 10px;
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Involved - Little Falls Movement</title>
+</head>
+<body>
+
 
   <section class="get-involved-section">
     <div class="container">
@@ -104,6 +88,40 @@
 <div id="map" style="width: 100%; height: 400px;"></div>
 <label for="marker-message">Enter your marker message:</label>
 <input type="text" id="marker-message" placeholder="I'm a supporter of the Little Falls Movement!">
+
+
+        </div>
+        </div>
+        </div>
+        </section>
+
+
+  <style>
+    .get-involved-section h2 {
+      margin-top: 50px;
+    }
+    .position-list {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .position-list li {
+      margin-bottom: 15px;
+    }
+    .social-button {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .scrolling-container {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      margin-bottom: 20px;
+    }
+    .scrolling-container img {
+      margin-right: 10px;
+    }
+  </style>
+
 <script>
   var map = L.map('map').setView([38.882334, -77.171091], 13);
 
@@ -176,10 +194,7 @@ async function submitMarker(latlng, message) {
     console.error('Error adding marker:', error);
   }
 }
-
-
-        </div>
-        </div>
-        </div>
-        </section>
-        {{ end }}
+  </script>
+</body>
+</html>
+{{ end }}
