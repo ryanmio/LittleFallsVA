@@ -1,5 +1,5 @@
 ---
-title: "Tienda del Movimiento Little Falls"
-description : "tienda del movimiento Little Falls"
+title: "Little Falls Movement Store"
+description : "little falls movement store"
 draft: false
 ---
