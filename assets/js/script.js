@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var formData = new FormData(event.target);
       formData.append("_subject", "New subscription");
 
-      fetch("https://formsubmit.co/ajax/el/boweno", {
+      fetch("https://formsubmit.co/ajax/el/hello@littlefallsva.com", {
         method: "POST",
         body: formData,
       })
