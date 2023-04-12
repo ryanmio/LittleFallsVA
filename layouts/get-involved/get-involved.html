@@ -131,7 +131,9 @@ function loadMarkers() {
     });
 }
 
+map.whenReady(function() {
   loadMarkers();
+});
 
   // Add a new marker to the map when a user clicks
   map.on('click', function(e) {
