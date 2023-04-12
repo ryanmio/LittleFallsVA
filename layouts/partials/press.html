@@ -18,7 +18,7 @@
       </div>
       
       <div class="col-md-8">
-        <h3>Press Releases</h3>
+        <h3>Recent Press Releases</h3><br>
         <ul class="press-releases">
           {{ range first 3 (where .Site.RegularPages.ByWeight "Section" "press") }}
           <li>
