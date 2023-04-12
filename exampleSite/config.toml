@@ -136,8 +136,5 @@ weight = 2
 copyright = "©2023 Committe for Little Falls"
 
 [Languages.es.permalinks]
-  store = "/productos/:title"
-
-
-
-
+  store = "/products/:title"
+  press = "/press/release/:year/:month/:day/:slug/"
