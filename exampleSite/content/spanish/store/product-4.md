@@ -1,22 +1,19 @@
 ---
-title: "Motorola Watch"
+title: "Sudadera con Cuello Redondo - Azul"
 date: 2019-10-17T11:22:16+06:00
 images: 
-  - "images/showcase/showcase-4.png"
-  - "images/showcase/showcase-2.png"
-  - "images/showcase/showcase-3.png"
-  - "images/showcase/showcase-1.png"
+  - "images/showcase/crewneck-blue-1.png"
+  - "images/showcase/crewneck-blue-2.png"
+  - "images/showcase/crewneck-blue-3.png"
 
 # meta description
-description : "this is meta description"
+description : "Mantente abrigado y con estilo con nuestra sudadera azul con cuello redondo apoyando el movimiento de cambio de nombre de Little Falls"
 
 # product Price
-price: "30.00"
-discount_price: "25.00"
+price: "40.00"
 
 # product variation
-colors : ["black","white","gray"]
-sizes : ["small","medium","large"]
+sizes : ["pequeña","mediana","grande","XL","XXL"]
 
 # button link if you don't want to use snipcart. empty link will not show button
 button_link: "#"
@@ -24,4 +21,4 @@ button_link: "#"
 draft: false
 ---
 
-Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness tracking and health-oriented capabilities with integration with iOS and other Apple products and services.
+Abrígate con esta sudadera azul con cuello redondo mientras muestras tu apoyo al movimiento de cambio de nombre a Little Falls. Mantente abrigado y con estilo mientras abogas por una comunidad más inclusiva.
