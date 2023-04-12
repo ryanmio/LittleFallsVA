@@ -1,14 +1,11 @@
 ---
-title: "Crew Neck Sweatshirt"
+title: "Crew Neck Sweatshirt - Pink"
 date: 2019-10-17T11:22:16+06:00
 images: 
   - "images/showcase/crewneck-pink-1.png"
   - "images/showcase/crewneck-pink-2.png"
   - "images/showcase/crewneck-pink-3.png"
   - "images/showcase/crewneck-pink-4.png"
-  - "images/showcase/crewneck-blue-1.png"
-  - "images/showcase/crewneck-blue-2.png"
-  - "images/showcase/crewneck-blue-3.png"
 
 # meta description
 description : "this is meta description"
@@ -17,7 +14,6 @@ description : "this is meta description"
 price: "40.00"
 
 # product variation
-colors : ["blue","pink"]
 sizes : ["small","medium","large","XL","XXL"]
 
 # button link if you don't want to use snipcart. empty link will not show button
