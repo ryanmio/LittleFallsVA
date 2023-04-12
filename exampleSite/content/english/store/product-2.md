@@ -8,7 +8,7 @@ images:
   - "images/showcase/crewneck-pink-4.png"
 
 # meta description
-description : "this is meta description"
+description : "Wear our pink crew neck sweatshirt for a fashionable way to support the Little Falls renaming movement"
 
 # product Price
 price: "40.00"
@@ -22,4 +22,4 @@ button_link: "#"
 draft: false
 ---
 
-Show your support for the renaming movement with a comfortable and stylish Little Falls crew neck sweatshirt.
+This pink crew neck sweatshirt combines comfort and fashion while representing the Little Falls renaming movement. Make a statement and promote inclusivity in your community.

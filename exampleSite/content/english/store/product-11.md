@@ -8,7 +8,7 @@ images:
   - "images/showcase/kids-shirt-4.png"
 
 # meta description
-description : "this is meta description"
+description : "Dress your little ones in our organic cotton kids t-shirt supporting the Little Falls renaming movement"
 
 # product Price
 price: "25.00"
@@ -22,4 +22,4 @@ button_link: "#"
 draft: false
 ---
 
-Show your support for the renaming movement with a comfortable and stylish Little Falls T-shirt.
+Get your kids involved in the renaming movement with this comfortable and eco-friendly organic cotton t-shirt. Teach them the importance of inclusivity and historical awareness from a young age.

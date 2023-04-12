@@ -9,7 +9,7 @@ images:
   - "images/showcase/patch-5.png"
 
 # meta description
-description : "this is meta description"
+description : "Customize your gear with our 3x3 inch patch featuring the Little Falls renaming movement logo"
 
 # product Price
 price: "10.00"
@@ -22,4 +22,4 @@ button_link: "#"
 draft: false
 ---
 
-Show your support for the renaming movement with a comfortable and stylish Little Falls T-shirt.
+Add a touch of personalization to your belongings with our 3x3 inch patch, showcasing the Little Falls renaming movement logo. Display your support for a more inclusive city name.
