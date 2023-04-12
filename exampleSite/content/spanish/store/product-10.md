@@ -1,5 +1,5 @@
 ---
-title: "Organic dad hat"
+title: "Gorra de algodón orgánico tipo 'dad hat'"
 date: 2019-10-17T11:22:16+06:00
 images: 
   - "images/showcase/dad-hat-1.png"
@@ -9,7 +9,7 @@ images:
   - "images/showcase/dad-hat-5.png"  
 
 # meta description
-description : "Sport our organic dad hat and represent the Little Falls renaming movement with pride"
+description : "Luce nuestra gorra ecológica tipo 'dad hat' y representa con orgullo el movimiento de cambio de nombre de Little Falls"
 
 # product Price
 price: "25.00"
@@ -22,4 +22,4 @@ button_link: "#"
 draft: false
 ---
 
-This organic dad hat is an eco-friendly way to represent the Little Falls renaming movement. Stay fashionable and environmentally conscious while supporting a more inclusive city name.
+Esta gorra ecológica tipo 'dad hat' es una forma ecológica de representar el movimiento de cambio de nombre de Little Falls. Mantén un estilo moderno y consciente del medio ambiente mientras apoyas un nombre de ciudad más inclusivo.
