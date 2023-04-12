@@ -107,20 +107,20 @@
   }).addTo(map);
 
   // Load markers from DynamoDB
-  function loadMarkers() {
+function loadMarkers() {
   const apiUrl = 'https://ga0kkm2jp8.execute-api.us-east-2.amazonaws.com/prod/markers';
 
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-      console.log("Fetched data:", data); // Add this line to log the fetched data
+      console.log("Fetched data:", data);
       data.Items.forEach(item => {
         const latLng = L.latLng(item.lat, item.lng);
-        L.circle(latLng, {
+        L.circleMarker(latLng, { // Change this line to use L.circleMarker instead of L.circle
           color: 'blue',
           fillColor: '#30f',
           fillOpacity: 0.5,
-          radius: 100,
+          radius: 10, // Adjust the radius value as needed (this is in pixels, not meters)
         })
           .addTo(map)
           .bindPopup(item.message);
@@ -135,19 +135,20 @@
 
   // Add a new marker to the map when a user clicks
   map.on('click', function(e) {
-    var message = document.getElementById('marker-message').value || "I'm a supporter of the Little Falls Movement!";
-    L.circle(e.latlng, {
-      color: 'blue',
-      fillColor: '#30f',
-      fillOpacity: 0.5,
-      radius: 200, // Change this value to set the radius of the circle in meters
-    })
-      .addTo(map)
-      .bindPopup(message);
+  var message = document.getElementById('marker-message').value || "I'm a supporter of the Little Falls Movement!";
+  L.circleMarker(e.latlng, { // Change this line to use L.circleMarker instead of L.circle
+    color: 'blue',
+    fillColor: '#30f',
+    fillOpacity: 0.5,
+    radius: 10, // Adjust the radius value as needed (this is in pixels, not meters)
+  })
+    .addTo(map)
+    .bindPopup(message);
 
-    // Submit the marker to the Lambda function
-    submitMarker(e.latlng, message);
-  });
+  // Submit the marker to the Lambda function
+  submitMarker(e.latlng, message);
+});
+
 
   // Submit the marker to the Lambda function
   function submitMarker(latlng, message) {
