@@ -1,5 +1,5 @@
 ---
-title: "Embroidered Patch - 3″×3″"
+title: "Patch - 3″×3″"
 date: 2019-10-17T11:22:16+06:00
 images: 
   - "images/showcase/patch-1.png"
