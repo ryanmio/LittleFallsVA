@@ -135,4 +135,10 @@ copyright = "©2023 Committe for Little Falls"
 [permalinks]
   press = "/press/release/:year/:month/:day/:slug/"
   store = "/store/:title"
+  
+[Languages.es]
+  [Languages.es.permalinks]
+    press = "/es/press/release/:year/:month/:day/:slug/"
+    store = "/es/store/:title"
+
 
