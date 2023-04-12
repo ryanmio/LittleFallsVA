@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var formData = new FormData(event.target);
       formData.append("_subject", "New subscription");
 
-      fetch("https://formsubmit.co/hello@littlefallsva.com", {
+      fetch("https://formsubmit.co/el/kapiva", {
         method: "POST",
         body: formData,
       })
