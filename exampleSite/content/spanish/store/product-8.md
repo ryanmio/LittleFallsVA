@@ -1,5 +1,5 @@
 ---
-title: "Patch - 3″×3″"
+title: "Parche - 3″×3″"
 date: 2019-10-17T11:22:16+06:00
 images: 
   - "images/showcase/patch-1.png"
@@ -9,7 +9,7 @@ images:
   - "images/showcase/patch-5.png"
 
 # meta description
-description : "Customize your gear with our 3x3 inch patch featuring the Little Falls renaming movement logo"
+description : "Personaliza tus cosas con nuestro parche de 3x3 pulgadas con el logotipo del movimiento de cambio de nombre de Little Falls"
 
 # product Price
 price: "10.00"
@@ -22,4 +22,4 @@ button_link: "#"
 draft: false
 ---
 
-Add a touch of personalization to your belongings with our 3x3 inch patch, showcasing the Little Falls renaming movement logo. Display your support for a more inclusive city name.
+Agrega un toque de personalización a tus pertenencias con nuestro parche de 3x3 pulgadas, mostrando el logotipo del movimiento de cambio de nombre de Little Falls. Muestra tu apoyo a un nombre de ciudad más inclusivo.
