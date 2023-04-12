@@ -122,6 +122,18 @@
     }
   </style>
 
+{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Involved - Little Falls Movement</title>
+</head>
+<body>
+
+  <!-- The rest of your HTML code goes here -->
+
 <script>
   var map = L.map('map').setView([38.882334, -77.171091], 13);
 
@@ -140,12 +152,7 @@
         data.Items.forEach(item => {
           console.log('Latitude:', item.lat, 'Longitude:', item.lng);
           const latLng = L.latLng(item.lat, item.lng);
-          L.circleMarker(latLng, {
-            color: 'blue',
-            fillColor: '#30f',
-            fillOpacity: 0.5,
-            radius: 50,
-          })
+          L.marker(latLng)
             .addTo(map)
             .bindPopup(item.message);
         });
@@ -159,16 +166,10 @@
     loadMarkers();
   });
 
-  // Add a new circleMarker to the map when a user clicks
+  // Add a new marker to the map when a user clicks
   map.on('click', function(e) {
     var message = document.getElementById('marker-message').value || "I'm a supporter of the Little Falls Movement!";
-    
-    L.circleMarker(e.latlng, {
-      color: 'blue',
-      fillColor: '#30f',
-      fillOpacity: 0.5,
-      radius: 50,
-    })
+    L.marker(e.latlng)
       .addTo(map)
       .bindPopup(message);
 
@@ -199,6 +200,11 @@
     }
   }
 </script>
+
+</body>
+</html>
+{{ end }}
+
 
 </body>
 </html>
