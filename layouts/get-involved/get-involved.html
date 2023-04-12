@@ -108,27 +108,29 @@
 
   // Load markers from DynamoDB
   function loadMarkers() {
-    const apiUrl = 'https://ga0kkm2jp8.execute-api.us-east-2.amazonaws.com/prod/markers';
+  const apiUrl = 'https://ga0kkm2jp8.execute-api.us-east-2.amazonaws.com/prod/markers';
 
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        data.Items.forEach(item => {
-          const latLng = L.latLng(item.lat, item.lng);
-          L.circle(latLng, {
-            color: 'blue',
-            fillColor: '#30f',
-            fillOpacity: 0.5,
-            radius: 100, // Change this value to set the radius of the circle in meters
-          })
-            .addTo(map)
-            .bindPopup(item.message);
-        });
-      })
-      .catch(error => {
-        console.error('Error loading markers:', error);
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      console.log("Fetched data:", data); // Add this line to log the fetched data
+      data.Items.forEach(item => {
+        const latLng = L.latLng(item.lat, item.lng);
+        L.circle(latLng, {
+          color: 'blue',
+          fillColor: '#30f',
+          fillOpacity: 0.5,
+          radius: 100,
+        })
+          .addTo(map)
+          .bindPopup(item.message);
       });
-  }
+    })
+    .catch(error => {
+      console.error('Error loading markers:', error);
+    });
+}
+
   loadMarkers();
 
   // Add a new marker to the map when a user clicks
@@ -138,7 +140,7 @@
       color: 'blue',
       fillColor: '#30f',
       fillOpacity: 0.5,
-      radius: 500, // Change this value to set the radius of the circle in meters
+      radius: 200, // Change this value to set the radius of the circle in meters
     })
       .addTo(map)
       .bindPopup(message);
