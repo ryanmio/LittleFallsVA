@@ -1,21 +1,21 @@
----
-title: "Unisex T-Shirt - Blue"
+title: "Little Falls Sticker"
 date: 2019-10-17T11:22:16+06:00
 images: 
-  - "images/showcase/tshirt-blue-1.png"
-  - "images/showcase/tshirt-blue-2.png"
-  - "images/showcase/tshirt-blue-3.png"
-  - "images/showcase/tshirt-blue-4.png"
-  - "images/showcase/tshirt-blue-5.png"
+  - "images/showcase/sticker-1.png"
+  - "images/showcase/sticker-2.png"
+  - "images/showcase/sticker-3.png"
+  - "images/showcase/sticker-4.png"
+  - "images/showcase/sticker-5.png"
 
 # meta description
-description : "Embrace comfort and style with our blue unisex t-shirt supporting the Little Falls renaming movement"
+description : "Sticker"
 
 # product Price
-price: "25.00"
+price: "3.00"
+discount_price: "2.50"
 
 # product variation
-sizes : ["small","medium","large","XL","XXL"]
+sizes : ["3x3"]
 
 # button link if you don't want to use snipcart. empty link will not show button
 button_link: "#"
@@ -23,4 +23,4 @@ button_link: "#"
 draft: false
 ---
 
-Wear this comfortable and stylish blue unisex t-shirt to show your support for the renaming movement to Little Falls. Spread the message of inclusivity and historical awareness.
+Grab a Little Falls sticker to show your support and spark conversations about the renaming movement. On sale during launch!
