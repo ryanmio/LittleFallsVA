@@ -130,54 +130,42 @@
   }).addTo(map);
 
   // Load markers from DynamoDB
- function loadMarkers() {
-  const apiUrl = 'https://ga0kkm2jp8.execute-api.us-east-2.amazonaws.com/prod/markers';
+  function loadMarkers() {
+    const apiUrl = 'https://ga0kkm2jp8.execute-api.us-east-2.amazonaws.com/prod/markers';
 
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      console.log("Fetched data:", data);
-      data.Items.forEach(item => {
-        console.log('Latitude:', item.lat, 'Longitude:', item.lng);
-        const latLng = L.latLng(item.lat, item.lng);
-        L.circle(latLng, {
-          color: 'blue',
-          fillColor: '#30f',
-          fillOpacity: 0.5,
-          radius: 100, // You can adjust this value to change the circle size
-        })
-          .addTo(map)
-          .bindPopup(item.message);
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        console.log("Fetched data:", data);
+        data.Items.forEach(item => {
+          console.log('Latitude:', item.lat, 'Longitude:', item.lng); // Add this line to debug
+          const latLng = L.latLng(item.lat, item.lng);
+         L.marker(latLng)
+  .addTo(map)
+  .bindPopup(item.message);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading markers:', error);
       });
-    })
-    .catch(error => {
-      console.error('Error loading markers:', error);
-    });
-}
-
+  }
 
   map.whenReady(function() {
     loadMarkers();
   });
 
- // Add a new circle to the map when a user clicks
-map.on('click', function(e) {
+  // Add a new marker to the map when a user clicks
+ map.on('click', function(e) {
   var message = document.getElementById('marker-message').value || "I'm a supporter of the Little Falls Movement!";
   
-  // Replace the marker with a circle
-  L.circle(e.latlng, {
-    color: 'blue',
-    fillColor: '#30f',
-    fillOpacity: 0.5,
-    radius: 100, // You can adjust this value to change the circle size
-  })
+  // Replace the circle with a marker
+  L.marker(e.latlng)
     .addTo(map)
     .bindPopup(message);
 
-  // Submit the circle to the Lambda function
+  // Submit the marker to the Lambda function
   submitMarker(e.latlng, message);
 });
-
 
  // Submit the marker to the Lambda function
 async function submitMarker(latlng, message) {
