@@ -131,7 +131,7 @@
 
   // Load markers from DynamoDB
   function loadMarkers() {
-    const apiUrl = 'https://ga0kkm2jp8.execute-api.us-east-2.amazonaws.com/prod';
+    const apiUrl = 'https://ga0kkm2jp8.execute-api.us-east-2.amazonaws.com/prod/markers';
 
     fetch(apiUrl)
       .then(response => response.json())
