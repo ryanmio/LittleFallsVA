@@ -9,9 +9,6 @@ images:
   - "images/showcase/crewneck-blue-1.png"
   - "images/showcase/crewneck-blue-2.png"
   - "images/showcase/crewneck-blue-3.png"
-  - "images/showcase/crewneck-blue-4.png"
-  - "images/showcase/crewneck-blue-5.png"
-  - "images/showcase/crewneck-blue-6.png"
 
 # meta description
 description : "this is meta description"
