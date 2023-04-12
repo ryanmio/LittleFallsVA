@@ -113,8 +113,9 @@
       .then(response => response.json())
       .then(data => {
         console.log("Fetched data:", data);
-        data.Items.forEach(item => {
-          const latLng = L.latLng(item.lat, item.lng);
+data.Items.forEach(item => {
+  console.log('Latitude:', item.lat, 'Longitude:', item.lng); // Add this line to debug
+  const latLng = L.latLng(item.lat, item.lng);
           L.circleMarker(latLng, {
             color: 'blue',
             fillColor: '#30f',
