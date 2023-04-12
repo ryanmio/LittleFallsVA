@@ -12,14 +12,6 @@
           </div>
           {{ end }}
         </div>
-        <!-- thumbnail container -->
-        <div class="thumbnail-container">
-          {{ range .Params.images }}
-          <div class="thumbnail">
-            <img src="{{ . | absURL }}" alt="thumbnail-image">
-          </div>
-          {{ end }}
-        </div>
       </div>
       <div class="col-lg-6 col-md-7 offset-lg-1">
         <h1 class="mb-4">{{ .Title }}</h1>
