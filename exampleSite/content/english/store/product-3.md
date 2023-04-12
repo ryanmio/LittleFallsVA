@@ -3,12 +3,14 @@ title: "Eco Tote Bag"
 date: 2019-10-17T11:22:16+06:00
 images: 
   - "images/showcase/showcase-3.png"
+  - "images/showcase/tote-2.png"
+  - "images/showcase/tote-3.png"
 
 # meta description
 description : "this is meta description"
 
 # product Price
-price: "22.00"
+price: "25.00"
 
 # product variation
 
