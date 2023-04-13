@@ -32,4 +32,4 @@ El Comité por Little Falls es una organización basada en voluntarios compuesta
 
 Te invitamos a unirte a nosotros en nuestra misión de transformar Falls Church en Little Falls. Tu apoyo y participación son fundamentales para el éxito de esta iniciativa. Ya sea que estés interesado en ser voluntario, compartir tus ideas o simplemente mantenerte informado sobre nuestro progreso, te damos la bienvenida a tu participación. Juntos, podemos construir un futuro más brillante para nuestra ciudad y sus residentes.
 
-Para obtener más información sobre cómo participar, visita nuestra página de [Involúcrate](/get-involved) o contáctanos en [hello@littlefallsva.com](mailto:hello@
+Para obtener más información sobre cómo participar, visita nuestra página de [Involúcrate](/get-involved) o contáctanos en [hello@littlefallsva.com](mailto:hello@littlefallsva.com).
