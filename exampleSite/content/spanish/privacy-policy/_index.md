@@ -4,30 +4,32 @@ description : "this is a meta description"
 draft: false
 ---
 
-Please read this terms and conditions stated below, which outline a lot of legal goodies, but the bottom line is it’s our aim to always take care of both of us, as a customer, or as a seller. We’ve included many of these terms to legally protect ourselves, but if you have an issue, always feel free to email us at contact@themefisher.com and we’ll do our best to resolve it in a fair and timely way .
+Little Falls Committee values your privacy and we are committed to protecting your personal information. Please read our Privacy Policy carefully, which outlines how we collect, use, and protect your information.
 
-### Product Buy & delivery policy
+### Information Collection & Usage
 
-1)All payments are processed securely through PayPal or Stripe. Themefisher does not directly process payments through the website. So any kind of Problem if you face Themefisher will Not Take any responsibility.
+1) Little Falls Committee collects personal information, such as your name and email address, when you sign up for our newsletter, make a purchase, or register as a volunteer. We use this information to communicate with you, provide you with updates, and manage your account.
+2) We will never sell or share your personal information with third parties for marketing purposes. Your information will only be used by Little Falls Committee to send you updates about our activities, products, and services.
 
-### Product Buy & delivery policy
+### Sharing Your Information
+1) We will never sell, trade, or rent your personal information to third parties for marketing purposes.
+2) We may share your information with third-party service providers who perform services on our behalf, such as payment processing, email delivery, and web hosting. These service providers are required to protect your information and only use it for the specific services they provide.
+3) We may disclose your information if required by law or in response to a court order, subpoena, or other legal process.
 
-Please read this terms and conditions stated below, which outline a lot of legal goodies, but the bottom line is it’s our aim to always take care of both of us, as a customer, or as a seller. We’ve included many of these terms to legally protect ourselves, but if you have an issue, always feel free to email us at contact@themefisher.com and we’ll do our best to resolve it in a fair and timely way .
+### Security of Your Information
+1) We take reasonable precautions to protect your personal information from unauthorized access, use, or disclosure. We implement security measures such as Secure Socket Layer (SSL) technology to protect your information during transmission.
+2) While we strive to protect your information, no method of transmission over the Internet or electronic storage is completely secure, and we cannot guarantee absolute security.
 
-### Refund Policy
+### Links to Third-Party Websites
+1) Our website may contain links to third-party websites. We are not responsible for the privacy practices or the content of these websites. We encourage you to review the privacy policies of any third-party websites you visit.
 
-1) Since Themefisher is offering non-tangible and irrevocable digital products, we do NOT issue refunds after a purchase is made. If there is a problem with one of the digital download products or if you experience any difficulty with the download, we will fix the problem.
-2) You have 24 hours to inspect your purchase and to determine if it does not meet with the expectations laid forth by The Themefisher. In the event that you wish to receive a refund, Themefisher will issue you a refund and ask you to specify how the product failed to live up to expectations.
-3) When you make a qualifying return, We’ll credit the full amount, less the handling charges. Refunds are generally processed within 3–5 business days after we receive your claim and find it eligible for a return. Refunds are applied to the original payment option.
+### Children's Privacy
+1) Our website is not intended for children under the age of 13, and we do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under the age of 13, we will take steps to remove that information and delete it from our records.
 
-### Support Policy
-1) Since Themefisher is offering non-tangible and irrevocable digital products, we do NOT issue refunds after a purchase is made. If there is a problem with one of the digital download products or if you experience any difficulty with the download, we will fix the problem.
-2) You have 24 hours to inspect your purchase and to determine if it does not meet with the expectations laid forth by The Themefisher. In the event that you wish to receive a refund, Themefisher will issue you a refund and ask you to specify how the product failed to live up to expectations.
-3) When you make a qualifying return, We’ll credit the full amount, less the handling charges. Refunds are generally processed within 3–5 business days after we receive your claim and find it eligible for a return. Refunds are applied to the original payment option.
+### Changes to Our Privacy Policy
+1) We may update our Privacy Policy from time to time. Any changes to our policy will be posted on this page, and we encourage you to review it periodically to stay informed about how we protect your information.
 
-### Why We Support:
+### Contact Us
+If you have any questions or concerns about our Privacy Policy or the way we handle your personal information, please feel free to email us at hello@littlefallsva.com
 
-1. Support covers getting up and help in theme setup
-2. Help using features and theme options
-3. Bug fixes – if you discovered a bug in the theme/Template we will fix it
-4. Functionality which does not work as advertised
+Last Updated: 4/5/23
