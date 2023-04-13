@@ -1,7 +1,0 @@
-{{ define "main" }}
-  {{ if eq .Page.Language.Lang "es" }}
-    {{ partial "petition/petition-es.html" . }}
-  {{ else }}
-    {{ partial "petition/petition.html" . }}
-  {{ end }}
-{{ end }}
