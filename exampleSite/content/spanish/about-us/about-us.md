@@ -1,5 +1,5 @@
 ---
-title: "About-us"
+title: "Sobre-nosotros"
 date: 2023-04-02
-layout: "single"
+layout: "about-us/about-us-es"
 ---
