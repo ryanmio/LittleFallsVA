@@ -126,7 +126,7 @@ copyright = "©2023 Committe for Little Falls"
 [Languages.es]
 languageName = "ES"
 languageCode = "es"
-contentDir = "content/Spanish"
+contentDir = "content/spanish"
 weight = 2
 # copyright
 copyright = "©2023 Committe for Little Falls"
