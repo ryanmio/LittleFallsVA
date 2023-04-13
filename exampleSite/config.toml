@@ -120,6 +120,10 @@ enable = true
 # snipcart public api key
 snipcart_api = "YTMxMWQyMDAtMzkzYS00YzQ5LWI4NWMtMDg2ZTZkYmZmYzZlNjM4MTY1MTA1Njc1MDgwMDIx"
 
+[outputFormats]
+[outputFormats.HTML]
+  baseName = "index"
+
 ################################### English language #####################################
 [Languages.en]
 languageName = "En"
