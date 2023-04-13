@@ -1,31 +1,31 @@
 ---
-title: "A Name For All"
+title: "Un Nombre Para Todos"
 date: 2019-10-17T11:22:16+06:00
 image: "images/showcase/minichurch.png"
-description : "Little Falls, VA - April 17, 2023 - The Committee for Little Falls is proud to announce the formation of a new sub-committee, focused on recruiting volunteers, maintaining the website, and drafting press releases to drive support for the proposed name change from Falls Church, Virginia to Little Falls."
+description : "Little Falls, VA - 17 de abril de 2023 - El Comité por Little Falls se enorgullece en anunciar la formación de un nuevo subcomité, enfocado en reclutar voluntarios, mantener el sitio web y redactar comunicados de prensa para impulsar el apoyo al cambio de nombre propuesto de Falls Church, Virginia a Little Falls."
 draft: false
 weight: 8
 ---
 
-FOR IMMEDIATE RELEASE
+PARA PUBLICACIÓN INMEDIATA
 
-Committee for Little Falls Highlights Rationale Behind Proposed Name Change
+El Comité por Little Falls Destaca la Razón Detrás del Cambio de Nombre Propuesto
 
-Little Falls, VA - April 17, 2023 - The Committee for Little Falls has released a statement outlining the rationale behind proposing "Little Falls" as the new name for Falls Church, Virginia. This statement aims to address questions and concerns from the community and provide a clear understanding of the name's significance.
+Little Falls, VA - 17 de abril de 2023 - El Comité por Little Falls ha publicado una declaración que describe la razón detrás de proponer "Little Falls" como el nuevo nombre para Falls Church, Virginia. Esta declaración tiene como objetivo abordar preguntas e inquietudes de la comunidad y proporcionar una comprensión clara de la importancia del nombre.
 
-The rationale behind the proposed name change can be summarized in three key points:
+La razón detrás del cambio de nombre propuesto se puede resumir en tres puntos clave:
 
-### Inclusivity:
-The name "Little Falls" promotes inclusivity by removing the connection to a specific church and religion, making the city more welcoming to people of all faiths and beliefs. This change seeks to foster unity and understanding among the diverse population that calls the city home.
+### Inclusividad:
+El nombre "Little Falls" promueve la inclusividad al eliminar la conexión con una iglesia y religión específicas, haciendo que la ciudad sea más acogedora para personas de todas las creencias y creencias. Este cambio busca fomentar la unidad y el entendimiento entre la diversa población que llama hogar a la ciudad.
 
-### Geographical and historical connections:
-The name "Little Falls" emphasizes the city's proximity to the great falls of the Potomac River and highlights its status as the smallest city in Virginia. This name respects the city's historical and geographical connections without associating it with a specific church or religion. Additionally, it acknowledges the city's origins at the intersection of significant Native American trails.
+### Conexiones geográficas e históricas:
+El nombre "Little Falls" enfatiza la proximidad de la ciudad a las grandes cataratas del río Potomac y destaca su condición de ciudad más pequeña de Virginia. Este nombre respeta las conexiones históricas y geográficas de la ciudad sin asociarlo con una iglesia o religión específica. Además, reconoce los orígenes de la ciudad en la intersección de importantes senderos nativos americanos.
 
-### Growth and development: 
-Adopting the name "Little Falls" symbolizes a fresh start and a commitment to embracing continued growth and development in the city. This name change demonstrates a dedication to creating a more inclusive and diverse environment for all residents, while fostering a sense of pride in the city's unique characteristics.
+### Crecimiento y desarrollo:
+Adoptar el nombre "Little Falls" simboliza un nuevo comienzo y un compromiso para abrazar el crecimiento y el desarrollo continuos en la ciudad. Este cambio de nombre demuestra una dedicación a crear un entorno más inclusivo y diverso para todos los residentes, al tiempo que fomenta un sentido de orgullo en las características únicas de la ciudad.
 
-The Committee for Little Falls invites the community to engage in open discussions about the proposed name change and welcomes feedback on the rationale provided. The committee is committed to working together with the residents to build a more inclusive and welcoming city for everyone.
+El Comité por Little Falls invita a la comunidad a participar en discusiones abiertas sobre el cambio de nombre propuesto y agradece los comentarios sobre la justificación proporcionada. El comité está comprometido en trabajar junto con los residentes para construir una ciudad más inclusiva y acogedora para todos.
 
-For more information or to join the conversation, visit the Committee for Little Falls website at littlefallsva.com. 
+Para obtener más información o unirse a la conversación, visite el sitio web del Comité por Little Falls en littlefallsva.com.
 
-\#\#\#
+###

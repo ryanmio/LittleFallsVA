@@ -1,23 +1,23 @@
 ---
-title: "Volunteers Needed"
+title: "Se Necesitan Voluntarios"
 date: 2019-10-17T11:22:16+06:00
 image: "images/showcase/downtown.png"
-description : "Little Falls, VA - April 16, 2023 - The Committee for Little Falls is proud to announce the formation of a new sub-committee, focused on recruiting volunteers, maintaining the website, and drafting press releases to drive support for the proposed name change from Falls Church, Virginia to Little Falls."
+description : "Little Falls, VA - 16 de abril de 2023 - El Comité por Little Falls se enorgullece en anunciar la formación de un nuevo subcomité, enfocado en reclutar voluntarios, mantener el sitio web y redactar comunicados de prensa para impulsar el apoyo al cambio de nombre propuesto de Falls Church, Virginia a Little Falls."
 draft: false
 weight: 9
 ---
 
+PARA PUBLICACIÓN INMEDIATA
 
-FOR IMMEDIATE RELEASE
+Hito del Comité por Little Falls: Fundación de un Nuevo Subcomité para Movilizar el Apoyo
 
-Committee for Little Falls Milestone: New Sub-Committee Founded to Mobilize Support
+Little Falls, VA - 16 de abril de 2023 - El Comité por Little Falls se enorgullece en anunciar la formación de un nuevo subcomité, enfocado en reclutar voluntarios, mantener el sitio web y redactar comunicados de prensa para impulsar el apoyo al cambio de nombre propuesto de Falls Church, Virginia a Little Falls.
 
-Little Falls, VA - April 16, 2023 - The Committee for Little Falls is proud to announce the formation of a new sub-committee, focused on recruiting volunteers, maintaining the website, and drafting press releases to drive support for the proposed name change from Falls Church, Virginia to Little Falls.
+Este hito marca un avance significativo en la iniciativa de cambio de nombre, ya que el subcomité trabajará diligentemente para relacionarse con la comunidad, proporcionar actualizaciones sobre el progreso y garantizar una comunicación transparente durante todo el proceso.
 
-This milestone marks a significant step forward in the renaming initiative, as the sub-committee will work diligently to engage the community, provide updates on the progress, and ensure transparent communication throughout the process.
+El subcomité busca activamente voluntarios para unirse a la causa y ayudar a difundir la conciencia sobre la iniciativa, tanto en línea como fuera de línea. Al trabajar juntos, el Comité por Little Falls tiene como objetivo crear un entorno más inclusivo y acogedor que abrace la rica historia y la diversa población de la ciudad.
 
-The sub-committee is actively seeking volunteers to join the cause and help spread awareness about the initiative, both online and offline. By working together, the Committee for Little Falls aims to create a more inclusive, welcoming environment that embraces the city's rich history and diverse population.
-
-To get involved, visit the Committee for Little Falls website at littlefallsva.com or contact the us directly at hello@littlefallsva.com.
+Para participar, visite el sitio web del Comité por Little Falls en littlefallsva.com o contáctenos directamente en hello@littlefallsva.com.
 
 \#\#\#
+
