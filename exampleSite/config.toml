@@ -1,42 +1,27 @@
 ################################### Default Configuration ############################
 title = "Little Falls VA"
 theme = "vex-hugo"
+# post excert
 summarylength = "20"
-googleAnalytics = ""
-disableLanguages = []
+# google analytics
+googleAnalytics = "" # Ex: UA-123-45
+# disable language
+disableLanguages = [] # disable language from here
 pluralizelisttitles = false
 
+# unsafe html
 [markup.goldmark.renderer]
 unsafe = true
 
 defaultContentLanguage = "en"
 
 [languages]
+  default = "en"
   [languages.en]
     baseURL = "https://littlefallsva.com/"
-    languageName = "En"
-    languageCode = "en-us"
-    contentDir = "content/english"
-    weight = 1
-    copyright = "©2023 Committe for Little Falls"
-    
   [languages.es]
     baseURL = "https://littlefallsva.com/es/"
-    languageName = "ES"
-    languageCode = "es"
-    contentDir = "content/spanish"
-    weight = 2
-    copyright = "©2023 Committe for Little Falls"
 
-    [languages.es.permalinks]
-      press = "/es/press/release/:year/:month/:day/:slug/"
-      store = "/es/store/:title"
-      about-us = "/es/:filename/"
-
-[permalinks]
-  press = "/press/release/:year/:month/:day/:slug/"
-  store = "/store/:title/"
-  about-us = "/:filename/"
 
 #################################### Plugins ##########################################
 
@@ -62,6 +47,7 @@ link = "plugins/slick/slick.min.js"
 [[params.plugins.js]]
 link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"
 
+
 ###################################### Navigation ######################################
 
 # homepage section menu
@@ -81,10 +67,10 @@ url = "store/"
 weight = 3
 
 [[menu.main]]
-identifier = "petition"
-name = "Petition"
-url = "/petition/"
-weight = 4
+  identifier = "petition"
+  name = "Petition"
+  url = "/petition/"
+  weight = 4
 
 # footer menu
 [[menu.footer]]
@@ -112,12 +98,15 @@ name = "Privacy Policy"
 url = "privacy-policy/"
 weight = 5
 
+
 ########################### Default parameters ##########################
 [params]
 logo = "images/logo.png"
 logo_width = "100px"
+# Meta data
 description = "This is meta description"
 author = "Little Falls"
+# currency
 currency = "$"
 
 # Preloader
@@ -134,3 +123,30 @@ snipcart_api = "YTMxMWQyMDAtMzkzYS00YzQ5LWI4NWMtMDg2ZTZkYmZmYzZlNjM4MTY1MTA1Njc1
 [outputFormats]
 [outputFormats.HTML]
   baseName = "index"
+
+################################### English language #####################################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+# copyright
+copyright = "©2023 Committe for Little Falls"
+
+
+################################### Spanish language #####################################
+[Languages.es]
+languageName = "ES"
+languageCode = "es"
+contentDir = "content/spanish"
+weight = 2
+# copyright
+copyright = "©2023 Committe for Little Falls"
+
+  [Languages.es.permalinks]
+    press = "/es/press/release/:year/:month/:day/:slug/"
+    store = "/es/store/:title"
+
+[permalinks]
+  press = "/press/release/:year/:month/:day/:slug/"
+  store = "/store/:title"
