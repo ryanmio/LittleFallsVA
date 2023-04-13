@@ -11,5 +11,9 @@
       </div>
     </div>
   </div>
-  {{ partial "press-kit.html" . }}
+  {{ if eq .Site.Language.Lang "es" }}
+    {{ partial "press-kit-es.html" . }}
+  {{ else }}
+    {{ partial "press-kit.html" . }}
+  {{ end }}
 {{- end -}}
