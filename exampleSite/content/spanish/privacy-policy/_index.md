@@ -1,35 +1,34 @@
 ---
-title: "Terms & Conditions"
-description : "this is a meta description"
+title: "Términos y Condiciones"
+description : "esta es una descripción meta"
 draft: false
 ---
 
-Little Falls Committee values your privacy and we are committed to protecting your personal information. Please read our Privacy Policy carefully, which outlines how we collect, use, and protect your information.
+El Comité de Little Falls valora su privacidad y estamos comprometidos a proteger su información personal. Por favor, lea cuidadosamente nuestra Política de Privacidad, que describe cómo recopilamos, utilizamos y protegemos su información.
 
-### Information Collection & Usage
+### Recopilación y uso de la información
 
-1) Little Falls Committee collects personal information, such as your name and email address, when you sign up for our newsletter, make a purchase, or register as a volunteer. We use this information to communicate with you, provide you with updates, and manage your account.
-2) We will never sell or share your personal information with third parties for marketing purposes. Your information will only be used by Little Falls Committee to send you updates about our activities, products, and services.
+1) El Comité de Little Falls recopila información personal, como su nombre y dirección de correo electrónico, cuando se suscribe a nuestro boletín, realiza una compra o se registra como voluntario. Utilizamos esta información para comunicarnos con usted, proporcionarle actualizaciones y administrar su cuenta.
+2) Nunca venderemos ni compartiremos su información personal con terceros para fines de marketing. Su información solo será utilizada por el Comité de Little Falls para enviarle actualizaciones sobre nuestras actividades, productos y servicios.
 
-### Sharing Your Information
-1) We will never sell, trade, or rent your personal information to third parties for marketing purposes.
-2) We may share your information with third-party service providers who perform services on our behalf, such as payment processing, email delivery, and web hosting. These service providers are required to protect your information and only use it for the specific services they provide.
-3) We may disclose your information if required by law or in response to a court order, subpoena, or other legal process.
+### Compartir su información
+1) Nunca venderemos, intercambiaremos ni alquilaremos su información personal a terceros para fines de marketing.
+2) Podemos compartir su información con proveedores de servicios externos que realizan servicios en nuestro nombre, como procesamiento de pagos, entrega de correo electrónico y alojamiento web. Se requiere que estos proveedores de servicios protejan su información y solo la utilicen para los servicios específicos que proporcionan.
+3) Podemos divulgar su información si la ley lo requiere o en respuesta a una orden judicial, citación u otro proceso legal.
 
-### Security of Your Information
-1) We take reasonable precautions to protect your personal information from unauthorized access, use, or disclosure. We implement security measures such as Secure Socket Layer (SSL) technology to protect your information during transmission.
-2) While we strive to protect your information, no method of transmission over the Internet or electronic storage is completely secure, and we cannot guarantee absolute security.
+### Seguridad de su información
+1) Tomamos precauciones razonables para proteger su información personal del acceso, uso o divulgación no autorizados. Implementamos medidas de seguridad, como la tecnología de capa de conexión segura (SSL), para proteger su información durante la transmisión.
+2) Si bien nos esforzamos por proteger su información, ningún método de transmisión por Internet o almacenamiento electrónico es completamente seguro y no podemos garantizar una seguridad absoluta.
+### Enlaces a sitios web de terceros
+1) Nuestro sitio web puede contener enlaces a sitios web de terceros. No somos responsables de las prácticas de privacidad ni del contenido de estos sitios web. Le recomendamos que revise las políticas de privacidad de los sitios web de terceros que visite.
 
-### Links to Third-Party Websites
-1) Our website may contain links to third-party websites. We are not responsible for the privacy practices or the content of these websites. We encourage you to review the privacy policies of any third-party websites you visit.
+### Privacidad de los niños
+1) Nuestro sitio web no está destinado a niños menores de 13 años y no recopilamos a sabiendas información personal de niños menores de 13 años. Si nos damos cuenta de que hemos recopilado información personal de un niño menor de 13 años, tomaremos medidas para eliminar esa información y eliminarla de nuestros registros.
 
-### Children's Privacy
-1) Our website is not intended for children under the age of 13, and we do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under the age of 13, we will take steps to remove that information and delete it from our records.
+### Cambios en nuestra política de privacidad
+1) Podemos actualizar nuestra Política de Privacidad de vez en cuando. Cualquier cambio en nuestra política se publicará en esta página y le recomendamos que la revise periódicamente para mantenerse informado sobre cómo protegemos su información.
 
-### Changes to Our Privacy Policy
-1) We may update our Privacy Policy from time to time. Any changes to our policy will be posted on this page, and we encourage you to review it periodically to stay informed about how we protect your information.
-
-### Contact Us
-If you have any questions or concerns about our Privacy Policy or the way we handle your personal information, please feel free to email us at hello@littlefallsva.com
+### Contáctenos
+Si tiene alguna pregunta o inquietud sobre nuestra Política de Privacidad o la forma en que manejamos su información personal, no dude en enviarnos un correo electrónico a hello@littlefallsva.com
 
 Last Updated: 4/5/23
