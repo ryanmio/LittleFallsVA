@@ -1,6 +1,6 @@
 ---
-title: "Petition"
-date: 2023-04-02
 layout: "petition"
-languageCode: "en"
+title: "Sign the Petition"
+description : "Sign our petition and support the renaming movement!"
+draft: false
 ---
