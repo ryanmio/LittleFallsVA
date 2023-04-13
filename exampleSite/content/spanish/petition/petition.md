@@ -1,7 +1,6 @@
 ---
-title: "Petition"
+title: "Petición"
 date: 2023-04-02
-outputs:
-- html
-layout: "petition-es"
+layout: "petition"
+languageCode: "es"
 ---
