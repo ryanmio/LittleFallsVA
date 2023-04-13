@@ -128,6 +128,7 @@ languageName = "ES"
 languageCode = "es"
 contentDir = "content/spanish"
 weight = 2
+baseURL = "https://littlefallsva.com/es/"
 # copyright
 copyright = "©2023 Committe for Little Falls"
 
