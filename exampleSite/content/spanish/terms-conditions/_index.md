@@ -1,21 +1,23 @@
 ---
-title: "Terms & Conditions"
-description : "this is a meta description"
+title: "Términos y Condiciones"
+description : "esta es una descripción meta"
 draft: false
 ---
 
-Please read this terms and conditions stated below, which outline a lot of legal goodies, but the bottom line is it’s our aim to always take care of both of us, as a customer, or as a seller. We’ve included many of these terms to legally protect ourselves, but if you have an issue, always feel free to email us at hello@littlefallsva.com and we’ll do our best to resolve it in a fair and timely way .
+Por favor, lea los términos y condiciones indicados a continuación, que describen muchas cuestiones legales, pero lo más importante es que nuestro objetivo es cuidar de ambos, como cliente o como vendedor. Hemos incluido muchos de estos términos para protegernos legalmente, pero si tiene algún problema, no dude en enviarnos un correo electrónico a hello@littlefallsva.com y haremos todo lo posible para resolverlo de manera justa y oportuna.
 
-### Product Buy & delivery policy
+### Política de compra y entrega de productos
 
-1) All payments are securely processed through PayPal or Stripe. Little Falls Committee does not directly process payments through the website. Therefore, Little Falls Committee will not take responsibility for any issues that may arise during the payment process.
+1) Todos los pagos se procesan de forma segura a través de PayPal o Stripe. El Comité de Little Falls no procesa directamente los pagos a través del sitio web. Por lo tanto, el Comité de Little Falls no se responsabilizará de cualquier problema que pueda surgir durante el proceso de pago.
 
-### Refund Policy
+### Política de reembolso
 
-1) Due to the financial constraints of being a community movement, we cannot issue refunds once a purchase is made.
+1) Debido a las limitaciones financieras de ser un movimiento comunitario, no podemos emitir reembolsos una vez que se haya realizado una compra.
 
-### Support Policy
-1) Little Falls Committee offers limited support for its products. If there is a problem with one of the products or if you experience any difficulty, we will do our best to fix the problem.
+### Política de soporte
 
-### Generative AI Disclaimer
-1) Some images used on this site were created with generative AI for copyright purposes. Little Falls Committee uses Generative AI in some online communications and to enhance multi-lingual support.
+1) El Comité de Little Falls ofrece soporte limitado para sus productos. Si hay algún problema con uno de los productos o si tiene alguna dificultad, haremos todo lo posible para solucionar el problema.
+
+### Descargo de responsabilidad de IA generativa
+
+1) Algunas imágenes utilizadas en este sitio fueron creadas con IA generativa con fines de derechos de autor. El Comité de Little Falls utiliza IA generativa en algunas comunicaciones en línea y para mejorar el soporte multilingüe.
