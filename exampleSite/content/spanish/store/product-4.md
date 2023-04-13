@@ -1,6 +1,7 @@
 ---
 title: "Sudadera con Cuello Redondo - Azul"
 date: 2019-10-17T11:22:16+06:00
+weight: 3
 images: 
   - "images/showcase/crewneck-blue-1.png"
   - "images/showcase/crewneck-blue-2.png"

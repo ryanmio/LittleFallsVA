@@ -1,6 +1,7 @@
 ---
 title: "Bolsa Ecológica"
 date: 2019-10-17T11:22:16+06:00
+weight: 2
 images: 
   - "images/showcase/showcase-3.png"
   - "images/showcase/tote-2.png"
