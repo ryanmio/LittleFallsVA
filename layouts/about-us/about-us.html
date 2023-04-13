@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ if eq .Site.Language.Lang "en" }}
-    {{ partial "about-us-en" . }}
+    {{ partial "about-us/about-us-en" . }}
   {{ else if eq .Site.Language.Lang "es" }}
-    {{ partial "about-us-es" . }}
+    {{ partial "about-us/about-us-es" . }}
   {{ end }}
 {{ end }}
