@@ -1,19 +1,19 @@
 ---
-title: "Renaming Movement Launch"
+title: "Lanzamiento del Movimiento de Renombramiento"
 date: 2023-04-02
 image: "images/showcase/logo.png"
-description : "Little Falls, VA - April 15, 2023 - The Committee for Little Falls, a dedicated group of residents, announces the launch of a new initiative to change the name of Falls Church, Virginia, to Little Falls."
+description : "Little Falls, VA - 15 de abril de 2023 - El Comité por Little Falls, un grupo dedicado de residentes, anuncia el lanzamiento de una nueva iniciativa para cambiar el nombre de Falls Church, Virginia, a Little Falls."
 weight: 10
 ---
 
-FOR IMMEDIATE RELEASE
+PARA PUBLICACIÓN INMEDIATA
 
-Committee for Little Falls Announces Launch of Name Change Initiative
+El Comité por Little Falls Anuncia el Lanzamiento de la Iniciativa de Cambio de Nombre
 
-Little Falls, VA - April 15, 2023 - The Committee for Little Falls, a dedicated group of residents, announces the launch of a new initiative to change the name of Falls Church, Virginia, to Little Falls. Drawing on the rich history and the need for a more inclusive identity, the Committee for Little Falls has created a petition and a comprehensive plan to engage with the community and advocate for the name change.
+Little Falls, VA - 15 de abril de 2023 - El Comité por Little Falls, un grupo dedicado de residentes, anuncia el lanzamiento de una nueva iniciativa para cambiar el nombre de Falls Church, Virginia, a Little Falls. Basándose en la rica historia y la necesidad de una identidad más inclusiva, el Comité por Little Falls ha creado una petición y un plan integral para relacionarse con la comunidad y abogar por el cambio de nombre.
 
-The proposed name change aims to distance the city from its association with a specific church and religion, creating a more inclusive environment for all residents. Little Falls emphasizes the city's historical and geographical connections, as well as its position as the smallest city in Virginia. The initiative also seeks to acknowledge the city's origins at the intersection of significant Native American trails, while fostering growth and development.
+El cambio de nombre propuesto tiene como objetivo alejar a la ciudad de su asociación con una iglesia y religión específicas, creando un entorno más inclusivo para todos los residentes. Little Falls enfatiza las conexiones históricas y geográficas de la ciudad, así como su posición como la ciudad más pequeña de Virginia. La iniciativa también busca reconocer los orígenes de la ciudad en la intersección de importantes senderos nativos americanos, a la vez que fomenta el crecimiento y el desarrollo.
 
-The Committee for Little Falls invites residents of the city and those living in the surrounding areas that share Falls Church mailing addresses to sign the petition and support the renaming initiative. The committee is committed to engaging with the community, addressing concerns, and working together towards a more inclusive future for all.
+El Comité por Little Falls invita a los residentes de la ciudad y a aquellos que viven en las áreas circundantes que comparten direcciones postales de Falls Church a firmar la petición y apoyar la iniciativa de cambio de nombre. El comité está comprometido a relacionarse con la comunidad, abordar preocupaciones y trabajar juntos hacia un futuro más inclusivo para todos.
 
 \#\#\#
