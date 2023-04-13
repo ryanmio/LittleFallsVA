@@ -1,5 +1,4 @@
 ################################### Default Configuration ############################
-baseurl = "https://littlefallsva.com"
 title = "Little Falls VA"
 theme = "vex-hugo"
 # post excert
@@ -13,6 +12,15 @@ pluralizelisttitles = false
 # unsafe html
 [markup.goldmark.renderer]
 unsafe = true
+
+defaultContentLanguage = "en"
+
+[languages]
+  default = "en"
+  [languages.en]
+    baseURL = "https://littlefallsva.com/"
+  [languages.es]
+    baseURL = "https://littlefallsva.com/es/"
 
 
 #################################### Plugins ##########################################
