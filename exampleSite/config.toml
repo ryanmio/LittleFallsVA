@@ -125,7 +125,7 @@ snipcart_api = "YTMxMWQyMDAtMzkzYS00YzQ5LWI4NWMtMDg2ZTZkYmZmYzZlNjM4MTY1MTA1Njc1
   baseName = "index"
 
 ################################### English language #####################################
-[Languages.en]
+[languages.en]
 languageName = "En"
 languageCode = "en-us"
 contentDir = "content/english"
@@ -135,7 +135,7 @@ copyright = "©2023 Committe for Little Falls"
 
 
 ################################### Spanish language #####################################
-[Languages.es]
+[languages.es]
 languageName = "ES"
 languageCode = "es"
 contentDir = "content/spanish"
@@ -143,10 +143,12 @@ weight = 2
 # copyright
 copyright = "©2023 Committe for Little Falls"
 
-  [Languages.es.permalinks]
-    press = "/es/press/release/:year/:month/:day/:slug/"
-    store = "/es/store/:title"
+[languages.es.permalinks]
+  press = "/es/press/release/:year/:month/:day/:slug/"
+  store = "/es/store/:title"
+  about-us = "/es/:filename/"
 
 [permalinks]
   press = "/press/release/:year/:month/:day/:slug/"
-  store = "/store/:title"
+  store = "/store/:title/"
+  about-us = "/:filename/"
