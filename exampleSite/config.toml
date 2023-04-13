@@ -38,8 +38,7 @@ defaultContentLanguage = "en"
   store = "/store/:title/"
   about-us = "/:filename/"
 
-
-############################### Plugins Configuration ############################
+#################################### Plugins ##########################################
 
 # CSS Plugins
 [[params.plugins.css]]
@@ -63,9 +62,9 @@ link = "plugins/slick/slick.min.js"
 [[params.plugins.js]]
 link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"
 
-################################# Navigation Configuration ########################
+###################################### Navigation ######################################
 
-# Homepage Section Menu
+# homepage section menu
 [[menu.main]]
 name = "Home"
 url = "/"
@@ -87,7 +86,7 @@ name = "Petition"
 url = "/petition/"
 weight = 4
 
-# Footer Menu
+# footer menu
 [[menu.footer]]
 name = "Press & Media"
 url = "press/"
@@ -113,8 +112,7 @@ name = "Privacy Policy"
 url = "privacy-policy/"
 weight = 5
 
-############################### Default Parameters ###########################
-
+########################### Default parameters ##########################
 [params]
 logo = "images/logo.png"
 logo_width = "100px"
@@ -125,14 +123,14 @@ currency = "$"
 # Preloader
 [params.preloader]
 enable = true
-preloader = ""
+preloader = "" # use .png , .svg or .gif format
 
 # Snipcart
 [params.snipcart]
 enable = true
+# snipcart public api key
 snipcart_api = "YTMxMWQyMDAtMzkzYS00YzQ5LWI4NWMtMDg2ZTZkYmZmYzZlNjM4MTY1MTA1Njc1MDgwMDIx"
 
 [outputFormats]
 [outputFormats.HTML]
   baseName = "index"
-
