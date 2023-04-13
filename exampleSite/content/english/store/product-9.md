@@ -1,6 +1,7 @@
 ---
 title: "Unisex T-Shirt - Tan"
 date: 2019-10-17T11:22:16+06:00
+weight: 6
 images: 
   - "images/showcase/tshirt-tan-2.png"
   - "images/showcase/tshirt-tan-3.png"

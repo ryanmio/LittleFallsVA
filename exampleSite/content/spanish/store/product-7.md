@@ -1,6 +1,7 @@
 ---
 title: "Pegatina Little Falls"
 date: 2019-10-17T11:22:16+06:00
+weight: 4
 images: 
   - "images/showcase/sticker-1.png"
   - "images/showcase/sticker-2.png"

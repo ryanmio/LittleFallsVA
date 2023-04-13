@@ -1,6 +1,7 @@
 ---
 title: "Camiseta de algodón orgánico para niños"
 date: 2019-10-17T11:22:16+06:00
+weight: 8
 images: 
   - "images/showcase/kids-shirt-1.png"
   - "images/showcase/kids-shirt-2.png"

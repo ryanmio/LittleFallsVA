@@ -1,6 +1,7 @@
 ---
 title: "Sudadera con Cuello Redondo - Rosa"
 date: 2019-10-17T11:22:16+06:00
+weight: 1
 images: 
   - "images/showcase/crewneck-pink-1.png"
   - "images/showcase/crewneck-pink-2.png"
