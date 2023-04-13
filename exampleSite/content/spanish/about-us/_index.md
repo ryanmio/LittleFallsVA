@@ -1,13 +1,13 @@
 ---
-title: "Acerca de"
+title: "Sobre nosotros"
 date: 2023-04-13
 draft: false
-layout: "about-us"
+layout: "about"
 images:
   - "images/placeholder-image.png"
 ---
 
-# Acerca de
+# Sobre nosotros
 
 Bienvenidos al Comité por Little Falls, una organización impulsada por la comunidad dedicada a cambiar el nombre de Falls Church, Virginia, a Little Falls. Nuestra misión es fomentar una ciudad más inclusiva, acogedora y unificada al alejarnos de un nombre que tiene asociaciones con el colonialismo, la esclavitud y el borrado indígena. Creemos que el nombre de una ciudad debe reflejar los valores y aspiraciones compartidos de su gente, y estamos comprometidos a hacer realidad esta visión.
 
