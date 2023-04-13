@@ -117,7 +117,6 @@ snipcart_api = "YTMxMWQyMDAtMzkzYS00YzQ5LWI4NWMtMDg2ZTZkYmZmYzZlNjM4MTY1MTA1Njc1
 languageName = "En"
 languageCode = "en-us"
 contentDir = "content/english"
-baseURL = "https://littlefallsva.com/"
 weight = 1
 # copyright
 copyright = "©2023 Committe for Little Falls"
@@ -128,11 +127,9 @@ copyright = "©2023 Committe for Little Falls"
 languageName = "ES"
 languageCode = "es"
 contentDir = "content/spanish"
-baseURL = "https://littlefallsva.com/"
 weight = 2
 # copyright
 copyright = "©2023 Committe for Little Falls"
-
 
   [Languages.es.permalinks]
     press = "/es/press/release/:year/:month/:day/:slug/"
