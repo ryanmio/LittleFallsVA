@@ -1,29 +1,48 @@
-################################### Default Configuration ############################
+############################# Default Configuration ############################
 title = "Little Falls VA"
 theme = "vex-hugo"
-# post excert
-summarylength = "20"
-# google analytics
-googleAnalytics = "" # Ex: UA-123-45
-# disable language
-disableLanguages = [] # disable language from here
+summarylength = 20
+googleAnalytics = ""
+disableLanguages = []
 pluralizelisttitles = false
 
-# unsafe html
 [markup.goldmark.renderer]
 unsafe = true
+
+############################## Language Configuration ###########################
 
 defaultContentLanguage = "en"
 
 [languages]
   default = "en"
+
   [languages.en]
+    languageName = "En"
+    languageCode = "en-us"
+    contentDir = "content/english"
+    weight = 1
     baseURL = "https://littlefallsva.com/"
+    copyright = "©2023 Committe for Little Falls"
+
   [languages.es]
+    languageName = "ES"
+    languageCode = "es"
+    contentDir = "content/spanish"
+    weight = 2
     baseURL = "https://littlefallsva.com/es/"
+    copyright = "©2023 Committe for Little Falls"
 
+    [languages.es.permalinks]
+      press = "/es/press/release/:year/:month/:day/:slug/"
+      store = "/es/store/:title"
+      about-us = "/es/:filename/"
 
-#################################### Plugins ##########################################
+[permalinks]
+  press = "/press/release/:year/:month/:day/:slug/"
+  store = "/store/:title/"
+  about-us = "/:filename/"
+
+############################### Plugins Configuration ############################
 
 # CSS Plugins
 [[params.plugins.css]]
@@ -47,10 +66,9 @@ link = "plugins/slick/slick.min.js"
 [[params.plugins.js]]
 link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"
 
+################################# Navigation Configuration ########################
 
-###################################### Navigation ######################################
-
-# homepage section menu
+# Homepage Section Menu
 [[menu.main]]
 name = "Home"
 url = "/"
@@ -67,12 +85,12 @@ url = "store/"
 weight = 3
 
 [[menu.main]]
-  identifier = "petition"
-  name = "Petition"
-  url = "/petition/"
-  weight = 4
+identifier = "petition"
+name = "Petition"
+url = "/petition/"
+weight = 4
 
-# footer menu
+# Footer Menu
 [[menu.footer]]
 name = "Press & Media"
 url = "press/"
@@ -98,57 +116,26 @@ name = "Privacy Policy"
 url = "privacy-policy/"
 weight = 5
 
+############################### Default Parameters ###########################
 
-########################### Default parameters ##########################
 [params]
 logo = "images/logo.png"
 logo_width = "100px"
-# Meta data
 description = "This is meta description"
 author = "Little Falls"
-# currency
 currency = "$"
 
 # Preloader
 [params.preloader]
 enable = true
-preloader = "" # use .png , .svg or .gif format
+preloader = ""
 
 # Snipcart
 [params.snipcart]
 enable = true
-# snipcart public api key
 snipcart_api = "YTMxMWQyMDAtMzkzYS00YzQ5LWI4NWMtMDg2ZTZkYmZmYzZlNjM4MTY1MTA1Njc1MDgwMDIx"
 
 [outputFormats]
 [outputFormats.HTML]
   baseName = "index"
 
-################################### English language #####################################
-[languages.en]
-languageName = "En"
-languageCode = "en-us"
-contentDir = "content/english"
-weight = 1
-# copyright
-copyright = "©2023 Committe for Little Falls"
-
-
-################################### Spanish language #####################################
-[languages.es]
-languageName = "ES"
-languageCode = "es"
-contentDir = "content/spanish"
-weight = 2
-# copyright
-copyright = "©2023 Committe for Little Falls"
-
-[languages.es.permalinks]
-  press = "/es/press/release/:year/:month/:day/:slug/"
-  store = "/es/store/:title"
-  about-us = "/es/:filename/"
-
-[permalinks]
-  press = "/press/release/:year/:month/:day/:slug/"
-  store = "/store/:title/"
-  about-us = "/:filename/"
