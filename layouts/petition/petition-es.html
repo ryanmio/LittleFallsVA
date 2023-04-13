@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ if eq .Site.Language.LanguageCode "es" }}
+
     <section class="petition-section" style="margin-bottom: 50px;">
     <div class="container">
       <div class="row">
@@ -46,5 +48,7 @@
 
   <script>
   </script>
+{{ end }}
+
 {{ end }}
 
