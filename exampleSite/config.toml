@@ -1,4 +1,5 @@
 ################################### Default Configuration ############################
+baseurl = "https://littlefallsva.com"
 title = "Little Falls VA"
 theme = "vex-hugo"
 # post excert
@@ -116,7 +117,6 @@ snipcart_api = "YTMxMWQyMDAtMzkzYS00YzQ5LWI4NWMtMDg2ZTZkYmZmYzZlNjM4MTY1MTA1Njc1
 languageName = "En"
 languageCode = "en-us"
 contentDir = "content/english"
-baseurl = "https://littlefallsva.com"
 weight = 1
 # copyright
 copyright = "©2023 Committe for Little Falls"
@@ -128,9 +128,9 @@ languageName = "ES"
 languageCode = "es"
 contentDir = "content/spanish"
 weight = 2
-baseURL = "https://littlefallsva.com/es/"
 # copyright
 copyright = "©2023 Committe for Little Falls"
+
 
   [Languages.es.permalinks]
     press = "/es/press/release/:year/:month/:day/:slug/"
