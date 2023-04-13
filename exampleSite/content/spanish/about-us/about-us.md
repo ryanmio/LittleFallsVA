@@ -1,7 +1,7 @@
 ---
 title: "About Us"
 date: 2023-04-02
-layout: "single"
+layout: "about-us/about-us"
 ---
 
 # About Us
