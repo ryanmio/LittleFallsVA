@@ -4,10 +4,10 @@
       <div class="col-md-12">
         <div class="block">
           <a href="{{ site.BaseURL | relLangURL }}" class="mb-4 d-inline-block">{{ if site.Params.logo }} <img src="{{ site.Params.logo | absURL }}" alt="{{ site.Title }}" {{with site.Params.logo_width}}width="{{.}}"{{end}}> {{ else }} {{ .Title }} {{ end }}</a>
-          <ul class="navbar-nav ml-auto">
+          <ul class="list-inline footer-menu">
   {{ range site.Menus.footer }}
-  <li class="nav-item">
-    <a class="nav-link" href="{{ .URL | relLangURL }}">{{ i18n .Identifier }}</a>
+  <li class="list-inline-item">
+    <a href="{{ .URL | relLangURL }}">{{ i18n .Identifier }}</a>
   </li>
   {{ end }}
 </ul>
