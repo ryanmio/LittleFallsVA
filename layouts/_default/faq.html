@@ -3,15 +3,28 @@
 <section class="section">
   <div class="container">
     <div class="row">
-      <div class="col-md-5 mb-4 mb-md-0">
-        <div class="sticky-image">
-          <img class="img-fluid w-100" src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-7 offset-lg-1">
+      <div class="col-lg-12">
         <h1 class="mb-4">{{.Title | markdownify}}</h1>
         <div class="content">
-          {{.Content}}
+          <div id="accordion">
+            {{ range $i, $faq := .Params.faqs }}
+            <div class="card">
+              <div class="card-header" id="heading{{ $i }}">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{ $i }}" aria-expanded="{{ if eq $i 0 }}true{{ else }}false{{ end }}" aria-controls="collapse{{ $i }}">
+                    {{ $faq.question }}
+                  </button>
+                </h5>
+              </div>
+
+              <div id="collapse{{ $i }}" class="collapse{{ if eq $i 0 }} show{{ end }}" aria-labelledby="heading{{ $i }}" data-parent="#accordion">
+                <div class="card-body">
+                  {{ $faq.answer }}
+                </div>
+              </div>
+            </div>
+            {{ end }}
+          </div>
         </div>
       </div>
     </div>
