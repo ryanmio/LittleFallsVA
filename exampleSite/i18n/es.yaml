@@ -10,11 +10,26 @@
 - id: "read_more"
   translation: "Leer más"
 
-- id: "subscribe"
-  translation: "Suscribirse"
+- id: home
+  translation: "Inicio"
 
-- id: "subscribe"
-  translation: "Suscribirse"
+- id: about_us
+  translation: "Sobre nosotros"
 
-- id: "subscribe"
-  translation: "Suscribirse"
+- id: contact
+  translation: "Contacto"
+
+- id: get_involved
+  translation: "Participa"
+
+- id: privacy_policy
+  translation: "Política de privacidad"
+
+- id: terms_conditions
+  translation: "Términos y condiciones"
+
+- id: press
+  translation: "Prensa"
+
+- id: store
+  translation: "Tienda"

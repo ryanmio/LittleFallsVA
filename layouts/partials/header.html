@@ -10,11 +10,12 @@
 
       <div class="collapse navbar-collapse text-center" id="navigation">
         <ul class="navbar-nav ml-auto">
-          {{ range site.Menus.main }}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-          </li>
-          {{ end }}
+                 {{ range site.Menus.main }}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ .URL | relLangURL }}">{{ i18n .Identifier }}</a>
+        </li>
+        {{ end }}
+
         </ul>
         <!-- Language List -->
         {{ if .IsTranslated }}
