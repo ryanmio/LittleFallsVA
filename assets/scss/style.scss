@@ -684,3 +684,29 @@ textarea.form-control {
   font-weight: normal;
   text-decoration: underline;
 }
+
+
+.our-plan-container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.our-plan {
+  display: inline-flex;
+}
+
+.step {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: top;
+  width: 250px;
+  margin-right: 20px;
+}
+
+.step img {
+  max-width: 100%;
+  height: auto;
+}
