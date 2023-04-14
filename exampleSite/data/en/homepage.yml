@@ -13,7 +13,7 @@ banner:
 features:
   enable: true
   title: "Why Rename to Little Falls?"
-  image: "images/watch-2.png"
+  image: "images/church-2.webp"
 
   # feature at the left of the image
   left_side:
