@@ -1,7 +1,6 @@
 ---
 title: "FAQ"
 date: 2023-04-12
-layout: "faq"
 ---
 
 
