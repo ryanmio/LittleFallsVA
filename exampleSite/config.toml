@@ -103,7 +103,7 @@ weight = 4
 
 ########################### Default parameters ##########################
 [params]
-logo = "images/logo.png"
+logo = "images/logo.webp"
 logo_width = "100px"
 # Meta data
 description = "This is meta description"
