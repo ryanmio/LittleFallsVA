@@ -21,7 +21,7 @@
         {{ end }}
       </div>
       <div class="col-md-4 text-center">
-        <img src="{{ .image }}" alt="{{ .title }}">
+        <img src="{{ .image | absURL }}" alt="{{ .title }}">
       </div>
       <div class="col-md-4">
         <!-- Right side features -->
