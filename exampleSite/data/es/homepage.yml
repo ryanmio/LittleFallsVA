@@ -82,7 +82,7 @@ press_releases:
 ################################## Subscription ###################
 subscription:
   enable: true
-  bg_image: "images/call-to-action.jpg"
+  bg_image: "images/call-to-action.webp"
   title: "Manténgase actualizado y participe"
   content: "Suscríbase a nuestro boletín para recibir actualizaciones sobre el movimiento de cambio de nombre, próximos eventos y formas de ayudar a crear una ciudad más inclusiva."
   placeholder: "Ingrese su dirección de correo electrónico"
