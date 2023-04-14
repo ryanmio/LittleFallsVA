@@ -1,8 +1,9 @@
 ---
-title: "Preguntas Frecuentes"
+title: "FAQ"
 date: 2023-04-12
-layout: "faq"
+layout: "faq/single"
 ---
+
 
 ## Preguntas Frecuentes
 
