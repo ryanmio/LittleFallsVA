@@ -83,7 +83,7 @@ press_releases:
 ################################## Subscription ###################
 subscription:
   enable: true
-  bg_image: "images/call-to-action.jpg"
+  bg_image: "images/call-to-action.webp"
   title: "Stay Updated and Get Involved"
   content: "Sign up for our newsletter to receive updates on the renaming movement, upcoming events, and ways you can help create a more inclusive city."
   placeholder: "Enter your email address"
