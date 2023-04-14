@@ -721,3 +721,15 @@ textarea.form-control {
 .step p {
   font-size: 10px;
 }
+
+
+.social-button:hover {
+  background-color: #0071e3;
+  transition: background-color 0.3s ease;
+}
+
+.position-list a:hover {
+  color: #0071e3;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
