@@ -10,7 +10,7 @@
           <h2>{{ .title | markdownify }}</h2>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-12 col-md-4">
         <!-- Left side features -->
         {{ range .left_side }}
         <div class="mb-40 text-center text-md-left">
@@ -20,10 +20,10 @@
         </div>
         {{ end }}
       </div>
-      <div class="col-md-4 text-center">
-        <img src="{{ .image | absURL }}" alt="{{ .title }}">
+      <div class="col-12 col-md-4 text-center">
+        <img src="{{ .image | absURL }}" alt="{{ .title }}" class="img-fluid">
       </div>
-      <div class="col-md-4">
+      <div class="col-12 col-md-4">
         <!-- Right side features -->
         {{ range .right_side }}
         <div class="mb-40 text-center text-md-left">
