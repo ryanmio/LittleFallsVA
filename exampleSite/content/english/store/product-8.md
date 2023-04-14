@@ -3,11 +3,11 @@ title: "Patch - 3″×3″"
 date: 2019-10-17T11:22:16+06:00
 weight: 5
 images: 
-  - "images/showcase/patch-1.png"
-  - "images/showcase/patch-2.png"
-  - "images/showcase/patch-3.png"
-  - "images/showcase/patch-4.png"
-  - "images/showcase/patch-5.png"
+  - "images/showcase/patch-1.webp"
+  - "images/showcase/patch-2.webp"
+  - "images/showcase/patch-3.webp"
+  - "images/showcase/patch-4.webp"
+  - "images/showcase/patch-5.webp"
 
 # meta description
 description : "Customize your gear with our 3x3 inch patch featuring the Little Falls renaming movement logo"
