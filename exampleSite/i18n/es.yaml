@@ -33,3 +33,18 @@
 
 - id: store
   translation: "Tienda"
+
+- id: press_media_footer
+  translation: "Prensa y Medios"
+
+- id: about_us_footer
+  translation: "Sobre nosotros"
+
+- id: get_involved_footer
+  translation: "Participa"
+
+- id: terms_conditions_footer
+  translation: "Términos y condiciones"
+
+- id: privacy_policy_footer
+  translation: "Política de privacidad"

@@ -33,3 +33,18 @@
 
 - id: "privacy_policy"
   translation: "Privacy Policy"
+
+- id: press_media_footer
+  translation: "Press & Media"
+
+- id: about_us_footer
+  translation: "About Us"
+
+- id: get_involved_footer
+  translation: "Get Involved"
+
+- id: terms_conditions_footer
+  translation: "Terms & Conditions"
+
+- id: privacy_policy_footer
+  translation: "Privacy Policy"

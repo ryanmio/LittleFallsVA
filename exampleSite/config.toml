@@ -77,35 +77,29 @@ weight = 4
 
 # footer menu
 [[menu.footer]]
-name = "Press & Media"
-url = "press/"
-identifier = "press"
-weight = 1
+  identifier = "press_media_footer"
+  url = "press/"
+  weight = 1
 
 [[menu.footer]]
-name = "About Us"
-url = "about-us/"
-identifier = "about_us"
-weight = 2
+  identifier = "about_us_footer"
+  url = "about-us/"
+  weight = 2
 
 [[menu.footer]]
-name = "Get Involved"
-url = "get-involved/"
-identifier = "get_involved"
-weight = 3
+  identifier = "get_involved_footer"
+  url = "get-involved/"
+  weight = 3
 
 [[menu.footer]]
-name = "Terms & Conditions"
-url = "terms-conditions/"
-identifier = "terms_conditions"
-weight = 4
+  identifier = "terms_conditions_footer"
+  url = "terms-conditions/"
+  weight = 4
 
 [[menu.footer]]
-name = "Privacy Policy"
-url = "privacy-policy/"
-identifier = "privacy_policy"
-weight = 5
-
+  identifier = "privacy_policy_footer"
+  url = "privacy-policy/"
+  weight = 5
 
 ########################### Default parameters ##########################
 [params]
