@@ -1,6 +1,7 @@
 ---
 title: "FAQ"
 date: 2023-04-12
+layout: "general-page"
 ---
 
 ## Frequently Asked Questions
