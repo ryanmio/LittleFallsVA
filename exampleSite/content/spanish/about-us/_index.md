@@ -4,7 +4,7 @@ date: 2023-04-13
 draft: false
 layout: "about"
 images:
-  - "images/placeholder-image.png"
+  - "images/meeting.png"
 ---
 
 # Sobre nosotros
