@@ -3,9 +3,9 @@ title: "Sobre nosotros"
 date: 2023-04-13
 draft: false
 layout: "about"
-images:
-  - "images/meeting.png"
+image: "images/meeting.png"
 ---
+
 
 # Sobre nosotros
 
