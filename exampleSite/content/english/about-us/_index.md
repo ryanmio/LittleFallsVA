@@ -3,7 +3,7 @@ title: "About Us"
 date: 2023-04-13
 draft: false
 layout: "about-us"
-image: "images/meeting.png"
+image: "images/meeting.webp"
 ---
 
 Welcome to the Committee for Little Falls, a community-driven organization dedicated to renaming Falls Church, Virginia to Little Falls. Our mission is to foster a more inclusive, welcoming, and unified city by distancing ourselves from a name that holds associations with colonialism, the institution of slavery, and indigenous erasure. We believe that a city's name should reflect the shared values and aspirations of its people, and we are committed to making this vision a reality.
