@@ -1,7 +1,7 @@
 ---
 title: "Preguntas Frecuentes"
 date: 2023-04-12
-layout: "general-page"
+layout: "faq"
 ---
 
 ## Preguntas Frecuentes
