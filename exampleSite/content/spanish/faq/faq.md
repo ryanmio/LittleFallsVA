@@ -1,8 +1,9 @@
 ---
 title: "FAQ"
 date: 2023-04-12
+layout: "single"
 ---
-{{< layout "faq/single" >}}
+
 
 ## Preguntas Frecuentes
 
