@@ -54,48 +54,56 @@ link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"
 [[menu.main]]
 name = "Home"
 url = "/"
+identifier = "home"
 weight = 1
 
 [[menu.main]]
 name = "Press & Media"
 url = "press/"
+identifier = "press"
 weight = 2
 
 [[menu.main]]
 name = "Merch"
 url = "store/"
+identifier = "store"
 weight = 3
 
 [[menu.main]]
-  identifier = "petition"
-  name = "Petition"
-  url = "/petition/"
-  weight = 4
+identifier = "petition"
+name = "Petition"
+url = "/petition/"
+weight = 4
 
 # footer menu
 [[menu.footer]]
 name = "Press & Media"
 url = "press/"
+identifier = "press"
 weight = 1
 
 [[menu.footer]]
 name = "About Us"
 url = "about-us/"
+identifier = "about_us"
 weight = 2
 
 [[menu.footer]]
 name = "Get Involved"
 url = "get-involved/"
+identifier = "get_involved"
 weight = 3
 
 [[menu.footer]]
 name = "Terms & Conditions"
 url = "terms-conditions/"
+identifier = "terms_conditions"
 weight = 4
 
 [[menu.footer]]
 name = "Privacy Policy"
 url = "privacy-policy/"
+identifier = "privacy_policy"
 weight = 5
 
 
