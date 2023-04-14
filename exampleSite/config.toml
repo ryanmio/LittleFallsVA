@@ -120,7 +120,7 @@ preloader = "" # use .png , .svg or .gif format
 [params.snipcart]
 enable = true
 # snipcart public api key
-snipcart_api = "YTMxMWQyMDAtMzkzYS00YzQ5LWI4NWMtMDg2ZTZkYmZmYzZlNjM4MTY1MTA1Njc1MDgwMDIx"
+snipcart_api = "ODg3ZWMzZGUtNGVhZS00MmI5LWFlMGQtZGFhMmQ2ODc5NjA2NjM4MTY1MTA1Njc1MDgwMDIx"
 
 [outputFormats]
 [outputFormats.HTML]
