@@ -3,8 +3,7 @@ title: "About Us"
 date: 2023-04-13
 draft: false
 layout: "about-us"
-images:
-  - "images/meeting.png"
+image: "images/meeting.png"
 ---
 
 # About Us
