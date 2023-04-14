@@ -3,7 +3,7 @@ banner:
   enable: true
   title: "Little Falls, VA"
   content: "A Name for All"
-  image: "images/watch.png"
+  image: "images/bluemap.webp"
   button:
     enable: true
     label: "Sign the Petition"
