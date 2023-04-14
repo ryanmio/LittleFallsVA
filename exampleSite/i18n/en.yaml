@@ -9,12 +9,27 @@
   
 - id: "read_more"
   translation: "Read More"
-  
-- id: "subscribe"
-  translation: "Subscribe"
-  
-- id: "subscribe"
-  translation: "Subscribe"
-  
-- id: "subscribe"
-  translation: "Subscribe"
+
+- id: "home"
+  translation: "Home"
+
+- id: "press"
+  translation: "Press & Media"
+
+- id: "store"
+  translation: "Merch"
+
+- id: "petition"
+  translation: "Petition"
+
+- id: "about_us"
+  translation: "About Us"
+
+- id: "get_involved"
+  translation: "Get Involved"
+
+- id: "terms_conditions"
+  translation: "Terms & Conditions"
+
+- id: "privacy_policy"
+  translation: "Privacy Policy"
