@@ -52,89 +52,47 @@ $(window).on('load', function () {
 
 })(jQuery);
 
-function updateSignaturesCount() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      var lines = xhr.responseText.split('\n');
-      var signaturesCount = lines.length - 1; // Subtract the header line
-      signaturesCountTopElement.innerText = signaturesCount;
-      signaturesCountBottomElement.innerText = signaturesCount;
-    }
-  };
-  xhr.open('GET', sheetUrl, true);
-  xhr.send();
-}
-
 document.addEventListener('DOMContentLoaded', function () {
-  // Petition form
-  var petitionFormElement = document.getElementById('petition-form');
-  if (petitionFormElement) {
-    petitionFormElement.addEventListener('submit', submitForm);
-  }
 
-  // Subscription form
-  var subscriptionFormElement = document.getElementById("subscription-form");
-  var subscriptionMessageElement = document.getElementById("subscription-message");
-
-  if (subscriptionFormElement && subscriptionMessageElement) {
-    subscriptionFormElement.addEventListener("submit", function (event) {
+  document.addEventListener('submit', function (event) {
+    if (event.target.matches('#petition-form')) {
+      submitForm(event);
+    } else if (event.target.matches('#subscription-form')) {
       event.preventDefault();
+      // Subscription form logic here
+    }
+  });
 
-      var formData = new FormData(event.target);
-      formData.append("_subject", "New subscription");
+  // Signatures counter
+  var sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ8pwb9De5aggU61jQwEP5SQs9VfnA7_YQPskQn0TzI6cIG7O_vHP9q2wL1F22wa9sleGhJor106EH/pub?gid=0&single=true&output=csv';
+  var signaturesCountTopElement = document.getElementById('signaturesCount');
+  var signaturesCountBottomElement = document.getElementById('signaturesCountBottom');
 
-      fetch("https://formsubmit.co/hello@littlefallsva.com", {
-        method: "POST",
-        body: formData,
+  function updateSignaturesCount() {
+    fetch(sheetUrl)
+      .then(function (response) {
+        return response.text();
       })
-        .then(function (response) {
-          if (response.ok) {
-            subscriptionMessageElement.innerText = "Subscription successful!";
-          } else {
-            throw new Error("Form submission failed");
-          }
-        })
-        .catch(function (error) {
-          subscriptionMessageElement.innerText = "Subscription failed. Please try again.";
-        });
-    });
+      .then(function (csvData) {
+        var signatures = csvData.trim().split('\n');
+        var count = signatures.length - 1; // Subtract 1 to exclude the header row
+        if (signaturesCountTopElement) {
+          signaturesCountTopElement.innerText = count;
+        }
+        if (signaturesCountBottomElement) {
+          signaturesCountBottomElement.innerText = count;
+        }
+      })
+      .catch(function (error) {
+        handleError('Error fetching signature count:', error);
+      });
   }
 
-// Signatures counter
-var sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ8pwb9De5aggU61jQwEP5SQs9VfnA7_YQPskQn0TzI6cIG7O_vHP9q2wL1F22wa9sleGhJor106EH/pub?gid=0&single=true&output=csv';
-var signaturesCountTopElement = document.getElementById('signaturesCount');
-var signaturesCountBottomElement = document.getElementById('signaturesCountBottom');
-
-function updateSignaturesCount() {
-  fetch(sheetUrl)
-    .then(function (response) {
-      return response.text();
-    })
-    .then(function (csvData) {
-      var signatures = csvData.trim().split('\n');
-      var count = signatures.length - 1; // Subtract 1 to exclude the header row
-      if (signaturesCountTopElement) {
-        signaturesCountTopElement.innerText = count;
-      }
-      if (signaturesCountBottomElement) {
-        signaturesCountBottomElement.innerText = count;
-      }
-    })
-    .catch(function (error) {
-      handleError('Error fetching signature count:', error);
-    });
-}
-
-
-
-
-if (signaturesCountTopElement && signaturesCountBottomElement) {
-  updateSignaturesCount();
-  setInterval(updateSignaturesCount, 60000); // Update every 1 minute
-}
+  if (signaturesCountTopElement && signaturesCountBottomElement) {
+    updateSignaturesCount();
+    setInterval(updateSignaturesCount, 60000); // Update every 1 minute
+  }
 }); // Close the DOMContentLoaded event listener
-
 
 function submitForm(event) {
     event.preventDefault();
