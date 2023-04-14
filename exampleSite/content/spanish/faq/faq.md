@@ -1,14 +1,15 @@
 ---
-title: "FAQ"
+title: "Preguntas Frecuentes"
 date: 2023-04-12
+layout: "general-page"
 ---
 
-## Frequently Asked Questions
+## Preguntas Frecuentes
 
-1. **Question 1?**
-Answer to question 1.
+1. **Pregunta 1?**
+Respuesta a la pregunta 1.
 
-2. **Question 2?**
-Answer to question 2.
+2. **Pregunta 2?**
+Respuesta a la pregunta 2.
 
-// Add more questions and answers as needed
+// Añade más preguntas y respuestas según sea necesario
