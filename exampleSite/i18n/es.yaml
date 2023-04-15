@@ -48,3 +48,6 @@
 
 - id: privacy_policy_footer
   translation: "Política de privacidad"
+  
+- id: faq_footer
+  translation: "FAQ ES"
