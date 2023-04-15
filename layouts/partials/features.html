@@ -1,5 +1,14 @@
 {{ $data := index .Site.Data .Site.Language.Lang }}
 
+<style>
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+</style>
+
 {{- if $data.homepage.features.enable }}
 {{- with $data.homepage.features }}
 <section class="section" id="features">
@@ -20,7 +29,7 @@
         </div>
         {{ end }}
       </div>
-      <div class="col-12 col-md-4 text-center">
+      <div class="col-12 col-md-4 img-container"> <!-- Add the img-container class here -->
         <img src="{{ .image | absURL }}" alt="{{ .title }}" class="img-fluid">
       </div>
       <div class="col-12 col-md-4">
