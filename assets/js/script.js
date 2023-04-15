@@ -57,9 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('submit', function (event) {
     if (event.target.matches('#petition-form')) {
       submitForm(event);
-    } else if (event.target.matches('#subscription-form')) {
-      event.preventDefault();
-      // Subscription form logic here
     }
   });
 
