@@ -1,11 +1,9 @@
 {{ $data := index .Site.Data .Site.Language.Lang }}
 
 <style>
-  .img-container {
+  .row-centered {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100%;
   }
 </style>
 
@@ -13,7 +11,7 @@
 {{- with $data.homepage.features }}
 <section class="section" id="features">
   <div class="container">
-    <div class="row">
+    <div class="row row-centered"> <!-- Add the row-centered class here -->
       <div class="col-12">
         <div class="heading">
           <h2>{{ .title | markdownify }}</h2>
@@ -29,7 +27,7 @@
         </div>
         {{ end }}
       </div>
-      <div class="col-12 col-md-4 img-container"> <!-- Add the img-container class here -->
+      <div class="col-12 col-md-4"> <!-- Remove the img-container class -->
         <img src="{{ .image | absURL }}" alt="{{ .title }}" class="img-fluid">
       </div>
       <div class="col-12 col-md-4">
