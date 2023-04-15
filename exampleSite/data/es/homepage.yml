@@ -19,30 +19,30 @@ features:
   left_side:
     # feature item loop
     - title: "Inclusividad"
-      icon: "images/interfaith-icon.png"
+      icon: "images/icons/interfaith-icon.webp"
       content: "Eliminando la conexión con una iglesia y religión específicas, haciendo que la ciudad sea más acogedora para personas de todas las creencias y no creyentes."
 
     - title: "Honrar el legado indígena"
-      icon: "images/feather-icon.webp"
+      icon: "images/icons/feather-icon.webp"
       content: "Destacando la importancia de los pueblos indígenas que habitaron el área y valoraron las pequeñas cascadas del río Potomac."
 
     - title: "Abrazar la diversidad"
-      icon: "images/diversity-icon.png"
+      icon: "images/icons/diversity-icon.webp"
       content: "Reconociendo la evolución de la ciudad desde una única iglesia colonial hasta una comunidad que abarca diversas denominaciones y perspectivas seculares."
 
   # feature at the right of the image
   right_side:
     # feature item loop
     - title: "Reconectando con las raíces geográficas"
-      icon: "images/geographical-roots-icon.png"
+      icon: "images/icons/geographical-roots-icon.webp"
       content: "Llamando la atención sobre la proximidad de la ciudad a las pequeñas cascadas y sus orígenes en la intersección de importantes rutas indígenas."
 
     - title: "Reconocer las contribuciones de las personas esclavizadas"
-      icon: "images/chains-icon.png"
+      icon: "images/icons/chains-icon.webp"
       content: "Reconociendo el trabajo esclavo que desempeñó un papel crucial en la construcción de la iglesia original de madera y la actual iglesia de ladrillos de Falls Church."
 
     - title: "Fomentar el diálogo comunitario"
-      icon: "images/dialogue-icon.png"
+      icon: "images/icons/dialogue-icon.webp"
       content: "Animar a los residentes a participar en el proceso de toma de decisiones y entablar conversaciones significativas sobre la historia y el futuro de la ciudad."
 
 #################################### Products ########################
