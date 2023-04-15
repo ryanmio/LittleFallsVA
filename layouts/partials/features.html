@@ -1,9 +1,11 @@
 {{ $data := index .Site.Data .Site.Language.Lang }}
 
 <style>
-  .row-centered {
-    display: flex;
-    align-items: center;
+  @media (min-width: 768px) {
+    .row-centered {
+      display: flex;
+      align-items: center;
+    }
   }
 </style>
 
@@ -27,7 +29,7 @@
         </div>
         {{ end }}
       </div>
-      <div class="col-12 col-md-4"> <!-- Remove the img-container class -->
+      <div class="col-12 col-md-4 text-center"> <!-- Add text-center class -->
         <img src="{{ .image | absURL }}" alt="{{ .title }}" class="img-fluid">
       </div>
       <div class="col-12 col-md-4">
