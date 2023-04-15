@@ -23,8 +23,9 @@
           {{ range first 3 (where .Site.RegularPages.ByWeight "Section" "press") }}
           <li>
             <h4><a href="{{ .Permalink }}" class="press-release-title-link">{{ .Title }}</a></h4>
-            <p>{{ .Params.description }}</p>
-            <a href="{{ .Permalink }}" class="press-release-link">Read Press Release</a>
+            <div class="press-release-content">
+              <p>{{ .Params.description }} <span class="press-release-link-container"><a href="{{ .Permalink }}" class="press-release-link">Read Press Release</a></span></p>
+            </div>
           </li>
           {{ end }}
         </ul>
