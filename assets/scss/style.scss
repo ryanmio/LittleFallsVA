@@ -650,7 +650,7 @@ textarea.form-control {
     }
 
     .press-release-link {
-      color: #2d495d;
+      color: #2d495d !important; 
       text-decoration: none;
       &:hover {
         color: #23527c;
