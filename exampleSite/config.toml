@@ -85,21 +85,26 @@ weight = 4
   identifier = "about_us_footer"
   url = "about-us/"
   weight = 2
+  
+[[menu.footer]]
+  identifier = "faq_footer"
+  url = "faq/"
+  weight = 3
 
 [[menu.footer]]
   identifier = "get_involved_footer"
   url = "get-involved/"
-  weight = 3
+  weight = 4
 
 [[menu.footer]]
   identifier = "terms_conditions_footer"
   url = "terms-conditions/"
-  weight = 4
+  weight = 5
 
 [[menu.footer]]
   identifier = "privacy_policy_footer"
   url = "privacy-policy/"
-  weight = 5
+  weight = 6
 
 ########################### Default parameters ##########################
 [params]
