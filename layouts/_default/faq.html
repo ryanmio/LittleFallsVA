@@ -5,33 +5,12 @@
     <div class="row">
       <div class="col-lg-6 col-md-7 offset-lg-1">
         <h1 class="mb-4">{{.Title | markdownify}}</h1>
-        <input type="text" id="searchInput" onkeyup="searchFAQ()" placeholder="Search for questions...">
-        <div class="content" id="faqContent">
+        <div class="content">
           {{.Content}}
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<script>
-  function searchFAQ() {
-    let input = document.getElementById('searchInput');
-    let filter = input.value.toLowerCase();
-    let faqContent = document.getElementById('faqContent');
-    let faqItems = faqContent.querySelectorAll('.faq-item');
-
-    for (let i = 0; i < faqItems.length; i++) {
-      let question = faqItems[i].querySelector('strong');
-      let answer = faqItems[i].querySelector('p');
-      if (question.innerHTML.toLowerCase().indexOf(filter) > -1) {
-        faqItems[i].style.display = '';
-      } else {
-        faqItems[i].style.display = 'none';
-      }
-    }
-  }
-</script>
-
 
 {{ end }}
