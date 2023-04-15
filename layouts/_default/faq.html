@@ -17,21 +17,17 @@
 
 <!-- Add the search functionality JavaScript code -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('faq-search');
-    const faqItems = document.getElementsByClassName('faq-item');
-
-    searchInput.addEventListener('input', function(event) {
-      const searchTerm = event.target.value.toLowerCase();
-
-      for (const faqItem of faqItems) {
-        const itemText = faqItem.textContent.toLowerCase();
+  $(document).ready(function() {
+    $('#faq-search').on('input', function() {
+      let searchTerm = $(this).val().toLowerCase();
+      $('.faq-item').each(function() {
+        let itemText = $(this).text().toLowerCase();
         if (itemText.includes(searchTerm)) {
-          faqItem.style.display = 'block';
+          $(this).show();
         } else {
-          faqItem.style.display = 'none';
+          $(this).hide();
         }
-      }
+      });
     });
   });
 </script>
