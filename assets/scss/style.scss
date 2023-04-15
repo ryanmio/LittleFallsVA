@@ -733,3 +733,11 @@ textarea.form-control {
   text-decoration: underline;
   transition: color 0.3s ease;
 }
+
+
+  .faq-item {
+    display: block;
+  }
+  .faq-item.hidden {
+    display: none;
+  }
