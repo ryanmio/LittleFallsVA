@@ -3,9 +3,9 @@ title: "Sudadera con Cuello Redondo - Azul"
 date: 2019-10-17T11:22:16+06:00
 weight: 3
 images: 
-  - "images/showcase/crewneck-blue-1.png"
-  - "images/showcase/crewneck-blue-2.png"
-  - "images/showcase/crewneck-blue-3.png"
+  - "images/showcase/crewneck-blue-1.webp"
+  - "images/showcase/crewneck-blue-2.webp"
+  - "images/showcase/crewneck-blue-3.webp"
 
 # meta description
 description : "Mantente abrigado y con estilo con nuestra sudadera azul con cuello redondo apoyando el movimiento de cambio de nombre de Little Falls"
