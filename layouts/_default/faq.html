@@ -13,4 +13,25 @@
   </div>
 </section>
 
+<!-- Add the search functionality JavaScript code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('faq-search');
+    const faqItems = document.getElementsByClassName('faq-item');
+
+    searchInput.addEventListener('input', function(event) {
+      const searchTerm = event.target.value.toLowerCase();
+
+      for (const faqItem of faqItems) {
+        const itemText = faqItem.textContent.toLowerCase();
+        if (itemText.includes(searchTerm)) {
+          faqItem.style.display = 'block';
+        } else {
+          faqItem.style.display = 'none';
+        }
+      }
+    });
+  });
+</script>
+
 {{ end }}
