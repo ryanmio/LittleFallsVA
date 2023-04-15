@@ -1,6 +1,6 @@
 ---
 title: "Se Necesitan Voluntarios"
-date: 2023-04-16
+date: 2023-04-12
 image: "images/logo.webp"
 description : "Little Falls, VA - 16 de abril de 2023 - El Comité por Little Falls se enorgullece en anunciar la formación de un nuevo subcomité, enfocado en reclutar voluntarios, mantener el sitio web y redactar comunicados de prensa para impulsar el apoyo al cambio de nombre propuesto de Falls Church, Virginia a Little Falls."
 draft: false
