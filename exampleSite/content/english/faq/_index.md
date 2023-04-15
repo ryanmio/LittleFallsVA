@@ -6,6 +6,12 @@ layout: "faq"
 
 ## Frequently Asked Questions
 
+<!-- Add search input field -->
+<input type="text" id="faq-search" placeholder="Search FAQs..." style="width: 100%; margin-bottom: 1rem;">
+
+<!-- Add container for FAQ items -->
+<div id="faq-container">
+
 1. **Why is the renaming movement important?**
 The renaming movement aims to create a more inclusive and diverse community in Falls Church by changing the city's name to Little Falls. By removing the connection to a specific church and religion, the new name will make the city more welcoming to people of all faiths, beliefs, and non-believers, while also highlighting the city's rich history and indigenous heritage.
 
@@ -65,3 +71,5 @@ While the boundaries of the greater Falls Church area may be undefined, the rena
 
 20. **What role will residents in the greater Falls Church area play in the renaming movement?**
 Residents in the greater Falls Church area can play a crucial role in the renaming movement. They can participate in the decision-making process by attending public meetings, engaging in community discussions, signing the petition, and expressing their opinions through various channels provided by the renaming movement. By involving the broader community in the process, we can ensure that the renaming reflects the values and aspirations of all people who consider themselves part of the Falls Church community.
+
+
