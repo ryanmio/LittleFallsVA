@@ -8,8 +8,14 @@
         <!-- Add the search input field here -->
         <input type="text" id="faq-search" class="form-control mb-4" placeholder="Search FAQs">
         <div class="content">
-          {{.Content}}
-        </div>
+  {{ range .Content }}
+  <div class="faq-item">
+    {{ range .Inner }}
+    <div class="faq-text">{{ . | markdownify }}</div>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
       </div>
     </div>
   </div>
