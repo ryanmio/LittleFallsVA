@@ -21,6 +21,24 @@
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
     
 
+<!-- ChatGPT JSON-D schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Little Falls, VA",
+  "description": "A movement to rename Falls Church to Little Falls, fostering a more welcoming and diverse community for all.",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": "{{ `images/showcase/logo.png` | absURL }}",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-703-965-6785",
+    "contactType": "Customer service"
+  }
+}
+</script>
+
+
 <!--ChatGPT metadata recommendation -->
 <meta name="description" content="{{ .Params.description | default "Support the movement to rename Falls Church to Little Falls, fostering a more welcoming and diverse community for all." }}">
 <meta property="og:title" content="{{ .Title }}">
