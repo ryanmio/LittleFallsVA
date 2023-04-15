@@ -1,33 +1,12 @@
 {{ define "main" }}
 
-<script>
-  document.getElementById('faq-search').addEventListener('input', function (e) {
-    const searchString = e.target.value.toLowerCase().trim();
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(function (item) {
-      const question = item.querySelector('strong').textContent.toLowerCase();
-      const answer = item.textContent.toLowerCase();
-
-      if (
-        searchString === '' ||
-        question.includes(searchString) ||
-        answer.includes(searchString)
-      ) {
-        item.classList.remove('hidden');
-      } else {
-        item.classList.add('hidden');
-      }
-    });
-  });
-</script>
-
-
 <section class="section">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-md-7 offset-lg-1">
         <h1 class="mb-4">{{.Title | markdownify}}</h1>
+        <!-- Add the search input field here -->
+        <input type="text" id="faq-search" class="form-control mb-4" placeholder="Search FAQs">
         <div class="content">
           {{.Content}}
         </div>
@@ -35,5 +14,26 @@
     </div>
   </div>
 </section>
+
+<!-- Add the search functionality JavaScript code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('faq-search');
+
+    searchInput.addEventListener('input', function(event) {
+      const searchTerm = event.target.value.toLowerCase();
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(function(faqItem) {
+        const itemText = faqItem.textContent.toLowerCase();
+        if (itemText.includes(searchTerm)) {
+          faqItem.style.display = 'block';
+        } else {
+          faqItem.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
 
 {{ end }}
