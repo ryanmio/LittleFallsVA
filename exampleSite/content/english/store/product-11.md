@@ -3,10 +3,10 @@ title: "Organic cotton kids t-shirt"
 date: 2019-10-17T11:22:16+06:00
 weight: 8
 images: 
-  - "images/showcase/kids-shirt-1.png"
-  - "images/showcase/kids-shirt-2.png"
-  - "images/showcase/kids-shirt-3.png"
-  - "images/showcase/kids-shirt-4.png"
+  - "images/showcase/kids-shirt-1.webp"
+  - "images/showcase/kids-shirt-2.webp"
+  - "images/showcase/kids-shirt-3.webp"
+  - "images/showcase/kids-shirt-4.webp"
 
 # meta description
 description : "Dress your little ones in our organic cotton kids t-shirt supporting the Little Falls renaming movement"
