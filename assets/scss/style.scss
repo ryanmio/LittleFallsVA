@@ -745,3 +745,17 @@ textarea.form-control {
 .faq-question {
   font-size: 1.2em;
 }
+
+.press-release-link {
+  color: #2d495d; /* Replace with the desired color for your links */
+  text-decoration: none;
+}
+
+.press-release-link:hover {
+  text-decoration: underline;
+}
+
+.press-release-link-container {
+  display: inline;
+  white-space: nowrap;
+}
