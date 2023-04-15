@@ -106,7 +106,7 @@ weight = 4
 logo = "images/logo.webp"
 logo_width = "100px"
 # Meta data
-description = "This is meta description"
+description = "Support the movement to rename Falls Church to Little Falls, fostering a more welcoming and diverse community for all."
 author = "Little Falls"
 # currency
 currency = "$"
@@ -125,6 +125,7 @@ snipcart_api = "ODg3ZWMzZGUtNGVhZS00MmI5LWFlMGQtZGFhMmQ2ODc5NjA2NjM4MTY1MTA1Njc1
 [outputFormats]
 [outputFormats.HTML]
   baseName = "index"
+  
 
 ################################### English language #####################################
 [Languages.en]
