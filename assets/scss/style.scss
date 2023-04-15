@@ -650,7 +650,7 @@ textarea.form-control {
     }
 
     .press-release-link {
-      color: #337ab7;
+      color: #2d495d;
       text-decoration: none;
       &:hover {
         color: #23527c;
@@ -659,6 +659,14 @@ textarea.form-control {
     }
   }
 }
+
+.press-release-link-container {
+  display: inline;
+  white-space: nowrap;
+}
+
+
+
 .custom-gutter > .col-md-4,
 .custom-gutter > .col-md-8 {
   padding-left: 30px;
@@ -746,16 +754,3 @@ textarea.form-control {
   font-size: 1.2em;
 }
 
-.press-release-link {
-  color: #2d495d; /* Replace with the desired color for your links */
-  text-decoration: none;
-}
-
-.press-release-link:hover {
-  text-decoration: underline;
-}
-
-.press-release-link-container {
-  display: inline;
-  white-space: nowrap;
-}
