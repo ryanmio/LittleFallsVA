@@ -3,11 +3,11 @@ title: "Gorra de algodón orgánico tipo 'dad hat'"
 date: 2019-10-17T11:22:16+06:00
 weight: 7
 images: 
-  - "images/showcase/dad-hat-1.png"
-  - "images/showcase/dad-hat-2.png"
-  - "images/showcase/dad-hat-3.png"
-  - "images/showcase/dad-hat-4.png"
-  - "images/showcase/dad-hat-5.png"  
+  - "images/showcase/dad-hat-1.webp"
+  - "images/showcase/dad-hat-2.webp"
+  - "images/showcase/dad-hat-3.webp"
+  - "images/showcase/dad-hat-4.webp"
+  - "images/showcase/dad-hat-5.webp"  
 
 # meta description
 description : "Luce nuestra gorra ecológica tipo 'dad hat' y representa con orgullo el movimiento de cambio de nombre de Little Falls"
