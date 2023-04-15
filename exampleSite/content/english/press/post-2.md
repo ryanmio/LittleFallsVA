@@ -1,9 +1,10 @@
 ---
 title: "Volunteers Needed"
-date: 2019-10-17T11:22:16+06:00
-image: "images/showcase/downtown.png"
+date: 2023-04-16
+image: "images/logo.webp"
 description : "Little Falls, VA - April 16, 2023 - The Committee for Little Falls is proud to announce the formation of a new sub-committee, focused on recruiting volunteers, maintaining the website, and drafting press releases to drive support for the proposed name change from Falls Church, Virginia to Little Falls."
 draft: false
+category: "name-change"
 weight: 9
 ---
 

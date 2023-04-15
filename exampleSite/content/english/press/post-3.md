@@ -1,9 +1,10 @@
 ---
 title: "A Name For All"
-date: 2019-10-17T11:22:16+06:00
-image: "images/showcase/minichurch.png"
+date: 2023-04-17
+image: "images/logo.webp"
 description : "Little Falls, VA - April 17, 2023 - The Committee for Little Falls is proud to announce the formation of a new sub-committee, focused on recruiting volunteers, maintaining the website, and drafting press releases to drive support for the proposed name change from Falls Church, Virginia to Little Falls."
 draft: false
+category: "name-change"
 weight: 8
 ---
 
