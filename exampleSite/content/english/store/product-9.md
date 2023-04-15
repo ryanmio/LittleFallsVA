@@ -3,11 +3,11 @@ title: "Unisex T-Shirt - Tan"
 date: 2019-10-17T11:22:16+06:00
 weight: 6
 images: 
-  - "images/showcase/tshirt-tan-2.png"
-  - "images/showcase/tshirt-tan-3.png"
-  - "images/showcase/tshirt-tan-4.png"
-  - "images/showcase/tshirt-tan-5.png"
-  - "images/showcase/tshirt-tan-6.jpg"  
+  - "images/showcase/tshirt-tan-2.webp"
+  - "images/showcase/tshirt-tan-3.webp"
+  - "images/showcase/tshirt-tan-4.webp"
+  - "images/showcase/tshirt-tan-5.webp"
+  - "images/showcase/tshirt-tan-6.webp"  
 
 # meta description
 description : "Support the Little Falls renaming movement with our versatile tan unisex t-shirt"
