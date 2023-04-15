@@ -3,9 +3,9 @@ title: "Eco Tote Bag"
 date: 2019-10-17T11:22:16+06:00
 weight: 2
 images: 
-  - "images/showcase/showcase-3.png"
-  - "images/showcase/tote-2.png"
-  - "images/showcase/tote-3.png"
+  - "images/showcase/tote-1.webp"
+  - "images/showcase/tote-2.webp"
+  - "images/showcase/tote-3.webp"
 
 # meta description
 description : "Carry your essentials in our eco-friendly tote bag supporting the Little Falls renaming movement"
