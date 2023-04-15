@@ -14,7 +14,7 @@
   translation: "Home"
 
 - id: "press"
-  translation: "Press & Media"
+  translation: "Press"
 
 - id: "store"
   translation: "Merch"
@@ -35,7 +35,7 @@
   translation: "Privacy Policy"
 
 - id: press_media_footer
-  translation: "Press & Media"
+  translation: "Press"
 
 - id: about_us_footer
   translation: "About Us"
