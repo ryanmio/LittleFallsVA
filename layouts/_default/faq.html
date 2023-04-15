@@ -5,7 +5,8 @@
     <div class="row">
       <div class="col-lg-6 col-md-7 offset-lg-1">
         <h1 class="mb-4">{{.Title | markdownify}}</h1>
-        <div class="content">
+        <input type="text" id="searchInput" onkeyup="searchFAQ()" placeholder="Search for questions...">
+        <div class="content" id="faqContent">
           {{.Content}}
         </div>
       </div>
@@ -14,3 +15,24 @@
 </section>
 
 {{ end }}
+
+<script>
+  function searchFAQ() {
+    let input = document.getElementById('searchInput');
+    let filter = input.value.toLowerCase();
+    let faqContent = document.getElementById('faqContent');
+    let faqItems = faqContent.querySelectorAll('h2');
+
+    for (let i = 0; i < faqItems.length; i++) {
+      let question = faqItems[i];
+      let answer = question.nextElementSibling;
+      if (question.innerHTML.toLowerCase().indexOf(filter) > -1) {
+        question.style.display = '';
+        answer.style.display = '';
+      } else {
+        question.style.display = 'none';
+        answer.style.display = 'none';
+      }
+    }
+  }
+</script>
