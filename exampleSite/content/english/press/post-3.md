@@ -1,6 +1,6 @@
 ---
 title: "A Name For All"
-date: 2023-04-15
+date: 2023-04-23
 image: "images/logo.webp"
 description : "Little Falls, VA - April 17, 2023 - The Committee for Little Falls is proud to announce the formation of a new sub-committee, focused on recruiting volunteers, maintaining the website, and drafting press releases to drive support for the proposed name change from Falls Church, Virginia to Little Falls."
 draft: false
@@ -12,7 +12,7 @@ FOR IMMEDIATE RELEASE
 
 Committee for Little Falls Highlights Rationale Behind Proposed Name Change
 
-Little Falls, VA - April 17, 2023 - The Committee for Little Falls has released a statement outlining the rationale behind proposing "Little Falls" as the new name for Falls Church, Virginia. This statement aims to address questions and concerns from the community and provide a clear understanding of the name's significance.
+Little Falls, VA - April 23, 2023 - The Committee for Little Falls has released a statement outlining the rationale behind proposing "Little Falls" as the new name for Falls Church, Virginia. This statement aims to address questions and concerns from the community and provide a clear understanding of the name's significance.
 
 The rationale behind the proposed name change can be summarized in three key points:
 
