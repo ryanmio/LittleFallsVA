@@ -14,16 +14,13 @@
             <a href="{{ .Permalink }}" class="product-thumbnail" aria-label="View details for {{ .Title }}">
               {{ with index .Params.images 0 }}
                 {{ $image := . }}
-                {{ $imageResource := ($.Site.GetPage "section" "store").Resources.GetMatch (printf "*%s*" $image) }}
-                {{ with $imageResource }}
-                  {{ $mobile := .Resize "320x" }}
-                  {{ $desktop := .Resize "640x" }}
-                  <picture>
-                    <source media="(max-width: 767px)" srcset="{{ $mobile.RelPermalink }}">
-                    <source media="(min-width: 768px)" srcset="{{ $desktop.RelPermalink }}">
-                    <img class="img-fluid" src="{{ $desktop.RelPermalink }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
-                  </picture>
-                {{ end }}
+                {{ $mobile := printf "/static/%s" $image | relURL }}
+                {{ $desktop := printf "/static/%s" $image | relURL }}
+                <picture>
+                  <source media="(max-width: 767px)" srcset="{{ $mobile }}">
+                  <source media="(min-width: 768px)" srcset="{{ $desktop }}">
+                  <img class="img-fluid" src="{{ $desktop }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
+                </picture>
               {{ end }}
             </a>
           </div>
