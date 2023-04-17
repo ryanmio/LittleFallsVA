@@ -16,11 +16,9 @@
                 {{ $image := . }}
                 {{ $mobile := printf "/static/%s" $image | relURL }}
                 {{ $desktop := printf "/static/%s" $image | relURL }}
-                <picture>
-                  <source media="(max-width: 767px)" srcset="{{ $mobile }}">
-                  <source media="(min-width: 768px)" srcset="{{ $desktop }}">
-                  <img class="img-fluid" src="{{ $desktop }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
-                </picture>
+                <img class="img-fluid" src="{{ $desktop }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}"
+                     srcset="{{ $mobile }} 767w, {{ $desktop }} 768w"
+                     sizes="(max-width: 767px) 100vw, (min-width: 768px) 100vw">
               {{ end }}
             </a>
           </div>
