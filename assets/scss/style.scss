@@ -560,13 +560,9 @@ textarea.form-control {
     margin-bottom: 20px;
   }
 
-a {
-  color: #2c475d;
-}
-
-a:hover {
-  color: #78a3c4;
-}
+  a {
+    text-decoration: underline;
+  }
 
   h1,
   h2,
