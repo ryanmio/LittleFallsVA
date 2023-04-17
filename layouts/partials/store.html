@@ -1,3 +1,4 @@
+{{ $data := index .Site.Data (default "en" .Site.Language.Lang) }}
 {{ if $data.homepage.store.enable }}
 <section class="gallery" id="store">
   <div class="container">
