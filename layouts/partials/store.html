@@ -19,7 +19,7 @@
                 <picture>
                   <source media="(max-width: 767px)" srcset="{{ $mobile }}">
                   <source media="(min-width: 768px)" srcset="{{ $desktop }}">
-                  <img class="img-fluid" src="{{ $desktop }}" alt="{{ with $.Params.image_alt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}">
+                  <img class="img-fluid" src="{{ $desktop }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
                 </picture>
               {{ end }}
             </a>
