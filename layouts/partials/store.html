@@ -17,10 +17,7 @@
                 {{ $image := index .Params.images 0 }}
                 {{ $desktop := $image }}
                 {{ $mobile := printf "%s-mobile%s" (path.Dir $image) (path.Ext $image) }}
-                <picture>
-                  <source media="(max-width: 767px)" srcset="{{ $mobile | absURL }}">
-                  <img class="img-fluid" src="{{ $desktop | absURL }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
-                </picture>
+                <img class="img-fluid" src="{{ $desktop | absURL }}" srcset="{{ $mobile | absURL }} 480w, {{ $desktop | absURL }} 800w" sizes="(max-width: 767px) 480px, 800px" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
               {{ end }}
             </a>
           </div>
