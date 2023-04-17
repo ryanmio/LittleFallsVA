@@ -16,7 +16,8 @@
                 {{ $image := . }}
                 {{ $mobile := printf "/static/%s" $image | relURL }}
                 {{ $desktop := printf "/static/%s" $image | relURL }}
-                <img class="img-fluid" src="{{ $desktop }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}"
+                {{ $alt := .Page.Params.image_alt | default .Page.Title }}
+                <img class="img-fluid" src="{{ $desktop }}" alt="{{ $alt }}"
                      srcset="{{ $mobile }} 767w, {{ $desktop }} 768w"
                      sizes="(max-width: 767px) 100vw, (min-width: 768px) 100vw">
               {{ end }}
