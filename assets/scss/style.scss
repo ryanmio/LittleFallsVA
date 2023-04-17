@@ -624,10 +624,10 @@ textarea.form-control {
 }
 
 .link-title{
-  color: inherit;
+  color: #2c475d;
   text-decoration: none !important;
   &:hover{
-    color: $primary-color;
+    color: #78a3c4;
   }
 }
 
@@ -652,13 +652,13 @@ textarea.form-control {
 }
 
 .press-and-media-section .press-releases .press-release-link {
-  color: #2c475d !important;
+  color: #78a3c4 !important;
   text-decoration: none;
 }
 
 .press-and-media-section .press-releases .press-release-link:hover,
 .press-and-media-section .press-releases .press-release-link:focus {
-  color: #78a3c4 !important;
+  color: #2c475d !important;
   text-decoration: underline;
 }
 
