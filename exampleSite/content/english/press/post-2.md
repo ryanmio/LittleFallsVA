@@ -10,7 +10,6 @@ keywords: "Little Falls, renaming movement, inclusivity, diversity, community, F
 ---
 
 
-
 FOR IMMEDIATE RELEASE
 
 Committee for Little Falls Milestone: New Sub-Committee Founded to Mobilize Support
