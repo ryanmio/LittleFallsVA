@@ -13,11 +13,12 @@
           {{ range (where .Site.RegularPages "Section" "store") }}
           <div class="block">
             <a href="{{ .Permalink }}" class="product-thumbnail" aria-label="View details for {{ .Title }}">
-              {{ $image := "" }}
               {{ if isset .Params "images" }}
-                {{ $image = index .Params.images 0 }}
+                {{ $image := index .Params.images 0 }}
+                {{ $desktop := $image }}
+                {{ $mobile := printf "%s-mobile%s" (path.Dir $image) (path.Ext $image) }}
+                <img class="img-fluid" src="{{ $desktop | absURL }}" srcset="{{ $mobile | absURL }} 480w, {{ $desktop | absURL }} 800w" sizes="(max-width: 767px) 480px, 800px" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
               {{ end }}
-              <img class="img-fluid" src="{{ $image | absURL }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
             </a>
           </div>
           {{ end }}
