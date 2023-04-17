@@ -1,27 +1,24 @@
 {{ $data := index .Site.Data .Site.Language.Lang }}
 
 {{- if $data.homepage.banner.enable }}
-{{ with .Site.Data.homepage.banner }}
 <!-- hero area -->
 <section class="section">
   <div class="container">
     <div class="row">
       <div class="col-md-6 text-center mb-5 mb-md-0">
-        <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .image_alt | default .title }}">
+        <img class="img-fluid" src="{{ $data.homepage.banner.image | absURL }}" alt="{{ $data.homepage.banner.image_alt | default $data.homepage.banner.title }}">
       </div>
       <div class="col-md-6 align-self-center text-center text-md-left">
         <div class="block">
-          <h1 class="font-weight-bold mb-4 font-size-60">{{ .title | markdownify }}</h1>
-          <h2 class="mb-4">{{ .content | markdownify }}</h2>
+          <h1 class="font-weight-bold mb-4 font-size-60">{{ $data.homepage.banner.title | markdownify }}</h1>
+          <h2 class="mb-4">{{ $data.homepage.banner.content | markdownify }}</h2>
           <p>Join the movement to rename Falls Church to Little Falls, promoting inclusivity, honoring indigenous heritage, and fostering religious and non-religious diversity for a united, forward-looking future.</p>
-          {{ if .button.enable }}
-          {{ with .button }}
-          <a href="{{.link|absLangURL}}" class="btn btn-main">{{.label}}</a>
-          {{ end }}
+          {{ if $data.homepage.banner.button.enable }}
+          <a href="{{$data.homepage.banner.button.link|absLangURL}}" class="btn btn-main">{{$data.homepage.banner.button.label}}</a>
           {{ end }}
         </div>
       </div>
     </div><!-- .row close -->
   </div><!-- .container close -->
 </section><!-- header close -->
-{{ end }}
+{{- end }}
