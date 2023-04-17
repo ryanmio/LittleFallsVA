@@ -21,7 +21,7 @@
 {{ if isset .Params "images" }}
   {{ $image = index .Params.images 0 }}
 {{ end }}
-<img class="img-fluid" src="{{ $image | absURL }}" alt="{{ .Title }}">
+<img class="img-fluid" src="{{ $image | absURL }}" alt="{{ .image_alt | default .title }}">
 
           </div>
           {{ end }}
