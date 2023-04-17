@@ -5,7 +5,7 @@ $primary-font: 'Josefin Sans',
 sans-serif;
 $secondary-font: 'Droid Serif',
 serif;
-$primary-color: #2c475d;
+$primary-color: #f9a743;
 $icon-font: 'themefisher-font' !important;
 
 /*--
@@ -651,13 +651,13 @@ textarea.form-control {
   margin-bottom: 20px;
 }
 
-.press-and-media-section .press-releases .press-release-link {
+.press-and-media-section.press-releases .press-release-link {
   color: #2c475d;
   text-decoration: none;
 }
 
-.press-and-media-section .press-releases .press-release-link:hover,
-.press-and-media-section .press-releases .press-release-link:focus {
+.press-and-media-section.press-releases .press-release-link:hover,
+.press-and-media-section.press-releases .press-release-link:focus {
   color: #78a3c4;
   text-decoration: underline;
 }
@@ -666,6 +666,7 @@ textarea.form-control {
   display: inline;
   white-space: nowrap;
 }
+
 
 
 .custom-gutter > .col-md-4,
