@@ -5,7 +5,9 @@ image: "images/logo.webp"
 description: "Little Falls, VA - 15 de abril de 2023 - El Comité por Little Falls, un grupo dedicado de residentes, anuncia el lanzamiento de una nueva iniciativa para cambiar el nombre de Falls Church, Virginia, a Little Falls."
 weight: 10
 category: "name-change"
+keywords: "renombramiento, movimiento, Falls Church, Little Falls, comunidad, inclusividad, diversidad"
 ---
+
 
 PARA PUBLICACIÓN INMEDIATA
 
