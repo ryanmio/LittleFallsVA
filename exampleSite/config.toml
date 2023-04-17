@@ -22,6 +22,9 @@ defaultContentLanguage = "en"
   [languages.es]
     baseURL = "https://littlefallsva.com/es/"
 
+[imaging]
+  resampleFilter = "bicubic"
+  quality = 75
 
 #################################### Plugins ##########################################
 

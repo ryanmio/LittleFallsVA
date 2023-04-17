@@ -1,5 +1,3 @@
-{{ $data := index .Site.Data .Site.Language.Lang }}
-
 {{ if $data.homepage.store.enable }}
 <section class="gallery" id="store">
   <div class="container">
@@ -16,8 +14,15 @@
               {{ $image := "" }}
               {{ if isset .Params "images" }}
                 {{ $image = index .Params.images 0 }}
+                {{ $imageResource := .Resources.GetMatch (printf "*%s*" $image) }}
+                {{ $mobile := $imageResource.Resize "320x" }}
+                {{ $desktop := $imageResource.Resize "640x" }}
+                <picture>
+                  <source media="(max-width: 767px)" srcset="{{ $mobile.RelPermalink }}">
+                  <source media="(min-width: 768px)" srcset="{{ $desktop.RelPermalink }}">
+                  <img class="img-fluid" src="{{ $desktop.RelPermalink }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
+                </picture>
               {{ end }}
-              <img class="img-fluid" src="{{ $image | absURL }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
             </a>
           </div>
           {{ end }}
