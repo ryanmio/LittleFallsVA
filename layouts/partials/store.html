@@ -13,7 +13,7 @@
           {{ range (where .Site.RegularPages "Section" "store") }}
           <div class="block">
             <div class="gallery-overlay">
-              <a href="{{ .Permalink }}" class="gallery-popup">
+              <a href="{{ .Permalink }}" class="gallery-popup" aria-label="View details for {{ .Title }}">
                 <i class="tf-ion-plus-round"></i>
               </a>
             </div>
@@ -21,8 +21,9 @@
             {{ if isset .Params "images" }}
               {{ $image = index .Params.images 0 }}
             {{ end }}
-            <img class="img-fluid" src="{{ $image | absURL }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
-
+            <a href="{{ .Permalink }}" aria-label="View details for {{ .Title }}">
+              <img class="img-fluid" src="{{ $image | absURL }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
+            </a>
           </div>
           {{ end }}
         </div>
