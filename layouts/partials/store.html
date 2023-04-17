@@ -14,7 +14,7 @@
             <a href="{{ .Permalink }}" class="product-thumbnail" aria-label="View details for {{ .Title }}">
               {{ with .Params.images }}
                 {{ $image := index . 0 }}
-                {{ $imagePage := .Site.GetPage (printf "images/%s" $image) }}
+                {{ $imagePage := $.Site.GetPage (printf "images/%s" $image) }}
                 {{ with $imagePage }}
                   {{ $mobile := .Resize "320x" }}
                   {{ $desktop := .Resize "640x" }}
