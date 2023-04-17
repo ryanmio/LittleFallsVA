@@ -1,10 +1,13 @@
 ---
-title: "Sobre nosotros"
+title: "Sobre nosotros - Movimiento Little Falls por la Inclusividad"
 date: 2023-04-13
 draft: false
 layout: "about"
 image: "images/meeting.webp"
+description: "Conoce al Comité por Little Falls, nuestra misión de cambiar el nombre de Falls Church a Little Falls, nuestra historia, objetivos, equipo y cómo involucrarse."
+keywords: "Little Falls, movimiento de cambio de nombre, inclusividad, diversidad, comunidad, Falls Church, Virginia, Falls Church VA, Little Falls VA, cambio de nombre Falls Church, renombrar Falls Church, sobre nosotros, nuestra historia, nuestros objetivos, nuestro equipo, únete a nosotros, involúcrate"
 ---
+
 
 Bienvenidos al Comité por Little Falls, una organización impulsada por la comunidad dedicada a cambiar el nombre de Falls Church, Virginia, a Little Falls. Nuestra misión es fomentar una ciudad más inclusiva, acogedora y unificada al alejarnos de un nombre que tiene asociaciones con el colonialismo, la esclavitud y el borrado indígena. Creemos que el nombre de una ciudad debe reflejar los valores y aspiraciones compartidos de su gente, y estamos comprometidos a hacer realidad esta visión.
 
