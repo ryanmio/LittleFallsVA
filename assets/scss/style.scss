@@ -754,3 +754,15 @@ textarea.form-control {
   font-size: 1.2em;
 }
 
+.product-thumbnail {
+  display: block;
+  text-decoration: none;
+}
+
+.product-thumbnail img {
+  transition: opacity 0.3s;
+}
+
+.product-thumbnail:hover img {
+  opacity: 0.8;
+}
