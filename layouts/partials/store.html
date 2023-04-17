@@ -25,11 +25,8 @@
                       <source media="(min-width: 768px)" srcset="{{ $desktop.RelPermalink }}">
                       <img class="img-fluid" src="{{ $desktop.RelPermalink }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
                     </picture>
-                  <source media="(max-width: 767px)" srcset="{{ $mobile.RelPermalink }}">
-                  <source media="(min-width: 768px)" srcset="{{ $desktop.RelPermalink }}">
-                  <img class="img-fluid" src="{{ $desktop.RelPermalink }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
-                </picture>
-              {{ end }}
+                  {{ end }}
+                {{ end }}
             </a>
           </div>
           {{ end }}
