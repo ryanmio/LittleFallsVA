@@ -19,6 +19,9 @@ price: "25.00"
 button_link: "#"
 
 draft: false
+
+# alt text for product image
+image_alt: "Eco-friendly tote bag with Little Falls renaming movement logo"
 ---
 
 Show your support for the Little Falls renaming movement with this eco-friendly tote bag. Carry your essentials while promoting a more inclusive and historically aware community.
