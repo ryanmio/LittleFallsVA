@@ -23,20 +23,20 @@
         <!-- Left side features -->
         {{ range .left_side }}
         <div class="mb-40 text-center text-md-left">
-          <img class="d-inline-block custom-icon mb-10" src="{{ .icon | absURL }}" alt="{{ .title }}">
+          <img class="d-inline-block custom-icon mb-10" src="{{ .icon | absURL }}" alt="{{ .image_alt | default .title }}">
           <h4 class="font-weight-bold mb-2">{{ .title | markdownify }}</h4>
           <p>{{ .content | markdownify }}</p>
         </div>
         {{ end }}
       </div>
       <div class="col-12 col-md-4 text-center"> <!-- Add text-center class -->
-        <img src="{{ .image | absURL }}" alt="{{ .title }}" class="img-fluid">
+        <img src="{{ .image | absURL }}" alt="{{ .image_alt | default .title }}" class="img-fluid">
       </div>
       <div class="col-12 col-md-4">
         <!-- Right side features -->
         {{ range .right_side }}
         <div class="mb-40 text-center text-md-left">
-          <img class="d-inline-block custom-icon mb-10" src="{{ .icon | absURL }}" alt="{{ .title }}">
+          <img class="d-inline-block custom-icon mb-10" src="{{ .icon | absURL }}" alt="{{ .image_alt | default .title }}">
           <h4 class="font-weight-bold mb-2">{{ .title | markdownify }}</h4>
           <p>{{ .content | markdownify }}</p>
         </div>
