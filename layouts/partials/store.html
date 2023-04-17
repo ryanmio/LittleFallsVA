@@ -13,14 +13,18 @@
           <div class="block">
             <a href="{{ .Permalink }}" class="product-thumbnail" aria-label="View details for {{ .Title }}">
               {{ $image := "" }}
-                {{ if $imageResource }}
-                  {{ $mobile := $imageResource.Resize "320x" }}
-                  {{ $desktop := $imageResource.Resize "640x" }}
-                  <picture>
-                    <source media="(max-width: 767px)" srcset="{{ $mobile.RelPermalink }}">
-                    <source media="(min-width: 768px)" srcset="{{ $desktop.RelPermalink }}">
-                    <img class="img-fluid" src="{{ $desktop.RelPermalink }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
-                  </picture>
+                {{ $imageResource := "" }}
+                {{ if isset .Params "images" }}
+                  {{ $image := index .Params.images 0 }}
+                  {{ $imageResource = .Resources.GetMatch (printf "*%s*" $image) }}
+                  {{ if $imageResource }}
+                    {{ $mobile := $imageResource.Resize "320x" }}
+                    {{ $desktop := $imageResource.Resize "640x" }}
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="{{ $mobile.RelPermalink }}">
+                      <source media="(min-width: 768px)" srcset="{{ $desktop.RelPermalink }}">
+                      <img class="img-fluid" src="{{ $desktop.RelPermalink }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
+                    </picture>
                   <source media="(max-width: 767px)" srcset="{{ $mobile.RelPermalink }}">
                   <source media="(min-width: 768px)" srcset="{{ $desktop.RelPermalink }}">
                   <img class="img-fluid" src="{{ $desktop.RelPermalink }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
