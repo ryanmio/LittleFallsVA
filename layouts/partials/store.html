@@ -34,39 +34,3 @@
   </div>
 </section>
 {{ end }}
-{{ $data := index .Site.Data (default "en" .Site.Language.Lang) }}
-{{ if $data.homepage.store.enable }}
-<section class="gallery" id="store">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="heading">
-          <h2>{{ $data.homepage.store.title | markdownify }}</h2>
-        </div>
-
-        <div class="product-slider">
-          {{ range (where .Site.RegularPages "Section" "store") }}
-          <div class="block">
-            <a href="{{ .Permalink }}" class="product-thumbnail" aria-label="View details for {{ .Title }}">
-              {{ with .Params.images }}
-                {{ $image := index . 0 }}
-                {{ $imagePage := $.Site.GetPage (printf "images/%s" $image) }}
-                {{ with $imagePage }}
-                  {{ $mobile := .Resize "320x" }}
-                  {{ $desktop := .Resize "640x" }}
-                  <picture>
-                    <source media="(max-width: 767px)" srcset="{{ $mobile.RelPermalink }}">
-                    <source media="(min-width: 768px)" srcset="{{ $desktop.RelPermalink }}">
-                    <img class="img-fluid" src="{{ $desktop.RelPermalink }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
-                  </picture>
-                {{ end }}
-              {{ end }}
-            </a>
-          </div>
-          {{ end }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{{ end }}
