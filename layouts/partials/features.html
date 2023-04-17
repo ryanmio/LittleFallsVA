@@ -7,13 +7,22 @@
       align-items: center;
     }
   }
+  .features-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .features-row .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 </style>
 
 {{- if $data.homepage.features.enable }}
 {{- with $data.homepage.features }}
 <section class="section" id="features">
   <div class="container">
-    <div class="row row-centered d-md-flex align-items-start"> <!-- Add d-md-flex and align-items-start classes here -->
+    <div class="row row-centered features-row"> <!-- Add the features-row class here -->
       <div class="col-12">
         <div class="heading">
           <h2>{{ .title | markdownify }}</h2>
