@@ -15,8 +15,8 @@
             <a href="{{ .Permalink }}" class="product-thumbnail" aria-label="View details for {{ .Title }}">
               {{ if isset .Params "images" }}
                 {{ $image := index .Params.images 0 }}
-                {{ $desktop := printf "/static/%s" $image | relURL }}
-                {{ $mobile := printf "/static/%s-mobile" $image | relURL }}
+                {{ $desktop := printf "/static/%s.webp" $image | relURL }}
+                {{ $mobile := printf "/static/%s-mobile.webp" $image | relURL }}
                 <img class="img-fluid" src="{{ $desktop }}" srcset="{{ $mobile }} 480w, {{ $desktop }} 800w" sizes="(max-width: 767px) 480px, 800px" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
               {{ end }}
             </a>
