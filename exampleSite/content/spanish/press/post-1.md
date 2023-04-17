@@ -2,7 +2,7 @@
 title: "Lanzamiento del Movimiento de Renombramiento"
 date: 2022-04-21
 image: "images/logo.webp"
-description : "Little Falls, VA - 15 de abril de 2023 - El Comité por Little Falls, un grupo dedicado de residentes, anuncia el lanzamiento de una nueva iniciativa para cambiar el nombre de Falls Church, Virginia, a Little Falls."
+description: "Little Falls, VA - 15 de abril de 2023 - El Comité por Little Falls, un grupo dedicado de residentes, anuncia el lanzamiento de una nueva iniciativa para cambiar el nombre de Falls Church, Virginia, a Little Falls."
 weight: 10
 category: "name-change"
 ---
