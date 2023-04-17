@@ -12,9 +12,9 @@
           {{ range (where .Site.RegularPages "Section" "store") }}
           <div class="block">
             <a href="{{ .Permalink }}" class="product-thumbnail" aria-label="View details for {{ .Title }}">
-              {{ with .Params.images }}
-                {{ $image := index . 0 }}
-                {{ $imageResource := .Resources.GetMatch (printf "*%s*" $image) }}
+              {{ with index .Params.images 0 }}
+                {{ $image := . }}
+                {{ $imageResource := ($.Site.GetPage "section" "store").Resources.GetMatch (printf "*%s*" $image) }}
                 {{ with $imageResource }}
                   {{ $mobile := .Resize "320x" }}
                   {{ $desktop := .Resize "640x" }}
