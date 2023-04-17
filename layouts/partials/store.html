@@ -1,4 +1,5 @@
-{{ $data := index .Site.Data (default "en" .Site.Language.Lang) }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
 {{ if $data.homepage.store.enable }}
 <section class="gallery" id="store">
   <div class="container">
@@ -12,15 +13,11 @@
           {{ range (where .Site.RegularPages "Section" "store") }}
           <div class="block">
             <a href="{{ .Permalink }}" class="product-thumbnail" aria-label="View details for {{ .Title }}">
-              {{ with index .Params.images 0 }}
-                {{ $image := . }}
-                {{ $mobile := printf "/static/%s" $image | relURL }}
-                {{ $desktop := printf "/static/%s" $image | relURL }}
-                {{ $alt := .Page.Params.image_alt | default .Page.Title }}
-                <img class="img-fluid" src="{{ $desktop }}" alt="{{ $alt }}"
-                     srcset="{{ $mobile }} 767w, {{ $desktop }} 768w"
-                     sizes="(max-width: 767px) 100vw, (min-width: 768px) 100vw">
+              {{ $image := "" }}
+              {{ if isset .Params "images" }}
+                {{ $image = index .Params.images 0 }}
               {{ end }}
+              <img class="img-fluid" src="{{ $image | absURL }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
             </a>
           </div>
           {{ end }}
