@@ -18,10 +18,10 @@
               </a>
             </div>
             {{ $image := "" }}
-{{ if isset .Params "images" }}
-  {{ $image = index .Params.images 0 }}
-{{ end }}
-<img class="img-fluid" src="{{ $image | absURL }}" alt="{{ .image_alt | default .title }}">
+            {{ if isset .Params "images" }}
+              {{ $image = index .Params.images 0 }}
+            {{ end }}
+            <img class="img-fluid" src="{{ $image | absURL }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
 
           </div>
           {{ end }}
