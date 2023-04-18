@@ -651,9 +651,9 @@ textarea.form-control {
 
     .press-release-link {
       color: #78a3c4 !important; 
-      text-decoration: underline;
+      text-decoration: none;
       &:hover {
-        color: #2d495d;
+        color: #2d495d !important;
         text-decoration: underline;
       }
     }
