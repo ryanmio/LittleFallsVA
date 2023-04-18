@@ -25,7 +25,7 @@ draft: false
 # alt text for product image
 image_alt: "Crew Neck Sweatshirt - Pink"
 
-thumbnail: "images/homestore/crewneck-pink-mobile.webp"
+thumbnail: "images/homestore/crewneck-pink-1-mobile.webp"
 ---
 
 This pink crew neck sweatshirt combines comfort and fashion while representing the Little Falls renaming movement. Make a statement and promote inclusivity in your community.
