@@ -22,6 +22,8 @@ draft: false
 
 # alt text for product image
 image_alt: "Eco-friendly tote bag with Little Falls renaming movement logo"
+
+thumbnail: "images/homestore/tote-1-mobile.webp"
 ---
 
 Show your support for the Little Falls renaming movement with this eco-friendly tote bag. Carry your essentials while promoting a more inclusive and historically aware community.
