@@ -24,6 +24,8 @@ draft: false
 
 # alt text for product image
 image_alt: "Image of tan colored baseball cap featuring text logo reading Little Falls VA - A Name for All."
+
+thumbnail: "images/homestore/dad-hat-1-mobile.webp"
 ---
 
 This organic dad hat is an eco-friendly way to represent the Little Falls renaming movement. Stay fashionable and environmentally conscious while supporting a more inclusive city name.

@@ -24,6 +24,8 @@ draft: false
 
 # alt text for product image
 image_alt: "Image of 3 inch white and blue patch featuring text logo reading Little Falls VA - A Name for All."
+
+thumbnail: "images/homestore/patch-1-mobile.webp"
 ---
 
 Add a touch of personalization to your belongings with our 3x3 inch patch, showcasing the Little Falls renaming movement logo. Display your support for a more inclusive city name.
