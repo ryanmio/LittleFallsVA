@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <title>{{ .Title }}</title>
 
-  {{ "<!-- mobile responsive meta -->" | safeHTML }}
+  <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
   {{ with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
@@ -11,16 +11,15 @@
   <!-- theme meta -->
   <meta name="theme-name" content="vex-hugo" />
 
-  {{ "<!-- plugins -->" | safeHTML }}
+  <!-- plugins -->
   {{ range site.Params.plugins.css }}
   <link rel="stylesheet" href="{{ .link | absURL }} ">
   {{ end }}
 
-  {{ "<!-- Main Stylesheet -->" | safeHTML }}
+  <!-- Main Stylesheet -->
   {{ $styles := resources.Get "scss/style.scss" | toCSS | minify }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
     
-
 <!-- ChatGPT JSON-D schema -->
     <script type="application/ld+json">
 {
@@ -38,8 +37,7 @@
 }
 </script>
     
-
-  {{ "<!--Favicon-->" | safeHTML }}
+  <!--Favicon-->
   <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }} " type="image/x-icon">
   <link rel="icon" href="{{ `images/favicon.png` | absURL }} " type="image/x-icon">
 
@@ -49,7 +47,7 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/google_analytics_async.html" . }}
     
-  <script>
+  <script async>
     window.SnipcartSettings = {
         publicApiKey: 'YTMxMWQyMDAtMzkzYS00YzQ5LWI4NWMtMDg2ZTZkYmZmYzZlNjM4MTY1MTA1Njc1MDgwMDIx',
         loadStrategy: 'on-user-interaction',
