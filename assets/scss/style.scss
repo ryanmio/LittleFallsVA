@@ -650,10 +650,10 @@ textarea.form-control {
     }
 
     .press-release-link {
-      color: #2d495d !important; 
-      text-decoration: none;
+      color: #78a3c4 !important; 
+      text-decoration: underline;
       &:hover {
-        color: #23527c;
+        color: #2d495d;
         text-decoration: underline;
       }
     }
