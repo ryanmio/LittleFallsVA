@@ -31,9 +31,9 @@
 
 <!-- JS Plugins -->
 {{ range site.Params.plugins.js}}
-<script async src="{{ .link | absURL }}"></script>
+<script src="{{ .link | absURL }}"></script>
 {{ end }}
 
 <!-- Main Script -->
 {{ $script := resources.Get "js/script.js" }}
-<script async src="{{ $script.Permalink }}"></script>
+<script src="{{ $script.Permalink }}"></script>
