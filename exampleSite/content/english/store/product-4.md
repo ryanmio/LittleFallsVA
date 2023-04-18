@@ -20,6 +20,9 @@ sizes : ["small","medium","large","XL","XXL"]
 button_link: "#"
 
 draft: false
+
+# alt text for product image
+image_alt: "Image of blue crew neck sweatshirt featuring text logo reading Little Falls VA - A Name for All."
 ---
 
 Cozy up in this blue crew neck sweatshirt while showing your support for the renaming movement to Little Falls. Stay warm and stylish as you advocate for a more inclusive community.
