@@ -27,6 +27,8 @@ draft: false
 
 # alt text for product image
 image_alt: "Image of kiss-cut sticker featuring text logo reading Little Falls VA - A Name for All."
+
+thumbnail: "images/homestore/sticker-1-mobile.webp"
 ---
 
 Grab a Little Falls sticker to show your support and spark conversations about the renaming movement. On sale during launch!!
