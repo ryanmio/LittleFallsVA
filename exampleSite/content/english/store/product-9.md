@@ -22,6 +22,9 @@ sizes : ["small","medium","large","XL","XXL"]
 button_link: "#"
 
 draft: false
+
+# alt text for product image
+image_alt: "Image of tan t-shirt featuring text logo reading Little Falls VA - A Name for All."
 ---
 
 This versatile tan unisex t-shirt is perfect for showing your support for the Little Falls renaming movement. Embrace comfort and style while promoting a more inclusive community.
