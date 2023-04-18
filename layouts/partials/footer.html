@@ -29,7 +29,7 @@
 {{ $styles := resources.Get "scss/style.scss" | toCSS | minify }}
 <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 
-  <script defer>
+<script defer>
     window.SnipcartSettings = {
         publicApiKey: 'YTMxMWQyMDAtMzkzYS00YzQ5LWI4NWMtMDg2ZTZkYmZmYzZlNjM4MTY1MTA1Njc1MDgwMDIx',
         loadStrategy: 'on-user-interaction',
