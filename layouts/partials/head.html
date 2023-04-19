@@ -39,11 +39,9 @@
 </script>
     
 <!-- ChatGPT CanonicalURL -->
-{{ $canonicalUrl := .Permalink | absURL }}
-<link rel="canonical" href="{{ $canonicalUrl }}" />
+{{ $canonicalUrl := printf "%s%s" .Site.BaseURL .Permalink }}
+<link rel="canonical" href="{{ $canonicalUrl | absURL }}" />
 
-
-    
 
   {{ "<!--Favicon-->" | safeHTML }}
   <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }} " type="image/x-icon">
