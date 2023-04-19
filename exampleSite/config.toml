@@ -127,6 +127,7 @@ description = "Support the movement to rename Falls Church to Little Falls, fost
 author = "Little Falls"
 # currency
 currency = "$"
+canonicalURL = "https://littlefallsva.com"
 
 # Preloader
 [params.preloader]
