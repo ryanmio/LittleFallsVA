@@ -31,14 +31,24 @@ defaultContentLanguage = "en"
 # CSS Plugins
 [[params.plugins.css]]
 link = "https://fonts.googleapis.com/css?family=Droid+Serif:400|Josefin+Sans:300,400,600,700&display=swap"
+media = "print"
+onload = "this.media='all'"
 [[params.plugins.css]]
 link = "plugins/bootstrap/bootstrap.min.css"
+media = "print"
+onload = "this.media='all'"
 [[params.plugins.css]]
 link = "plugins/themefisher-font/themefisher-font.min.css"
+media = "print"
+onload = "this.media='all'"
 [[params.plugins.css]]
 link = "plugins/slick/slick.min.css"
+media = "print"
+onload = "this.media='all'"
 [[params.plugins.css]]
 link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css"
+media = "print"
+onload = "this.media='all'"
 
 # JS Plugins
 [[params.plugins.js]]
