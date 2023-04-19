@@ -309,16 +309,16 @@ a:active {
     height: 250px; /* Adjust this value for tablet screens */
   }
 
-@media (max-width: 767px) {
+@media (max-width: 500px) {
   .gallery .block {
     /* Your mobile styles here */
-    height: 150px; /* Example: set the height for mobile devices */
+    height: 100px !important; /* Example: set the height for mobile devices */
   }
 
   .gallery .block a img.gallery-image {
     /* Your mobile styles here */
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: cover;
   }
 }
