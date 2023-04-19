@@ -15,7 +15,8 @@
 <meta name="twitter:image" content="{{ .Site.BaseURL }}images/metalogo.jpg">
 
 <!-- Canonical URL -->
-<link rel="canonical" href="{{ .Permalink }}" />
+{{ $canonicalURL := .Permalink }}
+<link rel="canonical" href="{{ $canonicalURL }}" />
 
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 <meta name="language" content="{{ .Site.LanguageCode }}">
