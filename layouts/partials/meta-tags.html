@@ -16,7 +16,7 @@
 
 <!-- Canonical URL -->
 {{ $canonicalURL := printf "%s%s" (strings.TrimSuffix "/" .Site.BaseURL) .RelPermalink }}
-<link rel="canonical" href="{{ $canonicalURL }}" />
+<link rel="canonical" href="{{ .RelPermalink | absURL }}" />
 
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 <meta name="language" content="{{ .Site.LanguageCode }}">
