@@ -781,3 +781,23 @@ textarea.form-control {
   opacity: 0.7;
 }
 
+.feature-item {
+  position: relative;
+  min-height: 100px;
+}
+
+.features-title {
+  margin-top: 20px;
+}
+
+.features-content {
+  min-height: 100px;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
