@@ -143,7 +143,9 @@ snipcart_api = "ODg3ZWMzZGUtNGVhZS00MmI5LWFlMGQtZGFhMmQ2ODc5NjA2NjM4MTY1MTA1Njc1
 [outputFormats.HTML]
   baseName = "index"
   isPlainText = false
-  isHTML = true  
+  isHTML = true
+  
+canonifyURLs = true
 
 ################################### English language #####################################
 [Languages.en]
