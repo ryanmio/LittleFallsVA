@@ -21,10 +21,6 @@ defaultContentLanguage = "en"
     baseURL = "https://littlefallsva.com/"
   [languages.es]
     baseURL = "https://littlefallsva.com/es/"
-    
-[imaging]
-  resampleFilter = "lanczos"
-  quality = 75
 
 #################################### Plugins ##########################################
 
