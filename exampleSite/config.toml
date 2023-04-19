@@ -132,7 +132,7 @@ canonicalURL = "https://littlefallsva.com"
 # Preloader
 [params.preloader]
 enable = true
-preloader = "" # use .png , .svg or .gif format
+preloader = "images/logo.webp" # use .png , .svg or .gif format
 
 # Snipcart
 [params.snipcart]
