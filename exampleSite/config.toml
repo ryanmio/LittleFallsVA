@@ -1,5 +1,5 @@
 ################################### Default Configuration ############################
-title = "Little Falls VA: Home to the movement to rename Falls Church to Little Falls"
+title = "Little Falls VA: A Name for All"
 theme = "vex-hugo"
 # post excert
 summarylength = "20"
@@ -124,7 +124,7 @@ logo = "images/logo.webp"
 logo_width = "100px"
 # Meta data
 description = "Support the movement to rename Falls Church to Little Falls, fostering a more welcoming and diverse community for all."
-author = "Little Falls"
+author = "Little Falls VA - Formerly Known as Falls Church VA"
 # currency
 currency = "$"
 canonicalURL = "https://littlefallsva.com"
