@@ -328,16 +328,6 @@ a:active {
   /* ... */
 }
 
-.gallery .block {
-  /* ... (previous styles) */
-  overflow: hidden; /* Add this line to hide any overflow */
-}
-
-.gallery .block a img.gallery-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Add this line to make the images cover the entire container */
-}
 
 
 
