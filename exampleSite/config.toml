@@ -43,13 +43,16 @@ link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css"
 # JS Plugins
 [[params.plugins.js]]
 link = "plugins/jquery/jquery.js"
+defer = true
 [[params.plugins.js]]
 link = "plugins/bootstrap/bootstrap.min.js"
+defer = true
 [[params.plugins.js]]
 link = "plugins/slick/slick.min.js"
+defer = true
 [[params.plugins.js]]
 link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"
-
+defer = true
 
 ###################################### Navigation ######################################
 
