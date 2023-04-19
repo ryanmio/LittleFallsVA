@@ -309,7 +309,7 @@ a:active {
     height: 250px; /* Adjust this value for tablet screens */
   }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .gallery .block {
     /* Your mobile styles here */
     height: 100px !important; /* Example: set the height for mobile devices */
