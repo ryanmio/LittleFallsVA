@@ -425,7 +425,8 @@ a:active {
     font-size: 14;
     font-weight: 700;
     color: #444;
-    padding: 10px;
+    padding: 12px; /* Updated padding value */
+    display: inline-block; /* Make sure the padding is applied */
   }
 }
 
@@ -438,6 +439,7 @@ footer {
     color: #555;
     display: block;
   }
+
 
   p.copyright-text {
     font-weight: 300;
@@ -778,3 +780,4 @@ textarea.form-control {
 .product-thumbnail:hover img {
   opacity: 0.7;
 }
+
