@@ -17,11 +17,11 @@
 <!-- Canonical URL -->
 {{ if .IsTranslated }}
   {{ range .Translations }}
-    <link rel="alternate" href="{{ .Permalink | absLangURL }}" hreflang="{{ .Lang }}" />
+    <link rel="alternate" href="{{ .Permalink }}" hreflang="{{ .Lang }}" />
   {{ end }}
-  <link rel="alternate" href="{{ .Permalink | absLangURL }}" hreflang="{{ .Lang }}" />
+  <link rel="alternate" href="{{ .Permalink }}" hreflang="{{ .Lang }}" />
 {{ end }}
-<link rel="canonical" href="{{ .Permalink | absLangURL }}" />
+<link rel="canonical" href="{{ .Permalink }}" />
 
 
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
