@@ -14,12 +14,11 @@
 <meta name="twitter:description" content="{{ .Params.description | default "Support the movement to rename Falls Church to Little Falls, fostering a more welcoming and diverse community for all." }}">
 <meta name="twitter:image" content="{{ .Site.BaseURL }}images/metalogo.jpg">
 
-<!-- ChatGPT CanonicalURL -->
+<!-- Canonical URL -->
 {{ $url := urls.Parse .Permalink }}
 {{ $baseURL := urls.Parse .Site.BaseURL }}
 {{ $canonicalURL := $baseURL.ResolveReference($url) }}
 <link rel="canonical" href="{{ $canonicalURL }}" />
-
 
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 <meta name="language" content="{{ .Site.LanguageCode }}">
