@@ -40,7 +40,8 @@
     
     <!-- ChatGPT CanonicalURL -->
 {{ $canonicalUrl := .Permalink }}
-<link rel="canonical" href="{{ $canonicalUrl }}" />
+{{ $absoluteUrl := printf "%s%s" $.Site.BaseURL $canonicalUrl }}
+<link rel="canonical" href="{{ $absoluteUrl }}" />
 
     
 
