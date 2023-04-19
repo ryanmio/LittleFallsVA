@@ -15,9 +15,7 @@
 <meta name="twitter:image" content="{{ .Site.BaseURL }}images/metalogo.jpg">
 
 <!-- Canonical URL -->
-{{ $url := urls.Parse .Permalink }}
-{{ $baseURL := urls.Parse .Site.BaseURL }}
-{{ $canonicalURL := $baseURL.ResolveReference($url) }}
+{{ $canonicalURL := printf "%s%s" (strings.TrimSuffix "/" .Site.BaseURL) .RelPermalink }}
 <link rel="canonical" href="{{ $canonicalURL }}" />
 
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
