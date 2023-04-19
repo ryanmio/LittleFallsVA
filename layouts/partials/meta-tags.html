@@ -6,7 +6,7 @@
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ .Params.description | default "Support the movement to rename Falls Church to Little Falls, fostering a more welcoming and diverse community for all." }}">
 <meta property="og:type" content="website">
-<meta property="og:url" content="{{ .Permalink | absURL }}">
+<meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:image" content="{{ .Site.BaseURL }}images/metalogo.jpg">
 <meta property="og:image:alt" content="Little Falls logo in blue text on a white background, with the subheader 'A Name for All'">
 <meta name="twitter:card" content="summary_large_image">
@@ -15,8 +15,7 @@
 <meta name="twitter:image" content="{{ .Site.BaseURL }}images/metalogo.jpg">
 
 <!-- Canonical URL -->
-{{ $canonicalURL := printf "%s%s" (strings.TrimSuffix "/" .Site.BaseURL) .RelPermalink }}
-<link rel="canonical" href="{{ .RelPermalink | absURL }}" />
+<link rel="canonical" href="{{ .Permalink }}" />
 
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 <meta name="language" content="{{ .Site.LanguageCode }}">
