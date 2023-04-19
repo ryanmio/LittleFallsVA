@@ -309,9 +309,19 @@ a:active {
     height: 250px; /* Adjust this value for tablet screens */
   }
 
-  @media (max-width: 767px) {
-    height: 200px; /* Adjust this value for mobile screens */
+@media (max-width: 767px) {
+  .gallery .block {
+    /* Your mobile styles here */
+    height: 150px; /* Example: set the height for mobile devices */
   }
+
+  .gallery .block a img.gallery-image {
+    /* Your mobile styles here */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 
   &:hover .gallery-overlay {
     transform: scale(1);
