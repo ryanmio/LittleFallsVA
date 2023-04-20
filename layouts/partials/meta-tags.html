@@ -17,7 +17,7 @@
 <!-- Canonical URL -->
 {{ if .IsTranslated }}
   {{ range .Translations }}
-    <link rel="alternate" href="{{ .Permalink | absURL }}" hreflang="{{ .Lang }}" />
+    <link rel="alternate" href="{{ .Permalink | absURL }}" hreflang="{{ .Language.Lang }}" />
   {{ end }}
 {{ end }}
 <link rel="canonical" href="{{ .Permalink | absURL }}" />
