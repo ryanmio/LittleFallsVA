@@ -1,89 +1,77 @@
 {{ define "main" }}
 <div id="scrollytelling">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6" data-0="opacity: 1;" data-600="opacity: 0;">
+    <div class="scene scene-1">
+      <div class="text-box">
         <h2>Section 1</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere sollicitudin sapien, id cursus mauris dignissim id.</p>
       </div>
-      <div class="col-md-6">
-        <img src="/images/metalogo.jpg" class="img-fluid" alt="Image 1">
-      </div>
+      <img src="/img/scrollytelling/image1.jpg" class="scene-image" alt="Image 1">
     </div>
-    <div class="row">
-      <div class="col-md-6">
-        <img src="/images/metalogo.jpg" class="img-fluid" alt="Image 2">
-      </div>
-      <div class="col-md-6" data-600="opacity: 0;" data-1200="opacity: 1;">
+    <div class="scene scene-2">
+      <div class="text-box">
         <h2>Section 2</h2>
         <p>Ut fringilla, arcu a aliquam ultricies, elit quam facilisis nisl, et congue dui odio vel dui.</p>
       </div>
+      <img src="/img/scrollytelling/image2.jpg" class="scene-image" alt="Image 2">
     </div>
-    <div class="row">
-      <div class="col-md-6" data-1200="opacity: 1;" data-1800="opacity: 0;">
-        <h2>Section 3</h2>
-        <p>Phasellus non libero nec ante aliquam cursus. Proin luctus condimentum lectus, in eleifend mauris vestibulum a.</p>
-      </div>
-      <div class="col-md-6">
-        <img src="/images/metalogo.jpg" class="img-fluid" alt="Image 3">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <img src="/images/metalogo.jpg" class="img-fluid" alt="Image 4">
-      </div>
-      <div class="col-md-6" data-1800="opacity: 0;" data-2400="opacity: 1;">
-        <h2>Section 4</h2>
-        <p>Vestibulum ut odio et dui suscipit fermentum. Vivamus tristique, justo ac vehicula venenatis, tellus risus ullamcorper metus, vel fringilla enim quam ut neque.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6" data-2400="opacity: 1;" data-3000="opacity: 0;">
-        <h2>Section 5</h2>
-        <p>Etiam sollicitudin metus ut elit placerat, ut efficitur nisl ullamcorper. Cras imperdiet augue in libero maximus, a vestibulum ex consectetur.</p>
-      </div>
-      <div class="col-md-6">
-        <img src="/images/metalogo.jpg" class="img-fluid" alt="Image 5">
-      </div>
-    </div>
+    <!-- Add more scenes as needed -->
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Skrollr
-    var s = skrollr.init({
-      smoothScrolling: true,
-      forceHeight: false
-    });
-
-    // Destroy Skrollr on mobile devices
-    if (window.innerWidth < 768) {
-      s.destroy();
-    }
+    const scenes = document.querySelectorAll('.scene');
+    
+    const checkVisibility = () => {
+      scenes.forEach(scene => {
+        const rect = scene.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        const isVisible = rect.top <= windowHeight && rect.bottom >= 0;
+        scene.classList.toggle('visible', isVisible);
+      });
+    };
+    
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
   });
 </script>
+
 <style>
-  #scrollytelling .row {
+  #scrollytelling {
+    position: relative;
+  }
+
+  .scene {
+    display: flex;
+    flex-wrap: wrap;
     min-height: 100vh;
-    align-items: center;
     margin-bottom: 50px;
   }
 
-  #scrollytelling img {
+  .scene .text-box {
+    flex-basis: 50%;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .scene .scene-image {
+    flex-basis: 50%;
     max-width: 100%;
   }
 
+  .scene.visible .text-box {
+    opacity: 1;
+  }
+
   @media screen and (max-width: 767px) {
-    #scrollytelling .row {
+    .scene {
       flex-direction: column-reverse;
     }
 
-    #scrollytelling .col-md-6 {
-      width: 100%;
-      padding-left: 15px;
-      padding-right: 15px;
+    .scene .text-box,
+    .scene .scene-image {
+      flex-basis: 100%;
     }
   }
 </style>
