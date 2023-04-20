@@ -17,10 +17,10 @@
 <!-- Canonical URL -->
 {{ if .IsTranslated }}
   {{ range .Translations }}
-    <link rel="alternate" href="{{ .RelPermalink | relURL }}" hreflang="{{ .Lang }}" />
+    <link rel="alternate" href="{{ .Permalink | absURL }}" hreflang="{{ .Lang }}" />
   {{ end }}
 {{ end }}
-<link rel="canonical" href="{{ .RelPermalink | relURL }}" />
+<link rel="canonical" href="{{ .Permalink | absURL }}" />
 
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 <meta name="language" content="{{ .Site.LanguageCode }}">
