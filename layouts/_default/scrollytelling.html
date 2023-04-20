@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+
+
+<section class="scrollytelling-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-9 offset-lg-1">
+        <h1 class="mb-4">{{.Title | markdownify}}</h1>
+        <!-- Add the search input field here -->
+        <div class="content">
+          {{.Content}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{ end }}
