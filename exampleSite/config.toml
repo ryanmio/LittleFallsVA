@@ -19,6 +19,7 @@ defaultContentLanguage = "en"
   default = "en"
   [languages.en]
     baseURL = "https://littlefallsva.com/"
+    prefix = "en"
   [languages.es]
     baseURL = "https://littlefallsva.com/"
 
