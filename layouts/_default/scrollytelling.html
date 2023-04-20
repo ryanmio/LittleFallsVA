@@ -26,35 +26,39 @@
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Initialize ScrollMagic controller
-      const controller = new ScrollMagic.Controller();
+    (function() {
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize ScrollMagic controller
+        const controller = new ScrollMagic.Controller();
 
-      // Create a timeline for each scene
-      const scenes = document.querySelectorAll(".scene");
-      scenes.forEach((scene, index) => {
-        const fadeIn = gsap.from(scene, { autoAlpha: 0, duration: 1 });
-        const fadeOut = gsap.to(scene, { autoAlpha: 0, duration: 1 });
+        // Create a timeline for each scene
+        const scenes = document.querySelectorAll(".scene");
+        scenes.forEach((scene, index) => {
+          const fadeIn = gsap.from(scene, { autoAlpha: 0, duration: 1 });
+          const fadeOut = gsap.to(scene, { autoAlpha: 0, duration: 1 });
 
-        const sceneIn = new ScrollMagic.Scene({
-          triggerElement: scene,
-          triggerHook: 0.5,
-          reverse: true,
-        })
-          .setTween(fadeIn)
-          .addTo(controller);
-
-        if (index < scenes.length - 1) {
-          const sceneOut = new ScrollMagic.Scene({
-            triggerElement: scenes[index + 1],
+          const sceneIn = new ScrollMagic.Scene({
+            triggerElement: scene,
             triggerHook: 0.5,
             reverse: true,
+            duration: '100%',
           })
-            .setTween(fadeOut)
+            .setTween(fadeIn)
             .addTo(controller);
-        }
+
+          if (index < scenes.length - 1) {
+            const sceneOut = new ScrollMagic.Scene({
+              triggerElement: scenes[index + 1],
+              triggerHook: 0.5,
+              reverse: true,
+              duration: '100%',
+            })
+              .setTween(fadeOut)
+              .addTo(controller);
+          }
+        });
       });
-    });
+    })();
   </script>
 </body>
 </html>
