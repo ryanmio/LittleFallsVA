@@ -131,7 +131,7 @@ canonicalURL = "https://littlefallsva.com"
 
 # Preloader
 [params.preloader]
-enable = true
+enable = false
 preloader = "images/logo.webp" # use .png , .svg or .gif format
 
 # Snipcart
@@ -163,7 +163,7 @@ languageCode = "es"
 contentDir = "content/spanish"
 weight = 2
 # copyright
-copyright = "©2023 Committe for Little Falls"
+copyright = "©2023 Committee for Little Falls"
 
   [Languages.es.permalinks]
     press = "/es/press/release/:year/:month/:day/:slug/"
