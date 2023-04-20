@@ -16,15 +16,11 @@ unsafe = true
 defaultContentLanguage = "en"
 
 [languages]
+  default = "en"
   [languages.en]
-    languageName = "English"
-    languageCode = "en-us"
     baseURL = "https://littlefallsva.com/"
   [languages.es]
-    languageName = "Español"
-    languageCode = "es"
-    baseURL = "https://littlefallsva.com/es/"
-
+    baseURL = "https://littlefallsva.com/"
 
 
 #################################### Plugins ##########################################
