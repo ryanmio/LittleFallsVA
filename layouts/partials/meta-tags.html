@@ -14,7 +14,13 @@
 <meta name="twitter:description" content="{{ .Params.description | default "Support the movement to rename Falls Church to Little Falls, fostering a more welcoming and diverse community for all." }}">
 <meta name="twitter:image" content="{{ (printf "images/metalogo.jpg") | absURL }}">
 
-
+<!-- Canonical URL -->
+{{ if .IsTranslated }}
+  {{ range .Translations }}
+    <link rel="alternate" href="{{ .Permalink | absURL }}" hreflang="{{ .Language.Lang }}" />
+  {{ end }}
+{{ end }}
+<link rel="canonical" href="{{ .Permalink | absURL }}" />
 
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 <meta name="language" content="{{ .Site.LanguageCode }}">
