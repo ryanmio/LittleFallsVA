@@ -19,19 +19,24 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    const controller = new ScrollMagic.Controller();
+
     const scenes = document.querySelectorAll('.scene');
-    const windowHeight = window.innerHeight;
+    scenes.forEach((scene, index) => {
+      const tween = gsap.fromTo(
+        scene,
+        { autoAlpha: 0, y: 50 },
+        { autoAlpha: 1, y: 0, duration: 1 }
+      );
 
-    const checkVisibility = () => {
-      scenes.forEach((scene, index) => {
-        const rect = scene.getBoundingClientRect();
-        const opacity = 1 - Math.abs(rect.y / windowHeight);
-        scene.style.opacity = opacity;
-      });
-    };
-
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility();
+      const scrollScene = new ScrollMagic.Scene({
+        triggerElement: scene,
+        triggerHook: 0.7,
+        reverse: true
+      })
+        .setTween(tween)
+        .addTo(controller);
+    });
   });
 </script>
 
@@ -45,8 +50,6 @@
     flex-wrap: wrap;
     min-height: 100vh;
     margin-bottom: 50px;
-    opacity: 0;
-    transition: opacity 0.2s;
   }
 
   .scene .text-box {

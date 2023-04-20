@@ -59,7 +59,15 @@ link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"
 defer = true
 
 [[params.plugins.js]]
-link = "https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"
+link = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+defer = true
+
+[[params.plugins.js]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+defer = true
+
+[[params.plugins.js]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"
 defer = true
 
 
