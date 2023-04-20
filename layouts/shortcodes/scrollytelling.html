@@ -1,0 +1,54 @@
+<style>
+  .scrollContent {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #trigger {
+    position: absolute;
+    top: 0;
+  }
+  #imagesequence {
+    position: absolute;
+    width: 50%;
+  }
+</style>
+
+<section class="scrollContent">
+  <div id="trigger"></div>
+  <div id="imagesequence">
+    <img id="myimg" src="/images/metalogo.jpg" alt="Image 1" />
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var images = [
+      "/images/metalogo.jpg",
+      "/images/metalogo.jpg",
+      "/images/metalogo.jpg",
+    ];
+
+    var obj = {curImg: 0};
+
+    var tween = TweenMax.to(obj, 0.5,
+      {
+        curImg: images.length - 1,
+        roundProps: "curImg",
+        immediateRender: true,
+        ease: Linear.easeNone,
+        onUpdate: function () {
+          $("#myimg").attr("src", images[obj.curImg]);
+        }
+      }
+    );
+
+    var controller = new ScrollMagic.Controller();
+
+    var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 300})
+                .setTween(tween)
+                .addTo(controller);
+  });
+</script>
