@@ -1,14 +1,14 @@
 {{ define "main" }}
 <div id="scrollytelling">
   <div class="container">
-    <div class="scene scene-1">
+    <div class="scene">
       <div class="text-box">
         <h2>Section 1</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere sollicitudin sapien, id cursus mauris dignissim id.</p>
       </div>
       <img src="/img/scrollytelling/image1.jpg" class="scene-image" alt="Image 1">
     </div>
-    <div class="scene scene-2">
+    <div class="scene">
       <div class="text-box">
         <h2>Section 2</h2>
         <p>Ut fringilla, arcu a aliquam ultricies, elit quam facilisis nisl, et congue dui odio vel dui.</p>
@@ -22,18 +22,20 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const scenes = document.querySelectorAll('.scene');
-    
-    const checkVisibility = () => {
-      scenes.forEach(scene => {
-        const rect = scene.getBoundingClientRect();
-        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-        const isVisible = rect.top <= windowHeight && rect.bottom >= 0;
-        scene.classList.toggle('visible', isVisible);
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
       });
-    };
-    
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility();
+    }, {threshold: 0.1});
+
+    scenes.forEach(scene => {
+      observer.observe(scene);
+    });
   });
 </script>
 
