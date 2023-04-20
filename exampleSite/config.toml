@@ -147,6 +147,8 @@ snipcart_api = "ODg3ZWMzZGUtNGVhZS00MmI5LWFlMGQtZGFhMmQ2ODc5NjA2NjM4MTY1MTA1Njc1
   isPlainText = false
   isHTML = true
 
+canonifyURLs: true
+
 ################################### English language #####################################
 [Languages.en]
 languageName = "En"
