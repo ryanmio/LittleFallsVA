@@ -1,11 +1,8 @@
 ################################### Default Configuration ############################
 title = "Little Falls VA: A Name for All"
 theme = "vex-hugo"
-# post excert
 summarylength = "20"
-# google analytics
-googleAnalytics = "" # Ex: UA-123-45
-# disable language
+googleAnalytics = ""
 disableLanguages = [] # disable language from here
 pluralizelisttitles = false
 
