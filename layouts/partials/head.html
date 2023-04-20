@@ -21,13 +21,7 @@
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="print" onload="this.media='all'">
     
     
-<!-- Canonical URL -->
-{{ if .IsTranslated }}
-  {{ range .Translations }}
-    <link rel="alternate" href="{{ .Permalink | absURL }}" hreflang="{{ .Language.Lang }}" />
-  {{ end }}
-{{ end }}
-<link rel="canonical" href="{{ .Permalink | absURL }}" />
+    
 
 <!-- ChatGPT JSON-D schema -->
     <script type="application/ld+json">
