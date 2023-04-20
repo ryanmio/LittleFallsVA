@@ -1,20 +1,90 @@
 {{ define "main" }}
-
-
-
-<section class="scrollytelling-container">
+<div id="scrollytelling">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-9 offset-lg-1">
-        <h1 class="mb-4">{{.Title | markdownify}}</h1>
-        <!-- Add the search input field here -->
-        <div class="content">
-          {{.Content}}
-        </div>
+      <div class="col-md-6" data-0="opacity: 1;" data-600="opacity: 0;">
+        <h2>Section 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere sollicitudin sapien, id cursus mauris dignissim id.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="/images/metalogo.jpg" class="img-fluid" alt="Image 1">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="/images/metalogo.jpg" class="img-fluid" alt="Image 2">
+      </div>
+      <div class="col-md-6" data-600="opacity: 0;" data-1200="opacity: 1;">
+        <h2>Section 2</h2>
+        <p>Ut fringilla, arcu a aliquam ultricies, elit quam facilisis nisl, et congue dui odio vel dui.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6" data-1200="opacity: 1;" data-1800="opacity: 0;">
+        <h2>Section 3</h2>
+        <p>Phasellus non libero nec ante aliquam cursus. Proin luctus condimentum lectus, in eleifend mauris vestibulum a.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="/images/metalogo.jpg" class="img-fluid" alt="Image 3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="/images/metalogo.jpg" class="img-fluid" alt="Image 4">
+      </div>
+      <div class="col-md-6" data-1800="opacity: 0;" data-2400="opacity: 1;">
+        <h2>Section 4</h2>
+        <p>Vestibulum ut odio et dui suscipit fermentum. Vivamus tristique, justo ac vehicula venenatis, tellus risus ullamcorper metus, vel fringilla enim quam ut neque.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6" data-2400="opacity: 1;" data-3000="opacity: 0;">
+        <h2>Section 5</h2>
+        <p>Etiam sollicitudin metus ut elit placerat, ut efficitur nisl ullamcorper. Cras imperdiet augue in libero maximus, a vestibulum ex consectetur.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="/images/metalogo.jpg" class="img-fluid" alt="Image 5">
       </div>
     </div>
   </div>
-</section>
+</div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Skrollr
+    var s = skrollr.init({
+      smoothScrolling: true,
+      forceHeight: false
+    });
 
+    // Destroy Skrollr on mobile devices
+    if (window.innerWidth < 768) {
+      s.destroy();
+    }
+  });
+</script>
+<style>
+  #scrollytelling .row {
+    min-height: 100vh;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  #scrollytelling img {
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    #scrollytelling .row {
+      flex-direction: column-reverse;
+    }
+
+    #scrollytelling .col-md-6 {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+</style>
 {{ end }}

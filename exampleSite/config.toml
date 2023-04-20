@@ -58,6 +58,11 @@ defer = true
 link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"
 defer = true
 
+[[params.plugins.js]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"
+defer = true
+
+
 ###################################### Navigation ######################################
 
 # homepage section menu
