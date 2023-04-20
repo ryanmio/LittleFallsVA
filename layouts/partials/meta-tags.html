@@ -17,10 +17,10 @@
 <!-- Canonical URL -->
 {{ if .IsTranslated }}
   {{ range .Translations }}
-    <link rel="alternate" href="{{ .Permalink | absURL }}" hreflang="{{ .Language.Lang }}" />
+    <link rel="alternate" href="https://littlefallsva.com/{{ .Permalink | absURL }}" hreflang="{{ .Language.Lang }}" />
   {{ end }}
 {{ end }}
-<link rel="canonical" href="{{ .Permalink | absURL }}" />
+<link rel="canonical" href="https://littlefallsva.com/{{ .Permalink | absURL }}" />
 
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 <meta name="language" content="{{ .Site.LanguageCode }}">
