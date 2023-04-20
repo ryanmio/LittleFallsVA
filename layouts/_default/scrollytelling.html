@@ -1,27 +1,37 @@
 {{ define "main" }}
 <div id="scrollytelling">
-  <div id="skrollr-body">
-    <div class="scene" data-0="transform:translateY(0%);" data-top="transform:translateY(-100%);">
-      <div class="text-box">
-        <h2>Section 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere sollicitudin sapien, id cursus mauris dignissim id.</p>
-      </div>
-      <img src="/images/metalogo.jpg" class="scene-image" alt="Image 1">
+  <div class="scene">
+    <div class="text-box">
+      <h2>Section 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere sollicitudin sapien, id cursus mauris dignissim id.</p>
     </div>
-    <div class="scene" data-0="transform:translateY(100%);" data-top="transform:translateY(0%);">
-      <div class="text-box">
-        <h2>Section 2</h2>
-        <p>Ut fringilla, arcu a aliquam ultricies, elit quam facilisis nisl, et congue dui odio vel dui.</p>
-      </div>
-      <img src="/images/metalogo.jpg" class="scene-image" alt="Image 2">
-    </div>
-    <!-- Add more scenes as needed -->
+    <div class="scene-image" style="background-image: url('/images/metalogo.jpg');"></div>
   </div>
+  <div class="scene">
+    <div class="text-box">
+      <h2>Section 2</h2>
+      <p>Ut fringilla, arcu a aliquam ultricies, elit quam facilisis nisl, et congue dui odio vel dui.</p>
+    </div>
+    <div class="scene-image" style="background-image: url('/images/metalogo.jpg');"></div>
+  </div>
+  <!-- Add more scenes as needed -->
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    skrollr.init();
+    const scenes = document.querySelectorAll('.scene');
+    const windowHeight = window.innerHeight;
+
+    const checkVisibility = () => {
+      scenes.forEach((scene, index) => {
+        const rect = scene.getBoundingClientRect();
+        const opacity = 1 - Math.abs(rect.y / windowHeight);
+        scene.style.opacity = opacity;
+      });
+    };
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
   });
 </script>
 
@@ -35,6 +45,8 @@
     flex-wrap: wrap;
     min-height: 100vh;
     margin-bottom: 50px;
+    opacity: 0;
+    transition: opacity 0.2s;
   }
 
   .scene .text-box {
@@ -43,7 +55,9 @@
 
   .scene .scene-image {
     flex-basis: 50%;
-    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
   }
 
   @media screen and (max-width: 767px) {
