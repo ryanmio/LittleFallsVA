@@ -3,20 +3,25 @@
     // Init controller
     var controller = new ScrollMagic.Controller();
 
-    // Build Tween
-    var tween = new TimelineMax()
-      .from("#gsap-anim", 1.5, {rotationY: 180, scale: 0.7, opacity: 0})
-      .to("#gsap-anim", 1.5, {rotationY: 180, scale: 0.7, opacity: 0, delay: 7});
+    // Create tweens
+    var tween1 = new TweenMax.from("#text-block-1", 1, {opacity: 0, y: 100});
+    var tween2 = new TweenMax.from("#text-block-2", 1, {opacity: 0, y: 100});
 
-    // Build scene
+    // Build scenes
     new ScrollMagic.Scene({
-      triggerElement: "#gsap-trigger",
-      triggerHook: "onEnter", // Show when scrolled 10% into view
-      duration: "100%", // Use full viewport
-      offset: 50 // Move trigger to center of element
+      triggerElement: "#trigger1",
+      triggerHook: 0.5,
+      reverse: true
     })
-    .setTween(tween)
-    .addIndicators({name: "GSAP"}) // Add indicators (requires debug plugin)
+    .setTween(tween1)
+    .addTo(controller);
+
+    new ScrollMagic.Scene({
+      triggerElement: "#trigger2",
+      triggerHook: 0.5,
+      reverse: true
+    })
+    .setTween(tween2)
     .addTo(controller);
   });
 </script>

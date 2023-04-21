@@ -1,12 +1,14 @@
 {{ define "main" }}
 <section id="scrollytelling" class="scrollytelling-section">
   <div class="container">
-    <div class="spacer s2"></div>
-    <div id="gsap-trigger" class="spacer s0"></div>
-    <div id="gsap-anim" class="text-block">
+    <div id="trigger1" class="spacer"></div>
+    <div id="text-block-1" class="text-block">
       <p>Text block 1</p>
     </div>
-    <div class="spacer s2"></div>
+    <div id="trigger2" class="spacer"></div>
+    <div id="text-block-2" class="text-block">
+      <p>Text block 2</p>
+    </div>
   </div>
 </section>
 {{ partial "scrollytelling-scripts.html" . }}
