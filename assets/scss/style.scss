@@ -875,11 +875,12 @@ textarea.form-control {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Change from center to flex-start */
   overflow-x: auto;
   white-space: nowrap;
   z-index: 1000;
 }
+
 
 .chapter-nav a {
   margin: 0 10px;
