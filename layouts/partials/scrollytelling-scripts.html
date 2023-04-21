@@ -1,40 +1,22 @@
 <script>
-  function createGraphic() {
-    var images = ['image-1', 'image-2', 'image-3'];
-
-    function update(step) {
-      images.forEach(function(imageId, index) {
-        var imageEl = document.getElementById(imageId);
-        if (index + 1 <= step) {
-          imageEl.style.display = 'block';
-        } else {
-          imageEl.style.display = 'none';
-        }
-      });
-    }
-
-    return {
-      update: update
-    };
-  }
-
   document.addEventListener("DOMContentLoaded", function() {
-    var graphic = createGraphic();
-    var controller = new ScrollMagic.Controller();
-    var triggerEls = Array.from(document.querySelectorAll('.trigger'));
+    var observer = new IntersectionObserver(
+      function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.intersectionRatio > 0) {
+            entry.target.querySelector("img").classList.add("show");
+          } else {
+            entry.target.querySelector("img").classList.remove("show");
+          }
+        });
+      },
+      {
+        threshold: 0.5
+      }
+    );
 
-    triggerEls.forEach(function(el) {
-      var step = +el.getAttribute('data-step');
-      var scene = new ScrollMagic.Scene({
-        triggerElement: el,
-        triggerHook: 'onCenter',
-      });
-
-      scene
-        .on('enter', function() {
-          graphic.update(step);
-        })
-        .addTo(controller);
+    document.querySelectorAll(".step").forEach(function(step) {
+      observer.observe(step);
     });
   });
 </script>

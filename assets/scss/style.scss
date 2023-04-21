@@ -813,3 +813,23 @@ textarea.form-control {
     }
   }
 }
+
+.step {
+  position: relative;
+  margin-bottom: 100vh;
+}
+
+.trigger {
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.fade.show {
+  opacity: 1;
+}
