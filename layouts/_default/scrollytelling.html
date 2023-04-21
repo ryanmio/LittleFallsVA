@@ -1,19 +1,19 @@
 {{ define "main" }}
-<section id="scrollytelling" class="scrollytelling-section">
-  <div class="container">
-    <div class="step">
-      <div class="trigger">Text block 1</div>
-      <img src="/images/metalogo.jpg" alt="Image 1" class="fade">
-    </div>
-    <div class="step">
-      <div class="trigger">Text block 2</div>
-      <img src="/images/metalogo.jpg" alt="Image 2" class="fade">
-    </div>
-    <div class="step">
-      <div class="trigger">Text block 3</div>
-      <img src="/images/metalogo.jpg" alt="Image 3" class="fade">
-    </div>
-  </div>
-</section>
-{{ partial "scrollytelling-scripts.html" . }}
+<div id="scroll-container">
+  {{ .Content }}
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+var controller = new ScrollMagic.Controller();
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: "#trigger",
+  duration: "100%",
+})
+  .setTween(".scroll-section:nth-child(2)", 1, { opacity: 1 })
+  .addTo(controller);
+
+  });
+</script>
 {{ end }}
