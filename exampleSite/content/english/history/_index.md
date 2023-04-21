@@ -11,7 +11,7 @@ layout: "scrollytelling"
     <p>Several tribes, including the Tauxenent, Doeg, and Piscataway, inhabited the region, establishing a rich cultural history and heritage that still echoes through the landscape today.</p>
   </div>
   <div class="image-container">
-    <img src="/images/chapter1.webp" alt="Image 1" />
+    <img src="/images/church-2.webp" alt="Image 2"  loading="lazy" />
   </div>
 </div>
 
@@ -22,7 +22,7 @@ layout: "scrollytelling"
     <p>Colonists were drawn to the area due to its proximity to waterways and fertile land, with the community continuing to grow and develop throughout the 18th century.</p>
   </div>
   <div class="image-container">
-    <img src="/images/chapter2.webp" alt="Image 2"  loading="lazy" />
+    <img src="/images/church-2.webp" alt="Image 2"  loading="lazy" />
   </div>
 
 <div class="scroll-section" id="chapter3">
