@@ -7,8 +7,9 @@ layout: "scrollytelling"
 <div class="scroll-section" id="chapter1">
   <div class="text-content">
     <h2 class="chapter-title">Chapter 1</h2>
-    <p>This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling.</p>
-        <p>This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling.</p>
+    <p>Long before European settlers arrived, the area now known as Falls Church was home to various Indigenous peoples. These communities lived off the land, utilizing its abundant resources and waterways for sustenance, transportation, and trade.</p>
+    <p>Several tribes, including the Tauxenent, Doeg, and Piscataway, inhabited the region, establishing a rich cultural history and heritage that still echoes through the landscape today.</p>
+        
   </div>
   <div class="image-container">
     <img src="/images/church-2.webp" alt="Image 1" />
