@@ -5,7 +5,7 @@ layout: "scrollytelling"
 ---
 
 <div class="scroll-section">
-  <div class="text-content">
+  <div class="text-content text-content-hidden">
     <p>This is some text that will be replaced when scrolling.</p>
   </div>
   <div class="image-container">
@@ -14,7 +14,7 @@ layout: "scrollytelling"
 </div>
 
 <div class="scroll-section">
-  <div class="text-content">
+  <div class="text-content text-content-hidden">
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
