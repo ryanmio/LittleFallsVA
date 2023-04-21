@@ -44,3 +44,63 @@ layout: "scrollytelling"
     <img src="/images/church-2.webp" alt="Image 2" />
   </div>
 </div>
+
+<div class="scroll-section" id="chapter5">
+  <div class="text-content">
+    <h2 class="chapter-title">Chapter 5</h2>
+    <p>This is the new text that will appear when scrolling.</p>
+  </div>
+  <div class="image-container">
+    <img src="/images/church-2.webp" alt="Image 2" />
+  </div>
+</div>
+
+<div class="scroll-section" id="chapter6">
+  <div class="text-content">
+    <h2 class="chapter-title">Chapter 6</h2>
+    <p>This is the new text that will appear when scrolling.</p>
+  </div>
+  <div class="image-container">
+    <img src="/images/church-2.webp" alt="Image 2" />
+  </div>
+</div>
+
+<div class="scroll-section" id="chapter7">
+  <div class="text-content">
+    <h2 class="chapter-title">Chapter 7</h2>
+    <p>This is the new text that will appear when scrolling.</p>
+  </div>
+  <div class="image-container">
+    <img src="/images/church-2.webp" alt="Image 2" />
+  </div>
+</div>
+
+<div class="scroll-section" id="chapter8">
+  <div class="text-content">
+    <h2 class="chapter-title">Chapter 8</h2>
+    <p>This is the new text that will appear when scrolling.</p>
+  </div>
+  <div class="image-container">
+    <img src="/images/church-2.webp" alt="Image 2" />
+  </div>
+</div>
+
+<div class="scroll-section" id="chapter9">
+  <div class="text-content">
+    <h2 class="chapter-title">Chapter 9</h2>
+    <p>This is the new text that will appear when scrolling.</p>
+  </div>
+  <div class="image-container">
+    <img src="/images/church-2.webp" alt="Image 2" />
+  </div>
+</div>
+
+<div class="scroll-section" id="chapter10">
+  <div class="text-content">
+    <h2 class="chapter-title">Chapter 10</h2>
+    <p>This is the new text that will appear when scrolling.</p>
+  </div>
+  <div class="image-container">
+    <img src="/images/church-2.webp" alt="Image 2" />
+  </div>
+</div>
