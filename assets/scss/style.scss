@@ -813,12 +813,14 @@ textarea.form-control {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .text-content {
-  position: sticky;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
   z-index: 1;
   text-align: center;
   max-width: 80%;
