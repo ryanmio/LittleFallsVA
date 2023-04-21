@@ -70,6 +70,7 @@
   left: 0;
   width: 100%; /* Add this to ensure the title spans the entire width of the container */
   text-align: center; /* Add this to center the title */
+  padding: 2rem 0;
 }
  
 .chapter-nav {
@@ -120,6 +121,34 @@
   outline: none;
   color: #007BFF;
 }
+    
+.chapter-nav::before,
+.chapter-nav::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 30px;
+  z-index: 1001;
+  pointer-events: none;
+}
+
+.chapter-nav::before {
+  left: 0;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.8), transparent);
+}
+
+.chapter-nav::after {
+  right: 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), transparent);
+}
+
+    @media (min-width: 768px) {
+  .chapter-nav::before,
+  .chapter-nav::after {
+    display: none;
+  }
+}
+
     
 </style>
 
@@ -181,6 +210,28 @@ window.addEventListener("scroll", () => {
   onScroll();
   updateActiveChapterLink();
 });
+
+    
+    function toggleMenuGradientOverlays() {
+  const chapterNav = document.querySelector('.chapter-nav');
+  const scrollableWidth = chapterNav.scrollWidth - chapterNav.clientWidth;
+  const scrollLeft = chapterNav.scrollLeft;
+
+  if (scrollLeft > 0) {
+    chapterNav.classList.add('scroll-left');
+  } else {
+    chapterNav.classList.remove('scroll-left');
+  }
+
+  if (scrollLeft < scrollableWidth) {
+    chapterNav.classList.add('scroll-right');
+  } else {
+    chapterNav.classList.remove('scroll-right');
+  }
+}
+
+document.querySelector('.chapter-nav').addEventListener('scroll', toggleMenuGradientOverlays);
+toggleMenuGradientOverlays();
 
 </script>
 {{ end }}
