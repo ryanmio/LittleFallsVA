@@ -867,3 +867,23 @@ textarea.form-control {
   left: 0;
 }
  
+.chapter-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.chapter-nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.chapter-nav a:hover {
+  text-decoration: underline;
+}
