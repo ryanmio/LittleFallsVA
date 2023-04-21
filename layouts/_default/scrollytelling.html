@@ -121,27 +121,6 @@
   color: #007BFF;
 }
     
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1001;
-  padding: 10px 15px;
-  border-radius: 4px;
-  background-color: #007BFF;
-  color: #fff;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-}
-
-.back-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-    
 </style>
 
 <div class="chapter-nav">
@@ -160,7 +139,6 @@
 
 <div id="scroll-container">
   {{ .Content }}
-  <button id="back-to-top" class="back-to-top">Back to Top</button>
 </div>
 
 <script>
@@ -202,24 +180,6 @@ function updateActiveChapterLink() {
 window.addEventListener("scroll", () => {
   onScroll();
   updateActiveChapterLink();
-});
-
-    const backToTopBtn = document.getElementById("back-to-top");
-
-function toggleBackToTopVisibility() {
-  if (window.scrollY > window.innerHeight) {
-    backToTopBtn.classList.add("visible");
-  } else {
-    backToTopBtn.classList.remove("visible");
-  }
-}
-
-backToTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-window.addEventListener("scroll", () => {
-  toggleBackToTopVisibility();
 });
 
 </script>
