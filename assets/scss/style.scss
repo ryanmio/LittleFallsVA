@@ -801,6 +801,24 @@ textarea.form-control {
   object-fit: cover;
 }
 
+#scroll-container {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.scroll-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .text-content {
   position: relative;
   z-index: 1;
@@ -812,12 +830,43 @@ textarea.form-control {
   border-radius: 4px;
 }
 
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.image-container img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.text-content-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.image-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.text-content {
+  position: relative;
+}
+
 .chapter-title {
   position: absolute;
   top: 0;
   left: 0;
 }
-
+ 
 .chapter-nav {
   position: sticky;
   top: 0;
@@ -831,6 +880,7 @@ textarea.form-control {
   white-space: nowrap;
   z-index: 1000;
 }
+
 
 .chapter-nav a {
   margin: 0 10px;
