@@ -80,10 +80,17 @@
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center; /* Updated */
   overflow-x: auto;
   white-space: nowrap;
   z-index: 1000;
+}
+    
+    
+@media (max-width: 767px) {
+  .chapter-nav {
+    justify-content: flex-start;
+  }
 }
 
 .chapter-nav a {
