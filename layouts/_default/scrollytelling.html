@@ -2,18 +2,4 @@
 <div id="scroll-container">
   {{ .Content }}
 </div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-var controller = new ScrollMagic.Controller();
-
-var scene = new ScrollMagic.Scene({
-  triggerElement: "#trigger",
-  duration: "100%",
-})
-  .setTween(".scroll-section:nth-child(2)", 1, { opacity: 1 })
-  .addTo(controller);
-
-  });
-</script>
 {{ end }}

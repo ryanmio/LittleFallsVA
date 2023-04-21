@@ -801,35 +801,47 @@ textarea.form-control {
   object-fit: cover;
 }
 
-.scrollytelling-section {
-  .container {
-    .text-block {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      opacity: 0;
-    }
-  }
-}
-
-.step {
+#scroll-container {
   position: relative;
-  margin-bottom: 100vh;
+  overflow-x: hidden;
 }
 
-.trigger {
-  position: sticky;
-  top: 50%;
-  transform: translateY(-50%);
+.scroll-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.fade {
-  opacity: 0;
-  transition: opacity 1s;
+.text-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
 }
 
-.fade.show {
-  opacity: 1;
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.image-container img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
 }
