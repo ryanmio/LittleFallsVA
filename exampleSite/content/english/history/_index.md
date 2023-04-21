@@ -7,10 +7,21 @@ layout: "scrollytelling"
 <div class="scroll-section" id="chapter1">
   <div class="text-content">
     <h2 class="chapter-title">Pre-colonial era: Indigenous peoples inhabit the area</h2>
-    <p>Long before European colonizers arrived, this land was home to Indigenous peoples, including the Tauxenents, Patawomekes, and Matchotics of the Iroquois Confederacy. As inhabitants of the area, they revered the Little Falls of the Potomac River, a barrier to navigation and a gathering place for trade and communication. Little Falls was not only a significant landmark but also a testament to the rich history of the Indigenous peoples who called this land their home.</p>        
+    <p>Long before European colonizers arrived, the area now known as Falls Church, Virginia, was home to Indigenous peoples, including the Tauxenents, Patawomekes, and Matchotics of the Iroquois Confederacy. As inhabitants of the area, they revered the Little Falls of the Potomac River, a barrier to navigation and a gathering place for trade and communication. Little Falls was not only a significant landmark but also a testament to the rich history of the Indigenous peoples who called this land their home.</p>
+
+   <p>The area around Falls Church was occupied by Algonquian-speaking peoples for at least 10,000 years. These peoples were organized into a number of distinct groups, such as the Powhatan along the James and York Rivers in Virginia, the Piscataway along the Potomac River in Maryland, and the Eastern Shore chiefdoms, including the Nanticoke. Politically, the Powhatan dominated the southern portion of the Chesapeake up to the Fall Line, while the Piscataway controlled a smaller area of Maryland.</p>
+
+   <p>Several tribes inhabited the area now known as Falls Church, such as the Doeg (or Dogue) Indians, Tauxenents (also known as the Doegs or Dogue), Patawomekes (Potomacs), and Matchotics. The Powhatan Confederacy controlled 28-32 groups or tribes along riverside towns and villages, ruled by their own weroance or chiefs. The Pamunkey tribe, one of the six core tribes of the political alliance Tsenacomoco, also played a significant role in the area.</p>
+
+   <p>When English colonists arrived in 1607, they encountered a people whose lives were completely different from their own, leading to misunderstandings with the native inhabitants. The colonists and Virginia Company members hoped to evangelize the local Native American population, but their efforts were largely unsuccessful. They believed that Christianity required an English cultural context to thrive, so they tried to make potential native converts learn English and adopt English lifestyles before becoming Christian. Many settlers felt little obligation to proselytize the indigenous peoples and even used money donated for that purpose to build an ironworks instead.</p>
+
+   <p>The founding of The Falls Church in 1767-69 marked a significant event in the history of the area, with James Wren as the architect and builder. However, the arrival of English colonists and the eventual founding of Falls Church brought profound changes to the Indigenous peoples of the region, leading to the displacement of these communities and the erasure of their rich history.</p>
+
+   <p>By understanding the complex pre-colonial history of Falls Church and the Indigenous peoples who inhabited the area, we can gain a deeper appreciation for the richness and diversity of the region's past. As we delve into the untold history of Falls Church, including colonization and slavery, we should remember the vibrant Indigenous societies that were present long before European settlement and the lasting impact of their presence in shaping the community.
+</p>        
   </div>
   <div class="image-container">
-    <img src="/images/church-2.webp" alt="Image 1" />
+    <img src="/images/history/smithmap.jpg" alt="Image 1" />
   </div>
 </div>
 
@@ -41,7 +52,7 @@ layout: "scrollytelling"
     <p>In 1769, the current brick church was constructed, designed by architect James Wren. Once again, the labor of enslaved individuals was used to build this structure, which still stands today. As we look upon this historic building, let us not forget the hands that crafted it and the stories of those who toiled in its shadow.</p>
   </div>
   <div class="image-container">
-    <img src="/images/church-2.webp" alt="Image 2"  loading="lazy" />
+    <img src="/images/history/1860.jpeg" alt="Image 2"  loading="lazy" />
   </div>
 </div>
 
