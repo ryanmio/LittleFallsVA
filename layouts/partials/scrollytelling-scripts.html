@@ -1,19 +1,22 @@
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    var controller = new    
-    
-    ScrollMagic.Controller();
-    var textBlocks = document.querySelectorAll(".text-block");
+    // Init controller
+    var controller = new ScrollMagic.Controller();
 
-    textBlocks.forEach(function(textBlock) {
-      var scene = new ScrollMagic.Scene({
-        triggerElement: textBlock,
-        triggerHook: 0.9,
-        reverse: true
-      })
-      .setClassToggle(textBlock, "fade-in")
-      .addTo(controller);
-    });
+    // Build Tween
+    var tween = new TimelineMax()
+      .from("#gsap-anim", 1.5, {rotationY: 180, scale: 0.7, opacity: 0})
+      .to("#gsap-anim", 1.5, {rotationY: 180, scale: 0.7, opacity: 0, delay: 7});
+
+    // Build scene
+    new ScrollMagic.Scene({
+      triggerElement: "#gsap-trigger",
+      triggerHook: "onEnter", // Show when scrolled 10% into view
+      duration: "100%", // Use full viewport
+      offset: 50 // Move trigger to center of element
+    })
+    .setTween(tween)
+    .addIndicators({name: "GSAP"}) // Add indicators (requires plugin)
+    .addTo(controller);
   });
 </script>
-
