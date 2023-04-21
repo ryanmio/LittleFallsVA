@@ -8,23 +8,38 @@
   .scroll-section.visible {
     opacity: 1;
   }
+
+  .chapter-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    z-index: 1000;
+  }
 </style>
 
-<div id="scroll-container">
-  {{ .Content }}
-    
-    <div class="chapter-nav">
+<div class="chapter-nav">
   <a href="#chapter1">Chapter 1</a>
   <a href="#chapter2">Chapter 2</a>
-  <a href="#chapter2">Chapter 3</a>
-  <a href="#chapter2">Chapter 4</a>
-  <a href="#chapter1">Chapter 5</a>
-  <a href="#chapter2">Chapter 6</a>
-  <a href="#chapter2">Chapter 7</a>
-  <a href="#chapter2">Chapter 8</a>
+  <a href="#chapter3">Chapter 3</a>
+  <a href="#chapter4">Chapter 4</a>
+  <a href="#chapter5">Chapter 5</a>
+  <a href="#chapter6">Chapter 6</a>
+  <a href="#chapter7">Chapter 7</a>
+  <a href="#chapter8">Chapter 8</a>
+  <a href="#chapter9">Chapter 9</a>
+  <a href="#chapter10">Chapter 10</a>
   <!-- Add more links for additional chapters -->
 </div>
 
+<div id="scroll-container">
+  {{ .Content }}
 </div>
 
 <script>
