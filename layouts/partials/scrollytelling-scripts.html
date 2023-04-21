@@ -1,22 +1,40 @@
 <script>
+  function createGraphic() {
+    var images = ['image-1', 'image-2', 'image-3'];
+
+    function update(step) {
+      images.forEach(function(imageId, index) {
+        var imageEl = document.getElementById(imageId);
+        if (index + 1 <= step) {
+          imageEl.style.display = 'block';
+        } else {
+          imageEl.style.display = 'none';
+        }
+      });
+    }
+
+    return {
+      update: update
+    };
+  }
+
   document.addEventListener("DOMContentLoaded", function() {
-    // Init controller
+    var graphic = createGraphic();
     var controller = new ScrollMagic.Controller();
+    var triggerEls = Array.from(document.querySelectorAll('.trigger'));
 
-    // Create tweens
-    var tweenTextBlocks = new TimelineMax()
-      .from(".text-block", 1, {opacity: 0, y: 100});
+    triggerEls.forEach(function(el) {
+      var step = +el.getAttribute('data-step');
+      var scene = new ScrollMagic.Scene({
+        triggerElement: el,
+        triggerHook: 'onCenter',
+      });
 
-    // Build scenes
-    var textBlocks = document.querySelectorAll(".text-block");
-    textBlocks.forEach(function(textBlock) {
-      new ScrollMagic.Scene({
-        triggerElement: textBlock,
-        triggerHook: 0.5,
-        reverse: true
-      })
-      .setTween(tweenTextBlocks)
-      .addTo(controller);
+      scene
+        .on('enter', function() {
+          graphic.update(step);
+        })
+        .addTo(controller);
     });
   });
 </script>
