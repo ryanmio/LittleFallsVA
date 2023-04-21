@@ -121,23 +121,21 @@
 }
 
 .back-to-top {
+  display: none;
   position: fixed;
-  bottom: 80px;
-  right: 20px;
-  z-index: 1001;
-  padding: 8px 10px;
-  border-radius: 4px;
-  background-color: #fff;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  font-size: 24px;
+  background-color: rgba(255, 255, 255, 0.8);
   color: #2c475d;
+  border-radius: 4px;
   cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1000;
 }
 
 .back-to-top.visible {
-  opacity: 1;
-  visibility: visible
+  display: block;
 }
 </style>
 
