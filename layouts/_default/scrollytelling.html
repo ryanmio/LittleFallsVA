@@ -1,6 +1,5 @@
 {{ define "main" }}
 <style>
-    
     html {
   scroll-behavior: smooth;
 }
@@ -120,7 +119,26 @@
   outline: none;
   color: #007BFF;
 }
-    
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible
+}
 </style>
 
 <div class="chapter-nav">
@@ -141,8 +159,11 @@
   {{ .Content }}
 </div>
 
+<div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to top</div>
+
 <script>
   const scrollSections = document.querySelectorAll(".scroll-section");
+  const backToTop = document.querySelector('.back-to-top');
 
   function onScroll() {
     scrollSections.forEach((section) => {
@@ -154,33 +175,37 @@
         section.classList.remove("visible");
       }
     });
+
+    if (window.scrollY > window.innerHeight / 2) {
+      backToTop.classList.add("visible");
+    } else {
+      backToTop.classList.remove("visible");
+    }
   }
 
   window.addEventListener("scroll", onScroll);
   onScroll();
-    
-function updateActiveChapterLink() {
-  let activeChapterLink = null;
-  scrollSections.forEach((section, index) => {
-    const sectionTop = section.getBoundingClientRect().top;
 
-    if (sectionTop < window.innerHeight / 2 && sectionTop >= -window.innerHeight / 2) {
-      const chapterLinks = document.querySelectorAll('.chapter-nav a');
-      chapterLinks.forEach((link) => {
-        link.classList.remove('active');
-      });
-      activeChapterLink = chapterLinks[index];
-      activeChapterLink.classList.add('active');
-    }
+  function updateActiveChapterLink() {
+    let activeChapterLink = null;
+    scrollSections.forEach((section, index) => {
+      const sectionTop = section.getBoundingClientRect().top;
+
+      if (sectionTop < window.innerHeight / 2 && sectionTop >= -window.innerHeight / 2) {
+        const chapterLinks = document.querySelectorAll('.chapter-nav a');
+        chapterLinks.forEach((link) => {
+          link.classList.remove('active');
+        });
+        activeChapterLink = chapterLinks[index];
+        activeChapterLink.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener("scroll", () => {
+    onScroll();
+    updateActiveChapterLink();
   });
-}
-
-
-
-window.addEventListener("scroll", () => {
-  onScroll();
-  updateActiveChapterLink();
-});
 
 </script>
 {{ end }}
