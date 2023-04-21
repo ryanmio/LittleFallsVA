@@ -1,16 +1,12 @@
 {{ define "main" }}
 <section id="scrollytelling" class="scrollytelling-section">
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <img src="/static/images/image1.jpg" alt="Image 1" class="img-fluid">
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="text-block">Text block 1</div>
-        <div class="text-block">Text block 2</div>
-      </div>
+    <div class="spacer s2"></div>
+    <div id="gsap-trigger" class="spacer s0"></div>
+    <div id="gsap-anim" class="text-block">
+      <p>Text block 1</p>
     </div>
-    <!-- Add more images and text blocks following the same structure -->
+    <div class="spacer s2"></div>
   </div>
 </section>
 {{ partial "scrollytelling-scripts.html" . }}
