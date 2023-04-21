@@ -1,50 +1,35 @@
 {{ define "main" }}
-<div class="chapter-nav">
-  <!-- Update the href and content to match your chapter IDs and titles -->
-  <a href="#chapter1">Chapter 1</a>
-  <a href="#chapter2">Chapter 2</a>
-  <a href="#chapter3">Chapter 3</a>
-</div>
+<style>
+  .scroll-section {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
 
-<div>
+  .scroll-section.visible {
+    opacity: 1;
+  }
+</style>
+
+<div id="scroll-container">
   {{ .Content }}
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.querySelectorAll(".chapter-nav a");
-    const chapters = [];
+  const scrollSections = document.querySelectorAll(".scroll-section");
 
-    navLinks.forEach((link) => {
-      const target = document.querySelector(link.getAttribute("href"));
-      chapters.push(target);
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth" });
-      });
+  function onScroll() {
+    scrollSections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+
+      if (sectionTop < window.innerHeight && sectionTop > -window.innerHeight / 2) {
+        section.classList.add("visible");
+      } else {
+        section.classList.remove("visible");
+      }
     });
+  }
 
-    const setActiveNavLink = () => {
-      let activeIndex = -1;
-      chapters.forEach((chapter, index) => {
-        const rect = chapter.getBoundingClientRect();
-        if (rect.top < window.innerHeight / 2 && rect.bottom > 0) {
-          activeIndex = index;
-        }
-      });
-
-      navLinks.forEach((link, index) => {
-        if (index === activeIndex) {
-          link.classList.add("active");
-        } else {
-          link.classList.remove("active");
-        }
-      });
-    };
-
-    window.addEventListener("scroll", setActiveNavLink);
-    setActiveNavLink();
-  });
+  window.addEventListener("scroll", onScroll);
+  onScroll();
 </script>
-
 {{ end }}

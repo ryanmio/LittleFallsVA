@@ -857,21 +857,4 @@ textarea.form-control {
   transition: opacity 0.5s, transform 0.5s;
 }
 
-  .chapter-nav {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .chapter-nav a {
-    text-decoration: none;
-    color: #333;
-    margin-bottom: 5px;
-  }
-
-  .chapter-nav a.active {
-    color: #ff6347;
-    font-weight: bold;
-  }
+  

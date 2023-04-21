@@ -4,8 +4,8 @@ date: 2023-04-12
 layout: "scrollytelling"
 ---
 
-## Chapter 1 {#chapter1}
 <div class="scroll-section">
+  <h2>Chapter 1</h2>
   <div class="text-content">
     <p>This is some text that will be replaced when scrolling.</p>
   </div>
@@ -14,8 +14,8 @@ layout: "scrollytelling"
   </div>
 </div>
 
-## Chapter 2 {#chapter2}
 <div class="scroll-section">
+  <h2>Chapter 2</h2>
   <div class="text-content">
     <p>This is the new text that will appear when scrolling.</p>
   </div>
