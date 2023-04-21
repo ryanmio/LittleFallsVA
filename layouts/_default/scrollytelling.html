@@ -160,14 +160,15 @@ function updateActiveChapterLink() {
 
     if (sectionTop < window.innerHeight / 2 && sectionTop >= -window.innerHeight / 2) {
       const chapterLinks = document.querySelectorAll('.chapter-nav a');
-      if (activeChapterLink) {
-        activeChapterLink.classList.remove('active');
-      }
+      chapterLinks.forEach((link) => {
+        link.classList.remove('active');
+      });
       activeChapterLink = chapterLinks[index];
       activeChapterLink.classList.add('active');
     }
   });
 }
+
 
 
 window.addEventListener("scroll", () => {
