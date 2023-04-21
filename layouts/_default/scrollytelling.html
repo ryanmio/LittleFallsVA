@@ -2,4 +2,28 @@
 <div id="scroll-container">
   {{ .Content }}
 </div>
+
+<script>
+  const textContents = document.querySelectorAll(".text-content");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove("text-content-hidden");
+        } else {
+          entry.target.classList.add("text-content-hidden");
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  textContents.forEach((textContent) => {
+    observer.observe(textContent);
+  });
+</script>
+
 {{ end }}
