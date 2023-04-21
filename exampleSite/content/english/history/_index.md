@@ -9,7 +9,7 @@ layout: "scrollytelling"
     <p>This is some text that will be replaced when scrolling.</p>
   </div>
   <div class="image-container">
-    <img src="path/to/your/image1.jpg" alt="Image 1" />
+    <img src="/images/metalogo.jpg" alt="Image 1" />
   </div>
 </div>
 
@@ -18,6 +18,6 @@ layout: "scrollytelling"
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
-    <img src="path/to/your/image2.jpg" alt="Image 2" />
+    <img src="/images/metalogo.jpg" alt="Image 2" />
   </div>
 </div>
