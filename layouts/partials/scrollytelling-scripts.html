@@ -5,26 +5,18 @@
 
     // Create tweens
     var tweenTextBlocks = new TimelineMax()
-      .staggerFrom(".text-block", 1, {opacity: 0, y: 100}, 0.5);
+      .from(".text-block", 1, {opacity: 0, y: 100});
 
     // Build scenes
-    new ScrollMagic.Scene({
-      triggerElement: ".text-image-wrapper",
-      triggerHook: 0.5,
-      reverse: true,
-      duration: "200%"
-    })
-    .setPin(".image")
-    .addTo(controller);
-
-    new ScrollMagic.Scene({
-      triggerElement: ".text-blocks",
-      triggerHook: 0.5,
-      reverse: true,
-      duration: "200%"
-    })
-    .setTween(tweenTextBlocks)
-    .addTo(controller);
+    var textBlocks = document.querySelectorAll(".text-block");
+    textBlocks.forEach(function(textBlock) {
+      new ScrollMagic.Scene({
+        triggerElement: textBlock,
+        triggerHook: 0.5,
+        reverse: true
+      })
+      .setTween(tweenTextBlocks)
+      .addTo(controller);
+    });
   });
 </script>
-
