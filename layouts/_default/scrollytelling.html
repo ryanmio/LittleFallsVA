@@ -4,15 +4,17 @@
 </div>
 
 <script>
-  const textContents = document.querySelectorAll(".text-content");
+  const scrollElements = document.querySelectorAll(".text-content, .image-container");
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.remove("text-content-hidden");
+          entry.target.classList.remove("image-hidden");
         } else {
           entry.target.classList.add("text-content-hidden");
+          entry.target.classList.add("image-hidden");
         }
       });
     },
@@ -21,8 +23,8 @@
     }
   );
 
-  textContents.forEach((textContent) => {
-    observer.observe(textContent);
+  scrollElements.forEach((element) => {
+    observer.observe(element);
   });
 </script>
 
