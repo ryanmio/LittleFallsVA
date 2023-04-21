@@ -104,6 +104,17 @@
 .scroll-section.visible {
   opacity: 1;
 }
+
+.chapter-nav a:hover {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.chapter-nav a:focus {
+  outline: none;
+  color: #007BFF;
+}
+    
 </style>
 
 <div class="chapter-nav">
@@ -142,12 +153,12 @@
   window.addEventListener("scroll", onScroll);
   onScroll();
     
-    function updateActiveChapterLink() {
+function updateActiveChapterLink() {
   let activeChapterLink = null;
   scrollSections.forEach((section, index) => {
     const sectionTop = section.getBoundingClientRect().top;
 
-    if (sectionTop < window.innerHeight / 2) {
+    if (sectionTop < window.innerHeight / 2 && sectionTop >= -window.innerHeight / 2) {
       const chapterLinks = document.querySelectorAll('.chapter-nav a');
       if (activeChapterLink) {
         activeChapterLink.classList.remove('active');
@@ -157,6 +168,7 @@
     }
   });
 }
+
 
 window.addEventListener("scroll", () => {
   onScroll();
