@@ -1,0 +1,19 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var controller = new    
+    
+    ScrollMagic.Controller();
+    var textBlocks = document.querySelectorAll(".text-block");
+
+    textBlocks.forEach(function(textBlock) {
+      var scene = new ScrollMagic.Scene({
+        triggerElement: textBlock,
+        triggerHook: 0.9,
+        reverse: true
+      })
+      .setClassToggle(textBlock, "fade-in")
+      .addTo(controller);
+    });
+  });
+</script>
+

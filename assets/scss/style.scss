@@ -801,3 +801,20 @@ textarea.form-control {
   object-fit: cover;
 }
 
+.scrollytelling-section {
+  padding: 2rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+
+  .text-block {
+    margin-bottom: 1.5rem;
+    opacity: 0;
+
+    &.fade-in {
+      opacity: 1;
+      transition: opacity 1s;
+    }
+  }
+}
