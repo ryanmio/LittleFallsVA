@@ -7,7 +7,9 @@ layout: "scrollytelling"
 <div class="scroll-section" id="chapter1">
   <div class="text-content">
     <h2 class="chapter-title">Chapter 1</h2>
-    <p>This is some text that will be replaced when scrolling.</p>
+    <p>This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling.</p>
+        <p>This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling.</p>
+          <p>This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling. This is some text that will be replaced when scrolling.</p>
   </div>
   <div class="image-container">
     <img src="/images/church-2.webp" alt="Image 1" />
