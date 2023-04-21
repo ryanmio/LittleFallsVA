@@ -857,4 +857,13 @@ textarea.form-control {
   transition: opacity 0.5s, transform 0.5s;
 }
 
-  
+.text-content {
+  position: relative;
+}
+
+.chapter-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+ 

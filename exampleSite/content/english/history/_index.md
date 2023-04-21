@@ -5,8 +5,8 @@ layout: "scrollytelling"
 ---
 
 <div class="scroll-section">
-  <h2>Chapter 1</h2>
   <div class="text-content">
+    <h2 class="chapter-title">Chapter 1</h2>
     <p>This is some text that will be replaced when scrolling.</p>
   </div>
   <div class="image-container">
@@ -15,8 +15,8 @@ layout: "scrollytelling"
 </div>
 
 <div class="scroll-section">
-  <h2>Chapter 2</h2>
   <div class="text-content">
+    <h2 class="chapter-title">Chapter 2</h2>
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
@@ -25,21 +25,22 @@ layout: "scrollytelling"
 </div>
 
 <div class="scroll-section">
-  <h2>Chapter 3</h2>
   <div class="text-content">
+    <h2 class="chapter-title">Chapter 3</h2>
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
-    <img src="/images/church-2.webp" alt="Image 3" />
+    <img src="/images/church-2.webp" alt="Image 2" />
   </div>
 </div>
 
+
 <div class="scroll-section">
-  <h2>Chapter 4</h2>
   <div class="text-content">
+    <h2 class="chapter-title">Chapter 4</h2>
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
-    <img src="/images/church-2.webp" alt="Image 4" />
+    <img src="/images/church-2.webp" alt="Image 2" />
   </div>
 </div>
