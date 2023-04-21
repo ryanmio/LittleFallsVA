@@ -12,6 +12,25 @@
   {{- block "main" . }}{{- end }}
   {{- partial "footer.html" . -}}
 
+    
+<script>
+  const scrollSections = document.querySelectorAll(".scroll-section");
+
+  window.addEventListener("scroll", () => {
+    scrollSections.forEach((section) => {
+      const img = section.querySelector(".image-container img");
+      const text = section.querySelector(".text-content");
+      const sectionTop = section.getBoundingClientRect().top;
+
+      if (sectionTop < window.innerHeight && sectionTop > -window.innerHeight) {
+        text.style.transform = `translateY(-${Math.abs(sectionTop) / 2}px)`;
+        img.style.transform = `translateY(${Math.abs(sectionTop) / 3}px)`;
+      }
+    });
+  });
+</script>
+
+    
 </body>
 
 </html>
