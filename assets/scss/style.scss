@@ -803,17 +803,26 @@ textarea.form-control {
 
 .scrollytelling-section {
   .container {
-    .spacer {
-      height: 100vh;
-    }
-
-    .text-block {
-      min-height: 50vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      opacity: 0;
+    .text-image-wrapper {
+      .text-blocks {
+        height: 200vh;
+        position: relative;
+        .text-block {
+          position: absolute;
+          width: 100%;
+          font-size: 2rem;
+          opacity: 0;
+          top: 25%;
+          &:nth-child(2) {
+            top: 75%;
+          }
+        }
+      }
+      .image {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+      }
     }
   }
 }

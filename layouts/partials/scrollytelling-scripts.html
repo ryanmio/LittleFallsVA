@@ -4,24 +4,27 @@
     var controller = new ScrollMagic.Controller();
 
     // Create tweens
-    var tween1 = new TweenMax.from("#text-block-1.fade-in", 1, {opacity: 0, y: 100});
-    var tween2 = new TweenMax.from("#text-block-2.fade-in", 1, {opacity: 0, y: 100});
+    var tweenTextBlocks = new TimelineMax()
+      .staggerFrom(".text-block", 1, {opacity: 0, y: 100}, 0.5);
 
     // Build scenes
     new ScrollMagic.Scene({
-      triggerElement: "#trigger1",
+      triggerElement: ".text-image-wrapper",
       triggerHook: 0.5,
-      reverse: true
+      reverse: true,
+      duration: "200%"
     })
-    .setTween(tween1)
+    .setPin(".image")
     .addTo(controller);
 
     new ScrollMagic.Scene({
-      triggerElement: "#trigger2",
+      triggerElement: ".text-blocks",
       triggerHook: 0.5,
-      reverse: true
+      reverse: true,
+      duration: "200%"
     })
-    .setTween(tween2)
+    .setTween(tweenTextBlocks)
     .addTo(controller);
   });
 </script>
+
