@@ -20,7 +20,7 @@ layout: "scrollytelling"
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
-    <img src="/images/church-2.webp" alt="Image 2" />
+    <img src="/images/church-2.webp" alt="Image 2"  loading="lazy" />
   </div>
 </div>
 
@@ -30,7 +30,7 @@ layout: "scrollytelling"
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
-    <img src="/images/church-2.webp" alt="Image 2" />
+    <img src="/images/church-2.webp" alt="Image 2"  loading="lazy" />
   </div>
 </div>
 
@@ -41,7 +41,7 @@ layout: "scrollytelling"
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
-    <img src="/images/church-2.webp" alt="Image 2" />
+    <img src="/images/church-2.webp" alt="Image 2"  loading="lazy" />
   </div>
 </div>
 
@@ -51,7 +51,7 @@ layout: "scrollytelling"
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
-    <img src="/images/church-2.webp" alt="Image 2" />
+    <img src="/images/church-2.webp" alt="Image 2"  loading="lazy" />
   </div>
 </div>
 
@@ -61,7 +61,7 @@ layout: "scrollytelling"
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
-    <img src="/images/church-2.webp" alt="Image 2" />
+    <img src="/images/church-2.webp" alt="Image 2"  loading="lazy" />
   </div>
 </div>
 
@@ -71,7 +71,7 @@ layout: "scrollytelling"
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
-    <img src="/images/church-2.webp" alt="Image 2" />
+    <img src="/images/church-2.webp" alt="Image 2"  loading="lazy" />
   </div>
 </div>
 
@@ -81,7 +81,7 @@ layout: "scrollytelling"
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
-    <img src="/images/church-2.webp" alt="Image 2" />
+    <img src="/images/church-2.webp" alt="Image 2"  loading="lazy" />
   </div>
 </div>
 
@@ -91,7 +91,7 @@ layout: "scrollytelling"
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
-    <img src="/images/church-2.webp" alt="Image 2" />
+    <img src="/images/church-2.webp" alt="Image 2"  loading="lazy" />
   </div>
 </div>
 
@@ -101,6 +101,6 @@ layout: "scrollytelling"
     <p>This is the new text that will appear when scrolling.</p>
   </div>
   <div class="image-container">
-    <img src="/images/church-2.webp" alt="Image 2" />
+    <img src="/images/church-2.webp" alt="Image 2"  loading="lazy" />
   </div>
 </div>
