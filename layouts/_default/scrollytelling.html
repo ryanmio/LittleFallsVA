@@ -1,150 +1,87 @@
 {{ define "main" }}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 <style>
-    html {
-  scroll-behavior: smooth;
-}
-
-#scroll-container {
-  position: relative;
-  overflow-x: hidden;
-}
-
-.scroll-section {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.text-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  max-width: 80%;
-  margin: 10 auto;
-  padding: 3rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 4px;
-}
-
-.image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.image-container img {
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-}
-
-.text-content-hidden {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s, transform 0.5s;
-}
-
-.image-hidden {
-  opacity: 0;
-  transform: translateY(70px);
-  transition: opacity 0.5s, transform 0.5s;
-}
-
-.chapter-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Add this to ensure the title spans the entire width of the container */
-  text-align: center; /* Add this to center the title */
-  margin-top: 8px;
-}
- 
-.chapter-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  display: flex;
-  justify-content: center; /* Updated */
-  overflow-x: auto;
-  white-space: nowrap;
-  z-index: 1000;
-}
-    
-    
-@media (max-width: 1000px) {
-  .chapter-nav {
-    justify-content: flex-start;
+  html {
+    scroll-behavior: smooth;
   }
-}
 
-.chapter-nav a {
-  margin: 0 15px;
-  padding: 10px 5px;
-  text-decoration: none;
-  color: #333;
-  display: inline-block;
-  border-bottom: 3px solid transparent;
-  transition: all 0.3s;
-}
+  #scroll-container {
+    position: relative;
+    overflow-x: hidden;
+  }
 
-.chapter-nav a:hover,
-.chapter-nav a.active {
-  color: #007BFF;
-  border-bottom: 3px solid #007BFF;
-}
+  .scroll-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-.scroll-section {
-  opacity: 0;
-  transition: opacity 1s ease;
-}
+  .text-content {
+    z-index: 1;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+  }
 
-.scroll-section.visible {
-  opacity: 1;
-}
+  .image-block {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 2rem;
+  }
 
-.chapter-nav a:hover {
-  text-decoration: none;
-  color: #007BFF;
-}
+  .image-block img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 
-.chapter-nav a:focus {
-  outline: none;
-  color: #007BFF;
-}
+  .chapter-title {
+    text-align: center;
+    margin: 2rem 0;
+  }
+ 
+  .chapter-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    z-index: 1000;
+  }
 
-.back-to-top {
-  display: none;
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  padding: 8px 12px;
-  font-size: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #2c475d;
-  border-radius: 4px;
-  cursor: pointer;
-  z-index: 1000;
-}
+  .chapter-nav a {
+    margin: 0 15px;
+    padding: 10px 5px;
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+  }
 
-.back-to-top.visible {
-  display: block;
-}
+  .chapter-nav a:hover,
+  .chapter-nav a:focus {
+    text-decoration: none;
+    color: #007BFF;
+  }
+
+  .chapter-nav a.active {
+    font-weight: bold;
+    color: #007BFF;
+  }
 </style>
 
 <div class="chapter-nav">
@@ -165,11 +102,8 @@
   {{ .Content }}
 </div>
 
-<div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
-
 <script>
   const scrollSections = document.querySelectorAll(".scroll-section");
-  const backToTop = document.querySelector('.back-to-top');
 
   function onScroll() {
     scrollSections.forEach((section) => {
@@ -181,12 +115,6 @@
         section.classList.remove("visible");
       }
     });
-
-    if (window.scrollY > window.innerHeight / 2) {
-      backToTop.classList.add("visible");
-    } else {
-      backToTop.classList.remove("visible");
-    }
   }
 
   window.addEventListener("scroll", onScroll);
@@ -212,6 +140,5 @@
     onScroll();
     updateActiveChapterLink();
   });
-
 </script>
 {{ end }}
