@@ -87,7 +87,7 @@ layout: "scrollytelling"
   </div>
   <div class="image-container">
     <img src="/images/history/town.png" alt="alt"  loading="lazy" />
-           <cite style="display: block; text-align: center;">https://www.historicprincewilliam.org/</cite>  
+           <cite style="display: block; text-align: center;">Image courtesy of https://www.historicprincewilliam.org/</cite>  
   </div>
 </div>
 
@@ -120,7 +120,7 @@ layout: "scrollytelling"
   </div>
   <div class="image-container">
     <img src="/images/history/fallschurchpo.png" alt="alt"  loading="lazy" />
-           <cite style="display: block; text-align: center;">https://www.historicprincewilliam.org/</cite>  
+           <cite style="display: block; text-align: center;">Image courtesy of https://www.historicprincewilliam.org/</cite>  
   </div>
 </div>
 
