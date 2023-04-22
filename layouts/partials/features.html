@@ -14,7 +14,7 @@
         <!-- Left side features -->
         {{ range .left_side }}
         <div class="mb-40 text-center text-md-left feature-item">
-          <img class="d-inline-block custom-icon mb-10" src="{{ .icon | absURL }}" alt="{{ .image_alt | default .title }}" style="max-width: 100%; margin-bottom: 20px;">
+          <img class="d-inline-block custom-icon mb-10" src="{{ .icon | absURL }}" alt="{{ .image_alt | default .title }}" style="max-width: 100%; margin-bottom: 10px;">
           <h3 class="font-weight-bold mb-2 features-title" style="font-size: 23px; line-height: 25px;">{{ .title | markdownify }}</h3>
           <p class="features-content">{{ .content | markdownify }}</p>
         </div>
@@ -27,7 +27,7 @@
         <!-- Right side features -->
         {{ range .right_side }}
         <div class="mb-40 text-center text-md-left feature-item">
-          <img class="d-inline-block custom-icon mb-10" src="{{ .icon | absURL }}" alt="{{ .image_alt | default .title }}" style="max-width: 100%; margin-bottom: 20px;">
+          <img class="d-inline-block custom-icon mb-10" src="{{ .icon | absURL }}" alt="{{ .image_alt | default .title }}" style="max-width: 100%; margin-bottom: 10px;">
           <h3 class="font-weight-bold mb-2 features-title" style="font-size: 23px; line-height: 25px;">{{ .title | markdownify }}</h3>
           <p class="features-content">{{ .content | markdownify }}</p>
         </div>
