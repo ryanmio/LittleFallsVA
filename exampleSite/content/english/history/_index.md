@@ -28,7 +28,7 @@ layout: "scrollytelling"
   </div>
   <div class="image-container">
     <img src="/images/history/1765.jpg" alt="Image 2"  loading="lazy" />
-     <cite style="display: block; text-align: center;">(John Smith's Map) "(1765) George Washington Papers, Series 4, General Correspondence: Truro Parish and Fairfax Parish, Virginia, Vestry Election Tabulation of Votes. [Manuscript/Mixed Material] Retrieved from the Library of Congress, https://www.loc.gov/item/mgw443132/."</cite>      
+     <cite style="display: block; text-align: center;">(1765) George Washington Papers, Series 4, General Correspondence: Truro Parish and Fairfax Parish, Virginia, Vestry Election Tabulation of Votes. [Manuscript/Mixed Material] Retrieved from the Library of Congress, https://www.loc.gov/item/mgw443132/.</cite>      
   </div>
 </div>
 
@@ -43,6 +43,7 @@ layout: "scrollytelling"
   </div>
   <div class="image-container">
     <img src="/images/history/1719.jpg" alt="alt"  loading="lazy" />
+     <cite style="display: block; text-align: center;">Senex, J. (1719) A new map of Virginia, Mary-Land, and the improved parts of Pennsylvania & New Jersey. [London: s.n] [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/2007625604/.</cite>          
   </div>
 </div>
 
@@ -56,6 +57,7 @@ layout: "scrollytelling"
   </div>
   <div class="image-container">
     <img src="/images/history/1861.jpg" alt="alt"  loading="lazy" />
+           <cite style="display: block; text-align: center;">Falls Church, Va. United States Virginia Falls Church, None. [Photographed between 1861 and 1865, printed between 1880 and 1889] [Photograph] Retrieved from the Library of Congress, https://www.loc.gov/item/2014645752/.</cite>  
   </div>
 </div>
 
@@ -70,6 +72,7 @@ layout: "scrollytelling"
   </div>
   <div class="image-container">
     <img src="/images/history/1890map.jpg" alt="alt"  loading="lazy" />
+           <cite style="display: block; text-align: center;">Noetzel, G. (1890) Falls Church, Fairfax Co., Va. Washington, D.C.: Bell Bros., Photo-Lithographers. [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/92681730/.</cite>  
   </div>
 </div>
 
@@ -84,6 +87,7 @@ layout: "scrollytelling"
   </div>
   <div class="image-container">
     <img src="/images/history/town.png" alt="alt"  loading="lazy" />
+           <cite style="display: block; text-align: center;">https://www.historicprincewilliam.org/</cite>  
   </div>
 </div>
 
@@ -100,6 +104,7 @@ layout: "scrollytelling"
   </div>
   <div class="image-container">
     <img src="/images/history/School.jpeg" alt="alt"  loading="lazy" />
+           <cite style="display: block; text-align: center;">Henderson Family Collection, “Mary Ellen Henderson, aka Miss Nellie, and her students in front of the James Lee Colored School,” 100 Years Black Falls Church, accessed April 22, 2023, http://100yearsblackfallschurch.org/items/show/25.</cite>  
   </div>
 </div>
 
@@ -115,6 +120,7 @@ layout: "scrollytelling"
   </div>
   <div class="image-container">
     <img src="/images/history/fallschurchpo.png" alt="alt"  loading="lazy" />
+           <cite style="display: block; text-align: center;">https://www.historicprincewilliam.org/</cite>  
   </div>
 </div>
 
