@@ -1,5 +1,5 @@
 ---
-title: "History"
+title: "Historia"
 date: 2023-04-12
 layout: "scrollytelling-es"
 ---
@@ -7,74 +7,75 @@ layout: "scrollytelling-es"
 <div class="scroll-section" id="chapter1">
   <div class="text-content">
     <div class="chapter-heading">
-      <span class="chapter-number">Chapter 1.</span>
-      <h3 class="chapter-title">Pre-colonial era: Indigenous peoples inhabit the area</h3>
+      <span class="chapter-number">Capítulo 1.</span>
+      <h3 class="chapter-title">Época precolonial: Los pueblos indígenas habitan la zona</h3>
     </div>
-    <p>The area around Falls Church was occupied by Algonquian-speaking peoples for at least 10,000 years. Several tribes inhabited the area now known as Falls Church, such as the Doeg (or Dogue) Indians, Tauxenents (also known as the Doegs or Dogue), Patawomekes (Potomacs), and Matchotics. The Powhatan Confederacy controlled 28-32 groups or tribes along riverside towns and villages, ruled by their own weroance or chiefs. The Pamunkey tribe, one of the six core tribes of the political alliance Tsenacomoco, also played a significant role in the area.</p>
+    <p>El área alrededor de Falls Church fue ocupada por pueblos de habla algonquina durante al menos 10,000 años. Varias tribus habitaron el área ahora conocida como Falls Church, como los indios Doeg (o Dogue), Tauxenents (también conocidos como Doegs o Dogue), Patawomekes (Potomacs) y Matchotics. La Confederación Powhatan controlaba entre 28 y 32 grupos o tribus a lo largo de pueblos y aldeas ribereñas, gobernados por sus propios weroance o jefes. La tribu Pamunkey, una de las seis tribus principales de la alianza política Tsenacomoco, también tuvo un papel importante en la zona.</p>
   </div>
   <div class="image-container">
-  <img src="/images/history/smithmap.webp" alt="Image 1" />
-     <cite style="display: block; text-align: center;">(John Smith's Map) "Virginia, discovered and discribed by Captayn John Smith, 1606"</cite>
+  <img src="/images/history/smithmap.webp" alt="Imagen 1" />
+     <cite style="display: block; text-align: center;">(Mapa de John Smith) "Virginia, descubierta y descrita por el Capitán John Smith, 1606"</cite>
   </div>
 </div>
-
 <div class="scroll-section" id="chapter2">
   <div class="text-content">
     <div class="chapter-heading">
-      <span class="chapter-number">Chapter 2.</span>
-      <h3 class="chapter-title">Truro Parish established</h3>
+      <span class="chapter-number">Capítulo 2.</span>
+      <h3 class="chapter-title">Establecimiento de la Parroquia de Truro</h3>
     </div>
-    <p>In 1734, Truro Parish was established, and settlers began to arrive, disrupting the lives of the native inhabitants. As newcomers built homes and established communities, they inadvertently transformed the Native American trails into major colonial transportation routes. The intersection of these trails, which would later become Broad Street, Lee Highway, and Little Falls Street, would soon become the site of The Falls Church, serving as a center for worship and community life. The transformation of Indigenous trails into colonial transportation routes not only facilitated the movement of European settlers but also hastened the disappearance of the region's Indigenous heritage.</p>
+    <p>En 1734 se estableció la Parroquia de Truro, y comenzaron a llegar colonos, alterando la vida de los habitantes nativos. A medida que los recién llegados construían hogares y establecían comunidades, transformaron involuntariamente los senderos de los nativos americanos en importantes rutas de transporte coloniales. La intersección de estos senderos, que más tarde se convertirían en Broad Street, Lee Highway y Little Falls Street, pronto se convirtió en el sitio de The Falls Church, sirviendo como centro de adoración y vida comunitaria. La transformación de los senderos indígenas en rutas de transporte coloniales no solo facilitó el movimiento de los colonos europeos, sino que también aceleró la desaparición del patrimonio indígena de la región.</p>
   </div>
   <div class="image-container">
-    <img src="/images/history/1765.webp" alt="1765 Truro Parish and Fairfax Parish, Virginia, Vestry Election Tabulation of Votes document from George Washington Papers"  loading="lazy" />
-     <cite style="display: block; text-align: center;">(1765) George Washington Papers, Series 4, General Correspondence: Truro Parish and Fairfax Parish, Virginia, Vestry Election Tabulation of Votes. [Manuscript/Mixed Material] Retrieved from the Library of Congress, https://www.loc.gov/item/mgw443132/.</cite>      
-  </div>
+    <img src="/images/history/1765.webp" alt="Documento de 1765 de la Parroquia de Truro y la Parroquia de Fairfax, Virginia, Tabulación de votos de elecciones de la sacristía de los documentos de George Washington"  loading="lazy" />
+   <cite style="display: block; text-align: center;">(1765) Documentos de George Washington, Serie 4, Correspondencia general: Parroquia de Truro y Parroquia de Fairfax, Virginia, Tabulación de votos de eleo de elecciones de la sacristía. [Manuscrito/Material mixto] Obtenido de la Biblioteca del Congreso, https://www.loc.gov/item/mgw443132/.</cite>
+    </div>
 </div>
-
 <div class="scroll-section" id="chapter3">
   <div class="text-content">
     <div class="chapter-heading">
-      <span class="chapter-number">Chapter 3.</span>
-      <h3 class="chapter-title">The Original Wooden Church and Its Legacy</h3>
+      <span class="chapter-number">Capítulo 3.</span>
+      <h3 class="chapter-title">La Iglesia de madera original y su legado</h3>
     </div>
-    <p>In 1733, the original wooden church was built, serving as a place of worship for settlers and as an outpost of the colonial government. We must not forget that this church was constructed using the labor of enslaved individuals, whose lives were forever altered by the new settlers. Stripped of their freedom and dignity, these individuals were forced to build a place of worship for a community that, in many ways, did not recognize their humanity. The impact of this injustice reverberates through time, shaping the ongoing struggle for racial equity and social justice in our contemporary society.
+    <p>En 1733 se construyó la iglesia de madera original, que servía como lugar de adoración para los colonos y como puesto avanzado del gobierno colonial. No debemos olvidar que esta iglesia fue construida con el trabajo de personas esclavizadas, cuyas vidas fueron alteradas para siempre por los nuevos colonos. Despojados de su libertad y dignidad, estos individuos fueron obligados a construir un lugar de adoración para una comunidad que, en muchos aspectos, no reconocía su humanidad. El impacto de esta injusticia resuena a través del tiempo, dando forma a la lucha continua por la equidad racial y la justicia social en nuestra sociedad contemporánea.
 </p>   
   </div>
   <div class="image-container">
-    <img src="/images/history/1719.webp" alt="1719 map of Virginia, Mary-Land, and improved parts of Pennsylvania & New Jersey by J. Senex"  loading="lazy" />
-     <cite style="display: block; text-align: center;">Senex, J. (1719) A new map of Virginia, Mary-Land, and the improved parts of Pennsylvania & New Jersey. [London: s.n] [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/2007625604/.</cite>          
+    <img src="/images/history/1719.webp" alt="1719 mapa de Virginia, Mary-Land y partes mejoradas de Pennsylvania y Nueva Jersey por J. Senex"  loading="lazy" />
+     <cite style="display: block; text-align: center;">Senex, J. (1719) Un nuevo mapa de Virginia, Mary-Land y las partes mejoradas de Pennsylvania y Nueva Jersey. [Londres: s.n] [Mapa] Obtenido de la Biblioteca del Congreso, https://www.loc.gov/item/2007625604/.</cite>          
   </div>
 </div>
-
 <div class="scroll-section" id="chapter4">
   <div class="text-content">
     <div class="chapter-heading">
-      <span class="chapter-number">Chapter 4.</span>
-      <h3 class="chapter-title">The Construction of the Current Brick Church</h3>
+      <span class="chapter-number">Capítulo 4.</span>
+      <h3 class="chapter-title">La construcción de la Iglesia de ladrillos actual</h3>
     </div>
-    <p>In 1769, the current brick church was constructed, designed by architect James Wren. Once again, the labor of enslaved individuals was used to build this structure, which still stands today. As we look upon this historic building, let us not forget the hands that crafted it and the stories of those who toiled in its shadow. This enduring structure has borne witness to centuries of history, from the earliest days of the American colonies to the present day. </p>    
+    <p>En 1769 se construyó la iglesia de ladrillos actual, diseñada por el arquitecto James Wren. Una vez más, se utilizó el trabajo de personas esclavizadas para construir esta estructura, que aún se encuentra en pie hoy en día. Al contemplar este edificio histórico, no olvidemos las manos que lo construyeron y las historias de aquellos que trabajaron en su sombra. Esta estructura perdurable ha sido testigo de siglos de historia, desde los primeros días de las colonias americanas hasta el presente. </p>    
   </div>
   <div class="image-container">
-    <img src="/images/history/1861.webp" alt="Falls Church, Virginia during the Civil War, photographed between 1861 and 1865"  loading="lazy" />
-           <cite style="display: block; text-align: center;">Falls Church, Va. United States Virginia Falls Church, None. [Photographed between 1861 and 1865, printed between 1880 and 1889] [Photograph] Retrieved from the Library of Congress, https://www.loc.gov/item/2014645752/.</cite>  
-  </div>
+    <img src="/images/history/1861.webp" alt="Falls Church, Virginia durante la Guerra Civil, fotografiada entre 1861 y 1865"  loading="lazy" />
+         <cite style="display: block; text-align: center;">Falls Church, Va. Estados Unidos Virginia Falls Church, None. [Fotografiado entre 1861 y 1865, impreso entre 1880 y 1889] [Fotografía] Obtenido de la Biblioteca del Congreso, https://www.loc.gov/item/2014645752/.</cite>
 </div>
-
+</div>
 <div class="scroll-section" id="chapter5">
   <div class="text-content">
     <div class="chapter-heading">
-      <span class="chapter-number">Chapter 5.</span>
-      <h3 class="chapter-title">The Growth of Falls Church</h3>
+      <span class="chapter-number">Capítulo 5.</span>
+      <h3 class="chapter-title">El crecimiento de Falls Church</h3>
     </div>
-    <p>The village of Falls Church continued to grow throughout the early 19th century, with new residents arriving and contributing to the area's development. However, not all who lived in Falls Church experienced equal opportunities or treatment. Enslaved individuals in Falls Church were subjected to harsh living conditions, forced labor, and the denial of basic human rights. Native American inhabitants of the region also experienced significant changes as the village of Falls Church expanded. Forced to adapt to the influx of new settlers, these communities faced challenges in preserving their traditional ways of life and cultural heritage. 
+    <p>El pueblo de Falls Church continuó creciendo a lo largo del siglo XIX, con la llegada de nuevos residentes que contribuyeron al desarrollo del área. Sin embargo, no todos los que vivían en Falls Church experimentaron igualdad de oportunidades o trato. Las personas esclavizadas en Falls Church fueron sometidas a condiciones de vida difíciles, trabajo forzado y la negación de los derechos humanos básicos. Los habitantes nativos americanos de la región también experimentaron cambios significativos a medida que el pueblo de Falls Church se expandía. Obligadas a adaptarse a la afluencia de nuevos colonos, estas comunidades enfrentaron desafíos para preservar sus formas de vida tradicionales y su patrimonio cultural.
 </p>   
   </div>
   <div class="image-container">
-    <img src="/images/history/1890map.webp" alt="1890 map of Falls Church, Fairfax Co., Va. by G. Noetzel"  loading="lazy" />
-           <cite style="display: block; text-align: center;">Noetzel, G. (1890) Falls Church, Fairfax Co., Va. Washington, D.C.: Bell Bros., Photo-Lithographers. [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/92681730/.</cite>  
+    <img src="/images/history/1890map.webp" alt="1890 mapa de Falls Church, Condado de Fairfax, Va. por G. Noetzel"  loading="lazy" />
+           <cite style="display: block; text-align: center;">Noetzel, G. (1890) Falls Church, Condado de Fairfax, Va. Washington, D.C.: Bell Bros., Foto-Litógrafos. [Mapa] Obtenido de la Biblioteca del Congreso, https://www.loc.gov/item/92681730/.</cite>  
   </div>
 </div>
+
+
+
+
+
 
 <div class="scroll-section" id="chapter6">
   <div class="text-content">
