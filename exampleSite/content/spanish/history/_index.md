@@ -1,7 +1,7 @@
 ---
 title: "History"
 date: 2023-04-12
-layout: "scrollytelling"
+layout: "scrollytelling-es"
 ---
 
 <div class="scroll-section" id="chapter1">
@@ -21,7 +21,7 @@ layout: "scrollytelling"
 <div class="scroll-section" id="chapter2">
   <div class="text-content">
     <div class="chapter-heading">
-      <span class="chapter-number">Chapter 2.</span>
+      <span class="chapter-number">Chapter dos.</span>
       <h3 class="chapter-title">Truro Parish established</h3>
     </div>
     <p>In 1734, Truro Parish was established, and settlers began to arrive, disrupting the lives of the native inhabitants. As newcomers built homes and established communities, they inadvertently transformed the Native American trails into major colonial transportation routes. The intersection of these trails, which would later become Broad Street, Lee Highway, and Little Falls Street, would soon become the site of The Falls Church, serving as a center for worship and community life. The transformation of Indigenous trails into colonial transportation routes not only facilitated the movement of European settlers but also hastened the disappearance of the region's Indigenous heritage.</p>
