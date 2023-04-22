@@ -27,7 +27,7 @@ layout: "scrollytelling"
     <p>In 1734, Truro Parish was established, and settlers began to arrive, disrupting the lives of the native inhabitants. As newcomers built homes and established communities, they inadvertently transformed the Native American trails into major colonial transportation routes. The intersection of these trails, which would later become Broad Street, Lee Highway, and Little Falls Street, would soon become the site of The Falls Church, serving as a center for worship and community life. The transformation of Indigenous trails into colonial transportation routes not only facilitated the movement of European settlers but also hastened the disappearance of the region's Indigenous heritage.</p>
   </div>
   <div class="image-container">
-    <img src="/images/1765.jpg" alt="Image 2"  loading="lazy" />
+    <img src="/images/history/1765.jpg" alt="Image 2"  loading="lazy" />
   </div>
 </div>
 
@@ -41,7 +41,7 @@ layout: "scrollytelling"
 </p>   
   </div>
   <div class="image-container">
-    <img src="/images/1719.jpg" alt="alt"  loading="lazy" />
+    <img src="/images/history/1719.jpg" alt="alt"  loading="lazy" />
   </div>
 </div>
 
@@ -54,7 +54,7 @@ layout: "scrollytelling"
     <p>In 1769, the current brick church was constructed, designed by architect James Wren. Once again, the labor of enslaved individuals was used to build this structure, which still stands today. As we look upon this historic building, let us not forget the hands that crafted it and the stories of those who toiled in its shadow. This enduring structure has borne witness to centuries of history, from the earliest days of the American colonies to the present day. </p>    
   </div>
   <div class="image-container">
-    <img src="/images/1861.jpg" alt="alt"  loading="lazy" />
+    <img src="/images/history/1861.jpg" alt="alt"  loading="lazy" />
   </div>
 </div>
 
@@ -68,7 +68,7 @@ layout: "scrollytelling"
 </p>   
   </div>
   <div class="image-container">
-    <img src="/images/1890map.jpg" alt="alt"  loading="lazy" />
+    <img src="/images/history/1890map.jpg" alt="alt"  loading="lazy" />
   </div>
 </div>
 
@@ -82,7 +82,7 @@ layout: "scrollytelling"
    <p>In 1890, the Town Council of Falls Church further voted to cede its other majority African-American districts, including the James Lee community, to Fairfax County. This decision resulted in over one-third of the town's land being relinquished to the county.</p>
   </div>
   <div class="image-container">
-    <img src="/images/town.png" alt="alt"  loading="lazy" />
+    <img src="/images/history/town.png" alt="alt"  loading="lazy" />
   </div>
 </div>
 
@@ -98,7 +98,7 @@ layout: "scrollytelling"
    <p>Across the busy Lee Highway, a 14-foot arch made of pink granite stands as a testament to the Tinner Hill families and their work in creating the first rural chapter of the NAACP. The arch, quarried, cut, and masoned by Charles Tinner himself, represents two sides coming together, bending toward each other, and providing each other with greater strength. This symbolism reflects both the unity of different races and the combined strength of Joseph Tinner and E.B. Henderson working together.</p>      
   </div>
   <div class="image-container">
-    <img src="/images/School.jpeg" alt="alt"  loading="lazy" />
+    <img src="/images/history/School.jpeg" alt="alt"  loading="lazy" />
   </div>
 </div>
 
@@ -113,7 +113,7 @@ layout: "scrollytelling"
    <p>Throughout its history, Falls Church has been home to a diverse array of residents from various cultural and ethnic backgrounds. These individuals and communities have each contributed in their own way to the growth and development of the city, bringing unique perspectives and experiences that enrich the fabric of our shared heritage.</p>    
   </div>
   <div class="image-container">
-    <img src="/images/fallschurchpo.png" alt="alt"  loading="lazy" />
+    <img src="/images/history/fallschurchpo.png" alt="alt"  loading="lazy" />
   </div>
 </div>
 
@@ -128,7 +128,7 @@ layout: "scrollytelling"
 </p>   
   </div>
   <div class="image-container">
-    <img src="/images/Stone.png" alt="alt"  loading="lazy" />
+    <img src="/images/history/Stone.png" alt="alt"  loading="lazy" />
   </div>
 </div>
 
@@ -142,7 +142,7 @@ layout: "scrollytelling"
    <p>The Little Falls movement brought together a diverse coalition of residents, historians, and civic leaders, who actively engaged in conversations about the city's complex past and future.</p>    
   </div>
   <div class="image-container">
-    <img src="/images/logo.jpg" alt="alt"  loading="lazy" />
+    <img src="/images/logo.webp" alt="alt"  loading="lazy" />
   </div>
 </div>
 
