@@ -14,7 +14,7 @@ layout: "scrollytelling"
   </div>
   <div class="image-container">
     <img src="/images/history/smithmap.jpg" alt="Image 1" />
-      <cite>(John Smith's Map) "Virginia, discovered and discribed by Captayn John Smith, 1606"</cite>
+     <cite style="display: block; text-align: center;">(John Smith's Map) "Virginia, discovered and discribed by Captayn John Smith, 1606"</cite>
   </div>
 </div>
 
