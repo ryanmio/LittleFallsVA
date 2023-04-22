@@ -188,14 +188,14 @@ html {
     scrollSections.forEach((section) => {
       const sectionTop = section.getBoundingClientRect().top;
 
-      if (sectionTop < window.innerHeight && sectionTop > -window.innerHeight / 2) {
+      if (sectionTop < window.innerHeight && sectionTop > -window.innerHeight / 3) {
         section.classList.add("visible");
       } else {
         section.classList.remove("visible");
       }
     });
 
-    if (window.scrollY > window.innerHeight / 3) {
+    if (window.scrollY > window.innerHeight / 5) {
       backToTop.classList.add("visible");
     } else {
       backToTop.classList.remove("visible");
