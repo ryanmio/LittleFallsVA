@@ -155,7 +155,7 @@ layout: "scrollytelling"
   </div>
 </div>
 
-<div class="scroll-section" id="chapter10">
+<div class="scroll-section" id="note">
   <div class="text-content">
     <div class="chapter-heading">
       <span class="chapter-number">Historian's Note.</span>
