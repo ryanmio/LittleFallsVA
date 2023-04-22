@@ -90,10 +90,16 @@ identifier = "store"
 weight = 3
 
 [[menu.main]]
+name = "History"
+url = "history/"
+identifier = "history"
+weight = 4
+
+[[menu.main]]
 identifier = "petition"
 name = "Petition"
 url = "/petition/"
-weight = 4
+weight = 5
 
 # footer menu
 [[menu.footer]]
