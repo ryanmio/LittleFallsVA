@@ -80,74 +80,73 @@ layout: "scrollytelling-es"
 <div class="scroll-section" id="chapter6">
   <div class="text-content">
     <div class="chapter-heading">
-      <span class="chapter-number">Chapter 6.</span>
-      <h3 class="chapter-title">Falls Church Gains Township Status</h3>
+      <span class="chapter-number">Capítulo 6.</span>
+      <h3 class="chapter-title">Falls Church obtiene estatus de municipio</h3>
     </div>
-    <p>Upon gaining township status in 1875, Falls Church experienced an increase in its African American population, with the town boundary initially including the entire Tinner Hill neighborhood and other areas now part of Fairfax County. This demographic shift led to 37 percent of registered voters being Black. In response, the town government in 1887 moved the boundary line northward, deliberately excluding much of the Tinner Hill neighborhood and reducing the number of Black registered voters to just 15 percent of the total population in the township.</p>
-   <p>In 1890, the Town Council of Falls Church further voted to cede its other majority African-American districts, including the James Lee community, to Fairfax County. This decision resulted in over one-third of the town's land being relinquished to the county.</p>
+    <p>Al obtener el estatus de municipio en 1875, Falls Church experimentó un aumento en su población afroamericana, con el límite del pueblo inicialmente incluyendo todo el vecindario de Tinner Hill y otras áreas que ahora forman parte del condado de Fairfax. Este cambio demográfico llevó a que el 37% de los votantes registrados fueran negros. En respuesta, el gobierno municipal en 1887 movió la línea límite hacia el norte, excluyendo deliberadamente gran parte del vecindario de Tinner Hill y reduciendo el número de votantes negros registrados a solo el 15% de la población total en el municipio.</p>
+   <p>En 1890, el Concejo Municipal de Falls Church votó además para ceder sus otros distritos mayoritariamente afroamericanos, incluida la comunidad de James Lee, al condado de Fairfax. Esta decisión resultó en la renuncia a más de un tercio de las tierras del pueblo al condado.</p>
   </div>
   <div class="image-container">
-    <img src="/images/history/town.webp" alt="Historic view of the town of Falls Church"  loading="lazy" />
-           <cite style="display: block; text-align: center;">Image courtesy of https://www.historicprincewilliam.org/</cite>  
+    <img src="/images/history/town.webp" alt="Vista histórica del pueblo de Falls Church"  loading="lazy" />
+           <cite style="display: block; text-align: center;">Imagen cortesía de https://www.historicprincewilliam.org/</cite>  
   </div>
 </div>
-
 <div class="scroll-section" id="chapter7">
   <div class="text-content">
     <div class="chapter-heading">
-      <span class="chapter-number">Chapter 7.</span>
-      <h3 class="chapter-title">Tinner Hill - A Testament to Resistance and Unity
+      <span class="chapter-number">Capítulo 7.</span>
+      <h3 class="chapter-title">Tinner Hill - Un testimonio de resistencia y unidad
 </h3>
     </div>
-    <p>In the early 20th century, amidst the struggle for civil rights and the fight against segregation, a small but significant victory took place in Falls Church, Virginia. The Tinner Hill community was developed by Charles Tinner, a Black stone mason, and his wife Mary Elizabeth in the late 1800s. In 1915, his son Joseph Tinner, along with neighbor Dr. E. B. Henderson and others, formed the Colored Citizens Protective League to protest a proposed city segregation ordinance. This ordinance would have forced Black residents to sell their homes and relocate to a designated part of town. The Colored Citizens Protective League later became the first rural branch of the NAACP in 1918.</p>
-   <p>The Tinner Hill community's bravery and resilience led to a U.S. Supreme Court victory in 1917, which outlawed forced housing segregation in Buchanan vs. Warley. Today, Tinner Hill is a small park (tucked in between Sislers Stone and Coleman PowerSports) featuring markers, plaques, and a "Zig-Zag" sculpture by local artist Martha Jackson Jarvis. The sculpture symbolizes the political boundaries drawn in 1887 to dilute the voting power of local Black residents by placing them in larger Fairfax County, rendering their votes less influential. The zig-zag is also a West African symbol representing the performance of the unusual or impossible.</p>
-   <p>Across the busy Lee Highway, a 14-foot arch made of pink granite stands as a testament to the Tinner Hill families and their work in creating the first rural chapter of the NAACP. The arch, quarried, cut, and masoned by Charles Tinner himself, represents two sides coming together, bending toward each other, and providing each other with greater strength. This symbolism reflects both the unity of different races and the combined strength of Joseph Tinner and E.B. Henderson working together.</p>      
+    <p>A principios del siglo XX, en medio de la lucha por los derechos civiles y la lucha contra la segregación, tuvo lugar una pequeña pero significativa victoria en Falls Church, Virginia. La comunidad de Tinner Hill fue desarrollada por Charles Tinner, un albañil negro, y su esposa Mary Elizabeth a finales de 1800. En 1915, su hijo Joseph Tinner, junto con el vecino Dr. E. B. Henderson y otros, formaron la Liga Protectora de Ciudadanos de Color para protestar contra una propuesta de ordenanza de segregación de la ciudad. Esta ordenanza habría obligado a los residentes negros a vender sus hogares y mudarse a una parte designada de la ciudad. La Liga Protectora de Ciudadanos de Color más tarde se convirtió en la primera sucursal rural de la NAACP en 1918.</p>
+      
+   <p>La valentía y resistencia de la comunidad de Tinner Hill llevó a una victoria en la Corte Suprema de EE. UU. en 1917, que prohibió la segregación forzada de viviendas en Buchanan vs. Warley. Hoy en día, Tinner Hill es un pequeño parque (ubicado entre Sislers Stone y Coleman PowerSports) que presenta marcadores, placas y una escultura "Zig-Zag" de la artista local Martha Jackson Jarvis. La escultura simboliza los límites políticos trazados en 1887 para diluir el poder de voto de los residentes negros locales al colocarlos en el condado de Fairfax más grande, lo que hace que sus votos sean menos influyentes. El zigzag también es un símbolo de África Occidental que representa el desempeño de lo inusual o imposible.</p>
+    
+    <p>Al otro lado de la concurrida autopista Lee, un arco de 14 pies hecho de granito rosado se erige como testimonio de las familias de Tinner Hill y su trabajo en la creación del primer capítulo rural de la NAACP. El arco, extraído, cortado y albañilado por el propio Charles Tinner, representa dos lados que se unen, se inclinan el uno hacia el otro y se proporcionan una mayor fuerza. Este simbolismo refleja tanto la unidad de diferentes razas como la fuerza combinada de Joseph Tinner y E.B. Henderson trabajando juntos.</p>      
   </div>
   <div class="image-container">
-    <img src="/images/history/School.webp" alt="Mary Ellen Henderson and her students in front of the James Lee Colored School"  loading="lazy" />
-           <cite style="display: block; text-align: center;">Henderson Family Collection, “Mary Ellen Henderson, aka Miss Nellie, and her students in front of the James Lee Colored School,” 100 Years Black Falls Church, accessed April 22, 2023, http://100yearsblackfallschurch.org/items/show/25.</cite>  
+    <img src="/images/history/School.webp" alt="Mary Ellen Henderson y sus estudiantes frente a la escuela de color James Lee"  loading="lazy" />
+           <cite style="display: block; text-align: center;">Colección de la familia Henderson, “Mary Ellen Henderson, también conocida como Miss Nellie, y sus estudiantes frente a la escuela de color James Lee,” 100 años de historia negra en Falls Church, consultado el 22 de abril de 2023, http://100yearsblackfallschurch.org/items/show/25.</cite>  
   </div>
 </div>
-
 <div class="scroll-section" id="chapter8">
   <div class="text-content">
     <div class="chapter-heading">
-      <span class="chapter-number">Chapter 8.</span>
-      <h3 class="chapter-title">The City of Falls Church Gains Independence</h3>
+      <span class="chapter-number">Capítulo 8.</span>
+      <h3 class="chapter-title">La ciudad de Falls Church gana independencia</h3>
     </div>
-    <p>In 1948, the City of Falls Church gained independence, further establishing its identity and autonomy in Northern Virginia. As an independent city, Falls Church had the opportunity to create its governance structure, allowing for increased control over its affairs and better responsiveness to the needs of its residents. This period coincided with social and political changes occurring nationwide, including the Civil Rights Movement and the struggle for greater equality and justice for all Americans.
+    <p>En 1948, la ciudad de Falls Church ganó independencia, estableciendo aún más su identidad y autonomía en el norte de Virginia. Como ciudad independiente, Falls Church tuvo la oportunidad de crear su estructura de gobierno, lo que permitió un mayor control sobre sus asuntos y una mejor capacidad de respuesta a las necesidades de sus residentes. Este período coincidió con cambios sociales y políticos que ocurrían en todo el país, incluido el movimiento por los derechos civiles y la lucha por una mayor igualdad y justicia para todos los estadounidenses.
 </p>
-   <p>Throughout its history, Falls Church has been home to a diverse array of residents from various cultural and ethnic backgrounds. These individuals and communities have each contributed in their own way to the growth and development of the city, bringing unique perspectives and experiences that enrich the fabric of our shared heritage.</p>    
+   <p>A lo largo de su historia, Falls Church ha sido el hogar de una diversa gama de residentes de diversos orígenes culturales y étnicos. Estos individuos y comunidades han contribuido de diversas maneras al crecimiento y desarrollo de la ciudad, aportando perspectivas y experiencias únicas que enriquecen el tejido de nuestra herencia compartida.</p>    
   </div>
   <div class="image-container">
-    <img src="/images/history/fallschurchpo.webp" alt="Map: Town of Falls Church"  loading="lazy" />
-           <cite style="display: block; text-align: center;">Image courtesy of https://www.historicprincewilliam.org/</cite>  
+    <img src="/images/history/fallschurchpo.webp" alt="Mapa: Ciudad de Falls Church"  loading="lazy" />
+           <cite style="display: block; text-align: center;">Imagen cortesía de https://www.historicprincewilliam.org/</cite>  
   </div>
 </div>
 
 <div class="scroll-section" id="chapter9">
-  <div class="text-content">
+   <div class="text-content">
     <div class="chapter-heading">
-      <span class="chapter-number">Chapter 9.</span>
-      <h3 class="chapter-title">Addressing the Legacy of Racism</h3>
+      <span class="chapter-number">Capítulo 9.</span>
+      <h3 class="chapter-title">Abordando el legado del racismo</h3>
     </div>
-    <p>Falls Church has not been immune to the historical impact of racism and prejudice. Throughout its history, African Americans in Falls Church faced significant obstacles, including the racial segregation in public facilities and schools. In the late 20th century and into the 21st century, efforts were made to acknowledge and address the city's past connections to slavery and segregation.</p>
-   <p>After conducting extensive research, the church discovered that skilled, but enslaved laborers had built the Falls Church in 1769. In an effort to honor these individuals and their contributions, a plaque was dedicated in 2017, offering "gratitude and repentance" for the forced labor. The church chose the word "repentance" over "apology," as the latter was deemed not strong enough. Aisha Huertas, the Diocese of Virginia’s intercultural ministries officer, emphasized that this process of repentance is vital for both the church community and broader society. The case of the Falls Church congregation highlights the importance of acknowledging historical injustices and working towards healing and reconciliation.
+    <p>Falls Church no ha sido inmune al impacto histórico del racismo y los prejuicios. A lo largo de su historia, los afroamericanos en Falls Church enfrentaron obstáculos significativos, incluida la segregación racial en instalaciones públicas y escuelas. A fines del siglo XX y en el siglo XXI, se realizaron esfuerzos para reconocer y abordar las conexiones pasadas de la ciudad con la esclavitud y la segregación.</p>
+   <p>Después de realizar una extensa investigación, la iglesia descubrió que trabajadores calificados pero esclavizados habían construido la Falls Church en 1769. En un esfuerzo por honrar a estos individuos y sus contribuciones, se dedicó una placa en 2017, ofreciendo "gratitud y arrepentimiento" por el trabajo forzado. La iglesia eligió la palabra "arrepentimiento" en lugar de "disculpa", ya que esta última no se consideró lo suficientemente fuerte. Aisha Huertas, oficial de ministerios interculturales de la Diócesis de Virginia, enfatizó que este proceso de arrepentimiento es vital tanto para la comunidad de la iglesia como para la sociedad en general. El caso de la congregación de Falls Church destaca la importancia de reconocer las injusticias históricas y trabajar hacia la sanación y reconciliación.
 </p>   
   </div>
   <div class="image-container">
-    <img src="/images/history/Stone.webp" alt="plaque was dedicated in 2017, offering gratitude and repentance for forced labor"  loading="lazy" />
+    <img src="/images/history/Stone.webp" alt="placa dedicada en 2017, ofreciendo gratitud y arrepentimiento por el trabajo forzado"  loading="lazy" />
   </div>
 </div>
-
 <div class="scroll-section" id="chapter10">
   <div class="text-content">
     <div class="chapter-heading">
-      <span class="chapter-number">Chapter 10.</span>
-      <h3 class="chapter-title">The Little Falls Movement Begins</h3>
+      <span class="chapter-number">Capítulo 10.</span>
+      <h3 class="chapter-title">Comienza el movimiento Little Falls</h3>
     </div>
-    <p>In 2023, the Little Falls movement emerged, advocating for a redefinition of the city's identity to recognize and embrace its diverse history and envision a more inclusive future. By suggesting a name change from Falls Church to Little Falls, the movement aimed to move beyond the city's connections to the single colonial-era church and its associated legacy. Instead, the movement's goal was to establish a more representative and unifying identity that celebrates the area's Indigenous heritage, natural beauty, and the contributions of various communities that have shaped the city throughout its history.</p>
-   <p>The Little Falls movement brought together a diverse coalition of residents, historians, and civic leaders, who actively engaged in conversations about the city's complex past and future.</p>    
+    <p>En 2023, surgió el movimiento Little Falls, abogando por una redefinición de la identidad de la ciudad para reconocer y abrazar su diversa historia y vislumbrar un futuro más inclusivo. Al sugerir un cambio de nombre de Falls Church a Little Falls, el movimiento buscó ir más allá de las conexiones de la ciudad con la única iglesia de la época colonial y su legado asociado. En cambio, el objetivo del movimiento fue establecer una identidad más representativa y unificadora que celebre la herencia indígena del área, la belleza natural y las contribuciones de diversas comunidades que han dado forma a la ciudad a lo largo de su historia.</p>
+   <p>El movimiento Little Falls reunió a una coalición diversa de residentes, historiadores y líderes cívicos, quienes participaron activamente en conversaciones sobre el pasado complejo y el futuro de la ciudad.</p>        
   </div>
   <div class="image-container">
     <img src="/images/logo.webp" alt="logo"  loading="lazy" />
@@ -157,14 +156,15 @@ layout: "scrollytelling-es"
 <div class="scroll-section" id="note">
   <div class="text-content">
     <div class="chapter-heading">
-      <span class="chapter-number">Historian's Note.</span>
-      <h3 class="chapter-title">The Need for a New Identity</h3>
+      <span class="chapter-number">Nota del historiador.</span>
+      <h3 class="chapter-title">La necesidad de una nueva identidad</h3>
     </div>
-    <p>Falls Church's history, while marked by growth and development, is also deeply entwined with pain, cruelty, and the forced subjugation of the Indigenous and African populations. The church, an embodiment of colonial power, was built on the backs of enslaved individuals and appropriated land. By examining the darker chapters of our history and shedding light on the actions of the church and colonizers, we make a case for a new identity that breaks free from this legacy.</p>
-   <p>The settlers who founded Falls Church were quick to impose their beliefs and practices on those who called this land their home, displaying little respect for the Indigenous peoples and their way of life. The church, as an institution, took part in this forced assimilation, often leading to the erasure of native traditions and customs. Moreover, the colonizers showed blatant disregard for human dignity as they enslaved Africans and exploited their labor to build the church and the surrounding community.</p>
-   <p>Such a dark history must not be overlooked or brushed aside. It is time for us to confront these cruel acts and hold the church and colonizers accountable for the pain and suffering they caused. By perpetuating beliefs that furthered the interests of the colonial settlers and justified their exploitation, the church played a central role in the oppression of the Indigenous and African populations. This disregard for the well-being of others in the name of a god and belief system that demanded unquestioning obedience is a stain on our city's history.</p>   
-    <p>To truly acknowledge and address our dark past, we must first break free from the shackles of a name that honors an institution responsible for such cruelty. By choosing a new identity, we send a powerful message of reckoning, accountability, and a commitment to healing the wounds inflicted by our ancestors.</p>
-      <p>Embracing the name Little Falls allows us to connect with our pre-colonial past, paying homage to the Indigenous peoples who first cherished the beauty and wonder of the Potomac River. In doing so, we create an inclusive and unifying identity that acknowledges the diverse voices of our community, both past and present.</p>
-      <p>By confronting our history and breaking away from the name Falls Church, we have an opportunity to create a more equitable and compassionate future, where all members of our community are valued and heard. Let us use this new identity as a stepping stone towards collective healing, understanding, and growth.</p>
+    <p>La historia de Falls Church, aunque marcada por el crecimiento y desarrollo, también está profundamente entrelazada con el dolor, la crueldad y la subyugación forzada de las poblaciones indígenas y africanas. La iglesia, un símbolo del poder colonial, fue construida sobre las espaldas de personas esclavizadas y en tierras apropiadas. Al examinar los capítulos más oscuros de nuestra historia y arrojar luz sobre las acciones de la iglesia y los colonizadores, abogamos por una nueva identidad que se libere de este legado.</p>
+   <p>Los colonos que fundaron Falls Church fueron rápidos en imponer sus creencias y prácticas a quienes llamaban a esta tierra su hogar, mostrando poco respeto por los pueblos indígenas y su forma de vida. La iglesia, como institución, participó en esta asimilación forzada, a menudo llevando al borrado de las tradiciones y costumbres nativas. Además, los colonizadores mostraron un desprecio flagrante por la dignidad humana al esclavizar a los africanos y explotar su trabajo para construir la iglesia y la comunidad circundante.</p>
+   <p>Una historia tan oscura no debe pasarse por alto ni dejarse de lado. Es hora de que enfrentemos estos actos crueles y responsabilicemos a la iglesia y a los colonizadores por el dolor y el sufrimiento que causaron. Al perpetuar las creencias que favorecieron los intereses de los colonos y justificaron su explotación, la iglesia desempeñó un papel central en la opresión de las poblaciones indígenas y africanas. Este desprecio por el bienestar de los demás en nombre de un dios y un sistema de creencias que exigían obediencia incuestionable es una mancha en la historia de nuestra ciudad.</p>
+    <p>Para reconocer y abordar verdaderamente nuestro oscuro pasado, primero debemos liberarnos de las cadenas de un nombre que honra a una institución responsable de tanta crueldad. Al elegir una nueva identidad, enviamos un poderoso mensaje de reconocimiento, responsabilidad y compromiso para sanar las heridas infligidas por nuestros antepasados.</p>
+      <p>Abrazar el nombre de Little Falls nos permite conectarnos con nuestro pasado precolonial, rindiendo homenaje a los pueblos indígenas que primero apreciaron la belleza y la maravilla del río Potomac. Al hacerlo, creamos una identidad inclusiva y unificadora que reconoce las diversas voces de nuestra comunidad, tanto pasadas como presentes.</p>
+      <p>Al enfrentar nuestra historia y alejarnos del nombre Falls Church, tenemos la oportunidad de crear un futuro más equitativo y compasivo, donde todos los miembros de nuestra comunidad sean valorados y escuchados. Utilicemos esta nueva identidad como un trampín hacia la sanación colectiva, la comprensión y el crecimiento.</p>
+
   </div>
 </div>
