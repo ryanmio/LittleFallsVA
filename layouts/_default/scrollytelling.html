@@ -184,20 +184,20 @@ html {
   const scrollSections = document.querySelectorAll(".scroll-section");
   const backToTop = document.querySelector('.back-to-top');
 
-    function onScroll() {
+function onScroll() {
   scrollSections.forEach((section) => {
     const sectionTop = section.getBoundingClientRect().top;
     const sectionHeight = section.offsetHeight;
 
-    // Check if the top of the section is within the viewport or if it has not passed the 3/4 of the viewport
-    if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 4) {
+    // Check if the top of the section is within the viewport or if it has not passed the middle of the viewport
+    if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 2) {
       section.classList.add("visible");
     } else {
       section.classList.remove("visible");
     }
   });
 
-  if (window.scrollY > window.innerHeight / 2) {
+  if (window.scrollY > window.innerHeight / 4) {
     backToTop.classList.add("visible");
   } else {
     backToTop.classList.remove("visible");
