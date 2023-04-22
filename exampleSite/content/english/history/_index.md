@@ -13,9 +13,7 @@ layout: "scrollytelling"
     <p>The area around Falls Church was occupied by Algonquian-speaking peoples for at least 10,000 years. Several tribes inhabited the area now known as Falls Church, such as the Doeg (or Dogue) Indians, Tauxenents (also known as the Doegs or Dogue), Patawomekes (Potomacs), and Matchotics. The Powhatan Confederacy controlled 28-32 groups or tribes along riverside towns and villages, ruled by their own weroance or chiefs. The Pamunkey tribe, one of the six core tribes of the political alliance Tsenacomoco, also played a significant role in the area.</p>
   </div>
   <div class="image-container">
-<a href="/images/history/smithmap.jpg" data-lightbox="image-1" data-title="Image 1">
-  <img src="/images/history/smithmap.jpg" alt="Image 1" />
-</a>
+  <img src="/images/history/smithmap.webp" alt="Image 1" />
      <cite style="display: block; text-align: center;">(John Smith's Map) "Virginia, discovered and discribed by Captayn John Smith, 1606"</cite>
   </div>
 </div>
@@ -29,7 +27,7 @@ layout: "scrollytelling"
     <p>In 1734, Truro Parish was established, and settlers began to arrive, disrupting the lives of the native inhabitants. As newcomers built homes and established communities, they inadvertently transformed the Native American trails into major colonial transportation routes. The intersection of these trails, which would later become Broad Street, Lee Highway, and Little Falls Street, would soon become the site of The Falls Church, serving as a center for worship and community life. The transformation of Indigenous trails into colonial transportation routes not only facilitated the movement of European settlers but also hastened the disappearance of the region's Indigenous heritage.</p>
   </div>
   <div class="image-container">
-    <img src="/images/history/1765.jpg" alt="1765 Truro Parish and Fairfax Parish, Virginia, Vestry Election Tabulation of Votes document from George Washington Papers"  loading="lazy" />
+    <img src="/images/history/1765.webp" alt="1765 Truro Parish and Fairfax Parish, Virginia, Vestry Election Tabulation of Votes document from George Washington Papers"  loading="lazy" />
      <cite style="display: block; text-align: center;">(1765) George Washington Papers, Series 4, General Correspondence: Truro Parish and Fairfax Parish, Virginia, Vestry Election Tabulation of Votes. [Manuscript/Mixed Material] Retrieved from the Library of Congress, https://www.loc.gov/item/mgw443132/.</cite>      
   </div>
 </div>
@@ -44,7 +42,7 @@ layout: "scrollytelling"
 </p>   
   </div>
   <div class="image-container">
-    <img src="/images/history/1719.jpg" alt="1719 map of Virginia, Mary-Land, and improved parts of Pennsylvania & New Jersey by J. Senex"  loading="lazy" />
+    <img src="/images/history/1719.webp" alt="1719 map of Virginia, Mary-Land, and improved parts of Pennsylvania & New Jersey by J. Senex"  loading="lazy" />
      <cite style="display: block; text-align: center;">Senex, J. (1719) A new map of Virginia, Mary-Land, and the improved parts of Pennsylvania & New Jersey. [London: s.n] [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/2007625604/.</cite>          
   </div>
 </div>
@@ -58,7 +56,7 @@ layout: "scrollytelling"
     <p>In 1769, the current brick church was constructed, designed by architect James Wren. Once again, the labor of enslaved individuals was used to build this structure, which still stands today. As we look upon this historic building, let us not forget the hands that crafted it and the stories of those who toiled in its shadow. This enduring structure has borne witness to centuries of history, from the earliest days of the American colonies to the present day. </p>    
   </div>
   <div class="image-container">
-    <img src="/images/history/1861.jpg" alt="Falls Church, Virginia during the Civil War, photographed between 1861 and 1865"  loading="lazy" />
+    <img src="/images/history/1861.webp" alt="Falls Church, Virginia during the Civil War, photographed between 1861 and 1865"  loading="lazy" />
            <cite style="display: block; text-align: center;">Falls Church, Va. United States Virginia Falls Church, None. [Photographed between 1861 and 1865, printed between 1880 and 1889] [Photograph] Retrieved from the Library of Congress, https://www.loc.gov/item/2014645752/.</cite>  
   </div>
 </div>
@@ -73,7 +71,7 @@ layout: "scrollytelling"
 </p>   
   </div>
   <div class="image-container">
-    <img src="/images/history/1890map.jpg" alt="1890 map of Falls Church, Fairfax Co., Va. by G. Noetzel"  loading="lazy" />
+    <img src="/images/history/1890map.webp" alt="1890 map of Falls Church, Fairfax Co., Va. by G. Noetzel"  loading="lazy" />
            <cite style="display: block; text-align: center;">Noetzel, G. (1890) Falls Church, Fairfax Co., Va. Washington, D.C.: Bell Bros., Photo-Lithographers. [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/92681730/.</cite>  
   </div>
 </div>
@@ -88,7 +86,7 @@ layout: "scrollytelling"
    <p>In 1890, the Town Council of Falls Church further voted to cede its other majority African-American districts, including the James Lee community, to Fairfax County. This decision resulted in over one-third of the town's land being relinquished to the county.</p>
   </div>
   <div class="image-container">
-    <img src="/images/history/town.png" alt="Historic view of the town of Falls Church"  loading="lazy" />
+    <img src="/images/history/town.webp" alt="Historic view of the town of Falls Church"  loading="lazy" />
            <cite style="display: block; text-align: center;">Image courtesy of https://www.historicprincewilliam.org/</cite>  
   </div>
 </div>
@@ -105,7 +103,7 @@ layout: "scrollytelling"
    <p>Across the busy Lee Highway, a 14-foot arch made of pink granite stands as a testament to the Tinner Hill families and their work in creating the first rural chapter of the NAACP. The arch, quarried, cut, and masoned by Charles Tinner himself, represents two sides coming together, bending toward each other, and providing each other with greater strength. This symbolism reflects both the unity of different races and the combined strength of Joseph Tinner and E.B. Henderson working together.</p>      
   </div>
   <div class="image-container">
-    <img src="/images/history/School.jpeg" alt="Mary Ellen Henderson and her students in front of the James Lee Colored School"  loading="lazy" />
+    <img src="/images/history/School.webp" alt="Mary Ellen Henderson and her students in front of the James Lee Colored School"  loading="lazy" />
            <cite style="display: block; text-align: center;">Henderson Family Collection, “Mary Ellen Henderson, aka Miss Nellie, and her students in front of the James Lee Colored School,” 100 Years Black Falls Church, accessed April 22, 2023, http://100yearsblackfallschurch.org/items/show/25.</cite>  
   </div>
 </div>
@@ -121,7 +119,7 @@ layout: "scrollytelling"
    <p>Throughout its history, Falls Church has been home to a diverse array of residents from various cultural and ethnic backgrounds. These individuals and communities have each contributed in their own way to the growth and development of the city, bringing unique perspectives and experiences that enrich the fabric of our shared heritage.</p>    
   </div>
   <div class="image-container">
-    <img src="/images/history/fallschurchpo.png" alt="Map: Town of Falls Church"  loading="lazy" />
+    <img src="/images/history/fallschurchpo.webp" alt="Map: Town of Falls Church"  loading="lazy" />
            <cite style="display: block; text-align: center;">Image courtesy of https://www.historicprincewilliam.org/</cite>  
   </div>
 </div>
@@ -137,7 +135,7 @@ layout: "scrollytelling"
 </p>   
   </div>
   <div class="image-container">
-    <img src="/images/history/Stone.png" alt="plaque was dedicated in 2017, offering gratitude and repentance for forced labor"  loading="lazy" />
+    <img src="/images/history/Stone.webp" alt="plaque was dedicated in 2017, offering gratitude and repentance for forced labor"  loading="lazy" />
   </div>
 </div>
 
