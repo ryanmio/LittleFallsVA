@@ -22,7 +22,7 @@ features:
     # feature item loop
     - title: "Inclusivity"
       icon: "images/icons/interfaith-icon.webp"
-      icon_alt: "test alt"
+      icon_alt: "An interfaith symbol representing inclusivity"
       content: "Removing the connection to a specific church and religion, making the city more welcoming to people of all faiths, beliefs, and non-believers."
 
     - title: "Honoring Indigenous Heritage"
