@@ -16,7 +16,12 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .text-content {
@@ -25,12 +30,17 @@ html {
   text-align: center;
   max-width: 80%;
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 3rem;
+  border-radius: 4px;
 }
 
 .chapter-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-top: 8px;
 }
 
 .image-container {
@@ -59,21 +69,26 @@ html {
   z-index: 1000;
 }
 
+@media (max-width: 1000px) {
+  .chapter-nav {
+    justify-content: flex-start;
+  }
+}
+
 .chapter-nav a {
   margin: 0 15px;
   padding: 10px 5px;
   text-decoration: none;
   color: #333;
   display: inline-block;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
 }
 
-.chapter-nav a:hover {
-  text-decoration: underline;
-}
-
+.chapter-nav a:hover,
 .chapter-nav a.active {
-  font-weight: bold;
   color: #007BFF;
+  border-bottom: 3px solid #007BFF;
 }
 
 .scroll-section {
@@ -83,6 +98,34 @@ html {
 
 .scroll-section.visible {
   opacity: 1;
+}
+
+.chapter-nav a:hover {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.chapter-nav a:focus {
+  outline: none;
+  color: #007BFF;
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 8px 12px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #2c475d;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.back-to-top.visible {
+  display: block;
 }
 </style>
 
@@ -103,7 +146,6 @@ html {
 <div id="scroll-container">
   {{ .Content }}
 </div>
-
 
 <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
 
