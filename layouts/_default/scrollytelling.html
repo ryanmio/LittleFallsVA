@@ -184,23 +184,32 @@ html {
   const scrollSections = document.querySelectorAll(".scroll-section");
   const backToTop = document.querySelector('.back-to-top');
 
-  function onScroll() {
-    scrollSections.forEach((section) => {
-      const sectionTop = section.getBoundingClientRect().top;
+function onScroll() {
+  scrollSections.forEach((section) => {
+    // Get the top position of the section relative to the viewport
+    const sectionTop = section.getBoundingClientRect().top;
+    
+    // Get the bottom position of the section relative to the viewport
+    const sectionBottom = section.getBoundingClientRect().bottom;
 
-      if (sectionTop < window.innerHeight && sectionTop > -window.innerHeight / 3) {
-        section.classList.add("visible");
-      } else {
-        section.classList.remove("visible");
-      }
-    });
-
-    if (window.scrollY > window.innerHeight / 5) {
-      backToTop.classList.add("visible");
+    // Check if any part of the section is within the viewport
+    if (sectionTop < window.innerHeight && sectionBottom > 0) {
+      // If the section is within the viewport, add the "visible" class
+      section.classList.add("visible");
     } else {
-      backToTop.classList.remove("visible");
+      // If the section is outside the viewport, remove the "visible" class
+      section.classList.remove("visible");
     }
+  });
+
+  // Show or hide the "back-to-top" button based on the scroll position
+  if (window.scrollY > window.innerHeight / 2) {
+    backToTop.classList.add("visible");
+  } else {
+    backToTop.classList.remove("visible");
   }
+}
+
 
   window.addEventListener("scroll", onScroll);
   onScroll();
