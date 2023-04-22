@@ -3,6 +3,9 @@ title: "History"
 date: 2023-04-12
 layout: "scrollytelling"
 ---
+# Uncovering the Past: The History of Falls Church
+
+_Shedding Light on the Stories and Struggles that Shaped Our Community_
 
 <div class="scroll-section" id="chapter1">
   <div class="text-content">
