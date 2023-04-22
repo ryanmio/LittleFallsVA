@@ -51,3 +51,6 @@
   
 - id: faq_footer
   translation: "FAQ"
+  
+- id: history
+  translation: "History"
