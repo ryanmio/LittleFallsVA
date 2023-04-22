@@ -28,6 +28,7 @@ layout: "scrollytelling"
   </div>
   <div class="image-container">
     <img src="/images/history/1765.jpg" alt="Image 2"  loading="lazy" />
+     <cite style="display: block; text-align: center;">(John Smith's Map) "(1765) George Washington Papers, Series 4, General Correspondence: Truro Parish and Fairfax Parish, Virginia, Vestry Election Tabulation of Votes. [Manuscript/Mixed Material] Retrieved from the Library of Congress, https://www.loc.gov/item/mgw443132/."</cite>      
   </div>
 </div>
 
