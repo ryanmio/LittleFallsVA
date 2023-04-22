@@ -184,24 +184,24 @@ html {
   const scrollSections = document.querySelectorAll(".scroll-section");
   const backToTop = document.querySelector('.back-to-top');
 
-function onScroll() {
-  // Loop through each scroll-section element
-  scrollSections.forEach((section) => {
-    // Get the top position of the current section relative to the viewport
-    const sectionTop = section.getBoundingClientRect().top;
+  function onScroll() {
+    scrollSections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
 
-    // Check if the section top position is within the desired range:
-    // sectionTop < window.innerHeight / 1.5: The section's top edge is less than 66.67% down from the top of the viewport.
-    // sectionTop > -window.innerHeight / 2: The section's top edge is less than 50% up from the bottom of the viewport.
-    if (sectionTop < window.innerHeight / 1.5 && sectionTop > -window.innerHeight / 2) {
-      // If the section is within the desired range, add the "visible" class
-      section.classList.add("visible");
+      if (sectionTop < window.innerHeight && sectionTop > -window.innerHeight / 2) {
+        section.classList.add("visible");
+      } else {
+        section.classList.remove("visible");
+      }
+    });
+
+    if (window.scrollY > window.innerHeight / 2) {
+      backToTop.classList.add("visible");
     } else {
-      // If the section is outside the desired range, remove the "visible" class
-      section.classList.remove("visible");
+      backToTop.classList.remove("visible");
     }
-  });
-    
+  }
+
   window.addEventListener("scroll", onScroll);
   onScroll();
 
