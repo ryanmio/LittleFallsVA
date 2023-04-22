@@ -186,23 +186,17 @@ html {
 
 function onScroll() {
   scrollSections.forEach((section) => {
-    // Get the top position of the section relative to the viewport
     const sectionTop = section.getBoundingClientRect().top;
-    
-    // Get the bottom position of the section relative to the viewport
-    const sectionBottom = section.getBoundingClientRect().bottom;
+    const sectionHeight = section.offsetHeight;
 
-    // Check if any part of the section is within the viewport
-    if (sectionTop < window.innerHeight && sectionBottom > 0) {
-      // If the section is within the viewport, add the "visible" class
+    // Check if the top of the section is within the viewport or if it has not passed the middle of the viewport
+    if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 2) {
       section.classList.add("visible");
     } else {
-      // If the section is outside the viewport, remove the "visible" class
       section.classList.remove("visible");
     }
   });
 
-  // Show or hide the "back-to-top" button based on the scroll position
   if (window.scrollY > window.innerHeight / 2) {
     backToTop.classList.add("visible");
   } else {
