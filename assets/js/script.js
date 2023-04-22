@@ -1,4 +1,5 @@
-
+/* global window, document, console, fetch, URLSearchParams, $, jQuery */
+/* eslint no-unused-vars: "off", no-undef: "off" */
 
 // Preloader js    
 $(window).on('load', function () {
