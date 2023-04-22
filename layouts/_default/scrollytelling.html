@@ -190,14 +190,14 @@ function onScroll() {
     const sectionHeight = section.offsetHeight;
 
     // Check if the top of the section is within the viewport or if it has not passed the middle of the viewport
-    if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 3) {
+    if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 1.5) {
       section.classList.add("visible");
     } else {
       section.classList.remove("visible");
     }
   });
 
-  if (window.scrollY > window.innerHeight / 8) {
+  if (window.scrollY > window.innerHeight / 1.2) {
     backToTop.classList.add("visible");
   } else {
     backToTop.classList.remove("visible");
