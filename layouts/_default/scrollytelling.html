@@ -1,87 +1,91 @@
 {{ define "main" }}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
 <style>
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  #scroll-container {
-    position: relative;
-    overflow-x: hidden;
-  }
+#scroll-container {
+  position: relative;
+  overflow-x: hidden;
+}
 
-  .scroll-section {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.scroll-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
 
-  .text-content {
-    z-index: 1;
-    text-align: center;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 4px;
-  }
+.text-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 80%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 4px;
+}
 
-  .image-block {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 2rem;
-  }
+.chapter-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
-  .image-block img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
+.image-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+}
 
-  .chapter-title {
-    text-align: center;
-    margin: 2rem 0;
-  }
- 
-  .chapter-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    overflow-x: auto;
-    white-space: nowrap;
-    z-index: 1000;
-  }
+.image-container img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
 
-  .chapter-nav a {
-    margin: 0 15px;
-    padding: 10px 5px;
-    text-decoration: none;
-    color: #333;
-    display: inline-block;
-  }
+.chapter-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  white-space: nowrap;
+  z-index: 1000;
+}
 
-  .chapter-nav a:hover,
-  .chapter-nav a:focus {
-    text-decoration: none;
-    color: #007BFF;
-  }
+.chapter-nav a {
+  margin: 0 15px;
+  padding: 10px 5px;
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+}
 
-  .chapter-nav a.active {
-    font-weight: bold;
-    color: #007BFF;
-  }
+.chapter-nav a:hover {
+  text-decoration: underline;
+}
+
+.chapter-nav a.active {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+.scroll-section {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.scroll-section.visible {
+  opacity: 1;
+}
 </style>
 
 <div class="chapter-nav">
@@ -102,8 +106,12 @@
   {{ .Content }}
 </div>
 
+
+<div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
 <script>
   const scrollSections = document.querySelectorAll(".scroll-section");
+  const backToTop = document.querySelector('.back-to-top');
 
   function onScroll() {
     scrollSections.forEach((section) => {
@@ -115,6 +123,12 @@
         section.classList.remove("visible");
       }
     });
+
+    if (window.scrollY > window.innerHeight / 2) {
+      backToTop.classList.add("visible");
+    } else {
+      backToTop.classList.remove("visible");
+    }
   }
 
   window.addEventListener("scroll", onScroll);
@@ -140,5 +154,6 @@
     onScroll();
     updateActiveChapterLink();
   });
+
 </script>
 {{ end }}
