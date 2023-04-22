@@ -52,18 +52,7 @@ features:
 store:
   enable: true
   title: "Support the Movement with Little Falls Merchandise"
-  items:
-    - image: "[T-shirt image]"
-      title: "Little Falls T-Shirt"
-      content: "Show your support for the renaming movement with a comfortable and stylish Little Falls T-shirt."
 
-    - image: "[Tote bag image]"
-      title: "Little Falls Tote Bag"
-      content: "Carry your essentials in a reusable Little Falls tote bag, spreading awareness for the cause."
-
-    - image: "[Button image]"
-      title: "Little Falls Button"
-      content: "Wear a Little Falls button to show your support and spark conversations about the renaming movement."
 
 ############################## Press and Media ##########################
 press_and_media:
