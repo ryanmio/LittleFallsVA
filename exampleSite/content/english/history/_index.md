@@ -11,10 +11,10 @@ layout: "scrollytelling"
       <h3 class="chapter-title">Pre-colonial era: Indigenous peoples inhabit the area</h3>
     </div>
     <p>The area around Falls Church was occupied by Algonquian-speaking peoples for at least 10,000 years. Several tribes inhabited the area now known as Falls Church, such as the Doeg (or Dogue) Indians, Tauxenents (also known as the Doegs or Dogue), Patawomekes (Potomacs), and Matchotics. The Powhatan Confederacy controlled 28-32 groups or tribes along riverside towns and villages, ruled by their own weroance or chiefs. The Pamunkey tribe, one of the six core tribes of the political alliance Tsenacomoco, also played a significant role in the area.</p>
-    <cite>(John Smith's Map) "Virginia, discovered and discribed by Captayn John Smith, 1606"</cite>
   </div>
   <div class="image-container">
     <img src="/images/history/smithmap.jpg" alt="Image 1" />
+      <cite>(John Smith's Map) "Virginia, discovered and discribed by Captayn John Smith, 1606"</cite>
   </div>
 </div>
 
@@ -158,8 +158,5 @@ layout: "scrollytelling"
     <p>To truly acknowledge and address our dark past, we must first break free from the shackles of a name that honors an institution responsible for such cruelty. By choosing a new identity, we send a powerful message of reckoning, accountability, and a commitment to healing the wounds inflicted by our ancestors.</p>
       <p>Embracing the name Little Falls allows us to connect with our pre-colonial past, paying homage to the Indigenous peoples who first cherished the beauty and wonder of the Potomac River. In doing so, we create an inclusive and unifying identity that acknowledges the diverse voices of our community, both past and present.</p>
       <p>By confronting our history and breaking away from the name Falls Church, we have an opportunity to create a more equitable and compassionate future, where all members of our community are valued and heard. Let us use this new identity as a stepping stone towards collective healing, understanding, and growth.</p>
-  </div>
-  <div class="image-container">
-    <img src="/images/logo.jpg" alt="alt"  loading="lazy" />
   </div>
 </div>
