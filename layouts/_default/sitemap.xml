@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {{ range .Pages }}
   <url>
-    <loc>https://https://littlefallsva.com{{ .RelPermalink }}</loc>
-    <lastmod>{{ safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
+    <loc>{{ .RelPermalink }}</loc>
+    <lastmod>{{ safeHTML ( ( .Lastmod | default .Date ).Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
     {{ if not .IsTranslated }}
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -13,7 +13,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="{{ .Language.Lang }}"
-                href="https://littlefallsva.com{{ .RelPermalink }}"
+                href="{{ .RelPermalink }}"
                 />
     {{ end }}
     {{ end }}
