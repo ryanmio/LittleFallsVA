@@ -305,42 +305,7 @@ a:active {
   }
 }
 
-/*--
-    service start
---*/
-.testimonials {
-  .testimonial-block {
-    padding: 0 10px;
 
-    i {
-      font-size: 40px;
-      display: inline-block;
-      margin-bottom: 20px;
-      color: $primary-color;
-    }
-
-    p {
-      font-family: $secondary-font;
-      font-size: 14px;
-      color: #777;
-    }
-
-    .author-details {
-      margin-top: 30px;
-
-      img {
-        border-radius: 50%;
-        width: 50px;
-      }
-
-      h4 {
-        font-weight: 700;
-        font-size: 20px;
-        margin-top: 10px;
-      }
-    }
-  }
-}
 
 /*--
     call-to-action start
@@ -432,44 +397,8 @@ s.price {
   }
 }
 
-// contact list
-.contact-list {
 
-  li,
-  a {
-    color: #282828;
-    font-size: 18px;
-  }
-}
-
-.form-control {
-  border: 1px solid #dadada;
-  border-radius: 35px;
-  height: 50px;
-
-  &:focus {
-    border-color: $primary-color;
-    box-shadow: none;
-  }
-
-  &::placeholder {
-    font-size: 80%;
-  }
-}
-
-textarea.form-control {
-  height: 150px;
-  padding-top: 15px;
-}
-
-.sticky-image {
-  position: sticky;
-  top: 100px;
-  z-index: 1;
-}
-
-
-/* product sinngle page */
+/* product single page */
 
 .product-image-slider {
   position: sticky;
