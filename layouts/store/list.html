@@ -9,22 +9,18 @@
       {{ range (where .Site.RegularPages "Section" "store").ByWeight }}
       <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
         <div class="block">
-          <div class="gallery-overlay">
-            <a href="{{ .Permalink }}" class="gallery-popup">
-              <i class="tf-ion-plus-round"></i>
-            </a>
-          </div>
-          {{ $image := "" }}
-{{ if isset .Params "images" }}
-  {{ $image = index .Params.images 0 }}
-{{ end }}
-<img class="img-fluid" src="{{ $image | absURL }}" alt="{{ .Title }}">
-
+          <a href="{{ .Permalink }}" class="product-thumbnail" aria-label="View details for {{ .Title }}">
+            {{ $image := "" }}
+            {{ if isset .Params "images" }}
+              {{ $image = index .Params.images 0 }}
+            {{ end }}
+            <img class="img-fluid" src="{{ $image | absURL }}" alt="{{ .Title }}" loading="lazy">
+          </a>
         </div>
         <div class="product-info">
-        <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
-        <p class="price">{{if .Params.discount_price}}{{site.Params.currency}}{{.Params.discount_price}}{{else}}{{site.Params.currency}}{{.Params.price}}{{end}}
-          {{if .Params.discount_price}}<s class="price">{{site.Params.currency}}{{ .Params.price }}</s>{{end}}
+          <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
+          <p class="price">{{if .Params.discount_price}}{{site.Params.currency}}{{.Params.discount_price}}{{else}}{{site.Params.currency}}{{.Params.price}}{{end}}
+            {{if .Params.discount_price}}<s class="price">{{site.Params.currency}}{{ .Params.price }}</s>{{end}}
           </p>
         </div>
       </div>
