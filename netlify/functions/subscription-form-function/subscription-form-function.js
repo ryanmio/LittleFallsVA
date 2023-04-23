@@ -16,21 +16,25 @@ const data = querystring.parse(event.body);
 try {
   console.log('Preparing to call the API...');
   
-  const response = await axios.post(apiUrl, {
-    entity: 'Contact',
-    action: 'create',
-    json: JSON.stringify({
-      sequential: 1,
-      contact_type: 'Individual',
-      email: data.email,
-      api_key: apiKey,
-      key: siteKey,
-    }),
-  });
+  let response;
+  try {
+    response = await axios.post(apiUrl, {
+      entity: 'Contact',
+      action: 'create',
+      json: JSON.stringify({
+        sequential: 1,
+        contact_type: 'Individual',
+        email: data.email,
+        api_key: apiKey,
+        key: siteKey,
+      }),
+    });
+  } catch (error) {
+    console.error('Error calling the API:', error.message);
+    return { statusCode: 500, body: `Error calling the API: ${error.message}` };
+  }
 
   console.log('API response:', response.data);
-
-  // ... rest of the code
 
 
     if (response.data.is_error === 0) {
