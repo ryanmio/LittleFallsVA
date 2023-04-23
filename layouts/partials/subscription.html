@@ -9,7 +9,7 @@
         <h2 class="subheading text-white">{{ .title | markdownify }}</h2>
         <p class="text-white">{{ .content | markdownify }}</p>
         <div class="input-group">
-          <form id="subscription-form" method="POST" action="/.netlify/functions/subscription-form-function" data-netlify="true" class="w-100">
+          <form id="subscription-form" method="POST" data-netlify="true" class="w-100">
             <input type="hidden" name="_subject" value="New subscription">
             <input type="email" id="email" class="form-control" name="email" placeholder="{{ .placeholder }}" required>
             <span class="input-group-btn">
@@ -23,29 +23,7 @@
   </div>
 </section><!-- #call-to-action close -->
 
-<script>
-  const subscriptionForm = document.getElementById('subscription-form');
-  const subscriptionMessage = document.getElementById('subscription-message');
 
-  subscriptionForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    subscriptionMessage.textContent = 'Submitting...';
-
-    const formData = new FormData(subscriptionForm);
-    const response = await fetch(subscriptionForm.action, {
-      method: 'POST',
-      body: new URLSearchParams(formData),
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    });
-
-    if (response.ok) {
-      subscriptionMessage.textContent = 'Thank you for subscribing!';
-      subscriptionForm.reset();
-    } else {
-      subscriptionMessage.textContent = 'An error occurred. Please try again.';
-    }
-  });
-</script>
 
 {{- end }}
 {{- end }}
