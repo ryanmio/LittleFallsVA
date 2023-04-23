@@ -4,8 +4,10 @@ exports.handler = async (event, context) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
+console.log('event.body:', event.body);
+const data = JSON.parse(event.body);
 
-  const data = JSON.parse(event.body);
+
 
   const apiUrl = 'https://ycrm.littlefallsva.com/sites/all/modules/civicrm/extern/rest.php';
   const apiKey = 'V3llrOygSJMujjCNQ8k9Q1px';
