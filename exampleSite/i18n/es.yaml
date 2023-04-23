@@ -53,4 +53,7 @@
   translation: "FAQ"
   
 - id: history
-  translation: "Historia"  
+  translation: "Historia"
+
+- id: petition
+  translation: "Petición"  
