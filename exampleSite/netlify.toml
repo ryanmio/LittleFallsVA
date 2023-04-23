@@ -1,4 +1,3 @@
-theme = "vex-hugo"
 [build]
   publish = "public"
   command = "hugo --minify --gc"
