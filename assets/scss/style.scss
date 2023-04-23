@@ -288,7 +288,28 @@ a:active {
   }
 }
 
+/*--
+  Gallery start
+--*/
+.gallery {
+  padding-bottom: 0px;
 
+  .owl-item {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .block {
+    padding: 20px;
+    position: relative;
+
+    &:hover .gallery-overlay {
+      transform: scale(1);
+      opacity: 1;
+      border-radius: 0;
+    }
+  }
+}
 
 /*--
     service start
