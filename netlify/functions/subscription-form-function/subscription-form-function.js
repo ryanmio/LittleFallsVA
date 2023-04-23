@@ -1,11 +1,11 @@
 const axios = require('axios');
-
+const querystring = require('querystring');
 exports.handler = async (event, context) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 console.log('event.body:', event.body);
-const data = JSON.parse(event.body);
+const data = querystring.parse(event.body);
 
 
 
