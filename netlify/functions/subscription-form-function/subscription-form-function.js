@@ -1,0 +1,38 @@
+const axios = require('axios');
+
+exports.handler = async (event, context) => {
+  if (event.httpMethod !== 'POST') {
+    return { statusCode: 405, body: 'Method Not Allowed' };
+  }
+
+  const data = JSON.parse(event.body);
+
+  const apiUrl = 'https://ycrm.littlefallsva.com/sites/all/modules/civicrm/extern/rest.php';
+  const apiKey = 'V3llrOygSJMujjCNQ8k9Q1px';
+  const siteKey = 'ywPjjLTOwbzGf2kojonJBTBROiYlFSNKWxeAh48GTfE';
+
+  try {
+    const response = await axios.post(apiUrl, {
+      entity: 'Contact',
+      action: 'create',
+      json: JSON.stringify({
+        sequential: 1,
+        contact_type: 'Individual',
+        email: data.email,
+        api_key: apiKey,
+        key: siteKey,
+      }),
+    });
+
+    if (response.data.is_error === 0) {
+      return { statusCode: 200, body: 'Contact created successfully' };
+    } else {
+      return {
+        statusCode: 500,
+        body: `Error creating contact: ${response.data.error_message}`,
+      };
+    }
+  } catch (error) {
+    return { statusCode: 500, body: `Error: ${error.message}` };
+  }
+};
