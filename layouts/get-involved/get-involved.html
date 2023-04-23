@@ -147,12 +147,9 @@
             <!-- Add the map container and marker message input here -->
 <h2>Little Falls Movement Map</h2>
 <p>Explore the map below to see the locations of Little Falls supporters, events, and points of interest related to the movement. Click on the map to add your own marker:</p>
-
-<label for="marker-message">Enter your marker message:</label>
+<div id="map" style="width: 100%; height: 400px;"></div>
+<label for="marker-message">Add a message:</label>
 <input type="text" id="marker-message" class="marker-message-input" placeholder="I'm a supporter of the Little Falls Movement!">
-            <div id="map" style="width: 100%; height: 400px;"></div>
-
-
         </div>
         </div>
         </div>
@@ -185,7 +182,7 @@
     }
       
     .marker-message-input {
-      width: 100%;
+      width: 50%;
       box-sizing: border-box;
       margin-bottom: 50px;
     }      
