@@ -9,7 +9,7 @@ const data = querystring.parse(event.body);
 
 
 
-  const apiUrl = 'https://crm.littlefallsva.com/wp-content/plugins/civicrm/civicrm/extern/rest.php';
+  const apiUrl = 'http://crm.littlefallsva.com/wp-content/plugins/civicrm/civicrm/extern/rest.php';
   const apiKey = 'V3llrOygSJMujjCNQ8k9Q1px';
   const siteKey = 'ywPjjLTOwbzGf2kojonJBTBROiYlFSNKWxeAh48GTfE';
 
