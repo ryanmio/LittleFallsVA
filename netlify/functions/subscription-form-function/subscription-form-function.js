@@ -21,6 +21,7 @@ exports.handler = async (event, context) => {
         contact_type: 'Individual',
         email: data.email,
       }),
+      api_key: apiKey,
       key: siteKey,
     };
     const url = `${apiUrl}?${querystring.stringify(params)}`;
