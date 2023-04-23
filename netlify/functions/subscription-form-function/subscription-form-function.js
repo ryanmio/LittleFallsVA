@@ -14,17 +14,19 @@ const data = querystring.parse(event.body);
   const siteKey = 'ywPjjLTOwbzGf2kojonJBTBROiYlFSNKWxeAh48GTfE';
 
   try {
-    const response = await axios.post(apiUrl, {
-      entity: 'Contact',
-      action: 'create',
-      json: JSON.stringify({
-        sequential: 1,
-        contact_type: 'Individual',
-        email: data.email,
-        api_key: apiKey,
-        key: siteKey,
-      }),
-    });
+  const response = await axios.post(apiUrl, {
+    entity: 'Contact',
+    action: 'create',
+    json: JSON.stringify({
+      sequential: 1,
+      contact_type: 'Individual',
+      email: data.email,
+      api_key: apiKey,
+      key: siteKey,
+    }),
+  });
+
+  console.log('API response:', response.data);
 
     if (response.data.is_error === 0) {
       return { statusCode: 200, body: 'Contact created successfully' };
