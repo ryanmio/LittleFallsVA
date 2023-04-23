@@ -84,15 +84,15 @@ identifier = "press"
 weight = 2
 
 [[menu.main]]
-name = "Store"
-url = "store/"
-identifier = "store"
-weight = 3
-
-[[menu.main]]
 name = "History"
 url = "history/"
 identifier = "history"
+weight = 3
+
+[[menu.main]]
+name = "Store"
+url = "store/"
+identifier = "store"
 weight = 4
 
 [[menu.main]]
@@ -167,7 +167,7 @@ languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
 # copyright
-copyright = "©2023 Committe for Little Falls"
+copyright = "©2023 Committee for Little Falls"
 
 
 ################################### Spanish language #####################################
