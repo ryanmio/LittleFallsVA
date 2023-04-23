@@ -83,9 +83,10 @@ if (subscriptionFormElement && subscriptionMessageElement) {
 
     var formData = new FormData(event.target);
 
-    fetch(subscriptionFormElement.getAttribute('action'), {
+    fetch("/", {
       method: "POST",
-      body: formData,
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
     })
       .then(function (response) {
         if (response.ok) {
