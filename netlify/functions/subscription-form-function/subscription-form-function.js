@@ -18,16 +18,20 @@ try {
   
   let response;
   try {
-    response = await axios.post(apiUrl, {
+    response = await axios.post(apiUrl, querystring.stringify({
       entity: 'Contact',
       action: 'create',
       json: JSON.stringify({
         sequential: 1,
         contact_type: 'Individual',
         email: data.email,
-        api_key: apiKey,
-        key: siteKey,
       }),
+      api_key: apiKey,
+      key: siteKey,
+    }), {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
     });
   } catch (error) {
     console.error('Error calling the API:', error.message);
