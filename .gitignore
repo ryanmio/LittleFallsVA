@@ -9,3 +9,5 @@ builds
 package-lock.json
 Public
 resources
+# Local Netlify folder
+.netlify
