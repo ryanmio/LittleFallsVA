@@ -13,7 +13,9 @@ const data = querystring.parse(event.body);
   const apiKey = 'V3llrOygSJMujjCNQ8k9Q1px';
   const siteKey = 'ywPjjLTOwbzGf2kojonJBTBROiYlFSNKWxeAh48GTfE';
 
-  try {
+try {
+  console.log('Preparing to call the API...');
+  
   const response = await axios.post(apiUrl, {
     entity: 'Contact',
     action: 'create',
@@ -27,6 +29,9 @@ const data = querystring.parse(event.body);
   });
 
   console.log('API response:', response.data);
+
+  // ... rest of the code
+
 
     if (response.data.is_error === 0) {
       return { statusCode: 200, body: 'Contact created successfully' };
