@@ -17,7 +17,7 @@ defaultContentLanguage = "en"
   [languages.en]
     baseURL = "https://littlefallsva.com/"
   [languages.es]
-    baseURL = "https://littlefallsva.com/es/"
+    baseURL = "https://littlefallsva.com/
 
 
 #################################### Plugins ##########################################
@@ -179,10 +179,3 @@ weight = 2
 # copyright
 copyright = "©2023 Committee for Little Falls"
 
-  [Languages.es.permalinks]
-    press = "/es/press/release/:year/:month/:day/:slug/"
-    store = "/es/store/:title/"
-
-[permalinks]
-  press = "/press/release/:year/:month/:day/:slug/"
-  store = "/store/:title/"
