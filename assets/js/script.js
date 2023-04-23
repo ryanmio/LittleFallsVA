@@ -73,33 +73,33 @@ document.addEventListener('DOMContentLoaded', function () {
     petitionFormElement.addEventListener('submit', submitForm);
   }
 
-  // Subscription form
-  var subscriptionFormElement = document.getElementById("subscription-form");
-  var subscriptionMessageElement = document.getElementById("subscription-message");
+// Subscription form
+var subscriptionFormElement = document.getElementById("subscription-form");
+var subscriptionMessageElement = document.getElementById("subscription-message");
 
-  if (subscriptionFormElement && subscriptionMessageElement) {
-    subscriptionFormElement.addEventListener("submit", function (event) {
-      event.preventDefault();
+if (subscriptionFormElement && subscriptionMessageElement) {
+  subscriptionFormElement.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-      var formData = new FormData(event.target);
-      formData.append("_subject", "New subscription");
+    var formData = new FormData(event.target);
 
-      fetch("https://formsubmit.co/6353c63643284e8c31e0940b31a955c8", {
-        method: "POST",
-        body: formData,
+    fetch(subscriptionFormElement.getAttribute('action'), {
+      method: "POST",
+      body: formData,
+    })
+      .then(function (response) {
+        if (response.ok) {
+          subscriptionMessageElement.innerText = "Subscription successful!";
+        } else {
+          throw new Error("Form submission failed");
+        }
       })
-        .then(function (response) {
-          if (response.ok) {
-            subscriptionMessageElement.innerText = "Subscription successful!";
-          } else {
-            throw new Error("Form submission failed");
-          }
-        })
-        .catch(function (error) {
-          subscriptionMessageElement.innerText = "Subscription failed. Please try again.";
-        });
-    });
-  }
+      .catch(function (error) {
+        subscriptionMessageElement.innerText = "Subscription failed. Please try again.";
+      });
+  });
+}
+
 
 // Signatures counter
 var sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ8pwb9De5aggU61jQwEP5SQs9VfnA7_YQPskQn0TzI6cIG7O_vHP9q2wL1F22wa9sleGhJor106EH/pub?gid=0&single=true&output=csv';
