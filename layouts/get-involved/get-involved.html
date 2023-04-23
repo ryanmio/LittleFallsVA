@@ -202,7 +202,12 @@
         data.Items.forEach(item => {
           console.log('Latitude:', item.lat, 'Longitude:', item.lng);
           const latLng = L.latLng(item.lat, item.lng);
-          L.marker(latLng)
+          L.circle(latLng, {
+              color: 'blue',
+              fillColor: '#30f',
+              fillOpacity: 0.5,
+              radius: 100
+            })
             .addTo(map)
             .bindPopup(item.message);
         });
@@ -219,7 +224,12 @@
   // Add a new marker to the map when a user clicks
   map.on('click', function(e) {
     var message = document.getElementById('marker-message').value || "I'm a supporter of the Little Falls Movement!";
-    L.marker(e.latlng)
+    L.circle(e.latlng, {
+        color: 'blue',
+        fillColor: '#30f',
+        fillOpacity: 0.5,
+        radius: 100
+      })
       .addTo(map)
       .bindPopup(message);
 
@@ -237,20 +247,23 @@
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ lat: latlng.lat, lng: latlng.lng, message: message })
+        body: JSON.stringify({
+          lat: latlng.lat,
+          lng: latlng.lng,
+          message: message
+        })
       });
 
-      const data = await response.json();
-      console.log('Marker added successfully:', data);
-
-      // Reload markers after adding a new marker
-      loadMarkers();
+      if (response.ok) {
+        console.log('Marker submitted successfully');
+      } else {
+        console.error('Error submitting marker:', response.statusText);
+      }
     } catch (error) {
-      console.error('Error adding marker:', error);
+      console.error('Error submitting marker:', error);
     }
   }
-</script>
 
+</script>
 </body>
 </html>
-{{ end }}
