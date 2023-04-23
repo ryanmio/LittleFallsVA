@@ -4,10 +4,18 @@
   {{ range .Pages }}
   <url>
     <loc>https://littlefallsva.com{{ .RelPermalink }}</loc>
-    <lastmod>{{ safeHTML ( ( .Lastmod | default .Date | default (time "2023-04-01") ).Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
+    <lastmod>{{ safeHTML ( ( .Lastmod | default .Date | default (time "2000-01-01") ).Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
     {{ if not .IsTranslated }}
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    {{ if or (eq .RelPermalink "/") (in .RelPermalink "petition") }}
+    <priority>1.0</priority>
+    {{ else if in .RelPermalink "category" }}
+    <priority>0.8</priority>
+    {{ else if eq .Type "post" }}
+    <priority>0.6</priority>
+    {{ else }}
+    <priority>0.4</priority>
+    {{ end }}
     {{ else }}
     {{ range .Translations }}
     <xhtml:link
