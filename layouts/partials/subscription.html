@@ -9,7 +9,8 @@
         <h2 class="subheading text-white">{{ .title | markdownify }}</h2>
         <p class="text-white">{{ .content | markdownify }}</p>
         <div class="input-group">
-          <form id="subscription-form" method="POST" data-netlify="true" class="w-100">
+          <form id="subscription-form" method="POST" action="/.netlify/functions/subscription-form-function" data-netlify="true" class="w-100">
+            <input type="hidden" name="form-name" value="subscription-form">
             <input type="hidden" name="_subject" value="New subscription">
             <input type="email" id="email" class="form-control" name="email" placeholder="{{ .placeholder }}" required>
             <span class="input-group-btn">
@@ -22,8 +23,5 @@
     </div>
   </div>
 </section><!-- #call-to-action close -->
-
-
-
 {{- end }}
 {{- end }}
