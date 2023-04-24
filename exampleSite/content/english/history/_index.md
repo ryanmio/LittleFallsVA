@@ -72,7 +72,7 @@ layout: "scrollytelling"
   </div>
   <div class="image-container">
     <img src="/images/history/town.webp" alt="Historic view of the town of Falls Church"  loading="lazy" />
-           <cite style="display: block; text-align: center;">Image courtesy of https://www.historicprincewilliam.org/</cite>  
+           <cite style="display: block; text-align: center;">(1878) Image courtesy of https://www.historicprincewilliam.org/</cite>  
   </div>
 </div>
 
