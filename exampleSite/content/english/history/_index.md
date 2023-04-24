@@ -71,8 +71,8 @@ layout: "scrollytelling"
 </p>   
   </div>
   <div class="image-container">
-    <img src="/images/history/1890map.webp" alt="1890 map of Falls Church, Fairfax Co., Va. by G. Noetzel"  loading="lazy" />
-           <cite style="display: block; text-align: center;">Noetzel, G. (1890) Falls Church, Fairfax Co., Va. Washington, D.C.: Bell Bros., Photo-Lithographers. [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/92681730/.</cite>  
+    <img src="/images/history/town.webp" alt="Historic view of the town of Falls Church"  loading="lazy" />
+           <cite style="display: block; text-align: center;">Image courtesy of https://www.historicprincewilliam.org/</cite>  
   </div>
 </div>
 
@@ -86,10 +86,12 @@ layout: "scrollytelling"
    <p>In 1890, the Town Council of Falls Church further voted to cede its other majority African-American districts, including the James Lee community, to Fairfax County. This decision resulted in over one-third of the town's land being relinquished to the county.</p>
   </div>
   <div class="image-container">
-    <img src="/images/history/town.webp" alt="Historic view of the town of Falls Church"  loading="lazy" />
-           <cite style="display: block; text-align: center;">Image courtesy of https://www.historicprincewilliam.org/</cite>  
+    <img src="/images/history/1890map.webp" alt="1890 map of Falls Church, Fairfax Co., Va. by G. Noetzel"  loading="lazy" />
+           <cite style="display: block; text-align: center;">Noetzel, G. (1890) Falls Church, Fairfax Co., Va. Washington, D.C.: Bell Bros., Photo-Lithographers. [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/92681730/.</cite>  
   </div>
 </div>
+
+
 
 <div class="scroll-section" id="chapter7">
   <div class="text-content">
