@@ -13,7 +13,7 @@ PARA PUBLICACIÓN INMEDIATA
 
 El Comité por Little Falls Destaca la Razón Detrás del Cambio de Nombre Propuesto
 
-Little Falls, VA - 23 de abril de 2023 - El Comité por Little Falls ha publicado una declaración que describe la razón detrás de proponer "Little Falls" como el nuevo nombre para Falls Church, Virginia. Esta declaración tiene como objetivo abordar preguntas e inquietudes de la comunidad y proporcionar una comprensión clara de la importancia del nombre.
+Little Falls, VA - 3 de mayo de 2023 - El Comité por Little Falls ha publicado una declaración que describe la razón detrás de proponer "Little Falls" como el nuevo nombre para Falls Church, Virginia. Esta declaración tiene como objetivo abordar preguntas e inquietudes de la comunidad y proporcionar una comprensión clara de la importancia del nombre.
 
 La razón detrás del cambio de nombre propuesto se puede resumir en tres puntos clave:
 
