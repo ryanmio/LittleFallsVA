@@ -45,6 +45,13 @@ layout: "scrollytelling"
     <img src="/images/history/1719.webp" alt="1719 map of Virginia, Mary-Land, and improved parts of Pennsylvania & New Jersey by J. Senex"  loading="lazy" />
      <cite style="display: block; text-align: center;">Senex, J. (1719) A new map of Virginia, Mary-Land, and the improved parts of Pennsylvania & New Jersey. [London: s.n] [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/2007625604/.</cite>          
   </div>
+    
+  </div>
+  <div class="image-container">
+    <img src="/images/history/1737.webp" alt="1737 map of Virginia"  loading="lazy" />
+    <cite style="display: block; text-align: center;">(1737) Courtesy of https://www.historicprincewilliam.org/county-history/maps/northern-neck-1737.html</cite>          
+  </div>
+  
 </div>
 
 <div class="scroll-section" id="chapter4">
