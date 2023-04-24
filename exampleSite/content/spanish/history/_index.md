@@ -67,8 +67,8 @@ layout: "scrollytelling-es"
 </p>   
   </div>
   <div class="image-container">
-    <img src="/images/history/1890map.webp" alt="1890 mapa de Falls Church, Condado de Fairfax, Va. por G. Noetzel"  loading="lazy" />
-           <cite style="display: block; text-align: center;">Noetzel, G. (1890) Falls Church, Condado de Fairfax, Va. Washington, D.C.: Bell Bros., Foto-Litógrafos. [Mapa] Obtenido de la Biblioteca del Congreso, https://www.loc.gov/item/92681730/.</cite>  
+    <img src="/images/history/town.webp" alt="Vista histórica del pueblo de Falls Church"  loading="lazy" />
+           <cite style="display: block; text-align: center;">Imagen cortesía de https://www.historicprincewilliam.org/</cite>  
   </div>
 </div>
 
@@ -86,9 +86,9 @@ layout: "scrollytelling-es"
     <p>Al obtener el estatus de municipio en 1875, Falls Church experimentó un aumento en su población afroamericana, con el límite del pueblo inicialmente incluyendo todo el vecindario de Tinner Hill y otras áreas que ahora forman parte del condado de Fairfax. Este cambio demográfico llevó a que el 37% de los votantes registrados fueran negros. En respuesta, el gobierno municipal en 1887 movió la línea límite hacia el norte, excluyendo deliberadamente gran parte del vecindario de Tinner Hill y reduciendo el número de votantes negros registrados a solo el 15% de la población total en el municipio.</p>
    <p>En 1890, el Concejo Municipal de Falls Church votó además para ceder sus otros distritos mayoritariamente afroamericanos, incluida la comunidad de James Lee, al condado de Fairfax. Esta decisión resultó en la renuncia a más de un tercio de las tierras del pueblo al condado.</p>
   </div>
-  <div class="image-container">
-    <img src="/images/history/town.webp" alt="Vista histórica del pueblo de Falls Church"  loading="lazy" />
-           <cite style="display: block; text-align: center;">Imagen cortesía de https://www.historicprincewilliam.org/</cite>  
+<div class="image-container">
+    <img src="/images/history/1890map.webp" alt="1890 mapa de Falls Church, Condado de Fairfax, Va. por G. Noetzel"  loading="lazy" />
+           <cite style="display: block; text-align: center;">Noetzel, G. (1890) Falls Church, Condado de Fairfax, Va. Washington, D.C.: Bell Bros., Foto-Litógrafos. [Mapa] Obtenido de la Biblioteca del Congreso, https://www.loc.gov/item/92681730/.</cite>  
   </div>
 </div>
 <div class="scroll-section" id="chapter7">
