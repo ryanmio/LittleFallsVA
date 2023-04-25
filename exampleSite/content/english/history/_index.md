@@ -54,7 +54,7 @@ layout: "scrollytelling"
       <span class="chapter-number">Chapter 4.</span>
       <h3 class="chapter-title">The Construction of the Current Brick Church</h3>
     </div>
-    <p>In 1769, the current brick church was constructed, designed by architect James Wren. Once again, the labor of enslaved individuals was used to build this structure, which still stands today. As we look upon this historic building, let us not forget the hands that crafted it and the stories of those who toiled in its shadow. This enduring structure has borne witness to centuries of history, from the earliest days of the American colonies to the present day. </p>    
+    <p>In 1769, the current brick church was constructed, designed by architect James Wren. Once again, the labor of enslaved individuals was used to build this structure, which still stands today. As we look upon this historic building, let us not forget the hands that crafted it and the stories of those who toiled in its shadow. This enduring structure has borne witness to centuries of history, from the earliest days of America to the present day. </p>    
   </div>
   <div class="image-container">
     <img src="/images/history/1861.webp" alt="Falls Church, Virginia during the Civil War, photographed between 1861 and 1865"  loading="lazy" />
@@ -125,8 +125,8 @@ layout: "scrollytelling"
    <p>Throughout its history, Falls Church has been home to a diverse array of residents from various cultural and ethnic backgrounds. These individuals and communities have each contributed in their own way to the growth and development of the city, bringing unique perspectives and experiences that enrich the fabric of our shared heritage.</p>    
   </div>
   <div class="image-container">
-    <img src="/images/history/fallschurchpo.webp" alt="Map: Town of Falls Church"  loading="lazy" />
-           <cite style="display: block; text-align: center;">Hopkins, G. M. (1879) Atlas of fifteen miles around Washington, including the county of Montgomery, Maryland. Philadelphia: G.M. Hopkins, 1879. [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/87675339/.</cite>  
+    <img src="/images/history/SchoolHistoric.webp" alt="old school"  loading="lazy" />
+           <cite style="display: block; text-align: center;">Image rights: The City of Falls Church. https://www.fallschurchva.gov/PhotoViewScreen.aspx?PID=8</cite>  
   </div>
 </div>
 
