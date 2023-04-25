@@ -40,8 +40,8 @@ layout: "scrollytelling-es"
 </p>   
   </div>
   <div class="image-container">
-    <img src="/images/history/1719.webp" alt="1719 mapa de Virginia, Mary-Land y partes mejoradas de Pennsylvania y Nueva Jersey por J. Senex"  loading="lazy" />
-     <cite style="display: block; text-align: center;">Senex, J. (1719) Un nuevo mapa de Virginia, Mary-Land y las partes mejoradas de Pennsylvania y Nueva Jersey. [Londres: s.n] [Mapa] Obtenido de la Biblioteca del Congreso, https://www.loc.gov/item/2007625604/.</cite>          
+    <img src="/images/history/1737.webp" alt="1737 map of Virginia"  loading="lazy" />
+    <cite style="display: block; text-align: center;">Warner, J. & Fairfax, T. F. (1747) A survey of the northern neck of Virginia, being the lands belonging to the Rt. Honourable Thomas Lord Fairfax Baron Cameron, bounded by & within the Bay of Chesapoyocke and between the rivers Rappahannock and Potowmack: With the courses of the rivers Rappahannock and Potowmack, in Virginia, as surveyed according to order in the years& 1737. [N.P., ?] [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/99446122/.</cite>          
   </div>
 </div>
 <div class="scroll-section" id="chapter4">
