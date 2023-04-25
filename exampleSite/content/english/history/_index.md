@@ -68,7 +68,9 @@ layout: "scrollytelling"
       <span class="chapter-number">Chapter 5.</span>
       <h3 class="chapter-title">The Growth of Falls Church</h3>
     </div>
-    <p>The village of Falls Church continued to grow throughout the early 19th century, with new residents arriving and contributing to the area's development. However, not all who lived in Falls Church experienced equal opportunities or treatment. Enslaved individuals in Falls Church were subjected to harsh living conditions, forced labor, and the denial of basic human rights. Native American inhabitants of the region also experienced significant changes as the village of Falls Church expanded. Forced to adapt to the influx of new settlers, these communities faced challenges in preserving their traditional ways of life and cultural heritage. 
+    <p>The village of Falls Church continued to grow throughout the early 19th century, with new residents arriving and contributing to the area's development. However, not all who lived in Falls Church experienced equal opportunities or treatment. Enslaved individuals in Falls Church were subjected to harsh living conditions, forced labor, and the denial of basic human rights. Native American inhabitants of the region also experienced significant changes as the village of Falls Church expanded. Forced to adapt to the influx of new settlers, these communities faced challenges in preserving their traditional ways of life and cultural heritage.</p> 
+        
+<p> As the United States descended into the Civil War in the 1860s, Falls Church found itself on the border between the Union and the Confederacy. Due to its strategic location near the nation's capital, the village became a battleground for both sides. Throughout the war, Falls Church changed hands several times between Union and Confederate forces, with each occupation leaving its mark on the community. Residents faced the challenges of wartime, including food and supply shortages, as well as the ever-present threat of violence.
 </p>   
   </div>
   <div class="image-container">
