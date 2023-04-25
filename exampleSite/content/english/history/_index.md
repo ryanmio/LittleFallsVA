@@ -125,7 +125,7 @@ layout: "scrollytelling"
   </div>
   <div class="image-container">
     <img src="/images/history/fallschurchpo.webp" alt="Map: Town of Falls Church"  loading="lazy" />
-           <cite style="display: block; text-align: center;">Image courtesy of https://www.historicprincewilliam.org/</cite>  
+           <cite style="display: block; text-align: center;">Hopkins, G. M. (1879) Atlas of fifteen miles around Washington, including the county of Montgomery, Maryland. Philadelphia: G.M. Hopkins, 1879. [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/87675339/.</cite>  
   </div>
 </div>
 
