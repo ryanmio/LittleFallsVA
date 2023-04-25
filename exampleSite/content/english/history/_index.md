@@ -38,8 +38,8 @@ layout: "scrollytelling"
       <span class="chapter-number">Chapter 3.</span>
       <h3 class="chapter-title">The Original Wooden Church and Its Legacy</h3>
     </div>
-    <p>In 1733, the original wooden church was built, serving as a place of worship for settlers and as an outpost of the colonial government. We must not forget that this church was constructed using the labor of enslaved individuals, whose lives were forever altered by the new settlers. Stripped of their freedom and dignity, these individuals were forced to build a place of worship for a community that, in many ways, did not recognize their humanity. The impact of this injustice reverberates through time, shaping the ongoing struggle for racial equity and social justice in our contemporary society.
-</p>   
+    <p>In 1733, Mr. Richard Blackburn reached an agreement with the Vestry to build the original wooden church at the Cross Roads near Michael Reagan's. The church, designed to be 40 feet in length, 22 feet wide, and 13 feet pitch, was weatherboarded and covered, with all the inside work meticulously performed. This place of worship served both as a spiritual sanctuary for settlers and an outpost of the colonial government. The construction costs were set at 33,500 pounds of tobacco.</p> 
+ <p>While the church played a significant role in the settlers' lives, it is essential to confront the fact that it was built using the labor of enslaved individuals. These people were deprived of their freedom and dignity, forced to erect a place of worship for a community that often failed to recognize their humanity. The legacy of this injustice persists, shaping the ongoing struggle for racial equity and social justice in our contemporary society. In 1757, the name "Falls Church" was first applied to the Upper Church, serving to distinguish it from the Church in Alexandria.</p>   
   </div>    
   <div class="image-container">
     <img src="/images/history/1737.webp" alt="1737 map of Virginia"  loading="lazy" />
