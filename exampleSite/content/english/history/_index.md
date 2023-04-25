@@ -60,7 +60,10 @@ layout: "scrollytelling"
       <span class="chapter-number">Chapter 4.</span>
       <h3 class="chapter-title">The Construction of the Current Brick Church</h3>
     </div>
-    <p>In 1769, the current brick church was constructed, designed by architect James Wren. Once again, the labor of enslaved individuals was used to build this structure, which still stands today. As we look upon this historic building, let us not forget the hands that crafted it and the stories of those who toiled in its shadow. This enduring structure has borne witness to centuries of history, from the earliest days of America to the present day. </p>    
+    <p>In 1769, architect and slave owner James Wren designed and oversaw the construction of the brick church using enslaved labor. Enslaved individuals performed various tasks such as laying bricks and crafting woodwork, all under harsh conditions. Many of the enslaved individuals who worked on the church were also owned by members of the congregation, further entwining the church's legacy with the institution of slavery.</p> 
+
+ <p>The church's leaders, including Wren, participated in perpetuating slavery, and the church served as a platform for disseminating ideas that maintained racial hierarchy and justified enslavement of African Americans. Recognizing the church's impact on the community requires acknowledging the contributions of these enslaved individuals, the injustices they faced, and the role played by the church and its leaders in maintaining and justifying slavery in the community.
+</p>    
   </div>
   <div class="image-container">
     <img src="/images/history/1861.webp" alt="Falls Church, Virginia during the Civil War, photographed between 1861 and 1865"  loading="lazy" />
