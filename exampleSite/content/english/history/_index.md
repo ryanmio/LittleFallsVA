@@ -41,10 +41,9 @@ layout: "scrollytelling"
     <p>In 1733, the original wooden church was built, serving as a place of worship for settlers and as an outpost of the colonial government. We must not forget that this church was constructed using the labor of enslaved individuals, whose lives were forever altered by the new settlers. Stripped of their freedom and dignity, these individuals were forced to build a place of worship for a community that, in many ways, did not recognize their humanity. The impact of this injustice reverberates through time, shaping the ongoing struggle for racial equity and social justice in our contemporary society.
 </p>   
   </div>    
-  </div>
   <div class="image-container">
     <img src="/images/history/1737.webp" alt="1737 map of Virginia"  loading="lazy" />
-    <cite style="display: block; text-align: center;">Warner, J. & Fairfax, T. F. (1747) A survey of the northern neck of Virginia, being the lands belonging to the Rt. Honourable Thomas Lord Fairfax Baron Cameron, bounded by & within the Bay of Chesapoyocke and between the rivers Rappahannock and Potowmack: With the courses of the rivers Rappahannock and Potowmack, in Virginia, as surveyed according to order in the years& 1737. [N.P., ?] [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/99446122/.</cite>          
+    <cite style="display: block; text-align: center;">Warner, J. & Fairfax, T. F. (1737) A survey of the northern neck of Virginia. [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/99446122/.</cite>          
   </div>
   
 </div>
