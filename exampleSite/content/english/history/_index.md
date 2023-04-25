@@ -49,7 +49,7 @@ layout: "scrollytelling"
   </div>    
   <div class="image-container">
     <img src="/images/history/wood.webp" alt="Rendering of wooden falls church"  loading="lazy" />
-    <cite style="display: block; text-align: center;">Artist's Rendering of Original Wooden Church. It had a simple rectangular design with a pitched roof. The exterior was made of wooden clapboards, painted white to protect the wood from the elements, and featured a central entrance, flanked by two symmetrical windows fitted with diamond-paned glass, allowing natural light to filter into the interior. Inside, there would have been wooden pews arranged in rows, facing a raised pulpit where the clergy delivered sermons. Image Rights: Little Falls Movement.</cite>          
+    <cite style="display: block; text-align: center;">Artist's Rendering of Original Wooden Church. It had a simple rectangular design with a pitched roof. The exterior was made of wooden clapboards, painted white to protect the wood from the elements, and featured a central entrance, flanked by two symmetrical windows fitted with diamond-paned glass, allowing natural light to filter into the interior. Inside, there would have been wooden pews arranged in rows, facing a raised pulpit where the clergy delivered sermons. <br>Image Rights: Little Falls Movement.</cite>          
   </div>
   
 </div>
