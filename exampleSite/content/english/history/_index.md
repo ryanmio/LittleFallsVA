@@ -48,8 +48,8 @@ layout: "scrollytelling"
  <p>While the church played a significant role in the settlers' lives, it is essential to confront the fact that it was built using the labor of enslaved individuals. These people were deprived of their freedom and dignity, forced to erect a place of worship for a community that often failed to recognize their humanity. The legacy of this injustice persists, shaping the ongoing struggle for racial equity and social justice in our contemporary society. In 1757, the name "Falls Church" was first applied to the Upper Church, serving to distinguish it from the Church in Alexandria.</p>   
   </div>    
   <div class="image-container">
-    <img src="/images/history/1737.webp" alt="1737 map of Virginia"  loading="lazy" />
-    <cite style="display: block; text-align: center;">Warner, J. & Fairfax, T. F. (1737) A survey of the northern neck of Virginia. [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/99446122/.</cite>          
+    <img src="/images/history/wood.webp" alt="Rendering of wooden falls church"  loading="lazy" />
+    <cite style="display: block; text-align: center;">Artist's Rendering of Original Wooden Church. It had a simple rectangular design with a pitched roof, reminiscent of the vernacular architecture of the time. The exterior was made of wooden clapboards, painted white to protect the wood from the elements. The church featured a central entrance, flanked by two symmetrical windows with wooden shutters. The windows were likely fitted with diamond-paned glass, allowing natural light to filter into the interior. Inside, there would have been wooden pews arranged in rows, facing a raised pulpit where the clergy delivered sermons.</cite>          
   </div>
   
 </div>
