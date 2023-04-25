@@ -10,7 +10,11 @@ layout: "scrollytelling"
       <span class="chapter-number">Chapter 1.</span>
       <h3 class="chapter-title">Pre-colonial era: Indigenous peoples inhabit the area</h3>
     </div>
-    <p>The area around Falls Church was occupied by Algonquian-speaking peoples for at least 10,000 years. Several tribes inhabited the area now known as Falls Church, such as the Doeg (or Dogue) Indians, Tauxenents (also known as the Doegs or Dogue), Patawomekes (Potomacs), and Matchotics. The Powhatan Confederacy controlled 28-32 groups or tribes along riverside towns and villages, ruled by their own weroance or chiefs. The Pamunkey tribe, one of the six core tribes of the political alliance Tsenacomoco, also played a significant role in the area.</p>
+    <p>The area around Falls Church was occupied by Algonquian-speaking peoples for at least 10,000 years. Several tribes, including the Doeg (or Dogue) Indians, Tauxenents, Patawomekes (Potomacs), and Matchotics, lived in the region and established their settlements along the rivers and coastlines, particularly the Potomac River. The Powhatan Confederacy, the most powerful chiefdom in the area, controlled 28-32 groups or tribes that occupied riverside towns and villages, with their influence extending up to the Fall Line, a geological boundary where waterfalls or rapids limited river navigation and marked the transition between the Coastal Plain and the Piedmont Plateau.</p>
+
+<p>The falls of the Potomac River were vital for the tribes, providing sustenance, resources, and a meeting place for trade and cultural exchange. These tribes, including the Pamunkey tribe of the Powhatan Confederacy and the political alliance Tsenacomoco, had rich cultural traditions, with unique customs for marriage, divorce, education, and punishment of wrongdoers. The priests, or kwiocosuk, played a significant role in their society, advising the chiefs on important actions, including war. The First, Second, and Third Anglo-Powhatan Wars, along with treaties between Native Americans and English colonists, impacted the indigenous populations in the Falls Church area, as tribes were forced to cede land and resources.</p>
+
+<p>As European settlers arrived and expanded their settlements, the indigenous tribes in the Falls Church area experienced upheaval and displacement, leading to a decline in their population and paving the way for the transformation of the region.</p>
   </div>
   <div class="image-container">
   <img src="/images/history/smithmap.webp" alt="Image 1" />
