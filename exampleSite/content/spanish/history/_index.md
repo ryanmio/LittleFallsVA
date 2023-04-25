@@ -67,10 +67,9 @@ layout: "scrollytelling-es"
 </p>   
   </div>
   <div class="image-container">
-    <img src="/images/history/1879.webp" alt="Vista histórica del pueblo de Falls Church"  loading="lazy" />
-           <cite style="display: block; text-align: center;">Hopkins, G. M. (1879) Atlas of fifteen miles around Washington, including the county of Montgomery, Maryland. Philadelphia: G.M. Hopkins, 1879. [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/87675339/.
-
-</cite>  
+    <img src="/images/history/warmap.webp" alt="War map showing Washington DC"  loading="lazy" />
+           <cite style="display: block; text-align: center;">Hopkins, G. M. (1861) War map, showing the vicinities of Baltimore & Washington. Philadelphia, Jacob Weiss. [Map] Retrieved from the Library of Congress, https://www.loc.gov/item/2009575802/.
+</cite> 
   </div>
 </div>
 
