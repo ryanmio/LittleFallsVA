@@ -72,7 +72,7 @@ layout: "scrollytelling"
   <div class="text-content">
     <div class="chapter-heading">
       <span class="chapter-number">Chapter 5.</span>
-      <h3 class="chapter-title">The Growth of Falls Church</h3>
+      <h3 class="chapter-title">The 19th Century and Civil War</h3>
     </div>
     <p>The village of Falls Church continued to grow throughout the early 19th century, with new residents arriving and contributing to the area's development. However, not all who lived in Falls Church experienced equal opportunities or treatment. Enslaved individuals in Falls Church were subjected to harsh living conditions, forced labor, and the denial of basic human rights. Native American inhabitants of the region also experienced significant changes as the village of Falls Church expanded. Forced to adapt to the influx of new settlers, these communities faced challenges in preserving their traditional ways of life and cultural heritage.</p> 
         
