@@ -25,7 +25,7 @@ defaultContentLanguage = "en"
 # CSS Plugins
 
 [[params.plugins.css]]
-link = "https://fonts.googleapis.com/css?family=Droid+Serif:400|Josefin+Sans:300,400,600,700&display=swap"
+link = "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
 media = "print"
 onload = "this.media='all'"
 [[params.plugins.css]]
