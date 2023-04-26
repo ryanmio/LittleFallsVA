@@ -1,17 +1,10 @@
-@font-face {
-  font-family: 'Atkinson Hyperlegible';
-  src: url('static/fonts/Atkinson-Hyperlegible-Regular-102a.woff2') format('woff2'),
-       url('static/fonts/Atkinson-Hyperlegible-Regular-102.woff') format('woff'),
-       url('static/fonts/Atkinson-Hyperlegible-Regular-102.eot') format('embedded-opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
 @import 'mixins';
 
 // Variables
-$primary-font: 'Atkinson Hyperlegible', sans-serif;
-$secondary-font: 'Atkinson Hyperlegible', sans-serif;
+$primary-font: 'Josefin Sans',
+sans-serif;
+$secondary-font: 'Droid Serif',
+serif;
 $primary-color: #2e485c;
 $icon-font: 'themefisher-font' !important;
 
