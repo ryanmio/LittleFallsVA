@@ -386,7 +386,8 @@ function onScroll() {
   });
     
     
-     const tooltips = document.querySelectorAll('.tooltip');
+  document.addEventListener('DOMContentLoaded', function () {
+  const tooltips = document.querySelectorAll('.tooltip');
   const sources = [
     'Miller, H. M. (2004). The archaeology of colonial encounters along Chesapeake Bay: An overview. Revista de Arqueología Americana, 23, 231-90. JSTOR, http://www.jstor.org/stable/27768492. Accessed 21 Apr. 2023.',
     "Powhatan's World and Colonial Virginia: A Conflict of Cultures.",
@@ -396,11 +397,12 @@ function onScroll() {
     'https://encyclopediavirginia.org/entries/colonial-virginia/',
     'https://encyclopediavirginia.org/entries/patawomeck-tribe/',
     '“The Episcopal Church in Virginia, 1607-2007.” The Virginia Magazine of History and Biography, vol. 115, no. 2, 2007, pp. 163–344. JSTOR, http://www.jstor.org/stable/4250388. Accessed 21 Apr. 2023.'
-  ];
+ ];
 
   tooltips.forEach((tooltip, index) => {
-    tooltip.dataset.text = sources[index];
+    tooltip.setAttribute('title', sources[index]);
   });
+});
 
 </script>
 {{ end }}
