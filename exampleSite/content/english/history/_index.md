@@ -10,11 +10,12 @@ layout: "scrollytelling"
       <span class="chapter-number">Chapter 1.</span>
       <h3 class="chapter-title">Pre-colonial era: Indigenous peoples inhabit the area</h3>
 </div>
-<p>The area around Falls Church was occupied by Algonquian-speaking peoples for at least 10,000 years<span class="tooltip" id="tooltip1">[1]</span>. Several tribes, including the Doeg (or Dogue) Indians, Tauxenents, Patawomekes (Potomacs), and Matchotics, lived in the region and established their settlements along the rivers and coastlines, particularly the Potomac River<span class="tooltip" id="tooltip2">[2]</span>. The Powhatan Confederacy, the most powerful chiefdom in the area, controlled 28-32 groups or tribes that occupied riverside towns and villages, with their influence extending throughout the region and up to the Fall Line, a geological boundary where waterfalls or rapids limited river navigation and marked the transition between the Coastal Plain and the Piedmont Plateau<span class="tooltip" id="tooltip3">[3]</span>.</p>
+<p>The area around Falls Church was occupied by Algonquian-speaking peoples for at least 10,000 years<span class="tooltip" id="tooltip1" data-tooltip-source="source1">[1]</span>. Several tribes, including the Doeg (or Dogue) Indians, Tauxenents, Patawomekes (Potomacs), and Matchotics, lived in the region and established their settlements along the rivers and coastlines, particularly the Potomac River<span class="tooltip" id="tooltip2" data-tooltip-source="source2">[2]</span>. The Powhatan Confederacy, the most powerful chiefdom in the area, controlled 28-32 groups or tribes that occupied riverside towns and villages, with their influence extending throughout the region and up to the Fall Line, a geological boundary where waterfalls or rapids limited river navigation and marked the transition between the Coastal Plain and the Piedmont Plateau<span class="tooltip" id="tooltip3" data-tooltip-source="source3">[3]</span>.</p>
 
-<p>The falls of the Potomac River were vital for the tribes, providing sustenance, resources, and a meeting place for trade and cultural exchange<span class="tooltip" id="tooltip4">[4]</span>. The local indigenous tribes, such as the Doeg, Tauxenent, and Matchotic, had rich cultural traditions, with unique customs for marriage, divorce, education, and punishment of wrongdoers<span class="tooltip" id="tooltip5">[5]</span>. The priests, or kwiocosuk, played a significant role in their society, advising the chiefs on important actions, including war<span class="tooltip" id="tooltip6">[6]</span>. The First, Second, and Third Anglo-Powhatan Wars, along with treaties between Native Americans and English colonists, impacted the indigenous populations in the Falls Church area, as tribes were forced to cede land and resources<span class="tooltip" id="tooltip7">[7]</span>.</p>
+<p>The falls of the Potomac River were vital for the tribes, providing sustenance, resources, and a meeting place for trade and cultural exchange<span class="tooltip" id="tooltip4" data-tooltip-source="source4">[4]</span>. The local indigenous tribes, such as the Doeg, Tauxenent, and Matchotic, had rich cultural traditions, with unique customs for marriage, divorce, education, and punishment of wrongdoers<span class="tooltip" id="tooltip5" data-tooltip-source="source5">[5]</span>. The priests, or kwiocosuk, played a significant role in their society, advising the chiefs on important actions, including war<span class="tooltip" id="tooltip6" data-tooltip-source="source6">[6]</span>. The First, Second, and Third Anglo-Powhatan Wars, along with treaties between Native Americans and English colonists, impacted the indigenous populations in the Falls Church area, as tribes were forced to cede land and resources<span class="tooltip" id="tooltip7" data-tooltip-source="source7">[7]</span>.</p>
 
-<p>As European settlers arrived and expanded their settlements, the indigenous tribes in the Falls Church area experienced upheaval and displacement, leading to a decline in their population and paving the way for the transformation of the region<span class="tooltip" id="tooltip8">[8]</span>.</p>
+<p>As European settlers arrived and expanded their settlements, the indigenous tribes in the Falls Church area experienced upheaval and displacement, leading to a decline in their population and paving the way for the transformation of the region<span class="tooltip" id="tooltip8" data-tooltip-source="source8">[8]</span>.</p>
+
 </div>
   <div class="image-container">
   <img src="/images/history/smithmap.webp" alt="Image 1" />
@@ -180,5 +181,33 @@ layout: "scrollytelling"
     <p>To truly acknowledge and address our dark past, we must first break free from the shackles of a name that honors an institution responsible for such cruelty. By choosing a new identity, we send a powerful message of reckoning, accountability, and a commitment to healing the wounds inflicted by our ancestors.</p>
       <p>Embracing the name Little Falls allows us to connect with our pre-colonial past, paying homage to the Indigenous peoples who first cherished the beauty and wonder of the Potomac River. In doing so, we create an inclusive and unifying identity that acknowledges the diverse voices of our community, both past and present.</p>
       <p>By confronting our history and breaking away from the name Falls Church, we have an opportunity to create a more equitable and compassionate future, where all members of our community are valued and heard. Let us use this new identity as a stepping stone towards collective healing, understanding, and growth.</p>
+  </div>
+</div>
+
+
+<div style="display: none;">
+  <div id="source1" class="tooltip-source">
+    Miller, H. M. (2004). The archaeology of colonial encounters along Chesapeake Bay: An overview. Revista de Arqueología Americana, 23, 231-90. JSTOR, http://www.jstor.org/stable/27768492. Accessed 21 Apr. 2023.
+  </div>
+  <div id="source2" class="tooltip-source">
+    Powhatan's World and Colonial Virginia: A Conflict of Cultures.
+  </div>
+  <div id="source3" class="tooltip-source">
+    https://encyclopediavirginia.org/entries/colonial-virginia/
+  </div>
+  <div id="source4" class="tooltip-source">
+    Duhamel, J. F. (1935). Analostan Island. Records of the Columbia Historical Society, Washington, D.C., 35/36, 133-45. JSTOR, http://www.jstor.org/stable/40067513. Accessed 21 Apr. 2023.
+  </div>
+  <div id="source5" class="tooltip-source">
+    https://encyclopediavirginia.org/entries/colonial-virginia/
+  </div>
+  <div id="source6" class="tooltip-source">
+    https://encyclopediavirginia.org/entries/colonial-virginia/
+  </div>
+  <div id="source7" class="tooltip-source">
+    https://encyclopediavirginia.org/entries/patawomeck-tribe/
+  </div>
+  <div id="source8" class="tooltip-source">
+    “The Episcopal Church in Virginia, 1607-2007.” The Virginia Magazine of History and Biography, vol. 115, no. 2, 2007, pp. 163–344. JSTOR, http://www.jstor.org/stable/4250388. Accessed 21 Apr. 2023.
   </div>
 </div>
