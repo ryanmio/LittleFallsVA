@@ -1,11 +1,12 @@
 @import 'mixins';
 
 // Variables
-$primary-font: 'Atkinson Hyperlegible', sans-serif, 700;
-$secondary-font: 'Atkinson Hyperlegible', sans-serif, 400;
+$primary-font: 'Josefin Sans',
+sans-serif;
+$secondary-font: 'Droid Serif',
+serif;
 $primary-color: #2e485c;
 $icon-font: 'themefisher-font' !important;
-
 
 /*--
     Common Css
