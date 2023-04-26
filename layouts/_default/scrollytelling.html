@@ -197,40 +197,6 @@ html {
   text-decoration: underline;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1001;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: #f9f9f9;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 50%;
-  max-width: 600px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 
 </style>
@@ -388,47 +354,6 @@ function onScroll() {
     onScroll();
     updateActiveChapterLink();
   });
-    
-    
- document.addEventListener("click", function (event) {
-    if (!event.target.matches(".tooltip")) return;
-
-    event.preventDefault();
-
-    const tooltipId = event.target.id;
-    const source = document.querySelector(`[data-tooltip-source='${tooltipId}']`);
-
-    if (!source) return;
-
-    const modal = document.createElement("div");
-    modal.classList.add("modal");
-
-    const modalContent = document.createElement("div");
-    modalContent.classList.add("modal-content");
-
-    const closeBtn = document.createElement("span");
-    closeBtn.classList.add("close");
-    closeBtn.innerHTML = "&times;";
-
-    modalContent.appendChild(closeBtn);
-    modalContent.appendChild(document.createTextNode(source.textContent));
-    modal.appendChild(modalContent);
-    document.body.appendChild(modal);
-
-    modal.style.display = "block";
-
-    closeBtn.onclick = function () {
-      modal.style.display = "none";
-      modal.remove();
-    };
-
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-        modal.remove();
-      }
-    };
-  });    
 
 </script>
 {{ end }}
