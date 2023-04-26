@@ -197,7 +197,37 @@ html {
   text-decoration: underline;
 }
 
+tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  color: blue;
+  text-decoration: underline;
+}
 
+.tooltip:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  padding: 5px;
+  width: 300px;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: left;
+  white-space: pre-wrap;
+  z-index: 1;
+}
+
+.tooltip[data-text]:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
 
 </style>
 
@@ -353,6 +383,23 @@ function onScroll() {
   window.addEventListener("scroll", () => {
     onScroll();
     updateActiveChapterLink();
+  });
+    
+    
+     const tooltips = document.querySelectorAll('.tooltip');
+  const sources = [
+    'Miller, H. M. (2004). The archaeology of colonial encounters along Chesapeake Bay: An overview. Revista de Arqueología Americana, 23, 231-90. JSTOR, http://www.jstor.org/stable/27768492. Accessed 21 Apr. 2023.',
+    "Powhatan's World and Colonial Virginia: A Conflict of Cultures.",
+    'https://encyclopediavirginia.org/entries/colonial-virginia/',
+    'Duhamel, J. F. (1935). Analostan Island. Records of the Columbia Historical Society, Washington, D.C., 35/36, 133-45. JSTOR, http://www.jstor.org/stable/40067513. Accessed 21 Apr. 2023.',
+    'https://encyclopediavirginia.org/entries/colonial-virginia/',
+    'https://encyclopediavirginia.org/entries/colonial-virginia/',
+    'https://encyclopediavirginia.org/entries/patawomeck-tribe/',
+    '“The Episcopal Church in Virginia, 1607-2007.” The Virginia Magazine of History and Biography, vol. 115, no. 2, 2007, pp. 163–344. JSTOR, http://www.jstor.org/stable/4250388. Accessed 21 Apr. 2023.'
+  ];
+
+  tooltips.forEach((tooltip, index) => {
+    tooltip.dataset.text = sources[index];
   });
 
 </script>
