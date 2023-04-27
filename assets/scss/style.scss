@@ -516,6 +516,7 @@ s.price {
 
 .press-and-media-section {
   margin-top: 50px;
+  margin-bottom: 50px;
 
   .media-contact-image {
     display: block;
@@ -551,6 +552,7 @@ s.price {
 
 .press-release-title-link {
   color: #2c475d;
+    text-decoration: underline;
 }
 
 .press-release-title-link:hover {
@@ -559,6 +561,8 @@ s.price {
 
 .press-and-media-section h3 {
   margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 
