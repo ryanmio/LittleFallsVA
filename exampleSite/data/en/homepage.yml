@@ -63,7 +63,7 @@ press_and_media:
     name: "Press and Media Inquiries"
     designation: "Organizer and Media Contact"
     email: "hello@littlefallsva.com"
-    description: "For media inquiries or to request an interview, please contact us at hello@littlefallsva.com."
+    description: "For media inquiries or to request an interview, please contact us at < a href="mailto:hello@littlefallsva.com">hello@littlefallsva.com< /a>."
 
 press_releases:
   - title: "Renaming Movement Launch"
