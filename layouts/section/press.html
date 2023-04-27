@@ -7,11 +7,18 @@
         {{ range $index, $page := $paginator.Pages }}
           <div class="card mb-4">
             <div class="card-body">
-              <h2 class="card-title"><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></h2>
+              <div class="d-flex">
+                <div class="flex-grow-1">
+                  <h2 class="card-title"><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></h2>
+                </div>
+                <div class="date-badge">
+                  <span class="date-day">{{ dateFormat "2" $page.Date }}</span>
+                  <span class="date-month">{{ dateFormat "Jan" $page.Date }}</span>
+                  <span class="date-year">{{ dateFormat "2006" $page.Date }}</span>
+                </div>
+              </div>
               <p class="card-text">{{ $page.Params.description }}</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">{{ dateFormat "January 2, 2006" $page.Date }}</small>
+              <a href="{{ $page.Permalink }}" class="continue-reading">continue reading »</a>
             </div>
           </div>
           {{ if ne (add $index 1) (len $paginator.Pages) }}
