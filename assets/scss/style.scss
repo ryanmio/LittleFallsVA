@@ -687,3 +687,36 @@ s.price {
   object-fit: cover;
 }
 
+.date-badge {
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #f8f9fa;
+}
+
+.date-day {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.date-month {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.date-year {
+  display: block;
+  font-size: 14px;
+}
+
+.continue-reading {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.continue-reading:hover {
+  text-decoration: underline;
+}
