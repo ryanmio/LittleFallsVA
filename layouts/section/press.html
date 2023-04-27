@@ -4,7 +4,7 @@
       <div class="col-md-8">
         <h3>Latest Press Releases</h3>
         <ul class="press-releases">
-          {{ range first 3 (where .Site.RegularPages.ByWeight "Section" "press") }}
+          {{ range first 10 (where .Site.RegularPages.ByWeight "Section" "press") }}
           <li>
             <h4><a href="{{ .Permalink }}" class="press-release-title-link">{{ .Title }}</a></h4>
             <div class="press-release-content">
