@@ -2,11 +2,21 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <h1>Press Releases</h1>
+        <h1 class="mb-4">Press Releases</h1>
         {{ $paginator := .Paginate (where .Site.RegularPages "Section" "press") }}
         {{ range $paginator.Pages }}
-          <br><h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-          <p>{{ .Params.description }}</p>
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+              <p class="card-text">{{ .Params.description }}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">{{ dateFormat "January 2, 2006" .Date }}</small>
+            </div>
+          </div>
+          {{ if ne (add $index 1) (len $paginator.Pages) }}
+            <hr class="mb-4">
+          {{ end }}
         {{ end }}
       </div>
     </div>
