@@ -1,5 +1,7 @@
 {{- define "main" -}}
- <div class="col-md-8">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
         <h3>Latest Press Releases</h3>
         <ul class="press-releases">
           {{ range first 3 (where .Site.RegularPages.ByWeight "Section" "press") }}
@@ -12,6 +14,8 @@
           {{ end }}
         </ul>
       </div>
+    </div>
+  </div>
   {{ if eq .Site.Language.Lang "es" }}
     {{ partial "press-kit-es.html" . }}
   {{ else }}
