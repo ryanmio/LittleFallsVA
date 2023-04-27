@@ -13,7 +13,7 @@
             </div>
             <div class="card-body">
               <h2 class="card-title"><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></h2>
-              <p class="card-text d-inline">{{ $page.Params.description }} <a href="{{ $page.Permalink }}" class="continue-reading">continue reading »</a></p>
+              <p class="card-text d-inline">{{ $page.Params.description }} <a href="{{ $page.Permalink }}" class="continue-reading">Continue reading »</a></p>
             </div>
           </div>
           {{ if ne (add $index 1) (len $paginator.Pages) }}
