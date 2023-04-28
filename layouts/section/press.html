@@ -22,6 +22,14 @@
       </div>
     </div>
   </div>
+<div class="subscribe-form">
+  <form name="subscribe" method="POST" data-netlify="true">
+    <label for="email">Subscribe to press list</label>
+    <input type="email" name="email" id="email" placeholder="Email" required />
+    <button type="submit">&rarr;</button>
+  </form>
+</div>
+
   {{ if eq .Site.Language.Lang "es" }}
     {{ partial "press-kit-es.html" . }}
   {{ else }}
