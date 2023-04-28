@@ -27,15 +27,6 @@
       line-height: 1.6;
     }
 
-    .content ul {
-      list-style-type: disc;
-      margin-left: 2rem;
-    }
-
-    .content ul li {
-      margin-bottom: 0.5rem;
-    }
-
     .navigation {
       margin-top: 2rem;
     }
@@ -51,15 +42,7 @@
     .navigation .next:hover {
       color: #76a0c2;
     }
-
-    @media (max-width: 767px) {
-      .col-md-10.mx-auto {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-    }
   </style>
-
 
 <section class="section press-release">
   <div class="container">
@@ -75,12 +58,12 @@
         <nav class="navigation mt-5">
           <div class="row">
             <div class="col-6">
-              {{ with (.GetPage "/press").PrevInSection . }}
+              {{ with .Prev }}
               <a href="{{ .Permalink }}" class="previous">« Previous Release</a>
               {{ end }}
             </div>
             <div class="col-6 text-right">
-              {{ with (.GetPage "/press").NextInSection . }}
+              {{ with .Next }}
               <a href="{{ .Permalink }}" class="next">Next Release »</a>
               {{ end }}
             </div>
