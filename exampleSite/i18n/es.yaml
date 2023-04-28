@@ -57,3 +57,14 @@
 
 - id: petition
   translation: "Petición"  
+  
+- id: previous_release
+  translation: "Lanzamiento anterior"
+
+- id: next_release
+  translation: "Próximo lanzamiento"
+
+- id: back_to_press_releases
+  translation: "Volver a comunicados de prensa"
+   
+  

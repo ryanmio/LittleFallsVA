@@ -54,3 +54,13 @@
   
 - id: history
   translation: "History"
+  
+- id: previous_release
+  translation: "Previous Release"
+
+- id: next_release
+  translation: "Next Release"
+
+- id: back_to_press_releases
+  translation: "Back to Press Releases"
+  
