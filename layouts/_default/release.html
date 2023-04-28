@@ -1,5 +1,6 @@
 {{ define "main" }}
 
+<head>
   <style>
     .press-release {
       padding-top: 1.5rem;
@@ -12,7 +13,7 @@
     }
 
     .press-release-header h1 {
-      font-size: 1.75rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
 
@@ -25,6 +26,15 @@
     .content {
       text-align: justify;
       line-height: 1.6;
+    }
+
+    .content ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+    }
+
+    .content ul li {
+      margin-bottom: 0.5rem;
     }
 
     .navigation {
@@ -42,7 +52,15 @@
     .navigation .next:hover {
       color: #76a0c2;
     }
+
+    @media (max-width: 767px) {
+      .col-md-10.mx-auto {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
   </style>
+</head>
 
 <section class="section press-release">
   <div class="container">
@@ -58,15 +76,16 @@
         <nav class="navigation mt-5">
           <div class="row">
             <div class="col-6">
-              {{ with .Prev }}
-              <a href="{{ .Permalink }}" class="previous">« Previous Release</a>
-              {{ end }}
-            </div>
-            <div class="col-6 text-right">
-              {{ with .Next }}
-              <a href="{{ .Permalink }}" class="next">Next Release »</a>
-              {{ end }}
-            </div>
+  {{ with .PrevInSection }}
+  <a href="{{ .Permalink }}" class="previous">« Previous Release</a>
+  {{ end }}
+</div>
+<div class="col-6 text-right">
+  {{ with .NextInSection }}
+  <a href="{{ .Permalink }}" class="next">Next Release »</a>
+  {{ end }}
+</div>
+
           </div>
         </nav>
       </div>
