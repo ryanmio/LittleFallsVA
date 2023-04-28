@@ -1,6 +1,5 @@
 {{ define "main" }}
 
-<head>
   <style>
     .press-release {
       padding-top: 1.5rem;
@@ -13,7 +12,7 @@
     }
 
     .press-release-header h1 {
-      font-size: 2.5rem;
+      font-size: 1.75rem;
       margin-bottom: 0.5rem;
     }
 
@@ -24,7 +23,7 @@
     }
 
     .content {
-      text-align: justify;
+      text-align: left;
       line-height: 1.6;
     }
 
@@ -53,6 +52,18 @@
       color: #76a0c2;
     }
 
+    .back-to-press-releases {
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #2f4a5e;
+    }
+
+    .back-to-press-releases:hover {
+      color: #76a0c2;
+    }
+
     @media (max-width: 767px) {
       .col-md-10.mx-auto {
         padding-left: 1rem;
@@ -60,12 +71,12 @@
       }
     }
   </style>
-</head>
 
 <section class="section press-release">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
+        <a href="{{ "press" | absURL }}" class="back-to-press-releases">&larr; Back to Press Releases</a>
         <div class="press-release-header">
           <h1>{{ .Title | markdownify }}</h1>
           <div class="date">{{ dateFormat "January 2, 2006" .Date }}</div>
@@ -76,16 +87,15 @@
         <nav class="navigation mt-5">
           <div class="row">
             <div class="col-6">
-  {{ with .PrevInSection }}
-  <a href="{{ .Permalink }}" class="previous">« Previous Release</a>
-  {{ end }}
-</div>
-<div class="col-6 text-right">
-  {{ with .NextInSection }}
-  <a href="{{ .Permalink }}" class="next">Next Release »</a>
-  {{ end }}
-</div>
-
+              {{ with .PrevInSection }}
+                <a href="{{ .Permalink }}" class="previous">« Previous Release</a>
+              {{ end }}
+            </div>
+            <div class="col-6 text-right">
+              {{ with .NextInSection }}
+                <a href="{{ .Permalink }}" class="next">Next Release »</a>
+              {{ end }}
+            </div>
           </div>
         </nav>
       </div>
