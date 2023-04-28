@@ -88,12 +88,12 @@
           <div class="row">
             <div class="col-6">
               {{ with .PrevInSection }}
-                <a href="{{ .Permalink }}" class="previous">« Previous Release</a>
+                <a href="{{ .Permalink }}" class="previous">{{ i18n "previous_release" }} &laquo;</a>
               {{ end }}
             </div>
             <div class="col-6 text-right">
               {{ with .NextInSection }}
-                <a href="{{ .Permalink }}" class="next">Next Release »</a>
+                <a href="{{ .Permalink }}" class="next">&raquo; {{ i18n "next_release" }}</a>
               {{ end }}
             </div>
           </div>
