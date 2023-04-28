@@ -7,6 +7,7 @@ draft: false
 weight: 8
 category: "name-change"
 keywords: "inclusividad, cambio de nombre, Falls Church, Little Falls, comunidad, unidad, diversidad"
+layout: "release"
 ---
 
 PARA PUBLICACIÓN INMEDIATA

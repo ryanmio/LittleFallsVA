@@ -7,6 +7,7 @@ draft: false
 category: "name-change"
 weight: 8
 keywords: "Little Falls, renaming movement, inclusivity, diversity, community, Falls Church, Virginia, Falls Church VA, Little Falls VA, Falls Church name change, rename Falls Church, inclusivity, name change, Falls Church, Little Falls, community, unity, diversity"
+layout: "release"
 ---
 
 

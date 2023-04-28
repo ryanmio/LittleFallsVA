@@ -6,6 +6,7 @@ description: "Little Falls, VA - 1 de mayo de 2023 - El Comité por Little Falls
 weight: 10
 category: "name-change"
 keywords: "renombramiento, movimiento, Falls Church, Little Falls, comunidad, inclusividad, diversidad"
+layout: "release"
 ---
 
 
