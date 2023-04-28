@@ -5,20 +5,19 @@
         <h1 class="mb-4">Press Releases</h1>
         {{ $paginator := .Paginate (where .Site.RegularPages "Section" "press") }}
         {{ range $index, $page := $paginator.Pages }}
-          <div class="card mb-4 position-relative">
-            <div class="date-badge">
-              <span class="date-day">{{ dateFormat "2" $page.Date }}</span>
-              <span class="date-month">{{ dateFormat "Jan" $page.Date }}</span>
-              <span class="date-year">{{ dateFormat "2006" $page.Date }}</span>
+          <a href="{{ $page.Permalink }}" class="card-link">
+            <div class="card mb-4 position-relative">
+              <div class="date-badge">
+                <span class="date-day">{{ dateFormat "2" $page.Date }}</span>
+                <span class="date-month">{{ dateFormat "Jan" $page.Date }}</span>
+                <span class="date-year">{{ dateFormat "2006" $page.Date }}</span>
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">{{ $page.Title }}</h2>
+                <p class="card-text d-inline">{{ $page.Params.description }} <span class="continue-reading">continue reading »</span></p>
+              </div>
             </div>
-            <div class="card-body">
-              <h2 class="card-title"><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></h2>
-              <p class="card-text d-inline">{{ $page.Params.description }} <a href="{{ $page.Permalink }}" class="continue-reading">Continue reading »</a></p>
-            </div>
-          </div>
-          {{ if ne (add $index 1) (len $paginator.Pages) }}
-            <hr class="mb-4">
-          {{ end }}
+          </a>
         {{ end }}
       </div>
     </div>

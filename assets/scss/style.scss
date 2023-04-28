@@ -688,13 +688,22 @@ s.price {
   object-fit: cover;
 }
 
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link:hover .card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .date-badge {
   position: absolute;
   top: -10px;
   right: 15px;
   width: 60px;
   text-align: center;
-  background-color: #2f4a5e;
+  background-color: #007bff;
   color: #fff;
   border-radius: 3px;
   clip-path: polygon(0 10%, 10% 0, 90% 0, 100% 10%, 100% 100%, 0 100%);
@@ -720,12 +729,15 @@ s.price {
   line-height: 1;
 }
 
-.continue-reading {
-  text-decoration: none;
-  color: #007bff;
-  white-space: nowrap;
+.card-title, .continue-reading {
+  color: #2f4a5e;
 }
 
-.continue-reading:hover {
-  text-decoration: underline;
+.card-link:hover .card-title, .card-link:hover .continue-reading {
+  color: #76a0c2;
+}
+
+.continue-reading {
+  text-decoration: none;
+  white-space: nowrap;
 }
