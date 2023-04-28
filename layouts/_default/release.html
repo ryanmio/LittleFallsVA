@@ -86,17 +86,16 @@
         </div>
         <nav class="navigation mt-5">
           <div class="row">
-            <div class="col-6">
+           <div class="col-6">
               {{ with .PrevInSection }}
-                <a href="{{ .Permalink }}" class="previous">{{ i18n "previous_release" }} &raquo;</a>
+                <a href="{{ .Permalink }}" class="previous">&laquo; {{ i18n "previous_release" }}</a>
               {{ end }}
             </div>
             <div class="col-6 text-right">
               {{ with .NextInSection }}
-                <a href="{{ .Permalink }}" class="next">&laquo; {{ i18n "next_release" }}</a>
+                <a href="{{ .Permalink }}" class="next">{{ i18n "next_release" }} &raquo;</a>
               {{ end }}
             </div>
-
           </div>
         </nav>
       </div>
