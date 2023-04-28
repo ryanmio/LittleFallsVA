@@ -76,7 +76,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <a href="{{ "press" | absURL }}" class="back-to-press-releases">&larr; Back to Press Releases</a>
+        <a href="{{ "press" | absURL }}" class="back-to-press-releases">&larr; {{ i18n "back_to_press_releases" }}</a>
         <div class="press-release-header">
           <h1>{{ .Title | markdownify }}</h1>
           <div class="date">{{ dateFormat "January 2, 2006" .Date }}</div>
@@ -88,14 +88,15 @@
           <div class="row">
             <div class="col-6">
               {{ with .PrevInSection }}
-                <a href="{{ .Permalink }}" class="previous">{{ i18n "previous_release" }} &laquo;</a>
+                <a href="{{ .Permalink }}" class="previous">{{ i18n "previous_release" }} &raquo;</a>
               {{ end }}
             </div>
             <div class="col-6 text-right">
               {{ with .NextInSection }}
-                <a href="{{ .Permalink }}" class="next">&raquo; {{ i18n "next_release" }}</a>
+                <a href="{{ .Permalink }}" class="next">&laquo; {{ i18n "next_release" }}</a>
               {{ end }}
             </div>
+
           </div>
         </nav>
       </div>
