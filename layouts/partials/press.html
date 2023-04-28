@@ -10,37 +10,29 @@
         </div>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <h3>Latest Press Releases</h3>
-        <div class="row">
-          {{ range first 3 (where .Site.RegularPages.ByWeight "Section" "press") }}
-            <div class="col-md-4">
-              <a href="{{ .Permalink }}" class="card-link">
-                <div class="card mb-4 position-relative">
-                  <div class="date-badge">
-                    <span class="date-day">{{ dateFormat "2" .Date }}</span>
-                    <span class="date-month">{{ dateFormat "Jan" .Date }}</span>
-                    <span class="date-year">{{ dateFormat "2006" .Date }}</span>
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">{{ .Title }}</h4>
-                    <p class="card-text d-inline">{{ .Params.description }} <span class="continue-reading">continue reading »</span></p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          {{ end }}
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
+    
+    <div class="row custom-gutter">
+      <div class="col-md-4">
         <h3>{{ $data.homepage.press_and_media.media_contact.name }}</h3>
         <p>{{ $data.homepage.press_and_media.media_contact.description }}
           <a href="mailto:hello@littlefallsva.com">hello@littlefallsva.com</a>.</p>
+      </div>
+      
+      <div class="col-md-8">
+        <h3>Latest Press Releases</h3>
+        <ul class="press-releases">
+          {{ range first 3 (where .Site.RegularPages.ByWeight "Section" "press") }}
+          <li>
+            <div class="press-release-header">
+              <h4><a href="{{ .Permalink }}" class="press-release-title-link">{{ .Title }}</a></h4>
+              <div class="date">{{ dateFormat "January 2, 2006" .Date }}</div>
+            </div>
+            <div class="press-release-content">
+              <p style="text-align: left;">{{ .Params.description }} <span class="press-release-link-container"><a href="{{ .Permalink }}" class="press-release-link">Continue Reading »</a></span></p>
+            </div>
+          </li>
+          {{ end }}
+        </ul>
       </div>
     </div>
   </div>
