@@ -1,0 +1,73 @@
+{{ define "main" }}
+
+<section class="section press-release">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="press-release-header mb-4">
+          <h1>{{ .Title | markdownify }}</h1>
+          <div class="date">{{ dateFormat "January 2, 2006" .Date }}</div>
+        </div>
+        <div class="press-release-image mb-4">
+          <img class="img-fluid w-100" src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
+        </div>
+        <div class="content">
+          {{ .Content }}
+        </div>
+        <nav class="navigation mt-5">
+          <div class="row">
+            <div class="col-6">
+              {{ with .Prev }}
+              <a href="{{ .Permalink }}" class="previous">« Previous Release</a>
+              {{ end }}
+            </div>
+            <div class="col-6 text-right">
+              {{ with .Next }}
+              <a href="{{ .Permalink }}" class="next">Next Release »</a>
+              {{ end }}
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <style>
+    .press-release {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .press-release-header {
+      text-align: center;
+    }
+
+    .press-release-header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .press-release-header .date {
+      font-size: 1rem;
+      color: #777;
+    }
+
+    .navigation {
+      margin-top: 2rem;
+    }
+
+    .navigation .previous,
+    .navigation .next {
+      font-size: 1rem;
+      color: #2f4a5e;
+      text-decoration: none;
+    }
+
+    .navigation .previous:hover,
+    .navigation .next:hover {
+      color: #76a0c2;
+    }
+  </style>
+
+{{ end }}
