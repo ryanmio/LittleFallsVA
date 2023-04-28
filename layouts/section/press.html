@@ -1,60 +1,4 @@
 {{- define "main" -}}
-<head>
-  <style>
-    .press-release {
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-    }
-
-    .press-release-header {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .press-release-header h1 {
-      font-size: 1.5rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .press-release-header .date {
-      font-size: 1rem;
-      color: #777;
-      margin-bottom: 0.5rem;
-    }
-
-    .content {
-      text-align: left;
-      line-height: 1.6;
-    }
-
-    .content ul {
-      list-style-type: disc;
-      margin-left: 2rem;
-    }
-
-    .content ul li {
-      margin-bottom: 0.5rem;
-    }
-
-    .continue-reading {
-      font-size: 0.9rem;
-      color: #2f4a5e;
-      text-decoration: none;
-    }
-
-    .continue-reading:hover {
-      color: #76a0c2;
-    }
-
-    @media (max-width: 767px) {
-      .col-md-10.mx-auto {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-    }
-  </style>
-</head>
-
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
@@ -62,16 +6,17 @@
         {{ $paginator := .Paginate (where .Site.RegularPages "Section" "press") }}
         {{ range $index, $page := $paginator.Pages }}
           <a href="{{ $page.Permalink }}" class="card-link">
-            <section class="press-release">
-              <div class="press-release-header">
-                <h1>{{ $page.Title | markdownify }}</h1>
-                <div class="date">{{ dateFormat "January 2, 2006" $page.Date }}</div>
+            <div class="card mb-4 position-relative">
+              <div class="date-badge">
+                <span class="date-day">{{ dateFormat "2" $page.Date }}</span>
+                <span class="date-month">{{ dateFormat "Jan" $page.Date }}</span>
+                <span class="date-year">{{ dateFormat "2006" $page.Date }}</span>
               </div>
-              <div class="content">
-                {{ $page.Content | truncate 150 "…" }}
-                <a href="{{ $page.Permalink }}" class="continue-reading">Continue reading »</a>
+              <div class="card-body">
+                <h2 class="card-title">{{ $page.Title }}</h2>
+                <p class="card-text d-inline">{{ $page.Params.description }} <span class="continue-reading">continue reading »</span></p>
               </div>
-            </section>
+            </div>
           </a>
         {{ end }}
       </div>

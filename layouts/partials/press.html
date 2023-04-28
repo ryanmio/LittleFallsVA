@@ -23,9 +23,12 @@
         <ul class="press-releases">
           {{ range first 3 (where .Site.RegularPages.ByWeight "Section" "press") }}
           <li>
-            <h4><a href="{{ .Permalink }}" class="press-release-title-link">{{ .Title }}</a></h4>
+            <div class="press-release-header">
+              <h4><a href="{{ .Permalink }}" class="press-release-title-link">{{ .Title }}</a></h4>
+              <div class="date">{{ dateFormat "January 2, 2006" .Date }}</div>
+            </div>
             <div class="press-release-content">
-              <p>{{ .Params.description }} <span class="press-release-link-container"><a href="{{ .Permalink }}" class="press-release-link">Continue Reading »</a></span></p>
+              <p style="text-align: left;">{{ .Params.description }} <span class="press-release-link-container"><a href="{{ .Permalink }}" class="press-release-link">Continue Reading »</a></span></p>
             </div>
           </li>
           {{ end }}
