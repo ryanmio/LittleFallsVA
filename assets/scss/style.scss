@@ -515,6 +515,16 @@ s.price {
   }
 }
 
+  a.email-link {
+    color: #2f4a5e;
+    text-decoration: underline;
+  }
+
+  a.email-link:hover {
+    color: #76a0c2;
+  }
+
+
 .press-and-media-section {
   margin-top: 50px;
   margin-bottom: 50px;
