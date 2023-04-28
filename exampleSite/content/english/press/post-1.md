@@ -7,6 +7,7 @@ description: "Little Falls, VA - May 01, 2023 - The Committee for Little Falls, 
 keywords: "Little Falls, renaming movement, inclusivity, diversity, community, Falls Church, Virginia, Falls Church VA, Little Falls VA, Falls Church name change, rename Falls Church"
 category: "name-change"
 weight: 10
+layout: "release"
 ---
 
 
