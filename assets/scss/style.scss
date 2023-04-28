@@ -775,7 +775,8 @@ s.price {
 .subscribe-form {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -825,12 +826,12 @@ s.price {
     align-items: flex-start;
   }
 
-  .subscribe-form label {
+ .subscribe-form label {
     margin-bottom: 0.5rem;
   }
 
   .subscribe-form input {
-       max-width: 100%;
+    max-width: 100%;
   }
 
   .subscribe-form button {
