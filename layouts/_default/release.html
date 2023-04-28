@@ -1,5 +1,6 @@
 {{ define "main" }}
 
+<head>
   <style>
     .press-release {
       padding-top: 1.5rem;
@@ -42,7 +43,20 @@
     .navigation .next:hover {
       color: #76a0c2;
     }
+
+    .press-contact {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 767px) {
+      .col-md-10.mx-auto {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
   </style>
+</head>
 
 <section class="section press-release">
   <div class="container">
@@ -54,6 +68,9 @@
         </div>
         <div class="content">
           {{ .Content }}
+        </div>
+        <div class="press-contact">
+          Press Contact: <a href="mailto:hello@littlefallsva.com">hello@littlefallsva.com</a>
         </div>
         <nav class="navigation mt-5">
           <div class="row">
