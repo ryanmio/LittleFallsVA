@@ -388,9 +388,7 @@ sup {
   onScroll();
 
   function scrollToElementWithOffset(element, offset) {
-    const elementTop = element.getBoundingClientRect().top;
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const targetPosition = elementTop + scrollTop - offset;
+    const targetPosition = element.offsetTop - offset;
     window.scrollTo({ top: targetPosition, behavior: 'smooth' });
   }
 
@@ -415,6 +413,7 @@ sup {
   });
 
 </script>
+
 
 
 {{ end }}
