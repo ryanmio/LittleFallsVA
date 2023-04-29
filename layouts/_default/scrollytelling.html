@@ -363,51 +363,55 @@ sup {
 <script>
   const scrollSections = document.querySelectorAll(".scroll-section");
   const backToTop = document.querySelector('.back-to-top');
-  const headerOffset = 80;
+  const headerOffset = 100;
 
-function onScroll() {
-  scrollSections.forEach((section) => {
-    const sectionTop = section.getBoundingClientRect().top;
-    const sectionHeight = section.offsetHeight;
+  function onScroll() {
+    scrollSections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const sectionHeight = section.offsetHeight;
 
-    // Check if the top of the section is within the viewport or if it has not passed the middle of the viewport
-    if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 1.5) {
-      section.classList.add("visible");
+      if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 1.5) {
+        section.classList.add("visible");
+      } else {
+        section.classList.remove("visible");
+      }
+    });
+
+    if (window.scrollY > window.innerHeight / 1.2) {
+      backToTop.classList.add("visible");
     } else {
-      section.classList.remove("visible");
+      backToTop.classList.remove("visible");
     }
-  });
-
-  if (window.scrollY > window.innerHeight / 1.2) {
-    backToTop.classList.add("visible");
-  } else {
-    backToTop.classList.remove("visible");
   }
-}
-
 
   window.addEventListener("scroll", onScroll);
   onScroll();
 
-  function updateActiveChapterLink() {
-    let activeChapterLink = null;
-    scrollSections.forEach((section, index) => {
-      const sectionTop = section.getBoundingClientRect().top;
-
-      if (sectionTop < window.innerHeight / 2 && sectionTop >= -window.innerHeight / 2) {
-        const chapterLinks = document.querySelectorAll('.chapter-nav a');
-        chapterLinks.forEach((link) => {
-          link.classList.remove('active');
-        });
-        activeChapterLink = chapterLinks[index];
-        activeChapterLink.classList.add('active');
-      }
-    });
+  function scrollToElementWithOffset(element, offset) {
+    const elementTop = element.getBoundingClientRect().top;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const targetPosition = elementTop + scrollTop - offset;
+    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
   }
 
-  window.addEventListener("scroll", () => {
-    onScroll();
-    updateActiveChapterLink();
+  const footnoteLinks = document.querySelectorAll('.footnote-link');
+  footnoteLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const footnoteId = link.getAttribute('href');
+      const targetFootnote = document.querySelector(footnoteId);
+      scrollToElementWithOffset(targetFootnote, headerOffset);
+    });
+  });
+
+  const backToTextLinks = document.querySelectorAll('.back-to-text');
+  backToTextLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const footnoteRefId = link.getAttribute('href');
+      const targetFootnoteLink = document.querySelector(footnoteRefId);
+      scrollToElementWithOffset(targetFootnoteLink, headerOffset);
+    });
   });
 
 </script>
