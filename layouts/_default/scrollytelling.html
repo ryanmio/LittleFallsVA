@@ -424,11 +424,12 @@ sup {
       event.preventDefault();
       const footnoteRefId = link.getAttribute('href');
       const targetFootnoteLink = document.querySelector(footnoteRefId);
-      const targetFootnoteLinkTop = targetFootnoteLink.getBoundingClientRect().top + window.scrollY - 300;
+      const targetFootnoteLinkTop = targetFootnoteLink.getBoundingClientRect().top + window.scrollY - 300; // Updated the offset to 200px
       window.scrollTo({ top: targetFootnoteLinkTop, behavior: 'smooth' });
     });
   });
 </script>
+
 
 
 
