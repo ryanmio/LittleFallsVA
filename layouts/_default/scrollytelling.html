@@ -410,39 +410,5 @@ function onScroll() {
     updateActiveChapterLink();
   });
 
-  function scrollToElementWithOffset(element, offset) {
-    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-    window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
-  }
-
-  const footnoteLinks = document.querySelectorAll('.footnote-link');
-  footnoteLinks.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const footnoteId = link.getAttribute('href');
-      const targetFootnote = document.querySelector(footnoteId);
-      scrollToElementWithOffset(targetFootnote, headerOffset);
-    });
-  });
-
-  const backToTextLinks = document.querySelectorAll('.back-to-text');
-  backToTextLinks.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const footnoteLinkId = link.getAttribute('href');
-      const targetFootnoteLink = document.querySelector(footnoteLinkId);
-      scrollToElementWithOffset(targetFootnoteLink, headerOffset);
-    });
-  });
-    
-     const backToTextLinks = document.querySelectorAll('.back-to-text');
-  backToTextLinks.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const footnoteRefId = link.getAttribute('href');
-      const targetFootnoteLink = document.querySelector(footnoteRefId);
-      scrollToElementWithOffset(targetFootnoteLink, headerOffset);
-    });
-  });
 </script>
 {{ end }}
