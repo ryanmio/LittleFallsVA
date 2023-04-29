@@ -391,8 +391,7 @@ sup {
     const elementTop = element.getBoundingClientRect().top;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const targetPosition = elementTop + scrollTop - offset;
-    window.scrollTo({ top: targetPosition, behavior: 'smooth', block: 'start' });
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
   }
 
   const footnoteLinks = document.querySelectorAll('.footnote-link');
@@ -416,5 +415,6 @@ sup {
   });
 
 </script>
+
 
 {{ end }}
