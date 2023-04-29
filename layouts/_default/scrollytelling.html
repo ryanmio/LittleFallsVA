@@ -389,7 +389,7 @@ sup {
   onScroll();
 
   function scrollToElementWithOffset(element, offset) {
-    const targetPosition = element.offsetTop - offset;
+    const targetPosition = element.parentElement.offsetTop - offset;
     window.scrollTo({ top: targetPosition, behavior: 'smooth' });
   }
 
@@ -414,6 +414,7 @@ sup {
   });
 
 </script>
+
 
 
 
