@@ -248,7 +248,7 @@ sup {
   <a href="#chapter9">Chapter 9</a>
   <a href="#chapter10">Chapter 10</a>
   <a href="#note">Historian's Note</a>
-  <a href="#resources">Resources</a>    
+  <a href="#resources">Footnotes</a>    
   <!-- Add more links for additional chapters -->
 </div>
 
@@ -363,6 +363,7 @@ sup {
 <script>
   const scrollSections = document.querySelectorAll(".scroll-section");
   const backToTop = document.querySelector('.back-to-top');
+  const headerOffset = 80;
 
 function onScroll() {
   scrollSections.forEach((section) => {
@@ -409,5 +410,30 @@ function onScroll() {
     updateActiveChapterLink();
   });
 
+  function scrollToElementWithOffset(element, offset) {
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
+  }
+
+  const footnoteLinks = document.querySelectorAll('.footnote-link');
+  footnoteLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const footnoteId = link.getAttribute('href');
+      const targetFootnote = document.querySelector(footnoteId);
+      scrollToElementWithOffset(targetFootnote, headerOffset);
+    });
+  });
+
+  const backToTextLinks = document.querySelectorAll('.back-to-text');
+  backToTextLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const footnoteLinkId = link.getAttribute('href');
+      const targetFootnoteLink = document.querySelector(footnoteLinkId);
+      scrollToElementWithOffset(targetFootnoteLink, headerOffset);
+    });
+  });
+    
 </script>
 {{ end }}
