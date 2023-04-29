@@ -363,7 +363,7 @@ sup {
 <script>
   const scrollSections = document.querySelectorAll(".scroll-section");
   const backToTop = document.querySelector('.back-to-top');
-  const headerOffset = 1000;
+  const headerOffset = 100;
 
   function onScroll() {
     scrollSections.forEach((section) => {
@@ -409,12 +409,12 @@ sup {
       const footnoteRefId = link.getAttribute('href');
       const targetFootnoteLink = document.querySelector(footnoteRefId);
       const chapterElement = targetFootnoteLink.closest('.scroll-section');
-      const targetPosition = chapterElement.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      scrollToElementWithOffset(chapterElement, headerOffset);
     });
   });
 
 </script>
+
 
 
 
