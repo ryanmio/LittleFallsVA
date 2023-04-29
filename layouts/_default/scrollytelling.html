@@ -424,11 +424,26 @@ sup {
       event.preventDefault();
       const footnoteRefId = link.getAttribute('href');
       const targetFootnoteLink = document.querySelector(footnoteRefId);
-      const targetFootnoteLinkTop = targetFootnoteLink.getBoundingClientRect().top + window.scrollY - 900; // Updated the offset to 200px
-      window.scrollTo({ top: targetFootnoteLinkTop, behavior: 'smooth' });
+      const targetFootnoteLinkTop = targetFootnoteLink.getBoundingClientRect().top + window.scrollY - 200;
+
+      // Create Intersection Observer
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const yOffset = -200; // Change the offset value here
+            const y = entry.boundingClientRect.y + window.scrollY + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+            observer.disconnect();
+          }
+        });
+      });
+
+      // Observe the target footnote link
+      observer.observe(targetFootnoteLink);
     });
   });
 </script>
+
 
 
 
