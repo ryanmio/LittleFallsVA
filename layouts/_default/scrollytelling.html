@@ -413,7 +413,7 @@ sup {
       event.preventDefault();
       const footnoteId = link.getAttribute('href');
       const targetFootnote = document.querySelector(footnoteId);
-      const targetFootnoteTop = targetFootnote.offsetTop - 100;
+      const targetFootnoteTop = targetFootnote.getBoundingClientRect().top + window.scrollY - 100;
       window.scrollTo({ top: targetFootnoteTop, behavior: 'smooth' });
     });
   });
@@ -424,7 +424,7 @@ sup {
       event.preventDefault();
       const footnoteRefId = link.getAttribute('href');
       const targetFootnoteLink = document.querySelector(footnoteRefId);
-      const targetFootnoteLinkTop = targetFootnoteLink.offsetTop - 300;
+      const targetFootnoteLinkTop = targetFootnoteLink.getBoundingClientRect().top + window.scrollY - 300;
       window.scrollTo({ top: targetFootnoteLinkTop, behavior: 'smooth' });
     });
   });
