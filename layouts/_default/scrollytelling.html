@@ -363,8 +363,6 @@ sup {
 <script>
   const scrollSections = document.querySelectorAll(".scroll-section");
   const backToTop = document.querySelector('.back-to-top');
-  const headerOffset = 100;
-  const scrollUpOffset = 300;
 
   function onScroll() {
     scrollSections.forEach((section) => {
@@ -388,18 +386,13 @@ sup {
   window.addEventListener("scroll", onScroll);
   onScroll();
 
-  function scrollToElementWithOffset(element, offset) {
-    const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-  }
-
   const footnoteLinks = document.querySelectorAll('.footnote-link');
   footnoteLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
       const footnoteId = link.getAttribute('href');
       const targetFootnote = document.querySelector(footnoteId);
-      scrollToElementWithOffset(targetFootnote, headerOffset);
+      targetFootnote.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 
@@ -409,18 +402,11 @@ sup {
       event.preventDefault();
       const footnoteRefId = link.getAttribute('href');
       const targetFootnoteLink = document.querySelector(footnoteRefId);
-      scrollToElementWithOffset(targetFootnoteLink, scrollUpOffset);
+      targetFootnoteLink.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 
 </script>
-
-
-
-
-
-
-
 
 
 
