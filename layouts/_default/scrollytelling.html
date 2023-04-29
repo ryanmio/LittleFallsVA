@@ -364,6 +364,7 @@ sup {
   const scrollSections = document.querySelectorAll(".scroll-section");
   const backToTop = document.querySelector('.back-to-top');
   const headerOffset = 100;
+  const backToTextOffset = 300;
 
   function onScroll() {
     scrollSections.forEach((section) => {
@@ -408,11 +409,12 @@ sup {
       event.preventDefault();
       const footnoteRefId = link.getAttribute('href');
       const targetFootnoteLink = document.querySelector(footnoteRefId);
-      scrollToElementWithOffset(targetFootnoteLink, headerOffset);
+      scrollToElementWithOffset(targetFootnoteLink, backToTextOffset);
     });
   });
 
 </script>
+
 
 
 
