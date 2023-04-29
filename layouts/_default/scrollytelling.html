@@ -418,30 +418,29 @@ sup {
     });
   });
 
-  const backToTextLinks = document.querySelectorAll('.back-to-text');
-  backToTextLinks.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const footnoteRefId = link.getAttribute('href');
-      const targetFootnoteLink = document.querySelector(footnoteRefId);
-      const targetFootnoteLinkTop = targetFootnoteLink.getBoundingClientRect().top + window.scrollY - 200;
+const backToTextLinks = document.querySelectorAll('.back-to-text');
+backToTextLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const footnoteRefId = link.getAttribute('href');
+    const targetFootnoteLink = document.querySelector(footnoteRefId);
+    const targetFootnoteLinkTop = targetFootnoteLink.getBoundingClientRect().top + window.scrollY - 200;
 
-      // Create Intersection Observer
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const yOffset = -200; // Change the offset value here
-            const y = entry.boundingClientRect.y + window.scrollY + yOffset;
-            window.scrollTo({ top: y, behavior: 'smooth' });
-            observer.disconnect();
-          }
-        });
-      });
+    // Create a temporary element
+    const tempElement = document.createElement('div');
+    tempElement.style.position = 'absolute';
+    tempElement.style.top = `${targetFootnoteLinkTop}px`;
+    document.body.appendChild(tempElement);
 
-      // Observe the target footnote link
-      observer.observe(targetFootnoteLink);
-    });
+    // Scroll to the temporary element
+    tempElement.scrollIntoView({ behavior: 'smooth' });
+
+    // Remove the temporary element after scrolling
+    setTimeout(() => {
+      document.body.removeChild(tempElement);
+    }, 1000);
   });
+});
 </script>
 
 
