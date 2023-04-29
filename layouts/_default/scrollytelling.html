@@ -435,5 +435,14 @@ function onScroll() {
     });
   });
     
+     const backToTextLinks = document.querySelectorAll('.back-to-text');
+  backToTextLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const footnoteRefId = link.getAttribute('href');
+      const targetFootnoteLink = document.querySelector(footnoteRefId);
+      scrollToElementWithOffset(targetFootnoteLink, headerOffset);
+    });
+  });
 </script>
 {{ end }}
