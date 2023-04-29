@@ -386,8 +386,6 @@ sup {
   window.addEventListener("scroll", onScroll);
   onScroll();
 
-  const padding = 100;
-
   const footnoteLinks = document.querySelectorAll('.footnote-link');
   footnoteLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
@@ -405,12 +403,14 @@ sup {
       event.preventDefault();
       const footnoteRefId = link.getAttribute('href');
       const targetFootnoteLink = document.querySelector(footnoteRefId);
-      const targetFootnoteLinkTop = targetFootnoteLink.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({ top: targetFootnoteLinkTop - padding, behavior: 'smooth' });
+      const chapterParent = targetFootnoteLink.closest('.scroll-section');
+      const chapterParentTop = chapterParent.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: chapterParentTop, behavior: 'smooth' });
     });
   });
 
 </script>
+
 
 
 
