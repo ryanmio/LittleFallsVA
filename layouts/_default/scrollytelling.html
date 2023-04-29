@@ -408,11 +408,13 @@ sup {
       event.preventDefault();
       const footnoteRefId = link.getAttribute('href');
       const targetFootnoteLink = document.querySelector(footnoteRefId);
-      scrollToElementWithOffset(targetFootnoteLink, headerOffset);
+      const chapterElement = targetFootnoteLink.closest('.scroll-section');
+      scrollToElementWithOffset(chapterElement, headerOffset);
     });
   });
 
 </script>
+
 
 
 
