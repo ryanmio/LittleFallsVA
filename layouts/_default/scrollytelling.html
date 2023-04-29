@@ -386,13 +386,16 @@ sup {
   window.addEventListener("scroll", onScroll);
   onScroll();
 
+  const padding = 100;
+
   const footnoteLinks = document.querySelectorAll('.footnote-link');
   footnoteLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
       const footnoteId = link.getAttribute('href');
       const targetFootnote = document.querySelector(footnoteId);
-      targetFootnote.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const targetFootnoteTop = targetFootnote.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: targetFootnoteTop - padding, behavior: 'smooth' });
     });
   });
 
@@ -402,11 +405,13 @@ sup {
       event.preventDefault();
       const footnoteRefId = link.getAttribute('href');
       const targetFootnoteLink = document.querySelector(footnoteRefId);
-      targetFootnoteLink.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const targetFootnoteLinkTop = targetFootnoteLink.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: targetFootnoteLinkTop - padding, behavior: 'smooth' });
     });
   });
 
 </script>
+
 
 
 
