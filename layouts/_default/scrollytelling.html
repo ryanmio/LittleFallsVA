@@ -409,11 +409,13 @@ sup {
       const footnoteRefId = link.getAttribute('href');
       const targetFootnoteLink = document.querySelector(footnoteRefId);
       const chapterElement = targetFootnoteLink.closest('.scroll-section');
-      scrollToElementWithOffset(chapterElement, headerOffset);
+      const targetPosition = chapterElement.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
     });
   });
 
 </script>
+
 
 
 
