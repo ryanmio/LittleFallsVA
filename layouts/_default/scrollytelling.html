@@ -386,13 +386,34 @@ sup {
   window.addEventListener("scroll", onScroll);
   onScroll();
 
+  function updateActiveChapterLink() {
+    let activeChapterLink = null;
+    scrollSections.forEach((section, index) => {
+      const sectionTop = section.getBoundingClientRect().top;
+
+      if (sectionTop < window.innerHeight / 2 && sectionTop >= -window.innerHeight / 2) {
+        const chapterLinks = document.querySelectorAll('.chapter-nav a');
+        chapterLinks.forEach((link) => {
+          link.classList.remove('active');
+        });
+        activeChapterLink = chapterLinks[index];
+        activeChapterLink.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener("scroll", () => {
+    onScroll();
+    updateActiveChapterLink();
+  });
+
   const footnoteLinks = document.querySelectorAll('.footnote-link');
   footnoteLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
       const footnoteId = link.getAttribute('href');
       const targetFootnote = document.querySelector(footnoteId);
-      const targetFootnoteTop = targetFootnote.offsetTop;
+      const targetFootnoteTop = targetFootnote.offsetTop - 100;
       window.scrollTo({ top: targetFootnoteTop, behavior: 'smooth' });
     });
   });
@@ -403,12 +424,10 @@ sup {
       event.preventDefault();
       const footnoteRefId = link.getAttribute('href');
       const targetFootnoteLink = document.querySelector(footnoteRefId);
-      const chapterParent = targetFootnoteLink.closest('.scroll-section');
-      const chapterParentTop = chapterParent.offsetTop;
-      window.scrollTo({ top: chapterParentTop, behavior: 'smooth' });
+      const targetFootnoteLinkTop = targetFootnoteLink.offsetTop - 300;
+      window.scrollTo({ top: targetFootnoteLinkTop, behavior: 'smooth' });
     });
   });
-
 </script>
 
 
