@@ -386,7 +386,7 @@ sup {
   window.addEventListener("scroll", onScroll);
   onScroll();
 
-  const padding = 300;
+  const padding = 100;
 
   const footnoteLinks = document.querySelectorAll('.footnote-link');
   footnoteLinks.forEach((link) => {
@@ -395,7 +395,7 @@ sup {
       const footnoteId = link.getAttribute('href');
       const targetFootnote = document.querySelector(footnoteId);
       const targetFootnoteTop = targetFootnote.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({ top: targetFootnoteTop - padding, behavior: 'smooth' });
+      window.scrollTo({ top: targetFootnoteTop, behavior: 'smooth' });
     });
   });
 
@@ -411,6 +411,7 @@ sup {
   });
 
 </script>
+
 
 
 
