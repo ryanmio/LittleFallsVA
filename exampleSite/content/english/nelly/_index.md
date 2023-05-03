@@ -43,7 +43,7 @@ layout: "nelly"
       <hr>
     </div>
   </div>
-  <div class="image-container">
+  <div class="image-container polaroid">
   <img src="/images/nelly/nelly1.png" alt="Image 1" />
   </div>
 </div>
