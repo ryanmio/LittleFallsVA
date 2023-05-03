@@ -33,13 +33,13 @@ body {
   }
 
 
-  .text-content {
+.text-content {
     position: relative;
     z-index: 1;
     text-align: center;
     max-width: 80%;
-    margin: 2rem auto;
-    padding: 3rem 3rem 1rem; /* Reduce bottom padding */
+    margin: 2rem auto 0; /* Adjust bottom margin */
+    padding: 3rem 3rem 0.5rem; /* Adjust bottom padding */
     border-radius: 4px;
     background-color: rgba(249, 249, 249, 0.6); /* Slight background color */
     background-image: url('https://www.transparenttextures.com/patterns/cream-pixels.png'); /* Subtle paper texture */
@@ -104,11 +104,12 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.image-container {
-  width: 100%;
-  max-width: 600px;
-  margin: -3rem auto 1rem;
-}
+  .image-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem auto 1rem; /* Adjust top margin */
+  }
+
 
 .image-container img {
   width: 100%;
