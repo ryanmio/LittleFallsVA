@@ -4,6 +4,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: sans-serif;
+}
+
 #scroll-container {
   position: relative;
   overflow-x: hidden;
@@ -226,7 +230,17 @@ h2 {
   padding: 2rem;
 }
 
+.intro-image-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem auto;
+}
 
+.intro-image-container img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
 
 @media screen and (max-width: 768px) {
   .intro-image-container {
@@ -296,42 +310,30 @@ h2 {
 <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
 
 <script>
- const scrollSections = document.querySelectorAll(".scroll-section");
-const textContents = document.querySelectorAll(".text-content");
-const backToTop = document.querySelector('.back-to-top');
+  const scrollSections = document.querySelectorAll(".scroll-section");
+  const backToTop = document.querySelector('.back-to-top');
 
-function onScroll() {
-  scrollSections.forEach((section) => {
-    const sectionTop = section.getBoundingClientRect().top;
-    const sectionHeight = section.offsetHeight;
+  function onScroll() {
+    scrollSections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const sectionHeight = section.offsetHeight;
 
-    if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 1.5) {
-      section.classList.add("visible");
+      if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 1.5) {
+        section.classList.add("visible");
+      } else {
+        section.classList.remove("visible");
+      }
+    });
+
+    if (window.scrollY > window.innerHeight / 1.2) {
+      backToTop.classList.add("visible");
     } else {
-      section.classList.remove("visible");
+      backToTop.classList.remove("visible");
     }
-  });
-
-  textContents.forEach((content) => {
-    const contentTop = content.getBoundingClientRect().top;
-    const contentHeight = content.offsetHeight;
-
-    if (contentTop < window.innerHeight && contentTop > -contentHeight / 1.5) {
-      content.classList.add("visible");
-    } else {
-      content.classList.remove("visible");
-    }
-  });
-
-  if (window.scrollY > window.innerHeight / 1.2) {
-    backToTop.classList.add("visible");
-  } else {
-    backToTop.classList.remove("visible");
   }
-}
 
-window.addEventListener("scroll", onScroll);
-onScroll();
+  window.addEventListener("scroll", onScroll);
+  onScroll();
 
   function updateActiveChapterLink() {
     let activeChapterLink = null;
