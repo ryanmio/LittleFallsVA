@@ -75,7 +75,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
 }
 
 .chapter-number {
@@ -297,24 +296,8 @@ h2 {
   border-radius: 2px;
 }
 
-@media screen and (max-width: 1000px) {
-  .polaroid {
-    position: static;
-    margin: 2rem auto;
-    max-width: 60%;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1600px) {
-  .polaroid {
-    top: -4%;
-  }
-}
-
-@media screen and (min-width: 1601px) {
-  .polaroid {
-    top: 0%;
-  }
+.title-and-image {
+  position: relative;
 }
 
 
