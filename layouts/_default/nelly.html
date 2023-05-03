@@ -56,6 +56,7 @@ body {
   right: 10px;
   font-size: 1.1rem;
   font-weight: bold;
+  z-index: 2;
 }
     
 .text-content.visible {
@@ -281,8 +282,8 @@ h2 {
 
 .polaroid {
   position: absolute;
-  top: 0%;
-  right: 8%;
+  top: 0;
+  right: -10%;
   max-width: 200px;
   border: 1px solid #ccc;
   padding: 4px;
@@ -434,11 +435,6 @@ onScroll();
     });
   });
 </script>
-
-
-
-
-
 
 
 {{ end }}
