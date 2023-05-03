@@ -37,7 +37,7 @@ layout: "nelly"
       <h3 class="chapter-title">A Child of Sorrow</h3>
   </div>
       <div class="image-container polaroid">
-        <img src="/images/nelly/nelly0.png" alt="Image 1" />
+        <img src="/images/nelly/nelly1.png" alt="Image 1" />
       </div>
     </div>
             <div class="chapter-body">
