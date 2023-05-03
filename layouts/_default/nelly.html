@@ -296,30 +296,42 @@ h2 {
 <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
 
 <script>
-  const scrollSections = document.querySelectorAll(".scroll-section");
-  const backToTop = document.querySelector('.back-to-top');
+ const scrollSections = document.querySelectorAll(".scroll-section");
+const textContents = document.querySelectorAll(".text-content");
+const backToTop = document.querySelector('.back-to-top');
 
-  function onScroll() {
-    scrollSections.forEach((section) => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const sectionHeight = section.offsetHeight;
+function onScroll() {
+  scrollSections.forEach((section) => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const sectionHeight = section.offsetHeight;
 
-      if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 1.5) {
-        section.classList.add("visible");
-      } else {
-        section.classList.remove("visible");
-      }
-    });
-
-    if (window.scrollY > window.innerHeight / 1.2) {
-      backToTop.classList.add("visible");
+    if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 1.5) {
+      section.classList.add("visible");
     } else {
-      backToTop.classList.remove("visible");
+      section.classList.remove("visible");
     }
-  }
+  });
 
-  window.addEventListener("scroll", onScroll);
-  onScroll();
+  textContents.forEach((content) => {
+    const contentTop = content.getBoundingClientRect().top;
+    const contentHeight = content.offsetHeight;
+
+    if (contentTop < window.innerHeight && contentTop > -contentHeight / 1.5) {
+      content.classList.add("visible");
+    } else {
+      content.classList.remove("visible");
+    }
+  });
+
+  if (window.scrollY > window.innerHeight / 1.2) {
+    backToTop.classList.add("visible");
+  } else {
+    backToTop.classList.remove("visible");
+  }
+}
+
+window.addEventListener("scroll", onScroll);
+onScroll();
 
   function updateActiveChapterLink() {
     let activeChapterLink = null;
