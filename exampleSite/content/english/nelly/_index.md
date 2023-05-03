@@ -9,6 +9,9 @@ layout: "nelly"
     <div class="chapter-heading">
       <span class="chapter-number">Prologue</span>
       <h3 class="chapter-title">A Voice from the Past</h3>
+         <div class="image-container polaroid">
+          <img src="/images/nelly/nelly0.png" alt="Image 1" />
+          </div>
     </div>
     <p>My name is Nelly, and my story begins on the Wren plantation in Falls Church, Virginia, where I was born into slavery in the early 1800s. As a child, I could never have imagined the trials and tribulations that awaited me, nor the strength and resilience that I would discover within myself.</p>
        <p>The tale I am about to share with you is one of heartache, but also of hope. It is a testament to the power of the human spirit and the indomitable will to survive even in the face of unspeakable cruelty. My life was marked by sorrow, but it also carried moments of joy and love that sustained me in the darkest of times.</p>
@@ -20,9 +23,7 @@ layout: "nelly"
       <hr>
     </div>
   </div>
-  <div class="image-container polaroid">
-  <img src="/images/nelly/nelly0.png" alt="Image 1" />
-  </div>
+ 
 </div>
 
 <div class="scroll-section" id="chapter1">
@@ -30,6 +31,9 @@ layout: "nelly"
     <div class="chapter-heading">
       <span class="chapter-number">Chapter 1</span>
       <h3 class="chapter-title">A Child of Sorrow</h3>
+          <div class="image-container polaroid">
+  <img src="/images/nelly/nelly1.png" alt="Image 1" />
+  </div>
     </div>
     <p>My earliest memories are of the small, cramped cabin that I called home. It was a humble dwelling, constructed of rough-hewn logs and a dirt floor, nestled among the sprawling fields of the Wren plantation. It was here that I spent my days with my mother, father, and siblings, all of us bound together by the chains of slavery.</p>
 <p>As the property of Colonel James Wren, a wealthy and powerful man, our lives were dictated by his whims and desires. From the moment I could walk, I was put to work alongside my family, tending to the endless rows of tobacco that stretched as far as the eye could see. The days were long, the work backbreaking, and the respite scarce.</p>
@@ -43,7 +47,5 @@ layout: "nelly"
       <hr>
     </div>
   </div>
-  <div class="image-container polaroid">
-  <img src="/images/nelly/nelly1.png" alt="Image 1" />
-  </div>
+
 </div>
