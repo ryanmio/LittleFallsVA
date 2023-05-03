@@ -19,3 +19,21 @@ layout: "nelly"
   <img src="/images/nelly/nelly0.png" alt="Image 1" />
   </div>
 </div>
+
+<div class="scroll-section" id="chapter1">
+  <div class="text-content">
+    <div class="chapter-heading">
+      <span class="chapter-number">Chapter 1</span>
+      <h3 class="chapter-title">A Child of Sorrow</h3>
+    </div>
+    <p>My earliest memories are of the small, cramped cabin that I called home. It was a humble dwelling, constructed of rough-hewn logs and a dirt floor, nestled among the sprawling fields of the Wren plantation. It was here that I spent my days with my mother, father, and siblings, all of us bound together by the chains of slavery.</p>
+<p>As the property of Colonel James Wren, a wealthy and powerful man, our lives were dictated by his whims and desires. From the moment I could walk, I was put to work alongside my family, tending to the endless rows of tobacco that stretched as far as the eye could see. The days were long, the work backbreaking, and the respite scarce.</p>
+      <p>The cruel realities of life on a plantation were not lost on me, even as a child. I watched as my fellow enslaved people were subjected to inhumane treatment, their bodies and spirits broken under the weight of their bondage. I saw families torn apart by the slave trade, children ripped from their mothers' arms, and loved ones sold to faraway plantations, never to be seen again.</p>
+      <p>And yet, amidst the pain and suffering, there were moments of tenderness and love. My mother, a woman of incredible strength and grace, would cradle me in her arms and sing softly to me as the sun dipped below the horizon. My father, a proud and stoic man, taught me the value of perseverance and the power of hope. And my siblings, bound together by our shared fate, provided comfort and solace in the darkest of times.
+</p>
+      <p>But the shadow of the plantation loomed over us all, a constant reminder of the life we were forced to endure. As I grew, the weight of the chains that bound us grew heavier, and the knowledge of the injustice we faced burned within me like a smoldering ember. It was a fire that would one day ignite my quest for freedom, and set me on the path that would come to define my life.</p>
+  </div>
+  <div class="image-container">
+  <img src="/images/nelly/nelly1.png" alt="Image 1" />
+  </div>
+</div>
