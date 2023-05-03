@@ -317,33 +317,42 @@ h2 {
 
 <script>
   const scrollSections = document.querySelectorAll(".scroll-section");
-  const backToTop = document.querySelector('.back-to-top');
+const textContent = document.querySelectorAll(".text-content");
+const backToTop = document.querySelector('.back-to-top');
 
-  function onScroll() {
-    scrollSections.forEach((section) => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const sectionHeight = section.offsetHeight;
+function onScroll() {
+  scrollSections.forEach((section) => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const sectionHeight = section.offsetHeight;
 
-      if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 1.5) {
-        section.classList.add("visible");
-        const textContent = section.querySelector('.text-content');
-        if (textContent) textContent.classList.add('visible');
-      } else {
-        section.classList.remove("visible");
-        const textContent = section.querySelector('.text-content');
-        if (textContent) textContent.classList.remove('visible');
-      }
-    });
-
-    if (window.scrollY > window.innerHeight / 1.2) {
-      backToTop.classList.add("visible");
+    if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 1.5) {
+      section.classList.add("visible");
     } else {
-      backToTop.classList.remove("visible");
+      section.classList.remove("visible");
     }
-  }
+  });
 
-  window.addEventListener("scroll", onScroll);
-  onScroll();
+  textContent.forEach((text) => {
+    const textTop = text.getBoundingClientRect().top;
+    const textHeight = text.offsetHeight;
+
+    if (textTop < window.innerHeight && textTop > -textHeight / 1.5) {
+      text.classList.add("visible");
+    } else {
+      text.classList.remove("visible");
+    }
+  });
+
+  if (window.scrollY > window.innerHeight / 1.2) {
+    backToTop.classList.add("visible");
+  } else {
+    backToTop.classList.remove("visible");
+  }
+}
+
+window.addEventListener("scroll", onScroll);
+onScroll();
+
 
   function updateActiveChapterLink() {
     let activeChapterLink = null;
