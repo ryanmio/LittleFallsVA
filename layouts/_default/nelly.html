@@ -290,13 +290,6 @@ h2 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 3;
 }
-    
-@media screen and (min-width: 1130px) {
-  .polaroid {
-    top: 0%; 
-  }
-}
-
 
 .polaroid img {
   border-radius: 2px;
@@ -307,6 +300,18 @@ h2 {
     position: static;
     margin: 2rem auto;
     max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1600px) {
+  .polaroid {
+    top: -4%;
+  }
+}
+
+@media screen and (min-width: 1601px) {
+  .polaroid {
+    top: 0%;
   }
 }
 
