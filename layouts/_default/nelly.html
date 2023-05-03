@@ -223,6 +223,33 @@ h2 {
 .authors-note p {
   font-size: 1.1rem;
 }
+    
+    
+.intro-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.intro-image-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem auto;
+}
+
+.intro-image-container img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .intro-image-container {
+    max-width: calc(100% - 32px);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 
 </style>
 
@@ -241,10 +268,15 @@ h2 {
   <a href="#note">Note</a>  
 </div>
 
-<h1>Nelly's Journey</h1>
-<h2>A Life in Chains and a Quest for Freedom</h2>
-<p>The narrative presented herein has been meticulously reconstructed utilizing a diverse array of historical sources, including deed books, census records, and family wills. By carefully weaving these fragments together, we strive to tell the story of Nelly, an enslaved individual whose experiences reflect the complexities of our local history.
-</p>
+<div class="intro-container">
+  <h1>Nelly's Journey</h1>
+  <h2>A Life in Chains and a Quest for Freedom</h2>
+  <div class="intro-image-container">
+    <img src="/nelly/nelly0.png" alt="Nelly's portrait" />
+  </div>
+  <p style="font-style: italic; max-width: 80%; margin: 0 auto;">The narrative presented herein has been meticulously reconstructed utilizing a diverse array of historical sources, including deed books, census records, and family wills. By carefully weaving these fragments together, we strive to tell the story of Nelly, an enslaved individual whose experiences reflect the complexities of our local history.</p>
+</div>
+
 
 <div id="scroll-container">
   {{ .Content }}
