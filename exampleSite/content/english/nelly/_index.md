@@ -14,14 +14,14 @@ layout: "nelly"
        <p>The tale I am about to share with you is one of heartache, but also of hope. It is a testament to the power of the human spirit and the indomitable will to survive even in the face of unspeakable cruelty. My life was marked by sorrow, but it also carried moments of joy and love that sustained me in the darkest of times.</p>
        <p>As I take you on this journey, I invite you to walk with me through the fields of the Wren plantation, to witness the pain and suffering that was my daily existence. But I also ask you to look beyond the anguish, to see the love that blossomed between my beloved Samuel and me, and to celebrate the strength and determination that carried us through to the end.</p>
        <p>For this is not just my story; it is the story of countless others who have lived and died in bondage, who have fought and triumphed over adversity, and who have left their indelible mark on history. It is a story that must be told, so that their voices may echo through the ages and remind us all of the power of hope, love, and freedom.</p>
+    <div class="chapter-date">
+      <hr>
+      <span>1800-01-01</span>
+      <hr>
+    </div>
   </div>
   <div class="image-container">
   <img src="/images/nelly/nelly0.png" alt="Image 1" />
-  </div>
-    <div class="chapter-date">
-    <hr>
-    <span>1800-01-15</span>
-    <hr>
   </div>
 </div>
 
@@ -37,13 +37,13 @@ layout: "nelly"
       <p>And yet, amidst the pain and suffering, there were moments of tenderness and love. My mother, a woman of incredible strength and grace, would cradle me in her arms and sing softly to me as the sun dipped below the horizon. My father, a proud and stoic man, taught me the value of perseverance and the power of hope. And my siblings, bound together by our shared fate, provided comfort and solace in the darkest of times.
 </p>
       <p>But the shadow of the plantation loomed over us all, a constant reminder of the life we were forced to endure. As I grew, the weight of the chains that bound us grew heavier, and the knowledge of the injustice we faced burned within me like a smoldering ember. It was a fire that would one day ignite my quest for freedom, and set me on the path that would come to define my life.</p>
+    <div class="chapter-date">
+      <hr>
+      <span>1805-01-02</span>
+      <hr>
+    </div>
   </div>
   <div class="image-container">
   <img src="/images/nelly/nelly1.png" alt="Image 1" />
-  </div>
-   <div class="chapter-date">
-    <hr>
-    <span>1800-01-15</span>
-    <hr>
   </div>
 </div>
