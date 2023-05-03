@@ -279,26 +279,10 @@ h2 {
     white-space: nowrap;
   }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-areas: "text-content image-container";
-  grid-gap: 2rem;
-  position: relative;
-}
-
-.text-content {
-  grid-area: text-content;
-}
-
-.image-container {
-  grid-area: image-container;
-}
-
 .polaroid {
   position: absolute;
-  top: 0;
-  right: -30px;
+  top: 0%;
+  right: 8%;
   max-width: 200px;
   border: 1px solid #ccc;
   padding: 4px;
@@ -319,6 +303,17 @@ h2 {
   }
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1600px) {
+  .polaroid {
+    top: -4%;
+  }
+}
+
+@media screen and (min-width: 1601px) {
+  .polaroid {
+    top: 0%;
+  }
+}
 
 
 </style>
