@@ -18,6 +18,11 @@ layout: "nelly"
   <div class="image-container">
   <img src="/images/nelly/nelly0.png" alt="Image 1" />
   </div>
+    <div class="chapter-date">
+    <hr>
+    <span>1800-01-15</span>
+    <hr>
+  </div>
 </div>
 
 <div class="scroll-section" id="chapter1">
@@ -35,5 +40,10 @@ layout: "nelly"
   </div>
   <div class="image-container">
   <img src="/images/nelly/nelly1.png" alt="Image 1" />
+  </div>
+   <div class="chapter-date">
+    <hr>
+    <span>1800-01-15</span>
+    <hr>
   </div>
 </div>
