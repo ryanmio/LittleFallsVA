@@ -63,14 +63,6 @@ body {
   opacity: 1;
 }
 
-.diary-entry {
-  position: relative;
-}
-
-.diary-entry .text-content:before {
-  content: attr(data-date);
-}
-
 .chapter-heading {
   display: flex;
   flex-direction: column;
@@ -294,6 +286,18 @@ h2 {
 
 .polaroid img {
   border-radius: 2px;
+}
+    
+@media screen and (max-width: 850px) {
+  .polaroid {
+    position: static;
+    max-width: 66%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .title-and-image {
