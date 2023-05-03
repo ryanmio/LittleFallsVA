@@ -279,16 +279,31 @@ h2 {
     white-space: nowrap;
   }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  padding-right: 20px;
+}
+
+.text-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
 .polaroid {
-  position: absolute;
-  top: 0%;
-  right: 8%;
+  grid-column: 2;
+  grid-row: 1;
   max-width: 200px;
   border: 1px solid #ccc;
   padding: 4px;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 3;
+  position: relative;
+  top: -10px;
+  right: -20px;
 }
 
 .polaroid img {
@@ -296,22 +311,18 @@ h2 {
 }
 
 @media screen and (max-width: 1000px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding-right: 0;
+  }
+
   .polaroid {
-    position: static;
+    grid-column: 1;
+    grid-row: 2;
     margin: 2rem auto;
     max-width: 60%;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1600px) {
-  .polaroid {
-    top: -4%;
-  }
-}
-
-@media screen and (min-width: 1601px) {
-  .polaroid {
-    top: 0%;
+    position: static;
   }
 }
 
