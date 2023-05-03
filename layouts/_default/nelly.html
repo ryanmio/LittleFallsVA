@@ -281,29 +281,30 @@ h2 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 220px;
-  grid-template-rows: auto;
-  grid-gap: 1rem;
-  padding-right: 20px;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "text-content image-container";
+  grid-gap: 2rem;
+  position: relative;
 }
 
 .text-content {
-  grid-column: 1;
-  grid-row: 1;
+  grid-area: text-content;
+}
+
+.image-container {
+  grid-area: image-container;
 }
 
 .polaroid {
-  grid-column: 2;
-  grid-row: 1;
+  position: absolute;
+  top: 0;
+  right: -30px;
   max-width: 200px;
   border: 1px solid #ccc;
   padding: 4px;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 3;
-  position: relative;
-  top: -10px;
-  right: -20px;
 }
 
 .polaroid img {
@@ -311,20 +312,13 @@ h2 {
 }
 
 @media screen and (max-width: 1000px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    padding-right: 0;
-  }
-
   .polaroid {
-    grid-column: 1;
-    grid-row: 2;
+    position: static;
     margin: 2rem auto;
     max-width: 60%;
-    position: static;
   }
 }
+
 
 
 </style>
