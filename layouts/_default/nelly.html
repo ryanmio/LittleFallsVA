@@ -46,6 +46,7 @@ body {
     font-family: 'Courier New', Courier, monospace; /* Monospace font for a personal touch */
     opacity: 0; /* Add this line */
     transition: opacity 1s ease-in-out; /* Add this line */
+    z-index: 1;
   }
 
 .text-content:before {
@@ -279,13 +280,14 @@ h2 {
 
 .polaroid {
   position: absolute;
-  top: -20px;
-  right: -20px;
+  top: 0;
+  right: -20%;
   max-width: 200px;
   border: 1px solid #ccc;
   padding: 4px;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
 .polaroid img {
@@ -295,8 +297,8 @@ h2 {
 @media screen and (max-width: 768px) {
   .polaroid {
     position: static;
-    margin: -3rem auto 1rem;
-    max-width: calc(100% - 32px);
+    margin: 2rem auto;
+    max-width: 150px;
   }
 }
 
