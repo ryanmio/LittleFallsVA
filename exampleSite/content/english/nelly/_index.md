@@ -21,11 +21,6 @@ layout: "nelly"
        <p>As I take you on this journey, I invite you to walk with me through the fields of the Wren plantation, to witness the pain and suffering that was my daily existence. But I also ask you to look beyond the anguish, to see the love that blossomed between my beloved Samuel and me, and to celebrate the strength and determination that carried us through to the end.</p>
        <p>For this is not just my story; it is the story of countless others who have lived and died in bondage, who have fought and triumphed over adversity, and who have left their indelible mark on history. It is a story that must be told, so that their voices may echo through the ages and remind us all of the power of hope, love, and freedom.</p>
           </div>
-    <div class="chapter-date">
-      <hr>
-      <span>1873-04-03</span>
-      <hr>
-    </div>
   </div>
 </div>
 
