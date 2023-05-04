@@ -23,7 +23,7 @@ layout: "nelly"
           </div>
     <div class="chapter-date">
       <hr>
-      <span>1800-01-01</span>
+      <span>1873-04-03</span>
       <hr>
     </div>
   </div>
@@ -50,7 +50,7 @@ layout: "nelly"
                           </div>
     <div class="chapter-date">
       <hr>
-      <span>1805-01-02</span>
+      <span>1803-04-12</span>
       <hr>
     </div>
   </div>
@@ -68,14 +68,14 @@ layout: "nelly"
       </div>
     </div>
     <div class="chapter-body">
-      <p>When I was just ten... </p>
-      <p>In the aftermath of my... </p>
-      <p>Yet through it all, we... </p>
-      <p>The cruel practice of considering... </p>
+      <p>When I was just ten years old, I learned firsthand the brutal reality of life as an enslaved person. Our family was dealt a cruel blow when my younger brother, whom I looked after and adored, was torn away from us. One fateful morning, as the sun rose over the plantation, my brother was led away in chains, bound for a neighboring plantation. The look of despair in his eyes was seared into my memory, a painful reminder of the fragility of our bonds and the injustice we faced as enslaved individuals.</p>
+      <p>In the aftermath of my brother's departure, our family was left shattered. My mother wept for days, her voice a mournful echo in the stillness of our cabin. My father's once-strong shoulders seemed to sag beneath the weight of his grief, and my remaining siblings clung to one another for solace.</p>
+      <p>Yet through it all, we found a way to persevere. My mother's lullabies, though tinged with sorrow, continued to provide comfort. My father's lessons in resilience took on a deeper meaning, as we all endeavored to carry on despite the crushing pain of our loss.</p>
+      <p>The cruel practice of considering enslaved children as "increase" by slaveholders, selling them off at any time to increase their wealth, was a harsh reality we had to face. My brother's absence was a wound that would never fully heal, but it also became a source of strength, fueling my determination to break the chains that bound us and to create a better future for my family and for all those who suffered the same heartache.</p>
     </div>
     <div class="chapter-date">
       <hr>
-      <span>1810-01-03</span>
+      <span>1810-09-03</span>
       <hr>
     </div>
   </div>
@@ -101,7 +101,7 @@ layout: "nelly"
     </div>
     <div class="chapter-date">
       <hr>
-      <span>1815-01-04</span>
+      <span>1815-03-04</span>
       <hr>
     </div>
   </div>
@@ -127,7 +127,7 @@ layout: "nelly"
     </div>
     <div class="chapter-date">
       <hr>
-      <span>1820-01-05</span>
+      <span>1822-07-05</span>
       <hr>
     </div>
   </div>
@@ -153,7 +153,7 @@ layout: "nelly"
     </div>
     <div class="chapter-date">
       <hr>
-      <span>1825-01-06</span>
+      <span>1828-08-06</span>
       <hr>
     </div>
   </div>
@@ -183,7 +183,7 @@ layout: "nelly"
     </div>
     <div class="chapter-date">
       <hr>
-      <span>1850-01-07</span>
+      <span>1861-05-07</span>
       <hr>
     </div>
   </div>
@@ -209,7 +209,7 @@ layout: "nelly"
     </div>
     <div class="chapter-date">
       <hr>
-      <span>1862-01-08</span>
+      <span>1864-06-23</span>
       <hr>
     </div>
   </div>
@@ -265,7 +265,7 @@ layout: "nelly"
     </div>
     <div class="chapter-date">
       <hr>
-      <span>1865-05-18</span>
+      <span>1869-05-18</span>
       <hr>
     </div>
   </div>
@@ -291,7 +291,7 @@ layout: "nelly"
     </div>
     <div class="chapter-date">
       <hr>
-      <span>1885-11-22</span>
+      <span>1875-09-22</span>
       <hr>
     </div>
   </div>
