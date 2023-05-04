@@ -343,49 +343,33 @@ h2 {
 <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
 
 <script>
-// Query all elements with the "scroll-section" class
-const scrollSections = document.querySelectorAll(".scroll-section");
-
-// Query all elements with the "text-content" class
-const textContent = document.querySelectorAll(".text-content");
+  const scrollSections = document.querySelectorAll(".scroll-section");
+  const textContent = document.querySelectorAll(".text-content");
+  const backToTop = document.querySelector('.back-to-top');
 
 function onScroll() {
-  // Iterate through each scrollSection
   scrollSections.forEach((section) => {
-    // Get the distance from the section's top edge to the viewport's top edge
     const sectionTop = section.getBoundingClientRect().top;
-    // Get the section's height
     const sectionHeight = section.offsetHeight;
 
-    // Check if the section's top edge is within 90% of the viewport's height and its bottom edge is at least 80% visible
     if (sectionTop < window.innerHeight * 0.9 && sectionTop > -sectionHeight * 0.8) {
-      // Add the "visible" class to the section
       section.classList.add("visible");
     } else {
-      // Remove the "visible" class from the section
       section.classList.remove("visible");
     }
   });
 
-  // Iterate through each textContent
-  textContent.forEach((text) => {
-    // Get the distance from the text's bottom edge to the viewport's top edge
-    const textBottom = text.getBoundingClientRect().bottom;
-    // Get the text's height
-    const textHeight = text.offsetHeight;
-    // Get the viewport's height
-    const windowHeight = window.innerHeight;
+textContent.forEach((text) => {
+  const textBottom = text.getBoundingClientRect().bottom;
+  const textHeight = text.offsetHeight;
+  const windowHeight = window.innerHeight;
 
-    // Check if the text's bottom edge is within the viewport and the text is at least 90% visible
-    if (textBottom > windowHeight * 0.1 && textBottom < windowHeight + textHeight * 0.9) {
-      // Add the "visible" class to the text
-      text.classList.add("visible");
-    } else {
-      // Remove the "visible" class from the text
-      text.classList.remove("visible");
-    }
-  });
-}
+  if (textBottom > windowHeight * 0.1 && textBottom < windowHeight + textHeight * 0.9) {
+    text.classList.add("visible");
+  } else {
+    text.classList.remove("visible");
+  }
+});
 
 
 
