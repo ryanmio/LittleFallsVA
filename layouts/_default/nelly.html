@@ -44,8 +44,6 @@ body {
     background-color: rgba(249, 249, 249, 0.6); /* Slight background color */
     background-image: url('https://www.transparenttextures.com/patterns/cream-pixels.png'); /* Subtle paper texture */
     font-family: 'Courier New', Courier, monospace; /* Monospace font for a personal touch */
-    opacity: 0; /* Add this line */
-    transition: opacity 1s ease-in-out;
     z-index: 1;
 }
 
@@ -57,10 +55,6 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
   z-index: 2;
-}
-    
-.text-content.visible {
-  opacity: 1;
 }
 
 .chapter-heading {
@@ -349,17 +343,19 @@ h2 {
   const textContent = document.querySelectorAll(".text-content");
   const backToTop = document.querySelector('.back-to-top');
 
-  function onScroll() {
-    scrollSections.forEach((section) => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const sectionHeight = section.offsetHeight;
+function onScroll() {
+  textContent.forEach((text) => {
+    const textTop = text.getBoundingClientRect().top;
+    const textBottom = text.getBoundingClientRect().bottom;
 
-      if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 1.5) {
-        section.classList.add("visible");
-      } else {
-        section.classList.remove("visible");
-      }
-    });
+    if (textTop < window.innerHeight && textBottom > 0) {
+      const opacity = Math.min(Math.max((window.innerHeight - textTop) / window.innerHeight, 0), 1);
+      text.style.opacity = opacity;
+    } else {
+      text.style.opacity = 0;
+    }
+  });
+}
 
     textContent.forEach((text) => {
       const textTop = text.getBoundingClientRect().top;
