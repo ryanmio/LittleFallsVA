@@ -361,16 +361,17 @@ h2 {
       }
     });
 
-    textContent.forEach((text) => {
-      const textTop = text.getBoundingClientRect().top;
-      const textBottom = text.getBoundingClientRect().bottom;
+textContent.forEach((text) => {
+  const textTop = text.getBoundingClientRect().top;
+  const textBottom = text.getBoundingClientRect().bottom;
+  const windowHeight = window.innerHeight;
 
-      if (textTop < window.innerHeight && textBottom > 100) {
-        text.classList.add("visible");
-      } else {
-        text.classList.remove("visible");
-      }
-    });
+  if (textTop < windowHeight && textBottom > windowHeight * 0.1) {
+    text.classList.add("visible");
+  } else {
+    text.classList.remove("visible");
+  }
+});
 
     if (window.scrollY > window.innerHeight / 1.2) {
       backToTop.classList.add("visible");
