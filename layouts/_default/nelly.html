@@ -207,7 +207,7 @@ h2 {
   padding: 2rem;
   font-style: italic;
   font-size: 1.2rem;
-  line-height: 3;
+  line-height: 1.5;
   text-align: center;
   background-color: transparent;
   box-shadow: none;
@@ -363,9 +363,9 @@ h2 {
 
     textContent.forEach((text) => {
       const textTop = text.getBoundingClientRect().top;
-      const textHeight = text.offsetHeight;
+      const textBottom = text.getBoundingClientRect().bottom;
 
-      if (textTop < window.innerHeight && window.innerHeight - textTop < textHeight + 100) {
+      if (textTop < window.innerHeight && textBottom > 100) {
         text.classList.add("visible");
       } else {
         text.classList.remove("visible");
@@ -425,6 +425,7 @@ h2 {
     });
   });
 </script>
+
 
 
 
