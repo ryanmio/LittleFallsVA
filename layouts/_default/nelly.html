@@ -347,17 +347,17 @@ h2 {
   const textContent = document.querySelectorAll(".text-content");
   const backToTop = document.querySelector('.back-to-top');
 
-  function onScroll() {
-    scrollSections.forEach((section) => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const sectionHeight = section.offsetHeight;
+function onScroll() {
+  scrollSections.forEach((section) => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const sectionHeight = section.offsetHeight;
 
-      if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 1.5) {
-        section.classList.add("visible");
-      } else {
-        section.classList.remove("visible");
-      }
-    });
+    if (sectionTop < window.innerHeight * 0.9 && sectionTop > -sectionHeight * 0.8) {
+      section.classList.add("visible");
+    } else {
+      section.classList.remove("visible");
+    }
+  });
 
 textContent.forEach((text) => {
   const textBottom = text.getBoundingClientRect().bottom;
