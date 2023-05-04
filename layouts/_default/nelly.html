@@ -218,7 +218,6 @@ h2 {
 
 .authors-note p {
   font-size: 1.1rem;
-  line-height: 1.5;
 }
     
     
@@ -419,6 +418,28 @@ function onScroll() {
   window.addEventListener("scroll", () => {
     onScroll();
     updateActiveChapterLink();
+  });
+
+  const footnoteLinks = document.querySelectorAll('.footnote-link');
+  footnoteLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const footnoteId = link.getAttribute('href');
+      const targetFootnote = document.querySelector(footnoteId);
+      const targetFootnoteTop = targetFootnote.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top: targetFootnoteTop, behavior: 'smooth' });
+    });
+  });
+
+  const backToTextLinks = document.querySelectorAll('.back-to-text');
+  backToTextLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const footnoteRefId = link.getAttribute('href');
+      const targetFootnoteLink = document.querySelector(footnoteRefId);
+      const targetFootnoteLinkTop = targetFootnoteLink.getBoundingClientRect().top + window.scrollY - 300;
+      window.scrollTo({ top: targetFootnoteLinkTop, behavior: 'smooth' });
+    });
   });
 </script>
 
