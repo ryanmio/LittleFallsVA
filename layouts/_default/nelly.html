@@ -207,7 +207,7 @@ h2 {
   padding: 2rem;
   font-style: italic;
   font-size: 1.2rem;
-  line-height: 1.5;
+  line-height: 3;
   text-align: center;
   background-color: transparent;
   box-shadow: none;
@@ -346,42 +346,41 @@ h2 {
 
 <script>
   const scrollSections = document.querySelectorAll(".scroll-section");
-const textContent = document.querySelectorAll(".text-content");
-const backToTop = document.querySelector('.back-to-top');
+  const textContent = document.querySelectorAll(".text-content");
+  const backToTop = document.querySelector('.back-to-top');
 
-function onScroll() {
-  scrollSections.forEach((section) => {
-    const sectionTop = section.getBoundingClientRect().top;
-    const sectionHeight = section.offsetHeight;
+  function onScroll() {
+    scrollSections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const sectionHeight = section.offsetHeight;
 
-    if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 1.5) {
-      section.classList.add("visible");
+      if (sectionTop < window.innerHeight && sectionTop > -sectionHeight / 1.5) {
+        section.classList.add("visible");
+      } else {
+        section.classList.remove("visible");
+      }
+    });
+
+    textContent.forEach((text) => {
+      const textTop = text.getBoundingClientRect().top;
+      const textHeight = text.offsetHeight;
+
+      if (textTop < window.innerHeight && window.innerHeight - textTop < textHeight + 100) {
+        text.classList.add("visible");
+      } else {
+        text.classList.remove("visible");
+      }
+    });
+
+    if (window.scrollY > window.innerHeight / 1.2) {
+      backToTop.classList.add("visible");
     } else {
-      section.classList.remove("visible");
+      backToTop.classList.remove("visible");
     }
-  });
-
-  textContent.forEach((text) => {
-    const textTop = text.getBoundingClientRect().top;
-    const textHeight = text.offsetHeight;
-
-    if (textTop < window.innerHeight && textTop > -textHeight / 1.5) {
-      text.classList.add("visible");
-    } else {
-      text.classList.remove("visible");
-    }
-  });
-
-  if (window.scrollY > window.innerHeight / 1.2) {
-    backToTop.classList.add("visible");
-  } else {
-    backToTop.classList.remove("visible");
   }
-}
 
-window.addEventListener("scroll", onScroll);
-onScroll();
-
+  window.addEventListener("scroll", onScroll);
+  onScroll();
 
   function updateActiveChapterLink() {
     let activeChapterLink = null;
@@ -426,6 +425,7 @@ onScroll();
     });
   });
 </script>
+
 
 
 {{ end }}
