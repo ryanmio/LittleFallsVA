@@ -366,14 +366,13 @@ textContent.forEach((text) => {
   const textBottom = text.getBoundingClientRect().bottom;
   const windowHeight = window.innerHeight;
 
-  const visibleTextHeight = Math.min(textBottom, windowHeight) - Math.max(textTop, 0);
-
-  if (visibleTextHeight / windowHeight > 0.1) {
+  if (textTop < windowHeight && textBottom > windowHeight * 0.8) {
     text.classList.add("visible");
   } else {
     text.classList.remove("visible");
   }
 });
+
 
 
     if (window.scrollY > window.innerHeight / 1.2) {
