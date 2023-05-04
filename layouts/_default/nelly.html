@@ -366,7 +366,7 @@ textContent.forEach((text) => {
   const textBottom = text.getBoundingClientRect().bottom;
   const windowHeight = window.innerHeight;
 
-  if (textTop < windowHeight && textBottom > windowHeight * 0.8) {
+  if (textTop < windowHeight && textBottom > windowHeight * 0.2) {
     text.classList.add("visible");
   } else {
     text.classList.remove("visible");
