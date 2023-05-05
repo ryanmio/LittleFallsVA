@@ -340,8 +340,7 @@ h2 {
 
 <script>
   const scrollSections = document.querySelectorAll(".scroll-section");
-  const textContent = document.querySelectorAll(".text-content");
-  const backToTop = document.querySelector('.back-to-top');
+const backToTop = document.querySelector('.back-to-top');
 
 function onScroll() {
   scrollSections.forEach((section) => {
@@ -356,18 +355,6 @@ function onScroll() {
     }
   });
 
-  textContent.forEach((text) => {
-    const textTop = text.getBoundingClientRect().top;
-    const textBottom = text.getBoundingClientRect().bottom;
-    const windowHeight = window.innerHeight;
-
-    if (textTop < windowHeight * 0.9 && textBottom > windowHeight * 0.1) {
-      text.classList.add("visible");
-    } else {
-      text.classList.remove("visible");
-    }
-  });
-
   if (window.scrollY > window.innerHeight / 1.2) {
     backToTop.classList.add("visible");
   } else {
@@ -375,6 +362,20 @@ function onScroll() {
   }
 }
 
+window.addEventListener("scroll", onScroll);
+onScroll();
+
+textContent.forEach((text) => {
+  const textBottom = text.getBoundingClientRect().bottom;
+  const textHeight = text.offsetHeight;
+  const windowHeight = window.innerHeight;
+
+  if (textBottom > windowHeight * 0.1 && textBottom < windowHeight + textHeight * 0.9) {
+    text.classList.add("visible");
+  } else {
+    text.classList.remove("visible");
+  }
+});
 
 
 
@@ -385,8 +386,6 @@ function onScroll() {
     }
   }
 
-  window.addEventListener("scroll", onScroll);
-  onScroll();
 
   function updateActiveChapterLink() {
     let activeChapterLink = null;
