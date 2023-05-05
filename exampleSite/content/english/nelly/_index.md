@@ -274,8 +274,8 @@ layout: "nelly"
         <span class="chapter-number">Chapter 10</span>
         <h3 class="chapter-title">The Seeds of a Better Future</h3>
       </div>
-      <div class="image-container polaroid">
-        <img src="/images/nelly/nelly10.png" alt="Image 10" />
+      <div class="image-container polaroid" >
+        <img src="/images/nelly/nelly10.png" alt="Image 10" onclick="toggleZoom(event, this)" />
       </div>
     </div>
     <div class="chapter-body">
