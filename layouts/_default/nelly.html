@@ -420,6 +420,19 @@ h2 {
       window.scrollTo({ top: targetFootnoteLinkTop, behavior: 'smooth' });
     });
   });
+    
+
+function toggleZoom(event, img) {
+  img.classList.toggle('zoom');
+}
+    
+    const images = document.querySelectorAll('.image-container img');
+images.forEach((img) => {
+  img.addEventListener('click', toggleZoom);
+  img.addEventListener('mouseout', toggleZoom); // For desktop hover to zoom
+});
+    
+    
 </script>
 
 
