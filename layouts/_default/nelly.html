@@ -278,7 +278,7 @@ h2 {
   padding: 4px;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 3;
+  z-index: 9999; /* Updated the z-index to make sure the image is above the intro text */
   transition: transform 0.25s ease;
   cursor: zoom-in;
   transform-origin: bottom right;
@@ -295,9 +295,6 @@ h2 {
   height: auto;
 }
 
-
-
-    
 @media screen and (max-width: 850px) {
   .polaroid {
     position: static;
@@ -308,7 +305,18 @@ h2 {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .polaroid.zoom {
+    transform-origin: bottom;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .polaroid.zoom img {
+    transform: translateY(-100%) scale(2);
+  }
 }
+
 
 .title-and-image {
   position: relative;
