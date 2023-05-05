@@ -431,15 +431,17 @@ h2 {
   });
     
 
-function toggleZoom(event) {
-  event.target.classList.toggle('zoom');
+function toggleZoom(event, imageContainer) {
+  const image = imageContainer.querySelector('img');
+  image.classList.toggle('zoom');
+  if (image.classList.contains('zoom')) {
+    image.style.cursor = 'zoom-out';
+  } else {
+    image.style.cursor = 'zoom-in';
+  }
+  event.stopPropagation();
 }
-    
-    const images = document.querySelectorAll('.image-container img');
-images.forEach((img) => {
-  img.addEventListener('click', toggleZoom);
-  img.addEventListener('mouseout', toggleZoom); // For desktop hover to zoom
-});
+
     
     
 </script>
