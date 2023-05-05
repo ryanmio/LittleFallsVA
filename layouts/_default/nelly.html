@@ -279,21 +279,22 @@ h2 {
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 3;
-}
-
-.polaroid img {
-  max-width: 100%;
-  height: auto;
   transition: transform 0.25s ease;
   cursor: zoom-in;
   transform-origin: bottom right;
 }
 
-.polaroid img.zoom {
+.polaroid.zoom {
   transform: scale(2);
   cursor: zoom-out;
   transform-origin: bottom right;
 }
+
+.polaroid img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 
     
@@ -435,12 +436,12 @@ h2 {
     
 
 function toggleZoom(event) {
-  const image = event.target;
-  image.classList.toggle('zoom');
-  if (image.classList.contains('zoom')) {
-    image.style.cursor = 'zoom-out';
+  const polaroid = event.target.parentElement;
+  polaroid.classList.toggle('zoom');
+  if (polaroid.classList.contains('zoom')) {
+    polaroid.style.cursor = 'zoom-out';
   } else {
-    image.style.cursor = 'zoom-in';
+    polaroid.style.cursor = 'zoom-in';
   }
   event.stopPropagation();
 }
