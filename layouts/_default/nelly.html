@@ -422,8 +422,8 @@ h2 {
   });
     
 
-function toggleZoom(event, img) {
-  img.classList.toggle('zoom');
+function toggleZoom(event) {
+  event.target.classList.toggle('zoom');
 }
     
     const images = document.querySelectorAll('.image-container img');
