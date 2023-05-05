@@ -11,7 +11,7 @@ layout: "nelly"
         <span class="chapter-number">Prologue</span>
         <h3 class="chapter-title">A Voice from the Past</h3>
       </div>
-      <div class="image-container polaroid">
+      <div class="image-container polaroid top">
         <img src="/images/nelly/nelly0.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
       </div>
     </div>

@@ -269,25 +269,36 @@ h2 {
     white-space: nowrap;
   }
 
+.intro-container {
+  position: relative;
+}
+
 .polaroid {
   position: absolute;
-  top: -70px; /* Change this value to adjust the vertical position of the polaroid */
-  right: -40px; /* Change this value to adjust the horizontal position of the polaroid */
+  top: -70px;
+  right: -40px;
   max-width: 200px;
   border: 1px solid #ccc;
   padding: 4px;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 9999; /* Updated the z-index to make sure the image is above the intro text */
+  z-index: 2;
   transition: transform 0.25s ease;
   cursor: zoom-in;
   transform-origin: bottom right;
 }
 
+.polaroid.top {
+  transform-origin: top right;
+}
+
 .polaroid.zoom {
   transform: scale(2);
   cursor: zoom-out;
-  transform-origin: bottom right;
+}
+
+.polaroid.zoom.top {
+  transform-origin: top right;
 }
 
 .polaroid img {
@@ -315,7 +326,20 @@ h2 {
   .polaroid.zoom img {
     transform: translateY(-100%) scale(2);
   }
+
+  .polaroid.top {
+    transform-origin: top;
+  }
+
+  .polaroid.top.zoom {
+    transform-origin: top;
+  }
+
+  .polaroid.top.zoom img {
+    transform: translateY(0) scale(2);
+  }
 }
+
 
 
 .title-and-image {
