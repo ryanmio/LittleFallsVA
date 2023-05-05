@@ -292,5 +292,56 @@ layout: "nelly"
   </div>
 </div>
 
+<div class="scroll-section" id="chapter11">
+  <div class="text-content">
+    <div class="chapter-heading">
+      <div class="title-and-image">
+        <span class="chapter-number">Chapter 10</span>
+        <h3 class="chapter-title">The Seeds of a Better Future</h3>
+      </div>
+      <div class="image-container polaroid">
+        <img src="/images/nelly/nelly10.png" alt="Image 10" />
+      </div>
+    </div>
+    <div class="chapter-body">
+      <p>As Samuel and I built our new life, we knew that the most important gift we could give our children was a deep understanding of the value of their freedom. We shared with them the stories of their ancestors, the hardships they endured, and the strength they displayed in the face of adversity. We taught them to cherish their liberty and to never forget the sacrifices of those who came before them. Our family's legacy is one of resilience, love, and the unyielding pursuit of freedom.</p>
+      <p>We did everything we could to provide our children with opportunities we never had. We encouraged them to learn, to dream, and to strive for a better future. They attended schools established for freedmen and women, where they learned to read, write, and understand the world beyond our small community. Despite the many obstacles that stood in their way, our children embraced their education and the possibilities it offered.</p>
+      <p>As our children grew, so too did our community. We worked together to build churches, schools, and businesses that would sustain us and provide a foundation for future generations. It was not an easy path, and we faced countless challenges along the way. But our determination to create a better world for our children carried us forward, and we found strength in the bonds we forged with one another.</p>
+      <p>As I look back on my life, I am filled with gratitude for the love and support of my family, and the strength we found in one another. My journey was filled with pain and heartache, but it also carried hope and joy. I am proud of the life we built and the legacy we leave behind. My story is a testament to the indomitable human spirit and a reminder that even in the darkest times, hope can shine through.</p>
+        <p>Together, we planted the seeds of a better future, one that we might not live to see, but one that our children and grandchildren could nurture and grow. They are the living embodiment of our hopes, our dreams, and our enduring belief in the power of love, resilience, and freedom.</p>
+    </div>
+    <div class="chapter-date">
+      <hr>
+      <span>1875-09-22</span>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<div class="scroll-section" id="chapter12">
+  <div class="text-content">
+    <div class="chapter-heading">
+      <div class="title-and-image">
+        <span class="chapter-number">Chapter 10</span>
+        <h3 class="chapter-title">The Seeds of a Better Future</h3>
+      </div>
+      <div class="image-container polaroid">
+        <img src="/images/nelly/nelly10.png" alt="Image 10" />
+      </div>
+    </div>
+    <div class="chapter-body">
+      <p>As Samuel and I built our new life, we knew that the most important gift we could give our children was a deep understanding of the value of their freedom. We shared with them the stories of their ancestors, the hardships they endured, and the strength they displayed in the face of adversity. We taught them to cherish their liberty and to never forget the sacrifices of those who came before them. Our family's legacy is one of resilience, love, and the unyielding pursuit of freedom.</p>
+      <p>We did everything we could to provide our children with opportunities we never had. We encouraged them to learn, to dream, and to strive for a better future. They attended schools established for freedmen and women, where they learned to read, write, and understand the world beyond our small community. Despite the many obstacles that stood in their way, our children embraced their education and the possibilities it offered.</p>
+      <p>As our children grew, so too did our community. We worked together to build churches, schools, and businesses that would sustain us and provide a foundation for future generations. It was not an easy path, and we faced countless challenges along the way. But our determination to create a better world for our children carried us forward, and we found strength in the bonds we forged with one another.</p>
+      <p>As I look back on my life, I am filled with gratitude for the love and support of my family, and the strength we found in one another. My journey was filled with pain and heartache, but it also carried hope and joy. I am proud of the life we built and the legacy we leave behind. My story is a testament to the indomitable human spirit and a reminder that even in the darkest times, hope can shine through.</p>
+        <p>Together, we planted the seeds of a better future, one that we might not live to see, but one that our children and grandchildren could nurture and grow. They are the living embodiment of our hopes, our dreams, and our enduring belief in the power of love, resilience, and freedom.</p>
+    </div>
+    <div class="chapter-date">
+      <hr>
+      <span>1875-09-22</span>
+      <hr>
+    </div>
+  </div>
+</div>
 
 </div>
