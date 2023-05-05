@@ -347,25 +347,34 @@ function onScroll() {
   scrollSections.forEach((section) => {
     const sectionTop = section.getBoundingClientRect().top;
     const sectionHeight = section.offsetHeight;
+    const windowHeight = window.innerHeight;
 
-    if (sectionTop < window.innerHeight * 0.9 && sectionTop > -sectionHeight * 0.8) {
+    if (sectionTop < windowHeight * 0.9 && sectionTop > -sectionHeight * 0.8) {
       section.classList.add("visible");
     } else {
       section.classList.remove("visible");
     }
   });
 
-textContent.forEach((text) => {
-  const textBottom = text.getBoundingClientRect().bottom;
-  const textHeight = text.offsetHeight;
-  const windowHeight = window.innerHeight;
+  textContent.forEach((text) => {
+    const textTop = text.getBoundingClientRect().top;
+    const textBottom = text.getBoundingClientRect().bottom;
+    const windowHeight = window.innerHeight;
 
-  if (textBottom > windowHeight * 0.1 && textBottom < windowHeight + textHeight * 0.9) {
-    text.classList.add("visible");
+    if (textTop < windowHeight * 0.9 && textBottom > windowHeight * 0.1) {
+      text.classList.add("visible");
+    } else {
+      text.classList.remove("visible");
+    }
+  });
+
+  if (window.scrollY > window.innerHeight / 1.2) {
+    backToTop.classList.add("visible");
   } else {
-    text.classList.remove("visible");
+    backToTop.classList.remove("visible");
   }
-});
+}
+
 
 
 
