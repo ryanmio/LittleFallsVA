@@ -302,6 +302,12 @@ h2 {
   cursor: zoom-out;
   transform-origin: center;
 }
+    
+.polaroid.unzoom-mobile {
+  transform: scale(1);
+  cursor: zoom-in;
+  transform-origin: center;
+}
 
 .polaroid.zoom.top {
   transform-origin: top right;
@@ -482,7 +488,13 @@ function toggleZoom(event) {
   const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   
   if (screenWidth <= 850) {
-    image.classList.toggle('zoom-mobile');
+    if (image.classList.contains('zoom-mobile')) {
+      image.classList.remove('zoom-mobile');
+      image.classList.add('unzoom-mobile');
+    } else {
+      image.classList.remove('unzoom-mobile');
+      image.classList.add('zoom-mobile');
+    }
   } else {
     image.classList.toggle('zoom');
   }
@@ -494,6 +506,7 @@ function toggleZoom(event) {
   }
   event.stopPropagation();
 }
+
 
 
     
