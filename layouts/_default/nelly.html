@@ -282,8 +282,17 @@ h2 {
 }
 
 .polaroid img {
-  border-radius: 2px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
 }
+
+.polaroid img.zoom {
+  transform: scale(2);
+  cursor: zoom-out;
+}
+
     
 @media screen and (max-width: 850px) {
   .polaroid {
