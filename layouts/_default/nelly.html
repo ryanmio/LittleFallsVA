@@ -339,46 +339,22 @@ h2 {
 <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
 
 <script>
-const scrollSections = document.querySelectorAll(".scroll-section");
-const textContent = document.querySelectorAll(".text-content");
-const backToTop = document.querySelector('.back-to-top');
+  const scrollSections = document.querySelectorAll(".scroll-section");
+  const textContent = document.querySelectorAll(".text-content");
+  const backToTop = document.querySelector('.back-to-top');
 
-function onScroll() {
-  scrollSections.forEach((section) => {
-    const sectionTop = section.getBoundingClientRect().top;
-    const sectionHeight = section.offsetHeight;
-    const windowHeight = window.innerHeight;
+  function onScroll() {
+    scrollSections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const sectionHeight = section.offsetHeight;
+      const windowHeight = window.innerHeight;
 
-    if (sectionTop < windowHeight * 0.9 && sectionTop > -sectionHeight * 0.8) {
-      section.classList.add("visible");
-    } else {
-      section.classList.remove("visible");
-    }
-  });
-
-  if (window.scrollY > window.innerHeight / 1.2) {
-    backToTop.classList.add("visible");
-  } else {
-    backToTop.classList.remove("visible");
-  }
-}
-
-window.addEventListener("scroll", onScroll);
-onScroll();
-
-textContent.forEach((text) => {
-  const textBottom = text.getBoundingClientRect().bottom;
-  const textHeight = text.offsetHeight;
-  const windowHeight = window.innerHeight;
-
-  if (textBottom > windowHeight * 0.1 && textBottom < windowHeight + textHeight * 0.9) {
-    text.classList.add("visible");
-  } else {
-    text.classList.remove("visible");
-  }
-});
-
-
+      if (sectionTop < windowHeight * 0.9 && sectionTop > -sectionHeight * 0.8) {
+        section.classList.add("visible");
+      } else {
+        section.classList.remove("visible");
+      }
+    });
 
     if (window.scrollY > window.innerHeight / 1.2) {
       backToTop.classList.add("visible");
@@ -387,6 +363,20 @@ textContent.forEach((text) => {
     }
   }
 
+  window.addEventListener("scroll", onScroll);
+  onScroll();
+
+  textContent.forEach((text) => {
+    const textBottom = text.getBoundingClientRect().bottom;
+    const textHeight = text.offsetHeight;
+    const windowHeight = window.innerHeight;
+
+    if (textBottom > windowHeight * 0.1 && textBottom < windowHeight + textHeight * 0.9) {
+      text.classList.add("visible");
+    } else {
+      text.classList.remove("visible");
+    }
+  });
 
   function updateActiveChapterLink() {
     let activeChapterLink = null;
@@ -431,6 +421,7 @@ textContent.forEach((text) => {
     });
   });
 </script>
+
 
 
 
