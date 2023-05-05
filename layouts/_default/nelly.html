@@ -431,8 +431,8 @@ h2 {
   });
     
 
-function toggleZoom(event, imageContainer) {
-  const image = imageContainer.querySelector('img');
+function toggleZoom(event) {
+  const image = event.target;
   image.classList.toggle('zoom');
   if (image.classList.contains('zoom')) {
     image.style.cursor = 'zoom-out';
