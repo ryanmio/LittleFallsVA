@@ -28,17 +28,12 @@ layout: "scrollytelling"
       <span class="chapter-number">Chapter 2.</span>
       <h3 class="chapter-title">Truro Parish established</h3>
     </div>
-    <p>In 1734, the establishment of Truro Parish marked a turning point in the region as European settlers arrived, disrupting the lives of native inhabitants<sup><a href="#fn9" id="ref9" class="footnote-link">9</a></sup>...</p>
-    <p>As these newcomers built homes and communities, they transformed the Native American trails into major colonial transportation routes<sup><a href="#fn10" id="ref10" class="footnote-link">10</a></sup>...</p>
-    <p>These routes, which would later become Broad Street, Lee Highway, and Little Falls Street, played a crucial role in shaping the development of the area<sup><a href="#fn11" id="ref11" class="footnote-link">11</a></sup>...</p>
-    <p>The intersection of these trails soon became the site of The Falls Church, serving as a center for worship and community life<sup><a href="#fn12" id="ref12" class="footnote-link">12</a></sup>...</p>
-    <p>The transformation of Indigenous trails into colonial transportation routes not only facilitated the movement of European settlers but also hastened the disappearance of the region's Indigenous heritage<sup><a href="#fn13" id="ref13" class="footnote-link">13</a></sup>.</p>
-    <p>The colonists and Virginia Company members aimed to evangelize the local Native American population, but their efforts largely failed...</p>
-    <p>Believing that Christianity required an English cultural context to thrive, they insisted that potential native converts learn English and adopt English lifestyles before becoming Christian<sup><a href="#fn14" id="ref14" class="footnote-link">14</a></sup>...</p>
-    <p>However, many settlers felt little obligation to proselytize the indigenous peoples, and some even misused funds donated for that purpose, opting to build an ironworks instead<sup><a href="#fn15" id="ref15" class="footnote-link">15</a></sup>.</p>
-    <p>One of the ways the Truro Parish exerted control over the population was through the collection of tithes...</p>
-    <p>The vestry for Truro Parish was responsible for collecting tithes and establishing land boundaries, with tobacco serving as the main form of currency during that time...</p>
-    <p>This system placed a financial burden on the community, particularly on those who did not adhere to the Anglican faith, as they were still required to contribute tithes to support the church.</p>
+   <p>In 1734, the establishment of Truro Parish marked a turning point in the region as European settlers arrived, disrupting the lives of native inhabitants<sup><a href="#fn1" id="ref9" class="footnote-link">9</a></sup>. As these newcomers built homes and communities, they transformed the Native American trails into major colonial transportation routes<sup><a href="#fn10" id="ref10" class="footnote-link">1</a></sup>. These routes, which would later become Broad Street, Lee Highway, and Little Falls Street, played a crucial role in shaping the development of the area<sup><a href="#fn11" id="ref11" class="footnote-link">11</a></sup>. The intersection of these trails soon became the site of The Falls Church, serving as a center for worship and community life<sup><a href="#fn12" id="ref12" class="footnote-link">12</a></sup>. The transformation of Indigenous trails into colonial transportation routes not only facilitated the movement of European settlers but also hastened the disappearance of the region's Indigenous heritage<sup><a href="#fn13" id="ref13" class="footnote-link">13</a></sup>.</p>
+
+<p>The colonists and Virginia Company members aimed to evangelize the local Native American population, but their efforts largely failed. Believing that Christianity required an English cultural context to thrive, they insisted that potential native converts learn English and adopt English lifestyles before becoming Christian<sup><a href="#fn14" id="ref14" class="footnote-link">14</a></sup>. However, many settlers felt little obligation to proselytize the indigenous peoples, and some even misused funds donated for that purpose, opting to build an ironworks instead<sup><a href="#fn15" id="ref15" class="footnote-link">15</a></sup>.</p>
+
+<p>One of the ways the Truro Parish exerted control over the population was through the collection of tithes. The vestry for Truro Parish was responsible for collecting tithes and establishing land boundaries, with tobacco serving as the main form of currency during that time. This system placed a financial burden on the community, particularly on those who did not adhere to the Anglican faith, as they were still required to contribute tithes to support the church.</p>
+
   </div>
   <div class="image-container">
     <img src="/images/history/1765.webp" alt="1765 Truro Parish and Fairfax Parish, Virginia, Vestry Election Tabulation of Votes document from George Washington Papers"  loading="lazy" />
@@ -52,18 +47,12 @@ layout: "scrollytelling"
       <span class="chapter-number">Chapter 3.</span>
       <h3 class="chapter-title">The Original Wooden Church and Its Legacy</h3>
     </div>
-    <p>In 1733, Mr. Richard Blackburn reached an agreement with the Vestry to build the original wooden church at the Cross Roads near Michael Reagan's<sup><a href="#fn16" id="ref16" class="footnote-link">16</a></sup>...</p>
-    <p>The church, designed to be 40 feet in length, 22 feet wide, and 13 feet pitch, was weatherboarded and covered, with all the inside work meticulously performed<sup><a href="#fn17" id="ref17" class="footnote-link">17</a></sup>...</p>
-    <p>This place of worship served both as a spiritual sanctuary for settlers and an outpost of the colonial government<sup><a href="#fn18" id="ref18" class="footnote-link">18</a></sup>.</p>
-    <p>The construction costs were set at 33,500 pounds of tobacco<sup><a href="#fn19" id="ref19" class="footnote-link">19</a></sup>...</p>
-    <p>In 1757, the name "Falls Church" was first applied to what had been known as the Upper Church, serving to distinguish it from the Church in Alexandria<sup><a href="#fn20" id="ref20" class="footnote-link">20</a></sup>.</p>
-    <p>The church was constructed by enslaved individuals, who were skilled artisans from diverse backgrounds, including stone masons, carpenters, well-diggers, shoemakers, merchants, musicians, and builders<sup><a href="#fn21" id="ref21" class="footnote-link">21</a></sup>...</p>
-    <p>Despite being stripped of their freedom and dignity, these individuals were tasked with building a place of worship for a community that did not recognize their humanity...</p>
-    <p>Their expertise and craftsmanship played a crucial role in the development of the church, serving as a testament to their resilience in the face of adversity.</p>
-    <p>Wealthy families in Falls Church, such as the Pearsons, Regans, Gunnells, Trammells, Wrens, Harrisons, Broadwaters, Minors, Robertsons, and Adamses, intermarried and passed land down through generations<sup><a href="#fn7" id="ref7" class="footnote-link">7</a></sup>...</p>
-    <p>Early British-granted land patents allowed these settlers to establish pastoral tobacco plantations on hundreds of acres in Falls Church...</p>
-    <p>Over time, these large properties were divided into smaller farms as families settled in the area, intermarried, and consolidated their wealth and influence<sup><a href="#fn8" id="ref8" class="footnote-link">8</a></sup>.</p>
-    <p>Their ownership and rental of enslaved people extended their influence into the church community.</p> 
+    <p>In 1733, Mr. Richard Blackburn reached an agreement with the Vestry to build the original wooden church at the Cross Roads near Michael Reagan's<sup><a href="#fn16" id="ref16" class="footnote-link">16</a></sup>. The church, designed to be 40 feet in length, 22 feet wide, and 13 feet pitch, was weatherboarded and covered, with all the inside work meticulously performed<sup><a href="#fn17" id="ref17" class="footnote-link">17</a></sup>. This place of worship served both as a spiritual sanctuary for settlers and an outpost of the colonial government<sup><a href="#fn18" id="ref18" class="footnote-link">18</a></sup>. The construction costs were set at 33,500 pounds of tobacco<sup><a href="#fn19" id="ref19" class="footnote-link">19</a></sup>. In 1757, the name "Falls Church" was first applied to what had been known as the Upper Church, serving to distinguish it from the Church in Alexandria<sup><a href="#fn20" id="ref20" class="footnote-link">20</a></sup>.</p>
+
+<p>The church was constructed by enslaved individuals, who were skilled artisans from diverse backgrounds, including stone masons, carpenters, well-diggers, shoemakers, merchants, musicians, and builders<sup><a href="#fn21" id="ref21" class="footnote-link">21</a></sup>. Despite being stripped of their freedom and dignity, these individuals were tasked with building a place of worship for a community that did not recognize their humanity. Their expertise and craftsmanship played a crucial role in the development of the church, serving as a testament to their resilience in the face of adversity.</p>
+
+<p>Wealthy families in Falls Church, such as the Pearsons, Regans, Gunnells, Trammells, Wrens, Harrisons, Broadwaters, Minors, Robertsons, and Adamses, intermarried and passed land down through generations. Early British-granted land patents allowed these settlers to establish pastoral tobacco plantations on hundreds of acres in Falls Church. Over time, these large properties were divided into smaller farms as families settled in the area, intermarried, and consolidated their wealth and influence. Their ownership and rental of enslaved people extended their influence into the church community.</p>
+ 
   </div>    
   <div class="image-container">
     <img src="/images/history/wood.webp" alt="Rendering of wooden falls church"  loading="lazy" />
@@ -78,11 +67,9 @@ layout: "scrollytelling"
       <span class="chapter-number">Chapter 4.</span>
       <h3 class="chapter-title">The Construction of the Current Brick Church</h3>
     </div>
-    <p>In 1769, architect and slave owner James Wren designed and oversaw the construction of the brick church using enslaved labor...</p>
-    <p>Enslaved individuals performed various tasks such as laying bricks and crafting woodwork, all under harsh conditions...</p>
-    <p>Many of the enslaved individuals who worked on the church were also owned by members of the congregation, further entwining the church's legacy with the institution of slavery.</p>
-    <p>The church's leaders, including Wren, participated in perpetuating slavery, and the church served as a platform for disseminating ideas that maintained racial hierarchy and justified enslavement of African Americans...</p>
-    <p>Recognizing the church's impact on the community requires acknowledging the contributions of these enslaved individuals, the injustices they faced, and the role played by the church and its leaders in maintaining and justifying slavery in the community.</p>
+    <p>In 1769, architect and slave owner James Wren designed and oversaw the construction of the brick church using enslaved labor. Enslaved individuals performed various tasks such as laying bricks and crafting woodwork, all under harsh conditions. Many of the enslaved individuals who worked on the church were also owned by members of the congregation, further entwining the church's legacy with the institution of slavery.</p>
+
+<p>The church's leaders, including Wren, participated in perpetuating slavery, and the church served as a platform for disseminating ideas that maintained racial hierarchy and justified enslavement of African Americans. Recognizing the church's impact on the community requires acknowledging the contributions of these enslaved individuals, the injustices they faced, and the role played by the church and its leaders in maintaining and justifying slavery in the community.</p>
   </div>
   <div class="image-container">
     <img src="/images/history/1861.webp" alt="Falls Church, Virginia during the Civil War, photographed between 1861 and 1865"  loading="lazy" />
@@ -120,8 +107,16 @@ layout: "scrollytelling"
       <span class="chapter-number">Chapter 6.</span>
       <h3 class="chapter-title">Falls Church Gains Township Status</h3>
     </div>
-    <p>Upon gaining township status in 1875, Falls Church experienced an increase in its African American population, with the town boundary initially including the entire Tinner Hill neighborhood and other areas now part of Fairfax County. This demographic shift led to 37 percent of registered voters being Black. In response, the town government in 1887 moved the boundary line northward, deliberately excluding much of the Tinner Hill neighborhood and reducing the number of Black registered voters to just 15 percent of the total population in the township.</p>
-   <p>In 1890, the Town Council of Falls Church further voted to cede its other majority African-American districts, including the James Lee community, to Fairfax County. This decision resulted in over one-third of the town's land being relinquished to the county.</p>
+   <p>In 1875, Falls Church gained township status, a significant milestone in the community's growth and development. The desire for township status was driven by the increasing population and a demand for self-governance, separate from Fairfax County. Key figures, such as Joseph S. Riley and Merton Church, played significant roles in the town's path to independence.</p>
+
+<p>Upon achieving township status, Falls Church saw an increase in its African American population, with the town boundary initially including the entire Tinner Hill neighborhood and other areas now part of Fairfax County. This change in the town's demographics led to a more diverse community, with a significant portion of Black residents who had the potential to participate in local governance and contribute to the town's growth.</p>
+
+<p>However, the increase in the African American population, which led to 37 percent of registered voters being Black, prompted a reaction from the town government. In 1887, they decided to move the boundary line northward, deliberately excluding much of the Tinner Hill neighborhood and reducing the number of Black registered voters to just 15 percent of the total population in the township.</p>
+
+<p>The decision to redraw the town boundaries had a considerable impact on the African American community, as it reduced their political representation and access to resources within the township. This move demonstrated a deliberate effort to suppress the influence of Black residents in local governance and perpetuated racial inequality in the community.</p>
+
+<p>In 1890, the Town Council of Falls Church further voted to cede its other majority African-American districts, including the James Lee community, to Fairfax County. This decision resulted in over one-third of the town's land being relinquished to the county. This cession further exacerbated the racial divide, as it removed more African American residents from the town's jurisdiction, undermining their political power and exacerbating existing disparities between white and Black residents in the area.</p>
+
   </div>
   <div class="image-container">
     <img src="/images/history/1890map.webp" alt="1890 map of Falls Church, Fairfax Co., Va. by G. Noetzel"  loading="lazy" />
