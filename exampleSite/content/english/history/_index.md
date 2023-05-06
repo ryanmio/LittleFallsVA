@@ -163,11 +163,16 @@ layout: "scrollytelling"
   <div class="text-content">
     <div class="chapter-heading">
       <span class="chapter-number">Chapter 9.</span>
-      <h3 class="chapter-title">Addressing the Legacy of Racism</h3>
+      <h3 class="chapter-title">Addressing the Legacy of Racism in the 20th and 21st Centuries</h3>
     </div>
-    <p>Falls Church has not been immune to the historical impact of racism and prejudice. Throughout its history, African Americans in Falls Church faced significant obstacles, including the racial segregation in public facilities and schools. In the late 20th century and into the 21st century, efforts were made to acknowledge and address the city's past connections to slavery and segregation.</p>
-   <p>After conducting extensive research, the church discovered that skilled, but enslaved laborers had built the Falls Church in 1769. In an effort to honor these individuals and their contributions, a plaque was dedicated in 2017, offering "gratitude and repentance" for the forced labor. The church chose the word "repentance" over "apology," as the latter was deemed not strong enough. Aisha Huertas, the Diocese of Virginia’s intercultural ministries officer, emphasized that this process of repentance is vital for both the church community and broader society. The case of the Falls Church congregation highlights the importance of acknowledging historical injustices and working towards healing and reconciliation.
-</p>   
+   <p>As the Civil Rights Movement gained momentum in the 1950s and 1960s, Falls Church began to confront the racial inequality present within the city. In the late 20th century and into the 21st century, efforts were made to acknowledge and address the city's past connections to slavery and segregation. Local churches and organizations played a pivotal role in supporting these efforts and fostering dialogue around the issues facing minority communities.</p>
+
+<p>After conducting extensive research, the church discovered that skilled, but enslaved laborers had built the current Falls Church in 1769. In an effort to honor these individuals and their contributions, a plaque was dedicated in 2017, offering "gratitude and repentance" for the forced labor. The church chose the word "repentance" over "apology," as the latter was deemed not strong enough. Aisha Huertas, the Diocese of Virginia’s intercultural ministries officer, emphasized that this process of repentance is vital for both the church community and broader society. The case of the Falls Church congregation highlights the importance of acknowledging historical injustices and working towards healing and reconciliation.</p>
+
+<p>In the decades following the Civil Rights Movement, Falls Church continued to grow more diverse, welcoming new residents from various ethnic and cultural backgrounds. This diversity has enriched the city's cultural landscape, with various community events, festivals, and celebrations highlighting the unique traditions and customs of its residents.</p>
+
+<p>Today, the City of Falls Church celebrates its diverse heritage and strives to create an inclusive environment for all residents, regardless of their cultural or ethnic background. The city's commitment to embracing diversity and promoting equality is a testament to the resilience and unity of its marginalized communities, whose stories continue to shape Falls Church's history and future.</p>
+
   </div>
   <div class="image-container">
     <img src="/images/history/Stone.webp" alt="plaque was dedicated in 2017, offering gratitude and repentance for forced labor"  loading="lazy" />
