@@ -232,109 +232,72 @@ sup {
   padding-left: 0.15em !important;
 }
   
-.related-experience {
-  margin: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f9f9f9;
-  border-radius: 4px;
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  transition: all 0.3s;
-}
-
-.related-experience:hover {
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-  transform: scale(1.02);
-}
-
-.related-experience img {
-  width: 100%;
-  max-width: 140px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-
-.related-experience .up-next {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  align-self: flex-start;
-}
-
-.related-experience .title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  text-decoration: underline;
-  margin-bottom: 0.5rem;
-}
-
-.related-experience .description {
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.related-experience .explore-link {
-  text-decoration: none;
-  color: #007BFF;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 4px;
-  transition: color 0.3s;
-}
-
-.related-experience .explore-link:hover {
-  text-decoration: underline;
-  color: #0056b3;
-}
-
-.related-experience .right-arrow {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: rgba(0, 0, 0, 0.5);
-  transition: color 0.3s;
-}
-
-.related-experience:hover .right-arrow {
-  color: #007BFF;
-}
-
-@media screen and (min-width: 768px) {
-  .related-experience {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 2rem;
-  }
-
-  .related-experience .content {
+ .nelly-card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-right: 1rem;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
   }
-}
-
-@media screen and (max-width: 768px) {
-  .related-experience {
-    padding: 1.5rem;
-    margin: 2rem 1rem;
+  .nelly-card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
   }
-
-  .related-experience .title,
-  .related-experience .description {
+  .nelly-card:hover .right-arrow {
+    color: #007bff;
+  }
+  .up-next {
+    margin-bottom: 5px;
+  }
+  .image-container {
     text-align: center;
   }
-}
+  .image-container img {
+    width: 70%;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+  .explore-link {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  .right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.5);
+    transition: color 0.2s ease;
+  }
+  @media screen and (min-width: 768px) {
+    .nelly-card {
+      flex-direction: row;
+    }
+    .text-content {
+      flex: 2;
+    }
+    .image-container {
+      flex: 1;
+    }
+    .image-container img {
+      width: 100%;
+      margin-bottom: 0;
+    }
+    .title {
+      text-align: left;
+      margin-bottom: 5px;
+    }
+  }
 
 
 </style>
@@ -363,14 +326,16 @@ sup {
 </div>
 
 
-<a href="/nelly" class="related-experience">
-  <div class="content">
+<a href="littlefallsva.com/nelly" class="nelly-card">
+  <div class="text-content">
     <p class="up-next">Up Next:</p>
-    <img src="/images/nelly/nelly0.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia">
     <h2 class="title">Nelly's Journey: A Life Unveiled</h2>
     <p class="description">Uncover the untold story of Nelly, an enslaved person from Falls Church whose life sheds light on the complexities of our local history.</p>
+    <p class="explore-link">Explore Nelly's Journey »</p>
   </div>
-  <p class="explore-link">Explore Nelly's Journey »</p>
+  <div class="image-container">
+    <img src="/images/nelly/nelly0.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia">
+  </div>
   <span class="right-arrow">&rsaquo;</span>
 </a>
 
