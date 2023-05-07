@@ -244,11 +244,17 @@ sup {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  transition: all 0.3s;
+}
+
+.related-experience:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
 }
 
 .related-experience img {
   width: 100%;
-  max-width: 200px;
+  max-width: 140px;
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 1rem;
@@ -257,6 +263,7 @@ sup {
 .related-experience .up-next {
   font-weight: bold;
   margin-bottom: 0.5rem;
+  align-self: flex-start;
 }
 
 .related-experience .title {
@@ -273,7 +280,7 @@ sup {
   margin-bottom: 1rem;
 }
 
-.related-experience a {
+.related-experience .explore-link {
   text-decoration: none;
   color: #007BFF;
   font-weight: bold;
@@ -282,16 +289,53 @@ sup {
   transition: color 0.3s;
 }
 
-.related-experience a:hover {
+.related-experience .explore-link:hover {
   text-decoration: underline;
   color: #0056b3;
+}
+
+.related-experience .right-arrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.5);
+  transition: color 0.3s;
+}
+
+.related-experience:hover .right-arrow {
+  color: #007BFF;
+}
+
+@media screen and (min-width: 768px) {
+  .related-experience {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+  }
+
+  .related-experience .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 1rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .related-experience {
     padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .related-experience .title,
+  .related-experience .description {
+    text-align: center;
   }
 }
+
 
 </style>
 
@@ -319,18 +363,16 @@ sup {
 </div>
 
 
-<div class="related-experience">
-  <img src="/images/nelly/nelly0.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia">
-  <p class="up-next">Up next:</p>
-  <p class="title">Nelly's Journey: A Life of Resilience and a Quest for Freedom</p>
-  <p class="description">Uncover the untold story of Nelly, an enslaved person from Falls Church whose life sheds light on the complexities of our local history.</p>
-  <a href="/nelly">Explore Nelly's Journey</a>
-</div>
-
-
-
-
-
+<a href="/nelly" class="related-experience">
+  <div class="content">
+    <p class="up-next">Up Next:</p>
+    <img src="/images/nelly/nelly0.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia">
+    <h2 class="title">Nelly's Journey: A Life Unveiled</h2>
+    <p class="description">Uncover the untold story of Nelly, an enslaved person from Falls Church whose life sheds light on the complexities of our local history.</p>
+  </div>
+  <p class="explore-link">Explore Nelly's Journey »</p>
+  <span class="right-arrow">&rsaquo;</span>
+</a>
 
 
 <!-- footer -->
