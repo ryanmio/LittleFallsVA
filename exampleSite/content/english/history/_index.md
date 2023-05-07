@@ -67,7 +67,7 @@ layout: "scrollytelling"
       <span class="chapter-number">Chapter 4.</span>
       <h3 class="chapter-title">The Construction of the Current Brick Church</h3>
     </div>
-    <p>In 1769, architect and slave owner James Wren designed and oversaw the construction of the brick church using enslaved labor. Enslaved individuals performed various tasks such as laying bricks and crafting woodwork, all under harsh conditions. Many of the enslaved individuals who worked on the church were also owned by members of the congregation, further entwining the church's legacy with the institution of slavery.</p>
+    <p>In 1769, architect James Wren designed and oversaw the construction of the brick church using enslaved labor<sup><a href="#fn24" id="ref24" class="footnote-link">24</a></sup>. Enslaved individuals performed various tasks such as laying bricks and crafting woodwork, all under harsh conditions<sup><a href="#fn25" id="ref25" class="footnote-link">25</a></sup>. Many of the enslaved individuals who worked on the church were also owned by members of the congregation, further entwining the church's legacy with the institution of slavery<sup><a href="#fn26" id="ref26" class="footnote-link">26</a></sup>.</p>
 
 <p>The church's leaders, including Wren, participated in perpetuating slavery, and the church served as a platform for disseminating ideas that maintained racial hierarchy and justified enslavement of African Americans. Recognizing the church's impact on the community requires acknowledging the contributions of these enslaved individuals, the injustices they faced, and the role played by the church and its leaders in maintaining and justifying slavery in the community.</p>
   </div>
