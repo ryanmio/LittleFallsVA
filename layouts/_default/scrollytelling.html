@@ -232,7 +232,7 @@ sup {
   padding-left: 0.15em !important;
 }
   
-  .nelly-card {
+    .nelly-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -245,6 +245,7 @@ sup {
     text-decoration: none;
     color: inherit;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
+    width: 100%;
   }
   .nelly-card:hover {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
@@ -268,7 +269,7 @@ sup {
     margin-bottom: 10px;
     color: #333;
     text-decoration: underline;
-    text-align: left;
+    text-align: center;
   }
   .explore-link {
     text-decoration: underline;
@@ -286,6 +287,9 @@ sup {
   @media screen and (min-width: 768px) {
     .nelly-card {
       flex-direction: row;
+      width: 66%;
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
     .text-content {
       flex: 2;
@@ -305,13 +309,13 @@ sup {
       margin-left: 10px;
     }
     .title {
+      text-align: left;
       margin-bottom: 5px;
     }
     .right-arrow {
-      display: none;
+      display: block;
     }
   }
-
 </style>
 
 <div class="chapter-nav">
