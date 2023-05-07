@@ -232,7 +232,7 @@ sup {
   padding-left: 0.15em !important;
 }
   
-   .nelly-card {
+  .nelly-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -297,6 +297,7 @@ sup {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding: 5px 0;
     }
     .image-container {
       flex: 1;
@@ -307,7 +308,7 @@ sup {
       padding-right: 0;
     }
     .image-container img {
-      width: 60%;
+      width: 70%;
       margin-bottom: 0;
       margin-left: 10px;
     }
@@ -318,6 +319,14 @@ sup {
     .right-arrow {
       display: block;
       color: rgba(0, 0, 0, 0.5);
+    }
+    .image-container img {
+      margin-top: 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .image-container img {
+      margin-top: -3rem;
     }
   }
 </style>
