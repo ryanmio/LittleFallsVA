@@ -1,6 +1,7 @@
 ---
 title: "Nelly's Journey: A Life in Chains and a Quest for Freedom"
 date: 2023-04-12
+description: "Embark on an emotional and immersive journey through Nelly's life as one of James Wren's slaves in 1800s Falls, Church, Virginia. Discover her resilience, love, and quest for freedom in this captivating interactive narrative."
 layout: "nelly"
 ---
 

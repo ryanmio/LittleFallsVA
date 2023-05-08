@@ -1,6 +1,7 @@
 ---
 title: "History"
 date: 2023-04-12
+description: "Explore the fascinating history of Falls Church, Virginia, as we delve into the stories of marginalized communities and their impact on the city's development. From the Tinner Hill community's fight against segregation to the city's growth and embrace of diversity, discover how these narratives have shaped Falls Church's past and present."
 layout: "scrollytelling"
 ---
 
