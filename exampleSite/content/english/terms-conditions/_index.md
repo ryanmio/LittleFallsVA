@@ -19,3 +19,5 @@ Please read this terms and conditions stated below, which outline a lot of legal
 
 ### Generative AI Disclaimer
 1) A few select images used on this site were created with generative AI, mainly for copyright purposes. Little Falls Committee also uses generative AI to enhance multi-lingual support.
+
+Last Updated: 5/8/23
