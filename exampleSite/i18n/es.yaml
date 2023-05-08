@@ -42,6 +42,9 @@
 
 - id: get_involved_footer
   translation: "Participa"
+  
+- id: "nelly"
+  translation: "Nelly"  
 
 - id: terms_conditions_footer
   translation: "Términos y condiciones"
