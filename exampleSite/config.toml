@@ -19,6 +19,9 @@ defaultContentLanguage = "en"
   [languages.es]
     baseURL = "https://littlefallsva.com/"
 
+[build]
+  publishFuture = true
+
 
 #################################### Plugins ##########################################
 
