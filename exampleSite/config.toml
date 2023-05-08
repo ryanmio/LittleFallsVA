@@ -122,16 +122,21 @@ weight = 5
   identifier = "get_involved_footer"
   url = "get-involved/"
   weight = 4
+  
+[[menu.footer]]
+  identifier = "nelly"
+  url = "nelly/"
+  weight = 5  
 
 [[menu.footer]]
   identifier = "terms_conditions_footer"
   url = "terms-conditions/"
-  weight = 5
+  weight = 6
 
 [[menu.footer]]
   identifier = "privacy_policy_footer"
   url = "privacy-policy/"
-  weight = 6
+  weight = 7
 
 ########################### Default parameters ##########################
 [params]

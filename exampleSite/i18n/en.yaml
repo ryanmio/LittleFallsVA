@@ -27,6 +27,9 @@
 
 - id: "get_involved"
   translation: "Get Involved"
+  
+- id: "nelly"
+  translation: "Nelly"  
 
 - id: "terms_conditions"
   translation: "Terms & Conditions"
