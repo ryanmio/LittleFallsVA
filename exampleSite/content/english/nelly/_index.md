@@ -12,7 +12,7 @@ layout: "nelly"
         <h3 class="chapter-title">A Voice from the Past</h3>
       </div>
       <div class="image-container polaroid top">
-        <img src="/images/nelly/nelly0.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
+        <img src="/images/nelly/nelly0.webp" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
       </div>
     </div>
       <div class="chapter-body">
@@ -32,7 +32,7 @@ layout: "nelly"
       <h3 class="chapter-title">A Child of Sorrow</h3>
   </div>
       <div class="image-container polaroid">
-        <img src="/images/nelly/nelly1.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
+        <img src="/images/nelly/nelly1.webp" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
       </div>
     </div>
             <div class="chapter-body">
@@ -60,7 +60,7 @@ layout: "nelly"
         <h3 class="chapter-title">Bonds Broken</h3>
       </div>
       <div class="image-container polaroid">
-        <img src="/images/nelly/nelly2.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
+        <img src="/images/nelly/nelly2.webp" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
       </div>
     </div>
     <div class="chapter-body">
@@ -86,7 +86,7 @@ layout: "nelly"
         <h3 class="chapter-title">A Cruel Existence</h3>
       </div>
       <div class="image-container polaroid">
-        <img src="/images/nelly/nelly3.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
+        <img src="/images/nelly/nelly3.webp" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
       </div>
     </div>
     <div class="chapter-body">
@@ -112,7 +112,7 @@ layout: "nelly"
         <h3 class="chapter-title">Love in the Shadows</h3>
       </div>
       <div class="image-container polaroid">
-        <img src="/images/nelly/nelly4.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
+        <img src="/images/nelly/nelly4.webp" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
       </div>
     </div>
     <div class="chapter-body">
@@ -138,7 +138,7 @@ layout: "nelly"
         <h3 class="chapter-title">A Life in Limbo</h3>
       </div>
       <div class="image-container polaroid">
-        <img src="/images/nelly/nelly5.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
+        <img src="/images/nelly/nelly5.webp" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
       </div>
     </div>
     <div class="chapter-body">
@@ -168,7 +168,7 @@ layout: "nelly"
         <h3 class="chapter-title">The Long Road to Freedom</h3>
       </div>
       <div class="image-container polaroid">
-        <img src="/images/nelly/nelly6.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
+        <img src="/images/nelly/nelly6.webp" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
       </div>
     </div>
     <div class="chapter-body">
@@ -194,7 +194,7 @@ layout: "nelly"
         <h3 class="chapter-title">Hushed Whispers of Freedom</h3>
       </div>
       <div class="image-container polaroid">
-        <img src="/images/nelly/nelly7.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)"  />
+        <img src="/images/nelly/nelly7.webp" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)"  />
       </div>
     </div>
     <div class="chapter-body">
@@ -221,7 +221,7 @@ layout: "nelly"
         <h3 class="chapter-title">The Dawn of Freedom</h3>
       </div>
       <div class="image-container polaroid">
-        <img src="/images/nelly/nelly8.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
+        <img src="/images/nelly/nelly8.webp" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
       </div>
     </div>
     <div class="chapter-body">
@@ -248,7 +248,7 @@ layout: "nelly"
         <h3 class="chapter-title">A New World</h3>
       </div>
       <div class="image-container polaroid">
-        <img src="/images/nelly/nelly9.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
+        <img src="/images/nelly/nelly9.webp" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia"  onclick="toggleZoom(event)" />
       </div>
     </div>
     <div class="chapter-body">
@@ -275,7 +275,7 @@ layout: "nelly"
         <h3 class="chapter-title">The Seeds of a Better Future</h3>
       </div>
       <div class="image-container polaroid" >
-        <img src="/images/nelly/nelly10.png" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia" onclick="toggleZoom(event)" />
+        <img src="/images/nelly/nelly10.webp" alt="Digital render of Nelly, an African woman in 1800's Falls Church, Virginia" onclick="toggleZoom(event)" />
       </div>
     </div>
     <div class="chapter-body">
