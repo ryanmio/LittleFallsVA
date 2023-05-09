@@ -678,14 +678,16 @@ sup {
     updateActiveChapterLink();
   });
 
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
+document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
       const targetId = this.getAttribute('href');
       const targetElement = document.querySelector(targetId);
 
       if (targetElement) {
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        let targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const offset = link.classList.contains('footnote-link') ? -100 : 0;
+        targetPosition += offset;
 
         window.scrollTo({
           top: targetPosition,
