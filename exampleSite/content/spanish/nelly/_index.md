@@ -2,7 +2,7 @@
 title: "El viaje de Nelly: una vida en cadenas y una búsqueda de libertad"
 date: 2023-04-12
 description: "Embárcate en un emocionante e inmersivo recorrido por la vida de Nelly como una de las esclavas de James Wren en Falls Church, Virginia, en la década de 1800. Descubre su resistencia, amor y búsqueda de libertad en esta cautivadora narrativa interactiva."
-layout: "nelly"
+layout: "nelly-es"
 ---
 
 <div class="scroll-section" id="prologue">
