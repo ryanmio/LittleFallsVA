@@ -118,7 +118,7 @@ layout: "nelly"
     </div>
     <div class="chapter-body">
       <p>In the midst of the cruelty and suffering, I found solace in an unexpected place – the tender gaze of a fellow enslaved man named Samuel. Our love blossomed in secret, hidden from the prying eyes of our masters. Our hearts beat in unison, a quiet symphony of hope and longing that filled the spaces between the moments we could steal together.</p>
-      <p>Samuel's gentle touch and warm embrace provided a safe haven, a world apart from the harsh realities that surrounded us. In his arms, I found a peace that I had never known before, a fleeting respite from the chains that bound us both.</p>
+      <p>It was in Samuel's embrace that I found a respite from our grim reality. His touch was gentle, yet strong, a testament to his laborious days spent molding and shaping stone as the skilled mason behind the new church on the road to the falls. His hands, so adept at creating beauty from raw, unforgiving stone, offered me a warmth and comfort I had never known.</p>
       <p>We spoke in hushed whispers of our dreams for the future, imagining a life where we could be free to love without fear. These stolen moments were our refuge, a sanctuary where we could escape the suffocating confines of our existence, even if just for a little while.</p>
       <p>Our love was a fragile, precious thing, nurtured in the shadows and shielded from the brutal world that threatened to tear us apart. With every stolen kiss and whispered promise, we defied the odds and dared to hope for a day when the chains that bound us would be broken, and we could stand side by side, free to love and be loved in return.</p>
     </div>
