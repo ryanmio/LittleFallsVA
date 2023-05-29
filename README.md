@@ -1,5 +1,5 @@
 <h1 align=center>Little Falls, VA Website</h1> 
-<p align=center>The Little Falls, VA website advocates for the renaming of Falls Church, Virginia to Little Falls. It's built on Hugo framework using the Vex Hugo theme.</p>
+<p align=center>The Little Falls, VA website advocates for the renaming of Falls Church, Virginia to Little Falls. It's built on Hugo framework using the Vex Hugo theme. </p>
 <h2 align="center"> <a target="_blank" href="https://littlefallsva.com" rel="nofollow">Website</a></h2>
 
 <p align=center>
