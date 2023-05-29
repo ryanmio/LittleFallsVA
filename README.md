@@ -32,7 +32,7 @@
 - Newsletter signup for updates on the renaming movement, upcoming events, and ways to contribute
 
 ## Repository Structure
-
+<pre>
 .
 ├── archetypes # Templates for generating new content
 ├── assets # Resources like SCSS or JavaScript files
@@ -47,6 +47,7 @@
 ├── netlify.toml # Netlify configuration for the site
 ├── package.json # Lists the JavaScript dependencies of the project
 └── theme.toml # Configuration for the Hugo theme
+</pre>
 
 <!-- licence -->
 ## License
