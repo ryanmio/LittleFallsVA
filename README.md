@@ -50,6 +50,28 @@
 - **Map Interaction:** When a user clicks on the map, the Leaflet.js library provides the latitude and longitude of the clicked point. The user can input a message, which can be associated with the marker.
 Responsive Design:** CSS is used to ensure the map is responsive and works well on a range of device sizes. The map container is designed to scale based on the width of the viewport, while maintaining a fixed height.
 
+### Movement Map Lambda Function
+This section details the AWS Lambda function responsible for managing markers on the movement map.
+
+#### Key Components
+- `AWS` and `DynamoDB.DocumentClient`: These are part of the AWS SDK for JavaScript, used for interacting with AWS DynamoDB.
+- `uuidv4`: Generates a unique identifier (UUID) for each new marker.
+- `headers`: Contains headers for the HTTP response to allow cross-origin resource sharing (CORS).
+- `addMarker`, `getMarkers`, `deleteMarker`: These async functions add a marker, retrieve all markers, and delete a marker from the DynamoDB table respectively.
+
+#### Environment Variables
+- `MARKER_TABLE`: The name of the DynamoDB table where markers are stored.
+
+#### Execution
+The execution of this script depends on an incoming event from AWS API Gateway. The event will contain the HTTP method (like `GET`, `POST`, `DELETE`, etc.) which will determine which function (`addMarker`, `getMarkers`, `deleteMarker`) will be executed. 
+
+#### Dependencies
+- `aws-sdk`: The official AWS SDK for JavaScript, available on NPM, used to interact with AWS services like DynamoDB.
+- `uuid`: This library is used to generate unique IDs for each marker. The particular import `v4` generates a random UUID. 
+
+#### Deployment
+This script is deployed as an AWS Lambda function and is triggered by events from AWS API Gateway. Ensure the environment variable `MARKER_TABLE` is set with the name of your DynamoDB table and that your Lambda function has the necessary IAM permissions to interact with DynamoDB.
+
 ## Scrollytelling Experiences
 
 ### Scrollytelling Key Features
