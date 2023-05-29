@@ -1,8 +1,8 @@
 ---
 title: "Un Nombre Para Todos"
-date: 2022-04-23
+date: 2023-05-30
 image: "images/meeting.webp"
-description : "Little Falls, VA - 3 de mayo de 2023 - El Comité por Little Falls se enorgullece en anunciar la formación de un nuevo subcomité, enfocado en reclutar voluntarios, mantener el sitio web y redactar comunicados de prensa para impulsar el apoyo al cambio de nombre propuesto de Falls Church, Virginia a Little Falls."
+description : "Little Falls, VA - 30 de mayo de 2023 - El Comité por Little Falls se enorgullece en anunciar la formación de un nuevo subcomité, enfocado en reclutar voluntarios, mantener el sitio web y redactar comunicados de prensa para impulsar el apoyo al cambio de nombre propuesto de Falls Church, Virginia a Little Falls."
 draft: false
 weight: 8
 category: "name-change"
@@ -14,7 +14,7 @@ PARA PUBLICACIÓN INMEDIATA
 
 El Comité por Little Falls Destaca la Razón Detrás del Cambio de Nombre Propuesto
 
-Little Falls, VA - 3 de mayo de 2023 - El Comité por Little Falls ha publicado una declaración que describe la razón detrás de proponer "Little Falls" como el nuevo nombre para Falls Church, Virginia. Esta declaración tiene como objetivo abordar preguntas e inquietudes de la comunidad y proporcionar una comprensión clara de la importancia del nombre.
+Little Falls, VA - 30 de mayo de 2023 - El Comité por Little Falls ha publicado una declaración que describe la razón detrás de proponer "Little Falls" como el nuevo nombre para Falls Church, Virginia. Esta declaración tiene como objetivo abordar preguntas e inquietudes de la comunidad y proporcionar una comprensión clara de la importancia del nombre.
 
 La razón detrás del cambio de nombre propuesto se puede resumir en tres puntos clave:
 
