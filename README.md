@@ -16,7 +16,7 @@
 ---
 
 <p align="center">
-  <img src="URL_TO_WEBSITE_SCREENSHOT" alt="website screenshot" width="100%">
+  <img src="https://littlefallsva.com/images/screenshot.png" alt="website screenshot" width="100%">
 </p>
 
 ---
