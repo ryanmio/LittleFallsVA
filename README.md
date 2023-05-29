@@ -35,7 +35,7 @@
 
 - **CRM Integration**: The site features a newsletter signup for updates on the renaming movement, upcoming events, and ways to contribute. Signups and petition signatures are processed through Netlify to a custom-built CRM.
 
-- **Get Involved Page**: The Get Involved page is a hub for community action, featuring an interactive map that allows supporters to add a pin marking their location, visually showcasing the breadth and reach of the movement's support.
+- **Interactive Features**: The Get Involved page is a hub for community action, featuring an interactive map that allows supporters to add a pin marking their location, visually showcasing the breadth and reach of the movement's support.
 
 ## Movement Map
 ### Movement Map Key Features
@@ -71,6 +71,22 @@ The execution of this script depends on an incoming event from AWS API Gateway. 
 
 #### Deployment
 This script is deployed as an AWS Lambda function and is triggered by events from AWS API Gateway. Ensure the environment variable `MARKER_TABLE` is set with the name of your DynamoDB table and that your Lambda function has the necessary IAM permissions to interact with DynamoDB.
+
+## Meta Tags Management
+### Meta Tags Management Key Features
+- **Automated Meta Information:** The site leverages Hugo's capabilities to dynamically generate meta information for each page. This is accomplished using Hugo variables to extract necessary data directly from markdown files, providing a highly efficient, automated process.
+- **Unified Meta Tags Partial:** All meta tags are consolidated within a single partial, simplifying management and ensuring consistent implementation across all pages. 
+- **SEO Optimization:** Proper usage of meta tags contributes to search engine optimization, enhancing the site's visibility on search engines.
+- **Enhanced Social Media Sharing:** Open Graph and Twitter card tags are employed to optimize the appearance of shared links on social media platforms, generating engaging, detailed link previews.
+
+### Meta Tags Management Technical Details
+- **Hugo Variables:** Hugo's template variables are utilized to dynamically pull data from each markdown file when the site is generated. For instance, `{{ .Title }}` fetches the title of the current page.
+- **Meta Tags Partial:** A dedicated partial file houses all the meta tags, included in the header of each page. This approach guarantees that every page carries the necessary meta tags, and maintains consistency throughout the site.
+- **Open Graph and Twitter Cards:** These meta tags are used to generate rich previews of the site's content when shared on social media platforms, including elements such as title, description, and a relevant image.
+- **Canonical URLs:** Canonical URLs are employed to specify the primary version of a page for search engines, crucial when multiple versions of a page exist, particularly in multilingual sites.
+- **Fallbacks:** Fallback values are set for descriptions and other fields that may not always be provided in the page's front matter. This practice ensures a suitable value is always present for each meta tag.
+
+In summary, this approach to managing meta tags not only bolsters SEO but also streamlines the process of maintaining consistency across all pages.
 
 ## Scrollytelling Experiences
 
