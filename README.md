@@ -88,6 +88,27 @@ This script is deployed as an AWS Lambda function and is triggered by events fro
 
 In summary, this approach to managing meta tags not only bolsters SEO but also streamlines the process of maintaining consistency across all pages.
 
+## Petition Page
+### Petition Page Key Features
+- **Interactive Petition Form:** The petition page provides an interactive form for supporters to sign the petition. The form is embedded using an iframe and dynamically generated with a Google Apps Script, making it easy for visitors to provide their support.
+- **Automated Signature Count:** A running total of signatures is displayed on the page, providing live updates on the support received for the renaming movement.
+- **Bilingual Support:** The form supports both English and Spanish languages to cater to a more diverse audience. The language preference is passed as a parameter to the Google Apps Script, which dynamically changes form labels based on the selected language.
+- **Petition Message:** A detailed petition message is included, highlighting the purpose and the significance of the renaming movement.
+
+### Petition Page Technical Details
+- **Iframe and Google Apps Script:** The petition form is embedded in an iframe, with its source set to a Google Apps Script URL. The script dynamically generates an HTML form based on parameters, including language preference.
+- **Form Submission and Data Storage:** Upon submission of the form, the data (name, email, and zip code) is sent to a Google Sheet via the Google Apps Script. This method simplifies data collection and storage, while making it easy to access and analyze the data.
+- **Loading Spinner:** A CSS-based loading spinner is shown when the form is loading. The spinner is hidden once the iframe content is fully loaded, improving the user experience.
+- **JavaScript:** JavaScript is used to handle the iframe load event, ensuring the loading spinner is removed when the form is ready for interaction.
+
+### Petition Page Google Apps Script
+The Google Apps Script provides key functionalities for the petition form:
+
+- **Language Support:** The script can handle a `lang` parameter passed via the URL. Depending on this parameter, form labels are dynamically set in the corresponding language (English or Spanish).
+- **Data Append:** Upon form submission, the script appends the submitted data (name, email, and zip code) to a specific Google Sheet.
+
+The script is deployed as a web app, and the generated URL is used as the iframe source in the HTML page. This way, the petition form can dynamically adjust to the user's language preference and handle form submissions.
+
 ## Scrollytelling Experiences
 
 ### Scrollytelling Key Features
@@ -139,6 +160,19 @@ Each image has an IntersectionObserver attached to it. When the image comes into
 
 - **Responsive Design:**
 The site is designed to be responsive, meaning it works well on both desktop and mobile devices. This is achieved by using CSS media queries to change the layout of the site based on the viewport size. The site also utilizes the ResizeObserver API to adjust the scroll interactions based on the size of the viewport.
+
+
+## Serverless Architecture E-Commerce with Snipcart
+
+Snipcart is a powerful serverless architecture e-commerce solution that enhances the e-commerce experience on the Little Falls, VA website. It offers a range of key features and technical details that make it an excellent choice for building an e-commerce store. Let's explore them:
+
+### Snipcart Technical Details
+
+- **Serverless Architecture**: Snipcart follows a serverless architecture approach, which eliminates the need for server maintenance and scalability concerns. The entire infrastructure is managed by Snipcart, allowing you to focus on your business.
+
+- **Client-side Integration**: Snipcart integrates with the website on the client-side, utilizing JavaScript to handle the shopping cart, checkout process, and order management. This lightweight approach ensures fast and responsive e-commerce functionality.
+
+**API-driven**: Snipcart provides a comprehensive API to programmatically interact with your store, manage orders, retrieve product information, and more. This API-first approach enables seamless integration with other systems and custom workflows.
 
 ## Repository Structure
 <pre>
