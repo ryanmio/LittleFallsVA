@@ -37,7 +37,20 @@
 
 - **Get Involved Page**: The Get Involved page is a hub for community action, featuring an interactive map that allows supporters to add a pin marking their location, visually showcasing the breadth and reach of the movement's support.
 
-## History of Falls Church Scrollytelling Page
+## Movement Map
+### Movement Map Key Features
+- **Interactive Map:** The movement map is an interactive feature powered by Leaflet.js. This map displays the locations of Little Falls supporters, events, and points of interest related to the movement.
+- **Marker Placement:** Users can click on the map to add their own markers, thereby indicating their location or the location of a point of interest.
+- **Marker Message: Users are given the ability to attach a custom message to the marker they place on the map.
+- **Mobile-friendly:** The map is designed to be responsive, which means it scales and adjusts to provide a suitable user experience across a range of devices, including desktop computers, laptops, tablets, and smartphones.
+### Movement Map Technical Details
+- **Leaflet.js:** The map uses Leaflet.js, a popular open-source JavaScript library for interactive maps. Leaflet is lightweight, flexible, and efficient, making it ideal for this type of interactive web map.
+- **Map Tiles:** OpenStreetMap tiles are used for the map. OpenStreetMap is a free and open-source collaborative mapping project.
+- **Markers from DynamoDB: The markers are loaded from a DynamoDB database. This is accomplished by making a fetch request to an API, which returns the marker data. This data includes latitude and longitude coordinates, which are used to place the markers on the map.
+- **Map Interaction:** When a user clicks on the map, the Leaflet.js library provides the latitude and longitude of the clicked point. The user can input a message, which can be associated with the marker.
+Responsive Design:** CSS is used to ensure the map is responsive and works well on a range of device sizes. The map container is designed to scale based on the width of the viewport, while maintaining a fixed height.
+
+## Scrollytelling Experiences
 
 ### Scrollytelling Key Features
 - **Section-Based Progression:** As users scroll down, they move through distinct sections of the story. Each section represents a different chapter in Falls Church's history, and contains a mix of text, images, and interactive elements to convey that part of the story.
