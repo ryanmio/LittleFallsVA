@@ -2,7 +2,7 @@
 title: "A Birthday Wish for Falls Church's 75th Anniversary"
 date: 2023-08-16
 image: "images/logo.webp"
-description: "Falls Church, VA - August 16, 2023 - Ryan Mioduski, Facilitator of the Little Falls Movement, pens a heartfelt op-ed reflecting on the 75th anniversary of Falls Church, calling for an embrace of the city's true history and a movement toward inclusivity."
+description: "Falls Church, VA - August 16, 2023 - Little Falls Movement calls for an embrace of the city's history and a movement toward inclusivity."
 draft: false
 category: "name-change"
 weight: 8
@@ -10,7 +10,7 @@ keywords: "Falls Church, Little Falls Movement, 75th anniversary, renaming, incl
 layout: "op-ed"
 ---
 
-Dear Falls Church,
+Dear Falls Church City,
 
 As the candles are lit for your 75th birthday, the flickers cast shadows that tell the tale of your rich but complicated history. It's a time to celebrate, but also a moment to reflect.
 
@@ -24,7 +24,7 @@ The movement to rename you to Little Falls seeks to honor the totality of your s
 
 On this 75th birthday, let's make a wish for a future that's inclusive and united. This is not about rewriting history; it's about embracing a fuller understanding of who we are and who we can be. With each passing year, we grow, we learn, we change. It's time we reflect that growth in our name.
 
-Happy 75th, Falls Church. Here's to opening a new chapter that recognizes our shared past while looking forward to a future where every voice is acknowledged.
+Happy 75th, Falls Church City. Here's to opening a new chapter that recognizes our shared past while looking forward to a future where every voice is acknowledged.
 
 With hope and respect,
 
