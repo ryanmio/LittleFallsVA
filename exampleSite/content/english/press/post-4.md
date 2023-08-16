@@ -28,6 +28,6 @@ Happy 75th, Falls Church. Here's to opening a new chapter that recognizes our sh
 
 With hope and respect,
 
-Ryan Mioduski
-Co-Founder and Facilitator
+Ryan Mioduski <br>
+Co-Founder and Facilitator <br>
 Little Falls Movement
