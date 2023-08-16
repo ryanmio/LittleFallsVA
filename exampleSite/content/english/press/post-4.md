@@ -1,8 +1,8 @@
 ---
 title: "A Birthday Wish for Falls Church's 75th Anniversary"
-date: 2023-05-15
+date: 2023-08-16
 image: "images/logo.webp"
-description: "Falls Church, VA - May 15, 2023 - Ryan Mioduski, Facilitator of the Little Falls Movement, pens a heartfelt op-ed reflecting on the 75th anniversary of Falls Church, calling for an embrace of the city's true history and a movement toward inclusivity."
+description: "Falls Church, VA - August 16, 2023 - Ryan Mioduski, Facilitator of the Little Falls Movement, pens a heartfelt op-ed reflecting on the 75th anniversary of Falls Church, calling for an embrace of the city's true history and a movement toward inclusivity."
 draft: false
 category: "name-change"
 weight: 8
