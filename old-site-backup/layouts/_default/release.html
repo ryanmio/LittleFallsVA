@@ -1,0 +1,106 @@
+{{ define "main" }}
+
+  <style>
+    .press-release {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .press-release-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .press-release-header h1 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .press-release-header .date {
+      font-size: 1.25rem;
+      color: #777;
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+    }
+
+    .content ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .navigation {
+      margin-top: 2rem;
+    }
+
+    .navigation .previous,
+    .navigation .next {
+      font-size: 1rem;
+      color: #2f4a5e;
+      text-decoration: none;
+    }
+
+    .navigation .previous:hover,
+    .navigation .next:hover {
+      color: #76a0c2;
+    }
+
+    .back-to-press-releases {
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #2f4a5e;
+    }
+
+    .back-to-press-releases:hover {
+      color: #76a0c2;
+    }
+
+    @media (max-width: 767px) {
+      .col-md-10.mx-auto {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  </style>
+
+<section class="section press-release">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <a href="{{ "press" | absURL }}" class="back-to-press-releases">&larr; {{ i18n "back_to_press_releases" }}</a>
+        <div class="press-release-header">
+          <h1>{{ .Title | markdownify }}</h1>
+          <div class="date">{{ dateFormat "January 2, 2006" .Date }}</div>
+        </div>
+        <div class="content">
+          {{ .Content }}
+        </div>
+        <nav class="navigation mt-5">
+          <div class="row">
+           <div class="col-6">
+              {{ with .PrevInSection }}
+                <a href="{{ .Permalink }}" class="previous">&laquo; {{ i18n "previous_release" }}</a>
+              {{ end }}
+            </div>
+            <div class="col-6 text-right">
+              {{ with .NextInSection }}
+                <a href="{{ .Permalink }}" class="next">{{ i18n "next_release" }} &raquo;</a>
+              {{ end }}
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

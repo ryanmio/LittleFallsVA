@@ -1,16 +1,22 @@
 {
-  "name": "vex-hugo",
+  "name": "little-falls-va",
   "version": "1.0.0",
-  "description": "<h1 align=center>Vex Hugo</h1>  <p align=center>Vex is a clean multipurpose e-commerce theme that makes building your first online store easier than ever. </p> <h2 align=\"center\"> <a target=\"_blank\" href=\"https://demo.gethugothemes.com/vex\" rel=\"nofollow\">Demo</a> | <a  target=\"_blank\" href=\"https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fvex%2Fsite%2F&form_factor=desktop\">Page Speed (97%)</a></h2>",
+  "description": "Website for the Little Falls VA renaming movement",
   "main": "index.js",
   "scripts": {
+    "dev": "hugo server",
+    "build": "hugo --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "little-falls",
+    "hugo",
+    "site"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.3.6",
     "uuid": "^9.0.0"
   }
-}
+} 

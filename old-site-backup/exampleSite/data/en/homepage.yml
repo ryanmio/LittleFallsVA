@@ -1,0 +1,89 @@
+############################# banner ############################
+banner:
+  enable: true
+  title: "Little Falls, VA"
+  content: "A Name for All"
+  image: "images/bluemap.webp"
+  image_alt: "Map of Little Falls area showing ZIP codes, with Falls Church addresses highlighted, and the City of Falls Church emphasized with Little Falls labels."
+  button:
+    enable: true
+    label: "Sign the Petition"
+    link: "petition/"
+
+############################# Feature ############################
+features:
+  enable: true
+  title: "Why Rename to Little Falls?"
+  image: "images/church-2.webp"
+  image_alt: "An artistic rendering of the current brick Falls Church building"
+
+  # feature at the left of the image
+  left_side:
+    # feature item loop
+    - title: "Inclusivity"
+      icon: "images/icons/interfaith-icon.webp"
+      icon_alt: "An interfaith symbol representing inclusivity"
+      content: "Removing the connection to a specific church and religion, making the city more welcoming to people of all faiths, beliefs, and non-believers."
+
+    - title: "Honoring Indigenous Heritage"
+      icon: "images/icons/feather-icon.webp"
+      content: "Highlighting the significance of the Native American peoples who inhabited the area and valued the Little Falls of the Potomac River."
+
+    - title: "Embracing Diversity"
+      icon: "images/icons/diversity-icon.webp"
+      content: "Acknowledging the city's evolution from a single colonial church to a community encompassing various denominations and secular perspectives."
+
+  # feature at the right of the image
+  right_side:
+    # feature item loop
+    - title: "Reconnecting with Geographical Roots"
+      icon: "images/icons/geographical-roots-icon.webp"
+      content: "Drawing attention to the city's proximity to the Little Falls and its origins at the intersection of significant Native American trails."
+
+    - title: "Recognizing Enslaved People's Contributions"
+      icon: "images/icons/chains-icon.webp"
+      content: "Acknowledging the enslaved labor that played a crucial role in building the original wooden church and the current brick Falls Church."
+
+    - title: "Fostering Community Dialogue"
+      icon: "images/icons/dialogue-icon.webp"
+      content: "Encouraging residents to participate in the decision-making process and engage in meaningful conversations about the city's history and future."
+
+#################################### Products ########################
+store:
+  enable: true
+  title: "Support the Movement with Little Falls Merchandise"
+
+
+############################## Press and Media ##########################
+press_and_media:
+  enable: true
+  title: "Press Releases and Media Contacts"
+
+  media_contact:
+    name: "Press and Media Inquiries"
+    designation: "Organizer and Media Contact"
+    email: "hello@littlefallsva.com"
+    description: "For media inquiries or to request an interview, please contact us at:"
+
+press_releases:
+  - title: "Renaming Movement Launch"
+    slug: "renaming-movement-launch"
+  - title: "Community Outreach Events"
+    slug: "community-outreach-events"
+
+
+################################## Subscription ###################
+subscription:
+  enable: true
+  bg_image: "images/call-to-action.webp"
+  title: "Stay Updated and Get Involved"
+  content: "Sign up for our newsletter to receive updates on the renaming movement, upcoming events, and ways you can help create a more inclusive city."
+  placeholder: "Enter your email address"
+
+############################## Promo (disabled) ##########################
+promo:
+enable: false
+
+############################## About Product (disabled) #######################
+about_product:
+enable: false
