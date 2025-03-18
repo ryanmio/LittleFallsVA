@@ -1,0 +1,191 @@
+################################### Default Configuration ############################
+title = "Little Falls VA: A Name for All"
+theme = "vex-hugo"
+summarylength = "20"
+googleAnalytics = ""
+disableLanguages = [] # disable language from here
+pluralizelisttitles = false
+
+# unsafe html
+[markup.goldmark.renderer]
+unsafe = true
+
+defaultContentLanguage = "en"
+
+[languages]
+  default = "en"
+  [languages.en]
+    baseURL = "https://littlefallsva.com/"
+  [languages.es]
+    baseURL = "https://littlefallsva.com/"
+
+
+#################################### Plugins ##########################################
+
+# CSS Plugins
+
+[[params.plugins.css]]
+link = "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+media = "print"
+onload = "this.media='all'"
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+media = "print"
+onload = "this.media='all'"
+[[params.plugins.css]]
+link = "plugins/themefisher-font/themefisher-font.min.css"
+media = "print"
+onload = "this.media='all'"
+[[params.plugins.css]]
+link = "plugins/slick/slick.min.css"
+media = "print"
+onload = "this.media='all'"
+[[params.plugins.css]]
+link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css"
+media = "print"
+onload = "this.media='all'"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.js"
+defer = true
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+defer = true
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+defer = true
+[[params.plugins.js]]
+link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"
+defer = true
+
+[[params.plugins.js]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+
+[[params.plugins.js]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+
+[[params.plugins.js]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"
+
+
+###################################### Navigation ######################################
+
+# homepage section menu
+[[menu.main]]
+name = "Home"
+url = "/"
+identifier = "home"
+weight = 1
+
+[[menu.main]]
+name = "Press & Media"
+url = "press/"
+identifier = "press"
+weight = 2
+
+[[menu.main]]
+name = "History"
+url = "history/"
+identifier = "history"
+weight = 3
+
+[[menu.main]]
+name = "Store"
+url = "store/"
+identifier = "store"
+weight = 4
+
+[[menu.main]]
+identifier = "petition"
+name = "Petition"
+url = "/petition/"
+weight = 5
+
+# footer menu
+[[menu.footer]]
+  identifier = "press_media_footer"
+  url = "press/"
+  weight = 1
+
+[[menu.footer]]
+  identifier = "about_us_footer"
+  url = "about-us/"
+  weight = 2
+  
+[[menu.footer]]
+  identifier = "faq_footer"
+  url = "faq/"
+  weight = 3
+
+[[menu.footer]]
+  identifier = "get_involved_footer"
+  url = "get-involved/"
+  weight = 4
+  
+[[menu.footer]]
+  identifier = "nelly"
+  url = "nelly/"
+  weight = 5  
+
+[[menu.footer]]
+  identifier = "terms_conditions_footer"
+  url = "terms-conditions/"
+  weight = 6
+
+[[menu.footer]]
+  identifier = "privacy_policy_footer"
+  url = "privacy-policy/"
+  weight = 7
+
+########################### Default parameters ##########################
+[params]
+logo = "images/logo.webp"
+logo_width = "100px"
+# Meta data
+description = "Support the movement to rename Falls Church to Little Falls, fostering a more welcoming and diverse community for all."
+author = "Little Falls VA - Formerly Known as Falls Church VA"
+# currency
+currency = "$"
+canonicalURL = "https://littlefallsva.com"
+
+# Preloader
+[params.preloader]
+enable = false
+preloader = "images/logo.webp" # use .png , .svg or .gif format
+
+# Snipcart
+[params.snipcart]
+enable = true
+# snipcart public api key
+snipcart_api = "ODg3ZWMzZGUtNGVhZS00MmI5LWFlMGQtZGFhMmQ2ODc5NjA2NjM4MTY1MTA1Njc1MDgwMDIx"
+
+[outputFormats]
+[outputFormats.HTML]
+  baseName = "index"
+  isPlainText = false
+  isHTML = true
+
+################################### English language #####################################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+# copyright
+copyright = "©2023 Committee for Little Falls"
+
+
+################################### Spanish language #####################################
+[Languages.es]
+languageName = "ES"
+languageCode = "es"
+contentDir = "content/spanish"
+weight = 2
+# copyright
+copyright = "©2023 Committee for Little Falls"
+
+
+[permalinks]
+  press = "/press/release/:year/:month/:day/:slug/"
+  store = "/store/:title" 

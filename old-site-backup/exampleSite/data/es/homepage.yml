@@ -1,0 +1,96 @@
+############################# banner ############################
+banner:
+  enable: true
+  title: "Little Falls, VA"
+  content: "Un Nombre para Todos"
+  image: "images/bluemap.webp"
+  button:
+    enable: true
+    label: "Firma la Petición"
+    link: "petition/"
+
+############################# Feature ############################
+features:
+  enable: true
+  title: "¿Por qué cambiar el nombre a Little Falls?"
+  image: "images/church-2.webp"
+
+  # feature at the left of the image
+  left_side:
+    # feature item loop
+    - title: "Inclusividad"
+      icon: "images/icons/interfaith-icon.webp"
+      content: "Eliminando la conexión con una iglesia y religión específicas, haciendo que la ciudad sea más acogedora para personas de todas las creencias y no creyentes."
+
+    - title: "Honrar el legado indígena"
+      icon: "images/icons/feather-icon.webp"
+      content: "Destacando la importancia de los pueblos indígenas que habitaron el área y valoraron las pequeñas cascadas del río Potomac."
+
+    - title: "Abrazar la diversidad"
+      icon: "images/icons/diversity-icon.webp"
+      content: "Reconociendo la evolución de la ciudad desde una única iglesia colonial hasta una comunidad que abarca diversas denominaciones y perspectivas seculares."
+
+  # feature at the right of the image
+  right_side:
+    # feature item loop
+    - title: "Reconectando con las raíces geográficas"
+      icon: "images/icons/geographical-roots-icon.webp"
+      content: "Llamando la atención sobre la proximidad de la ciudad a las pequeñas cascadas y sus orígenes en la intersección de importantes rutas indígenas."
+
+    - title: "Reconocer las contribuciones de las personas esclavizadas"
+      icon: "images/icons/chains-icon.webp"
+      content: "Reconociendo el trabajo esclavo que desempeñó un papel crucial en la construcción de la iglesia original de madera y la actual iglesia de ladrillos de Falls Church."
+
+    - title: "Fomentar el diálogo comunitario"
+      icon: "images/icons/dialogue-icon.webp"
+      content: "Animar a los residentes a participar en el proceso de toma de decisiones y entablar conversaciones significativas sobre la historia y el futuro de la ciudad."
+
+#################################### Products ########################
+store:
+  enable: true
+  title: "Apoya el movimiento con productos de Little Falls"
+  items:
+    - image: "[T-shirt image]"
+      title: "Camiseta de Little Falls"
+      content: "Muestra tu apoyo al movimiento de cambio de nombre con una cómoda y elegante camiseta de Little Falls."
+
+    - image: "[Tote bag image]"
+      title: "Bolsa de tela Little Falls"
+      content: "Lleva tus cosas en una bolsa de tela reutilizable de Little Falls, difundiendo la conciencia sobre la causa."
+
+    - image: "[Button image]"
+      title: "Botón de Little Falls"
+      content: "Usa un botón de Little Falls para mostrar tu apoyo e iniciar conversaciones sobre el movimiento de cambio de nombre."
+
+############################## Press and Media ##########################
+press_and_media:
+  enable: true
+  title: "Comunicados de Prensa y Contactos de Medios"
+
+  media_contact:
+    name: "Preguntas de Prensa y Medios"
+    designation: "Organizador y Contacto de Medios"
+    email: "hello@littlefallsva.com"
+    description: "Para consultas de medios o para solicitar una entrevista, comuníquese con nosotros en hello@littlefallsva.com."
+
+press_releases:
+  - title: "Lanzamiento del Movimiento de Cambio de Nombre"
+    slug: "lanzamiento-movimiento-cambio-nombre"
+  - title: "Eventos de Alcance Comunitario"
+    slug: "eventos-alcance-comunitario"
+
+################################## Subscription ###################
+subscription:
+  enable: true
+  bg_image: "images/call-to-action.webp"
+  title: "Manténgase actualizado y participe"
+  content: "Suscríbase a nuestro boletín para recibir actualizaciones sobre el movimiento de cambio de nombre, próximos eventos y formas de ayudar a crear una ciudad más inclusiva."
+  placeholder: "Ingrese su dirección de correo electrónico"
+
+############################## Promo (disabled) ##########################
+promo:
+enable: false
+
+############################## About Product (disabled) #######################
+about_product:
+enable: false
