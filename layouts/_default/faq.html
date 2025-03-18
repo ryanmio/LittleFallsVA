@@ -15,6 +15,33 @@
   </div>
 </section>
 
+<!-- Add FAQ schema structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{ $faqs := .Scratch.Set "faqs" slice }}
+    {{ range $index, $element := findRE "<div class=\"faq-item\">([\\s\\S]*?)</div>" .Content }}
+      {{ $question := index (findRE "<span class=\"faq-question\"><strong>(.*?)</strong></span>" $element 1) 0 | replaceRE "<span class=\"faq-question\"><strong>(.*?)</strong></span>" "$1" }}
+      {{ $answer := replaceRE "<span class=\"faq-question\"><strong>.*?</strong></span><br>" "" $element | replaceRE "<div class=\"faq-item\">" "" | replaceRE "</div>" "" | trim }}
+      {{ $.Scratch.Add "faqs" (dict "question" $question "answer" $answer) }}
+    {{ end }}
+    {{ $faqs := $.Scratch.Get "faqs" }}
+    {{ range $index, $faq := $faqs }}
+      {
+        "@type": "Question",
+        "name": {{ $faq.question | jsonify }},
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": {{ $faq.answer | jsonify }}
+        }
+      }{{ if ne (add $index 1) (len $faqs) }},{{ end }}
+    {{ end }}
+  ]
+}
+</script>
+
 <!-- Add the search functionality JavaScript code -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
