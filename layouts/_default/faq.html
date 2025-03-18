@@ -24,8 +24,8 @@
     {{ $faqs := .Scratch.Set "faqs" slice }}
     {{ range $index, $element := findRE "<div class=\"faq-item\">([\\s\\S]*?)</div>" .Content }}
       {{ $question := index (findRE "<span class=\"faq-question\"><strong>(.*?)</strong></span>" $element 1) 0 | replaceRE "<span class=\"faq-question\"><strong>(.*?)</strong></span>" "$1" }}
-      {{ $answer := replaceRE "<span class=\"faq-question\"><strong>.*?</strong></span><br>" "" $element | replaceRE "<div class=\"faq-item\">" "" | replaceRE "</div>" "" | strings.TrimSpace }}
-      {{ $.Scratch.Add "faqs" (dict "question" $question "answer" $answer) }}
+      {{ $cleanAnswer := replaceRE "<span class=\"faq-question\"><strong>.*?</strong></span><br>" "" $element | replaceRE "<div class=\"faq-item\">" "" | replaceRE "</div>" "" }}
+      {{ $.Scratch.Add "faqs" (dict "question" $question "answer" $cleanAnswer) }}
     {{ end }}
     {{ $faqs := $.Scratch.Get "faqs" }}
     {{ range $index, $faq := $faqs }}
