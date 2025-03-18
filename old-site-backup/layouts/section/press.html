@@ -1,0 +1,31 @@
+{{- define "main" -}}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h1 class="mb-4">Press Releases</h1>
+        {{ $paginator := .Paginate (where .Site.RegularPages "Section" "press") }}
+        {{ range $index, $page := $paginator.Pages }}
+          <a href="{{ $page.Permalink }}" class="card-link">
+            <div class="card mb-4 position-relative">
+              <div class="date-badge">
+                <span class="date-day">{{ dateFormat "2" $page.Date }}</span>
+                <span class="date-month">{{ dateFormat "Jan" $page.Date }}</span>
+                <span class="date-year">{{ dateFormat "2006" $page.Date }}</span>
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">{{ $page.Title }}</h2>
+                <p class="card-text d-inline">{{ $page.Params.description }} <span class="continue-reading">continue reading »</span></p>
+              </div>
+            </div>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  {{ if eq .Site.Language.Lang "es" }}
+    {{ partial "press-kit-es.html" . }}
+  {{ else }}
+    {{ partial "press-kit.html" . }}
+  {{ end }}
+{{- end -}}

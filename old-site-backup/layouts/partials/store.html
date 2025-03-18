@@ -1,0 +1,31 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.store.enable }}
+<section class="gallery" id="store">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading">
+          <h2>{{ $data.homepage.store.title | markdownify }}</h2>
+        </div>
+
+        <div class="product-slider">
+          {{ range (where .Site.RegularPages "Section" "store") }}
+          <div class="block">
+            <a href="{{ .Permalink }}" class="product-thumbnail" aria-label="View details for {{ .Title }}">
+              {{ $image := "" }}
+              {{ if isset .Params "thumbnail" }}
+                {{ $image = .Params.thumbnail }}
+              {{ else if isset .Params "images" }}
+                {{ $image = index .Params.images 0 }}
+              {{ end }}
+              <img class="img-fluid" src="{{ $image | absURL }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" loading="lazy">
+            </a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

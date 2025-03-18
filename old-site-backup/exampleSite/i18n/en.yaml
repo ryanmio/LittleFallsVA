@@ -1,0 +1,69 @@
+- id: "add_to_cart"
+  translation: "Add to Cart"
+  
+- id: "send"
+  translation: "Send Now"
+  
+- id: "subscribe"
+  translation: "Subscribe"
+  
+- id: "read_more"
+  translation: "Read More"
+
+- id: "home"
+  translation: "Home"
+
+- id: "press"
+  translation: "Press"
+
+- id: "store"
+  translation: "Store"
+
+- id: "petition"
+  translation: "Petition"
+
+- id: "about_us"
+  translation: "About Us"
+
+- id: "get_involved"
+  translation: "Get Involved"
+  
+- id: "nelly"
+  translation: "Nelly"  
+
+- id: "terms_conditions"
+  translation: "Terms & Conditions"
+
+- id: "privacy_policy"
+  translation: "Privacy Policy"
+
+- id: press_media_footer
+  translation: "Press"
+
+- id: about_us_footer
+  translation: "About Us"
+
+- id: get_involved_footer
+  translation: "Get Involved"
+
+- id: terms_conditions_footer
+  translation: "Terms & Conditions"
+
+- id: privacy_policy_footer
+  translation: "Privacy Policy"
+  
+- id: faq_footer
+  translation: "FAQ"
+  
+- id: history
+  translation: "History"
+  
+- id: previous_release
+  translation: "Previous Release"
+
+- id: next_release
+  translation: "Next Release"
+
+- id: back_to_press_releases
+  translation: "Back to Press Releases"
+  
