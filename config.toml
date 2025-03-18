@@ -23,27 +23,14 @@ defaultContentLanguage = "en"
 #################################### Plugins ##########################################
 
 # CSS Plugins
-
-[[params.plugins.css]]
-link = "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
-media = "print"
-onload = "this.media='all'"
 [[params.plugins.css]]
 link = "plugins/bootstrap/bootstrap.min.css"
-media = "print"
-onload = "this.media='all'"
 [[params.plugins.css]]
 link = "plugins/themefisher-font/themefisher-font.min.css"
-media = "print"
-onload = "this.media='all'"
 [[params.plugins.css]]
 link = "plugins/slick/slick.min.css"
-media = "print"
-onload = "this.media='all'"
 [[params.plugins.css]]
 link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css"
-media = "print"
-onload = "this.media='all'"
 
 # JS Plugins
 [[params.plugins.js]]
@@ -61,12 +48,15 @@ defer = true
 
 [[params.plugins.js]]
 link = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+defer = true
 
 [[params.plugins.js]]
 link = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+defer = true
 
 [[params.plugins.js]]
 link = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"
+defer = true
 
 
 ###################################### Navigation ######################################
