@@ -1,0 +1,522 @@
+{{ define "main" }}
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+#scroll-container {
+  position: relative;
+  overflow-x: hidden;
+}
+
+  .scroll-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .scroll-section.visible {
+    opacity: 1;
+  }
+
+
+.text-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 80%;
+    margin: 6rem auto 0; /* Adjust top margin */
+    padding: 4rem 3rem 0.5rem; /* Adjust bottom padding */
+    border-radius: 4px;
+    background-color: rgba(249, 249, 249, 0.6); /* Slight background color */
+    background-image: url('https://www.transparenttextures.com/patterns/cream-pixels.png'); /* Subtle paper texture */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for a personal touch */
+    z-index: 1;
+}
+
+.text-content:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  z-index: 2;
+}
+    
+.text-content.visible {
+  opacity: 1;
+}
+
+.chapter-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chapter-number {
+  order: 1;
+  margin-bottom: 4px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.chapter-title {
+  order: 2;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+h1, h2 {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.75rem;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.text-content h3 {
+  margin-bottom: 1rem;
+}
+
+  .image-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem auto 1rem; /* Adjust top margin */
+  }
+
+
+.image-container img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.chapter-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+@media (max-width: 1000px) {
+  .chapter-nav {
+    justify-content: flex-start;
+  }
+}
+
+  .chapter-nav a {
+  margin: 0 15px;
+  padding: 10px 5px;
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.chapter-nav a:hover,
+.chapter-nav a.active {
+  color: #007BFF;
+  border-bottom: 3px solid #007BFF;
+}
+
+
+
+.chapter-nav a:hover {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.chapter-nav a:focus {
+  outline: none;
+  color: #007BFF;
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 8px 12px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #2c475d;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.back-to-top.visible {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .chapter-title {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .image-container {
+    max-width: calc(100% - 32px);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .text-content {
+    max-width: 90%;
+    padding: 2rem;
+  }
+}
+
+.authors-note {
+  max-width: 66%;
+  margin: 3rem auto;
+  padding: 2rem;
+  font-style: italic;
+  font-size: 0.9em;  /* Makes the font smaller */
+  text-align: center;
+  background-color: transparent;  /* Removes white background */
+  box-shadow: none;  /* Removes drop shadow */
+}
+
+.authors-note h3 {
+  margin-bottom: 1rem;
+}
+
+.authors-note p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding-top: 1rem; /* Adds space to the top */
+  padding-bottom: 1rem; /* Adds space to the bottom */
+}
+    
+    
+.intro-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.intro-image-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem auto;
+  z-index: 1;
+}
+
+.intro-image-container img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .intro-image-container {
+    max-width: calc(100% - 32px);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+    
+ .chapter-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .chapter-date hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #000;
+    opacity: 40%;
+    margin: 0 1rem;
+    max-width: 15%; /* Limit the width of the horizontal lines */
+  }
+
+  .chapter-date span {
+    white-space: nowrap;
+  }
+
+.intro-container {
+  position: relative;
+}
+
+.polaroid {
+  position: absolute;
+  top: -70px;
+  right: -40px;
+  max-width: 200px;
+  border: 1px solid #ccc;
+  padding: 4px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+  transform-origin: bottom right;
+}
+
+.polaroid.top {
+  transform-origin: top right;
+}
+
+.polaroid.zoom {
+  transform: scale(2);
+  cursor: zoom-out;
+}
+    
+.polaroid.zoom-mobile {
+  transform: scale(2);
+  cursor: zoom-out;
+  transform-origin: center;
+}
+    
+.polaroid.unzoom-mobile {
+  transform: scale(1);
+  cursor: zoom-in;
+  transform-origin: center;
+}
+
+.polaroid.zoom.top {
+  transform-origin: top right;
+}
+    
+.polaroid.top.zoom-mobile {
+  transform-origin: top;
+}
+
+.polaroid img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 850px) {
+  .polaroid {
+    position: static;
+    max-width: 66%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .polaroid.zoom {
+    transform-origin: bottom;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .polaroid.zoom img {
+    transform: translateY(-100%) scale(2);
+  }
+
+  .polaroid.top {
+    transform-origin: top;
+  }
+
+  .polaroid.top.zoom {
+    transform-origin: top;
+  }
+
+  .polaroid.top.zoom img {
+    transform: translateY(0) scale(2);
+  }
+}
+
+
+
+.title-and-image {
+  position: relative;
+}
+
+.chapter-body {
+  padding-top: 2rem; /* Change this value to adjust the spacing between the chapter title and body */
+}
+    
+</style>
+
+<div class="chapter-nav">
+  <a href="#prologue">Prologue</a>
+  <a href="#chapter1">Chapter 1</a>
+  <a href="#chapter2">Chapter 2</a>
+  <a href="#chapter3">Chapter 3</a>
+  <a href="#chapter4">Chapter 4</a>
+  <a href="#chapter5">Chapter 5</a>
+  <a href="#chapter6">Chapter 6</a>
+  <a href="#chapter7">Chapter 7</a>
+  <a href="#chapter8">Chapter 8</a>
+  <a href="#chapter9">Chapter 9</a>
+  <a href="#chapter10">Chapter 10</a>
+</div>
+
+<div class="intro-container">
+  <h1>Nelly's Journey</h1>
+  <h2>A Life of Resilience and a Quest for Freedom</h2>
+  <p style="font-style: italic; max-width: 80%; margin: 0 auto; padding-top: 12px; font-size: 0.9rem">The narrative presented herein has been meticulously reconstructed utilizing a diverse array of historical sources, including deed books, census records, and family wills. By carefully weaving these fragments together, we strive to tell the story of Nelly, an enslaved individual whose experiences reflect the complexities of our local history.</p>
+</div>
+
+
+<div id="scroll-container">
+  {{ .Content }}
+</div>
+ 
+<div class="authors-note">
+     <p>As we trace the footsteps of Nelly, may we never forget the countless others whose names are lost to time, their stories now echoes in the wind, a reminder of the collective struggle that remains, a call for understanding, a plea for compassion, and a challenge to see the humanity that binds us all.</p>
+</div>
+
+<div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
+<script>
+  const scrollSections = document.querySelectorAll(".scroll-section");
+  const textContent = document.querySelectorAll(".text-content");
+  const backToTop = document.querySelector('.back-to-top');
+
+  function onScroll() {
+    scrollSections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const sectionHeight = section.offsetHeight;
+      const windowHeight = window.innerHeight;
+
+      if (sectionTop < windowHeight * 0.9 && sectionTop > -sectionHeight * 0.8) {
+        section.classList.add("visible");
+      } else {
+        section.classList.remove("visible");
+      }
+    });
+
+    if (window.scrollY > window.innerHeight / 1.2) {
+      backToTop.classList.add("visible");
+    } else {
+      backToTop.classList.remove("visible");
+    }
+  }
+
+  window.addEventListener("scroll", onScroll);
+  onScroll();
+
+  textContent.forEach((text) => {
+    const textBottom = text.getBoundingClientRect().bottom;
+    const textHeight = text.offsetHeight;
+    const windowHeight = window.innerHeight;
+
+    if (textBottom > windowHeight * 0.1 && textBottom < windowHeight + textHeight * 0.9) {
+      text.classList.add("visible");
+    } else {
+      text.classList.remove("visible");
+    }
+  });
+
+  function updateActiveChapterLink() {
+    let activeChapterLink = null;
+    scrollSections.forEach((section, index) => {
+      const sectionTop = section.getBoundingClientRect().top;
+
+      if (sectionTop < window.innerHeight / 2 && sectionTop >= -window.innerHeight / 2) {
+        const chapterLinks = document.querySelectorAll('.chapter-nav a');
+        chapterLinks.forEach((link) => {
+          link.classList.remove('active');
+        });
+        activeChapterLink = chapterLinks[index];
+        activeChapterLink.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener("scroll", () => {
+    onScroll();
+    updateActiveChapterLink();
+  });
+
+  const footnoteLinks = document.querySelectorAll('.footnote-link');
+  footnoteLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const footnoteId = link.getAttribute('href');
+      const targetFootnote = document.querySelector(footnoteId);
+      const targetFootnoteTop = targetFootnote.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top: targetFootnoteTop, behavior: 'smooth' });
+    });
+  });
+
+  const backToTextLinks = document.querySelectorAll('.back-to-text');
+  backToTextLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const footnoteRefId = link.getAttribute('href');
+      const targetFootnoteLink = document.querySelector(footnoteRefId);
+      const targetFootnoteLinkTop = targetFootnoteLink.getBoundingClientRect().top + window.scrollY - 300;
+      window.scrollTo({ top: targetFootnoteLinkTop, behavior: 'smooth' });
+    });
+  });
+    
+
+function toggleZoom(event) {
+  const image = event.target.parentElement;
+  const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  
+  if (screenWidth <= 850) {
+    if (image.classList.contains('zoom-mobile')) {
+      image.classList.remove('zoom-mobile');
+      image.classList.add('unzoom-mobile');
+    } else {
+      image.classList.remove('unzoom-mobile');
+      image.classList.add('zoom-mobile');
+    }
+  } else {
+    image.classList.toggle('zoom');
+  }
+  
+  if (image.classList.contains('zoom') || image.classList.contains('zoom-mobile')) {
+    image.style.cursor = 'zoom-out';
+  } else {
+    image.style.cursor = 'zoom-in';
+  }
+  event.stopPropagation();
+}
+
+
+
+    
+    
+</script>
+
+
+
+
+
+{{ end }}

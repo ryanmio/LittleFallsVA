@@ -1,0 +1,39 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.press_and_media.enable }}
+<section id="press-and-media" class="press-and-media-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading">
+          <h2>{{ $data.homepage.press_and_media.title }}</h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row custom-gutter">
+      <div class="col-md-4">
+        <h3>{{ $data.homepage.press_and_media.media_contact.name }}</h3>
+        <p>{{ $data.homepage.press_and_media.media_contact.description }}
+          <a href="mailto:hello@littlefallsva.com" class="email-link">hello@littlefallsva.com</a>.</p>
+      </div>
+      
+      <div class="col-md-8">
+        <h3>Latest Press Releases</h3>
+        <ul class="press-releases">
+          {{ range first 3 (where .Site.RegularPages.ByWeight "Section" "press") }}
+          <li>
+            <div class="press-release-header">
+              <h4><a href="{{ .Permalink }}" class="press-release-title-link">{{ .Title }}</a></h4>
+            </div>
+            <div class="press-release-content">
+              <p style="text-align: left;">{{ .Params.description }} <span class="press-release-link-container"><a href="{{ .Permalink }}" class="press-release-link">Continue Reading »</a></span></p>
+            </div>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

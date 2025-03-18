@@ -1,0 +1,131 @@
+<style>
+  .press-kit-section h2 {
+    margin-top: 50px;
+  }
+  .quote-box {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  .copy-button {
+    margin-bottom: 20px;
+  }
+  .download-button {
+    margin-bottom: 15px; /* Adjust this value based on your preference */
+  }
+    
+      .last-section {
+    margin-bottom: 50px; /* Add margin below the last section */
+  }
+</style>
+
+
+
+
+<section class="press-kit-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <br><hr>
+            <h1>Press Kit</h1>
+          <h2>Logos & Images</h2>
+          <p>Download our official logos and images for promotional use.</p>
+            <div class="row justify-content-center">
+              <div class="col-md-6 col-lg-4 text-center">
+                <img src="/images/showcase/logo.png" alt="Logo 1" class="img-fluid small-logo">
+                <div class="text-center mt-2">
+                  <a href="/images/showcase/logo.png" download class="btn btn-primary">Download PNG</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 text-center">
+                <img src="/images/showcase/logo.png" alt="Logo 2" class="img-fluid small-logo">
+                <div class="text-center mt-2">
+                  <a href="/images/showcase/logo.jpg" download class="btn btn-primary">Download JPG</a>
+                </div>
+              </div>
+            </div>
+            
+
+   
+            
+          <!-- Fact Sheet -->
+            <h2>Fact Sheet</h2>
+            <p>Key facts and figures about our organization, products, or events.</p>
+            <embed src="/images/mediakit/factsheet.pdf" type="application/pdf" width="100%" height="600px">
+            <div class="download-fact-sheet">
+              <a href="/images/mediakit/factsheet.pdf" download class="btn btn-primary">Download Fact Sheet</a>
+            </div>
+
+        <!-- Quotes -->
+        <h2>Quotes</h2>
+        <div id="quote-1" class="quote-box" contenteditable="true">
+          "The Little Falls movement is dedicated to embracing inclusivity and diversity, by renaming Falls Church to Little Falls we honor our indigenous heritage, acknowledge the contributions of enslaved people, and celebrate our religious and non-religious plurality for a more united and vibrant community."
+        </div>
+        <button onclick="copyToClipboard('quote-1')" class="copy-button">Copy Quote</button>
+
+        <div id="quote-2" class="quote-box" contenteditable="true">
+          "The name Little Falls reflects our commitment to acknowledging the rich history of our community, from the Native American peoples who first inhabited this land to the diverse religious and secular perspectives that have shaped our city today."
+        </div>
+        <button onclick="copyToClipboard('quote-2')" class="copy-button">Copy Quote</button>
+
+        <div id="quote-3" class="quote-box" contenteditable="true">
+          "The movement to rename Falls Church to Little Falls is a call to action for our community to engage in meaningful dialogue, address historical injustices, and work together to create a more inclusive, connected, and dynamic city for everyone."
+        </div>
+        <button onclick="copyToClipboard('quote-3')" class="copy-button">Copy Quote</button>
+
+
+             
+                   <h2>Infographic</h2>
+        <p>Download our informative infographics for use in your articles or publications.</p>
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <a href="/images/mediakit/infographic.pdf" target="_blank">
+              <img src="/images/mediakit/infographic.webp" alt="Infographic 1" class="img-fluid">
+            </a>
+            <div class="text-center mt-2">
+              <a href="/images/mediakit/infographic.pdf" download class="btn btn-primary">Download PDF</a>
+            </div>
+          </div>
+        </div>
+
+        
+            
+          <h2>Contact Information</h2>
+          <p>If you need additional information or have any inquiries, please contact our press team at:</p>       
+          <p>Email: hello@littlefallsva.com</p>
+            
+            <h2>Downloadables</h2>
+            <p>Access our downloadable resources to help you with your coverage:</p>
+            
+            <section class="press-kit-section last-section">
+            <div class="row">
+              <div class="col-md-6">
+                <a href="/images/mediakit/presstemplate.docx" download class="btn btn-primary download-button">Download Press Template (.docx)</a>
+              </div>
+              <div class="col-md-6">
+                <a href="/images/mediakit/factsheet.pdf" download class="btn btn-primary download-button">Download Key Statistics (.pdf)</a>
+              </div>
+            </div>
+                </section>
+            
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <script>
+    function copyToClipboard(elementId) {
+      const range = document.createRange();
+      range.selectNode(document.getElementById(elementId));
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand('copy');
+      window.getSelection().removeAllRanges();
+      alert('Copied to Clipboard');
+    }
+  </script> 

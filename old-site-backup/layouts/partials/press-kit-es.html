@@ -1,0 +1,120 @@
+<style>
+  .press-kit-section h2 {
+    margin-top: 50px;
+  }
+  .quote-box {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  .copy-button {
+    margin-bottom: 20px;
+  }
+  .download-button {
+    margin-bottom: 15px; /* Adjust this value based on your preference */
+  }
+</style>
+
+
+
+
+<section class="press-kit-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <br><hr>
+            <h1>Kit de prensa</h1>
+          <h2>Logotipos e imágenes</h2>
+          <p>Descarga nuestros logotipos e imágenes oficiales para uso promocional.</p>
+            <div class="row justify-content-center">
+              <div class="col-md-6 col-lg-4 text-center">
+                <img src="/images/showcase/logo.png" alt="Logo 1" class="img-fluid small-logo">
+                <div class="text-center mt-2">
+                  <a href="/images/showcase/logo.png" download class="btn btn-primary">Descargar PNG</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 text-center">
+                <img src="/images/showcase/logo.png" alt="Logo 2" class="img-fluid small-logo">
+                <div class="text-center mt-2">
+                  <a href="/images/showcase/logo.jpg" download class="btn btn-primary">Descargar JPG</a>
+                </div>
+              </div>
+            </div>
+            
+            <h2>Infografías</h2>
+            <p>Descarga nuestras infografías informativas para usar en tus artículos o publicaciones.</p>
+            <div class="row">
+              <div class="col-md-6 mx-auto">
+                <a href="/images/mediakit/infographic.pdf" target="_blank">
+                  <img src="/images/mediakit/infographic.webp" alt="Infografía 1" class="img-fluid">
+                </a>
+                <div class="text-center mt-2">
+                  <a href="/images/mediakit/infographic.pdf" download class="btn btn-primary">Descargar PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fact Sheet -->
+            <h2>Hoja de datos</h2>
+            <p>Datos y cifras clave sobre nuestra organización, productos o eventos.</p>
+            <embed src="/images/mediakit/factsheet.pdf" type="application/pdf" width="100%" height="600px">
+            <div class="download-fact-sheet">
+              <a href="/images/mediakit/factsheet.pdf" download class="btn btn-primary">Descargar hoja de datos</a>
+            </div>
+
+            <!-- Citas -->
+            <h2>Citas</h2>
+            <div id="quote-1" class="quote-box" contenteditable="true">
+              "El movimiento Little Falls está dedicado a abrazar la inclusión y la diversidad, al cambiar el nombre de Falls Church a Little Falls honramos nuestro legado indígena, reconocemos las contribuciones de las personas esclavizadas y celebramos nuestra pluralidad religiosa y no religiosa para una comunidad más unida y vibrante."
+            </div>
+            <button onclick="copyToClipboard('quote-1')" class="copy-button">Copiar cita</button>
+
+            <div id="quote-2" class="quote-box" contenteditable="true">
+              "El nombre Little Falls refleja nuestro compromiso de reconocer la rica historia de nuestra comunidad, desde los pueblos nativos americanos que primero habitaron esta tierra hasta las diversas perspectivas religiosas y seculares que han dado forma a nuestra ciudad hoy."
+        </div>
+        <button onclick="copyToClipboard('quote-2')" class="copy-button">Copiar cita</button>
+
+        <div id="quote-3" class="quote-box" contenteditable="true">
+          "El movimiento para cambiar el nombre de Falls Church a Little Falls es un llamado a la acción para que nuestra comunidad participe en un diálogo significativo, aborde injusticias históricas y trabaje junta para crear una ciudad más inclusiva, conectada y dinámica para todos."
+        </div>
+        <button onclick="copyToClipboard('quote-3')" class="copy-button">Copiar cita</button>
+
+          <h2>Información de contacto</h2>
+          <p>Si necesita información adicional o tiene alguna consulta, póngase en contacto con nuestro equipo de prensa en:</p>          
+          <p>Email: hello@littlefallsva.com</p>
+            
+            <h2>Recursos descargables</h2>
+            <p>Acceda a nuestros recursos descargables para ayudarlo con su cobertura:</p>
+
+            <div class="row">
+              <div class="col-md-6">
+                <a href="/images/mediakit/presstemplate.docx" download class="btn btn-primary download-button">Descargar plantilla de prensa (.docx)</a>
+              </div>
+              <div class="col-md-6">
+                <a href="/images/mediakit/factsheet.pdf" download class="btn btn-primary download-button">Descargar estadísticas clave (.pdf)</a>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    <script>
+    function copyToClipboard(elementId) {
+      const range = document.createRange();
+      range.selectNode(document.getElementById(elementId));
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand('copy');
+      window.getSelection().removeAllRanges();
+      alert('Copied to Clipboard');
+    }
+  </script> 

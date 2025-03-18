@@ -1,0 +1,73 @@
+- id: "add_to_cart"
+  translation: "Añadir al carrito"
+
+- id: "send"
+  translation: "Enviar ahora"
+
+- id: "subscribe"
+  translation: "Suscribirse"
+
+- id: "read_more"
+  translation: "Leer más"
+
+- id: home
+  translation: "Inicio"
+
+- id: about_us
+  translation: "Sobre nosotros"
+
+- id: contact
+  translation: "Contacto"
+
+- id: get_involved
+  translation: "Participa"
+
+- id: privacy_policy
+  translation: "Política de privacidad"
+
+- id: terms_conditions
+  translation: "Términos y condiciones"
+
+- id: press
+  translation: "Prensa"
+
+- id: store
+  translation: "Tienda"
+
+- id: press_media_footer
+  translation: "Prensa"
+
+- id: about_us_footer
+  translation: "Sobre nosotros"
+
+- id: get_involved_footer
+  translation: "Participa"
+  
+- id: "nelly"
+  translation: "Nelly"  
+
+- id: terms_conditions_footer
+  translation: "Términos y condiciones"
+
+- id: privacy_policy_footer
+  translation: "Política de privacidad"
+  
+- id: faq_footer
+  translation: "FAQ"
+  
+- id: history
+  translation: "Historia"
+
+- id: petition
+  translation: "Petición"  
+  
+- id: previous_release
+  translation: "Lanzamiento anterior"
+
+- id: next_release
+  translation: "Próximo lanzamiento"
+
+- id: back_to_press_releases
+  translation: "Volver a comunicados de prensa"
+   
+  

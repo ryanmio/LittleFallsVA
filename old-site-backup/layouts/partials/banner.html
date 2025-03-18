@@ -1,0 +1,25 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{- if $data.homepage.banner.enable }}
+<!-- hero area -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center mb-5 mb-md-0">
+        <img class="img-fluid hero-image" src="{{ $data.homepage.banner.image | absURL }}" alt="{{ $data.homepage.banner.image_alt | default $data.homepage.banner.title }}" fetchpriority="high">
+      </div>
+      <div class="col-md-6 align-self-center text-center text-md-left">
+        <div class="block">
+          <h1 class="font-weight-bold mb-4 font-size-60">{{ $data.homepage.banner.title | markdownify }}</h1>
+          <h2 class="mb-4">{{ $data.homepage.banner.content | markdownify }}</h2>
+          <p>Join the movement to rename Falls Church to Little Falls, fostering unity and inclusivity that respects the diverse religious beliefs and secular views of our community members.</p>
+          {{ if $data.homepage.banner.button.enable }}
+          <a href="{{$data.homepage.banner.button.link|absLangURL}}" class="btn btn-main">{{$data.homepage.banner.button.label}}</a>
+          {{ end }}
+        </div>
+      </div>
+    </div><!-- .row close -->
+  </div><!-- .container close -->
+</section><!-- header close -->
+{{- end }}
+
