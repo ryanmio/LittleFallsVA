@@ -1,7 +1,14 @@
 ---
-title: "Terms & Conditions"
-description : "this is a meta description"
+title: "Privacy Policy"
+date: 2023-04-12
+description: "Our commitment to protecting your privacy. Learn how we collect, use, and safeguard your information when you interact with the Little Falls Movement."
+layout: "privacy-policy"
+image: "/images/logo.webp"
+keywords: ["privacy policy", "data protection", "Little Falls privacy", "information security", "personal data", "privacy terms", "data collection"]
+type: "page"
 draft: false
+author: "Little Falls Movement"
+lastmod: 2025-03-19
 ---
 
 Little Falls Committee values your privacy and we are committed to protecting your personal information. Please read our Privacy Policy carefully, which outlines how we collect, use, and protect your information.
