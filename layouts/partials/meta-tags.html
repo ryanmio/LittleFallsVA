@@ -1,18 +1,27 @@
-<title>{{ .Title }}</title>
-<meta name="description" content="{{ .Params.description | default "Support the movement to rename Falls Church to Little Falls, fostering a more welcoming and diverse community for all." }}">
-<meta name="keywords" content="{{ .Params.keywords }}">
+<!-- Primary Meta Tags -->
+<title>{{ if .IsHome }}Little Falls Movement - A Name for All{{ else }}{{ .Title }} | Little Falls Movement{{ end }}</title>
 
-<!-- Open Graph and Twitter Cards -->
-<meta property="og:title" content="{{ .Title }}">
-<meta property="og:description" content="{{ .Params.description | default "Support the movement to rename Falls Church to Little Falls, fostering a more welcoming and diverse community for all." }}">
-<meta property="og:type" content="website">
+<meta name="title" content="{{ if .IsHome }}Little Falls Movement - A Name for All{{ else }}{{ .Title }} | Little Falls Movement{{ end }}">
+<meta name="description" content="{{ .Params.description | default "The Little Falls Movement advocates for renaming Falls Church to honor our Indigenous heritage, acknowledge our complex history, and create a more welcoming community for all." }}">
+<meta name="keywords" content="{{ with .Params.keywords }}{{ delimit . ", " }}{{ else }}Little Falls Movement, Falls Church rename, inclusive community, Virginia history, Indigenous heritage, community action, social justice, local history{{ end }}">
+<meta name="author" content="{{ .Params.author | default "Little Falls Movement" }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink | absURL }}">
-<meta property="og:image" content="{{ "images/metalogo.jpg" | absURL }}">
-<meta property="og:image:alt" content="Little Falls logo in blue text on a white background, with the subheader 'A Name for All'">
+<meta property="og:title" content="{{ if .IsHome }}Little Falls Movement - A Name for All{{ else }}{{ .Title }} | Little Falls Movement{{ end }}">
+<meta property="og:description" content="{{ .Params.description | default "The Little Falls Movement advocates for renaming Falls Church to honor our Indigenous heritage, acknowledge our complex history, and create a more welcoming community for all." }}">
+<meta property="og:image" content="{{ .Params.image | default "/images/metalogo.jpg" | absURL }}">
+<meta property="og:image:alt" content="{{ .Params.image_alt | default "Little Falls logo in blue text on a white background, with the subheader 'A Name for All'" }}">
+<meta property="og:site_name" content="Little Falls Movement">
+<meta property="og:locale" content="{{ .Site.LanguageCode | default "en_US" }}">
+
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ .Title }}">
-<meta name="twitter:description" content="{{ .Params.description | default "Support the movement to rename Falls Church to Little Falls, fostering a more welcoming and diverse community for all." }}">
-<meta name="twitter:image" content="{{ "images/metalogo.jpg" | absURL }}">
+<meta name="twitter:url" content="{{ .Permalink | absURL }}">
+<meta name="twitter:title" content="{{ if .IsHome }}Little Falls Movement - A Name for All{{ else }}{{ .Title }} | Little Falls Movement{{ end }}">
+<meta name="twitter:description" content="{{ .Params.description | default "The Little Falls Movement advocates for renaming Falls Church to honor our Indigenous heritage, acknowledge our complex history, and create a more welcoming community for all." }}">
+<meta name="twitter:image" content="{{ .Params.image | default "/images/metalogo.jpg" | absURL }}">
 
 <!-- Canonical URL -->
 {{ if .IsTranslated }}
@@ -22,14 +31,30 @@
 {{ end }}
 <link rel="canonical" href="{{ .Permalink | absURL }}" />
 
-<meta property="og:locale" content="{{ .Site.LanguageCode }}">
-<meta name="language" content="{{ .Site.LanguageCode }}">
+<!-- Language and Locale -->
+<meta property="og:locale" content="{{ .Site.LanguageCode | default "en_US" }}">
+<meta name="language" content="{{ .Site.LanguageCode | default "en_US" }}">
 
-<meta name="DC.title" content="{{ .Title }}">
-<meta name="DC.description" content="{{ .Params.description | default "Support the movement to rename Falls Church to Little Falls, fostering a more welcoming and diverse community for all." }}">
-<meta name="DC.language" content="{{ .Site.LanguageCode }}">
-<meta name="DC.publisher" content="Little Falls Movement for Inclusivity">
+<!-- Dublin Core -->
+<meta name="DC.title" content="{{ if .IsHome }}Little Falls Movement - A Name for All{{ else }}{{ .Title }} | Little Falls Movement{{ end }}">
+<meta name="DC.description" content="{{ .Params.description | default "The Little Falls Movement advocates for renaming Falls Church to honor our Indigenous heritage, acknowledge our complex history, and create a more welcoming community for all." }}">
+<meta name="DC.language" content="{{ .Site.LanguageCode | default "en_US" }}">
+<meta name="DC.publisher" content="Little Falls Movement">
+<meta name="DC.creator" content="{{ .Params.author | default "Little Falls Movement" }}">
+<meta name="DC.date" content="{{ .Date.Format "2006-01-02" }}">
+<meta name="DC.modified" content="{{ .Lastmod.Format "2006-01-02" }}">
 
-<meta name="robots" content="index, follow">
-
+<!-- Additional SEO -->
+<meta name="robots" content="{{ if .Params.noindex }}noindex, nofollow{{ else }}index, follow{{ end }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#2e485c">
+
+<!-- If article, add article-specific meta -->
+{{ if eq .Type "article" }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:author" content="{{ .Params.author | default "Little Falls Movement" }}">
+{{ with .Params.tags }}
+<meta property="article:tags" content="{{ delimit . ", " }}">
+{{ end }}
+{{ end }}
