@@ -1,7 +1,14 @@
 ---
-title: "FAQ"
+title: "Frequently Asked Questions"
 date: 2023-04-12
+description: "Get answers to common questions about renaming Falls Church to Little Falls. Learn why this change matters, how it affects our community, and what steps we're taking to make it happen."
 layout: "faq"
+image: "/images/logo.webp"
+keywords: ["Falls Church rename", "Little Falls FAQ", "Falls Church name change", "community renaming", "Falls Church history", "Little Falls movement", "Virginia city renaming", "inclusive community"]
+type: "page"
+draft: false
+author: "Little Falls Movement"
+lastmod: 2025-03-19
 ---
 
 ## Frequently Asked Questions
