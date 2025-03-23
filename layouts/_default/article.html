@@ -1,0 +1,190 @@
+{{ define "main" }}
+
+<style>
+  .article {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .article-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .article-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-header .date {
+    font-size: 1.25rem;
+    color: #777;
+    margin-bottom: 1rem;
+  }
+
+  .content-with-image {
+    display: block;
+  }
+  
+  .featured-image {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .featured-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    object-fit: contain;
+  }
+  
+  @media (min-width: 768px) {
+    .content-with-image {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+    
+    .featured-image {
+      flex: 0 0 30%;
+      margin-bottom: 0;
+      margin-top: 0.5rem;
+    }
+    
+    .content-text {
+      flex: 1;
+      min-width: 0; /* Prevents text from overflowing */
+    }
+    
+    /* Special handling for logo-like images (tall and narrow) */
+    .content-with-image.logo-image .featured-image {
+      flex: 0 0 25%;
+    }
+    
+    .content-with-image.logo-image .featured-image img {
+      box-shadow: none;
+      border-radius: 0;
+    }
+  }
+
+  .content {
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .content h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    margin-bottom: 1rem;
+  }
+
+  .content ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+  }
+
+  .content ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+  }
+
+  .content ul li,
+  .content ol li {
+    margin-bottom: 0.75rem;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .navigation {
+    margin-top: 2rem;
+  }
+
+  .navigation .previous,
+  .navigation .next {
+    font-size: 1rem;
+    color: #2f4a5e;
+    text-decoration: none;
+  }
+
+  .navigation .previous:hover,
+  .navigation .next:hover {
+    color: #76a0c2;
+  }
+
+  .back-to-updates {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #2f4a5e;
+  }
+
+  .back-to-updates:hover {
+    color: #76a0c2;
+  }
+
+  @media (max-width: 767px) {
+    .col-md-10.mx-auto {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+</style>
+
+<section class="section article">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-10 mx-auto">
+        <a href="{{ "press" | absURL }}" class="back-to-updates">&larr; Back to Updates</a>
+        
+        <div class="article-header">
+          <h1>{{ .Title | markdownify }}</h1>
+          <div class="date">{{ dateFormat "January 2, 2006" .Date }}</div>
+        </div>
+        
+        {{ if .Params.Image }}
+        <div class="content-with-image {{ if in .Params.Image "logo" }}logo-image{{ end }}">
+          <div class="featured-image">
+            <img src="{{ .Params.Image | absURL }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
+          </div>
+          
+          <div class="content-text">
+            <div class="content">
+              {{ .Content }}
+            </div>
+          </div>
+        </div>
+        {{ else }}
+        <div class="content">
+          {{ .Content }}
+        </div>
+        {{ end }}
+        
+        <nav class="navigation mt-5">
+          <div class="row">
+           <div class="col-6">
+              {{ with .PrevInSection }}
+                <a href="{{ .Permalink }}" class="previous">&laquo; Previous</a>
+              {{ end }}
+            </div>
+            <div class="col-6 text-right">
+              {{ with .NextInSection }}
+                <a href="{{ .Permalink }}" class="next">Next &raquo;</a>
+              {{ end }}
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }} 
