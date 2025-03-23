@@ -1,0 +1,41 @@
+name: Weekly Post Publishing
+
+on:
+  schedule:
+    # Run at 9 AM UTC every Monday (adjust as needed)
+    - cron: '0 9 * * 1'
+  # Allow manual triggering
+  workflow_dispatch:
+
+jobs:
+  publish-post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Need write permission to push commits
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          # Full git history is needed to get all posts
+          fetch-depth: 0
+      
+      - name: Setup Git identity
+        run: |
+          git config --global user.name "GitHub Automated Publisher"
+          git config --global user.email "noreply@github.com"
+      
+      - name: Check directories exist
+        run: |
+          mkdir -p drafts/english/press
+          mkdir -p content/english/press
+      
+      - name: List draft posts
+        run: |
+          echo "Available draft posts:"
+          find drafts -type f -name "*.md" | sort
+
+      - name: Run publishing script
+        run: |
+          chmod +x ./scripts/publish_next_post.sh
+          ./scripts/publish_next_post.sh 
