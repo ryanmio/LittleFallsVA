@@ -22,18 +22,85 @@
       margin-bottom: 1rem;
     }
 
+    .content-with-image {
+      display: block;
+    }
+    
+    .featured-image {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .featured-image img {
+      max-width: 100%;
+      height: auto;
+      max-height: 350px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 4px;
+      object-fit: contain;
+    }
+    
+    @media (min-width: 768px) {
+      .content-with-image {
+        display: flex;
+        gap: 2.5rem;
+        align-items: flex-start;
+      }
+      
+      .featured-image {
+        flex: 0 0 30%;
+        margin-bottom: 0;
+        margin-top: 0.5rem;
+      }
+      
+      .content-text {
+        flex: 1;
+        min-width: 0; /* Prevents text from overflowing */
+      }
+      
+      /* Special handling for logo-like images (tall and narrow) */
+      .content-with-image.logo-image .featured-image {
+        flex: 0 0 25%;
+      }
+      
+      .content-with-image.logo-image .featured-image img {
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+
     .content {
       text-align: left;
       line-height: 1.6;
     }
+    
+    .content h2 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+    }
+
+    .content p {
+      margin-bottom: 1rem;
+    }
 
     .content ul {
       list-style-type: disc;
-      margin-left: 2rem;
+      margin-left: 1.5rem;
+      padding-left: 1rem;
     }
 
-    .content ul li {
-      margin-bottom: 0.5rem;
+    .content ol {
+      list-style-type: decimal;
+      margin-left: 1.5rem;
+      padding-left: 1rem;
+    }
+
+    .content ul li,
+    .content ol li {
+      margin-bottom: 0.75rem;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     .navigation {
@@ -75,15 +142,32 @@
 <section class="section press-release">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-10 col-md-10 mx-auto">
         <a href="{{ "press" | absURL }}" class="back-to-press-releases">&larr; {{ i18n "back_to_press_releases" }}</a>
+        
         <div class="press-release-header">
           <h1>{{ .Title | markdownify }}</h1>
           <div class="date">{{ dateFormat "January 2, 2006" .Date }}</div>
         </div>
+        
+        {{ if .Params.Image }}
+        <div class="content-with-image {{ if in .Params.Image "logo" }}logo-image{{ end }}">
+          <div class="featured-image">
+            <img src="{{ .Params.Image | absURL }}" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
+          </div>
+          
+          <div class="content-text">
+            <div class="content">
+              {{ .Content }}
+            </div>
+          </div>
+        </div>
+        {{ else }}
         <div class="content">
           {{ .Content }}
         </div>
+        {{ end }}
+        
         <nav class="navigation mt-5">
           <div class="row">
            <div class="col-6">
