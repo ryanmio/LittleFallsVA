@@ -1,12 +1,12 @@
 ---
-title: "Press & Media"
+title: "Updates"
 date: 2023-04-12
-description: "Press releases, media resources, and contact information for journalists covering the Little Falls Movement. Find background information, high-resolution images, and interview requests here."
+description: "Latest updates, news, and information about the Little Falls Movement. Follow our progress as we work toward a more inclusive name for our community."
 layout: "press"
 image: "/images/logo.webp"
-keywords: ["Little Falls press", "Falls Church rename news", "Little Falls media kit", "Falls Church news", "Little Falls Movement press", "Virginia community news", "Falls Church name change press"]
+keywords: ["Little Falls updates", "Falls Church rename news", "Little Falls Movement news", "Falls Church news", "Little Falls Movement updates", "Virginia community news", "Falls Church name change updates"]
 type: "page"
 draft: false
 author: "Little Falls Movement"
-lastmod: 2025-03-19
+lastmod: 2025-03-23
 ---

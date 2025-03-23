@@ -5,6 +5,7 @@ summarylength = "20"
 googleAnalytics = ""
 disableLanguages = [] # disable language from here
 pluralizelisttitles = false
+buildFuture = true  # Allow future-dated posts to be visible
 
 # unsafe html
 [markup.goldmark.renderer]
@@ -69,7 +70,7 @@ identifier = "home"
 weight = 1
 
 [[menu.main]]
-name = "Press & Media"
+name = "Updates"
 url = "press/"
 identifier = "press"
 weight = 2
@@ -94,7 +95,7 @@ weight = 5
 
 # footer menu
 [[menu.footer]]
-  identifier = "press_media_footer"
+  identifier = "updates_footer"
   url = "press/"
   weight = 1
 
