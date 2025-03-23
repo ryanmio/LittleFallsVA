@@ -1,5 +1,5 @@
 ---
-title: "Press Releases and Media Kit"
-description : "this is a meta description"
+title: "Actualizaciones"
+description : "Últimas actualizaciones, noticias e información sobre el Movimiento Little Falls."
 draft: false
 ---
