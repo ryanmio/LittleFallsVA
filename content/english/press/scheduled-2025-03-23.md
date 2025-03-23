@@ -1,7 +1,7 @@
 ---
 title: "Announcing the Little Falls Historical Biography Project"
 date: 2025-03-23
-image: "/images/history.webp"
+image: "images/history.webp"
 description: "The Little Falls Movement launches an extensive biographical archive documenting the diverse individuals who shaped our community's history, enhanced by AI-assisted research methodologies."
 draft: false
 category: "research"
