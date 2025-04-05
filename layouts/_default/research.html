@@ -1,0 +1,548 @@
+{{ define "main" }}
+
+<style>
+  .research-article {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #333;
+    line-height: 1.7;
+  }
+  
+  .back-to-research {
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #555;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    transition: color 0.2s;
+  }
+
+  .back-to-research:hover {
+    color: #111;
+  }
+  
+  .research-header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+  }
+
+  .research-header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.5rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: #222;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .research-meta {
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+  }
+  
+  .research-meta .author {
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .research-meta .separator {
+    margin: 0 0.5rem;
+    color: #ccc;
+  }
+  
+  .research-topics {
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+    margin: 1rem auto;
+    max-width: 80%;
+    line-height: 1.6;
+  }
+  
+  .research-image-container {
+    margin: 0 auto 2rem auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .research-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  
+  .image-caption {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  .research-content {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  
+  .content {
+    text-align: left;
+    font-size: 1.05rem;
+  }
+  
+  .content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .content p {
+    margin-bottom: 2rem;
+    line-height: 2rem;
+  }
+
+  .content ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .content ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+    margin-bottom: 1.3rem;
+  }
+  
+  .content ul li,
+  .content ol li {
+    margin-bottom: 0.3rem;
+  }
+  
+  .content a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #326891;
+    background-color: #f7f9fa;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin: 0 2px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    top: -1px;
+    transition: all 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    height: auto;
+    width: auto;
+    border: 1px solid #e1e8ed;
+  }
+  
+  .content a:hover {
+    background-color: #e1e8ed;
+    color: #1a3a5f;
+    text-decoration: none;
+  }
+
+  .content a[href^="http"]::after {
+    content: attr(href);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 100;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .content a[href^="http"]::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+    z-index: 100;
+  }
+  
+  .content a:hover::after,
+  .content a:hover::before {
+    opacity: 1;
+  }
+  
+  .content strong, 
+  .content b {
+    font-weight: 600;
+  }
+  
+  .content em, 
+  .content i {
+    font-style: italic;
+  }
+  
+  /* Citation styling */
+  .citation {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #326891;
+    background-color: #f7f9fa;
+    padding: 0px 4px !important;
+    border-radius: 4px;
+    margin: 0 0px !important;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    top: -1px;
+    transition: all 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    height: auto;
+    width: auto;
+    border: 1px solid #e1e8ed;
+  }
+  
+  .citation:hover {
+    background-color: #e1e8ed;
+    color: #1a3a5f;
+    text-decoration: none;
+  }
+  
+  .citation-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 100;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  .citation-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 4px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+  }
+  
+  .citation:hover .citation-tooltip {
+    opacity: 1;
+  }
+  
+  .footnotes {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .footnotes h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .footnotes ol {
+    counter-reset: footnote-counter;
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  
+  .footnotes li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    color: #555;
+    counter-increment: footnote-counter;
+  }
+  
+  .footnotes li::before {
+    content: counter(footnote-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #444;
+    background-color: #f5f5f5;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footnotes a {
+    color: #1a73e8;
+    text-decoration: none;
+    word-break: break-all;
+  }
+  
+  .footnotes a:hover {
+    text-decoration: underline;
+  }
+  
+  .source-attribution {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+  
+  /* Image modal */
+  #imageModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #modalImg {
+    max-width: 90%;
+    max-height: 90%;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  
+  .close-modal:hover {
+    opacity: 1;
+  }
+  
+  .content blockquote {
+    margin: 2rem 0;
+    border-left: 3px solid #ddd;
+    color: #555;
+    font-style: italic;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+  }
+  
+  .content blockquote p {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .research-header h1 {
+      font-size: 2rem;
+    }
+    
+    .research-topics {
+      max-width: 95%;
+    }
+    
+    .content {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<section class="section research-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-11 mx-auto">
+        <a href="{{ "research" | absURL }}" class="back-to-research">&larr; {{ i18n "back_to_research" }}</a>
+        
+        <div class="research-header">
+          <h1>{{ .Title | markdownify }}</h1>
+          <div class="research-meta">
+            <span class="author">{{ .Params.author }}</span>
+            <span class="separator">•</span>
+            <span class="date">{{ dateFormat "January 2, 2006" .Date }}</span>
+          </div>
+        </div>
+        
+        {{ if .Params.Image }}
+        <div class="research-image-container">
+          <img src="{{ .Params.Image | absURL }}" 
+               alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" 
+               id="featured-img" 
+               class="research-image">
+          {{ if .Params.image_alt }}
+          <div class="image-caption">{{ .Params.image_alt }}</div>
+          {{ end }}
+        </div>
+        {{ end }}
+        
+        <div class="research-content">
+          <div class="content">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image Modal -->
+<div id="imageModal">
+  <span class="close-modal">&times;</span>
+  <img id="modalImg">
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const img = document.getElementById('featured-img');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = document.querySelector('.close-modal');
+    
+    if (img) {
+      img.onclick = function() {
+        modal.style.display = 'flex';
+        modalImg.src = this.src;
+      }
+      
+      closeBtn.onclick = function() {
+        modal.style.display = 'none';
+      }
+      
+      modal.onclick = function(event) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      }
+      
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+          modal.style.display = 'none';
+        }
+      });
+    }
+    
+    // Process citations and links
+    const content = document.querySelector('.content');
+    if (content) {
+      // First pass: Process text nodes to identify and remove citation parentheses
+      const walker = document.createTreeWalker(
+        content,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+      );
+
+      const nodesToProcess = [];
+      while (walker.nextNode()) {
+        nodesToProcess.push(walker.currentNode);
+      }
+
+      nodesToProcess.forEach(textNode => {
+        const text = textNode.nodeValue;
+        if (text.includes('(') && text.includes(')')) {
+          // Check if this text node is immediately before or after a link
+          const nextSibling = textNode.nextSibling;
+          const prevSibling = textNode.previousSibling;
+          
+          if ((nextSibling && nextSibling.tagName === 'A') || 
+              (prevSibling && prevSibling.tagName === 'A')) {
+            // Remove parentheses and extra spaces around citations
+            textNode.nodeValue = text
+              .replace(/\(\s*(?=\s*$)|\s*\)(?!\w)/g, '')  // Remove parentheses and their adjacent spaces
+              .replace(/\s+([.,;:!?])/, '$1');  // Remove space before punctuation
+          }
+        }
+      });
+    }
+
+    // Second pass: Process links into citation chips with properly encoded URLs
+    document.querySelectorAll('.content a[href^="http"]').forEach(function(link) {
+      try {
+        // Get the URL and parse it
+        const originalHref = link.getAttribute('href');
+        let url = originalHref;
+        let fragment = '';
+        
+        // If there's a text fragment in the URL, handle it properly
+        if (url.includes('#:~:text=')) {
+          const parts = url.split('#:~:text=');
+          url = parts[0];
+          fragment = parts[1];
+          
+          // Encode the fragment properly
+          const encodedFragment = encodeURIComponent(fragment);
+          
+          // Reconstruct the URL with properly encoded fragment
+          link.setAttribute('href', `${url}#:~:text=${encodedFragment}`);
+        }
+        
+        // Set the link text to just the domain name
+        const urlObj = new URL(url);
+        const domain = urlObj.hostname.toUpperCase().replace('WWW.', '');
+        link.textContent = domain;
+
+        // If next node is a text node with punctuation, remove the space before it
+        const nextSibling = link.nextSibling;
+        if (nextSibling && nextSibling.nodeType === Node.TEXT_NODE) {
+          nextSibling.nodeValue = nextSibling.nodeValue.replace(/^\s+([.,;:!?])/, '$1');
+        }
+      } catch (e) {
+        // If URL parsing fails, leave the link text as is
+        console.log('Error processing link:', e);
+      }
+    });
+  });
+</script>
+
+{{ end }} 

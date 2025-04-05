@@ -1,0 +1,57 @@
+---
+title: "The Ordinance of Secession"
+date: "May 23, 1861"
+subject: "Ordinance of Secession"
+creator: "Barrett, William Edmund"
+location: "Falls Church, VA"
+format: "Photographs"
+source: "Pictures"
+identifier: "120"
+description: "Photograph of page 1 of the Ordinance of Secession signed by Falls Church citizens"
+color: "b/w"
+dimensions: "8 x 10"
+digitized: True
+manifest_url: "https://iiif.quartexcollections.com/mrspl/iiif/b7cae810-e7e8-4f67-8a65-0328937bb92d/manifest"
+image_url: "https://iiif.quartexcollections.com/mrspl/iiif/b7cae810-e7e8-4f67-8a65-0328937bb92d/full/full/0/default.jpg"
+---
+
+# The Ordinance of Secession
+
+## Description
+
+Photograph of page 1 of the Ordinance of Secession signed by Falls Church citizens
+
+## Metadata
+
+- **Title**: The Ordinance of Secession
+- **Date Created**: 10-Mar-13
+- **Location**: Mary Riley Styles Public Library Local History Collection
+- **Notes**: Lohico 4650|Barrett #19332
+- **Type**: Image
+- **Subject**: Ordinance of Secession
+- **Rights**: All reproductions from the Mary Riley Styles Public Library Falls Church History Collection are by default for personal, one-time "fair use" in accordance with United States copyright law (Title 17, U.S. Code). The copyright of certain materials in the Falls Church History Collection is not held by the library itself. The individual requesting any reproduction is solely responsible for ensuring that permission for use has been properly obtained. Use the following attribution when citing: "Mary Riley Styles Public Library, Falls Church History Collection, Falls Church, VA." Mary Riley Styles Public Library reserves the right to refuse or limit reproduction of any item as required by donor agreement, law, or if reproduction could result in physical damage to the material.
+- **Language**: English
+- **Identifier**: 120
+- **Format**: Photographs
+- **Description**: Photograph of page 1 of the Ordinance of Secession signed by Falls Church citizens
+- **Date (Searchable)**: D:23 M:05 Y:1861
+- **Date**: May 23, 1861
+- **Creator**: Barrett, William Edmund
+- **Place**: Falls Church, VA
+- **Dimensions**: 8 x 10
+- **Color**: b/w
+- **Collection**: Pictures
+
+## Image
+
+A digital version of this historical image is available at:
+[The Ordinance of Secession Image](https://iiif.quartexcollections.com/mrspl/iiif/b7cae810-e7e8-4f67-8a65-0328937bb92d/full/full/0/default.jpg)
+
+## Digital Manifest
+
+The full IIIF manifest for this item is available at:
+[IIIF Manifest](https://iiif.quartexcollections.com/mrspl/iiif/b7cae810-e7e8-4f67-8a65-0328937bb92d/manifest)
+
+## Historical Significance
+
+*Note: Add historical significance details here.*

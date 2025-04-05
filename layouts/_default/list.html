@@ -7,7 +7,10 @@
         <h1>{{.Title}}</h1>
       </div>
     </div>
-    {{ range $index, $element := (where .Site.RegularPages "Section" "press") }}
+    {{ $pages := where .Site.RegularPages "Section" .Section }}
+    {{ $pages := where $pages "Params.template" "!=" true }}
+    {{ $pages := where $pages "Params.draft" "!=" true }}
+    {{ range $index, $element := $pages }}
     {{- if ne (mod $index 2) 1 }}
     <div class="row mb-40">
       <div class="col-md-6 text-center mb-5 mb-lg-0">

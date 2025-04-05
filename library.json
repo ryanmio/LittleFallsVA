@@ -1,0 +1,1435 @@
+[
+  {
+    "box_number": 1,
+    "series": [
+      {
+        "series_number": 1,
+        "series_name": "Bibliography",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Bibliographies, 1980-2008"
+          }
+        ]
+      },
+      {
+        "series_number": 2,
+        "series_name": "Automation",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Automation Committee, 1989-1990"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Automation, Microfiche Catalog, 1989"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Automation, Catalog Conversion"
+          }
+        ]
+      },
+      {
+        "series_number": 3,
+        "series_name": "Reports",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Annual Reports, 1947-1983"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Annual Report, Statistical Information, 2000-2015"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Statistical Records, 1975-1988"
+          }
+        ]
+      },
+      {
+        "series_number": 4,
+        "series_name": "Anniversaries",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Anniversaries 100 years, Programs, 1999"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Anniversaries 100 years, Press, 1999"
+          }
+        ]
+      },
+      {
+        "series_number": 5,
+        "series_name": "Plan",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "5-year plan: 2001-2006"
+          }
+        ]
+      },
+      {
+        "series_number": 6,
+        "series_name": "Correspondence",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Correspondence, City Officials, Library, 1963-1985"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Correspondence, City Officials, Library, 1942-1962"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 2,
+    "series": [
+      {
+        "series_number": 7,
+        "series_name": "Circulation statistics",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Circulation statistics, 1940-1951"
+          }
+        ]
+      },
+      {
+        "series_number": 8,
+        "series_name": "Library equipment",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Furniture and equipment, 1947-1950"
+          }
+        ]
+      },
+      {
+        "series_number": 9,
+        "series_name": "Resolution",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Resolution, 1950"
+          }
+        ]
+      },
+      {
+        "series_number": 10,
+        "series_name": "Projects",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Library inventory, building programs, correspondence, 1951-1953"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Land to the Library, correspondence, 1953"
+          }
+        ]
+      },
+      {
+        "series_number": 11,
+        "series_name": "Finances",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Library finances, fee, 1954-1955"
+          }
+        ]
+      },
+      {
+        "series_number": 12,
+        "series_name": "Reports",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Fact sheet, Library Reports, job specifications, correspondence, 1955-1956"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Report fiscal year, library programs and plans, 1957-1958"
+          }
+        ]
+      },
+      {
+        "series_number": 13,
+        "series_name": "Establish a Public Library",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Establish a Public Library and Library Board, 1958"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Grievances, proposals, Douglas resignation, 1959"
+          }
+        ]
+      },
+      {
+        "series_number": 14,
+        "series_name": "Reports",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Reports to the Board of Library Trustees, National Library Week, 1960-1961"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Reports, Rotary gifts, 1961"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Director's Reports, 1961"
+          }
+        ]
+      },
+      {
+        "series_number": 15,
+        "series_name": "Modern Library",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Modern Library, Reports, 1962"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Director's Reports, Special Collections, Reading and Discussion Programs, Proclamation National Library Week, 1963"
+          }
+        ]
+      },
+      {
+        "series_number": 16,
+        "series_name": "Development, Reports",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Director's Reports, Reports of the Assistant Librarian, Staff Notes, 1964"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Development Plan, Director's Reports, 1965"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Report of the Advisory Committee on the Auditorium, Civic Center, Complaints, Correspondence, Director's Reports, 1966-1967"
+          }
+        ]
+      },
+      {
+        "series_number": 17,
+        "series_name": "Memorandums",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Memorandums, Press releases, 1968"
+          }
+        ]
+      },
+      {
+        "series_number": 18,
+        "series_name": "Board of Trustees",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Recommendations, Proposals, Library Board of Trustees documents, Proclamation, 1969"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 3,
+    "series": [
+      {
+        "series_number": 19,
+        "series_name": "Board of Trustees",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Library Board of Trustees Meetings, Correspondence, Letters of thanks, Reports, Memorandums, 1970"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Library Board of Trustees Meetings, Correspondence, Letters of thanks, Memorandums, 1971"
+          }
+        ]
+      },
+      {
+        "series_number": 20,
+        "series_name": "Policy and Procedures",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Falls Church Public Library Manual of Library Policy and Procedures"
+          }
+        ]
+      },
+      {
+        "series_number": 21,
+        "series_name": "Planning and Organization of cultural events in the library, Reports",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Library Board of Trustees Meetings, Statistical & Annual Reports, Releases, Memorandums, Budget Request, 1972-1974"
+          }
+        ]
+      },
+      {
+        "series_number": 22,
+        "series_name": "Ordinance, Director's Reports",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Ordinance, Reports, Minutes, Memorandum"
+          }
+        ]
+      },
+      {
+        "series_number": 23,
+        "series_name": "Renaming of the FC Public Library",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Renaming of the Falls Church Library, 1977"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Memorial fund; Programming, 1980-1989"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 4,
+    "series": [
+      {
+        "series_number": 24,
+        "series_name": "Procedures & Policy",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Information Desk Procedures, 1991"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Policy Manual, 1982-1999"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Policy Manual, 1986-2005"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 5,
+    "series": [
+      {
+        "series_number": 25,
+        "series_name": "Manuals",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Operations & Maintenance, 1991-1993"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Supervisor's Manual, 1987-1997"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 6,
+    "series": [
+      {
+        "series_number": 26,
+        "series_name": "Library facility",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Building Improvements, 1980-1990"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Facility Improvements, 1984-1989"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Facility Improvements, 1991-1992"
+          },
+          {
+            "folder_number": 4,
+            "folder_content": "Facility Improvements, 2013-2015"
+          },
+          {
+            "folder_number": 5,
+            "folder_content": "Facility Evaluation/Study, 1984-1988"
+          }
+        ]
+      },
+      {
+        "series_number": 27,
+        "series_name": "Budgets",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Budget FY, 1946-1951"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Budget FY, 1951-1956"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Budget FY, 1956-1961"
+          },
+          {
+            "folder_number": 4,
+            "folder_content": "Budget FY, 1961-1969"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 7,
+    "series": [
+      {
+        "series_number": 27,
+        "series_name": "Budgets, continued",
+        "folders": [
+          {
+            "folder_number": 5,
+            "folder_content": "Budget FY, 1970-1973"
+          },
+          {
+            "folder_number": 6,
+            "folder_content": "Budget FY, 1974-1977"
+          },
+          {
+            "folder_number": 7,
+            "folder_content": "Budget FY, 1977-1978"
+          },
+          {
+            "folder_number": 8,
+            "folder_content": "Budget FY, 1978-1979"
+          },
+          {
+            "folder_number": 9,
+            "folder_content": "Budget FY, 1979-1980"
+          },
+          {
+            "folder_number": 10,
+            "folder_content": "Budget FY, 1979-1982"
+          },
+          {
+            "folder_number": 11,
+            "folder_content": "Budget FY, 1982-1983"
+          },
+          {
+            "folder_number": 12,
+            "folder_content": "Budget FY, 1983-1984"
+          },
+          {
+            "folder_number": 13,
+            "folder_content": "Budget FY, 1984-1985"
+          },
+          {
+            "folder_number": 14,
+            "folder_content": "Budget FY, 1986"
+          },
+          {
+            "folder_number": 15,
+            "folder_content": "Budget FY, 1987-1988"
+          },
+          {
+            "folder_number": 16,
+            "folder_content": "Budget FY, 1988-1989"
+          },
+          {
+            "folder_number": 17,
+            "folder_content": "Budget FY, 1989"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 8,
+    "series": [
+      {
+        "series_number": 27,
+        "series_name": "Budgets, continued",
+        "folders": [
+          {
+            "folder_number": 18,
+            "folder_content": "Budget FY, 1990"
+          },
+          {
+            "folder_number": 19,
+            "folder_content": "Budget FY, 1991"
+          },
+          {
+            "folder_number": 20,
+            "folder_content": "Budget FY, 1992, 1993"
+          },
+          {
+            "folder_number": 21,
+            "folder_content": "Budget FY, 1995"
+          },
+          {
+            "folder_number": 22,
+            "folder_content": "Budget FY II, 2010"
+          }
+        ]
+      },
+      {
+        "series_number": 28,
+        "series_name": "Board of Trustees",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Board of Trustees \u2013 Charter, 1954, 1958, 1960, 1972, 1973, 1978, 1979, 1988, 2002"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Board of Trustees \u2013 Annual Report, 1947, 1950"
+          }
+        ]
+      },
+      {
+        "series_number": 29,
+        "series_name": "Bibliographies",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Bibliographies \u2013 Children, 1972, 1974, 1976, 1977, 1981, 1982, 1986, 1990"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Bibliographies Audio Visual, 1975-1978, 1987, 1988"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Bibliographies, 1950-1969"
+          },
+          {
+            "folder_number": 4,
+            "folder_content": "Bibliographies, 1970-1978, 1983, 1988"
+          },
+          {
+            "folder_number": 5,
+            "folder_content": "Bibliographies, 1977-1979"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 9,
+    "series": [
+      {
+        "series_number": 30,
+        "series_name": "Building",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Building - Broad St. E. 201, 1954-1958"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Building \u2013 Planning, 1950-1957"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Building \u2013 Equipment, 1957-1962"
+          },
+          {
+            "folder_number": 4,
+            "folder_content": "Building \u2013 Capital Improvement Fund, 1955-1958"
+          },
+          {
+            "folder_number": 5,
+            "folder_content": "Building \u2013 Architect, 1953-1960"
+          },
+          {
+            "folder_number": 6,
+            "folder_content": "Building \u2013 Addition \u2013 Bond Issue, 1966"
+          },
+          {
+            "folder_number": 7,
+            "folder_content": "Building \u2013 Addition, 1964-1968"
+          },
+          {
+            "folder_number": 8,
+            "folder_content": "Building \u2013 Addition \u2013 Specifications for Addition, 1968"
+          },
+          {
+            "folder_number": 9,
+            "folder_content": "Building \u2013 Addition \u2013 Furniture and Equipment, 1968"
+          },
+          {
+            "folder_number": 10,
+            "folder_content": "Building \u2013 Planning Facility, 1979-1980"
+          },
+          {
+            "folder_number": 11,
+            "folder_content": "Building \u2013 Deed (copy) Styles, Frances Holmes, 1987"
+          },
+          {
+            "folder_number": 12,
+            "folder_content": "Building \u2013 Reopening Celebration, 1993"
+          },
+          {
+            "folder_number": 13,
+            "folder_content": "Building \u2013 Floor Plans, 1960's-1990's Folder Catalogue 1899"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 10,
+    "series": [
+      {
+        "series_number": 31,
+        "series_name": "Catalogue",
+        "folders": []
+      },
+      {
+        "series_number": 32,
+        "series_name": "Library Resources",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Electronic Resources and Equipment, 1996"
+          }
+        ]
+      },
+      {
+        "series_number": 33,
+        "series_name": "Employees",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Employees \u2013 Awards Prizes etc."
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Employees \u2013 Job Recruitment, 1997-2005"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Employees \u2013 Library Director, 1999"
+          }
+        ]
+      },
+      {
+        "series_number": 34,
+        "series_name": "Friends of the Library",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Friends of the Library, 1949-1956"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Friends of the Library, 1960-1696"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Friends of the Library, 1970-1980"
+          },
+          {
+            "folder_number": 4,
+            "folder_content": "Friends of the Library, Publications, 1970-1980"
+          },
+          {
+            "folder_number": 5,
+            "folder_content": "Friends of the Library, Activities, 1970-1980"
+          },
+          {
+            "folder_number": 6,
+            "folder_content": "Friends of the Library, Annual Reports and Minutes, 1970-1980"
+          },
+          {
+            "folder_number": 7,
+            "folder_content": "Friends of the Library, Constitution and Financial Statements, 1970-1981"
+          },
+          {
+            "folder_number": 8,
+            "folder_content": "Friends of the Library, Correspondence, 1970-1980"
+          }
+        ]
+      },
+      {
+        "series_number": 35,
+        "series_name": "Goals, Grants",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Goals and Objectives, 1970's"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": ": Grants in Aid LSCA, 1980-1989"
+          }
+        ]
+      },
+      {
+        "series_number": 36,
+        "series_name": "History",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "History, Chronology (library cards), 1950-1988"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "History, January Notes, Monthly Reports, 1950-1993"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "History, Library Visual, 1990's"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 11,
+    "series": [
+      {
+        "series_number": 37,
+        "series_name": "Programs",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "National Library Week, 1966"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "National Library Week, 1980's"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "National Library Week, 1950-1979"
+          },
+          {
+            "folder_number": 4,
+            "folder_content": "National Library Week, 1965"
+          },
+          {
+            "folder_number": 5,
+            "folder_content": "Mark Twain Tall Tales Contest, 1985"
+          },
+          {
+            "folder_number": 6,
+            "folder_content": "Children, Summer Reading Program, 1980's-1990's"
+          },
+          {
+            "folder_number": 7,
+            "folder_content": "Authors Night, 1958, 1982"
+          },
+          {
+            "folder_number": 8,
+            "folder_content": "Programs, 1973-1989"
+          },
+          {
+            "folder_number": 9,
+            "folder_content": "Programs, 1997"
+          },
+          {
+            "folder_number": 10,
+            "folder_content": "Programs, 2000's"
+          }
+        ]
+      },
+      {
+        "series_number": 38,
+        "series_name": "Policies and Procedures",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Policies and Procedures, 1950-1959"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Policies and Procedures, 1960-1969"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Policies and Procedures, 1966-1970"
+          },
+          {
+            "folder_number": 4,
+            "folder_content": "Policies and Procedures, Policy Manual, 1980-1994"
+          },
+          {
+            "folder_number": 5,
+            "folder_content": "Policies and Procedures, 1990's"
+          },
+          {
+            "folder_number": 6,
+            "folder_content": "Policies and Procedures, Confidentiality, Parking, Smoking, 1977-1989"
+          }
+        ]
+      },
+      {
+        "series_number": 39,
+        "series_name": "Newsletters",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Newsletters, Mailing Lists for Newsletters, 1961-1977"
+          }
+        ]
+      },
+      {
+        "series_number": 40,
+        "series_name": "Ordinances",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Governance of the Public Library, 1977-1978"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Libraries MRSPL, Pages, Training Manual, 1978-1985"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 12,
+    "series": [
+      {
+        "series_number": 41,
+        "series_name": "Local History",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Local History, Notes, Reports, 1950's-2000's"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Local History, 1978-1993"
+          }
+        ]
+      },
+      {
+        "series_number": 42,
+        "series_name": "Library",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "An Operational Evaluation of the MRS Public Library, 1998"
+          }
+        ]
+      },
+      {
+        "series_number": 43,
+        "series_name": "Publications",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Publications, 1950-1977"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Publications, 1977-1979"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Publications, 1980-1983"
+          },
+          {
+            "folder_number": 4,
+            "folder_content": "Publications, 1981-1989"
+          },
+          {
+            "folder_number": 5,
+            "folder_content": "Publications, 1986-1989"
+          },
+          {
+            "folder_number": 6,
+            "folder_content": "Publications, Young Adult Program, 1990-1998"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 13,
+    "series": [
+      {
+        "series_number": 43,
+        "series_name": "Publications, continued",
+        "folders": [
+          {
+            "folder_number": 7,
+            "folder_content": "Publications, Falls Church by Fence and Fireside, 1964"
+          },
+          {
+            "folder_number": 8,
+            "folder_content": "Publications, Falls Church by Fence and Fireside, 1964-1965"
+          },
+          {
+            "folder_number": 9,
+            "folder_content": "Publications, Falls Church by Fence and Fireside, Paid invoices and related papers for sale of book, 1964-1965"
+          },
+          {
+            "folder_number": 10,
+            "folder_content": "Publications, Falls Church by Fence and Fireside, Correspondence and Publicity, 1964"
+          },
+          {
+            "folder_number": 11,
+            "folder_content": "Publications, Falls Church by Fence and Fireside, Correspondence, 1964-1968"
+          },
+          {
+            "folder_number": 12,
+            "folder_content": "Publications, Falls Church by Fence and Fireside, Publication Rights, 1989-1990"
+          }
+        ]
+      },
+      {
+        "series_number": 44,
+        "series_name": "Reading",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Before College: A Reading List, 1966-1974"
+          }
+        ]
+      },
+      {
+        "series_number": 45,
+        "series_name": "Briefings",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Reference Briefings, 1986-2001"
+          }
+        ]
+      },
+      {
+        "series_number": 46,
+        "series_name": "Rewards",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Rewards Prizes, etc., Dorothy Canfield Fisher, 1963"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Rewards Prizes, etc., 1987-2009"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 14,
+    "series": [
+      {
+        "series_number": 47,
+        "series_name": "Schedules",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Schedules, 1978, 1987"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Salary Schedules, 1953-1998"
+          }
+        ]
+      },
+      {
+        "series_number": 48,
+        "series_name": "Staff",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Staff Notes, 1986-1997"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Staff Poster, Library Address List, Pay Plan/Schedule, 1949-2024"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Staff, Social Life and Customs, 1991-2008"
+          }
+        ]
+      },
+      {
+        "series_number": 49,
+        "series_name": "Statistics, Surveys",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Statistical Reports, 1950-1960"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Statistical Reports, 1960-1976"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "Statistical Reports, 1990-1999"
+          },
+          {
+            "folder_number": 4,
+            "folder_content": "Statistics, 2001"
+          },
+          {
+            "folder_number": 5,
+            "folder_content": "Users Surveys, 1989"
+          }
+        ]
+      },
+      {
+        "series_number": 50,
+        "series_name": "Virginia State Library",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Virginia State Library, 1950-1980"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Virginia State Library Network, 1987"
+          }
+        ]
+      },
+      {
+        "series_number": 51,
+        "series_name": "Volunteers",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Volunteers, 1984-2003"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Volunteer Certificates, 1992"
+          }
+        ]
+      },
+      {
+        "series_number": 52,
+        "series_name": "Local History Room",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Virginia Room, White Papers, 1986-1988"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "LHR Graphic Collection, Completed Orders, 1982-1990"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "LHR Collection, 1981-1995"
+          },
+          {
+            "folder_number": 4,
+            "folder_content": "LHR Guide Local History Collection, 1987, 1991"
+          },
+          {
+            "folder_number": 5,
+            "folder_content": "LHR In the Headlines, 1936, 1946"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 15,
+    "series": [
+      {
+        "series_number": 52,
+        "series_name": "Local History Room, continued",
+        "folders": [
+          {
+            "folder_number": 6,
+            "folder_content": "LHR InMagic, 1989-1997"
+          },
+          {
+            "folder_number": 7,
+            "folder_content": "LHR InMagic Lohico, 1992"
+          },
+          {
+            "folder_number": 8,
+            "folder_content": "LHR InMagic Newspapers, 1992"
+          },
+          {
+            "folder_number": 9,
+            "folder_content": "LHR InMagic Newsletters, 1990, 1991"
+          },
+          {
+            "folder_number": 10,
+            "folder_content": "LHR InMagic User Group, 1992"
+          },
+          {
+            "folder_number": 11,
+            "folder_content": "LHR InMagic Digital, 1994-1999"
+          },
+          {
+            "folder_number": 12,
+            "folder_content": "LHR Inventory, 1982-1998"
+          },
+          {
+            "folder_number": 13,
+            "folder_content": "LHR Job Description, 1979-2010"
+          },
+          {
+            "folder_number": 14,
+            "folder_content": "LHR Map Collection, 1977-1995"
+          },
+          {
+            "folder_number": 15,
+            "folder_content": "LHR Microform Collection, 1976-1998"
+          },
+          {
+            "folder_number": 16,
+            "folder_content": "LHR Microform Collection, Vendors and Services, 1981-9000"
+          },
+          {
+            "folder_number": 17,
+            "folder_content": "LHR Microfilming, 1987-1997"
+          },
+          {
+            "folder_number": 18,
+            "folder_content": "LHR News press, 1991-1996"
+          },
+          {
+            "folder_number": 19,
+            "folder_content": "LHR Oral History, 1987-1993"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 16,
+    "series": [
+      {
+        "series_number": 52,
+        "series_name": "Local History Room, continued",
+        "folders": [
+          {
+            "folder_number": 20,
+            "folder_content": "LHR Oral History, Legal Agreements and Releases, 1977-2002"
+          },
+          {
+            "folder_number": 21,
+            "folder_content": "LHR Oral History, Lists, 1977-1980"
+          },
+          {
+            "folder_number": 22,
+            "folder_content": "LHR Periodical Holdings, Virginiana, 1974-1993"
+          },
+          {
+            "folder_number": 23,
+            "folder_content": "LHR Photographs, Copyright, 1995-1998"
+          },
+          {
+            "folder_number": 24,
+            "folder_content": "LHR Policies, Rules, Registrations, Hours, 1990-2001"
+          },
+          {
+            "folder_number": 25,
+            "folder_content": "LHR Porter Collection, 1976-1993"
+          },
+          {
+            "folder_number": 26,
+            "folder_content": "LHR Processing, 1987"
+          },
+          {
+            "folder_number": 27,
+            "folder_content": "LHR Programs, 1980"
+          },
+          {
+            "folder_number": 28,
+            "folder_content": "LHR Programs for Schools, 1990"
+          },
+          {
+            "folder_number": 29,
+            "folder_content": "LHR Programs, May 15, 1987"
+          },
+          {
+            "folder_number": 30,
+            "folder_content": "LHR Public Records, 1984-1991"
+          },
+          {
+            "folder_number": 31,
+            "folder_content": "LHR Public Relations, 1976-1992"
+          },
+          {
+            "folder_number": 32,
+            "folder_content": "LHR Publications, 1987-1999"
+          },
+          {
+            "folder_number": 33,
+            "folder_content": "LHR Publications, Trail Through Falls Church, 1985-1995"
+          },
+          {
+            "folder_number": 34,
+            "folder_content": "LHR Quarterly Reports, 1990-1998"
+          },
+          {
+            "folder_number": 35,
+            "folder_content": "LHR Register, 1978, 1980"
+          },
+          {
+            "folder_number": 36,
+            "folder_content": "LHR Storage Lists, 1988-1998"
+          },
+          {
+            "folder_number": 37,
+            "folder_content": "LHR Supply Requests, FY 2000-2001"
+          },
+          {
+            "folder_number": 38,
+            "folder_content": "LHR Supply Requests, FY 1987-1988, 1988-1989"
+          },
+          {
+            "folder_number": 39,
+            "folder_content": "LHR Supply Requests, FY 1991-1998"
+          },
+          {
+            "folder_number": 40,
+            "folder_content": "LHR Video Tape Collection, 1986-1988"
+          },
+          {
+            "folder_number": 41,
+            "folder_content": "LHR Video Tape Collection, City Council Meetings, 1987-1996"
+          },
+          {
+            "folder_number": 42,
+            "folder_content": "LHR Volunteers, 2000"
+          },
+          {
+            "folder_number": 43,
+            "folder_content": "LHR 5 Year Plan, 1984-1992"
+          },
+          {
+            "folder_number": 44,
+            "folder_content": "LHR Accessions and Deaccessions, 1987-1996"
+          },
+          {
+            "folder_number": 45,
+            "folder_content": "LHR Annual Reports, 1970-1990"
+          },
+          {
+            "folder_number": 46,
+            "folder_content": "LHR Automation Program, 1988-1991"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 17,
+    "series": [
+      {
+        "series_number": 52,
+        "series_name": "Local History Room, continued",
+        "folders": [
+          {
+            "folder_number": 47,
+            "folder_content": "LHR Budget Requests, FY 1990-2002"
+          },
+          {
+            "folder_number": 48,
+            "folder_content": "LHR Budget Requests, FY 1990-1991"
+          },
+          {
+            "folder_number": 49,
+            "folder_content": "LHR Budget Requests, FY 1989-1990"
+          },
+          {
+            "folder_number": 50,
+            "folder_content": "LHR Budget Requests, FY 1988-1989"
+          },
+          {
+            "folder_number": 51,
+            "folder_content": "LHR Budget Requests, FY 1983-1988"
+          },
+          {
+            "folder_number": 52,
+            "folder_content": "LHR Catalog-Guide-Manual, 1984"
+          },
+          {
+            "folder_number": 53,
+            "folder_content": "LHR Collection Goals and Objectives, FY 1981-1991"
+          },
+          {
+            "folder_number": 54,
+            "folder_content": "LHR Dominion Camera, 1999"
+          },
+          {
+            "folder_number": 55,
+            "folder_content": "LHR Digital Preservation/Digitizing Local History, 2016-2018"
+          },
+          {
+            "folder_number": 56,
+            "folder_content": "LHR Virginia Room Policy, 1974"
+          },
+          {
+            "folder_number": 57,
+            "folder_content": "LHR Collections: DC, 1987-1993"
+          },
+          {
+            "folder_number": 58,
+            "folder_content": "LHR Focus, 1992"
+          },
+          {
+            "folder_number": 59,
+            "folder_content": "LHR Forms"
+          },
+          {
+            "folder_number": 60,
+            "folder_content": "LHR George Washington University, 1992"
+          },
+          {
+            "folder_number": 61,
+            "folder_content": "LHR Goals and Objectives, 1980-1989"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 18,
+    "series": [
+      {
+        "series_number": 52,
+        "series_name": "Local History Room, continued",
+        "folders": [
+          {
+            "folder_number": 62,
+            "folder_content": "LHR The Process of Preparation for the 125 Anniversary Celebration, 2023"
+          },
+          {
+            "folder_number": 63,
+            "folder_content": "LHR 125 Anniversary Meetings, 2023-2024"
+          },
+          {
+            "folder_number": 64,
+            "folder_content": "LHR Kick-Off Open House Materials, 125 Anniversary, 2023-2024"
+          },
+          {
+            "folder_number": 65,
+            "folder_content": "LHR Proclamation, 2024"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 19,
+    "series": [
+      {
+        "series_number": 53,
+        "series_name": "Development LLC/Mason Row",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Mason Row Proposal, 2015"
+          }
+        ]
+      },
+      {
+        "series_number": 54,
+        "series_name": "Technology Plan",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Task Force on Technology, 1994-1999"
+          }
+        ]
+      },
+      {
+        "series_number": 55,
+        "series_name": "Mary Riley Styles Newsletters",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Staff Newsletters, 2000-2002"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "Staff Newsletters, 2002-2005"
+          }
+        ]
+      },
+      {
+        "series_number": 56,
+        "series_name": "Space Planning Subcommittee",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "MRSPL Director's Notes, 2008"
+          }
+        ]
+      },
+      {
+        "series_number": 57,
+        "series_name": "Library Board of Trustees",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "List Library Board of Trustees, 1995-2006"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "box_number": 20,
+    "series": [
+      {
+        "series_number": 58,
+        "series_name": "Library Improvements",
+        "folders": [
+          {
+            "folder_number": 1,
+            "folder_content": "Preliminary Recommendation on Improvements in Library, 1984-1985"
+          },
+          {
+            "folder_number": 2,
+            "folder_content": "The Architectural Program, 1986"
+          },
+          {
+            "folder_number": 3,
+            "folder_content": "The Architectural Program, 1987"
+          },
+          {
+            "folder_number": 4,
+            "folder_content": "Library Capital Improvements, 1988 Library Expansion, 1989-1990"
+          },
+          {
+            "folder_number": 1,
+            "folder_content": "MRSPL Expansion, An Operational Evaluation of the Library, 1989-1990"
+          }
+        ]
+      }
+    ]
+  }
+]
