@@ -68,6 +68,15 @@
   translation: "Próximo lanzamiento"
 
 - id: back_to_press_releases
-  translation: "Volver a comunicados de prensa"
+  translation: "Volver a Comunicados de Prensa"
+
+- id: research
+  translation: "Investigación"
+  
+- id: research_footer
+  translation: "Investigación"
+  
+- id: back_to_research
+  translation: "Volver a Investigación"
    
   

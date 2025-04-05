@@ -1,0 +1,72 @@
+// navigation
+.navigation {
+  padding: 20px 0;
+  background: var(--white-color);
+  transition: .3s ease;
+  &.nav-bg {
+    background: var(--white-color);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.07);
+    padding: 15px 0;
+  }
+  @include desktop {
+    padding: 15px 0;
+  }
+}
+
+.navbar {
+  .navbar-nav {
+    .nav-item {
+      margin: 0;
+      position: relative;
+      &:hover {
+        .nav-link {
+          color: var(--primary-color);
+        }
+      }
+      .nav-link {
+        font-size: 18px;
+        font-weight: 500;
+        font-family: var(--font-primary);
+        text-transform: capitalize;
+        line-height: 1;
+        display: inline-block;
+        margin: 0 15px;
+        color: var(--text-color);
+      }
+
+      &.active .nav-link{
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  /* Research section enhancements */
+  .nav-item.research-nav {
+    .nav-link {
+      font-weight: 600;
+      color: #333;
+      letter-spacing: 0.02em;
+      position: relative;
+      
+      &:after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 0;
+        background: var(--primary-color);
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        transition: width 0.3s ease;
+      }
+      
+      &:hover:after {
+        width: 100%;
+      }
+    }
+    
+    &.active .nav-link:after {
+      width: 100%;
+    }
+  }
+} 

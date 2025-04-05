@@ -1,0 +1,4 @@
+{{ $url := .Get "url" }}
+{{ $title := .Get "title" }}
+{{ $domain := replaceRE "^https?://(?:www\\.)?([^/]+).*" "$1" $url }}
+<a href="{{ $url }}" class="citation" title="{{ $title }}">{{ upper $domain }}</a> 

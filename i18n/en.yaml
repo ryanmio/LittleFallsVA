@@ -66,4 +66,13 @@
 
 - id: back_to_press_releases
   translation: "Back to Press Releases"
+
+- id: research
+  translation: "Research"
+  
+- id: research_footer
+  translation: "Research"
+  
+- id: back_to_research
+  translation: "Back to Research"
   
