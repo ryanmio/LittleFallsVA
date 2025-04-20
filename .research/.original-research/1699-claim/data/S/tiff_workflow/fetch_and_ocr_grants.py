@@ -22,7 +22,8 @@ import logging
 import requests
 from pathlib import Path
 from PIL import Image
-import pytesseract
+# Temporarily comment out pytesseract import until OCR is reimplemented
+# import pytesseract
 import re
 from bs4 import BeautifulSoup
 from collections import defaultdict
@@ -32,7 +33,7 @@ import traceback
 
 # Configure detailed logging
 logging.basicConfig(
-    level=logging.DEBUG,  # Changed from INFO to DEBUG for more verbose output
+    level=logging.INFO,  # Changed from DEBUG to INFO for less verbose output
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
         logging.FileHandler('grants_processing.log'),
@@ -44,6 +45,7 @@ logger = logging.getLogger(__name__)
 # Constants
 BASE_DIR = Path('.')
 TIFF_DIR = BASE_DIR / 'tiff_grants'
+PNG_DIR = BASE_DIR / 'png_grants'  # New directory for PNG files
 OCR_DIR = BASE_DIR / 'ocr_output'
 RESULTS_FILE = BASE_DIR / 'grant_page_hits.csv'
 DEBUG_FILE = BASE_DIR / 'debug_info.log'
@@ -81,6 +83,7 @@ def create_directories():
     """Create necessary directories if they don't exist."""
     logger.info("Creating directory structure")
     TIFF_DIR.mkdir(parents=True, exist_ok=True)
+    PNG_DIR.mkdir(parents=True, exist_ok=True)  # Create PNG directory
     OCR_DIR.mkdir(parents=True, exist_ok=True)
     
     # Create an empty debug log file
@@ -246,7 +249,7 @@ def discover_tiff_urls(page_group_url, volume_subfolder):
                 "filename": href
             }
             
-            logger.debug(f"Discovered TIFF: {tiff_info['filename']} (page {page_num}) at {tiff_url}")
+            logger.debug(f"Discovered TIFF: {os.path.basename(tiff_info['filename'])} (page {page_num})")
             tiff_urls.append(tiff_info)
     
     if TEST_MODE and tiff_urls:
@@ -259,7 +262,11 @@ def download_tiff(url, output_path):
     """Download a TIFF file from the given URL."""
     try:
         logger.debug(f"Downloading: {url}")
-        start_time = time.time()
+        
+        # Check if file already exists and has content
+        if os.path.exists(output_path) and os.path.getsize(output_path) > 0:
+            logger.info(f"File already exists at {output_path}, skipping download")
+            return True
         
         # Initial HEAD request to check if file exists
         head_response = requests.head(url, timeout=10)
@@ -285,11 +292,7 @@ def download_tiff(url, output_path):
                     file.write(chunk)
                     downloaded_size += len(chunk)
         
-        end_time = time.time()
-        download_time = end_time - start_time
-        download_speed = (downloaded_size / 1024) / download_time if download_time > 0 else 0
-        
-        logger.debug(f"Downloaded {downloaded_size/1024:.2f} KB in {download_time:.2f}s ({download_speed:.2f} KB/s)")
+        logger.debug(f"Downloaded {downloaded_size/1024:.2f} KB")
         log_debug(f"Download successful: {url} -> {output_path}")
         
         return True
@@ -302,89 +305,36 @@ def download_tiff(url, output_path):
         log_debug(f"Unexpected download error: {url}\n{traceback.format_exc()}")
         return False
 
-def perform_ocr(image_path):
-    """Perform OCR on the image and return the text."""
+def convert_tiff_to_png(tiff_path, png_path):
+    """Convert a TIFF file to PNG and rotate it 90 degrees counterclockwise."""
     try:
-        logger.debug(f"Starting OCR for: {image_path}")
-        start_time = time.time()
+        logger.info(f"Converting TIFF to PNG: {tiff_path}")
         
-        # Check if image exists and is readable
-        if not os.path.exists(image_path):
-            logger.error(f"Image file doesn't exist: {image_path}")
-            return ""
-        
-        # Get image details before OCR
-        file_size = os.path.getsize(image_path) / 1024  # KB
-        logger.debug(f"Image size: {file_size:.2f} KB")
-        
-        # Open and process the image
-        image = Image.open(image_path)
-        logger.debug(f"Image opened: {image.format}, {image.size}, {image.mode}")
-        
-        # Perform OCR
-        text = pytesseract.image_to_string(image)
-        text_length = len(text)
-        
-        end_time = time.time()
-        ocr_time = end_time - start_time
-        
-        # Log statistics
-        logger.debug(f"OCR completed in {ocr_time:.2f}s. Text length: {text_length} chars")
-        log_debug(f"OCR stats for {image_path}: {text_length} chars, {ocr_time:.2f}s")
-        
-        # Log a sample of the text for debugging
-        if text:
-            sample = text[:200] + "..." if len(text) > 200 else text
-            log_debug(f"OCR text sample from {image_path}:\n{sample}")
-        
-        return text
+        # Check if PNG already exists
+        if os.path.exists(png_path) and os.path.getsize(png_path) > 0:
+            logger.info(f"PNG already exists: {png_path}, skipping conversion")
+            return True
+            
+        # Open the TIFF image
+        with Image.open(tiff_path) as img:
+            # Rotate the image 90 degrees counterclockwise
+            rotated_img = img.rotate(90, expand=True)
+            
+            # Create parent directory if it doesn't exist
+            os.makedirs(os.path.dirname(png_path), exist_ok=True)
+            
+            # Save as PNG
+            rotated_img.save(png_path, "PNG")
+            
+        logger.info(f"Successfully converted and rotated: {png_path}")
+        return True
     except Exception as e:
-        logger.error(f"OCR failed for {image_path}: {str(e)}")
-        log_debug(f"OCR error: {image_path}\n{traceback.format_exc()}")
-        return ""
-
-def search_keywords(text, keywords, source_info=""):
-    """Search for keywords in text and return matches with context."""
-    results = []
-    
-    if not text:
-        logger.debug(f"No text to search for keywords in {source_info}")
-        return results
-    
-    logger.debug(f"Searching for {len(keywords)} keywords in text ({len(text)} chars)")
-    
-    lines = text.split('\n')
-    matches_found = 0
-    
-    for i, line in enumerate(lines):
-        for keyword in keywords:
-            if keyword.lower() in line.lower():
-                matches_found += 1
-                # Get a few lines before and after for context
-                start = max(0, i - 2)
-                end = min(len(lines), i + 3)
-                context = '\n'.join(lines[start:end])
-                
-                result = {
-                    'keyword': keyword,
-                    'snippet': context.strip(),
-                    'line_number': i + 1,
-                    'context_lines': f"{start+1}-{end}"
-                }
-                
-                results.append(result)
-                logger.info(f"Found keyword '{keyword}' in {source_info} at line {i+1}")
-                log_debug(f"Keyword match in {source_info}:\nKeyword: {keyword}\nContext:\n{context.strip()}")
-    
-    if matches_found > 0:
-        logger.debug(f"Found {matches_found} keyword matches in {source_info}")
-    else:
-        logger.debug(f"No keyword matches found in {source_info}")
-    
-    return results
+        logger.error(f"Error converting TIFF to PNG: {str(e)}")
+        log_debug(f"Conversion error: {tiff_path}\n{traceback.format_exc()}")
+        return False
 
 def process_tiff(volume_info, page_group, tiff_info):
-    """Process a single TIFF: download, OCR, and search for keywords."""
+    """Process a single TIFF: download, convert to PNG."""
     volume_name = volume_info["name"]
     volume_years = volume_info["years"]
     nn_folder = volume_info["nn_folder"]
@@ -401,20 +351,21 @@ def process_tiff(volume_info, page_group, tiff_info):
     
     # Define paths
     tiff_dir = TIFF_DIR / volume_slug / subfolder
-    ocr_dir = OCR_DIR / volume_slug / subfolder
+    png_dir = PNG_DIR / volume_slug / subfolder
     
     tiff_path = tiff_dir / filename
-    ocr_path = ocr_dir / f"{os.path.splitext(filename)[0]}.txt"
+    png_filename = os.path.splitext(filename)[0] + ".png"
+    png_path = png_dir / png_filename
     
-    logger.info(f"Processing TIFF: {volume_name} ({volume_years}), page {page_num}")
+    logger.info(f"Processing file: {volume_name} ({volume_years}), page {page_num}")
     log_debug(f"===== PROCESSING TIFF: {tiff_url} =====")
     
     # Make sure directories exist
     tiff_dir.mkdir(parents=True, exist_ok=True)
-    ocr_dir.mkdir(parents=True, exist_ok=True)
+    png_dir.mkdir(parents=True, exist_ok=True)
     
     # Download TIFF if needed
-    if tiff_path.exists():
+    if tiff_path.exists() and os.path.getsize(tiff_path) > 0:
         logger.info(f"TIFF already exists: {tiff_path}, skipping download")
     else:
         logger.info(f"Downloading TIFF from {tiff_url}")
@@ -425,59 +376,14 @@ def process_tiff(volume_info, page_group, tiff_info):
             logger.warning(f"Failed to download TIFF from {tiff_url}, skipping")
             return []
     
-    # Perform OCR if needed
-    if ocr_path.exists():
-        logger.info(f"OCR already exists: {ocr_path}, loading from file")
-        try:
-            with open(ocr_path, 'r', encoding='utf-8') as f:
-                ocr_text = f.read()
-                logger.debug(f"Loaded {len(ocr_text)} chars of OCR text from {ocr_path}")
-        except Exception as e:
-            logger.error(f"Failed to read existing OCR: {str(e)}")
-            log_debug(f"Error reading OCR file {ocr_path}:\n{traceback.format_exc()}")
-            return []
+    # Convert TIFF to PNG with rotation
+    if convert_tiff_to_png(tiff_path, png_path):
+        logger.info(f"Successfully processed PNG: {png_path}")
     else:
-        logger.info(f"Performing OCR on {tiff_path}")
-        ocr_text = perform_ocr(tiff_path)
-        
-        if ocr_text:
-            logger.info(f"Writing OCR text to {ocr_path}")
-            with open(ocr_path, 'w', encoding='utf-8') as f:
-                f.write(ocr_text)
-        else:
-            logger.warning(f"OCR produced no text for {tiff_path}")
-            return []
+        logger.warning(f"Failed to convert TIFF to PNG: {tiff_path}")
     
-    # Search for keywords
-    source_info = f"{volume_name} ({volume_years}), page {page_num}"
-    logger.info(f"Searching for keywords in {source_info}")
-    matches = search_keywords(ocr_text, KEYWORDS, source_info)
-    
-    # Prepare results
-    results = []
-    for match in matches:
-        result = {
-            'volume': volume_name,
-            'years': volume_years,
-            'nn_folder': nn_folder,
-            'subfolder': subfolder,
-            'page_num': page_num,
-            'page_group': page_group["group_name"],
-            'filename': filename,
-            'url': tiff_url,
-            'keyword': match['keyword'],
-            'snippet': match['snippet'],
-            'line_number': match.get('line_number', 0)
-        }
-        results.append(result)
-    
-    if results:
-        logger.info(f"Found {len(results)} keyword matches in {source_info}")
-    else:
-        logger.info(f"No keyword matches found in {source_info}")
-    
-    log_debug(f"===== COMPLETED TIFF: {tiff_url}, found {len(results)} matches =====\n")
-    return results
+    log_debug(f"===== COMPLETED TIFF: {tiff_url} =====\n")
+    return []  # No matches for now since OCR is temporarily disabled
 
 def process_page_group(volume_info, page_group):
     """Process all TIFFs in a page group."""
@@ -531,7 +437,6 @@ def main():
     logger.info("========================================================")
     logger.info("Starting Northern Neck grant processing")
     logger.info(f"Test mode: {'ENABLED' if TEST_MODE else 'DISABLED'}")
-    logger.info(f"Keywords: {KEYWORDS}")
     logger.info("========================================================")
     
     # Create necessary directories
@@ -554,7 +459,7 @@ def main():
         all_results.extend(volume_results)
         logger.info(f"Completed volume {volume_info['name']}, found {len(volume_results)} matches")
     
-    # Write results to CSV
+    # Write results to CSV (keeping this for future OCR implementation)
     if all_results:
         result_file = RESULTS_FILE
         logger.info(f"Writing {len(all_results)} results to {result_file}")
@@ -579,12 +484,10 @@ def main():
     logger.info("========================================================")
     logger.info(f"Processing complete in {int(hours)}h {int(minutes)}m {int(seconds)}s")
     logger.info(f"Processed {len(volumes)} volumes")
-    logger.info(f"Found {len(all_results)} keyword matches")
     logger.info("========================================================")
     
     log_debug(f"Script completed at {time.strftime('%Y-%m-%d %H:%M:%S')}")
     log_debug(f"Total runtime: {int(hours)}h {int(minutes)}m {int(seconds)}s")
-    log_debug(f"Total results: {len(all_results)}")
 
 if __name__ == "__main__":
     try:
