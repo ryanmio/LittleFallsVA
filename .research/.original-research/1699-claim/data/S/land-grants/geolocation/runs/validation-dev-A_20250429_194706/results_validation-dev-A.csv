@@ -1,0 +1,2 @@
+row_index,method_id,model,pipeline,prompt_id,prompt_version,prediction,input_tokens,output_tokens,reasoning_tokens,total_tokens,latency_s,error_km,is_mock
+1,T-5,chatgpt-4o-latest,tool_chain,tool_chain_v0,v1,"ERROR: Error code: 400 - {'error': {'message': ""Missing required parameter: 'tools[0].name'."", 'type': 'invalid_request_error', 'param': 'tools[0].name', 'code': 'missing_required_parameter'}}",0,0,0,0,0.0,,0

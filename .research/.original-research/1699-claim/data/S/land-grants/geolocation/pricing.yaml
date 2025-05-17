@@ -1,0 +1,40 @@
+# Token pricing per model (USD per 1M tokens)
+# Fields: input_per_m, output_per_m
+---
+# OpenAI GPT models
+- model: gpt-4.1
+  input_per_m: 2.0
+  output_per_m: 8.0
+- model: chatgpt-4o
+  input_per_m: 5.0
+  output_per_m: 15.0
+- model: gpt-3.5-turbo
+  input_per_m: 0.5
+  output_per_m: 1.5
+
+# OpenAI Computer Use preview model (tool-capable)
+- model: computer-use-preview
+  input_per_m: 3.0
+  output_per_m: 12.0
+
+# OpenAI Reasoning series
+- model: o4-mini
+  input_per_m: 1.10
+  output_per_m: 4.40
+- model: o3
+  input_per_m: 10.0
+  output_per_m: 40.0
+- model: o3-mini
+  input_per_m: 1.10
+  output_per_m: 4.40
+
+# New cost-optimized models
+- model: gpt-4o-mini
+  input_per_m: 0.15
+  output_per_m: 0.6
+- model: gpt-4.1-mini
+  input_per_m: 0.4
+  output_per_m: 1.6
+- model: gpt-4.1-nano
+  input_per_m: 0.1
+  output_per_m: 0.4 

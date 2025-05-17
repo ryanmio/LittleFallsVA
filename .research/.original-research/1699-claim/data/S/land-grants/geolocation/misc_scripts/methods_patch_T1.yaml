@@ -1,0 +1,10 @@
+# Patch methods file – rerun only T-1 for retry rows
+---
+- id: T-1
+  model: o4-mini-2025-04-16
+  pipeline: tool_chain
+  description: Tool-chain with Google, o4-mini (patch run)
+  enabled: true
+  params:
+    reasoning_effort: low
+    service_tier: flex 

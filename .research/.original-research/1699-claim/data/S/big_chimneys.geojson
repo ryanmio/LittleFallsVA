@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "big_chimneys",
+        "name": "Big Chimneys",
+        "source": "GeoHack coordinates",
+        "source_url": "https://geohack.toolforge.org/geohack.php?pagename=Big_Chimneys&params=38_52_56.56_N_77_10_29.34_W_",
+        "description": "Traditional location of Big Chimneys, now Big Chimneys Park",
+        "buffer_radius_m": 3218.7,
+        "buffer_radius_mi": 2.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.174817, 38.882378]
+      }
+    }
+  ]
+} 

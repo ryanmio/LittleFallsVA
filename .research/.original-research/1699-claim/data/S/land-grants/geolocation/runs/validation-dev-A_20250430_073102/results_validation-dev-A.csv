@@ -1,0 +1,6 @@
+row_index,method_id,model,pipeline,prompt_id,prompt_version,prediction,input_tokens,output_tokens,reasoning_tokens,total_tokens,latency_s,error_km,is_mock
+1,M-3,o3-mini-2025-01-31,one_shot,one_shot_dms_v1,v1,"37°08'30.00000""N 076°18'00.00000""W",175,2196,2176,2371,38.04713988304138,38.129317617160645,0
+1,M-4,gpt-4.1-2025-04-14,one_shot,one_shot_dms_v1,v1,"37°09'13.0000""N 76°52'36.0000""W",176,20,0,196,0.6690139770507812,13.110180156723594,0
+1,M-5,chatgpt-4o-latest,one_shot,one_shot_dms_v1,v1,"37°08'10.00000""N 76°52'30.00000""W",176,20,0,196,0.6247379779815674,12.843370435231307,0
+1,M-6,gpt-3.5-turbo,one_shot,one_shot_dms_v1,v1,"The land grant to William Rookins in Surry County, Virginia can be geolocated to approximately 37.0475°N 76.8442°W.",177,38,0,215,1.2266089916229248,,0
+1,T-4,gpt-4.1-2025-04-14,tool_chain,tool_chain_v0,v1,"37.13898898030461, -76.71633503733106",952,48,0,1000,1.5050599575042725,1.2322524325961943,0

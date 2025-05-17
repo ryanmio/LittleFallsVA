@@ -1,0 +1,9 @@
+row_index,method_id,model,pipeline,prompt_id,prompt_version,prediction,input_tokens,output_tokens,reasoning_tokens,total_tokens,latency_s,error_km,is_mock
+1,M-1,o4-mini-2025-04-16,one_shot,one_shot_dms_v1,v1,"37°12'11.60000""N 076°46'34.40000""W",176,1753,1728,1929,13.367405891418457,8.363335248497316,0
+1,M-3,o3-mini-2025-01-31,one_shot,one_shot_dms_v1,v1,"37°11'53.00000""N 076°41'01.00000""W",176,4372,4352,4548,35.66344594955444,7.886307160438709,0
+1,M-4,gpt-4.1-2025-04-14,one_shot,one_shot_dms_v1,v1,"37°08'01.0000""N 76°52'36.0000""W",177,20,0,197,1.1634528636932373,12.997801100869669,0
+1,M-5,chatgpt-4o-latest,one_shot,one_shot_dms_v1,v1,"37°08'12.0000""N 76°50'24.0000""W",177,20,0,197,0.5875082015991211,9.740279526652087,0
+1,M-6,gpt-3.5-turbo,one_shot,one_shot_dms_v1,v1,"37°04'12.0""N 76°44'24.0""W",178,18,0,196,0.6353108882904053,7.566353122402442,0
+1,T-3,o3-mini-2025-01-31,tool_chain,tool_chain_v0,v1,"ResponseReasoningItem(id='rs_68121f4bb12c81919c33e6924aaeae2903b018b9b1fb0778', summary=[], type='reasoning', status=None)",425,158,0,583,3.130715847015381,,0
+1,T-4,gpt-4.1-2025-04-14,tool_chain,tool_chain_v0,v1,"37.13898898030461, -76.71633503733106",952,48,0,1000,1.8864760398864746,1.2322524325961943,0
+1,T-5,computer-use-preview-2025-03-11,tool_chain,tool_chain_v0,v1,"ERROR: Error code: 400 - {'error': {'message': ""Computer model computer-use-preview-2025-03-11 should be used with 'truncation=auto', found 'truncation=disabled'."", 'type': 'invalid_request_error', 'param': 'truncation', 'code': None}}",0,0,0,0,0.0,,0

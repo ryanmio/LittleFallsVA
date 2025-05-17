@@ -1,0 +1,5 @@
+This directory will contain the following figures:
+1. posterior_density.pdf - Kernel density plot of posterior P(E)
+2. sobol_indices.pdf - Tornado plot of Sobol indices
+
+These would normally be generated from the Python notebook mentioned in the paper. 

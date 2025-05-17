@@ -1,0 +1,3 @@
+row_index,method_id,model,pipeline,prompt_id,prompt_version,prediction,input_tokens,output_tokens,reasoning_tokens,total_tokens,latency_s,error_km,is_mock
+1,M-4,gpt-4.1-2025-04-14,one_shot,one_shot_dms_v1,v1,ERROR: name 'extract_output_text' is not defined,0,0,0,0,0.8963472843170166,,0
+1,T-4,gpt-4.1-2025-04-14,tool_chain,tool_chain_v0,v1,ERROR: name 'extract_output_text' is not defined,0,0,0,0,0.0,,0

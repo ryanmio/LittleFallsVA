@@ -1,0 +1,4 @@
+classification_id,subject_id,click_index,user_name,frame,zoom,x_px,y_px,lat,lon,raw_entry,internal_id
+636448381,109176823,0,ryanmio,0,9,137.14846801757812,240.17861938476562,36.86816434317261,-76.98259836212945,"THOMAS HOUSE, 247 acs. (N. L.), Up. Par. of Nansemond Co; on the Bear branch; 24 Jan. 1717, p. 356. 25 Shill,",test_entry_21
+636448503,109176811,0,ryanmio,3,16,339.0958557128906,330.4458923339844,36.64091224190335,-77.34838395637364,"HENRY POWERS, of Jas. City Co; 250 acs. (N. L.), Is. of Wight Co; on W. side of the Flatt Sw; 18 Feb. 1722, p. 17-4. 25 Shill.",test_entry_09
+636448888,109176846,0,ryanmio,2,14,228.1453399658203,273.0706787109375,37.960309800499665,-77.35858178464801,"COL. JAMES TAYLOR, GENT., of K. & Q. Co., 450 acs. (N. L.), King Wm. Co., in St, Margaret's Par; on N. side of Polecat Run; 8 July 1724, p. 344. 45 Shill.",test_entry_44

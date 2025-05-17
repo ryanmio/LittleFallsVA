@@ -1,0 +1,22 @@
+---
+- id: C-1
+  model: gpt-4.1-mini
+  pipeline: one_shot
+  description: One-shot DMS, cost-optimized GPT-4.1 mini
+  enabled: true
+  params:
+    temperature: 0.2
+- id: C-2
+  model: gpt-4.1-nano
+  pipeline: one_shot
+  description: One-shot DMS, cost-optimized GPT-4.1 nano
+  enabled: true
+  params:
+    temperature: 0.2
+- id: C-3
+  model: gpt-4o-mini
+  pipeline: one_shot
+  description: One-shot DMS, cost-optimized GPT-4o mini
+  enabled: true
+  params:
+    temperature: 0.2 

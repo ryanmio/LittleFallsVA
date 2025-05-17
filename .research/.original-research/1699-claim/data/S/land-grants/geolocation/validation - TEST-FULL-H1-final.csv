@@ -1,0 +1,757 @@
+results_row_index,subject_id,volume,book,raw_entry,set,has_ground_truth,latitude/longitude,h1_latitude,h1_longitude,h1_accuracy
+1,test_entry_01,II,12,"LEWIS GREEN, of Pr. Geo, Co; 460
+acs. (N. L.), Surry Co; on N. side of
+Nottoway River; beg. ar mouth of Stony
+Cr; to the South Wester Sw; adj. John
+Guillum; & Major Robert Bolling; 22
+Feb. 1724, p. 170. 40 Shill.",test,1,"36.934201,-77.389837",37.1118778,-76.895924,High (County + Landmarks)
+,test_entry_02,II,13,"JOHN SMALL, 203 acs. (N. L.).
+Up. Pat. of Nansemond Co; in the
+Maple Pocoson; adj. Thomas Speight;
+& Daniel Pugh's line; on the Timber
+Pocoson; 31 Oct. 1726, p. 45. 20 Shill..",test,0,,37.1232245,-78.4927721,High (County + Landmarks)
+2,test_entry_03,II,10,"JOHN JONES, 75 acs. (N. L.), New
+Kent Co., in St. Paul's Par; beg. at
+Capt. Dangerfield's, near sd. Jones,
+plantation; down S. br. of Crump's Cr;
+to mouth of Gentry's Br; on Gentry's
+line; 11 July 1719, p. 440. Imp. of 2
+pers: John Ducker & George Brasfield.",test,1,"37.693581,-77.335728",37.4974701,-76.9990453,Medium (County centroid)
+3,test_entry_04,II,9,"WILLIAM WILLIAMS, 400 acs., on
+8. side of the main Black Water Swamp;
+by run of Holloway Sw; 24 Apr. 1703,
+p. 519. Trans. of 8 pers: Note: 8
+tights paid for to Wm, Byrd, Esqr.,
+Auditor.",test,1,"36.72522724217977, -77.00345509146082",37.1232245,-78.4927721,Low (State-level)
+,test_entry_05,II,9,"JAMES TERRY, 418 acs., in Pamunkey Neck; K. & Q. Co., in St. John's
+Par; adj. Thomas Carr; & Macon's line:
+25 Apr. 1701, p. 356. Imp. of 9 pers:
+Richd. Drake; John Woodris, Anthony
+Bouswell, Luke Wynn, Robert Buttris,
+Sarah Couch, John Hearth, Edward
+Powell, Thomas Coakes.",test,0,,37.1232245,-78.4927721,Low (State-level)
+4,test_entry_06,II,11,"EDWARD RIPPING, RICHARD
+HICKMAN & RALPH GOUGH, of
+Williamsburgh; 10,000 acs. (N. L.),
+Spotsy]l. Co; on S. side the Rappidan
+(Riv.); adj. patent of sd. Ripping; &
+cor. of the Octana tract; 23 July 1722,
+p. 151. 50 Lbs.",test,1,"38.19444,-78.32064",37.1232245,-78.4927721,Low (State-level)
+5,test_entry_07,II,12,"SAMUEL GENTRY, 196 acs. (N.
+L.), Hanover Co; on both sides of
+Beech Cr; adj. Mr. ‚Äö√Ñ√≤Alves‚Äö√Ñ√¥ cor; William
+Harris‚Äö√Ñ√¥ line; & line of Drummond &
+Scott; 22 Feb. 1724, p. 145. 20 Shill.",test,1,"37.777108,-77.588177",37.744783,-77.4464165,High (County + Landmarks)
+,test_entry_08,II,9,"STEPHEN: SAMPSON, 211 acs.,
+Chas. City Cb., in Westopher- Par; N.
+side of James River, 23 Oct. 1703, p.
+578. Adj. John Rayster (or Royster) ;
+& Jonas Liscomb. Granted John Blackburne, 28 Apr. 1691; now granted by
+order, &c. Trans. of 5 pers.* Note:
+Paid Wm. Byrd, Esqr., Auditor for 5
+rights.",test,0,,37.4110583,-79.0669941,Low (State-level)
+6,test_entry_09,II,11,"HENRY POWERS, of Jas. City Co;
+250 acs. (N. L.), Is. of Wight Co; on
+W. side of the Flatt Sw; 18 Feb. 1722,
+p. 17-4. 25 Shill.",test,1,"36.642194,-77.350167",37.1232245,-78.4927721,High (County + Landmarks)
+,test_entry_10,II,9,"WILLIAM LACEY, 474 acs.; New
+Kent Co., in Blisland Par., 2 Nov. 1708,
+p. 704. Beg. at head of Mattadequinee
+tun, a br. of Tyascun ‚Äö√Ñ√≤Sw; by lines -pf
+land now or late of Hitchman, or Hopkins. Imp. of 10 pers: Robt. Covert,
+Steph. Hobbs, Robt. Stubbs, John
+Thomas, Tho. Dawson, Femerton Sparks,
+Richd. Windsor, John Tyra, -John
+Richardson, Tho, Wharton.",test,0,,37.4974701,-76.9990453,Medium (County centroid)
+7,test_entry_11,II,13,"THOMAS CHEW, GENT., !600 acs,
+(N. L.), Spossyl. Co; on botin sides the
+Biw Ren, oa W. side of the Litth
+Mountains; on fine deviding Hanover
+& Spotsylvania Countys; adj, Major
+William Todd, in the County Line; 16
+dune 1727, p. 155. 8 Lbs., Money.",test,1,"38.165759,-78.274476",37.1232245,-78.4927721,Low (State-level)
+,test_entry_12,II,12,"JOHN BOROUGH, 200 acs. (N.
+L.), Pr. Geo. Co; on S. side the Orterdam Br. or Swamp; on Wood's line; 9
+July 1724, p. 73. 20 Shill.",test,0,,37.1232245,-78.4927721,Low (State-level)
+8,test_entry_13,II,13,"JOSHUA GLASS, 200 acs. (N. L.),
+Pr. Geo. Co; on up. side of Mawhipponnock Cr; adj, John Ellington; &
+William Stoa; 28 Sept. 1730, p, 531.
+20 Shill.",test,1,"37.234822512432125, -77.6150948290792",37.1232245,-78.4927721,Low (State-level)
+,test_entry_14,II,13,"WILLIAM LETBETTER, 340 acs.
+(N. L.), Brunswick Co; S. side of
+Maherin River; on N. side of Rattle
+Snake Swamp; 31 Oct. 1726, p. 64.",test,0,,36.7788996,-77.8670883,High (County + Landmarks)
+,test_entry_15,II,10,"TECHARD DEARDEN, 100 acs. (N.
+L.}, in Pr, Geo. Co; on E. side of
+Low's Br; 15 July 1717, p. 335. 10
+Shill.",test,0,,37.1232245,-78.4927721,Low (State-level)
+9,test_entry_16,II,13,"JOHN DOWNER. of King Wm.
+Co., 400 acs. (N. L.), Spotsyl. Co., in
+St. George's Par; on N. side the Northanna (Riv.); beg. at Capt. Chris.
+Smith's land; to James Taylor's line; on
+Thomas Gambrill's line; 16 June 1727.
+‚Äö√Ñ√≤p. 93, 40 Shill.",test,1,"38.021712,-77.709683",37.1232245,-78.4927721,Low (State-level)
+10,test_entry_17,II,12,"ROBERT BABER, 400 acs. (N. L.),
+King Wm. Co., in St. Margaret's Par;
+bet. the N. & Middle fork of Reedy
+Sw; adj. William Cockerham; & land
+of James Cary; 13 July 1726, p. 536.
+40 Shill.",test,1,"37.197166,-79.285162",37.1232245,-78.4927721,Low (State-level)
+,test_entry_18,II,11,"HENRY SPRATT, 4102 acs, (O. &
+N. L.), Pr. Anne Co., in Lynhaven Par;
+in Corotuck Bay; by the run of the
+head of Nannes Cr; adj. Dawley's cor.
+& bay; down S. side of Little Cr; to
+mouth of the Gr. Narrows; 21 Feb.
+1720, p. 59. Found within bounds of
+1800 acs. granted Henry Spratr, 23 Oct.
+1673. 11 Lbs., 10 Shill.",test,0,,37.1232245,-78.4927721,High (County + Landmarks)
+11,test_entry_19,II,12,"MARK MORE, 400 acs. (N. L.),
+Henrico Co; N. side of Appamattock
+Riv; beg, at John Patterson, on the
+Ould Hunting Path; on br. of Cattail
+Br; to Mr. George Archer's cor; 9 July
+1724, p. 11. 40 Shill.",test,1,"37.296344,-77.663257",37.5131191,-77.3465081,Medium (County centroid)
+,test_entry_20,II,9,"JOHN PIGG, 1000 aes., K. & Q.
+Co; in the freshes of Mattapony River;
+24 Apr. 1703, p. 531. Beg. in path
+from William Rickett's house to the
+Indian towne; to Capt. William Smith,
+Marriner; from his house to his land.
+ing; to land where John Barrow liveth,
+fr-morly lend of John Pigg: to N. side
+of the Ridge Path, dividing this & land
+of Mr. James Taylor; alone Watking‚Äö√Ñ√¥
+line; to Maj. Payton, &c. Granted
+Joseph Haile, 30 Oct. 1686, deserted,
+& now gtanted by order, &c. Trans. of
+20 pers: Valentine Hughs, Geo. Moudby, Wm. Green, Eliza. Sexton, Tho.
+Allen, John Newton,
+John Seamor, Robert Satchell, Theop.
+Arvy, Robert Logwood, Sam!. Morgan,
+Peter Watts, Edward Jackson, Rowland
+Simpson, Jacob Butts, Ambrose Conly,
+Richd. Roberts, Robert Coultis, Mary
+Allen.",test,0,,37.1232245,-78.4927721,Low (State-level)
+,test_entry_21,II,10,"THOMAS HOUSE, 247 acs. (N. L.),
+Up. Par. of Nansemond Co; on the
+Bear branch; 24 Jan. 1717, p. 356. 25
+Shill,",test,0,,37.9249849,-79.0801666,High (County + Landmarks)
+,test_entry_22,II,14,"JAMES NEVIL, 700 acs. (N. L.),
+Goochland Co; ¬¨√ü. side of Fluvanna
+River; 17 Jan. 1732, p, 537. 3 Lbs.,
+10 Shill.",test,0,,37.7204342,-77.8837984,High (County + Landmarks)
+,test_entry_23,II,11,"THOMAS COLEMAN, of K. & Q.
+Co; 540 A., 98 Per. (Esch. L.), Essex
+Co., in South Farnham Par; on N. side
+of the Best land Sw; above mouth of
+the Reedy Br; along Henry Baker's line;
+to cor. of Halliard's; 5 Sept. 1723, p.
+234, Escheated from Stephen Benbridge,
+glias Benbrick, dec‚Äö√Ñ√¥d., by inquisition
+under John Lewis, Esqr., Esch‚Äö√Ñ√¥r., for
+420 acs; upon survey returned by Robert
+Brooke, Junr., found to contain 540
+A. & 98 Per. 2 Lbs. Tobacco, &c.",test,0,,37.9140592,-76.9326385,High (County + Landmarks)
+,test_entry_24,II,10,"THOMAS WHOOD, 199% acs. (N.
+L.), Pr. Geo. Co; on both sides of
+indian Br. of Naumsend's Cr., below
+the river path; 15 July 1717, p. 336.
+{mp. of 4 pers: John Moore, John
+Oughis, Richard Holland, Daniel Mackcall,",test,0,,37.1232245,-78.4927721,Low (State-level)
+,test_entry_25,II,14,"WILLIAM REYNOLDS. 297 acs.
+(N. L.), Brunswick Co., on the Long
+Branch; adj. Ralph Jackson; 28 Sept.
+1728, p, 34.",test,0,,36.5914798,-77.8121345,High (County + Landmarks)
+12,test_entry_26,II,13,"ROBERT POLLARD, JUNR., Gent.,
+of K. & Q. Co; 800 acs. (N. L.),
+Spotsyl. Co., in St, George's Par; on
+W. side of the little Mountains, on S.
+side the Piney Mts., & on S. side the
+Rappidan (Riv.): adj, Custice's corner;
+& Mountague's line; 16 June 1727, p.
+151.",test,1,"38.179999,-78.264658",37.1232245,-78.4927721,Low (State-level)
+,test_entry_27,II,12,"PAUL BUNCH, 400 acs. (N. L.).
+Hanover Co; on both sides of Black
+Haw (Sw.), 9 July 1724, p. 28. 49
+Shill.
+",test,0,,37.744783,-77.4464165,Medium (County centroid)
+,test_entry_28,II,11,"JOHN HARROWELL, 183 acs. (N.
+L.), Pr. Geo. Co; on N. side of Nottoway Riv., adj. his father Samuel Harrowell; 22 June 1722, p. 113. 20 Shill.",test,0,,37.1232245,-78.4927721,Low (State-level)
+13,test_entry_29,II,12,"iAMBROSE JOSHUA SMITH, 479
+acs. (N. L.), Hanover Co; on both
+sides of Gr. Rockey Cr; adj. Cel.
+uy ies line; 9 July 1724, p. 29. 40.
+Shill.",test,1,"37.998458,-77.745720",37.1232245,-78.4927721,Low (State-level)
+,test_entry_30,II,9,"ELIZABETH WARE, 240 acs., in
+Pamunkey Neck; on N. side of Queens
+Swamp; 1 Apr. 1702, p. 430. Being
+part of land laid out according to the
+articles of peace for the Pamunkey
+Indians, &c., (as above.) Granted by
+order, &c. Trans. of 5 pers.* Note:
+5 rights paid for to Wm. Byrd, Esqr.,
+Auditor.",test,0,,37.1232245,-78.4927721,Low (State-level)
+14,test_entry_31,II,11,"ROBERT BLAWS, JOSEPH WOODSON, JOHN WOODSON & JOHN
+WOCDSON, JUNR., 400 acs. (N. L.),
+Henrico Co; S. side of James Riv., &
+on W. side of Fine Cr; on Pleasants‚Äö√Ñ√¥
+line; 18 Feb. 1722, p. 158. 40 Shill.",test,1,"37.622231, -77.834838",37.5131191,-77.3465081,High (County + Landmarks)
+,test_entry_32,II,9,"MRS. MARY LIGON, former wife
+of William Ligon, dec‚Äö√Ñ√¥d; 383. acs.,
+Henrico Co; on N. side of the gr, or
+main br. of Procter's (Cr.); 26 Oct.
+1699, p. 243. Trans. of 8 pers: Wm.
+Ligon, Math. Oakeley, John Clark,
+Margaret Roach, Wm. Exaby, Robert
+Whitehead, Richd. Feild, John Gilbert.",test,0,,37.5131191,-77.3465081,Medium (County centroid)
+,test_entry_33,II,12,"JOHN PRIDE, 247 acs. (N. L.),
+Henrico Co; N. side of James Riv; on
+N, side of Deep Cr; & on N. side of
+Horsepen Br. of sd. Cr; 17 Aug. 1725,
+p. 321. 25 Shill.",test,0,,37.5131191,-77.3465081,High (County + Landmarks)
+,test_entry_34,II,13,"EDWARD BOOKER, GENT., of
+Henrico Co; 2050 acs. (N. L.), Pr.
+Geo. Co; on both sides of Knibs Cr;
+‚Äö√Ñ√≤beg. on lower side, above path to Capt.
+Anderson's Quarter; 28 Sept. 1728, p.
+290. 10 Lbs., 5 Shill,",test,0,,37.5131191,-77.3465081,High (County + Landmarks)
+15,test_entry_35,II,12,"FRANCIS FLOURNOY, GENT., 400
+acs. (N. L.), Henrico Co; N. side of
+Swift Cr; beg. on W. side of Tribue's
+branch; to E. side of the main br. of
+Tomahake Br; 9 July 1724, p. 17. 40
+hill.",test,1,"37.464936,-77.688363",37.5131191,-77.3465081,High (County + Landmarks)
+16,test_entry_36,II,9,"HENRY BREAZEALE, JUNR., 300
+acs., Henrico Co; on N. side of James
+River; 28 Oct. 1702, p. 501. Beg. on
+N. side of Giley's Cr., cor. of Henry
+Breazeale, Senr; on line of Giley; to
+Tho. East, Senr. Trans. of 6 pers:
+Theodorick Bland, John Leinch, James
+Robbison, Elianor Reener; & 2 sights
+more paid for to Wm. Byrd, Esqr.,
+Auditor,",test,1,"37.555968,-77.387435",37.5131191,-77.3465081,High (County + Landmarks)
+,test_entry_37,II,11,"JOSEPH MEREDITH, 300 acs.
+(Lapsed L.), Isle of Wight Co; 13
+Nov. 1721, p. 68. Granted Robert
+Johnson, 30 Oct, 1669, in Up. Par. of
+Nansemond Co., upon condition of seating, &c. 30 Shill.",test,0,,36.8953677,-76.7248143,Medium (County centroid)
+,test_entry_38,II,12,"JOHN PRIDE, 328 acs, (N. L.),
+Henrico Co; on N. side of Appattock
+ari on br. of Butterwood Cr., parting
+sd. Jobn, & land of Anne &. Mary Pride;
+17 Aug. 1725, p, 315. /25 Shill., &
+Imp. of 2 pers: John Red & Avis Red,",test,0.5,"37.081068, -77.755018",37.5131191,-77.3465081,High (County + Landmarks)
+17,test_entry_39,II,11,"SAMUEL NORMENT, 325 acs. (N.
+L.), King Wm. Co; above mouth of
+Reedy Sw., on Matapony River; about
+34 of a mi. above Powel's ford; 13 Nov.
+1721, p. 74. 35 Shill.",test,1,"37.908246, -77.299078",37.1232245,-78.4927721,Low (State-level)
+,test_entry_40,II,14,"JOHN SMALL, JUNR., 52 acs.9(N.
+L.), in Up.. Par, of Nansemond Co; at
+NE side of a place called The Bear
+Garden. in the Desart; by a Cart Path:
+25 Aug. 1731, p. 294. 5 Shill.",test,0,,36.7281341,-76.5834683,Medium (County centroid)
+,test_entry_41,II,13,"WILLIAM EDMUNDS, 280 acs. (N.
+L.), Surry Co; N. side of Nottoway
+River; on S. side of the Cabbin Branch,
+adj. Richard Parker, Junr; Benjamin
+Clements; & land of the Nottoway
+Indians; 13 Oct. 1727, p. 256. 30 Shill.",test,0.5,"36.993156, -77.228846",37.1118778,-76.895924,High (County + Landmarks)
+,test_entry_42,II,14,"RICHARD HERBERT, of Henrico
+Co; 400 acs. (N. L.). Pe. Geo. Co;
+S. side of Moccosoneck Cr; adj, land
+he purchased of David Williams; on
+line of John Anderson; 28 Sept, 1728,
+p. 18. 40 Shill.",test,0,,37.5131191,-77.3465081,High (County + Landmarks)
+18,test_entry_43,II,10,"JOHN IVY, of Pr. Geo. Co; 100
+acs. (N. L.), Surry Co; S. side the main
+Blackwater Sw; on W. side of the
+Pidgeon Sw; down run of the Meadowy
+Br; 23 Mar. 1715, p. 279. 10 Shill.",test,1,"37.033981,-77.169488",37.1118778,-76.895924,High (County + Landmarks)
+,test_entry_44,II,11,"COL. JAMES TAYLOR, GENT., of
+K. & Q. Co., 450 acs. (N. L.), King
+Wm. Co., in St, Margaret's Par; on
+N. side of Polecat Run; 8 July 1724,
+p. 344. 45 Shill.",test,0.5,"37.961465, -77.356191",37.1232245,-78.4927721,Low (State-level)
+19,test_entry_45,II,10,"THOMAS CARTER, 120 acs. (N.
+L.), Is. of Wight Co; on S. side of
+Nottoway Riv; on W. side of Blow's
+Br; 23 Mar. 1715, p. 269. 15 Shill.",test,1,"36.668008,-77.071402",36.8953677,-76.7248143,High (County + Landmarks)
+,test_entry_46,II,11,"JOSEPH WATSON & JOHN WATSON, 400 acs. (N. L.), Henrico Co;
+on N. side of James River; on Thomas
+Farrar's line; 5 Sept. 1723, p. 243. 40
+Shill.",test,0,,37.3741617,-77.3689559,High (County + Landmarks)
+,test_entry_47,II,11,"MATHEW CREED, 200 acs. (N.
+L.), King Wm. Co., in St. John's Par;
+on both sides the Beverdam Sw., on N.
+side the North Anna (Riv.); on Mr.
+James Terry; & Mr. Wm. Flemon's
+land; 20 Feb, 1723, p. 331. 20 Shill,",test,0.5,"37.999239, -77.633152",37.1232245,-78.4927721,Low (State-level)
+20,test_entry_48,II,13,"ROBERT HESTER, 1300 acs. (N.
+L.), Hanover Co; on both sides of
+Christopher's Ruf; 27 Sept. 1729, p.
+419. 6 Lbs., 10 Shill,",test,1,"38.084259,-77.901464",37.744783,-77.4464165,Medium (County centroid)
+,test_entry_49,II,13,"LAUGHLAN FLYN, 300 acs. (N.
+L.), Pr. Geo. Co; on both sides of
+Leadbiter's Cr; by the Poplar Branch;
+13 Oct. 1727, p. 278. 20 Shill., & Imp.
+of 2 pers: Robert Stoker & Elizabeth
+Stoker.",test,0,,36.8834992,-79.339491,Low (State-level)
+21,test_entry_50,II,13,"WILLIAM MACKLIN, of Surry Co;
+836 acs. (N. L.), Brunswick Co; on
+both sides of Iseinglass Cr., of Maherin
+River; adj, Thomas Sissom's line; 31
+Oct. 1726, p. 47.",test,1,"36.78328766999767, -77.98785016384313",37.1118778,-76.895924,High (County + Landmarks)
+22,test_entry_51,II,14,"THOMAS CARR, GENT., of Caroline Co, 400 ats, (Lapsed L.); in St.
+Margaret's Par., formerly King Wm.
+Co., now Caroline Co; on both sides
+the Main Ridge Road; on Houchins‚Äö√Ñ√¥
+line; to Robert Chandler; 1 July 1732,
+p. 497. Granted Joseph Bickley, Junr.,
+of King Wm. Co., 16 June 1727, on
+condition of seating, &c. 40 Shill.",test,1,"38.093470,-78.448290",37.1232245,-78.4927721,High (County + Landmarks)
+,test_entry_52,II,9,"WILLIAM STANARD, 980 acs.,
+King Wm. Co; in Pamunkey Neck; on
+brs. of Up. Herring Cr; beg. in fork
+of Perry's Sw; 20 Oct. 1704, p. 644.
+Granted Chicheley Corbin Thacker, 1
+Apr. 1701, deserted, & now granted hy
+order, &c. Trans. of 20 pers: Wm.
+Keens, Wm, Langsdon, Antho. Hogherd,
+Benj. Catman, Mary Newell, Mary
+Crouch, Hanna Haine (or Hanle), Eliz.
+Hobson, Dennis Mahonny, Margt.
+‚Äö√á¬®oughland, Wm, Richard, Wm, Machall,
+Joseph Taylor, John Parsons, Danll.
+Clark, Rebecca Clark, Fra. Williard,
+Wm. Hellagon, Eliz. Wilcox, Robt.
+Reves.",test,0,,,,
+23,test_entry_53,II,9,"JAMES DOUBTEY (Doubtee). 198
+acs., Low. Par. of Is. of Wight Co.,
+near King Sule; 26 Apr. 1698, p. 150.
+Adj. James Collings (Collins). Trans.
+of 4 pers: --‚Äö√Ñ√Æ Skilmoore, Jno. Watts,
+Nicho, Niel, John Bassett.",test,1,"36.774502,-76.708359",36.8953677,-76.7248143,Medium (County centroid)
+,test_entry_54,II,11,"RICHARD RAYNES, 275 acs. (N.
+L.), Pr. Geo. Co; on N. side of Butterwood Sw; 22 June 1722, p. 129. 30
+Shill.",test,0,,,,
+24,test_entry_55,II,11,"RALPH BOWKER, of K. & Q. Co.,
+400 acs. (N. L.), King Wm. Co., in
+St. John‚Äö√Ñ√¥s Par; on S. side of Elston‚Äö√Ñ√¥s
+run, & on S, side of Mattapony Riv; 20
+Feb. 1719, p. 6. Imp. of 8 pers:
+George Inson, William Wilks, Joane
+Harrell, Mary Jackson, James Joyeux,
+Thomas Wasley, Thomas Martin, John
+Kauffman.",dev,1,"38.215286,-77.666746",37.1232245,-78.4927721,Low (State-level)
+,test_entry_56,II,10,"WILLIAM SAXSON, 198 acs. (N.
+L.), New Kent Co., in St. Paul‚Äö√Ñ√¥s Par;
+12 July 1718, p. 387. 15 Shill., & Imp.
+of: Sarah Clapam.",dev,0,,,,
+,test_entry_57,II,10,"NICHOLAS VALENTINE, 240. acs.
+(Escheat L.), James City Co., in Wilmington Par; beg. at mouth of Morg-n‚Äö√Ñ√¥s
+Sw; up a br, dividing this & land of
+Mr. Thos. Cowles, decd: on Cuipt.
+Norwel/‚Äö√Ñ√¥s line, cor. of John Bush; on
+Jones‚Äö√Ñ√¥ Sw; 16 June 1714, p. 179. Escheated from John Vere, dec‚Äö√Ñ√¥d.. by inquisition under Philip Ludwell. Esqr.,
+Esch‚Äö√Ñ√¥r., for 200 acs: survey returned
+by Simon Jeffreys. for 240 acs; now
+granted, &c. 2 Lhs. Tobacco, &c.",test,0,,,,
+,test_entry_58,II,9,"COL. JAMES RANSONE, 40 acs.,
+Gloucester Co., in Kingstone Par; adj.
+Capt. Ambrose Dudley; & Daniel
+Gwin‚Äö√Ñ√¥s plantation; 26 Apr. 1704, p.
+601. Trans. of 1 pers.* Paid Mr.
+Auditor Byrd for one Right.",test,0,,,,
+25,test_entry_59,II,13,"JOHN SYME, GENT., 5629 acs. (O.
+& N. L.), Hanover Co; beg. on S. side
+the Southanna (Riv.); adj. John Shelton; crossing Owens Creek; Robert
+Clopton; McQuerry‚Äö√Ñ√¥s line; & Nicholas
+& Richard Johnson; 28 Sept. 1730, p.
+483. 4600 acs. part granted him, 9 July
+1724. 5 Lbs:, 5 Shill,",test,1,"37.76771,-77.84835",37.1232245,-78.4927721,High (County + Landmarks)
+,test_entry_60,II,9,"HENRY THACKER, Gent., 77 acs.,
+Middlesex Co., 24 Apr. 1703, p. 526.
+Beg. by run of a pr. bescich of Dragon
+Sw., cor. of Edwin Thacker‚Äö√Ñ√¥s land, conveyed to him by sd. Henry; to Indian
+Cabbin Br; along patent of John Willis,
+dec‚Äö√Ñ√¥'d; by the main road; to Robert
+Williamson, &c. Trans. of 2 pers:
+Catherine Dennis, Thomas Willis.",dev,0,,,,
+,test_entry_61,II,14,"THOMAS LAWRENCE, 387. acs,
+(N. L.), Up. Par. of Nansemond Co;
+near Wickham; adj. Mrs. Baker; Henry
+Baker; William Shivers; & his own
+land; crossing 2 brs., the head of broad
+Wickham; 28 Sept. 1730, p. 132. 40
+Shill.",test,0,,,,
+,test_entry_62,II,12,"MATTHIAS  BLANKENBUCHER,
+‚Äö√Ñ√∫S56 acs. (N. L.). Spotsyl, Co., in St.
+Georges Par: in the fork of Rappa.
+River, & on both sides the Robinson
+River; 24 June 1726, p. 481.",test,0,,,,
+,test_entry_63,II,9,"JOHN NICHOLLS, 249 acs., Up.
+Par. of Nansemond Co; at a place called
+the ‚Äö√Ñ√≤Cyprus Swamp; adj. Katherine
+Langstone; 6 June 1699, p. 190. Trans.
+of 5 pers: John Nicholls & Sarah
+Nicholls, his wife; John Nicholls, Ann
+Nichoils, Mary Nicholls.",test,0,,,,
+,test_entry_64,II,9,"STEPHEN SMITH, 500 acs., Is. of
+Wight Co., 27 Oct. 1698, p, 180. Escheated from Anthony Jones, by inquisition under Wm. Randolph, Esch‚Äö√Ñ√¥r., &c.",test,0,,,,
+,test_entry_65,II,9,"HARRY BEVERLEY, 609 acs., King
+Wm. Co; bet. Perry‚Äö√Ñ√¥s Sw. & Machacomico Sw; on N. side of same, about
+10 pole below the path from Yarbrough‚Äö√Ñ√¥s Ferry to Davenport‚Äö√Ñ√¥s; adj.
+Perrin'‚Äö√Ñ√¥s corner; 23: Oct. 1703, p. 559.
+Part of land granted Col. Edmond
+Jenings, 24 Apr. 1703, who assigned to
+sd. Beverley. Trans. of 13 pers: John
+Hatton, Wm. Ellie, Elenor Gwyn,
+Patrick Lawless, Owen Hughs, Catherine Sullivan, John Smith.",test,0,,,,
+26,test_entry_66,II,10,"CHARLES TALIAFERRO, 535%
+acs. (Lapsed L.), Essex Co; on S. side
+& in the freshes of Rappa. River above
+the falls; beg. at John Bowzee; to
+Ewetree Point by Motts‚Äö√Ñ√¥ falling br; 28
+Apr. 1718, p. 374. Granted Dorothy
+Smith & Charles Taliaferro for 1071
+acs, 5 Nov. 1712, upon condition of
+seating & planting, which John Roy &
+sd. Dorothy, his now wife, have failed
+to do; (her) one-half part now granted,
+&c. 55 Shill,",test,1,"38.298606,-77.538579",37.9140592,-76.9326385,Medium (County centroid)
+,test_entry_67,II,10,"WILLIAM HORNE, 392 acs. (N.
+L.), Up. Par. of Nansemond Co; beg.
+at Scratch Hall branch; down Cyprus
+Swamp; 22 Jan. 1718, p. 413. 40 Shill.",test,0,,,,
+,test_entry_68,II,13,"JOHN MALDEN, 1000 acs, (N. L.),
+Spotsyl. Co., in St. George‚Äö√Ñ√¥s Par; in
+the up. fork of Robinson Riv., called
+Malden‚Äö√Ñ√¥s fork; adj, William Duff; &
+Richard Malden; 28 Sept, 1728, p. 343.",test,0,,,,
+27,test_entry_69,II,14,"ROBERT: WESTER, 400 acs. (N. L.),
+Hanover Co; S. side the Northanna
+Riv:, & on bdth sides the Rackoon Br;
+adj. James Glenn & Robert Tate; 26
+June 1731, p, 193: 40 Shill,",test,1,"38.103978,-77.879735",37.744783,-77.4464165,Medium (County centroid)
+,test_entry_70,II,9,"FRANCIS EPES, 60 acs., Henrico
+Co., 15 Oct. 1698, p, 161. Escheated
+from Edward Elton, by inquisition under
+Wm. Randolph, Esch‚Äö√Ñ√¥r., &c.",test,0,,,,
+28,test_entry_71,II,14,"THOMAS DELOACH, 175 acs. (N.
+x, 4s. of Wight Co; 28 Sept. 1728, p.
+5. S. side the main Black Water Sw;
+& on S. side the Lightwood Sw. 20
+Shill.",test,1,"36.883922,-77.025597",36.8953677,-76.7248143,Medium (County centroid)
+29,test_entry_72,II,10,"WILLIAM HARRIS, 300 acs. (N.
+L.), New Kent Co., in St. Paul‚Äö√Ñ√¥s Par;
+beg. at Edward Garland; by Beaver
+Dam Cr, &c; 15 July 1717, p. 326.
+Imp. of 6 pers: Adam Curtis, Robt. Alefounder, Edmund Hammerton, Robert
+Allin, Richard Whitehall, Jane Grymes.",test,1,"37.916942,-77.599831",37.4974701,-76.9990453,Medium (County centroid)
+30,test_entry_73,II,14,"SIMON MURPHEY, 140 acs. (N.
+L.), Surry Co; on E. side of Atsamoosock Sw; adj. Mr. Philip Ludwell;
+Charles Briggs; & Samuel Briggs; 28
+Sept. 1732, p. 499. 15 Shill,",test,1,"36.895365,-77.116530",37.1118778,-76.895924,Medium (County centroid)
+,test_entry_74,II,13,"ROBERT BOLLING, GENT., 947
+acs. (O. & N. L.), Pr. Geo, Co; on
+both sides of the Horsepen Sw. of Appamattox River, below mouth of Deep
+Cr. beg. at corner of Tally, alias Green's
+land, to sd. Bolline‚Äö√Ñ√¥s old corner at the
+point of Rocks next above the Horsepen
+lowground; to Capt. Coleman‚Äö√Ñ√¥s line; 28
+Sept. 1730, p. 481. 204 acs. part granted him by former patent. 3 Lbs., 15
+Shill,",test,0,,,,
+31,test_entry_75,II,12,"RICHARD SHARP, 400 acs. (N. 1.).
+Spotsyl, Co., in St. George's Par; on up.
+side cf the SW Mountain Run; 11 June
+1726, p. 472.",test,1,"38.347203,-77.911423",38.4672023,-77.8625035,High (County + Landmarks)
+,test_entry_76,II,10,"JOHN BARNES, JUNR., & WILLIAM BARNES, 365 acs. (N. L.),
+Henrico Co; on N. side of James Riv;
+in a fork of the N. br. of Tuckahoe;
+on Wadkins Br; 12 July 1718, p. 379.
+40 Shill.",dev,0,,,,
+,test_entry_77,II,13,"WILLIAM REED, 269 acs. (N. L.'},
+Brunswick Co; on S. side of Sungion:
+Run; on Gabriel Harrisom‚Äö√Ñ√¥s line: om
+Sturgin Creek; 31 Oct. 1726, pr 6x.",test,0,,,,
+32,test_entry_78,II,14,"WILLIAM EZELL, 150 acs. (N. L.),
+Surry Co., in Southwark Par; N. side
+of the main Black Water Sw;-adj.
+Mathew Wilkason; Jeremiah Ellis;
+Peter Bagly; & Maj. Thomas Cock; 28
+Sept. 1730, p. 126. 15 Shill,",test,1,"37.092385,-77.039964",37.1232245,-78.4927721,High (County + Landmarks)
+33,test_entry_79,II,11,"NATHANIEL WEST, GENT., 800
+acs. (N. L.), Hanover Co; on both
+sides of Mill Cr; near Scott & Drummond‚Äö√Ñ√¥s line; on S. side of Stanly‚Äö√Ñ√¥s road;
+& along Chiswell‚Äö√Ñ√¥s line; 22 June 1722,
+p. 141. 4 Lbs. Money.",test,1,"37.818460,-77.604846",37.744783,-77.4464165,Medium (County centroid)
+,test_entry_80,II,9,"MR. HENRY ROYALL, 245 acs.,
+Warwick Co; SW on James River; by
+Faulkner's Damm; adi. land of William
+Brown, dec‚Äö√Ñ√¥d., & Oswell Langly, dec‚Äö√Ñ√¥d;
+29 Oct. 1696, p. 41. Imp. of 5 pers:
+Jno. Hall; Bess, Moll, Joka, Jack.",dev,0,,,,
+,test_entry_81,II,10,"CATHERINE BARRETT, 400 acs.
+(O. L.), James City Co., in Wilmington Par; on W. side of Chickahominy
+Riv; adj. Sackfeild Brewer; Simon
+leffrey; & Henry Gilbert; to mouth of
+Raroper Br; 23 Oct. 1714, p. 230. Part
+of 850 acs. granted Wm. Barrett, dec‚Äö√Ñ√¥d.,
+in June 1648. & descended to his son
+Tames; 800 acs. of which sd. James
+bequeathed to sd, Catherine, & Edith
+now wife of sd. (Henry) Gilbert, to
+be equally divided.",dev,0,,,,
+,test_entry_82,II,12,"GOODRICH LIGHTFOOT, GEN
+400 acs. (N. L.), Spotsyl. Co. in St.
+George‚Äö√Ñ√¥s Par; in the fork of Repos.
+River; cor. of Harry Beverley‚Äö√Ñ√¥s patent;
+30 June 1726, p. 484,",test,0,,,,
+,test_entry_83,II,12,"JOHN MAYES, 243 acs. (N. L.),
+Pr. Geo, Co; on low. side of the main
+fork of Deep Creek; 9 July 1724, p.
+72. 25 Shill.",dev,0,,,,
+34,test_entry_84,II,11,"THOMAS TOMLINSON, 80 acs.
+(N. L.), Surry Co; on S. side of the
+main Black Water Sw; & down Warmc Sw; 22 June 1722, p. 140. 10
+Shill,",test,1,"37.093776,-77.155605",37.1118778,-76.895924,Medium (County centroid)
+,test_entry_85,II,10,"JOHN DRURY, 254 acs. (N. L.),
+Up. Par. of Nansemond Co; on SW
+side the Beech Sw; adj. Mr, Francis
+Speight; 23 Dec. 1714, p. 219. Imp.
+of 5 pers: Robt. Hatch, Wm. Woodmason, Clement Champaine, Robt Dikes.
+Jno. Effer.",test,0,,,,
+35,test_entry_86,II,10,"ANTHONY TREBUE, 522 acs. (N.
+L.), Henrico Co; on the gr. fork of
+Swift Creek; 18 Mar. 1717, p. 364.
+Imp. cf 11 pers: Anthony Goadton,
+Peter Gipson, Carleton Rice, Willm.
+May, Martha Allice, Peter Kadow,
+Anthony Tribue, Kath. Trebue, Peter
+Levia, Barnard  Provinsall, Rachell
+Barly.",test,1,"37.453377,-77.689835",37.1232245,-78.4927721,High (County + Landmarks)
+,test_entry_87,II,12,"WILLIAM YARBROUGH, 400 acs.
+(N. L.), King Wm, Co; in St. John‚Äö√Ñ√¥s
+Par; on brs. of Reedy Sw. of Mattapony
+Riv., & the North Anna (Riv.); adj.
+Robert Baber; his own; Edward & William Yarbrough; Thomas Evans; & land
+of mt Inglish: 9 July 1724, p. 56. 40
+Shill,",test,0,,,,
+,test_entry_88,II,9,"JAMES DOUGHTIE, 308 acs., Up.
+Par. of Nansemofd: Co; on both side
+of the Mare Br., of. Bennett's Cr; 26
+Apr. 1704, p. 600: Trans. of 7 pers:
+Edwd, Jones, James Minge, Susan Bass,
+Hannah Bass, Eliz. Bass, Eliz. Bull,
+Alexr. Bass.",test,0,,,,
+,test_entry_89,II,9,"JOHN CAVE & JOHN ECKOLLS.,
+600 acs., K. & Q. Co., in St. Stephen‚Äö√Ñ√¥s
+Par; in the freshes of Mattapony River;
+beg. at Richards‚Äö√Ñ√¥ & Cave‚Äö√Ñ√¥s land; to E.
+side of Potobago Path; 23 Oct. 1703,
+p. 554. Trans of 12 pers: Daniell Due
+(or Doe), Peter Maryon, Hugh Hillion,
+Margarett Wingall, John Morgaime,
+Rowld. Watteny, Mary Glover, Edward
+Clegg, Peter Baker, Wm. Leigh, Joha
+Right, Tho. Dicks.",test,0,,,,
+,test_entry_90,II,12,"CHRISTOPHER ROWLAND, 200
+acs. (N, L.), Pr. Geo. Co; on low. side
+of Nummisseen Cr: on line of Thomas
+Ravenscraf, William Hamlin & William
+Epes. in the forke of Bowen‚Äö√Ñ√¥s Spring
+Br; 17 Aug, 1725, p. 274. 20 Shill.
+ABRAHAM JONES, JUNR., 183
+aes, CN. U.). Pr. Geo. Co: N. side of
+Notioway Riv.. & on upper side of
+Flarriomne Sw; 17 Aug. 1725. p. 275.
+20 Shill,",test,0,,,,
+36,test_entry_91,II,9,"JOHN POYTHRESS, 609 A., 2 R,,
+& 9 P., Chas. City Co; on S. side
+of James River, 23 Oct. 1703, p. 571.
+Beg. on S, side the Black Water; to the
+Nottoway Path; to the Black Water
+Spring; along the 1uaine Sw., near Capt.
+Robert Lewcy‚Äö√Ñ√¥; by Townes‚Äö√Ñ√¥ Quarter; to
+Hercules Flood; takeing in a point containing 50 acs; &c. Granted Francis
+Poythress, 28 Sept. 1681, deserted, &
+now gtanted by order, &c. Trans. of
+13 pers: Robt. Lloyd, Richd, Wilkinson, Joyce Bibcell, Eliz. Smith, Eliz.
+Brumfeild, Charles Bartholemew, Pattick Connoley. Note: Paid Mr. Auditor Bird‚Äö√Ñ√¥ for 6 rights.",test,1,"37.192253,-77.256613",37.4437158,-79.163737,High (County + Landmarks)
+,test_entry_92,II,12,"THOMAS DEAN, 100 acs. (N. L.).
+Surry Co; on S. side of Nottoway
+River; on S. side of the Rockey Run,
+cor. of Charles Dunkin‚Äö√Ñ√¥s land; 22 Feb.
+1724, p. 167. 10 Shill,",test,0,,,,
+,test_entry_93,II,12,"WILLIAM ARINGTON, 440 acs.
+(N. L.), Is. of Wight Co; on NE side
+of Nottoway River; on Cabbin Branch;
+9 July 1724, p. 87. 45 Shill.",dev,0,,,,
+,test_entry_94,II,14,"JOSEPH BELL, 250 acs. (N.. L.),
+Surry Co; on NE side of the Spring
+Br. or Sw; 25 Aug. 1731, p. 206. 25
+Shill,",test,0,,,,
+37,test_entry_95,II,11,"CUTHBERT WILLIAMSON, 85 acs.
+(N. L.), Pr. Geo. Co; on N. side of
+Jones‚Äö√Ñ√¥ Hole Sw; on his own.-land; at
+head of Cherry Orchard Br. or Sw; 13
+Nov. 1721, p. 80. 10 Shill:",test,1,"37.043465,-77.324303",37.1232245,-78.4927721,Low (State-level)
+,test_entry_96,II,9,"JAMES TAYLOR, GENT., 333 acs.,
+K. & Q. Co., 24 Apr. 1700, p. 254.
+Beg, close by the Indian Path; on Goodtich‚Äö√Ñ√¥s line, over a br. of a main br. of
+Mattapony runn; to the Indians‚Äö√Ñ√¥ land,
+by Stephen West‚Äö√Ñ√¥s cleare ground. Granted Stephen Bendbridge, of Rappa. Co.;
+& Mr. Thomas Todd, of Gloucester
+Co., 23 Apr. 1688, deserted, & now
+granted by order, &c. Imp. of 7 pers:
+Ja. Mortemore, John Aray, Dennis
+Maccarty, Edward Folio, Margt. Chapman, John Bryan, Thomas Walter.",test,0,,,,
+,test_entry_97,II,13,"GEORGE ROBERTSON, Clerk, of
+Henrico Co; 599 acs. (N. L.), Pr. Geo
+Co; beg. below the Rockey Runn; down
+the Miery Branch, to Flatt Creek; 16
+June 1727, p. 116. 3 Lbs., Money,
+CAVALIERS AND PIONEERS",test,0,,,,
+38,test_entry_98,II,13,"JOHN COSBY & CHARLES BARRET (Barrett), 400 acs. (N. L.); 28 Sept.
+1732, & page. 40 Shill.",dev,1,"37.957633,-77.871200",37.1232245,-78.4927721,Low (State-level)
+,test_entry_99,II,9,"JOHN HOLLAND, 147 acs., Up.
+Par. of Nansemond Co; near placa
+called Kingsale; adj. his own line; &
+John Bryant; 2 Nov. 1705, p. 709. Imp.
+of 3 pers: Mary Ozborne, Eliz: Mace
+Marrow, Nicho, Cartigan.",test,0,,,,
+39,test_entry_100,II,12,"JOSEPH ROCHESTER, 50 acs. (N,
+Lot, Is. of Wight Ca; S. side of Nottoway River; on F. side of Carter‚Äö√Ñ√¥s pocoson; 17 Aug. 1725, p. 268. 5 Shill.",test,1,"36.652218,-77.055915",36.601755,-76.9789759,High (County + Landmarks)
+,test_entry_101,II,9,"JOHN KETON, JUNR., 237 acs.
+Up. Par, of Nansemond Co; on W. side
+of Mehering Sw., abr. of Bennet‚Äö√Ñ√¥s Cr;
+adj. his father‚Äö√Ñ√¥s land; 28 Oct. 1702, p.
+480. Trans. of 5 pers: Andrew Wallace, Dan]. Magee, Wm. Gordon, Simon
+Siscoe, Francis Taylor.",test,0,,,,
+,test_entry_102,II,13,"ROBERT SHIELD, 265 acs. (O. L.),
+York Co., in Charles Parish; on N, side
+of New Poquoson Riv; on John Patrick‚Äö√Ñ√¥s
+line; to John James‚Äö√Ñ√¥ corner; 28 Sept.
+3/5
+1730, p. 509. 15 acs. part granted
+Robert Shield, decd; & 250 acs. part
+purchased of Thos. Harwood by Charles
+Dun in 1675.",test,0,,,,
+,test_entry_103,II,11,"WILLIAM SHOYLES, 150 acs. (N.
+L.), Pr, Geo. Co; on both sides of the
+Reedy or gr. branch of Oroccock; on
+John Leadbeater‚Äö√Ñ√¥s path; 5 Sept. 1723,
+p. 205. Imp. of 3 pers: John Tollewvnne, Robert Davis, William Shields.",dev,0,,,,
+40,test_entry_104,II,14,"JAMES RAMSEY, 280 acs. (N. L.),
+Is. of Wight Co; N. side of Maherin
+Riv; on N. side the Flatt Sw., on his
+hes 11 Apr. 1732, p, 387. 30
+Shill,",dev,1,"36.623890,-77.309489",36.8953677,-76.7248143,Medium (County centroid)
+41,test_entry_105,II,14,"RICHARD CLOUGH, GENT., 400
+acs. (N, L.), Hanover Co; on both sides
+of Beaver Creek; 17 Sept. 1731, p. 326.
+40 Shill.",test,1,"38.002175,-77.994279",37.8008971,-77.6386892,High (County + Landmarks)
+,test_entry_106,II,12,"WILLIAM REEVES, of Pr. Geo. Co;
+400 acs. (N. L.), Is. of Wight Co; S.
+side of Maherin River; & on E. side of
+the Great Swamp; 22 Feb. 1724, p, 183.
+40 Shill.",test,0,,,,
+,test_entry_107,II,14,"ADAM TAPLY, of Surry Co; 341
+ws. (N. L.), Brunswick Co; on S. side
+ef Nortoway Riv: at mouth of Red
+Oak Run; 28 Sept, 1728, p. 75.",test,0,,,,
+,test_entry_108,II,10,"JOHN BOLLING, 320 acs. (N. L.),
+Henrico Co; N. side of James River;
+& on E. side of Licking Hole Cr; 1
+Apr. 1717, p. 311. Imp. of 7 pers:
+Thomas Wood, John Bishop, Abrah.
+Dishon, Jno. Derfee, John Morgan,
+John Chamberford, Dorothy Williams.",test,0,,,,
+,test_entry_109,II,9,"ROBERT GRIGGS, 400 acs., Henrico
+Co; on Mr. Branch‚Äö√Ñ√¥s brookes 25 Apr.
+1702, p. 429. Granted Abell Gower, .7
+Nov. 1673, deserted, & granted Capt.
+Wm, Randolph, 20 Oct. 1691, deserted,
+& now granted by order, &c. Trans. of
+8 pers.* Note: 8 rights paid for to
+Wm. Byrd, Esqr., his Majesty‚Äö√Ñ√¥s Auditor.",test,0,,,,
+,test_entry_110,II,9,"SAMUEL GROVES, 87 acs., Warwick Co; by Finche‚Äö√Ñ√¥s Dams; adj. his
+own, & land of Richard Crusselll; 24
+Apr. 1700, p. 267. Trans. of 2 pers:
+Gawhon Steward, Eliza. Dobson.",dev,0,,,,
+,test_entry_111,II,10,"EDWARD CREEKMOUR, JOHN
+NICHOLSON, & THOMAS TAYLOR,
+93 acs. (N. L.), Norf, Co., in Eliza.
+River Par; adj. Theoder Taylor‚Äö√Ñ√¥s patent:
+14 July, 1718, p. 400. Imp. of 2 pers:
+Patrick Coven & his wife.",test,0,,,,
+,test_entry_112,II,11,"CORNELIUS LOFTIN, 100 acs. (N.
+L.). Surry Co; on SW side of the Little
+Sw; 18 Feb. 1722, p. 188. 10 Shill.",test,0.5,"36.83730546538932, -77.27595431834261",,,
+,test_entry_113,II,9,"JOHN ALCOCK & ANNE his wife,
+the relict of Jonathan Pinck, & ANNE
+GOODEY, a minor, legatee of sd.
+Pinck; 190 acs. in Pamunkey Neck; in
+a fork of the Acquinton Sw; on the
+Chappell branch; 28 Oct. 1702, p. 485.
+Trans. of 4 pers: John Townsend, Anne
+Townsend, ‚Äö√Ñ√∫Harman & his wife Margaretta.‚Äö√Ñ√π",test,0,,,,
+,test_entry_114,II,10,"WILLIAM HORNE. 239 acs, (N. L.); Up. Par. of Nansemond Co,  beg.
+at Scratch Hall branch; down Cyprus
+Swamp, 22 Jan. 1718, & page. 25 Shill.",test,0,,,,
+,test_entry_115,II,9,"JOHN LAUNDER (Lander), 250
+acs., Gloucester Co., 26 Apr. 1704, p.
+595. Escheated from Geo. Burgh, dec‚Äö√Ñ√¥d.,
+by inquisition under William Jones,
+Deputy to Honble. Matthew Page, Esqr.,
+Esch‚Äö√Ñ√¥r., &c.",test,0,,,,
+,test_entry_116,II,12,"MATTHEW. LEE, 148 acs. (N. L.).
+Pr. Geo. Co; bet. Warwick & Joseph's
+Swamps; adj, Thomas Mitchel‚Äö√Ñ√¥s land:
+17 Aug. 1725, p. 275. 15 Shill.",test,0,,,,
+42,test_entry_117,II,11,"EDWARD GARLAND, JUNR., 285
+acs. (IN. L.), Hanover Co., in St. Paul‚Äö√Ñ√¥s
+Par; on N. side the Little River; adj.
+John Garland; 22 June 1722, p. 141.
+30 Shill,",dev,1,"37.945015,-77.795817",37.8846135,-77.5365495,High (County + Landmarks)
+43,test_entry_118,II,13,"MICHAEL HOLLAND, 400 acs. (N..
+L.), Henrico Co; adj, Samuel Burk‚Äö√Ñ√¥s
+land, on W. side of the E. fork of
+Licking Hole Cr; cor. of Col. Scott:.
+16 June 1727, p. 87. 40 Shiill.",test,1,"38.013946,-78.124199",37.5131191,-77.3465081,Medium (County centroid)
+,test_entry_119,II,14,"MARY ANN DITWAY, 400 ats.
+(N. L.), Goochland Co; S. side of
+James Riv., on Jones‚Äö√Ñ√¥ Cr; adj. Chastain‚Äö√Ñ√¥s
+land; & Mallet‚Äö√Ñ√¥s line; 11 Apr. 1732, p.
+429. 40 Shill.",test,0,,,,
+44,test_entry_120,II,12,"WILLIAM FISH. 175 acs. (N. L.),
+Is. of Wight Co; on W. side of Cock‚Äö√Ñ√¥s
+Swamp; 22 Feb. 1724, p. 201. 20 Shill.",test,1,"36.607261,-77.273090",36.8953677,-76.7248143,Medium (County centroid)
+,test_entry_121,II,10,"BENJAMINE EVINS, 81 acs. (N.
+L.), Pr. Geo. Co; beg. at land of Capr.
+Geo. Blayton, dec‚Äö√Ñ√¥d., on W. side the
+Ponds Run; 16 Aug. 1715, p. 241. 10
+Shill.",test,0.5,"37.17617412294879, -77.11967275489236",,,
+,test_entry_122,II,12,"THOMAS POYTHRIS, 248 acs. (N.
+L.), Pr. Geo. Co; on both sides of the
+upper Rockey Run of Stoney Creck; 22
+Feb. 1724, p. 228. 25 Shill.",test,0,,,,
+,test_entry_123,II,12,"CAPT. THOMAS CARR, JUNR.,
+400 acs, (N. L.), King Wm. Co., in
+St. Margaret‚Äö√Ñ√¥s Par; on both sides of
+Polecat (Sw.); adj. Robert Chandler;
+Mr. William Terrel; & Richard Rookes;
+22 Feb. 1724, p. 148. 40 Shill.",test,0,,,,
+,test_entry_124,II,10,"WILLIAM JONES, 41 acs. (N. L.),
+Middlesex Co; on Parroz‚Äö√Ñ√¥s Cr. western
+br., corner of land he lives on; by
+Cock‚Äö√Ñ√¥s mill path near Jeremie‚Äö√Ñ√¥s Cosway;
+on land of William Chaines; 22 Jan.
+1717, p. 353. 5 Shill,",test,0,,,,
+45,test_entry_125,II,11,"LARKIN CHEW. 3800 acs. (N. L.); Spotsylvania Co., in St. George‚Äö√Ñ√¥s Par, 4 June 1722; p. 92, On N, side of
+Mattapony River; by a poison field; to
+Punch Point; adj. his own land; near
+a gr. stone. 19 Lbs. Money.",dev,1,"38.19926,-77.59929",37.1232245,-78.4927721,High (County + Landmarks)

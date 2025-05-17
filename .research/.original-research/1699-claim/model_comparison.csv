@@ -1,0 +1,3 @@
+Model,Posterior Mean P(E),Difference
+Basic Model,0.007809788427718165,0.0
+Constrained Model (S=0 when R<0.1),0.007648796421872553,-0.00016099200584561262

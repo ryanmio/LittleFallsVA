@@ -1,0 +1,11 @@
+row_index,method_id,model,pipeline,prompt_id,prompt_version,prediction,input_tokens,output_tokens,reasoning_tokens,total_tokens,latency_s,error_km,is_mock
+1,M-1,o4-mini-2025-04-16,one_shot,one_shot_dms_v1,v1,"36°38'31.20000""N 077°17'34.80000""W",150,3481,3456,3631,54.73756790161133,33.616154525005506,0
+1,M-2,o3-2025-04-16,one_shot,one_shot_dms_v1,v1,"36°53'15.00000""N 077°26'06.00000""W",150,1817,1792,1967,14.318865060806274,6.564258656246703,0
+1,M-3,o3-mini-2025-01-31,one_shot,one_shot_dms_v1,v1,"37°00'00.00000""N 076°55'00.00000""W",150,4372,4352,4522,40.07682394981384,42.66960378946265,0
+1,M-4,gpt-4.1-2025-04-14,one_shot,one_shot_dms_v1,v1,"36°56'32.0000""N 77°05'41.0000""W",151,20,0,171,0.7563660144805908,26.243868892904413,0
+1,M-5,chatgpt-4o-latest,one_shot,one_shot_dms_v1,v1,"36°52'12.0000""N 77°14'45.0000""W",151,20,0,171,0.8887598514556885,14.660150653152806,0
+1,M-6,gpt-3.5-turbo,one_shot,one_shot_dms_v1,v1,"36°59'24.00000""N 77°35'24.00000""W",153,20,0,173,0.684330940246582,18.83542736975754,0
+1,T-1,o4-mini-2025-04-16,tool_chain,tool_chain_v0,v5,"ERROR: Error code: 400 - {'error': {'message': ""Unknown parameter: 'input[1].status'."", 'type': 'invalid_request_error', 'param': 'input[1].status', 'code': 'unknown_parameter'}}",0,0,0,0,0.0,,0
+1,T-3,o3-mini-2025-01-31,tool_chain,tool_chain_v0,v5,"ERROR: Error code: 400 - {'error': {'message': ""Unknown parameter: 'input[1].status'."", 'type': 'invalid_request_error', 'param': 'input[1].status', 'code': 'unknown_parameter'}}",0,0,0,0,0.0,,0
+1,T-4,gpt-4.1-2025-04-14,tool_chain,tool_chain_v0,v5,"36.947928, -77.400811",897,12,0,909,2.5495359897613525,1.8113555531993566,0
+1,H-1,human-gis,static,static,1,"37.1118778, -76.895924",0,0,0,0,0.0,48.09356710020372,0
