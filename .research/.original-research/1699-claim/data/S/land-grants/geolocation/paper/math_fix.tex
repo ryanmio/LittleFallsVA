@@ -1,0 +1,36 @@
+% Fix for LaTeX math processing issues
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+% Redefine problematic math commands
+\providecommand{\text}[1]{\textrm{#1}}
+
+% Fix for spacing in math mode
+\let\oldtext\text
+\renewcommand{\text}[1]{\oldtext{#1}}
+
+% Define some useful math commands that might be missing
+\providecommand{\frac}[2]{#1/#2}
+
+% Fix for Unicode symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+
+% Use a font with better Unicode support
+\usepackage{fontspec}
+\setmainfont{STIXGeneral}
+\setmathfont{STIXGeneral}
+
+% Provide some simple replacements for problematic symbols (guarded)
+\providecommand{\approxsymbol}{\ensuremath{\approx}}
+\providecommand{\leqsymbol}{\ensuremath{\leq}}
+\providecommand{\le}{\leqslant}
+
+% Provide some simple replacements for problematic symbols
+%\newcommand{\approxsymbol}{\ensuremath{\approx}}
+%\newcommand{\leqsymbol}{\ensuremath{\leq}}
+
+% Pandoc sometimes emits \passthrough for literal braces in tables; define a noop.
+\providecommand{\passthrough}[1]{#1} 

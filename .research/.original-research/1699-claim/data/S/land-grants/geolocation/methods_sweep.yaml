@@ -1,0 +1,98 @@
+# Temperature & reasoning-effort sweep for robustness study
+# --------------------------------------------------------
+# Variants derived from existing top-performing methods.
+# ID naming scheme: <base>-<param>
+# Only variants relevant to the sweep are enabled.
+
+- id: M2-low
+  model: o3-2025-04-16
+  pipeline: one_shot
+  description: One-shot DMS, o3 model, reasoning_effort=low
+  enabled: true
+  params:
+    reasoning_effort: low
+    service_tier: flex
+
+- id: M2-med
+  model: o3-2025-04-16
+  pipeline: one_shot
+  description: One-shot DMS, o3 model, reasoning_effort=medium (baseline)
+  enabled: true
+  params:
+    reasoning_effort: medium
+    service_tier: flex
+
+- id: M2-high
+  model: o3-2025-04-16
+  pipeline: one_shot
+  description: One-shot DMS, o3 model, reasoning_effort=high
+  enabled: true
+  params:
+    reasoning_effort: high
+    service_tier: flex
+
+# GPT-4.1 temperature sweep
+- id: M4-t0.0
+  model: gpt-4.1-2025-04-14
+  pipeline: one_shot
+  description: GPT-4.1, temperature 0.0
+  enabled: true
+  params:
+    temperature: 0.0
+
+- id: M4-t0.4
+  model: gpt-4.1-2025-04-14
+  pipeline: one_shot
+  description: GPT-4.1, temperature 0.4
+  enabled: true
+  params:
+    temperature: 0.4
+
+- id: M4-t0.8
+  model: gpt-4.1-2025-04-14
+  pipeline: one_shot
+  description: GPT-4.1, temperature 0.8
+  enabled: true
+  params:
+    temperature: 0.8
+
+- id: M4-t1.2
+  model: gpt-4.1-2025-04-14
+  pipeline: one_shot
+  description: GPT-4.1, temperature 1.2
+  enabled: true
+  params:
+    temperature: 1.2
+
+# GPT-4o temperature sweep
+- id: M5-t0.0
+  model: chatgpt-4o-latest
+  pipeline: one_shot
+  description: GPT-4o, temperature 0.0
+  enabled: true
+  params:
+    temperature: 0.0
+
+- id: M5-t0.4
+  model: chatgpt-4o-latest
+  pipeline: one_shot
+  description: GPT-4o, temperature 0.4
+  enabled: true
+  params:
+    temperature: 0.4
+
+- id: M5-t0.8
+  model: chatgpt-4o-latest
+  pipeline: one_shot
+  description: GPT-4o, temperature 0.8
+  enabled: true
+  params:
+    temperature: 0.8
+
+- id: M5-t1.2
+  model: chatgpt-4o-latest
+  pipeline: one_shot
+  description: GPT-4o, temperature 1.2
+  enabled: true
+  params:
+    temperature: 1.2 

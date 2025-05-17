@@ -1,0 +1,306 @@
+subject_id,volume,book,raw_entry,set,has_ground_truth,latitude/longitude,
+test_entry_01,II,12,"LEWIS GREEN, of Pr. Geo, Co; 460
+acs. (N. L.), Surry Co; on N. side of
+Nottoway River; beg. ar mouth of Stony
+Cr; to the South Wester Sw; adj. John
+Guillum; & Major Robert Bolling; 22
+Feb. 1724, p. 170. 40 Shill.",test,1,"36.934201,-77.389837",
+test_entry_02,II,13,"JOHN SMALL, 203 acs. (N. L.).
+Up. Pat. of Nansemond Co; in the
+Maple Pocoson; adj. Thomas Speight;
+& Daniel Pugh's line; on the Timber
+Pocoson; 31 Oct. 1726, p. 45. 20 Shill..",test,0,,
+test_entry_03,II,10,"JOHN JONES, 75 acs. (N. L.), New
+Kent Co., in St. Paul's Par; beg. at
+Capt. Dangerfield's, near sd. Jones,
+plantation; down S. br. of Crump's Cr;
+to mouth of Gentry's Br; on Gentry's
+line; 11 July 1719, p. 440. Imp. of 2
+pers: John Ducker & George Brasfield.",test,1,"37.693581,-77.335728",
+test_entry_04,II,9,"WILLIAM WILLIAMS, 400 acs., on
+8. side of the main Black Water Swamp;
+by run of Holloway Sw; 24 Apr. 1703,
+p. 519. Trans. of 8 pers: Note: 8
+tights paid for to Wm, Byrd, Esqr.,
+Auditor.",test,1,"36°43'30.2""N 77°00'12.5""W",
+test_entry_05,II,9,"JAMES TERRY, 418 acs., in Pamunkey Neck; K. & Q. Co., in St. John's
+Par; adj. Thomas Carr; & Macon's line:
+25 Apr. 1701, p. 356. Imp. of 9 pers:
+Richd. Drake; John Woodris, Anthony
+Bouswell, Luke Wynn, Robert Buttris,
+Sarah Couch, John Hearth, Edward
+Powell, Thomas Coakes.",test,0,,
+test_entry_06,II,11,"EDWARD RIPPING, RICHARD
+HICKMAN & RALPH GOUGH, of
+Williamsburgh; 10,000 acs. (N. L.),
+Spotsy]l. Co; on S. side the Rappidan
+(Riv.); adj. patent of sd. Ripping; &
+cor. of the Octana tract; 23 July 1722,
+p. 151. 50 Lbs.",test,1,"38.19444,-78.32064",
+test_entry_07,II,12,"SAMUEL GENTRY, 196 acs. (N.
+L.), Hanover Co; on both sides of
+Beech Cr; adj. Mr. ‚ÄòAlves‚Äô cor; William
+Harris‚Äô line; & line of Drummond &
+Scott; 22 Feb. 1724, p. 145. 20 Shill.",test,1,"37.777108,-77.588177",
+test_entry_08,II,9,"STEPHEN: SAMPSON, 211 acs.,
+Chas. City Cb., in Westopher- Par; N.
+side of James River, 23 Oct. 1703, p.
+578. Adj. John Rayster (or Royster) ;
+& Jonas Liscomb. Granted John Blackburne, 28 Apr. 1691; now granted by
+order, &c. Trans. of 5 pers.* Note:
+Paid Wm. Byrd, Esqr., Auditor for 5
+rights.",test,0,,
+test_entry_09,II,11,"HENRY POWERS, of Jas. City Co;
+250 acs. (N. L.), Is. of Wight Co; on
+W. side of the Flatt Sw; 18 Feb. 1722,
+p. 17-4. 25 Shill.",test,1,"36.642194,-77.350167",
+test_entry_10,II,9,"WILLIAM LACEY, 474 acs.; New
+Kent Co., in Blisland Par., 2 Nov. 1708,
+p. 704. Beg. at head of Mattadequinee
+tun, a br. of Tyascun ‚ÄòSw; by lines -pf
+land now or late of Hitchman, or Hopkins. Imp. of 10 pers: Robt. Covert,
+Steph. Hobbs, Robt. Stubbs, John
+Thomas, Tho. Dawson, Femerton Sparks,
+Richd. Windsor, John Tyra, -John
+Richardson, Tho, Wharton.",test,0,,
+test_entry_11,II,13,"THOMAS CHEW, GENT., !600 acs,
+(N. L.), Spossyl. Co; on botin sides the
+Biw Ren, oa W. side of the Litth
+Mountains; on fine deviding Hanover
+& Spotsylvania Countys; adj, Major
+William Todd, in the County Line; 16
+dune 1727, p. 155. 8 Lbs., Money.",test,1,"38.165759,-78.274476",
+test_entry_12,II,12,"JOHN BOROUGH, 200 acs. (N.
+L.), Pr. Geo. Co; on S. side the Orterdam Br. or Swamp; on Wood's line; 9
+July 1724, p. 73. 20 Shill.",test,0,,
+test_entry_13,II,13,"JOSHUA GLASS, 200 acs. (N. L.),
+Pr. Geo. Co; on up. side of Mawhipponnock Cr; adj, John Ellington; &
+William Stoa; 28 Sept. 1730, p, 531.
+20 Shill.",test,1,"37.234822512432125, -77.6150948290792",
+test_entry_14,II,13,"WILLIAM LETBETTER, 340 acs.
+(N. L.), Brunswick Co; S. side of
+Maherin River; on N. side of Rattle
+Snake Swamp; 31 Oct. 1726, p. 64.",test,0,,
+test_entry_15,II,10,"TECHARD DEARDEN, 100 acs. (N.
+L.}, in Pr, Geo. Co; on E. side of
+Low's Br; 15 July 1717, p. 335. 10
+Shill.",test,0,,
+test_entry_16,II,13,"JOHN DOWNER. of King Wm.
+Co., 400 acs. (N. L.), Spotsyl. Co., in
+St. George's Par; on N. side the Northanna (Riv.); beg. at Capt. Chris.
+Smith's land; to James Taylor's line; on
+Thomas Gambrill's line; 16 June 1727.
+‚Äòp. 93, 40 Shill.",test,1,"38.021712,-77.709683",
+test_entry_17,II,12,"ROBERT BABER, 400 acs. (N. L.),
+King Wm. Co., in St. Margaret's Par;
+bet. the N. & Middle fork of Reedy
+Sw; adj. William Cockerham; & land
+of James Cary; 13 July 1726, p. 536.
+40 Shill.",test,1,"37.197166,-79.285162",
+test_entry_18,II,11,"HENRY SPRATT, 4102 acs, (O. &
+N. L.), Pr. Anne Co., in Lynhaven Par;
+in Corotuck Bay; by the run of the
+head of Nannes Cr; adj. Dawley's cor.
+& bay; down S. side of Little Cr; to
+mouth of the Gr. Narrows; 21 Feb.
+1720, p. 59. Found within bounds of
+1800 acs. granted Henry Spratr, 23 Oct.
+1673. 11 Lbs., 10 Shill.",test,0,,
+test_entry_19,II,12,"MARK MORE, 400 acs. (N. L.),
+Henrico Co; N. side of Appamattock
+Riv; beg, at John Patterson, on the
+Ould Hunting Path; on br. of Cattail
+Br; to Mr. George Archer's cor; 9 July
+1724, p. 11. 40 Shill.",test,1,"37.296344,-77.663257",
+test_entry_20,II,9,"JOHN PIGG, 1000 aes., K. & Q.
+Co; in the freshes of Mattapony River;
+24 Apr. 1703, p. 531. Beg. in path
+from William Rickett's house to the
+Indian towne; to Capt. William Smith,
+Marriner; from his house to his land.
+ing; to land where John Barrow liveth,
+fr-morly lend of John Pigg: to N. side
+of the Ridge Path, dividing this & land
+of Mr. James Taylor; alone Watking‚Äô
+line; to Maj. Payton, &c. Granted
+Joseph Haile, 30 Oct. 1686, deserted,
+& now gtanted by order, &c. Trans. of
+20 pers: Valentine Hughs, Geo. Moudby, Wm. Green, Eliza. Sexton, Tho.
+Allen, John Newton,
+John Seamor, Robert Satchell, Theop.
+Arvy, Robert Logwood, Sam!. Morgan,
+Peter Watts, Edward Jackson, Rowland
+Simpson, Jacob Butts, Ambrose Conly,
+Richd. Roberts, Robert Coultis, Mary
+Allen.",test,0,,
+test_entry_21,II,10,"THOMAS HOUSE, 247 acs. (N. L.),
+Up. Par. of Nansemond Co; on the
+Bear branch; 24 Jan. 1717, p. 356. 25
+Shill,",test,0,,
+test_entry_22,II,14,"JAMES NEVIL, 700 acs. (N. L.),
+Goochland Co; ¬ß. side of Fluvanna
+River; 17 Jan. 1732, p, 537. 3 Lbs.,
+10 Shill.",test,0,,
+test_entry_23,II,11,"THOMAS COLEMAN, of K. & Q.
+Co; 540 A., 98 Per. (Esch. L.), Essex
+Co., in South Farnham Par; on N. side
+of the Best land Sw; above mouth of
+the Reedy Br; along Henry Baker's line;
+to cor. of Halliard's; 5 Sept. 1723, p.
+234, Escheated from Stephen Benbridge,
+glias Benbrick, dec‚Äôd., by inquisition
+under John Lewis, Esqr., Esch‚Äôr., for
+420 acs; upon survey returned by Robert
+Brooke, Junr., found to contain 540
+A. & 98 Per. 2 Lbs. Tobacco, &c.",test,0,,
+test_entry_24,II,10,"THOMAS WHOOD, 199% acs. (N.
+L.), Pr. Geo. Co; on both sides of
+indian Br. of Naumsend's Cr., below
+the river path; 15 July 1717, p. 336.
+{mp. of 4 pers: John Moore, John
+Oughis, Richard Holland, Daniel Mackcall,",test,0,,
+test_entry_25,II,14,"WILLIAM REYNOLDS. 297 acs.
+(N. L.), Brunswick Co., on the Long
+Branch; adj. Ralph Jackson; 28 Sept.
+1728, p, 34.",test,0,,
+test_entry_26,II,13,"ROBERT POLLARD, JUNR., Gent.,
+of K. & Q. Co; 800 acs. (N. L.),
+Spotsyl. Co., in St, George's Par; on
+W. side of the little Mountains, on S.
+side the Piney Mts., & on S. side the
+Rappidan (Riv.): adj, Custice's corner;
+& Mountague's line; 16 June 1727, p.
+151.",test,1,"38.179999,-78.264658",
+test_entry_27,II,12,"PAUL BUNCH, 400 acs. (N. L.).
+Hanover Co; on both sides of Black
+Haw (Sw.), 9 July 1724, p. 28. 49
+Shill.
+",test,0,,
+test_entry_28,II,11,"JOHN HARROWELL, 183 acs. (N.
+L.), Pr. Geo. Co; on N. side of Nottoway Riv., adj. his father Samuel Harrowell; 22 June 1722, p. 113. 20 Shill.",test,0,,
+test_entry_29,II,12,"iAMBROSE JOSHUA SMITH, 479
+acs. (N. L.), Hanover Co; on both
+sides of Gr. Rockey Cr; adj. Cel.
+uy ies line; 9 July 1724, p. 29. 40.
+Shill.",test,1,"37.998458,-77.745720",
+test_entry_30,II,9,"ELIZABETH WARE, 240 acs., in
+Pamunkey Neck; on N. side of Queens
+Swamp; 1 Apr. 1702, p. 430. Being
+part of land laid out according to the
+articles of peace for the Pamunkey
+Indians, &c., (as above.) Granted by
+order, &c. Trans. of 5 pers.* Note:
+5 rights paid for to Wm. Byrd, Esqr.,
+Auditor.",test,0,,
+test_entry_31,II,11,"ROBERT BLAWS, JOSEPH WOODSON, JOHN WOODSON & JOHN
+WOCDSON, JUNR., 400 acs. (N. L.),
+Henrico Co; S. side of James Riv., &
+on W. side of Fine Cr; on Pleasants‚Äô
+line; 18 Feb. 1722, p. 158. 40 Shill.",test,1,"37.622231, -77.834838",
+test_entry_32,II,9,"MRS. MARY LIGON, former wife
+of William Ligon, dec‚Äôd; 383. acs.,
+Henrico Co; on N. side of the gr, or
+main br. of Procter's (Cr.); 26 Oct.
+1699, p. 243. Trans. of 8 pers: Wm.
+Ligon, Math. Oakeley, John Clark,
+Margaret Roach, Wm. Exaby, Robert
+Whitehead, Richd. Feild, John Gilbert.",test,0,,
+test_entry_33,II,12,"JOHN PRIDE, 247 acs. (N. L.),
+Henrico Co; N. side of James Riv; on
+N, side of Deep Cr; & on N. side of
+Horsepen Br. of sd. Cr; 17 Aug. 1725,
+p. 321. 25 Shill.",test,0,,
+test_entry_34,II,13,"EDWARD BOOKER, GENT., of
+Henrico Co; 2050 acs. (N. L.), Pr.
+Geo. Co; on both sides of Knibs Cr;
+‚Äòbeg. on lower side, above path to Capt.
+Anderson's Quarter; 28 Sept. 1728, p.
+290. 10 Lbs., 5 Shill,",test,0,,
+test_entry_35,II,12,"FRANCIS FLOURNOY, GENT., 400
+acs. (N. L.), Henrico Co; N. side of
+Swift Cr; beg. on W. side of Tribue's
+branch; to E. side of the main br. of
+Tomahake Br; 9 July 1724, p. 17. 40
+hill.",test,1,"37.464936,-77.688363",
+test_entry_36,II,9,"HENRY BREAZEALE, JUNR., 300
+acs., Henrico Co; on N. side of James
+River; 28 Oct. 1702, p. 501. Beg. on
+N. side of Giley's Cr., cor. of Henry
+Breazeale, Senr; on line of Giley; to
+Tho. East, Senr. Trans. of 6 pers:
+Theodorick Bland, John Leinch, James
+Robbison, Elianor Reener; & 2 sights
+more paid for to Wm. Byrd, Esqr.,
+Auditor,",test,1,"37.555968,-77.387435",
+test_entry_37,II,11,"JOSEPH MEREDITH, 300 acs.
+(Lapsed L.), Isle of Wight Co; 13
+Nov. 1721, p. 68. Granted Robert
+Johnson, 30 Oct, 1669, in Up. Par. of
+Nansemond Co., upon condition of seating, &c. 30 Shill.",test,0,,
+test_entry_38,II,12,"JOHN PRIDE, 328 acs, (N. L.),
+Henrico Co; on N. side of Appattock
+ari on br. of Butterwood Cr., parting
+sd. Jobn, & land of Anne &. Mary Pride;
+17 Aug. 1725, p, 315. /25 Shill., &
+Imp. of 2 pers: John Red & Avis Red,",test,0.5,"37.081068, -77.755018",
+test_entry_39,II,11,"SAMUEL NORMENT, 325 acs. (N.
+L.), King Wm. Co; above mouth of
+Reedy Sw., on Matapony River; about
+34 of a mi. above Powel's ford; 13 Nov.
+1721, p. 74. 35 Shill.",test,1,"37.908246, -77.299078",
+test_entry_40,II,14,"JOHN SMALL, JUNR., 52 acs.9(N.
+L.), in Up.. Par, of Nansemond Co; at
+NE side of a place called The Bear
+Garden. in the Desart; by a Cart Path:
+25 Aug. 1731, p. 294. 5 Shill.",test,0,,
+test_entry_41,II,13,"WILLIAM EDMUNDS, 280 acs. (N.
+L.), Surry Co; N. side of Nottoway
+River; on S. side of the Cabbin Branch,
+adj. Richard Parker, Junr; Benjamin
+Clements; & land of the Nottoway
+Indians; 13 Oct. 1727, p. 256. 30 Shill.",test,0.5,"36.993156, -77.228846",
+test_entry_42,II,14,"RICHARD HERBERT, of Henrico
+Co; 400 acs. (N. L.). Pe. Geo. Co;
+S. side of Moccosoneck Cr; adj, land
+he purchased of David Williams; on
+line of John Anderson; 28 Sept, 1728,
+p. 18. 40 Shill.",test,0,,
+test_entry_43,II,10,"JOHN IVY, of Pr. Geo. Co; 100
+acs. (N. L.), Surry Co; S. side the main
+Blackwater Sw; on W. side of the
+Pidgeon Sw; down run of the Meadowy
+Br; 23 Mar. 1715, p. 279. 10 Shill.",test,1,"37.033981,-77.169488",
+test_entry_44,II,11,"COL. JAMES TAYLOR, GENT., of
+K. & Q. Co., 450 acs. (N. L.), King
+Wm. Co., in St, Margaret's Par; on
+N. side of Polecat Run; 8 July 1724,
+p. 344. 45 Shill.",test,0.5,"37.961465, -77.356191",
+test_entry_45,II,10,"THOMAS CARTER, 120 acs. (N.
+L.), Is. of Wight Co; on S. side of
+Nottoway Riv; on W. side of Blow's
+Br; 23 Mar. 1715, p. 269. 15 Shill.",test,1,"36.668008,-77.071402",
+test_entry_46,II,11,"JOSEPH WATSON & JOHN WATSON, 400 acs. (N. L.), Henrico Co;
+on N. side of James River; on Thomas
+Farrar's line; 5 Sept. 1723, p. 243. 40
+Shill.",test,0,,
+test_entry_47,II,11,"MATHEW CREED, 200 acs. (N.
+L.), King Wm. Co., in St. John's Par;
+on both sides the Beverdam Sw., on N.
+side the North Anna (Riv.); on Mr.
+James Terry; & Mr. Wm. Flemon's
+land; 20 Feb, 1723, p. 331. 20 Shill,",test,0.5,"37.999239, -77.633152","https://www.loc.gov/resource/g3882n.cw0589001/?r=-0.137,0.033,0.74,0.447,0"
+test_entry_48,II,13,"ROBERT HESTER, 1300 acs. (N.
+L.), Hanover Co; on both sides of
+Christopher's Ruf; 27 Sept. 1729, p.
+419. 6 Lbs., 10 Shill,",test,1,"38.084259,-77.901464",
+test_entry_49,II,13,"LAUGHLAN FLYN, 300 acs. (N.
+L.), Pr. Geo. Co; on both sides of
+Leadbiter's Cr; by the Poplar Branch;
+13 Oct. 1727, p. 278. 20 Shill., & Imp.
+of 2 pers: Robert Stoker & Elizabeth
+Stoker.",test,0,,
+test_entry_50,II,13,"WILLIAM MACKLIN, of Surry Co;
+836 acs. (N. L.), Brunswick Co; on
+both sides of Iseinglass Cr., of Maherin
+River; adj, Thomas Sissom's line; 31
+Oct. 1726, p. 47.",test,1,"36.78328766999767, -77.98785016384313",

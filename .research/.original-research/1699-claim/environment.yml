@@ -1,0 +1,21 @@
+name: falls-church-1699
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - matplotlib
+  - pandas
+  - pip:
+    - pymc==5.10.4
+    - arviz==0.16.1
+    - SALib==1.4.7
+    - corner
+    - seaborn
+    - scipy
+    - pandas
+    - jupyter
+    - notebook
+    - pytest 

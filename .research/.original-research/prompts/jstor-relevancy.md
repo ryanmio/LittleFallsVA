@@ -1,0 +1,1 @@
+Does this article mention ANY colonial buildings, houses, or settlements from 1650-1730? I need information about: - Construction methods or materials - Types of houses or dwellings - Chimneys (any type) - Settlement patterns - Lifestyles of colonists Please quote ANY relevant passages with page numbers. The information will help study early Virginia settlements.

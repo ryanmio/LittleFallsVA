@@ -1,0 +1,12 @@
+row_index,method_id,model,pipeline,prompt_id,prompt_version,prediction,input_tokens,output_tokens,reasoning_tokens,total_tokens,latency_s,error_km,is_mock
+1,M-3,o3-mini-2025-01-31,one_shot,one_shot_dms_v1,v1,"ResponseReasoningItem(id='rs_68117ad50ef0819186872e57494d19a405801a1654a25e18', summary=[], type='reasoning', status=None)",175,2644,2624,2819,22.958219051361084,,0
+1,M-4,gpt-4.1-2025-04-14,one_shot,one_shot_dms_v1,v1,"37°09'14.0000""N 76°52'38.0000""W",176,20,0,196,1.0029098987579346,13.163159877053516,0
+1,M-5,chatgpt-4o-latest,one_shot,one_shot_dms_v1,v1,"37°08'12.0000""N 76°52'30.0000""W",176,20,0,196,0.6701309680938721,12.842681660896123,0
+1,M-6,gpt-3.5-turbo,one_shot,one_shot_dms_v1,v1,"The precise coordinates for this colonial Virginia land grant in Surry County would be:
+37°05'24.0""N 76°45'36.0""W",177,34,0,211,3.0910890102386475,,0
+1,T-4,gpt-4.1-2025-04-14,tool_chain,tool_chain_v0,v1,"37.13898898030461, -76.71633503733106",952,48,0,1000,3.2460989952087402,1.2322524325961943,0
+2,M-3,o3-mini-2025-01-31,one_shot,one_shot_dms_v1,v1,"ResponseReasoningItem(id='rs_68117af57e108191b5f152d8915939ca07ddb60f09798b70', summary=[], type='reasoning', status=None)",183,2132,2112,2315,24.53547692298889,,0
+2,M-4,gpt-4.1-2025-04-14,one_shot,one_shot_dms_v1,v1,"36°53'10.0000""N 76°17'30.0000""W",184,20,0,204,1.185011863708496,11.386152650451283,0
+2,M-5,chatgpt-4o-latest,one_shot,one_shot_dms_v1,v1,"36°51'12.00000""N 76°17'24.00000""W",184,20,0,204,0.7271361351013184,10.403472848346073,0
+2,M-6,gpt-3.5-turbo,one_shot,one_shot_dms_v1,v1,"The land grant to Hugh Campbell in the western branch of the Elizabeth River in Norfolk County, Virginia can be geolocated to approximately 36°55'00""N 76°17'00""W.",186,43,0,229,0.7182109355926514,,0
+2,T-4,gpt-4.1-2025-04-14,tool_chain,tool_chain_v0,v1,"36.8243925, -76.397927",959,42,0,1001,1.5354602336883545,1.815775778643068,0

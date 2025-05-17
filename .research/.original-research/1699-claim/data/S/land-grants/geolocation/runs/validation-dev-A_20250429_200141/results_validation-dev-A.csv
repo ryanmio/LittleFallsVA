@@ -1,0 +1,2 @@
+row_index,method_id,model,pipeline,prompt_id,prompt_version,prediction,input_tokens,output_tokens,reasoning_tokens,total_tokens,latency_s,error_km,is_mock
+1,T-4,gpt-4.1-2025-04-14,tool_chain,tool_chain_v0,v1,,423,30,0,453,1.0090692043304443,,0

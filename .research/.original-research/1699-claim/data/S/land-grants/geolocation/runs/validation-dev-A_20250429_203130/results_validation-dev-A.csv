@@ -1,0 +1,3 @@
+row_index,method_id,model,pipeline,prompt_id,prompt_version,prediction,input_tokens,output_tokens,reasoning_tokens,total_tokens,latency_s,error_km,is_mock
+1,M-4,gpt-4.1-2025-04-14,one_shot,one_shot_dms_v1,v1,"37°09'13.0000""N 76°52'42.0000""W",176,20,0,196,1.0238935947418213,13.256548014963206,0
+1,T-4,gpt-4.1-2025-04-14,tool_chain,tool_chain_v0,v1,"ERROR: Error code: 400 - {'error': {'message': ""Invalid 'input[1].id': 'call_MTlS6ecM3KfuP7gwmotSkb3V'. Expected an ID that begins with 'fc'."", 'type': 'invalid_request_error', 'param': 'input[1].id', 'code': 'invalid_value'}}",0,0,0,0,0.0,,0

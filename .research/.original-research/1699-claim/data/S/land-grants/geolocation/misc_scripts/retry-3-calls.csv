@@ -1,0 +1,15 @@
+test_row,subject_id,volume,book,raw_entry,set,has_ground_truth,latitude/longitude,h1_latitude,h1_longitude,h1_accuracy
+row_2,test_entry_03,II,10,"JOHN JONES, 75 acs. (N. L.), New
+Kent Co., in St. Paul's Par; beg. at
+Capt. Dangerfield's, near sd. Jones,
+plantation; down S. br. of Crump's Cr;
+to mouth of Gentry's Br; on Gentry's
+line; 11 July 1719, p. 440. Imp. of 2
+pers: John Ducker & George Brasfield.",test,1,"37.693581,-77.335728",37.4974701,-76.9990453,Medium (County centroid)
+row_28,test_entry_71,II,14,"THOMAS DELOACH, 175 acs. (N.
+x, 4s. of Wight Co; 28 Sept. 1728, p.
+5. S. side the main Black Water Sw;
+& on S. side the Lightwood Sw. 20
+Shill.",test,1,"36.883922,-77.025597",,,
+row_38,test_entry_98,II,13,"JOHN COSBY & CHARLES BARRET (Barrett), 400 acs. (N. L.); 28 Sept.
+1732, & page. 40 Shill.",dev,1,"37.957633,-77.871200",,,
