@@ -6,7 +6,7 @@ Source: `analysis/full_results.csv` – `latency_s` is wall-clock time from requ
 
 | Method | Model | Entries | Located | Total hours | Hours per located | Hours/1k located |
 |---|---|---|---|---|---|---|
-| H-1 | human-gis | 45 | 44 | 9.330 | 0.2120 | 212.045 |
+| H-1 | human-gis | 45 | 43 | 9.330 | 0.2170 | 216.977 |
 | M-1 | o4-mini-2025-04-16 | 45 | 43 | 0.413 | 0.0096 | 9.603 |
 | M-2 | o3-2025-04-16 | 45 | 43 | 0.572 | 0.0133 | 13.294 |
 | M-3 | o3-mini-2025-01-31 | 45 | 43 | 0.378 | 0.0088 | 8.791 |
@@ -30,7 +30,7 @@ Source: `analysis/full_results.csv` – `latency_s` is wall-clock time from requ
 | chatgpt-4o-latest | 45 | 43 | 0.008 | 0.0002 | 0.184 |
 | gpt-3.5-turbo | 45 | 43 | 0.010 | 0.0002 | 0.232 |
 | gpt-4.1-2025-04-14 | 90 | 86 | 0.079 | 0.0009 | 0.915 |
-| human-gis | 45 | 44 | 9.330 | 0.2120 | 212.045 |
+| human-gis | 45 | 43 | 9.330 | 0.2170 | 216.977 |
 | o3-2025-04-16 | 45 | 43 | 0.572 | 0.0133 | 13.294 |
 | o3-mini-2025-01-31 | 45 | 43 | 0.378 | 0.0088 | 8.791 |
 | o4-mini-2025-04-16 | 90 | 86 | 0.576 | 0.0067 | 6.698 |

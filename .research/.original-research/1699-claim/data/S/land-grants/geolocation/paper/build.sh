@@ -46,6 +46,7 @@ cat > "$PAPER_DIR/styling.tex" << EOF
 \\IfFileExists{wrapfig.sty}{\\usepackage{wrapfig}}{}
 % Keep floats within their section to prevent them from sliding past heading changes (if available)
 \\IfFileExists{placeins.sty}{\\usepackage[section]{placeins}}{}
+\\usepackage{subcaption}
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
@@ -76,7 +77,7 @@ pandoc -s "$MAIN_MD" -o "$OUTPUT_PDF" \
     -M secPrefix="Section" \
     -M secLabels=arabic \
     -M eqnPrefix="Equation" \
-    -M tblPrefix="Table" \
+    -M tblPrefix="" \
     -M autoSectionLabels=true \
     --resource-path=.:../analysis/figures:../analysis/figures/cdf_graphs \
     --extract-media=extracted-media 2>"$ERROR_LOG"

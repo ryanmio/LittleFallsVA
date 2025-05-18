@@ -31,8 +31,9 @@ human_df = full_df[full_df['method_id'] == 'H-1'].copy()
 # Merge on row_index (1-to-1 alignment guaranteed by row numbering)
 merged = human_df.merge(val_df, on='row_index', how='left', validate='one_to_one')
 
-# Filter to rows that have a non-null error (ground-truth inferred)
-valid_df = merged[merged['error_km'].notna()].copy()
+# Filter to rows that have a non-null error (ground-truth inferred) AND are marked as locatable
+valid_df = merged[(merged['error_km'].notna()) & (merged['is_locatable'] == 1)].copy()
+print(f"Found {len(valid_df)} locatable points with valid error values")
 
 # Accuracy category column (falls back to Unlocatable if missing)
 valid_df['accuracy_cat'] = valid_df['h1_accuracy'].fillna('Unlocatable')

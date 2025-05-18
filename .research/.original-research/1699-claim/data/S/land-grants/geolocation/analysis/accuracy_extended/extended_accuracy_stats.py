@@ -24,7 +24,7 @@ CDF_PATH = OUT_DIR / "cdf_overall.csv"
 
 THRESHOLDS = [1, 5, 10, 25, 50]
 BOOT_ITERS = 1000
-OUTLIER_TOP_N = 5
+OUTLIER_TOP_N = 10
 
 class Agg:
     def __init__(self, name: str):

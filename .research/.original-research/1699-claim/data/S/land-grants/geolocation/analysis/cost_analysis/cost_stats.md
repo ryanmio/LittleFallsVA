@@ -6,7 +6,7 @@ Prices sourced from `analysis/pricing.yaml`. Costs include all entries (regardle
 
 | Method | Underlying model | Entries | Located | Input tok | Output tok | Total cost (USD) | Cost per located grant | Cost per 1k located |
 |---|---|---|---|---|---|---|---|---|
-| H-1 | human-gis | 45 | 44 | 0 | 0 | $140.00 | $3.181818 | $3,181.82 |
+| H-1 | human-gis | 45 | 43 | 0 | 0 | $140.00 | $3.255814 | $3,255.81 |
 | M-1 | o4-mini-2025-04-16 | 45 | 43 | 6,653 | 124,901 | $0.56 | $0.012951 | $12.95 |
 | M-2 | o3-2025-04-16 | 45 | 43 | 6,653 | 146,085 | $5.91 | $0.137440 | $137.44 |
 | M-3 | o3-mini-2025-01-31 | 45 | 43 | 6,653 | 142,020 | $0.63 | $0.014702 | $14.70 |
@@ -30,7 +30,7 @@ Prices sourced from `analysis/pricing.yaml`. Costs include all entries (regardle
 | chatgpt-4o-latest | 45 | 43 | $0.05 | $0.001093 | $1.09 |
 | gpt-3.5-turbo | 45 | 43 | $0.00 | $0.000107 | $0.11 |
 | gpt-4.1-2025-04-14 | 90 | 86 | $0.32 | $0.003698 | $3.70 |
-| human-gis | 45 | 44 | $140.00 | $3.181818 | $3,181.82 |
+| human-gis | 45 | 43 | $140.00 | $3.255814 | $3,255.81 |
 | o3-2025-04-16 | 45 | 43 | $5.91 | $0.137440 | $137.44 |
 | o3-mini-2025-01-31 | 45 | 43 | $0.63 | $0.014702 | $14.70 |
 | o4-mini-2025-04-16 | 90 | 86 | $0.95 | $0.011016 | $11.02 |

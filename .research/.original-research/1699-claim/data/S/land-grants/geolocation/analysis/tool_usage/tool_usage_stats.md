@@ -6,8 +6,8 @@ Analyzing only T-methods (T-1, T-4). All coordinates are compared to the tool-ca
 
 | Method | Entries | Mean calls | Geo:Cent ratio | First-call success |
 |---|---|---|---|---|
-| T-1 | 43 | 3.95 | 23.29:1 | 67.4% |
-| T-4 | 44 | 2.30 | 8.18:1 | 72.7% |
+| T-1 | 42 | 3.98 | 22.86:1 | 66.7% |
+| T-4 | 43 | 2.23 | 7.73:1 | 72.1% |
 
 ## Raw tool-call data (one line per grant)
 
@@ -21,7 +21,6 @@ Analyzing only T-methods (T-1, T-4). All coordinates are compared to the tool-ca
 | 7 | T-1 | 1 | 0 | 1 | 1 | geocode_place |
 | 8 | T-1 | 7 | 0 | 7 | 1 | geocode_place |
 | 9 | T-1 | 1 | 0 | 1 | 1 | geocode_place |
-| 10 | T-1 | 3 | 0 | 3 | 1 | geocode_place |
 | 11 | T-1 | 3 | 0 | 3 | 1 | geocode_place |
 | 12 | T-1 | 2 | 1 | 3 | 3 | compute_centroid |
 | 13 | T-1 | 2 | 0 | 2 | 1 | geocode_place |
@@ -65,7 +64,6 @@ Analyzing only T-methods (T-1, T-4). All coordinates are compared to the tool-ca
 | 7 | T-4 | 6 | 1 | 7 | 7 | compute_centroid |
 | 8 | T-4 | 1 | 0 | 1 | 1 | geocode_place |
 | 9 | T-4 | 1 | 0 | 1 | 1 | geocode_place |
-| 10 | T-4 | 5 | 0 | 5 | 1 | geocode_place |
 | 11 | T-4 | 1 | 0 | 1 | 1 | geocode_place |
 | 12 | T-4 | 6 | 1 | 7 | 7 | compute_centroid |
 | 13 | T-4 | 1 | 0 | 1 | 1 | geocode_place |
@@ -105,15 +103,15 @@ Analyzing only T-methods (T-1, T-4). All coordinates are compared to the tool-ca
 
 ### Method T-1
 
-*Entries analysed*: **43**
+*Entries analysed*: **42**
 
 
 #### Tool-call distribution (per entry)
 
 | Statistic | geocode_place | compute_centroid | Total |
 |---|---|---|---|
-| Mean | 3.79 | 0.16 | 3.95 |
-| SD | 2.41 | 0.37 | 2.52 |
+| Mean | 3.81 | 0.17 | 3.98 |
+| SD | 2.43 | 0.37 | 2.55 |
 | Median | 3 | 0 | 3 |
 | Min | 1 | 0 | 1 |
 | Max | 10 | 1 | 10 |
@@ -122,27 +120,27 @@ Analyzing only T-methods (T-1, T-4). All coordinates are compared to the tool-ca
 
 | geocode_place | compute_centroid | Ratio geo:cent |
 |---|---|---|
-| 163 | 7 | 23.29:1 |
+| 160 | 7 | 22.86:1 |
 
 #### Search efficiency
 
 | Mean selected-call index | Median | First-call success |
 |---|---|---|
-| 2.29 | 1 | 69.0% |
+| 2.32 | 1 | 68.3% |
 
 
 
 ### Method T-4
 
-*Entries analysed*: **44**
+*Entries analysed*: **43**
 
 
 #### Tool-call distribution (per entry)
 
 | Statistic | geocode_place | compute_centroid | Total |
 |---|---|---|---|
-| Mean | 2.05 | 0.25 | 2.30 |
-| SD | 1.78 | 0.43 | 2.05 |
+| Mean | 1.98 | 0.26 | 2.23 |
+| SD | 1.75 | 0.44 | 2.03 |
 | Median | 1 | 0 | 1 |
 | Min | 1 | 0 | 1 |
 | Max | 7 | 1 | 8 |
@@ -151,13 +149,13 @@ Analyzing only T-methods (T-1, T-4). All coordinates are compared to the tool-ca
 
 | geocode_place | compute_centroid | Ratio geo:cent |
 |---|---|---|
-| 90 | 11 | 8.18:1 |
+| 85 | 11 | 7.73:1 |
 
 #### Search efficiency
 
 | Mean selected-call index | Median | First-call success |
 |---|---|---|
-| 1.95 | 1 | 72.7% |
+| 1.98 | 1 | 72.1% |
 
 
 
@@ -165,6 +163,6 @@ Analyzing only T-methods (T-1, T-4). All coordinates are compared to the tool-ca
 
 | Metric | geocode_place | compute_centroid | Total | Notes |
 |---|---|---|---|---|
-| Calls (sum) | 253 | 18 | 271 | ratio geo:cent = 14.06:1 |
-| Calls per entry (mean) | 2.91 | 0.21 | 3.11 | across 87 entries |
-| Selected-call index (mean) | - | - | - | 2.12 average index (first-call success 70.9%) |
+| Calls (sum) | 245 | 18 | 263 | ratio geo:cent = 13.61:1 |
+| Calls per entry (mean) | 2.88 | 0.21 | 3.09 | across 85 entries |
+| Selected-call index (mean) | - | - | - | 2.14 average index (first-call success 70.2%) |

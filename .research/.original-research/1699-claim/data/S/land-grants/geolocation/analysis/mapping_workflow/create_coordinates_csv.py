@@ -10,6 +10,7 @@ from pathlib import Path
 import sys
 import re
 import unicodedata
+import argparse
 
 # Optional dependency for advanced text-fixing (mojibake, etc.)
 try:
@@ -44,7 +45,7 @@ THIS_DIR = Path(__file__).resolve().parent
 GEOLOCATION_DIR = THIS_DIR.parent.parent  # geolocation/
 ANALYSIS_DIR = THIS_DIR.parent            # geolocation/analysis/
 
-VAL_CSV = GEOLOCATION_DIR / "validation - TEST-FULL-H1.csv"
+DEFAULT_VAL_CSV = GEOLOCATION_DIR / "validation - TEST-FULL-H1.csv"
 RES_CSV = ANALYSIS_DIR / "full_results.csv"
 OUTPUT_CSV = THIS_DIR / "grant_coordinates_summary.csv"
 
@@ -77,11 +78,11 @@ def normalize_text(text: str):  # noqa: D401
 
     # Replace common "smart" punctuation with ASCII equivalents
     replacements = {
-        "’": "'",
-        "‘": "'",
+        "'": "'",
+        "'": "'",
         "‚": "'",
-        "“": '"',
-        "”": '"',
+        """: '"',
+        """: '"',
         "″": '"',
         "′": "'",
         "–": "-",
@@ -120,9 +121,18 @@ def normalize_coordinates(coord_text):
     
     return coord_text
 
+def parse_args():
+    parser = argparse.ArgumentParser(description='Create a CSV with coordinates for locatable grants')
+    parser.add_argument('--validation', type=str, help='Path to validation CSV file', 
+                        default=DEFAULT_VAL_CSV)
+    return parser.parse_args()
+
 def main():
-    print(f"Reading validation data from {VAL_CSV}")
-    val = pd.read_csv(VAL_CSV)
+    args = parse_args()
+    val_csv = GEOLOCATION_DIR / args.validation if not Path(args.validation).is_absolute() else Path(args.validation)
+    
+    print(f"Reading validation data from {val_csv}")
+    val = pd.read_csv(val_csv)
     
     print(f"Reading results data from {RES_CSV}")
     res = pd.read_csv(RES_CSV)

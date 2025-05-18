@@ -17,7 +17,7 @@ import map_one_grant as single
 
 METHODS = [m.strip() for m in (sys.argv[1] if len(sys.argv) > 1 else "M-2,M-4,M-5,T-1,T-4").split(",") if m.strip()]
 
-VAL_CSV = GEOLOCATION_DIR / "validation - TEST-FULL-H1.csv"
+VAL_CSV = GEOLOCATION_DIR / "validation - TEST-FULL-H1-final.csv"
 RES_CSV = ANALYSIS_DIR / "full_results.csv"
 OUT_DIR = THIS_DIR / "map_outputs"
 OUT_DIR.mkdir(parents=True, exist_ok=True)

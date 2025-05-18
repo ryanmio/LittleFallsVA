@@ -1,7 +1,7 @@
 | Accuracy Category | N | Share (%) | Mean Error (km) | Median Error (km) |
 |---|---|---|---|---|
-| Overall | 21 | 100.0 | 75.08 | 70.70 |
-| High (County + Landmarks) | 7 | 33.3 | 71.14 | 48.09 |
-| Medium (County centroid) | 3 | 14.3 | 83.40 | 70.70 |
-| Low (State-level) | 11 | 52.4 | 75.33 | 78.74 |
+| Overall | 43 | 100.0 | 71.40 | 60.20 |
+| High (County + Landmarks) | 19 | 44.2 | 68.88 | 48.09 |
+| Medium (County centroid) | 6 | 14.0 | 87.95 | 82.11 |
+| Low (State-level) | 18 | 41.9 | 68.55 | 63.26 |
 | Unlocatable | 0 | 0.0 | — | — |

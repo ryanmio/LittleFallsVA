@@ -27,7 +27,7 @@ THIS_DIR = Path(__file__).resolve().parent
 GEOLOCATION_DIR = THIS_DIR.parent.parent  # geolocation/
 ANALYSIS_DIR = THIS_DIR.parent            # geolocation/analysis/
 
-VAL_CSV = GEOLOCATION_DIR / "validation - TEST-FULL-H1.csv"
+VAL_CSV = GEOLOCATION_DIR / "validation - TEST-FULL-H1-final.csv"
 RES_CSV = ANALYSIS_DIR / "full_results.csv"
 
 # Grant row to plot (default via env or CLI)

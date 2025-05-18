@@ -33,4 +33,16 @@
 %\newcommand{\leqsymbol}{\ensuremath{\leq}}
 
 % Pandoc sometimes emits \passthrough for literal braces in tables; define a noop.
-\providecommand{\passthrough}[1]{#1} 
+\providecommand{\passthrough}[1]{#1}
+
+% Ensure math symbols are properly rendered
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fontspec}
+
+% Replace ≥ with \geq in monospace environments
+% This redefines the ≥ character to use the math symbol instead
+\makeatletter
+\catcode`\≥=\active
+\protected\def≥{\ensuremath{\geq}}
+\makeatother 
