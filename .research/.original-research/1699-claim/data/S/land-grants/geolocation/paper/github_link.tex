@@ -1,0 +1,24 @@
+\usepackage{titling}
+\usepackage{url}
+
+% Store the original \maketitle command
+\let\oldPandocMakeTitle\maketitle
+
+% Redefine \maketitle
+\renewcommand{\maketitle}{%
+  \oldPandocMakeTitle% % Execute the original \maketitle first
+  % Now add our custom content after the original title block
+  \begin{center}%
+    \vspace{1em}% % Add a bit of vertical space after the date
+    \small{Code and data: \url{https://github.com/ryanmio/colonial-virginia-llm-geolocation}}%
+  \end{center}%
+}
+
+% The \hypersetup for PDF metadata can remain as it's good practice
+% and separate from the visual display.
+\AtBeginDocument{%
+  \hypersetup{pdfinfo={
+    Title={Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants},
+    Author={Ryan Mioduski, Independent Researcher}
+  }}%
+} 

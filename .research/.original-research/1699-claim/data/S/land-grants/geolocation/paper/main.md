@@ -7,7 +7,17 @@ csl: apa.csl
 geometry: margin=1in
 fontsize: 11pt
 keywords: ["historical GIS", "large language models", "geoparsing", "colonial Virginia", "land grants", "digital humanities", "spatial history", "geolocation"]
+github: "https://github.com/ryanmio/colonial-virginia-llm-geolocation"
+header-includes:
+  - \usepackage{float}
+  - \floatplacement{figure}{H}
 ---
+
+\begin{center}
+\textit{Code and data available at: \url{https://github.com/ryanmio/colonial-virginia-llm-geolocation}}
+\end{center}
+
+\vspace{1em}
 
 # Abstract
 Virginia's seventeenth- and eighteenth-century land patents survive almost exclusively as narrative metes-and-bounds descriptions in printed abstract volumes such as *Cavaliers and Pioneers* (C&P) [@Nugent1979_cavaliers3].  We present the first systematic study of whether state-of-the-art large language models (LLMs) can convert these prose abstracts into usable latitude/longitude coordinates at research grade.  We digitized, transcribed, and openly released a corpus of 5,471 Virginia patent abstracts (1695–1732), accompanied by a rigorously annotated ground-truth dataset of 45 authoritatively georeferenced test cases.  We benchmark six OpenAI models spanning three architecture families—o-series reasoning models, flagship GPT-4-class chat models, and GPT-3.5— under two prompting paradigms: (i) one-shot "direct-to-coordinate" and (ii) tool-augmented chain-of-thought that invokes external geocoding APIs.
@@ -43,6 +53,8 @@ This study makes four principal contributions:
 3. We evaluate two prompting paradigms—single-prompt "direct-to-coordinate" inference and tool-augmented chain-of-thought reasoning—across six contemporary OpenAI model variants.  
 4. We quantify the trade-offs among spatial error, monetary expense, and processing time, demonstrating that a pure LLM pipeline can match or surpass professional GIS accuracy while operating orders of magnitude faster and cheaper.
 
+All data, code, and results are available in our public repository: [https://github.com/ryanmio/colonial-virginia-llm-geolocation](https://github.com/ryanmio/colonial-virginia-llm-geolocation).
+
 # 2 Background & Related Work
 
 ## 2.1 Historical GIS and Land-Grant Mapping
@@ -56,7 +68,7 @@ This analytical potential extends beyond Virginia. Dobbs [@Dobbs2009_backcountry
 
 In genealogical and historical research communities, semi-automated solutions have emerged to assist with this labor-intensive process. DeedMapper software [@DeedMapper_software] helps researchers convert metes-and-bounds descriptions into visual plots, though it still requires manual entry of deed text and expert positioning of parcels on reference maps. Professional development courses from the Salt Lake Institute of Genealogy (SLIG) continue to teach these specialized mapping techniques, reflecting the still-developing state of automation in this field.
 
-Taken together, the literature establishes three critical facts. First, historians value land-grant GIS layers because they unlock settlement and landscape questions that text alone cannot answer. Second, traditional platting methods are too slow and too localized to deliver colony-scale coverage. Third, the piecemeal datasets that do exist furnish both ground truth and a methodological benchmark for any attempt at automation. The present study addresses this bottleneck by testing whether large language models can shoulder the coordinate-extraction burden—potentially transforming Virginia's colonial patents from archival prose to research-ready GIS at scale.
+The literature establishes three critical facts. First, historians value land-grant GIS layers because they unlock settlement and landscape questions that text alone cannot answer. Second, traditional platting methods are too slow and too localized to deliver colony-scale coverage. Third, the piecemeal datasets that do exist furnish both ground truth and a methodological benchmark for any attempt at automation. This study addresses this bottleneck by testing whether large language models can shoulder the coordinate-extraction burden—potentially transforming Virginia's colonial patents from archival prose to research-ready GIS at scale.
 
 ## 2.2 Large Language Models for Geolocation
 Building on the manual coordinate-extraction bottleneck outlined in § 2.1, recent advances in large language models (LLMs) suggest that much of the geoparsing pipeline can now be automated. **Coordinate extraction**—sometimes called *geoparsing*—comprises two subtasks: (i) identifying candidate toponyms in running text and (ii) resolving each mention to a unique set of latitude/longitude coordinates. 
@@ -117,11 +129,9 @@ For each model–tool configuration, the evaluation script iterates over the tes
 
 ## 4.1 Professional GIS Benchmark (H-1)
 
-A certified GIS analyst (Bashorun, 2025)[^gis-baseline] implemented an automated geolocating procedure leveraging standard geospatial libraries and toolsets. The workflow ingested the patent texts, tokenized toponyms, and queried a multi-layered gazetteer stack (including ArcGIS Online resources, historical overlays, and place-name databases) to generate the highest-confidence coordinate for each grant. Development, parameter tuning, and execution required approximately six billable hours for 50 grants. We treat this end-to-end process—including both script development and execution—as the benchmark cost to maintain fair comparison with LLM methodologies that likewise combine design and inference phases.
+A certified GIS analyst [@Bashorun2025_gis] implemented an automated geolocating procedure leveraging standard geospatial libraries and toolsets. The workflow ingested the patent texts, tokenized toponyms, and queried a multi-layered gazetteer stack (including ArcGIS Online resources, historical overlays, and place-name databases) to generate the highest-confidence coordinate for each grant. Development, parameter tuning, and execution required approximately six billable hours for 50 grants. We treat this end-to-end process—including both script development and execution—as the benchmark cost to maintain fair comparison with LLM methodologies that likewise combine design and inference phases.
 
 These baseline coordinates are stored directly in the evaluation file, allowing the experiment script to access them through the static pipeline. A labor cost of USD 140 (six billable hours) is assigned to the benchmark when reporting cost metrics.
-
-[^gis-baseline]: Traditional GIS Baseline (Bimbola Bashorun, GIS Professional). The contractor was engaged on April 28, 2025, and delivered coordinates on April 29, 2025, with approximately 26 hours elapsed from contract award to delivery.
 
 ## 4.2 One-shot Prompting (M-series)
 
@@ -241,6 +251,8 @@ Table: Effect of reasoning-effort budget on o3 one-shot accuracy (n = 45). {#tbl
 
 Three key observations emerge: (1) modern LLMs can match or exceed a trained GIS specialist on this task, (2) supplementing GPT-4.1 with explicit Google-Maps queries **did not** improve accuracy—in fact, the tool-chain variant T-4 performed 30 % worse than its pure-prompt counterpart, and (3) the amount of chain-of-thought the o3 model is allowed to emit has only a marginal effect on accuracy.
 
+\clearpage
+
 ## 6.2 Cost–Accuracy Trade-off
 We next examine the relationship between monetary cost and spatial accuracy. Figure \ref{fig:pareto_cost} positions every method on this plane. All automated variants dominate the GIS script baseline by two to five orders of magnitude on both dimensions. **GPT-4o** (M-5) delivers the best *dollar-for-accuracy* ratio: **USD 1.09 per 1,000 successfully located grants** at a mean error under 28 km.
 
@@ -303,7 +315,7 @@ For both pipelines the Google `geocode_place` endpoint dominated the call mix, w
 
 We conducted several additional analyses to test the robustness of our main findings:
 
-* **Outlier-robust summary** – Excluding the five largest residuals (top 11% of errors) lowers the overall mean error from 38.5 km to 36.9 km. Method rankings and 95% CIs remain unchanged; only **H-1** (−6.6 km) and **M-6** (−6.3 km) show material shifts, leaving **M-2** as the top performer.
+* **Outlier-robust summary** – Excluding the five largest residuals (top 11% of errors) lowers the overall mean error from 38.5 km to 36.9 km. Method rankings and 95% CIs remain unchanged; only **H-1** [@Bashorun2025_gis] (−6.6 km) and **M-6** (−6.3 km) show material shifts, leaving **M-2** as the top performer.
 
 * **Length‐stratified accuracy** – To test whether verbose abstracts make the task easier (or harder), we measured the word-count of each grant's full text in the validation file and analyzed 152 LLM predictions:  
   * Median split — "Short" (≤ 36 words) vs "long" (> 36 words) abstracts yielded mean errors of **36.8 km** and **34.9 km** respectively (95% CIs overlap), indicating no practical difference.  
@@ -344,15 +356,15 @@ Inspection of the largest residuals uncovers three recurring failure modes:
 \hfill % Maximal horizontal space between subfigures
 \begin{subfigure}{0.48\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{../analysis/mapping_workflow/map_outputs/grant_34_map.png}
-  \caption{Failure-mode example: Grant 34.}
-  \label{fig:grant34}
+  \includegraphics[width=\linewidth]{../analysis/mapping_workflow/map_outputs/grant_19_map.png}
+  \caption{Failure-mode example: Grant 19.}
+  \label{fig:grant19}
 \end{subfigure}
-\caption{Grant examples: Grant 1 (left) shows a success case where the o3 model (M-2) and tool-chain GPT-4.1 (T-4) are close to ground truth. Grant 34 (right) illustrates a failure mode where an early geocode error affects the tool-chain. Basemap © OSM.}
+\caption{Grant examples: Grant 1 (left) shows a success case where the o3 model (M-2) and tool-chain GPT-4.1 (T-4) are close to ground truth. Grant 19 (right) illustrates a failure mode where an early spurious geocoder hit sends the tool-chain prediction far from ground truth, whereas the unguided model remains closer to the actual location. Basemap © OSM.}
 \label{fig:grant_maps}
 \end{figure}
 
-In Grant 1 (LEWIS GREEN), language-only inference (M-2) achieves county-level precision (9.8 km error), and the tool-chain (T-4) further reduces the error to just 1.5 km. In Grant 34 (EDWARD BOOKER), a spurious geocoder hit for *Knibs Creek* drags the tool-chain prediction far from ground truth, whereas the unguided model remains within 28 km—a pattern that typifies the cascading search bias described above.
+In Grant 1 (LEWIS GREEN), language-only inference (M-2) achieves county-level precision (9 km error), and the tool-chain (T-4) further reduces the error to just 1.5 km. In Grant 19, a spurious geocoder hit sends the tool-chain prediction far from ground truth, whereas the unguided models remain within a reasonable distance—a pattern that typifies the cascading search bias described above.
 
 These examples visually reinforce our key finding that sophisticated language models like o3 already encode substantial geographic knowledge about Virginia's colonial landscape, often placing grants within their correct watershed without external reference data. The full contact sheet showing all 43 mapped grants appears in Appendix C.
 
@@ -362,7 +374,7 @@ From a budgetary standpoint, all automatic methods lie on a markedly superior fr
 
 The choice of model therefore hinges on the marginal utility of additional accuracy. If a project tolerates a 30 km error band, GPT-4o maximizes throughput at negligible cost; archival projects requiring sub-15 km precision may justify the higher token expenditure of the o3 family.[^cost-optimized] Crucially, both options scale linearly with corpus size, placing statewide geocoding—tens of thousands of patents—within reach of modest research budgets.
 
-[^cost-optimized]: We also evaluated three ultra-low-cost GPT-4-class variants (GPT-4.1-mini, GPT-4.1-nano, GPT-4o-mini). Their outputs rarely conformed to the required coordinate format, yielding a mean error of ≈ 49 km; details are archived in the project repository.
+[^cost-optimized]: We also evaluated three ultra-low-cost GPT-4-class variants (GPT-4.1-mini, GPT-4.1-nano, GPT-4o-mini). Their outputs rarely conformed to the required coordinate format, yielding a mean error of ≈ 49 km; details are archived in our [GitHub repository](https://github.com/ryanmio/colonial-virginia-llm-geolocation).
 
 Our ablation runs reveal that these gains do **not** depend on expensive parameter settings. Increasing *reasoning_effort* from "low" to "high" multiplies token usage ~6× and latency ~5× while trimming mean error by <1 km. Likewise, GPT-4.1 accuracy varies by only ±1.5 km across the 0–1.2 temperature range, and GPT-4o shows no systematic trend. In practice, therefore, the default (cheap) settings already sit near the cost-accuracy frontier.
 
@@ -374,7 +386,7 @@ Several caveats temper the preceding claims.
 2. **OCR and transcription noise.**  Although we applied the best-performing OCR pipeline available, minor character errors persist.  Because the language models ingested this noisy text directly, a fraction of the residual error may stem from imperfect input rather than conceptual failure.
 3. **Point-estimate evaluation.**  We benchmarked single latitude/longitude pairs, ignoring shape reconstruction and parcel acreage.  Applications that require boundary polygons will need supplementary modelling or manual intervention.
 4. **Tool bias.**  Google's geocoder is optimised for modern place names; its deterministic output may shift marginally over time as the underlying database updates, complicating longitudinal reproducibility.
-5. **GIS benchmark generality.** The benchmark relies on a single expert-authored geocoding procedure; accuracy might vary with different gazetteer sources, parameter tuning, or analyst expertise. We treat the baseline as representative of standard practice rather than an upper bound on professional GIS performance. The single-practitioner results are intended as an illustrative comparison point rather than a statistically powered estimate of professional accuracy or throughput.
+5. **GIS benchmark generality.** The benchmark [@Bashorun2025_gis] relies on a single expert-authored geocoding procedure; accuracy might vary with different gazetteer sources, parameter tuning, or analyst expertise. We treat the baseline as representative of standard practice rather than an upper bound on professional GIS performance. The single-practitioner results are intended as an illustrative comparison point rather than a statistically powered estimate of professional accuracy or throughput.
 6. **Cost assumptions.**  Monetary estimates are tied to the May-2025 OpenAI pricing schedule; rate changes would alter the cost frontier.
 
 # 9 Future Work
@@ -394,7 +406,7 @@ The implications for digital history are immediate: large corpora of archival la
 
 # 11 Acknowledgements
 
-This work builds upon the meticulous archival research of Nell Marion Nugent, whose *Cavaliers and Pioneers* abstracts have preserved Virginia's colonial land records for generations of scholars. I am deeply grateful to Bimbola Bashorun for providing the professional GIS benchmark that was crucial to evaluating model performance. Special thanks to the Library of Virginia and the Virginia Surveyor's Office for granting access to their digital archives and land patent collections, which made the ground-truth dataset possible.
+This work builds upon the meticulous archival research of Nell Marion Nugent, whose *Cavaliers and Pioneers* abstracts have preserved Virginia's colonial land records for generations of scholars. I am deeply grateful to Bimbola Bashorun [@Bashorun2025_gis] for providing the professional GIS benchmark that was crucial to evaluating model performance. Special thanks to the Library of Virginia and the Virginia Surveyor's Office for granting access to their digital archives and land patent collections, which made the ground-truth dataset possible.
 
 Finally, I am indebted to the digital humanities community whose ongoing conversations about LLMs and historical research have informed this project's methodological approach.
 
@@ -473,7 +485,7 @@ Table A1 summarizes the model variants and hyperparameter configurations used in
 
 ### A.3 Example Chain-of-Thought Trace (T-4)
 
-Below is a representative example of the tool-augmented chain of thought from method T-4 (gpt-4.1-2025-04-14). This trace demonstrates the model's reasoning process, including query formulation, tool call selection, and coordinate determination for a colonial Virginia land grant.
+Below is a representative example of the tool-augmented chain of thought from from method T-2 (o3-2025-04-16 with tool access). This trace demonstrates the model's reasoning process, including query formulation, tool call selection, and coordinate determination for a colonial Virginia land grant.
 
 **Input Abstract:**
 ```
@@ -482,58 +494,116 @@ WILLIAM WILLIAMS, 400 acs., on S. side of the main Black Water Swamp; by run of 
 
 **Tool-Augmented Reasoning Chain:**
 
-1. **Initial Place Query**
+1. **Locating Key Features**
    ```
+   Reasoning: I need to parse a land grant description from 1703 mentioning "the S side of the main 
+   Black Water Swamp" and locate the southwestern side of it. I know Blackwater Swamp is in 
+   southeastern Virginia, specifically in Prince George County, and flows into the Blackwater River. 
+   There's a part of it in Surry County too. I'm curious if Holloway Swamp is a small tributary.
+   
    Tool: geocode_place
-   Query: "Holloway Swamp, Blackwater Swamp, Virginia"
+   Query: "Holloway Swamp, Sussex County, Virginia"
+   Result: {
+     "lat": 36.9058167, 
+     "lng": -77.2405153, 
+     "formatted_address": "Sussex County, VA, USA"
+   }
+   ```
+
+2. **Cross-Referencing Features**
+   ```
+   Reasoning: I've noted the coordinates for Holloway Swamp in Sussex County. Next, I want to confirm 
+   the location of Blackwater Swamp's larger trunk. The description indicates it's on the south side 
+   of the main Black Water Swamp, near the meeting point of Holloway Swamp.
+   
+   Tool: geocode_place
+   Query: "Blackwater Swamp, Sussex County, Virginia"
+   Result: {
+     "lat": 37.10810973, 
+     "lng": -77.15139208, 
+     "formatted_address": "Blackwater Swamp, Virginia 23842, USA"
+   }
+   ```
+
+3. **Disambiguating Locations**
+   ```
+   Reasoning: I'm looking at the coordinates 37.1081, -77.1514, which seem to place me in northeastern 
+   Sussex County near the Prince George border. I've noted Holloway Swamp's coordinates at 36.9058, 
+   -77.2405, about 0.2 degrees south and slightly west.
+   
+   Tool: geocode_place
+   Query: "Holloway Swamp and Blackwater Swamp confluence, Virginia"
    Result: {
      "lat": 37.4315734, 
      "lng": -78.6568942, 
-     "formatted_address": "Virginia, USA",
-     "strategy": "natural_feature"
+     "formatted_address": "Virginia, USA"
    }
    ```
 
-2. **Refined County-Specific Query - First Feature**
+4. **Further Refinement**
    ```
    Tool: geocode_place
-   Query: "Blackwater Swamp, Surry County, Virginia"
+   Query: "Holloway Branch, Blackwater Swamp, Prince George County, Virginia"
    Result: {
-     "lat": 37.0726784, 
-     "lng": -76.947914, 
-     "formatted_address": "Blackwater Rd, Virginia 23839, USA",
-     "strategy": "natural_feature"
+     "lat": 37.1733, 
+     "lng": -77.2396666, 
+     "formatted_address": "Blackwater Dr, Virginia 23842, USA"
    }
+   
+   Reasoning: I found the coordinates 37.1733, -77.2397, which might be along Blackwater Dr, near Waverly. 
+   But I noticed the coordinates for Holloway Swamp at 36.9058, which is in southwestern Sussex, 
+   so there's a mismatch. It's possible there could be two features named Holloway Swamp.
    ```
 
-3. **Refined County-Specific Query - Second Feature**
+5. **Testing Alternate Spellings**
    ```
    Tool: geocode_place
-   Query: "Holloway Swamp, Surry County, Virginia"
+   Query: "Halloway Swamp, Virginia"
    Result: {
-     "lat": 37.1185515, 
-     "lng": -76.8720961, 
-     "formatted_address": "Surry County, VA, USA",
-     "strategy": "natural_feature"
+     "lat": 37.4315734, 
+     "lng": -78.6568942, 
+     "formatted_address": "Virginia, USA"
+   }
+   
+   Tool: geocode_place
+   Query: "Holloway Swamp, Prince George County, Virginia"
+   Result: {
+     "lat": 37.1593052, 
+     "lng": -77.2405153, 
+     "formatted_address": "Prince George County, VA, USA"
    }
    ```
 
-4. **Centroid Calculation between Identified Features**
+6. **Calculating Spatial Midpoint**
    ```
+   Tool: geocode_place
+   Query: "Blackwater Swamp, Prince George County, Virginia"
+   Result: {
+     "lat": 37.1733, 
+     "lng": -77.2396666, 
+     "formatted_address": "Blackwater Dr, Virginia 23842, USA"
+   }
+   
+   Reasoning: I'm analyzing the coordinates: lat 37.1593, long -77.2405 and lat 37.1733, long -77.2397.
+   The latitude difference of about 0.051 equals roughly 5.6 km north, while the longitude difference
+   is approximately 7.4 km. Since we need the "south side of Blackwater Swamp," we should compute
+   a centroid that reflects this relationship.
+   
    Tool: compute_centroid
    Points: [
-     {"lat": 37.0726784, "lng": -76.947914}, 
-     {"lat": 37.1185515, "lng": -76.8720961}
+     {"lat": 37.1733, "lng": -77.2396666}, 
+     {"lat": 37.1593052, "lng": -77.2405153}
    ]
    Result: {
-     "lat": 37.095620983308734,
-     "lng": -76.91001652542833
+     "lat": 37.16630260, 
+     "lng": -77.24009098
    }
    ```
 
-**Final Coordinate Output:** `37.095621, -76.910017`
+**Final Coordinate Output:** `37.166303, -77.240091`
 
-This example illustrates several key aspects of the tool-augmented approach. First, the model initiates with a broad search that combines both topographic features mentioned in the grant description. Upon receiving generic coordinates, it refines the search by adding county context for each feature separately. Having identified two plausible anchor points (Blackwater Swamp and Holloway Swamp in Surry County), the model leverages the `compute_centroid` tool to average these coordinates. This approach directly implements the workflow described in the system prompt (§4.3), whereby LLMs identifying grants "between" two natural features can calculate an appropriate midpoint location. The final coordinate places the grant in Surry County, which aligns with the geographical context implied in the original abstract.
+This trace demonstrates how the tool-chain approach systematically refines its search, testing multiple geographic hypotheses before settling on a final coordinate. The model first locates the two key features (Blackwater and Holloway Swamps), then resolves ambiguities through both county-specific queries and alternate spellings, finally computing a centroid between the two most plausible anchor points.
+
 
 ### A.4 Function & Tool Specifications
 
@@ -615,9 +685,7 @@ All experiments are orchestrated by a single Python script, `run_experiment.py`,
 * logs raw API traffic—including intermediate tool traces—to `runs/<method>/calls.jsonl`, and
 * emits both row-level results (`results_<evalset>.csv`) and a Markdown run report summarising accuracy, cost, and latency.
 
-This tight integration between evaluation logic and provenance logging ensures that every coordinate prediction in the paper can be reproduced from first principles using the open-source code.  A public repository containing the driver, prompts, ground-truth data, and analysis notebooks will be released upon publication:
-
-<https://github.com/placeholder/llm-colonial-va-landgrants>
+This tight integration between evaluation logic and provenance logging ensures that every coordinate prediction in the paper can be reproduced from first principles using the open-source code. A public repository containing the driver, prompts, ground-truth data, and analysis notebooks is available at [https://github.com/ryanmio/colonial-virginia-llm-geolocation](https://github.com/ryanmio/colonial-virginia-llm-geolocation).
 
 ## Appendix B Extended Results
 
@@ -708,7 +776,7 @@ Tool-augmented methods consumed on average 1.49× more tokens than pure-prompt c
 
 ### B.6 Professional GIS Benchmark Analysis
 
-Table \ref{tbl:human_benchmark} provides a more detailed analysis of the professional GIS benchmark (H-1) results, categorized by precision level. This breakdown reveals that even with expert domain knowledge and access to specialized historical gazetteers, more than 41.9% of the human-geocoded grants were located at only state-level precision. "High" indicates grants where both county boundaries and specific landmarks were used; "Medium" indicates county-centroid placement; "Low" indicates state-level precision only.
+Table \ref{tbl:human_benchmark} provides a more detailed analysis of the professional GIS benchmark (H-1) [@Bashorun2025_gis] results, categorized by precision level. This breakdown reveals that even with expert domain knowledge and access to specialized historical gazetteers, more than 41.9% of the human-geocoded grants were located at only state-level precision. "High" indicates grants where both county boundaries and specific landmarks were used; "Medium" indicates county-centroid placement; "Low" indicates state-level precision only.
 
 | Accuracy Category | N | Share (%) | Mean Error (km) | Median Error (km) |
 |-------|---|---|---|---|
@@ -749,8 +817,6 @@ Processing time presents another critical dimension for evaluation. The figure b
 ![Latency-Accuracy Tradeoff](../analysis/figures/pareto_latency_tradeoff.pdf){#fig:pareto_latency width="\linewidth" fig-pos="H"}
 
 Figure \ref{fig:pareto_latency}: Latency-Accuracy Tradeoff. This figure plots mean error (km) against processing time per grant (seconds) for each evaluated method. All automatic methods produce coordinates in 0.2–13 s of computation time, compared to the GIS analyst's labor time of ≈432 s per grant. Note the logarithmic scale on the x-axis.
-
-These visualizations underscore the transformative potential of LLM-based approaches for digital history projects dealing with large corpora of historical land records. The order-of-magnitude improvements in both cost and processing time, coupled with superior accuracy, establish a compelling case for the adoption of these techniques in archival digitization workflows.
 
 ## Appendix D Tool Augmentation Analysis
 
