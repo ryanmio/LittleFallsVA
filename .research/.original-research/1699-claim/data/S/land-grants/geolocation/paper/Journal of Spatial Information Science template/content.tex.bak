@@ -574,7 +574,7 @@ Figure \ref{fig:accuracy_bar} displays the mean error with corresponding
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/accuracy_bar.pdf}}
+\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/accuracy_bar.pdf}
 \caption{Coordinate accuracy by method}\label{fig:accuracy_bar}
 \end{figure}
 
@@ -648,15 +648,15 @@ gazetteer-based geocoding when dealing with historical place names.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/error_violin_methods.pdf}}
+\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/error_violin_methods.pdf}
 \caption{Error Distribution by Method}\label{fig:violin}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/cdf_graphs/cdf_models_combined.pdf}}
+\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/cdf_graphs/cdf_models_combined.pdf}
 \caption{Cumulative error distribution by method}\label{fig:cdf_models}
-\endend{figure}
+\end{figure}
 
 Figure \ref{fig:cdf_models} presents the cumulative distribution of
 errors for each evaluated method.
@@ -764,7 +764,7 @@ lowest error.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/pareto_tradeoff.pdf}}
+\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/pareto_tradeoff.pdf}
 \caption{Cost-Accuracy Tradeoff}\label{fig:pareto_cost}
 \end{figure}
 
@@ -784,9 +784,9 @@ variation across model families, with the fastest models
 grant, while the Claude-family models (particularly o3-2025-04-16)
 taking up to 48 seconds.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=0.75\linewidth]{../analysis/figures/latency_boxplot.pdf}
+\includegraphics[width=0.75\linewidth]{figures/latency_boxplot.pdf}
 \caption{Distribution of per-grant latency by method.}
 \label{fig:latency_box}
 \end{figure}
@@ -938,7 +938,7 @@ main findings:
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/length_vs_error.png}}
+\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/length_vs_error.png}
 \caption{Length vs.~Error}\label{fig:length-vs-error}
 \end{figure}
 
@@ -1020,18 +1020,18 @@ modes:
   mitigate this issue.
 \end{enumerate}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \begin{subfigure}{0.48\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{../analysis/mapping_workflow/map_outputs/grant_1_map.png}
+  \includegraphics[width=\linewidth,height=0.35\textheight,keepaspectratio]{figures/map_outputs/grant_1_map.png}
   \caption{Success example: Grant 1.}
   \label{fig:grant1}
 \end{subfigure}
 \hfill % Maximal horizontal space between subfigures
 \begin{subfigure}{0.48\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{../analysis/mapping_workflow/map_outputs/grant_19_map.png}
+  \includegraphics[width=\linewidth,height=0.35\textheight,keepaspectratio]{figures/map_outputs/grant_19_map.png}
   \caption{Failure-mode example: Grant 19.}
   \label{fig:grant19}
 \end{subfigure}
@@ -1194,12 +1194,10 @@ Finally, I am indebted to the digital humanities community whose ongoing
 conversations about LLMs and historical research have informed this
 project's methodological approach.
 
-\section{Appendices}\label{appendices}
+\appendix
+\section{Supplementary Methods \& Materials}\label{appendix-a-supplementary-methods-materials}
 
-\subsection{Appendix A Supplementary Methods \&
-Materials}\label{appendix-a-supplementary-methods-materials}
-
-\subsubsection{A.1 OCR \& Text-Normalisation
+\subsection{OCR \& Text-Normalisation
 Pipeline}\label{a.1-ocr-text-normalisation-pipeline}
 
 The corpus preparation described in §3.2 comprised a multi-stage optical
@@ -1223,7 +1221,7 @@ toponym preservation, with spot-checking indicating character-level
 accuracy exceeding 98\% for toponyms. The processed corpus was then
 exported to CSV format for geolocation analysis.
 
-\subsubsection{A.2 Prompts and Model Configurations}\label{sec:prompts}
+\subsection{Prompts and Model Configurations}\label{sec:prompts}
 
 \paragraph{A.2.1 One-Shot Prompt
 (M-series)}\label{a.2.1-one-shot-prompt-m-series}
@@ -1310,7 +1308,7 @@ T-1 & o4-mini-2025-04-16 & tool\_chain & & low \\
 T-4 & gpt-4.1-2025-04-14 & tool\_chain & 0.2 & \\
 \end{longtable}
 
-\subsubsection{A.3 Example Chain-of-Thought Trace
+\subsection{Example Chain-of-Thought Trace
 (T-4)}\label{a.3-example-chain-of-thought-trace-t-4}
 
 Below is a representative example of the tool-augmented chain of thought
@@ -1453,7 +1451,7 @@ features (Blackwater and Holloway Swamps), then resolves ambiguities
 through both county-specific queries and alternate spellings, finally
 computing a centroid between the two most plausible anchor points.
 
-\subsubsection{A.4 Function \& Tool
+\subsection{Function \& Tool
 Specifications}\label{a.4-function-tool-specifications}
 
 Two JSON-Schema tools extend the language model's native reasoning with
@@ -1562,7 +1560,7 @@ meridian-wrap artefacts and preserves accuracy for points separated by
 This structured loop allows the model to chain up to ten tool calls and
 records every intermediate query, result, and internal rationale.
 
-\subsubsection{A.5 Evaluation Driver \& Code
+\subsection{Evaluation Driver \& Code
 Repository}\label{a.5-evaluation-driver-code-repository}
 
 All experiments are orchestrated by a single Python script,
@@ -1598,11 +1596,9 @@ containing the driver, prompts, ground-truth data, and analysis
 notebooks is available at
 \url{https://github.com/ryanmio/colonial-virginia-llm-geolocation}.
 
-\subsection{Appendix B Extended
-Results}\label{appendix-b-extended-results}
+\section{Extended Results}\label{appendix-b-extended-results}
 
-\subsubsection{B.1 Detailed Accuracy
-Metrics}\label{b.1-detailed-accuracy-metrics}
+\subsection{Detailed Accuracy Metrics}\label{b.1-detailed-accuracy-metrics}
 
 Table \ref{tbl:error_ci} provides comprehensive error statistics for
 each evaluated method, including confidence intervals derived from
@@ -1634,8 +1630,7 @@ T-1 & o4-mini-2025-04-16 + tools & 43 & 37.65 & {[}30.61, 45.32{]} \\
 T-4 & gpt-4.1-2025-04-14 + tools & 43 & 37.23 & {[}30.34, 44.24{]} \\
 \end{longtable}
 
-\subsubsection{B.2 Performance by
-Method}\label{b.2-performance-by-method}
+\subsection{Performance by Method}\label{b.2-performance-by-method}
 
 Table \ref{tbl:method_performance} provides the complete performance
 statistics for each method, including variance measures and accuracy
@@ -1735,8 +1730,7 @@ T-4 & 43 & 37.23 & 34.22 & 23.94 & 0.59 & 21.78 & 53.35 & 101.85 &
 16.3\% & 32.6\% & 74.4\% \\
 \end{longtable}
 
-\subsubsection{B.3 Cost-Accuracy
-Trade-off}\label{b.3-cost-accuracy-trade-off}
+\subsection{Cost-Accuracy Trade-off}\label{b.3-cost-accuracy-trade-off}
 
 Table \ref{tbl:cost_accuracy} examines the cost-accuracy relationship,
 emphasizing the economic efficiency of GPT-4o, which achieves near-top
@@ -1791,8 +1785,7 @@ o3-mini-2025-01-31 & 50.25 & 4.7\% & \$14.15 & \$3.04 \\
 human-gis & 71.40 & 4.7\% & \$3,255.81 & \$700.00 \\
 \end{longtable}
 
-\subsubsection{B.4 Processing Time
-Analysis}\label{b.4-processing-time-analysis}
+\subsection{Processing Time Analysis}\label{b.4-processing-time-analysis}
 
 Table \ref{tbl:time_usage} quantifies the latency advantage of automated
 methods over traditional GIS workflows. ``Speedup'' shows relative
@@ -1839,8 +1832,7 @@ o4-mini-2025-04-16 & 0.0067 & 6.698 & 32× \\
 human-gis & 0.2120 & 212.045 & 1× \\
 \end{longtable}
 
-\subsubsection{B.5 Token Usage
-Statistics}\label{b.5-token-usage-statistics}
+\subsection{Token Usage Statistics}\label{b.5-token-usage-statistics}
 
 Table \ref{tbl:token_usage} provides detailed token consumption data
 across all models, offering insight into computational efficiency.
@@ -1873,7 +1865,7 @@ architecture: adding tools to GPT-4.1 increased token usage by 18.3×
 (176,698 → 3,229,140), while o4-mini showed only a 1.14× increase
 (5,937,907 → 6,742,767).
 
-\subsubsection{B.6 Professional GIS Benchmark
+\subsection{Professional GIS Benchmark
 Analysis}\label{b.6-professional-gis-benchmark-analysis}
 
 Table \ref{tbl:human_benchmark} provides a more detailed analysis of the
@@ -1918,7 +1910,7 @@ Share (\%)
 Mean Error (km)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Median Error (km)
-\end{minipage} \\
+\endend{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1936,11 +1928,9 @@ methods except GPT-3.5-turbo (M-6). This underscores the inherent
 difficulty of the task and further highlights the significance of the
 accuracy improvements achieved by the LLM approaches.
 
-\subsection{Appendix C Supplementary
-Figures}\label{appendix-c-supplementary-figures}
+\section{Supplementary Figures}\label{appendix-c-supplementary-figures}
 
-\subsubsection{C.1 Error Distribution
-Plots}\label{c.1-error-distribution-plots}
+\subsection{Error Distribution Plots}\label{c.1-error-distribution-plots}
 
 Figure \ref{fig:error_boxplot} shows the distribution of geolocation
 error for each method as a boxplot, complementing the violin plot and
@@ -1951,15 +1941,15 @@ and central tendency.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/error_boxplot.pdf}}
+\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/error_boxplot.pdf}
 \caption{Error Distribution Boxplot by Method}\label{fig:error_boxplot}
 \end{figure}
 
-\subsubsection{C.2 Error Maps}\label{c.2-error-maps}
+\subsection{Error Maps}\label{c.2-error-maps}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/mapping_workflow/contact_sheet.png}}
+\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/contact_sheet.png}
 \caption{Grid view of all 43 mapped grants showing ground truth and all
 predictions.}\label{fig:contactsheet}
 \end{figure}
@@ -1968,8 +1958,7 @@ Figure \ref{fig:contactsheet} plots all six methods for every locatable
 grant against ground truth coordinates (black stars). Error distances
 are shown as dashed lines connecting predictions to ground truth.
 
-\subsubsection{C.3 Cost-Accuracy
-Tradeoff}\label{c.3-cost-accuracy-tradeoff}
+\subsection{Cost-Accuracy Tradeoff}\label{c.3-cost-accuracy-tradeoff}
 
 Figure \ref{fig:pareto_cost_appendix} presents the cost-accuracy Pareto
 frontier across all evaluated methods. This visualization expands upon
@@ -1979,7 +1968,7 @@ accuracy.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/pareto_tradeoff.pdf}}
+\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/pareto_tradeoff.pdf}
 \caption{Cost-Accuracy Pareto Frontier}\label{fig:pareto_cost_appendix}
 \end{figure}
 
@@ -1992,8 +1981,7 @@ relatively high error. GPT-4o offers the most favorable cost-to-accuracy
 ratio despite not achieving the absolute lowest error, while
 o3-2025-04-16 delivers the best accuracy at significantly higher cost.
 
-\subsubsection{C.4 Latency-Accuracy
-Tradeoff}\label{c.4-latency-accuracy-tradeoff}
+\subsection{Latency-Accuracy Tradeoff}\label{c.4-latency-accuracy-tradeoff}
 
 Processing time presents another critical dimension for evaluation. The
 figure below shows how each method balances computational latency
@@ -2003,7 +1991,7 @@ maintaining lower error rates than the professional GIS approach.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/pareto_latency_tradeoff.pdf}}
+\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/pareto_latency_tradeoff.pdf}
 \caption{Latency-Accuracy Tradeoff}\label{fig:pareto_latency}
 \end{figure}
 
@@ -2013,8 +2001,7 @@ each evaluated method. All automatic methods produce coordinates in
 0.2--13 s of computation time, compared to the GIS analyst's labor time
 of ≈432 s per grant. Note the logarithmic scale on the x-axis.
 
-\subsection{Appendix D Tool Augmentation
-Analysis}\label{appendix-d-tool-augmentation-analysis}
+\section{Tool Augmentation Analysis}\label{appendix-d-tool-augmentation-analysis}
 
 Table \ref{tbl:tool_direct_comparison} isolates the impact of providing
 tool access to identical models, revealing that tool augmentation does
@@ -2022,7 +2009,7 @@ not consistently improve accuracy. For GPT-4.1, enabling tool access
 increases mean error by 30.6\%, while for the o4-mini model, it
 decreases error by 9.6\%.
 
-\subsubsection{D.1 Direct Tool vs.~Non-Tool
+\subsection{Direct Tool vs.~Non-Tool
 Comparison}\label{d.1-direct-tool-vs.-non-tool-comparison}
 
 Table \ref{tbl:tool_direct_comparison} provides a head-to-head
@@ -2113,7 +2100,7 @@ o4-mini-2025-04-16 & tool chain & 37.65 & 33.61 & 24.54 & 0.59 & 110.19
 & 4.7\% & 11.6\% & 14.0\% & 32.6\% & 69.8\% \\
 \end{longtable}
 
-\subsubsection{D.2 Quantified Tool
+\subsection{Quantified Tool
 Effect}\label{d.2-quantified-tool-effect}
 
 Table \ref{tbl:tool_effect} quantifies the precise impact of tool
@@ -2191,7 +2178,7 @@ While the o4-mini model showed a modest improvement with tools, the
 higher-quality GPT-4.1 model performed substantially worse when given
 tool access.
 
-\subsubsection{D.3 Top-performing methods per tool-use
+\subsection{Top-performing methods per tool-use
 category}\label{d.3-top-performing-methods-per-tool-use-category}
 
 Table \ref{tbl:best_methods} shows a direct head-to-head comparison of
@@ -2278,7 +2265,7 @@ At the category level, the best non-tool method (M-2) significantly
 outperformed the best tool-augmented method (T-4) across all error
 metrics.
 
-\subsubsection{D.4 Tool Call
+\subsection{Tool Call
 Distribution}\label{d.4-tool-call-distribution}
 
 Table \ref{tbl:tool_distribution} expands on the tool usage patterns
@@ -2305,7 +2292,7 @@ T-4 (gpt-4.1) & geocode\_place & 2.05 & 1.78 & 1 & 1 & 7 \\
 T-4 (gpt-4.1) & compute\_centroid & 0.25 & 0.43 & 0 & 0 & 1 \\
 \end{longtable}
 
-\subsubsection{D.5 ToolSearch
+\subsection{ToolSearch
 Efficiency}\label{d.5-toolsearch-efficiency}
 
 ``Selected call index'' indicates which API call in the sequence

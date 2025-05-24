@@ -784,7 +784,7 @@ variation across model families, with the fastest models
 grant, while the Claude-family models (particularly o3-2025-04-16)
 taking up to 48 seconds.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.75\linewidth]{figures/latency_boxplot.pdf}
 \caption{Distribution of per-grant latency by method.}
@@ -813,7 +813,8 @@ One-Shot (M-2)
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-1. Feature ID & Holloway Branch, Blackwater Swamp & run of Holloway Sw \\
+1. Feature ID & Holloway Branch, Blackwater Swamp & run of Holloway
+Sw \\
 2. First lookup & geocode\_place(``H. Branch, B. Swamp\ldots{}'') → PG
 County & Mental estimate \\
 3. Mismatch check & Sussex County result → refine to ``Holloway Swamp''
@@ -1020,7 +1021,7 @@ modes:
   mitigate this issue.
 \end{enumerate}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \begin{subfigure}{0.48\textwidth}
   \centering
@@ -1193,9 +1194,10 @@ possible.
 Finally, I am indebted to the digital humanities community whose ongoing
 conversations about LLMs and historical research have informed this
 project's methodological approach.
-
 \appendix
-\section{Supplementary Methods \& Materials}\label{appendix-a-supplementary-methods-materials}
+
+\section{Supplementary Methods \&
+Materials}\label{appendix-a-supplementary-methods-materials}
 
 \subsection{OCR \& Text-Normalisation
 Pipeline}\label{a.1-ocr-text-normalisation-pipeline}
@@ -1596,9 +1598,11 @@ containing the driver, prompts, ground-truth data, and analysis
 notebooks is available at
 \url{https://github.com/ryanmio/colonial-virginia-llm-geolocation}.
 
-\section{Extended Results}\label{appendix-b-extended-results}
+\section{Extended
+Results}\label{appendix-b-extended-results}
 
-\subsection{Detailed Accuracy Metrics}\label{b.1-detailed-accuracy-metrics}
+\subsection{Detailed Accuracy
+Metrics}\label{b.1-detailed-accuracy-metrics}
 
 Table \ref{tbl:error_ci} provides comprehensive error statistics for
 each evaluated method, including confidence intervals derived from
@@ -1630,7 +1634,8 @@ T-1 & o4-mini-2025-04-16 + tools & 43 & 37.65 & {[}30.61, 45.32{]} \\
 T-4 & gpt-4.1-2025-04-14 + tools & 43 & 37.23 & {[}30.34, 44.24{]} \\
 \end{longtable}
 
-\subsection{Performance by Method}\label{b.2-performance-by-method}
+\subsection{Performance by
+Method}\label{b.2-performance-by-method}
 
 Table \ref{tbl:method_performance} provides the complete performance
 statistics for each method, including variance measures and accuracy
@@ -1730,7 +1735,8 @@ T-4 & 43 & 37.23 & 34.22 & 23.94 & 0.59 & 21.78 & 53.35 & 101.85 &
 16.3\% & 32.6\% & 74.4\% \\
 \end{longtable}
 
-\subsection{Cost-Accuracy Trade-off}\label{b.3-cost-accuracy-trade-off}
+\subsection{Cost-Accuracy
+Trade-off}\label{b.3-cost-accuracy-trade-off}
 
 Table \ref{tbl:cost_accuracy} examines the cost-accuracy relationship,
 emphasizing the economic efficiency of GPT-4o, which achieves near-top
@@ -1785,7 +1791,8 @@ o3-mini-2025-01-31 & 50.25 & 4.7\% & \$14.15 & \$3.04 \\
 human-gis & 71.40 & 4.7\% & \$3,255.81 & \$700.00 \\
 \end{longtable}
 
-\subsection{Processing Time Analysis}\label{b.4-processing-time-analysis}
+\subsection{Processing Time
+Analysis}\label{b.4-processing-time-analysis}
 
 Table \ref{tbl:time_usage} quantifies the latency advantage of automated
 methods over traditional GIS workflows. ``Speedup'' shows relative
@@ -1832,7 +1839,8 @@ o4-mini-2025-04-16 & 0.0067 & 6.698 & 32× \\
 human-gis & 0.2120 & 212.045 & 1× \\
 \end{longtable}
 
-\subsection{Token Usage Statistics}\label{b.5-token-usage-statistics}
+\subsection{Token Usage
+Statistics}\label{b.5-token-usage-statistics}
 
 Table \ref{tbl:token_usage} provides detailed token consumption data
 across all models, offering insight into computational efficiency.
@@ -1910,7 +1918,7 @@ Share (\%)
 Mean Error (km)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Median Error (km)
-\endend{minipage} \\
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1928,9 +1936,11 @@ methods except GPT-3.5-turbo (M-6). This underscores the inherent
 difficulty of the task and further highlights the significance of the
 accuracy improvements achieved by the LLM approaches.
 
-\section{Supplementary Figures}\label{appendix-c-supplementary-figures}
+\section{Supplementary
+Figures}\label{appendix-c-supplementary-figures}
 
-\subsection{Error Distribution Plots}\label{c.1-error-distribution-plots}
+\subsection{Error Distribution
+Plots}\label{c.1-error-distribution-plots}
 
 Figure \ref{fig:error_boxplot} shows the distribution of geolocation
 error for each method as a boxplot, complementing the violin plot and
@@ -1958,7 +1968,8 @@ Figure \ref{fig:contactsheet} plots all six methods for every locatable
 grant against ground truth coordinates (black stars). Error distances
 are shown as dashed lines connecting predictions to ground truth.
 
-\subsection{Cost-Accuracy Tradeoff}\label{c.3-cost-accuracy-tradeoff}
+\subsection{Cost-Accuracy
+Tradeoff}\label{c.3-cost-accuracy-tradeoff}
 
 Figure \ref{fig:pareto_cost_appendix} presents the cost-accuracy Pareto
 frontier across all evaluated methods. This visualization expands upon
@@ -1981,7 +1992,8 @@ relatively high error. GPT-4o offers the most favorable cost-to-accuracy
 ratio despite not achieving the absolute lowest error, while
 o3-2025-04-16 delivers the best accuracy at significantly higher cost.
 
-\subsection{Latency-Accuracy Tradeoff}\label{c.4-latency-accuracy-tradeoff}
+\subsection{Latency-Accuracy
+Tradeoff}\label{c.4-latency-accuracy-tradeoff}
 
 Processing time presents another critical dimension for evaluation. The
 figure below shows how each method balances computational latency
@@ -2001,7 +2013,8 @@ each evaluated method. All automatic methods produce coordinates in
 0.2--13 s of computation time, compared to the GIS analyst's labor time
 of ≈432 s per grant. Note the logarithmic scale on the x-axis.
 
-\section{Tool Augmentation Analysis}\label{appendix-d-tool-augmentation-analysis}
+\section{Tool Augmentation
+Analysis}\label{appendix-d-tool-augmentation-analysis}
 
 Table \ref{tbl:tool_direct_comparison} isolates the impact of providing
 tool access to identical models, revealing that tool augmentation does
