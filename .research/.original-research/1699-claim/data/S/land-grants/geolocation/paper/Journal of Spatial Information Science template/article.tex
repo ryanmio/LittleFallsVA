@@ -26,7 +26,7 @@
 %%% * Bibliography (e.g., en-dashes for number ranges, consistent "Proc.~" for Proceedings of..., etc.) []
 %%% * Acknowledgment style use section* [ ] 
 %%% * et al. no italics, but with dot  [ ] 
-%%% * All captions end with full stop  [ ] 
+%%% * All captions end with full stop  [ ]
 %%% * Table captions under, not over table  [ ]
 %%% * Adjust urls with burlalt [ ] 
 %%% * Check correct use of hyphens, emdashes, endashes  [ ]
@@ -58,6 +58,8 @@
 \usepackage{longtable}
 \usepackage{listings}
 \usepackage{calc}
+\usepackage{float}
+\usepackage{subcaption}
 
 % Added for Pandoc-crossref friendly \cref commands
 \usepackage{cleveref}
@@ -65,6 +67,7 @@
 % Pandoc compatibility macros
 \providecommand{\tightlist}{}
 \newcommand{\real}[1]{#1}
+\newcommand{\pandocbounded}[1]{#1}
 
 % Text wrapping helpers
 \usepackage{fvextra}
