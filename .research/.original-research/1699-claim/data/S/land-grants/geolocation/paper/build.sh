@@ -94,3 +94,60 @@ fi
 rm -f "$PAPER_DIR/styling.tex"
 
 echo "Build process complete." 
+
+# ---------------- JOSIS / Overleaf build ----------------
+#   1. Convert Markdown to a LaTeX body (content.tex)
+#   2. Sync figures and bibliography into the template folder
+#   3. Optionally compile a JOSIS-styled PDF for local preview
+# --------------------------------------------------------
+
+# Location of the JOSIS template folder relative to this script
+TEMPLATE_DIR="$PAPER_DIR/Journal of Spatial Information Science template"
+
+# Ensure template folder exists
+if [ -d "$TEMPLATE_DIR" ]; then
+    echo "Updating JOSIS template at: $TEMPLATE_DIR"
+else
+    echo "⚠️  JOSIS template folder not found at $TEMPLATE_DIR – skipping JOSIS build."
+    exit 0
+fi
+
+# Path to output body-only LaTeX
+CONTENT_TEX="$TEMPLATE_DIR/content.tex"
+
+# 1. Generate body-only LaTeX (no preamble)
+pandoc "$MAIN_MD" \
+  --from markdown \
+  --to latex \
+  --natbib \
+  --listings \
+  $CROSSREF \
+  --resource-path="$PAPER_DIR:$FIGURES_DIR" \
+  -o "$CONTENT_TEX"
+
+# 2. Copy bibliography
+cp "$REFS_BIB" "$TEMPLATE_DIR/refs.bib"
+
+# 3. Sync figure assets used in the paper into template/figures
+if [ -d "$FIGURES_DIR" ]; then
+  rsync -av --delete "$FIGURES_DIR/" "$TEMPLATE_DIR/figures/" | grep -v '/$'
+fi
+
+# 4. (Optional) compile JOSIS PDF locally for preview
+if command -v latexmk &> /dev/null; then
+  (
+    cd "$TEMPLATE_DIR" || exit 1
+    echo "Compiling JOSIS-formatted PDF…"
+    latexmk -pdf -silent article.tex
+    latexmk -c # clean aux files
+  )
+  if [ -f "$TEMPLATE_DIR/article.pdf" ]; then
+    echo "JOSIS PDF built at $TEMPLATE_DIR/article.pdf"
+  else
+    echo "⚠️  LaTeX build failed—check logs in template folder."
+  fi
+else
+  echo "Latexmk not available; Skipping local JOSIS PDF compilation."
+fi
+
+echo "JOSIS update complete." 
