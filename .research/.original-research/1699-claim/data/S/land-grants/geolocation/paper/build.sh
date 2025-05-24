@@ -115,6 +115,12 @@ fi
 # Path to output body-only LaTeX
 CONTENT_TEX="$TEMPLATE_DIR/content.tex"
 
+# Backup the current content.tex if it exists
+if [ -f "$CONTENT_TEX" ]; then
+    cp "$CONTENT_TEX" "$CONTENT_TEX.backup"
+    echo "Backed up existing content.tex to content.tex.backup"
+fi
+
 # 1. Generate body-only LaTeX (no preamble)
 pandoc "$MAIN_MD" \
   --from markdown \
@@ -125,15 +131,188 @@ pandoc "$MAIN_MD" \
   --resource-path="$PAPER_DIR:$FIGURES_DIR" \
   -o "$CONTENT_TEX"
 
-# 2. Copy bibliography
-cp "$REFS_BIB" "$TEMPLATE_DIR/refs.bib"
+# 2. Post-process the content.tex file for JOSIS format...
+echo "Post-processing content.tex for JOSIS format..."
 
-# 3. Sync figure assets used in the paper into template/figures
-if [ -d "$FIGURES_DIR" ]; then
-  rsync -av --delete "$FIGURES_DIR/" "$TEMPLATE_DIR/figures/" | grep -v '/$'
+# FIRST: Remove the abstract section entirely since it's handled by article.tex
+# Find the Introduction section and remove everything before it
+INTRO_LINE=$(grep -n "Introduction" "$CONTENT_TEX" | head -1 | cut -d':' -f1)
+if [ ! -z "$INTRO_LINE" ]; then
+  # Remove everything from the beginning to the Introduction line (not including Introduction)
+  sed -i '' "1,$((INTRO_LINE-1))d" "$CONTENT_TEX"
+  echo "Removed abstract section - content.tex now starts with Introduction"
+else
+  echo "Warning: Could not find Introduction section"
 fi
 
-# 4. (Optional) compile JOSIS PDF locally for preview
+# Fix section numbering by adding numbers to section headers
+sed -i '' 's/\\section{/\\section{/g' "$CONTENT_TEX"
+sed -i '' 's/\\section{1 /\\section{/g' "$CONTENT_TEX"
+sed -i '' 's/\\section{2 /\\section{/g' "$CONTENT_TEX"
+sed -i '' 's/\\section{3 /\\section{/g' "$CONTENT_TEX"
+sed -i '' 's/\\section{4 /\\section{/g' "$CONTENT_TEX"
+sed -i '' 's/\\section{5 /\\section{/g' "$CONTENT_TEX"
+sed -i '' 's/\\section{6 /\\section{/g' "$CONTENT_TEX"
+sed -i '' 's/\\section{7 /\\section{/g' "$CONTENT_TEX"
+sed -i '' 's/\\section{8 /\\section{/g' "$CONTENT_TEX"
+sed -i '' 's/\\section{9 /\\section{/g' "$CONTENT_TEX"
+sed -i '' 's/\\section{10 /\\section{/g' "$CONTENT_TEX"
+sed -i '' 's/\\section{11 /\\section{/g' "$CONTENT_TEX"
+
+# Fix subsection numbering
+sed -i '' 's/\\subsection{1\.1 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{1\.2 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{1\.3 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{2\.1 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{2\.2 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{2\.3 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{3\.1 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{3\.2 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{3\.3 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{4\.1 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{4\.2 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{4\.3 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{4\.4 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{5\.1 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{5\.2 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{6\.1 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{6\.2 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{6\.3 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{6\.4 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{6\.5 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{6\.6 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{7\.1 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{7\.2 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{7\.3 /\\subsection{/g' "$CONTENT_TEX"
+
+# Properly handle the appendix
+# First remove any existing appendix commands
+sed -i '' '/\\appendix/d' "$CONTENT_TEX"
+sed -i '' '/\\section{Appendices}/d' "$CONTENT_TEX"
+
+# Find the line number of the first supplementary section
+SUPP_LINE=$(grep -n "section{Supplementary Methods" "$CONTENT_TEX" | head -1 | cut -d':' -f1)
+
+if [ ! -z "$SUPP_LINE" ]; then
+  # Insert a line before the Supplementary Methods section
+  sed -i '' "${SUPP_LINE}i\\
+\\\\appendix" "$CONTENT_TEX"
+  # Fix the literal \n that might be inserted
+  sed -i '' 's/\\\\appendix\\n/\\\\appendix/' "$CONTENT_TEX"
+  sed -i '' 's/\\\\appendix/\\appendix/' "$CONTENT_TEX"
+  echo "Inserted appendix command at line $SUPP_LINE"
+else
+  # Fallback: try with Acknowledgements section
+  ACK_LINE=$(grep -n "section{Acknowledgements}" "$CONTENT_TEX" | head -1 | cut -d':' -f1)
+  
+  if [ ! -z "$ACK_LINE" ]; then
+    # Add 15 lines to get past the acknowledgements section
+    INSERT_LINE=$((ACK_LINE + 15))
+    sed -i '' "${INSERT_LINE}i\\
+\\\\appendix" "$CONTENT_TEX"
+    # Fix the literal \n that might be inserted
+    sed -i '' 's/\\\\appendix\\n/\\\\appendix/' "$CONTENT_TEX"
+    sed -i '' 's/\\\\appendix/\\appendix/' "$CONTENT_TEX"
+    echo "Inserted appendix command at line $INSERT_LINE (after Acknowledgements)"
+  else
+    echo "Warning: Could not find appropriate place to insert appendix command"
+  fi
+fi
+
+# Fix appendix subsections
+sed -i '' 's/\\subsection{Appendix A Supplementary Methods/\\section{Supplementary Methods/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{Appendix B Extended/\\section{Extended/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{Appendix C Supplementary/\\section{Supplementary/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{Appendix D Tool/\\section{Tool/g' "$CONTENT_TEX"
+
+# Fix subsubsections in appendices
+sed -i '' 's/\\subsubsection{A\.1 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{A\.2 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{A\.3 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{A\.4 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{A\.5 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{B\.1 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{B\.2 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{B\.3 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{B\.4 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{B\.5 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{B\.6 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{C\.1 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{C\.2 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{C\.3 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{C\.4 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{D\.1 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{D\.2 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{D\.3 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{D\.4 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsubsection{D\.5 /\\subsection{/g' "$CONTENT_TEX"
+
+# Fix includegraphics paths and options for better JOSIS compatibility
+# IMPORTANT: Preserve the original image formatting and only change the paths
+
+# First, fix the grant example images with proper formatting (before general path replacement)
+sed -i '' 's/\\includegraphics\[width=\\linewidth,height=0.35\\textheight,keepaspectratio\]{..\/analysis\/figures\/map_outputs/\\includegraphics[width=\\linewidth,height=0.35\\textheight,keepaspectratio]{figures\/map_outputs/g' "$CONTENT_TEX"
+
+# Then fix other image types
+sed -i '' 's/\\includegraphics\[width=\\textwidth,height=0.8\\textheight,keepaspectratio\]{..\/analysis\/figures/\\includegraphics[width=\\textwidth,height=0.8\\textheight,keepaspectratio]{figures/g' "$CONTENT_TEX"
+sed -i '' 's/\\includegraphics\[width=\\linewidth,height=0.35\\textheight,keepaspectratio\]{..\/analysis\/figures/\\includegraphics[width=\\linewidth,height=0.35\\textheight,keepaspectratio]{figures/g' "$CONTENT_TEX"
+sed -i '' 's/\\includegraphics\[width=0.75\\linewidth\]{..\/analysis\/figures/\\includegraphics[width=0.75\\linewidth]{figures/g' "$CONTENT_TEX"
+sed -i '' 's/\\begin{figure}\[htbp\]/\\begin{figure}[H]/g' "$CONTENT_TEX"
+
+# Make sure pandocbounded includes are properly handled
+sed -i '' 's/\\pandocbounded{\\includegraphics\[keepaspectratio\]{..\/analysis\/figures/\\pandocbounded{\\includegraphics[keepaspectratio]{figures/g' "$CONTENT_TEX"
+
+# Replace all remaining references to "../analysis/figures" with "figures"
+sed -i '' 's/..\/analysis\/figures/figures/g' "$CONTENT_TEX"
+
+# Convert pandocbounded format to specific sizing format (to match manually edited version)
+sed -i '' 's/\\pandocbounded{\\includegraphics\[keepaspectratio\]{figures\/\([^}]*\)}}/\\includegraphics[width=\\textwidth,height=0.8\\textheight,keepaspectratio]{figures\/\1}/g' "$CONTENT_TEX"
+
+# Apply pandocbounded conversion again to catch any remaining patterns
+sed -i '' 's/\\pandocbounded{\\includegraphics\[keepaspectratio\]{figures\/\([^}]*\)}}/\\includegraphics[width=\\textwidth,height=0.8\\textheight,keepaspectratio]{figures\/\1}/g' "$CONTENT_TEX"
+
+# Fix figure path for grant examples 
+sed -i '' 's/..\/analysis\/mapping_workflow\/map_outputs/figures\/map_outputs/g' "$CONTENT_TEX"
+sed -i '' 's/..\/analysis\/mapping_workflow\/contact_sheet.png/figures\/contact_sheet.png/g' "$CONTENT_TEX"
+
+# Add missing height and aspect ratio parameters to grant map images
+sed -i '' 's/\\includegraphics\[width=\\linewidth\]{figures\/map_outputs/\\includegraphics[width=\\linewidth,height=0.35\\textheight,keepaspectratio]{figures\/map_outputs/g' "$CONTENT_TEX"
+
+# Fix the endminipage issue 
+sed -i '' 's/\\endend{minipage}/\\end{minipage}/g' "$CONTENT_TEX"
+
+# FINAL: Convert any remaining pandocbounded patterns (do this last)
+sed -i '' 's/\\pandocbounded{\\includegraphics\[keepaspectratio\]{figures\/\([^}]*\)}}/\\includegraphics[width=\\textwidth,height=0.8\\textheight,keepaspectratio]{figures\/\1}/g' "$CONTENT_TEX"
+
+# 3. Copy bibliography
+cp "$REFS_BIB" "$TEMPLATE_DIR/refs.bib"
+
+# 4. Sync figure assets used in the paper into template/figures
+if [ -d "$FIGURES_DIR" ]; then
+  # Create figures directory in template if it doesn't exist
+  mkdir -p "$TEMPLATE_DIR/figures"
+  
+  # Copy figures to template directory
+  rsync -av --delete "$FIGURES_DIR/" "$TEMPLATE_DIR/figures/" | grep -v '/$'
+  
+  # Create mapping_workflow directory and copy map outputs if they exist
+  MAPPING_DIR="$(dirname "$PAPER_DIR")/analysis/mapping_workflow"
+  if [ -d "$MAPPING_DIR" ]; then
+    mkdir -p "$TEMPLATE_DIR/figures/mapping_workflow"
+    rsync -av --delete "$MAPPING_DIR/" "$TEMPLATE_DIR/figures/mapping_workflow/" | grep -v '/$'
+  fi
+  
+  # Create cdf_graphs directory if it doesn't exist
+  mkdir -p "$TEMPLATE_DIR/figures/cdf_graphs"
+  
+  # Copy CDF graphs if they exist
+  CDF_DIR="$FIGURES_DIR/cdf_graphs"
+  if [ -d "$CDF_DIR" ]; then
+    rsync -av --delete "$CDF_DIR/" "$TEMPLATE_DIR/figures/cdf_graphs/" | grep -v '/$'
+  fi
+fi
+
+# 5. (Optional) compile JOSIS PDF locally for preview
 if command -v latexmk &> /dev/null; then
   (
     cd "$TEMPLATE_DIR" || exit 1
