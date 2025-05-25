@@ -329,4 +329,49 @@ else
   echo "Latexmk not available; Skipping local JOSIS PDF compilation."
 fi
 
+# 6. Create double-blind versions for submission
+echo "Creating double-blind versions for submission..."
+
+# Create blind article.tex by copying and editing the original
+cp "$TEMPLATE_DIR/article.tex" "$TEMPLATE_DIR/article_blind.tex"
+
+# Remove identifying information from article_blind.tex
+sed -i '' 's/Ryan Mioduski/[Author name removed for blind review]/g' "$TEMPLATE_DIR/article_blind.tex"
+sed -i '' 's/Independent Researcher/[Affiliation removed for blind review]/g' "$TEMPLATE_DIR/article_blind.tex"
+sed -i '' 's/received={May 24, 2025}/received={[Date removed for blind review]}/g' "$TEMPLATE_DIR/article_blind.tex"
+
+# Create blind content.tex by removing identifying information
+cp "$CONTENT_TEX" "$TEMPLATE_DIR/content_blind.tex"
+
+# Remove GitHub references (replace with placeholder)
+sed -i '' 's|https://github\.com/ryanmio/colonial-virginia-llm-geolocation|[Repository URL removed for blind review]|g' "$TEMPLATE_DIR/content_blind.tex"
+sed -i '' 's|https://github\.com/ryanmioduskiimac/littlefallsva|[Repository URL removed for blind review]|g' "$TEMPLATE_DIR/content_blind.tex"
+
+# Remove acknowledgments section entirely
+sed -i '' '/\\section{Acknowledgments}/,/^$/d' "$TEMPLATE_DIR/content_blind.tex"
+sed -i '' '/\\subsection{Acknowledgments}/,/^$/d' "$TEMPLATE_DIR/content_blind.tex"
+
+# Replace any author name references
+sed -i '' 's/Ryan Mioduski/[Author name removed for blind review]/g' "$TEMPLATE_DIR/content_blind.tex"
+
+# Compile blind version if latexmk is available
+if command -v latexmk &> /dev/null; then
+  (
+    cd "$TEMPLATE_DIR" || exit 1
+    echo "Compiling double-blind PDF..."
+    latexmk -pdf -silent article_blind.tex
+    latexmk -c # clean aux files
+  )
+  if [ -f "$TEMPLATE_DIR/article_blind.pdf" ]; then
+    echo "Double-blind PDF built at $TEMPLATE_DIR/article_blind.pdf"
+  else
+    echo "⚠️  Double-blind LaTeX build failed—check logs in template folder."
+  fi
+fi
+
+echo "Double-blind versions created:"
+echo "  - $TEMPLATE_DIR/article_blind.tex"
+echo "  - $TEMPLATE_DIR/content_blind.tex"
+echo "  - $TEMPLATE_DIR/article_blind.pdf (if LaTeX compilation succeeded)"
+
 echo "JOSIS update complete." 

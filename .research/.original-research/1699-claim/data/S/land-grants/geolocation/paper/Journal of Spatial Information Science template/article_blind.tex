@@ -1,0 +1,156 @@
+%% josis.tex 1.4   2016-09-15    JoSIS latex template
+%------------------------------------------------------------------
+% Filename: josis_template.tex
+%
+% This file is intended as a template for typesetting articles for the
+%
+%                        Journal of Spatial Information Science.
+%
+% Please edit this template to generate your own formatted manuscripts
+% for submission to JOSIS. See http://josis.org for further details.
+%
+
+
+%%% JOSIS checks in typesetting
+%%% * All titles and sections lower case *EXCEPT short title  [ ]
+%%% * Remove author postal addresses, only have geographic places and institutions [ ] 
+%%% * Consistent use of Section, Figure, Table (capitalized and in full) [ ]
+%%% * 10 keywords (and all lower case) [ ]
+%%% * Remove all avoidable footnotes [ ]
+%%% * Use double quotation marks (``'' not "" or `') [ ]
+%%% * Punctuation inside quotations [ ]
+%%% * E.g. and i.e. followed by comma [ ]
+%%% * cf. followed by tilde [ ]
+%%% * Itemize and enumerate correctly punctuated [e.g., "1. x, 2. y, and 3. x." ]
+%%% * And/or lists using American English punctuation (e.g., "x, y, and z") [ ] 
+%%% * Bibliography (e.g., en-dashes for number ranges, consistent "Proc.~" for Proceedings of..., etc.) []
+%%% * Acknowledgment style use section* [ ] 
+%%% * et al. no italics, but with dot  [ ] 
+%%% * All captions end with full stop  [ ]
+%%% * Table captions under, not over table  [ ]
+%%% * Adjust urls with burlalt [ ] 
+%%% * Check correct use of hyphens, emdashes, endashes  [ ]
+%%% * Perform spell check  [ ] 
+
+%%% JOSIS checks directly before publication 
+%%% Check DOI, page numbers on article and web site. [ ]
+%%% Update web site with final title, abstract, keywords. [ ] 
+%%% Build with distiller for DOI links. [ ]
+
+
+% Required documentclass definition for JOSIS
+\documentclass{josis}
+\usepackage{hyperref}
+\usepackage[hyphenbreaks]{breakurl}
+\usepackage{booktabs}
+\usepackage{stmaryrd}
+\usepackage[T1]{fontenc}
+\usepackage[numbers]{natbib}
+
+% Suggested packages for algorithm formatting
+\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage{algpseudocode}
+
+
+\usepackage[table]{xcolor}
+\usepackage{amssymb,amsmath}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{calc}
+\usepackage{float}
+\usepackage{subcaption}
+
+% Added for Pandoc-crossref friendly \cref commands
+\usepackage{cleveref}
+
+% Pandoc compatibility macros
+\providecommand{\tightlist}{}
+\newcommand{\real}[1]{#1}
+\newcommand{\pandocbounded}[1]{#1}
+
+% Text wrapping helpers
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Verbatim}{Verbatim}{breaklines=true, breakanywhere=true}
+
+% Force aggressive line breaking for all code listings
+\lstset{
+  breaklines=true,
+  breakatwhitespace=false,
+  breakanywhere=true,
+  columns=fullflexible,
+  basicstyle=\small\ttfamily,
+  keepspaces=true
+}
+
+\renewcommand{\topfraction}{0.9} 
+\renewcommand{\textfraction}{0.1}
+
+% Page setup and overhangs
+\sloppy
+\widowpenalty=10000
+\clubpenalty=10000
+\hyphenpenalty=75
+
+% Article details for accepted manuscripts will be added by editorial staff
+% Omit year if article in press
+% Omit number if article under review
+\josisdetails{%
+   number=N, year=YYYY, firstpage=xx, lastpage=yy, 
+  doi={10.5311/JOSIS.YYYY.II.NNN},
+   received={[Date removed for blind review]}, 
+   returned={January 1, 2000},
+   revised={January 1, 2000},
+   accepted={January 1, 2000}, }
+
+\newcommand{\mydoi}[1]{\href{http://dx.doi.org/#1}{doi:\protect\detokenize{#1}}}
+
+\urlstyle{rm}
+\makeatletter
+% Inspired by http://anti.teamidiot.de/nei/2009/09/latex_url_slash_spacingkerning/
+% but slightly less kern and shorter underscore
+\let\UrlSpecialsOld\UrlSpecials
+\def\UrlSpecials{\UrlSpecialsOld\do\/{\Url@slash}\do\_{\Url@underscore}}%
+\def\Url@slash{\@ifnextchar/{\kern-.11em\mathchar47\kern-.2em}%
+    {\kern-.0em\mathchar47\kern-.08em\penalty\UrlBigBreakPenalty}}
+\def\Url@underscore{\nfss@text{\leavevmode \kern.06em\vbox{\hrule\@width.3em}}}
+\makeatother
+
+\hypersetup{
+colorlinks=true,
+linkcolor=black,
+citecolor=black,
+urlcolor=black
+} 
+
+% Add the running author and running title information (anonymized)
+\runningauthor{\begin{minipage}{.9\textwidth}\centering [Author name removed for blind review]\end{minipage}}
+\runningtitle{Benchmarking LLMs for Geolocating Colonial Virginia Land Grants}
+
+% Document begins
+\begin{document}
+
+% Title, author, abstract, keywords and metadata (anonymized)
+\title{Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants}
+\author{[Author name and affiliation removed for blind review]}
+
+\maketitle
+
+\keywords{historical GIS, large language models, geoparsing, colonial Virginia, land grants, digital humanities, spatial history, geolocation}
+
+\begin{abstract}
+Virginia's seventeenth- and eighteenth-century land patents survive almost exclusively as narrative metes-and-bounds descriptions in printed abstract volumes such as \emph{Cavaliers and Pioneers} (C\&P). This paper presents the first systematic study of whether state-of-the-art large language models (LLMs) can convert these prose abstracts into usable latitude/longitude coordinates at research grade. The authors digitized, transcribed, and openly released a corpus of 5,471 Virginia patent abstracts (1695–1732), accompanied by a rigorously annotated ground-truth dataset of 45 authoritatively georeferenced test cases. This study benchmarks six OpenAI models spanning three architecture families under two prompting paradigms: (i) one-shot "direct-to-coordinate" and (ii) tool-augmented chain-of-thought that invokes external geocoding APIs.
+
+On the verified grants, the best purely textual model (OpenAI o3) achieves a mean great-circle error of 23.4 km (median 14.3 km), a 67\% improvement over a professional GIS baseline (71.4 km), while cutting cost and latency by roughly two and three orders of magnitude, respectively. The ultracheap GPT-4o variant locates patents with 28 km mean error at USD 1.09 per 1,000, only slightly less accurate yet ~100× cheaper. Contrary to expectations, granting LLMs external geocoding tools neither improves accuracy nor consistency.
+
+These results show that off-the-shelf LLMs can georeference early-modern land records faster, cheaper, and as accurately as traditional GIS workflows, opening a scalable pathway to spatially enable colonial archives—and, in turn, to reassess settlement dynamics, plantation economies, and Indigenous dispossession with quantitative precision.
+\end{abstract}
+
+% Main body generated via Pandoc (anonymized version)
+\input{content_blind.tex}
+
+% References
+\bibliographystyle{josisacm_unsorted}
+\bibliography{refs}
+
+\end{document}
