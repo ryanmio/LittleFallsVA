@@ -339,6 +339,8 @@ cp "$TEMPLATE_DIR/article.tex" "$TEMPLATE_DIR/article_blind.tex"
 sed -i '' 's/Ryan Mioduski/[Author name removed for blind review]/g' "$TEMPLATE_DIR/article_blind.tex"
 sed -i '' 's/Independent Researcher/[Affiliation removed for blind review]/g' "$TEMPLATE_DIR/article_blind.tex"
 sed -i '' 's/received={May 24, 2025}/received={[Date removed for blind review]}/g' "$TEMPLATE_DIR/article_blind.tex"
+# Redirect the main body to the blind content file
+sed -i '' 's/\\input{content.tex}/\\input{content_blind.tex}/g' "$TEMPLATE_DIR/article_blind.tex"
 
 # Create blind content.tex by removing identifying information
 cp "$CONTENT_TEX" "$TEMPLATE_DIR/content_blind.tex"

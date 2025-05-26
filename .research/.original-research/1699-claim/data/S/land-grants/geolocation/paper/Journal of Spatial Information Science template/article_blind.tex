@@ -123,30 +123,30 @@ citecolor=black,
 urlcolor=black
 } 
 
-% Add the running author and running title information (anonymized)
+% Add the running author and running title information
 \runningauthor{\begin{minipage}{.9\textwidth}\centering [Author name removed for blind review]\end{minipage}}
-\runningtitle{Benchmarking LLMs for Geolocating Colonial Virginia Land Grants}
+\runningtitle{Geolocating Colonial Land Grants with LLMs}
 
 % Document begins
 \begin{document}
 
-% Title, author, abstract, keywords and metadata (anonymized)
+% Title, author, abstract, keywords and metadata
 \title{Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants}
-\author{[Author name and affiliation removed for blind review]}
+\author{[Author name removed for blind review]}\affil{[Affiliation removed for blind review]}
 
 \maketitle
 
 \keywords{historical GIS, large language models, geoparsing, colonial Virginia, land grants, digital humanities, spatial history, geolocation}
 
 \begin{abstract}
-Virginia's seventeenth- and eighteenth-century land patents survive almost exclusively as narrative metes-and-bounds descriptions in printed abstract volumes such as \emph{Cavaliers and Pioneers} (C\&P). This paper presents the first systematic study of whether state-of-the-art large language models (LLMs) can convert these prose abstracts into usable latitude/longitude coordinates at research grade. The authors digitized, transcribed, and openly released a corpus of 5,471 Virginia patent abstracts (1695–1732), accompanied by a rigorously annotated ground-truth dataset of 45 authoritatively georeferenced test cases. This study benchmarks six OpenAI models spanning three architecture families under two prompting paradigms: (i) one-shot "direct-to-coordinate" and (ii) tool-augmented chain-of-thought that invokes external geocoding APIs.
+Virginia's seventeenth- and eighteenth-century land patents survive almost exclusively as narrative metes-and-bounds descriptions in printed abstract volumes such as \emph{Cavaliers and Pioneers} (C\&P). I present the first systematic study of whether state-of-the-art large language models (LLMs) can convert these prose abstracts into usable latitude/longitude coordinates at research grade. I digitized, transcribed, and openly released a corpus of 5,471 Virginia patent abstracts (1695–1732), accompanied by a rigorously annotated ground-truth dataset of 45 authoritatively georeferenced test cases. I benchmark six OpenAI models spanning three architecture families under two prompting paradigms: (i) one-shot "direct-to-coordinate" and (ii) tool-augmented chain-of-thought that invokes external geocoding APIs.
 
 On the verified grants, the best purely textual model (OpenAI o3) achieves a mean great-circle error of 23.4 km (median 14.3 km), a 67\% improvement over a professional GIS baseline (71.4 km), while cutting cost and latency by roughly two and three orders of magnitude, respectively. The ultracheap GPT-4o variant locates patents with 28 km mean error at USD 1.09 per 1,000, only slightly less accurate yet ~100× cheaper. Contrary to expectations, granting LLMs external geocoding tools neither improves accuracy nor consistency.
 
 These results show that off-the-shelf LLMs can georeference early-modern land records faster, cheaper, and as accurately as traditional GIS workflows, opening a scalable pathway to spatially enable colonial archives—and, in turn, to reassess settlement dynamics, plantation economies, and Indigenous dispossession with quantitative precision.
 \end{abstract}
 
-% Main body generated via Pandoc (anonymized version)
+% Main body generated via Pandoc
 \input{content_blind.tex}
 
 % References

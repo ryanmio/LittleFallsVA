@@ -18,7 +18,7 @@ to long-standing questions about colonial Virginia's social and
 environmental history.
 
 Digitising and geo-locating the abstracts, however, is notoriously
-labour-intensive. Even professional GIS analysts can spend several hours
+labor-intensive. Even professional GIS analysts can spend several hours
 per grant reconciling archaic place-names, inconsistent spellings, and
 low-resolution boundary calls. Recent breakthroughs in large language
 models (LLMs) suggest a new pathway: language-driven spatial reasoning
@@ -31,7 +31,7 @@ enough to matter for digital history.
 
 Despite the promise of LLMs, their ability to extract usable coordinates
 from early-modern archival prose had not been systematically evaluated
-prior to this work. Key uncertainties I addressed included:
+prior to this work. Key uncertainties addressed in this study included:
 
 \begin{itemize}
 \tightlist
@@ -48,7 +48,9 @@ prior to this work. Key uncertainties I addressed included:
 
 Addressing these questions required a rigorously annotated test bench
 that blended historical sources, modern GIS ground truth, and controlled
-prompt engineering.
+prompt engineering. The methodological design seeks to embody principles
+of rigorous and responsible GeoAI research, as outlined by Li et al.
+\citep{Li2024_geoai} and detailed further in §2.4.
 
 \subsection{Contributions}\label{contributions}
 
@@ -58,25 +60,27 @@ This study makes four principal contributions:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  I release the first machine-readable edition of \emph{Cavaliers and
-  Pioneers}, Vol. 3 \citep{Nugent1979_cavaliers3}, comprising 5,471
-  fully transcribed patent abstracts.\\
+  This work releases the first machine-readable edition of
+  \emph{Cavaliers and Pioneers}, Vol. 3 \citep{Nugent1979_cavaliers3},
+  comprising 5,471 fully transcribed patent abstracts.\\
 \item
-  For forty-five of 125 randomly sampled patents I derive authoritative
-  latitude/longitude pairs from state-archived GIS polygons and other
-  archival sources, providing a high-fidelity evaluation target.\\
+  For forty-five of 125 randomly sampled patents, authoritative
+  latitude/longitude pairs are derived from state-archived GIS polygons
+  and other archival sources, providing a high-fidelity evaluation
+  target.\\
 \item
-  I evaluate two prompting paradigms---single-prompt
-  ``direct-to-coordinate'' inference and tool-augmented chain-of-thought
-  reasoning---across six contemporary OpenAI model variants.\\
+  Two prompting paradigms---single-prompt ``direct-to-coordinate''
+  inference and tool-augmented chain-of-thought reasoning---are
+  evaluated across six contemporary OpenAI model variants.\\
 \item
-  I quantify the trade-offs among spatial error, monetary expense, and
-  processing time, demonstrating that a pure LLM pipeline can match or
-  surpass professional GIS accuracy while operating orders of magnitude
-  faster and cheaper.
+  The study quantifies the trade-offs among spatial error, monetary
+  expense, and processing time, demonstrating that a pure LLM pipeline
+  can match or surpass professional GIS accuracy while operating orders
+  of magnitude faster and cheaper.
 \end{enumerate}
 
-All data, code, and results are available in my public repository:
+All data, code, and results are available in the supplemental
+repository:
 \url{https://github.com/ryanmio/colonial-virginia-llm-geolocation}.
 
 \section{Background \& Related Work}\label{background-related-work}
@@ -271,6 +275,110 @@ chain-of-thought that can issue mid-prompt geocoding and
 distance-calculation calls while processing historical texts with
 archaic toponyms and surveying terminology.
 
+\subsection{2.4 Emerging GeoAI Research
+Principles}\label{emerging-geoai-research-principles}
+
+Recent calls within the GeoAI community emphasize the need for empirical
+studies that are not only traditionally scientifically sound but also
+actively engage with the foundational tenets of predictability,
+interpretability, reproducibility, and social responsibility, which Li
+et al. \citep{Li2024_geoai} identify as four essential pillars for
+solidifying GeoAI's scientific rigor and ensuring its lasting,
+beneficial impact.
+
+Li et al.~(2024) define \textbf{predictability} as the combination of a
+model's accuracy, computational efficiency, and robustness when
+confronted with spatial variation. The present study addresses this
+definition by reporting mean and median great-circle error, 95\%
+bootstrap confidence intervals, and cumulative-error curves for all
+evaluated LLM variants and a professional GIS baseline (Figure
+\ref{fig:accuracy_bar} and Table \ref{tbl:accuracy}); by presenting
+cost-versus-accuracy and latency-versus-accuracy Pareto frontiers
+(Figures \ref{fig:pareto_cost} and \ref{fig:pareto_latency})
+demonstrating reductions of two to five orders-of-magnitude in dollar
+cost and turnaround time relative to human baselines while preserving or
+improving spatial accuracy; and by examining robustness through targeted
+ablations reported in § 6.6, showing that accuracy is essentially
+unaffected by changes in temperature, reasoning-budget, and abstract
+length, and that removing the five largest residuals alters mean error
+by less than two kilometres---confirming that results are not driven by
+a small subset of extreme cases.
+
+The study places a strong emphasis on \textbf{interpretability} by
+meticulously recording the complete reasoning process behind each model
+prediction, not simply the final geographic coordinates. For every
+inference, a detailed, step-by-step record is captured and logged that
+includes the chain-of-thought narrative text provided by the model,
+every external function invocation---including the precise queries
+passed to the geocoding tools---and the exact JSON responses returned.
+This comprehensive logging creates a fully auditable record of the
+model's internal reasoning, enabling researchers to reconstruct exactly
+how and why a given prediction was made. For instance, as detailed in
+Section 6.4 and Appendix A.3, the logs clearly document how the models
+identify key geographic features, choose between multiple candidate
+locations, refine queries based on initial mismatches, systematically
+test alternate spellings or county qualifiers, and decide when and how
+to average coordinates using spatial centroid calculations. Capturing
+these detailed reasoning steps across both prompting paradigms (direct
+one-shot versus iterative, tool-augmented reasoning) provides
+unprecedented transparency into the models' cognitive processes. This
+explicit audit trail reveals precisely where models succeed or fail,
+highlighting systematic errors such as cascading failures after
+incorrect geocoder hits or misinterpretations of ambiguous historical
+place names. Because every intermediate reasoning step and tool
+interaction is logged, it's possible to correlate internal indicators of
+model confidence---such as the geographic spread between top-ranked
+candidate coordinates---with actual prediction error, offering insights
+that are essential for interpreting, trusting, and optimizing model
+behavior.
+
+To ensure \textbf{reproducibility}, specific snapshot versions of the
+OpenAI models from April 2025 were used and random seeds were fixed
+throughout all steps, including dataset splits, sampling, and
+bootstrapping. All parameter-sensitivity tests (temperature, reasoning
+budget, abstract length) were also conducted under these controlled
+conditions. The computational environment was packaged into a Docker
+container that specifies exact Python dependencies and OpenAI API
+endpoints to guarantee consistent results on different machines.
+Additionally, the full OCR-corrected corpus of 5,471 abstracts, 45
+authoritative ground-truth coordinates, dev/test splits, exact prompts,
+YAML configurations, the run\_experiment.py evaluation script, and
+detailed JSONL logs recording every model request and response are
+provided. All these materials are publicly available in the accompanying
+code repository and described in § 3, allowing others to exactly
+reproduce the analyses, tables, and figures presented here.
+
+The study meets the \textbf{social responsibility} pillar by carefully
+considering ethical and copyright implications associated with the
+historical data used. Although the underlying seventeenth- and
+eighteenth-century land patent records themselves are public domain, the
+transcriptions published in the 1979 compilation Cavaliers and Pioneers,
+Vol. 3 remain under copyright. To balance reproducibility with copyright
+compliance, only limited, non-substitutable excerpts (up to 200 words
+each) of the 45 abstracts with authoritative ground-truth points are
+publicly released. For the full corpus of 5,471 abstracts, only row
+identifiers, word counts, and SHA-256 hashes of each abstract are
+provided, allowing researchers to verify their own local copies without
+exposing protected text. The complete OCR corpus itself is made
+available privately under a vetted, non-commercial data-use agreement
+for scholarly research only. Additionally, because the georeferenced
+coordinates reflect historical property boundaries rather than modern
+sensitive locations or private ownership, the study inherently minimizes
+privacy risks. Computationally, off-the-shelf foundation models are used
+without energy-intensive fine-tuning, intensive reasoning settings are
+limited strictly to essential cases, and API calls are throttled via
+OpenAI's service-flex option to reduce computational overhead. Finally,
+the study acknowledges that colonial source materials inherently
+underrepresent Indigenous and marginalized perspectives and explicitly
+highlights that the research methods and findings presented here can be
+directly applied to better understand and contextualize historical
+patterns of Indigenous dispossession and marginalization.
+
+By embedding these considerations into the experimental design and
+reporting, this work aims to contribute a concrete case study that
+addresses the foundational requirements for a developing science of
+GeoAI.
+
 \section{Data}\label{data}
 
 \subsection{Corpus Overview}\label{corpus-overview}
@@ -279,10 +387,10 @@ archaic toponyms and surveying terminology.
 compiles 5,471 abstracts of Virginia land patents recorded in patent
 books 9--14 (1695--1732). These grants fall largely in central and
 south-central Virginia, clustering around the present-day Richmond area.
-After an extensive search I found no publicly available digital
-transcription of this volume and therefore treat the material as unseen
-by contemporary language models, though I did not perform a formal check
-of training-data leakage.
+After an extensive search, no publicly available digital transcription
+of this volume was found and therefore the material is treated as unseen
+by contemporary language models, though a formal check of training-data
+leakage was not performed.
 
 \subsection{Pre-processing Pipeline}\label{pre-processing-pipeline}
 
@@ -293,7 +401,7 @@ was then applied to all pages. Extracted text was normalised and
 exported as a CSV with one row per patent abstract, yielding a complete
 corpus of 5,471 land grant abstracts.
 
-From this full corpus, I generated three random subsets using
+From this full corpus, three random subsets were generated using
 reproducible seeds:
 
 \begin{itemize}
@@ -309,40 +417,40 @@ reproducible seeds:
 Coordinates}\label{ground-truth-baseline-coordinates}
 
 Of the 125 test abstracts, 45 were deemed ``locatable'' and assigned
-authoritative latitude/longitude pairs. I established ground-truth
-coordinates through a rigorous two-step verification process:
+authoritative latitude/longitude pairs. Ground-truth coordinates were
+established through a rigorous two-step verification process:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
   Primary method: When a grant matched a polygon in the Central VA
   Patents GIS layer published by the Office of the Surveyor (matching by
-  grantee name, year, and acreage), I used the centroid of the GIS
-  polygon as the authoritative coordinate.
+  grantee name, year, and acreage), the centroid of the GIS polygon was
+  used as the authoritative coordinate.
 \item
-  Secondary method: For grants without a matching GIS polygon, I relied
-  on published historical maps and archival sources. If the grant could
-  be confidently located on these maps and aligned with modern
-  coordinates, I assigned a ground-truth point and cited the source in
-  my bibliography.
+  Secondary method: For grants without a matching GIS polygon, published
+  historical maps and archival sources were consulted. If the grant
+  could be confidently located on these maps and aligned with modern
+  coordinates, a ground-truth point was assigned and the source was
+  cited in the bibliography.
 \end{enumerate}
 
 The 36\% locatability rate reflects an important methodological choice.
-I deliberately avoided expanding the ground-truth set beyond what could
-be authoritatively established through rigorous archival criteria to
-prevent convenience bias---a larger sample would disproportionately
-include easier-to-locate grants, thereby understating the difficulty of
-the general task. Each authoritative coordinate determination required
-substantial curatorial effort (1--3 hours of expert research per grant),
-making exhaustive ground-truthing impractical while maintaining
-methodological integrity. This sample size provides sufficient
-statistical power for the comparative analysis while preserving
-ecological validity.
+The study deliberately avoided expanding the ground-truth set beyond
+what could be authoritatively established through rigorous archival
+criteria to prevent convenience bias---a larger sample would
+disproportionately include easier-to-locate grants, thereby understating
+the difficulty of the general task. Each authoritative coordinate
+determination required substantial curatorial effort (1--3 hours of
+expert research per grant), making exhaustive ground-truthing
+impractical while maintaining methodological integrity. This sample size
+provides sufficient statistical power for the comparative analysis while
+preserving ecological validity.
 
 To establish a professional benchmark, a GIS contractor independently
 geolocated 50 patents using traditional methods; their coordinates are
 stored alongside the test set and serve as a human-expert baseline for
-my experiments.
+the experiments.
 
 For each model--tool configuration, the evaluation script iterates over
 the test abstracts, records any tool calls invoked by the LLM, and
@@ -360,10 +468,10 @@ toponyms, and queried a multi-layered gazetteer stack (including ArcGIS
 Online resources, historical overlays, and place-name databases) to
 generate the highest-confidence coordinate for each grant. Development,
 parameter tuning, and execution required approximately six billable
-hours for 50 grants. I treat this end-to-end process---including both
-script development and execution---as the benchmark cost to maintain
-fair comparison with LLM methodologies that likewise combine design and
-inference phases.
+hours for 50 grants. This study treats this end-to-end
+process---including both script development and execution---as the
+benchmark cost to maintain fair comparison with LLM methodologies that
+likewise combine design and inference phases.
 
 These baseline coordinates are stored directly in the evaluation file,
 allowing the experiment script to access them through the static
@@ -486,9 +594,9 @@ valid coordinate string or exceeding ten assistant turns.
 \subsection{Cost and Latency
 Accounting}\label{cost-and-latency-accounting}
 
-For each automated prediction, I convert the input and output tokens
-reported by the OpenAI API to U.S. dollars using the price list in
-effect on 15 May 2025. The per-call cost is calculated as:
+For each automated prediction, input and output tokens reported by the
+OpenAI API are converted to U.S. dollars using the price list in effect
+on 15 May 2025. The per-call cost is calculated as:
 
 \[
 \text{Cost} = \frac{\text{input tokens}}{10^{6}} \times p_{\text{in}} + \frac{\text{output tokens}}{10^{6}} \times p_{\text{out}}
@@ -500,8 +608,8 @@ free-tier quota and therefore do not accrue additional fees.
 
 Latency is measured as wall-clock time from submission of an API request
 until a valid coordinate string is returned, inclusive of all
-intermediate tool interactions. For the traditional GIS benchmark, I
-divide the analyst's total working time (6 h) by the number of grants
+intermediate tool interactions. For the traditional GIS benchmark, the
+analyst's total working time (6 h) is divided by the number of grants
 processed, yielding an average latency of 432 s per prediction.
 
 \section{Experimental Setup}\label{experimental-setup}
@@ -510,8 +618,8 @@ processed, yielding an average latency of 432 s per prediction.
 
 The primary outcome measure is \textbf{distance error}---the
 great-circle distance in kilometres between predicted and reference
-coordinates, computed with the Haversine formula. I report the mean,
-median, and 95\% bootstrap confidence intervals, along with accuracy
+coordinates, computed with the Haversine formula. The mean, median, and
+95\% bootstrap confidence intervals are reported, along with accuracy
 bands (\textless1 km, 1--10 km, \textgreater10 km) and the proportion of
 entries for which a valid coordinate was produced (success rate).
 
@@ -545,9 +653,9 @@ the public logs but excluded from aggregate statistics.
 
 \subsection{Implementation Protocol}\label{implementation-protocol}
 
-I began by partitioning the full corpus (5,471 abstracts) into
-development (20\%) and test (80\%) segments using seed 42. From these
-segments, I drew fixed-size random samples: two development sets of 20
+The full corpus (5,471 abstracts) was partitioned into development
+(20\%) and test (80\%) segments using seed 42. From these segments,
+fixed-size random samples were drawn: two development sets of 20
 abstracts each for prompt engineering and parameter tuning, and a
 held-out test set of 125 abstracts that remained unseen during
 development.
@@ -640,6 +748,8 @@ H-1 & Professional GIS script & 71.4 {[}57.9, 85.9{]} & 70.7 & 4.7 &
 95.6 \\
 \end{longtable}
 
+\clearpage
+
 The violin plot in Figure \ref{fig:violin} shows that most LLM errors
 cluster below 40 km, with a long tail driven by a handful of outliers.
 The GIS script exhibits a bimodal pattern---either fairly close or
@@ -652,14 +762,14 @@ gazetteer-based geocoding when dealing with historical place names.
 \caption{Error Distribution by Method}\label{fig:violin}
 \end{figure}
 
+Figure \ref{fig:cdf_models} presents the cumulative distribution of
+errors for each evaluated method.
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/cdf_graphs/cdf_models_combined.pdf}
 \caption{Cumulative error distribution by method}\label{fig:cdf_models}
 \end{figure}
-
-Figure \ref{fig:cdf_models} presents the cumulative distribution of
-errors for each evaluated method.
 
 Table \ref{tbl:reasoning} examines how varying the
 \emph{reasoning\_effort} parameter within the same o3 model (M-2)
@@ -727,8 +837,8 @@ model is allowed to emit has only a marginal effect on accuracy.
 
 \subsection{Cost--Accuracy Trade-off}\label{costaccuracy-trade-off}
 
-I next examine the relationship between monetary cost and spatial
-accuracy. Figure \ref{fig:pareto_cost} positions every method on this
+Next, the relationship between monetary cost and spatial accuracy is
+examined. Figure \ref{fig:pareto_cost} positions every method on this
 plane. All automated variants dominate the GIS script baseline by two to
 five orders of magnitude on both dimensions. \textbf{GPT-4o} (M-5)
 delivers the best \emph{dollar-for-accuracy} ratio: \textbf{USD 1.09 per
@@ -793,8 +903,8 @@ taking up to 48 seconds.
 
 \subsection{Qualitative Examples}\label{qualitative-examples}
 
-To illustrate how the two prompting paradigms differ, I distill the
-chain of thought for test\_entry\_04 into key stages. Table 4 shows
+To illustrate how the two prompting paradigms differ, the chain of
+thought for test\_entry\_04 is distilled into key stages. Table 4 shows
 these steps for the tool-chain (T-2) and one-shot (M-2) methods.
 
 \begin{longtable}[]{@{}
@@ -904,7 +1014,7 @@ volume manifests as the higher token usage and latency reported in §
 \subsection{Robustness / Ablation
 Studies}\label{robustness-ablation-studies}
 
-I conducted several additional analyses to test the robustness of my
+Several additional analyses were conducted to test the robustness of the
 main findings:
 
 \begin{itemize}
@@ -916,9 +1026,9 @@ main findings:
   km) show material shifts, leaving \textbf{M-2} as the top performer.
 \item
   \textbf{Length‐stratified accuracy} -- To test whether verbose
-  abstracts make the task easier (or harder), I measured the word-count
-  of each grant's full text in the validation file and analyzed 152 LLM
-  predictions:
+  abstracts make the task easier (or harder), the word-count of each
+  grant's full text in the validation file was measured and 152 LLM
+  predictions were analyzed:
 
   \begin{itemize}
   \tightlist
@@ -955,9 +1065,9 @@ LLM accuracy.
   (M5). Mean error for GPT-4.1 varied narrowly between \textbf{34 km}
   (\emph{t}=0.0) and \textbf{31.7 km} (\emph{t}=0.8), indicating a
   shallow optimum around 0.8. GPT-4o showed no systematic trend (32--33
-  km across the grid). Given the marginal gains, I fix \textbf{t = 0.8}
-  for GPT-4.1 and keep the default \textbf{t = 0.0} for GPT-4o in all
-  downstream benchmarks.
+  km across the grid). Given the marginal gains, \textbf{t = 0.8} is
+  fixed for GPT-4.1 and the default \textbf{t = 0.0} is kept for GPT-4o
+  in all downstream benchmarks.
 \end{itemize}
 
 \section{Discussion}\label{discussion}
@@ -983,12 +1093,12 @@ extraction tasks to foundation models.
 Nevertheless, scholars must heed the epistemic caveats that accompany
 automated coordinates. Even the best LLM occasionally misplaces a grant
 by \textgreater100 km, and the absence of per-prediction uncertainty
-estimates complicates downstream statistical inference. I therefore
-recommend a hybrid workflow in which the model provides a first-pass
-coordinate that is then verified---or rejected---by a domain expert. At
-≤1 s latency and \textasciitilde USD 0.001 per prediction (GPT-4o), such
-assisted verification remains an order of magnitude cheaper than
-start-to-finish traditional geocoding.
+estimates complicates downstream statistical inference. It is therefore
+recommended that a hybrid workflow be used in which the model provides a
+first-pass coordinate that is then verified---or rejected---by a domain
+expert. At ≤1 s latency and \textasciitilde USD 0.001 per prediction
+(GPT-4o), such assisted verification remains an order of magnitude
+cheaper than start-to-finish traditional geocoding.
 
 \subsection{Error Analysis \& Failure
 Modes}\label{error-analysis-failure-modes}
@@ -1047,7 +1157,7 @@ sends the tool-chain prediction far from ground truth, whereas the
 unguided models remain within a reasonable distance---a pattern that
 typifies the cascading search bias described above.
 
-These examples visually reinforce my key finding that sophisticated
+These examples visually reinforce the key finding that sophisticated
 language models like o3 already encode substantial geographic knowledge
 about Virginia's colonial landscape, often placing grants within their
 correct watershed without external reference data. The full contact
@@ -1067,22 +1177,25 @@ The choice of model therefore hinges on the marginal utility of
 additional accuracy. If a project tolerates a 30 km error band, GPT-4o
 maximizes throughput at negligible cost; archival projects requiring
 sub-15 km precision may justify the higher token expenditure of the o3
-family.\footnote{I also evaluated three ultra-low-cost GPT-4-class
-  variants (GPT-4.1-mini, GPT-4.1-nano, GPT-4o-mini). Their outputs
-  rarely conformed to the required coordinate format, yielding a mean
-  error of ≈ 49 km; details are archived in my
+family.\footnote{Three ultra-low-cost GPT-4-class variants
+  (GPT-4.1-mini, GPT-4.1-nano, GPT-4o-mini) were also evaluated. Their
+  outputs rarely conformed to the required coordinate format, yielding a
+  mean error of ≈ 49 km; details are archived in the supplementary
+  repository
   \href{https://github.com/ryanmio/colonial-virginia-llm-geolocation}{GitHub
   repository}.} Crucially, both options scale linearly with corpus size,
 placing statewide geocoding---tens of thousands of patents---within
 reach of modest research budgets.
 
-My ablation runs reveal that these gains do \textbf{not} depend on
-expensive parameter settings. Increasing \emph{reasoning\_effort} from
-``low'' to ``high'' multiplies token usage \textasciitilde6× and latency
-\textasciitilde5× while trimming mean error by \textless1 km. Likewise,
-GPT-4.1 accuracy varies by only ±1.5 km across the 0--1.2 temperature
-range, and GPT-4o shows no systematic trend. In practice, therefore, the
-default (cheap) settings already sit near the cost-accuracy frontier.
+Reflecting Li et al.'s GeoAI manifesto emphasis on rigorous yet
+efficient experimentation, the ablation runs reveal that these gains do
+\textbf{not} depend on expensive parameter settings. Increasing
+\emph{reasoning\_effort} from ``low'' to ``high'' multiplies token usage
+\textasciitilde6× and latency \textasciitilde5× while trimming mean
+error by \textless1 km. Likewise, GPT-4.1 accuracy varies by only ±1.5
+km across the 0--1.2 temperature range, and GPT-4o shows no systematic
+trend. In practice, therefore, the default (cheap) settings already sit
+near the cost-accuracy frontier.
 
 \section{Limitations}\label{limitations}
 
@@ -1097,21 +1210,21 @@ Several caveats temper the preceding claims.
   printed volume (1695-1739). While this sample is methodologically
   appropriate to prevent convenience bias (see § 3.3), the reported
   error statistics may under- or overstate performance on earlier or
-  later patent books, or on neighbouring colonies with different
+  later patent books, or on neighboring colonies with different
   toponymic conventions. Future work with an expanded ground-truth set
   obtained through methods that avoid selection bias will further
   validate these findings.
 \item
-  \textbf{OCR and transcription noise.} Although I applied the
-  best-performing OCR pipeline available, minor character errors
-  persist. Because the language models ingested this noisy text
-  directly, a fraction of the residual error may stem from imperfect
-  input rather than conceptual failure.
+  \textbf{OCR and transcription noise.} Although the best-performing OCR
+  pipeline available was applied, minor character errors persist.
+  Because the language models ingested this noisy text directly, a
+  fraction of the residual error may stem from imperfect input rather
+  than conceptual failure.
 \item
-  \textbf{Point-estimate evaluation.} I benchmarked single
-  latitude/longitude pairs, ignoring shape reconstruction and parcel
-  acreage. Applications that require boundary polygons will need
-  supplementary modelling or manual intervention.
+  \textbf{Point-estimate evaluation.} Single latitude/longitude pairs
+  were benchmarked, ignoring shape reconstruction and parcel acreage.
+  Applications that require boundary polygons will need supplementary
+  modelling or manual intervention.
 \item
   \textbf{Tool bias.} Google's geocoder is optimised for modern place
   names; its deterministic output may shift marginally over time as the
@@ -1121,7 +1234,7 @@ Several caveats temper the preceding claims.
   \textbf{GIS benchmark generality.} The benchmark
   \citep{Bashorun2025_gis} relies on a single expert-authored geocoding
   procedure; accuracy might vary with different gazetteer sources,
-  parameter tuning, or analyst expertise. I treat the baseline as
+  parameter tuning, or analyst expertise. The baseline is treated as
   representative of standard practice rather than an upper bound on
   professional GIS performance. The single-practitioner results are
   intended as an illustrative comparison point rather than a
@@ -1162,8 +1275,8 @@ Building on the present findings, several avenues warrant exploration.
 This study provides the first systematic benchmark of large language
 models on the task of geolocating colonial-era Virginia land grants
 directly from narrative abstracts. Across nine model--pipeline
-combinations, I find that an off-the-shelf one-shot prompt to the
-o3-2025-04-16 model achieves a mean positional error of 23.4
+combinations, the findings show that an off-the-shelf one-shot prompt to
+the o3-2025-04-16 model achieves a mean positional error of 23.4
 km---matching or outperforming a standard professional GIS workflow
 while reducing cost by two orders of magnitude and latency by three.
 Contrary to expectations, granting LLMs external geocoding tools does
@@ -1172,28 +1285,28 @@ not automatically improve results.
 The implications for digital history are immediate: large corpora of
 archival land records can now be mapped at state scale in hours rather
 than months, facilitating quantitative studies of settlement, labor, and
-landscape change. At the same time, I highlight failure modes that
-demand scholarly caution and outline procedural safeguards, including
-hybrid verification and periodic re-benchmarking. Taken together, the
-results validate LLM-assisted geocoding as a viable, resource-efficient
-complement to traditional geospatial research, and chart a path toward
-fully spatially-enabled colonial archives.
+landscape change. At the same time, failure modes are highlighted that
+demand scholarly caution and procedural safeguards are outlined,
+including hybrid verification and periodic re-benchmarking. Taken
+together, the results validate LLM-assisted geocoding as a viable,
+resource-efficient complement to traditional geospatial research, and
+chart a path toward fully spatially-enabled colonial archives.
 
 \section{Acknowledgements}\label{acknowledgements}
 
 This work builds upon the meticulous archival research of Nell Marion
 Nugent, whose \emph{Cavaliers and Pioneers} abstracts have preserved
-Virginia's colonial land records for generations of scholars. I am
-deeply grateful to Bimbola Bashorun \citep{Bashorun2025_gis} for
-providing the professional GIS benchmark that was crucial to evaluating
-model performance. Special thanks to the Library of Virginia and the
-Virginia Surveyor's Office for granting access to their digital archives
-and land patent collections, which made the ground-truth dataset
-possible.
+Virginia's colonial land records for generations of scholars. The
+authors are deeply grateful to Bimbola Bashorun \citep{Bashorun2025_gis}
+for providing the professional GIS benchmark that was crucial to
+evaluating model performance. Special thanks to the Library of Virginia
+and the Virginia Surveyor's Office for granting access to their digital
+archives and land patent collections, which made the ground-truth
+dataset possible.
 
-Finally, I am indebted to the digital humanities community whose ongoing
-conversations about LLMs and historical research have informed this
-project's methodological approach.
+Finally, the authors are indebted to the digital humanities community
+whose ongoing conversations about LLMs and historical research have
+informed this project's methodological approach.
 \appendix
 
 \section{Supplementary Methods \&
@@ -1207,13 +1320,13 @@ character recognition (OCR) and text normalisation pipeline.
 \emph{Cavaliers and Pioneers} Volume 3 was scanned at 600 DPI, yielding
 high-resolution page images in PDF format.
 
-I optimized OCR parameters through controlled experiments with Tesseract
-engine modes and page segmentation configurations, ultimately selecting
-LSTM neural network processing (OEM 3) with fully automatic page
-segmentation (PSM 3) based on quantitative text extraction metrics. The
-OCR workflow employed OCRmyPDF with page rotation detection, document
-deskewing, and custom configurations to preserve period-appropriate
-spacing patterns.
+OCR parameters were optimized through controlled experiments with
+Tesseract engine modes and page segmentation configurations, ultimately
+selecting LSTM neural network processing (OEM 3) with fully automatic
+page segmentation (PSM 3) based on quantitative text extraction metrics.
+The OCR workflow employed OCRmyPDF with page rotation detection,
+document deskewing, and custom configurations to preserve
+period-appropriate spacing patterns.
 
 Post-OCR text normalisation included: (1) removal of running headers and
 pagination artifacts, (2) contextual dehyphenation of line-break-split
@@ -1239,7 +1352,7 @@ Respond with ONLY the coordinates in this format: [DD]°[MM]'[SS].[SSSSS]"N [DDD
 \paragraph{A.2.2 Tool-Augmented System Prompt
 (T-series)}\label{a.2.2-tool-augmented-system-prompt-t-series}
 
-For tool-augmented models, I employed a structured system prompt that
+For tool-augmented models, a structured system prompt was employed that
 defined available tools, workflow, and constraints:
 
 \begin{lstlisting}
@@ -1254,7 +1367,7 @@ Available tools
     – Accepts **two or more** objects like `{lat: 37.1, lng: -76.7}` and returns their average.
 
 Workflow
-0. Craft the most specific initial search string you can (creek, branch, river-mouth, parish, neighbour surname + county + "Virginia").
+0. Craft the most specific initial search string you can (creek, branch, river-mouth, parish, neighbor surname + county + "Virginia").
 
 1. Call `geocode_place` with that string. If the result is in the expected or an adjacent county *and* the feature lies in Virginia (or an NC border county), treat it as **plausible**. A matching feature keyword in `formatted_address` is *preferred* but not mandatory after several attempts.
 
