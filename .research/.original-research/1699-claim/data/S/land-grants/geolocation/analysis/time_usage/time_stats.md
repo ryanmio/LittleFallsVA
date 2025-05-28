@@ -7,6 +7,7 @@ Source: `analysis/full_results.csv` – `latency_s` is wall-clock time from requ
 | Method | Model | Entries | Located | Total hours | Hours per located | Hours/1k located |
 |---|---|---|---|---|---|---|
 | H-1 | human-gis | 45 | 43 | 9.330 | 0.2170 | 216.977 |
+| H-2 | stanford-ner | 45 | 43 | 0.000 | 0.0000 | 0.000 |
 | M-1 | o4-mini-2025-04-16 | 45 | 43 | 0.413 | 0.0096 | 9.603 |
 | M-2 | o3-2025-04-16 | 45 | 43 | 0.572 | 0.0133 | 13.294 |
 | M-3 | o3-mini-2025-01-31 | 45 | 43 | 0.378 | 0.0088 | 8.791 |
@@ -34,3 +35,4 @@ Source: `analysis/full_results.csv` – `latency_s` is wall-clock time from requ
 | o3-2025-04-16 | 45 | 43 | 0.572 | 0.0133 | 13.294 |
 | o3-mini-2025-01-31 | 45 | 43 | 0.378 | 0.0088 | 8.791 |
 | o4-mini-2025-04-16 | 90 | 86 | 0.576 | 0.0067 | 6.698 |
+| stanford-ner | 45 | 43 | 0.000 | 0.0000 | 0.000 |

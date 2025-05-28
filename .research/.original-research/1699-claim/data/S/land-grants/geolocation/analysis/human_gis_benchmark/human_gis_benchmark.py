@@ -2,47 +2,42 @@ import pandas as pd
 from pathlib import Path
 from textwrap import dedent
 
-# Paths
-GEOL_ROOT = Path(__file__).resolve().parents[2]  # geolocation directory
-ANALYSIS_DIR = GEOL_ROOT / "analysis"
-DATA_ROOT = GEOL_ROOT  # where the validation CSV lives
-
+# Paths - use ONLY full_results.csv
+ANALYSIS_DIR = Path(__file__).resolve().parents[1]  # analysis directory
 FULL_RESULTS_CSV = ANALYSIS_DIR / "full_results.csv"
-VAL_CSV = DATA_ROOT / "validation - TEST-FULL-H1.csv"
 
 # Output path (markdown table next to this script)
 OUTPUT_MD = Path(__file__).with_suffix('.md')
 
-# Load data
+# Load data from full_results.csv only
 full_df = pd.read_csv(FULL_RESULTS_CSV)
-val_df = pd.read_csv(VAL_CSV)
-
-# Ensure numeric row index exists in validation file so we can merge
-if 'row_index' not in val_df.columns:
-    val_df = val_df.reset_index().rename(columns={'index': 'row_index'})
-    val_df['row_index'] += 1  # make 1-based like full_results
-
-# Keep only columns we need
-val_df = val_df[['row_index', 'h1_accuracy', 'has_ground_truth']]
 
 # Extract human rows from full_results.csv
 human_df = full_df[full_df['method_id'] == 'H-1'].copy()
 
-# Merge on row_index (1-to-1 alignment guaranteed by row numbering)
-merged = human_df.merge(val_df, on='row_index', how='left', validate='one_to_one')
-
 # Filter to rows that have a non-null error (ground-truth inferred) AND are marked as locatable
-valid_df = merged[(merged['error_km'].notna()) & (merged['is_locatable'] == 1)].copy()
+valid_df = human_df[(human_df['error_km'].notna()) & (human_df['is_locatable'] == 1)].copy()
 print(f"Found {len(valid_df)} locatable points with valid error values")
 
-# Accuracy category column (falls back to Unlocatable if missing)
-valid_df['accuracy_cat'] = valid_df['h1_accuracy'].fillna('Unlocatable')
+# Since we don't have accuracy categories from validation file, we'll create simple categories
+# based on error ranges for the human baseline
+def categorize_accuracy(error_km):
+    if pd.isna(error_km):
+        return 'Unlocatable'
+    elif error_km <= 25:
+        return 'High (≤25 km)'
+    elif error_km <= 75:
+        return 'Medium (25-75 km)'
+    else:
+        return 'Low (>75 km)'
+
+valid_df['accuracy_cat'] = valid_df['error_km'].apply(categorize_accuracy)
 
 # Prepare category information
 cat_order = [
-    'High (County + Landmarks)',
-    'Medium (County centroid)',
-    'Low (State-level)',
+    'High (≤25 km)',
+    'Medium (25-75 km)', 
+    'Low (>75 km)',
     'Unlocatable',
 ]
 
@@ -83,4 +78,4 @@ print(md_table)
 
 # Save markdown file
 OUTPUT_MD.write_text(md_table)
-print(f"Saved {OUTPUT_MD.relative_to(GEOL_ROOT)}") 
+print(f"Saved {OUTPUT_MD.relative_to(ANALYSIS_DIR)}") 

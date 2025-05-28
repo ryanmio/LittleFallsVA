@@ -1,41 +1,43 @@
 # Length-stratified accuracy (LLM methods only)
-Length proxy = word-count of raw_entry (median = 36)
+Length proxy = word-count of raw_entry (median = 36 words)
 
-## Short abstracts (n = 48)
-Overall mean error: **36.75 km**  (95 % CI 29.84–43.52)
-
-| Method | n | Mean km |
-|---|---|---|
-| M-1 | 6 | 44.74 |
-| M-2 | 6 | 29.64 |
-| M-3 | 6 | 48.79 |
-| M-4 | 6 | 27.44 |
-| M-5 | 6 | 27.46 |
-| M-6 | 6 | 36.90 |
-| T-1 | 6 | 39.95 |
-| T-4 | 6 | 39.08 |
-
-## Long abstracts (n = 104)
-Overall mean error: **34.93 km**  (95 % CI 30.45–39.75)
+## Short abstracts (n = 198)
+Overall mean error: **39.81 km**  (95 % CI 35.03–45.77)
 
 | Method | n | Mean km |
 |---|---|---|
-| M-1 | 13 | 44.78 |
-| M-2 | 13 | 17.64 |
-| M-3 | 13 | 52.60 |
-| M-4 | 13 | 25.63 |
-| M-5 | 13 | 23.74 |
-| M-6 | 13 | 35.37 |
-| T-1 | 13 | 38.32 |
-| T-4 | 13 | 41.34 |
+| H-2 | 22 | 74.35 |
+| M-1 | 22 | 37.37 |
+| M-2 | 22 | 24.07 |
+| M-3 | 22 | 51.50 |
+| M-4 | 22 | 27.07 |
+| M-5 | 22 | 25.89 |
+| M-6 | 22 | 46.71 |
+| T-1 | 22 | 36.07 |
+| T-4 | 22 | 35.26 |
+
+## Long abstracts (n = 189)
+Overall mean error: **42.18 km**  (95 % CI 36.45–49.12)
+
+| Method | n | Mean km |
+|---|---|---|
+| H-2 | 21 | 83.92 |
+| M-1 | 21 | 46.13 |
+| M-2 | 21 | 22.69 |
+| M-3 | 21 | 48.94 |
+| M-4 | 21 | 30.01 |
+| M-5 | 21 | 30.08 |
+| M-6 | 21 | 39.22 |
+| T-1 | 21 | 39.31 |
+| T-4 | 21 | 39.30 |
 
 ## Continuous length–error relationship
-Across **152** LLM predictions, an OLS fit yields:
+Across **387** LLM predictions, an OLS fit yields:
 
-error_km = 42.28  +  -0.175 · length_words
+error_km = 35.28  +  0.146 · length_words
 
-Slope: **-0.175 km per word**  (95 % CI -0.601–0.308)
+Slope: **0.146 km per word**  (95 % CI -0.111–0.450)
 
-Pearson r = -0.061;  R² = 0.004
+Pearson r = 0.051;  R² = 0.003
 
 ![Length vs Error](../figures/length_vs_error.png){#fig:length-vs-error width="80%"}

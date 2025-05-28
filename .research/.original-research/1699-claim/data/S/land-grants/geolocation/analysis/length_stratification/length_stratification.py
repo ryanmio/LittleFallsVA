@@ -7,57 +7,39 @@ import numpy as np
 # Length-stratified accuracy analysis
 # ---------------------------------------------------------------
 # Goal: investigate whether model error correlates with the *length* of the
-# patent abstract.
-#
-# Operational definition of length
-# -------------------------------
-# The raw abstract text is not stored alongside the model outputs; however
-# each call logged in `full_results.csv` records `input_tokens`, i.e. the number
-# of tokens sent to the OpenAI API (prompt + abstract).
-#
-# • The prompt component is **constant** for all one-shot calls (≈30 tokens).
-# • Tool-chain calls include additional system messages and function schemas,
-#   so their `input_tokens` are inflated relative to the same abstract.
-#
-# To obtain a tool-agnostic proxy for abstract length we therefore take, **for
-# each row_index**, the *minimum* `input_tokens` observed across all methods.
-# This minimum always corresponds to a one-shot call and is thus
-# (prompt-constant + abstract-tokens).  Subtracting the prompt constant is
-# unnecessary because it would shift all lengths equally and therefore not
-# affect the median split.
-#
-# Analysis steps
-# 1. First pass: collect the minimum input_tokens for every `row_index` that
-#    has a ground-truth coordinate (`is_locatable == 1`).
-# 2. Compute the median of those minima to divide entries into "short" and
-#    "long" cohorts.
-# 3. Second pass: aggregate error_km by cohort and by method.
-# 4. Write a Markdown report with overall and per-method means.
+# patent abstract using word count from the validation file
 # ---------------------------------------------------------------
 
-# `length_stratification.py` lives in geolocation/analysis/length_stratification/
-# We need the geolocation root (two levels up) to access analysis/full_results.csv
-ROOT = pathlib.Path(__file__).resolve().parents[2]
-CSV = ROOT / "analysis" / "full_results.csv"
+ROOT = pathlib.Path(__file__).resolve().parents[1]  # analysis directory
+FULL_RESULTS_CSV = ROOT / "full_results.csv"
+VALIDATION_CSV = ROOT.parent / "validation - TEST-FULL-H1-final.csv"
 
-# NEW PARAMETERS
-VALIDATION_CSV = ROOT / "validation - TEST-FULL-H1.csv"
 BOOT_ITERS = 1000  # for CI of mean error per cohort
 
 # ---------------------------------------------------------------
-# Build length map from validation file (word count of raw_entry)
+# Build length map from validation file using word count
 # ---------------------------------------------------------------
+def count_words(text):
+    """Count words in text, handling None/empty strings"""
+    if not text:
+        return 0
+    return len(text.split())
+
+# Read validation file to get word counts for each row_index
 length_map: dict[int, int] = {}
 with VALIDATION_CSV.open() as fh:
     reader = csv.DictReader(fh)
     for row in reader:
-        rid = int(row["subject_id"].split("_")[-1]) if row.get("subject_id") else None
-        if rid is None:
+        if not row.get("results_row_index"):
             continue
-        if row.get("has_ground_truth") not in {"1", "true", "True"}:
-            continue
-        raw_text = row.get("raw_entry", "").strip()
-        length_map[rid] = len(raw_text.split())  # word count
+        rid = int(row["results_row_index"])
+        raw_entry = row.get("raw_entry", "")
+        word_count = count_words(raw_entry)
+        length_map[rid] = word_count
+
+if not length_map:
+    print("No data found in validation file")
+    exit(1)
 
 median_len = statistics.median(length_map.values())
 
@@ -67,7 +49,7 @@ errors_by_len_method = collections.defaultdict(lambda: collections.defaultdict(l
 # Collect (length, error) pairs for continuous analysis
 xy_pairs: list[tuple[int, float]] = []
 
-with CSV.open() as fh:
+with FULL_RESULTS_CSV.open() as fh:
     reader = csv.DictReader(fh)
     for row in reader:
         if row.get("is_locatable") not in {"1", "true", "True"}:
@@ -102,7 +84,7 @@ random.seed(42)
 # ---------------------------------------------------------------
 report_lines = [
     "# Length-stratified accuracy (LLM methods only)\n",
-    f"Length proxy = word-count of raw_entry (median = {median_len})\n\n",
+    f"Length proxy = word-count of raw_entry (median = {median_len} words)\n\n",
 ]
 
 for cat in ("short", "long"):
@@ -174,7 +156,7 @@ report_lines.extend(
 # ---------------------------------------------------------------
 # Scatter plot figure
 # ---------------------------------------------------------------
-fig_dir = ROOT / "analysis" / "figures"
+fig_dir = ROOT / "figures"
 fig_dir.mkdir(parents=True, exist_ok=True)
 fig_path = fig_dir / "length_vs_error.png"
 
@@ -203,7 +185,7 @@ plt.close()
 
 report_lines.append("\n![Length vs Error](../figures/length_vs_error.png){#fig:length-vs-error width=\"80%\"}\n")
 
-out_dir = ROOT / "analysis" / "length_stratification"
+out_dir = ROOT / "length_stratification"
 out_dir.mkdir(exist_ok=True)
 report_path = out_dir / "length_stratification_stats.md"
 report_path.write_text("".join(report_lines))
