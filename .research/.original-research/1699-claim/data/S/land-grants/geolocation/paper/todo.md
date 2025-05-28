@@ -16,12 +16,18 @@
 **STATUS: ✅ ALL PHASE 1 SCRIPTS COMPLETED SUCCESSFULLY**
 
 ### Phase 2: Generate Updated Figures
-- [ ] **figures/plot_violin_methods.py** - Error distribution violin plot
-- [ ] **figures/accuracy_bar.py** - Accuracy bar chart with confidence intervals
-- [ ] **figures/pareto_tradeoff.py** - Cost-accuracy Pareto frontier
-- [ ] **figures/latency_boxplot.py** - Processing time distribution
-- [ ] **figures/error_boxplot.py** - Error distribution boxplot
-- [ ] **figures/cdf_graphs/** - Cumulative distribution functions
+- [x] **figures/plot_violin_methods.py** - Error distribution violin plot ✅ COMPLETED
+- [x] **figures/plot_accuracy_bar.py** - Accuracy bar chart with confidence intervals ✅ COMPLETED
+- [x] **figures/plot_pareto.py** - Cost-accuracy Pareto frontier ✅ COMPLETED
+- [x] **figures/plot_pareto_latency.py** - Latency-accuracy Pareto frontier ✅ COMPLETED
+- [x] **figures/plot_latency_box.py** - Processing time distribution ✅ COMPLETED
+- [x] **figures/plot_error_boxplot.py** - Error distribution boxplot ✅ COMPLETED
+- [x] **figures/plot_cdf_models.py** - Cumulative distribution functions ✅ COMPLETED
+- [x] **figures/plot_tool_calls.py** - Tool usage stacked bar chart ✅ COMPLETED
+- [x] **figures/plot_cost_accuracy.py** - Cost-accuracy scatter plot ✅ COMPLETED
+
+**STATUS: ✅ ALL PHASE 2 FIGURES COMPLETED SUCCESSFULLY**
+**H-2 (stanford-ner) now appears in all relevant plots with mean error ~79.02 km**
 
 ### Phase 3: Update Paper Tables & Text
 
