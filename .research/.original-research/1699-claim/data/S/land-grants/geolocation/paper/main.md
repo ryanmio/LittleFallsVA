@@ -151,7 +151,17 @@ A certified GIS analyst [@Bashorun2025_gis] implemented an automated geolocating
 
 These baseline coordinates are stored directly in the evaluation file, allowing the experiment script to access them through the static pipeline. A labor cost of USD 140 (six billable hours) is assigned to the benchmark when reporting cost metrics.
 
-## 4.2 One-shot Prompting (M-series)
+## 4.2 Stanford NER Baseline (H-2)
+
+To provide a more rigorous deterministic baseline, a Stanford Named Entity Recognition (NER) approach was implemented using the GeoTxt framework. This method represents a state-of-the-art automated geoparsing pipeline that combines linguistic analysis with gazetteer lookup, providing a systematic comparison point for the LLM-based approaches.
+
+The Stanford NER pipeline operates through a three-stage process: (1) Named entity extraction using Stanford's CoreNLP library to identify geographic entities within the patent abstracts, (2) Geographic resolution via the GeoNames API with Virginia-specific restrictions to prevent out-of-state matches, and (3) Coordinate selection using a population-weighted ranking system to choose the most likely location when multiple candidates are found.
+
+The system implements a robust fallback hierarchy: if no geographic entities are successfully resolved, it falls back to county centroid coordinates extracted from the patent text; if county extraction fails, it defaults to Virginia's geographic center (37.4316, -78.6569). This approach ensures 100% prediction coverage while maintaining methodological consistency.
+
+The Stanford NER method achieved a mean error of 79.02 km with 100% prediction coverage across all 43 test grants. While this represents a more systematic approach than the single-analyst GIS baseline, it demonstrates the challenges that automated systems face when dealing with historical toponyms that may have shifted meaning or location over centuries, as detailed in the case study analysis (§7.2.1).
+
+## 4.3 One-shot Prompting (M-series)
 
 In the first automatic condition, the language model receives the grant abstract together with a single exemplar response illustrating the desired output format. The prompt asks for coordinates expressed in degrees–minutes–seconds (DMS) and contains no chain-of-thought or tool instructions:
 
@@ -173,7 +183,7 @@ Six OpenAI model variants spanning three architecture families constitute the M-
 
 Table: One-shot model variants (M-series). {#tbl:mmodels}
 
-## 4.3 Tool-augmented Chain-of-Thought (T-series)
+## 4.4 Tool-augmented Chain-of-Thought (T-series)
 
 The second automated condition equips the model with two specialized tools: `geocode_place`, an interface to the Google Geocoding API limited to Virginia and adjoining counties, and `compute_centroid`, which returns the spherical centroid of two or more points. The system prompt (Appendix A.2.2) encourages an iterative search strategy where the model can issue up to twelve tool calls, evaluate the plausibility of each result, and optionally average multiple anchors before emitting a final answer in decimal degrees with six fractional places.
 
@@ -191,7 +201,7 @@ Table: Tool-augmented model variants (T-series). {#tbl:tmodels}
 
 The experiment driver loops over each abstract, maintains a conversation history including tool call outputs, and stops after either receiving a valid coordinate string or exceeding ten assistant turns.
 
-## 4.4 Cost and Latency Accounting
+## 4.5 Cost and Latency Accounting
 
 For each automated prediction, input and output tokens reported by the OpenAI API are converted to U.S. dollars using the price list in effect on 15 May 2025. The per-call cost is calculated as:
 
@@ -245,6 +255,7 @@ Table \ref{tbl:accuracy} summarizes the per-method distance-error statistics on 
 | M-4 | gpt-4.1-2025-04-14 | 28.5 [22.9, 35.0] | 25.4 | 20.9 |
 | T-4 | gpt-4.1-2025-04-14 + tools | 37.2 [29.9, 44.4] | 34.2 | 16.3 |
 | T-1 | o4-mini-2025-04-16 + tools | 37.7 [30.9, 45.0] | 33.6 | 14.0 |
+| H-2 | Stanford NER (GeoTxt) | 79.0 [63.2, 95.8] | 59.7 | 9.3 |
 | H-1 | Professional GIS script | 71.4 [57.9, 85.9] | 70.7 | 4.7 |
 
 Table: Coordinate-accuracy metrics. {#tbl:accuracy}
@@ -279,6 +290,7 @@ Next, the relationship between monetary cost and spatial accuracy is examined. F
 
 | ID | Cost / located (USD) | Cost per 1k | Mean error (km) |
 |---|---|---|---|
+| H-2 | 0.00000 | 0.00 | 79.0 |
 | M-4 | 0.00048 | 0.48 | 28.5 |
 | M-5 | 0.00109 | 1.09 | 27.9 |
 | M-2 | 0.13744 | 137.44 | 23.4 |
@@ -366,6 +378,16 @@ Inspection of the largest residuals uncovers three recurring failure modes:
 2. **Chain-of-bearing descriptions.** A minority of abstracts provide only metes-and-bounds bearings (e.g., "beginning at a white oak, thence S 42° E 240 p."). Without explicit place names, the LLM frequently defaults to the centroid of the target county, inflating error to >70 km.
 
 3. **Cascading search bias.** Tool-enabled runs introduce an additional failure channel: once the first `geocode_place` call returns a spurious coordinate, subsequent `compute_centroid` operations often average anchors that are already flawed, locking in the error. Raising the threshold for calling the centroid function—or providing the model with a quality heuristic—may mitigate this issue.
+
+### 7.2.1 Historical vs. Modern Geographic Context: The Stanford NER Case Study
+
+The Stanford NER method (H-2) revealed a particularly instructive failure mode that highlights the fundamental challenge of historical geocoding. Two extreme outliers (>400 km error) initially appeared to be technical failures but upon investigation revealed a more nuanced issue: the collision between historical and modern geographic nomenclature.
+
+**Case Analysis**: Grants referencing "St. Paul's Parish" in colonial Virginia were correctly processed by Stanford NER, which extracted "St. Paul" as a geographic entity. The GeoNames API, restricted to Virginia locations, correctly returned coordinates for Saint Paul, Virginia (36.90538, -82.31098) in Wise County. However, the historical "St. Paul's Parish" referenced in 1700s land records was an Anglican administrative division in central Virginia, approximately 400 km from the modern town of Saint Paul in southwestern Virginia.
+
+**Technical Validation**: All system components functioned correctly—Stanford NER accurately identified place names, the Virginia geographic restriction prevented mislocalization to Saint Paul, Minnesota, and the coordinates returned were legitimately within Virginia. The error arose not from algorithmic failure but from the fundamental challenge that modern gazetteers contain toponyms that have shifted meaning, location, or administrative context over centuries.
+
+**Research Implications**: This finding demonstrates where expert geographic knowledge exceeds purely algorithmic approaches. A professional GIS analyst familiar with Virginia's colonial administrative geography would immediately recognize that "St. Paul's Parish" in 1700s land records refers to a historical parish system rather than the modern town. This case study reinforces the value of human-in-the-loop validation for historical geocoding applications, where domain expertise can distinguish between homonymous historical and contemporary place names that automated systems cannot differentiate.
 
 \begin{figure}[H]
 \centering
