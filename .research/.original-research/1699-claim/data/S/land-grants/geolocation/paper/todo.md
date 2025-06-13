@@ -29,10 +29,10 @@
 - [x] **Update accuracy table** - Table with H-2 performance metrics ✅ COMPLETED  
 - [x] **Update cost table** - Include H-2 cost efficiency ✅ COMPLETED
 - [x] **Add outlier case study** - Section 7.2.1 Historical vs Modern Geography ✅ COMPLETED
-- [ ] **Update abstract** - Mention H-2 as deterministic baseline
-- [ ] **Update introduction** - Reference Stanford NER comparison
-- [ ] **Update results summary** - Include H-2 findings in key results
-- [ ] **Update conclusion** - Incorporate H-2 implications
+- [x] **Update abstract** - Mention H-2 as deterministic baseline
+- [x] **Update introduction** - Reference Stanford NER comparison
+- [x] **Update results summary** - Include H-2 findings in key results
+- [x] **Update conclusion** - Incorporate H-2 implications
 - [ ] **Review figure captions** - Ensure H-2 is properly labeled
 - [ ] **Update method count** - Change from "eight" to "nine" methods throughout
 

@@ -52,7 +52,7 @@ df['token_cost'] = df.apply(compute_token_cost, axis=1)
 # Google API calls & cost - if this data is in full_results.csv, use it directly
 # Otherwise set to 0 for methods that don't use tools
 if 'google_calls' in df.columns:
-    df['google_cost'] = df['google_calls'] * 0.005
+df['google_cost'] = df['google_calls'] * 0.005
 else:
     df['google_calls'] = 0
     df['google_cost'] = 0.0

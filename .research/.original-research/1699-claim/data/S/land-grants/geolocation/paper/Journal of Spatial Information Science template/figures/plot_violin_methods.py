@@ -18,8 +18,13 @@ counts = loc['method_id'].value_counts()
 keep_methods = counts[counts >= 20].index.tolist()
 loc = loc[loc['method_id'].isin(keep_methods)]
 
-plt.figure(figsize=(10, 4))
-sns.violinplot(data=loc, x='method_id', y='error_km', inner='quartile', palette='muted', cut=0)
+# Define custom order: M-series, T-series, then H-series baselines
+method_order = ['M-1', 'M-2', 'M-3', 'M-4', 'M-5', 'M-6', 'T-1', 'T-4', 'H-1', 'H-2']
+# Filter to only include methods that exist in our data
+method_order = [m for m in method_order if m in keep_methods]
+
+plt.figure(figsize=(10, 6))
+sns.violinplot(data=loc, x='method_id', y='error_km', inner='quartile', palette='muted', cut=0, order=method_order)
 plt.ylabel('Error (km)')
 plt.xlabel('Method')
 plt.title('Error distribution per method')

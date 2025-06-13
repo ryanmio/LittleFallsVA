@@ -11,6 +11,23 @@ github: "https://github.com/ryanmio/colonial-virginia-llm-geolocation"
 header-includes:
   - \usepackage{float}
   - \floatplacement{figure}{H}
+  # --- Patch for JOSIS LaTeX build ---
+  - \usepackage[utf8]{inputenc}
+  - \newcommand{\passthrough}[1]{#1}
+  - |-
+      \makeatletter
+      \define@key{lst}{breakanywhere}[true]{}
+      \makeatother
+  - \lstset{inputencoding=utf8}
+  - \DeclareUnicodeCharacter{00B0}{\textdegree}
+  - \DeclareUnicodeCharacter{2264}{\ensuremath{\le}}
+  - \DeclareUnicodeCharacter{2265}{\ensuremath{\ge}}
+  - \DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
+  - \DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+  - \DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
+  - \DeclareUnicodeCharacter{2013}{--}
+  - \DeclareUnicodeCharacter{2014}{---}
+  - \DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}
 ---
 
 \begin{center}
@@ -20,9 +37,9 @@ header-includes:
 \vspace{1em}
 
 # Abstract
-Virginia's seventeenth- and eighteenth-century land patents survive almost exclusively as narrative metes-and-bounds descriptions in printed abstract volumes such as *Cavaliers and Pioneers* (C&P) [@Nugent1979_cavaliers3]. This study presents the first systematic study of whether state-of-the-art large language models (LLMs) can convert these prose abstracts into usable latitude/longitude coordinates at research grade. The work digitizes, transcribes, and openly releases a corpus of 5,471 Virginia patent abstracts (1695–1732), accompanied by a rigorously curated ground-truth dataset of 43 test cases meeting strict archival verification standards. Six OpenAI models spanning three architecture families—o-series reasoning models, flagship GPT-4-class chat models, and GPT-3.5—are benchmarked under two prompting paradigms: (i) one-shot "direct-to-coordinate" and (ii) tool-augmented chain-of-thought that invokes external geocoding APIs.
+Virginia's seventeenth- and eighteenth-century land patents survive almost exclusively as narrative metes-and-bounds descriptions in printed abstract volumes such as *Cavaliers and Pioneers* (C&P) [@Nugent1979_cavaliers3]. This study presents the first systematic study of whether state-of-the-art large language models (LLMs) can convert these prose abstracts into usable latitude/longitude coordinates at research grade. The work digitizes, transcribes, and openly releases a corpus of 5,471 Virginia patent abstracts (1695–1732), accompanied by a rigorously curated ground-truth dataset of 43 test cases meeting strict archival verification standards. Six OpenAI models spanning three architecture families—o-series reasoning models, flagship GPT-4-class chat models, and GPT-3.5—are benchmarked under two prompting paradigms: (i) one-shot "direct-to-coordinate" and (ii) tool-augmented chain-of-thought that invokes external geocoding APIs—and their outputs are compared to two non-LLM baselines: a professional GIS workflow and a deterministic Stanford Named Entity Recognition (NER) geoparser.
 
-On the verified grants, the best purely textual model (o3-2025-04-16) achieves a mean great-circle error of 23.4 km (median 14.3 km), a 67% improvement over a professional GIS baseline (71.4 km), while cutting cost and latency by roughly two and three orders of magnitude, respectively. The ultracheap gpt-4o-2024-08-06 model locates patents with 28 km mean error at USD 1.09 per 1,000, only slightly less accurate yet ~100× cheaper, defining a new dollar-for-accuracy Pareto frontier. Contrary to expectations, granting LLMs external geocoding tools neither improves accuracy nor consistency. Robustness checks across temperature, reasoning-budget, and abstract length confirm these findings.
+On the verified grants, the best purely textual model (o3-2025-04-16) achieves a mean great-circle error of 23.4 km (median 14.3 km), a 67% improvement over the professional GIS baseline (71.4 km) and nearly a 70% reduction relative to the Stanford NER baseline (79.0 km), while cutting cost and latency by roughly two and three orders of magnitude, respectively. The ultracheap gpt-4o-2024-08-06 model locates patents with 28 km mean error at USD 1.09 per 1,000, only slightly less accurate yet ~100× cheaper, defining a new dollar-for-accuracy Pareto frontier. Contrary to expectations, granting LLMs external geocoding tools neither improves accuracy nor consistency. Robustness checks across temperature, reasoning-budget, and abstract length confirm these findings.
 
 These results show that off-the-shelf LLMs can georeference early-modern land records faster, cheaper, and as accurately as traditional GIS workflows, opening a scalable pathway to spatially enable colonial archives—and, in turn, to reassess settlement dynamics, plantation economies, and Indigenous dispossession with quantitative precision.
 
@@ -246,7 +263,7 @@ Figure \ref{fig:accuracy_bar} displays the mean error with corresponding 95% con
 
 ![Coordinate accuracy by method](../analysis/figures/accuracy_bar.pdf){#fig:accuracy_bar width="0.9\linewidth"}
 
-Table \ref{tbl:accuracy} summarizes the per-method distance-error statistics on the 43 grants with verified ground truth. The best-performing automatic approach, **M-2** (o3-2025-04-16, one-shot prompt), achieved a mean error of **23.4 km**—a 67% improvement over the professional GIS benchmark (**H-1**, 71.4 km). Approximately one-third of M-2 predictions fell within 10 km of ground-truth, compared with less than 5% for the GIS script.
+Table \ref{tbl:accuracy} summarizes the per-method distance-error statistics on the 43 grants with verified ground truth. The best-performing automatic approach, **M-2** (o3-2025-04-16, one-shot prompt), achieved a mean error of **23.4 km**—a 67% improvement over the professional GIS benchmark (**H-1**, 71.4 km) and nearly a 70% reduction relative to the Stanford NER baseline (79.0 km). Approximately one-third of M-2 predictions fell within 10 km of ground-truth, compared with less than 5% for the GIS script.
 
 | ID | Underlying model | Mean ± 95% CI (km) | Median (km) | ≤10 km (%) |
 |---|------|------|---|---|
@@ -451,7 +468,7 @@ Building on the present findings, several avenues warrant exploration.
 
 # 10 Conclusion
 
-This study provides the first systematic benchmark of large language models on the task of geolocating colonial-era Virginia land grants directly from narrative abstracts. Across nine model–pipeline combinations evaluated on 43 grants with rigorously verified ground truth, the findings show that an off-the-shelf one-shot prompt to the o3-2025-04-16 model achieves a mean positional error of 23.4 km—matching or outperforming a standard professional GIS workflow while reducing cost by two orders of magnitude and latency by three. Contrary to expectations, granting LLMs external geocoding tools does not automatically improve results.
+This study provides the first systematic benchmark of large language models on the task of geolocating colonial-era Virginia land grants directly from narrative abstracts. Across ten model–pipeline combinations—including two non-LLM baselines—evaluated on 43 grants with rigorously verified ground truth, the findings show that an off-the-shelf one-shot prompt to the o3-2025-04-16 model achieves a mean positional error of 23.4 km—dramatically outperforming both a professional GIS workflow (71.4 km) and a deterministic Stanford NER geoparser (79.0 km) while reducing cost by two orders of magnitude and latency by three. Contrary to expectations, granting LLMs external geocoding tools does not automatically improve results.
 
 The implications for digital history are immediate: large corpora of archival land records can now be mapped at state scale in hours rather than months, facilitating quantitative studies of settlement, labor, and landscape change. At the same time, failure modes are highlighted that demand scholarly caution and procedural safeguards are outlined, including hybrid verification and periodic re-benchmarking. Taken together, the results validate LLM-assisted geocoding as a viable, resource-efficient complement to traditional geospatial research, and chart a path toward fully spatially-enabled colonial archives.
 
