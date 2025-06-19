@@ -464,6 +464,169 @@ def compute_centroid(points: list):
         return {"error": str(e)}
 
 # ---------------------------------------------------------------------
+# Ensemble utilities
+# ---------------------------------------------------------------------
+
+def find_clusters(coords: list, max_distance_km: float = 0.5):
+    """Group coordinates into clusters where points are within max_distance_km of each other.
+    
+    Args:
+        coords: List of (lat, lon) tuples
+        max_distance_km: Maximum distance in km for points to be in same cluster
+        
+    Returns:
+        List of clusters, where each cluster is a list of (lat, lon) tuples
+    """
+    if not coords:
+        return []
+    
+    clusters = []
+    remaining = coords.copy()
+    
+    while remaining:
+        # Start a new cluster with the first remaining point
+        current_cluster = [remaining.pop(0)]
+        
+        # Find all points within max_distance_km of any point in current cluster
+        added_point = True
+        while added_point:
+            added_point = False
+            to_remove = []
+            
+            for i, candidate in enumerate(remaining):
+                for cluster_point in current_cluster:
+                    distance = haversine(candidate[0], candidate[1], cluster_point[0], cluster_point[1])
+                    if distance <= max_distance_km:
+                        current_cluster.append(candidate)
+                        to_remove.append(i)
+                        added_point = True
+                        break
+                if added_point:
+                    break
+            
+            # Remove points that were added to cluster (in reverse order to maintain indices)
+            for i in reversed(to_remove):
+                remaining.pop(i)
+        
+        clusters.append(current_cluster)
+    
+    return clusters
+
+def consensus_dbscan(coords: list):
+    """DB-0.5: Existing 500-m DBSCAN with min_samples=3.
+    
+    Args:
+        coords: List of (lat, lon) tuples
+        
+    Returns:
+        String coordinate representation, or empty string if no valid coordinates
+    """
+    if not coords:
+        return ""
+    
+    if len(coords) == 1:
+        return f"{coords[0][0]}, {coords[0][1]}"
+    
+    # Find clusters within 500m
+    clusters = find_clusters(coords, max_distance_km=0.5)
+    
+    # Find largest cluster with ≥3 points
+    largest_cluster = None
+    for cluster in clusters:
+        if len(cluster) >= 3:
+            if largest_cluster is None or len(cluster) > len(largest_cluster):
+                largest_cluster = cluster
+    
+    if largest_cluster:
+        # Use centroid of largest cluster with ≥3 points
+        points = [{"lat": lat, "lng": lon} for lat, lon in largest_cluster]
+        result = compute_centroid(points)
+        if "error" not in result:
+            return f"{result['lat']}, {result['lng']}"
+    
+    # Fallback: simple mean of all valid points
+    points = [{"lat": lat, "lng": lon} for lat, lon in coords]
+    result = compute_centroid(points)
+    if "error" not in result:
+        return f"{result['lat']}, {result['lng']}"
+    
+    return ""
+
+def consensus_ttc(coords: list):
+    """TTC: Tightest-triple centroid.
+    
+    Select 3 points with minimum total pair distance, return their centroid.
+    If <3 points, use midpoint/identity.
+    
+    Args:
+        coords: List of (lat, lon) tuples
+        
+    Returns:
+        String coordinate representation, or ERROR if no valid coordinates
+    """
+    if len(coords) == 0:
+        return "ERROR: No valid coordinates"
+    
+    if len(coords) == 1:
+        return f"{coords[0][0]}, {coords[0][1]}"
+    
+    if len(coords) == 2:
+        # Midpoint
+        lat_mid = (coords[0][0] + coords[1][0]) / 2
+        lon_mid = (coords[0][1] + coords[1][1]) / 2
+        return f"{lat_mid}, {lon_mid}"
+    
+    # len >= 3: Find tightest triple
+    from itertools import combinations
+    
+    min_total_distance = float('inf')
+    best_triple = None
+    
+    # Check all possible 3-point combinations
+    for triple in combinations(coords, 3):
+        total_dist = 0
+        for i in range(3):
+            for j in range(i + 1, 3):
+                dist = haversine(triple[i][0], triple[i][1], triple[j][0], triple[j][1])
+                total_dist += dist
+        
+        if total_dist < min_total_distance:
+            min_total_distance = total_dist
+            best_triple = triple
+    
+    if best_triple:
+        # Return centroid of tightest triple
+        points = [{"lat": lat, "lng": lon} for lat, lon in best_triple]
+        result = compute_centroid(points)
+        if "error" not in result:
+            return f"{result['lat']}, {result['lng']}"
+    
+    return "ERROR: Failed to compute tightest triple centroid"
+
+def ensemble_consensus(predictions: list, consensus_rule: str = "dbscan"):
+    """Compute consensus coordinate from multiple predictions using specified rule.
+    
+    Args:
+        predictions: List of prediction text strings
+        consensus_rule: Either "dbscan" or "ttc"
+        
+    Returns:
+        String coordinate representation of consensus, or empty string if no valid coordinates
+    """
+    # Extract coordinates from each prediction
+    coords = []
+    for pred in predictions:
+        if pred and not pred.startswith("ERROR:"):
+            lat, lon = extract_coords_from_text(pred)
+            if lat is not None and lon is not None:
+                coords.append((lat, lon))
+    
+    if consensus_rule == "ttc":
+        return consensus_ttc(coords)
+    else:  # default to dbscan
+        return consensus_dbscan(coords)
+
+# ---------------------------------------------------------------------
 # Tool-chain controller
 # ---------------------------------------------------------------------
 
@@ -478,6 +641,12 @@ def run_tool_chain(client: OpenAI, method: dict, prompt_obj: dict, entry_text: s
 
     params = method.get("params", {}).copy()
     params.setdefault("store", True)
+    
+    # Remove our custom parameters that are not valid OpenAI API parameters
+    custom_params = ["repeats", "consensus_rule", "fixed_cost_usd", "billed_hours", "redact_names"]
+    for custom_param in custom_params:
+        params.pop(custom_param, None)
+    
     if "reasoning_effort" in params:
         params["reasoning"] = {"effort": params.pop("reasoning_effort")}
 
@@ -637,17 +806,17 @@ def init_openai_client():
 # Mock/dry-run utilities
 # ---------------------------------------------------------------------
 
-def mock_predict(one_shot=True, row_index=0, method_id="MOCK"):
+def mock_predict(one_shot=True, row_index=0, method_id="MOCK", call_index=0):
     """Return a fake DMS coordinate string (clearly marked as fake)."""
     # Use MOCKDATA_PREFIX to ensure these are never confused with real predictions
     lat_deg = f"{MOCKDATA_PREFIX}"
     lon_deg = f"{MOCKDATA_PREFIX}"
     
-    # Add minor variations based on row/method to simulate different results
-    min_lat = (row_index * 7) % 60  
-    sec_lat = float(f"{(hash(method_id) % 100):02d}.{(row_index % 100):05d}")
-    min_lon = (row_index * 13) % 60
-    sec_lon = float(f"{(hash(method_id) % 100):02d}.{(row_index % 100):05d}")
+    # Add minor variations based on row/method/call to simulate different results
+    min_lat = (row_index * 7 + call_index * 3) % 60  
+    sec_lat = float(f"{(hash(method_id) % 100):02d}.{((row_index + call_index) % 100):05d}")
+    min_lon = (row_index * 13 + call_index * 5) % 60
+    sec_lon = float(f"{(hash(method_id) % 100):02d}.{((row_index + call_index) % 100):05d}")
     
     # Format as DMS for one_shot
     if one_shot:
@@ -683,18 +852,18 @@ def mock_usage(method_id, row_index, pipeline):
         "total_tokens": total
     }
 
-def mock_response(method, prompt, entry_text, row_index):
+def mock_response(method, prompt, entry_text, row_index, call_index=0):
     """Generate a detailed mock response object like a real API call would return."""
     pipeline = method["pipeline"]
     method_id = method["id"]
     
     # Generate mock prediction and usage
-    pred_text = mock_predict(one_shot=(pipeline == "one_shot"), row_index=row_index, method_id=method_id)
+    pred_text = mock_predict(one_shot=(pipeline == "one_shot"), row_index=row_index, method_id=method_id, call_index=call_index)
     usage = mock_usage(method_id, row_index, pipeline)
     
     # Build a simulated response with key attributes matching the real API
     return {
-        "id": f"mock_resp_{int(time.time())}_{method_id}_{row_index}",
+        "id": f"mock_resp_{int(time.time())}_{method_id}_{row_index}_{call_index}",
         "model": method["model"],
         "output": [
             {
@@ -725,6 +894,11 @@ def call_openai_responses(client, method, prompt, entry_text):
     params = method.get("params", {}).copy()
     params.setdefault("store", True)
     
+    # Remove our custom parameters that are not valid OpenAI API parameters
+    custom_params = ["repeats", "consensus_rule", "fixed_cost_usd", "billed_hours", "redact_names"]
+    for custom_param in custom_params:
+        params.pop(custom_param, None)
+    
     # Handle reasoning field (API expects object with effort)
     if "reasoning_effort" in params:
         params["reasoning"] = {"effort": params.pop("reasoning_effort")}
@@ -732,47 +906,52 @@ def call_openai_responses(client, method, prompt, entry_text):
     # Add required text format parameter
     params["text"] = {"format": {"type": "text"}}
     
-    try:
-        response = client.responses.create(
-            model=method["model"],
-            input=[{"role": "user", "content": entry_text}],
-            instructions=prompt["text"].strip(),
-            **params
-        )
-        
-        # Extract prediction text: skip reasoning-type items
-        pred_text = "ERROR: No output text"
-        if hasattr(response, "output") and response.output:
-            for itm in response.output:
-                itype = getattr(itm, "type", None) or (itm.get("type") if isinstance(itm, dict) else None)
-                if itype in {"message", "text", "json_object"}:
-                    pred_text = extract_output_text(itm)
-                    if pred_text:
-                        break
-        
-        # Use SDK's model_dump so everything is JSON-serialisable for our logs
-        safe_resp = response.model_dump()
+    # Simple retry mechanism for server errors
+    for attempt in range(3):
+        try:
+            response = client.responses.create(
+                model=method["model"],
+                input=[{"role": "user", "content": entry_text}],
+                instructions=prompt["text"].strip(),
+                **params
+            )
 
-        return {
-            "id": response.id,
-            "model": response.model,
-            "response": safe_resp,
-            "usage": safe_resp.get("usage", {}),
-            "latency_s": time.time() - start_time,
-            "mock": False,
-            "created_at": int(time.time()),
-        }, pred_text
-        
-    except Exception as e:
-        print(f"Error calling OpenAI: {e}")
-        return {
-            "error": str(e),
-            "model": method["model"],
-            "usage": {},
-            "latency_s": time.time() - start_time,
-            "mock": False,
-            "created_at": int(time.time())
-        }, f"ERROR: {e}"
+            # Extract prediction text: skip reasoning-type items
+            pred_text = "ERROR: No output text"
+            if hasattr(response, "output") and response.output:
+                for itm in response.output:
+                    itype = getattr(itm, "type", None) or (itm.get("type") if isinstance(itm, dict) else None)
+                    if itype in {"message", "text", "json_object"}:
+                        pred_text = extract_output_text(itm)
+                        if pred_text:
+                            break
+
+            # Use SDK's model_dump so everything is JSON-serialisable for our logs
+            safe_resp = response.model_dump()
+
+            return {
+                "id": response.id,
+                "model": response.model,
+                "response": safe_resp,
+                "usage": safe_resp.get("usage", {}),
+                "latency_s": time.time() - start_time,
+                "mock": False,
+                "created_at": int(time.time()),
+            }, pred_text
+
+        except Exception as e:
+            if attempt < 2 and "server_error" in str(e).lower():
+                time.sleep(2)
+                continue
+            print(f"Error calling OpenAI: {e}")
+            return {
+                "error": str(e),
+                "model": method["model"],
+                "usage": {},
+                "latency_s": time.time() - start_time,
+                "mock": False,
+                "created_at": int(time.time()),
+            }, f"ERROR: {e}"
 
 # ---------------------------------------------------------------------
 # Logging
@@ -960,7 +1139,19 @@ def run_experiment(args):
                     print(f"[WARN] No prompt defined for pipeline {pipeline}, skipping {method_id}")
                     continue
                 
+                # Check for ensemble (repeats parameter)
+                repeats = params.get("repeats", 1)
+                
+                # ------------------------------------------------------
+                # Optional patentee-name redaction (leakage test)
+                # ------------------------------------------------------
+                entry_text = raw_entry
+                if params.get("redact_names"):
+                    entry_text = re.sub(r"^[A-Z .:&'-]+(?=[,;])", "[NAME]", entry_text, 1)
+                
                 print(f"Entry {row_idx}/{len(eval_rows)} | Method {method_id} ({model}) | ", end="", flush=True)
+                if repeats > 1:
+                    print(f"ENSEMBLE ({repeats}x) | ", end="", flush=True)
 
                 # Prepare request details for logging
                 request = {
@@ -969,61 +1160,89 @@ def run_experiment(args):
                     "params": params,
                     "prompt_id": prompt_obj["id"],
                     "prompt_version": prompt_obj["version"],
-                    "entry_text": raw_entry[:100] + ("..." if len(raw_entry) > 100 else "")
+                    "entry_text": entry_text[:100] + ("..." if len(entry_text) > 100 else "")
                 }
 
-                # In dry-run, generate mock prediction
-                if args.dry_run:
-                    print("MOCK mode | ", end="", flush=True)
-                    
-                    # Simulate latency for more realistic testing
-                    mock_latency = 0.5 + random.random() * 2
-                    if args.verbose:
-                        print(f"Simulating {mock_latency:.1f}s latency | ", end="", flush=True)
-                    time.sleep(mock_latency)
-                    
-                    response_obj = mock_response(m, prompt_obj, raw_entry, row_idx)
-                    pred_text = response_obj["output"][0]["content"][0]["text"]
-                    usage = response_obj["usage"]
-                    latency = mock_latency
-                    
-                    # Log the mock call
+                # Initialize aggregators for ensemble
+                all_predictions = []
+                total_usage = {"input_tokens": 0, "output_tokens": 0, "total_tokens": 0, "output_tokens_details": {"reasoning_tokens": 0}}
+                total_latency = 0.0
+                all_responses = []
+
+                # Loop for ensemble calls
+                for call_idx in range(repeats):
+                    if repeats > 1:
+                        print(f"Call {call_idx + 1}/{repeats} | ", end="", flush=True)
+
+                    # In dry-run, generate mock prediction
+                    if args.dry_run:
+                        if call_idx == 0:
+                            print("MOCK mode | ", end="", flush=True)
+
+                        # Simulate latency for more realistic testing
+                        mock_latency = 0.5 + random.random() * 2
+                        if args.verbose:
+                            print(f"Simulating {mock_latency:.1f}s latency | ", end="", flush=True)
+                        time.sleep(mock_latency)
+
+                        response_obj = mock_response(m, prompt_obj, entry_text, row_idx, call_idx)
+                        call_pred_text = response_obj["output"][0]["content"][0]["text"]
+                        call_usage = response_obj["usage"]
+                        call_latency = mock_latency
+                    else:
+                        if call_idx == 0:
+                            print("REAL API call | ", end="", flush=True)
+                        try:
+                            if pipeline == "tool_chain":
+                                response_obj, call_pred_text, call_usage, call_latency = run_tool_chain(client, m, prompt_obj, entry_text)
+                            else:
+                                response_obj, call_pred_text = call_openai_responses(client, m, prompt_obj, entry_text)
+                                call_usage = response_obj.get("usage", {})
+                                call_latency = response_obj.get("latency_s", 0.0)
+                        except Exception as e:
+                            print(f"ERROR: {e}")
+                            call_pred_text = f"ERROR: {e}"
+                            call_usage = {}
+                            call_latency = 0.0
+
+                    # Log each individual call
                     log_entry = {
                         "row_index": row_idx,
                         "method_id": method_id,
+                        "call_index": call_idx,
+                        "ensemble_size": repeats,
                         "request": request,
                         "response": response_obj,
                     }
                     log_run(run_dir, log_entry)
-                    
+
+                    # Add delay to avoid rate limits for single-call real requests
+                    if not args.dry_run and repeats == 1:
+                        time.sleep(max(0, 0.5 - call_latency))
+
+                    # Collect this call's results
+                    all_predictions.append(call_pred_text)
+                    all_responses.append(response_obj)
+                    total_latency += call_latency
+
+                    # Aggregate usage
+                    for key in ["input_tokens", "output_tokens", "total_tokens"]:
+                        total_usage[key] += call_usage.get(key, 0)
+                    if "output_tokens_details" in call_usage:
+                        total_usage["output_tokens_details"]["reasoning_tokens"] += call_usage["output_tokens_details"].get("reasoning_tokens", 0)
+
+                # Compute ensemble consensus if multiple calls, otherwise use single prediction
+                if repeats > 1:
+                    consensus_rule = params.get("consensus_rule", "dbscan")
+                    pred_text = ensemble_consensus(all_predictions, consensus_rule)
+                    if args.verbose:
+                        print(f"Individual predictions: {all_predictions} → Consensus ({consensus_rule}): {pred_text[:50]} | ", end="", flush=True)
                 else:
-                    # Make a real call to OpenAI
-                    print("REAL API call | ", end="", flush=True)
-                    try:
-                        if pipeline == "tool_chain":
-                            response_obj, pred_text, usage, latency = run_tool_chain(client, m, prompt_obj, raw_entry)
-                        else:
-                            response_obj, pred_text = call_openai_responses(client, m, prompt_obj, raw_entry)
-                            usage = response_obj.get("usage", {})
-                            latency = response_obj.get("latency_s", 0.0)
-                        
-                        # Log the call
-                        log_entry = {
-                            "row_index": row_idx,
-                            "method_id": method_id,
-                            "request": request,
-                            "response": response_obj,
-                        }
-                        log_run(run_dir, log_entry)
-                        
-                        # Add delay to avoid rate limits
-                        time.sleep(max(0, 0.5 - latency))
-                        
-                    except Exception as e:
-                        print(f"ERROR: {e}")
-                        pred_text = f"ERROR: {e}"
-                        usage = {}
-                        latency = 0.0
+                    pred_text = all_predictions[0]
+                
+                # Use aggregated usage and latency
+                usage = total_usage
+                latency = total_latency
                 
                 # Calculate error if ground truth is available
                 error_km = None
