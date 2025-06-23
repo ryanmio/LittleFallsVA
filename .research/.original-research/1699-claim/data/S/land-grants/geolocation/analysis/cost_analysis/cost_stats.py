@@ -22,6 +22,8 @@ FULL_RESULTS_CSV = ANALYSIS_DIR / "full_results.csv"
 PRICING_YAML = GEOL_ROOT / "pricing.yaml"
 REPORT_PATH = Path(__file__).with_suffix(".md")
 
+EXCLUDE_ROW_INDICES = {"10", "38"}
+
 # ---------------------------------------------------------------------------
 # Load pricing
 # ---------------------------------------------------------------------------
@@ -71,6 +73,8 @@ method_aggs: Dict[str, MethodAgg] = {}
 with FULL_RESULTS_CSV.open() as fh:
     reader = csv.DictReader(fh)
     for row in reader:
+        if row["row_index"] in EXCLUDE_ROW_INDICES:
+            continue
         method = row["method_id"]
         model_str = row["model"]
         if method not in method_aggs:

@@ -14,6 +14,8 @@ ANALYSIS_DIR = GEOL_ROOT / "analysis"
 FULL_RESULTS_CSV = ANALYSIS_DIR / "full_results.csv"
 REPORT_PATH = Path(__file__).with_suffix(".md")
 
+EXCLUDE_ROW_INDICES = {"10", "38"}
+
 class Agg:
     def __init__(self, model: str):
         self.model = model
@@ -34,6 +36,8 @@ method_aggs: Dict[str, Agg] = {}
 
 with FULL_RESULTS_CSV.open() as fh:
     for row in csv.DictReader(fh):
+        if row["row_index"] in EXCLUDE_ROW_INDICES:
+            continue
         m_id = row["method_id"]
         model = row["model"]
         if m_id not in method_aggs:

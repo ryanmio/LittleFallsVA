@@ -1,18 +1,25 @@
 import csv
+from pathlib import Path
 
-# Read H-2 results and analyze the outliers
-with open('full_results.csv', 'r') as f:
+# Path relative to this script (analysis directory)
+CSV_PATH = Path(__file__).parent / 'full_results.csv'
+
+# Filter rows for Stanford NER (method_id == 'H-2')
+with CSV_PATH.open(newline='', encoding='utf-8') as f:
     reader = csv.DictReader(f)
-    h2_results = [row for row in reader if row['method_category'] == 'H-2']
+    h2_results = [row for row in reader if row.get('method_id') == 'H-2']
 
-# Find the outliers
+# Find outliers (error > 300 km)
 outliers = []
 for row in h2_results:
-    error = float(row['error_km'])
-    if error > 300:  # Define outliers as >300km error
+    try:
+        error = float(row['error_km'])
+    except (ValueError, KeyError):
+        continue
+    if error > 300:  # Outliers threshold
         outliers.append({
-            'grant_id': row['grant_id'],
-            'prediction': row['prediction'],
+            'row_index': row.get('row_index'),
+            'prediction': row.get('prediction', ''),
             'error_km': error
         })
 
@@ -23,7 +30,7 @@ print(f'Outliers (>300km error): {len(outliers)}')
 print()
 
 for outlier in outliers:
-    print(f'Grant #{outlier["grant_id"]}: {outlier["prediction"]} (Error: {outlier["error_km"]:.1f} km)')
+    print(f'Row #{outlier["row_index"]}: {outlier["prediction"]} (Error: {outlier["error_km"]:.1f} km)')
 
 # Check if outliers use the same coordinates
 coords = [outlier['prediction'] for outlier in outliers]

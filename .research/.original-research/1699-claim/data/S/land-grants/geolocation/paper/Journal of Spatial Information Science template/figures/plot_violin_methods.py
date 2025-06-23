@@ -4,7 +4,10 @@ import seaborn as sns
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-CSV_PATH = ROOT / "analysis" / "full_results.csv"
+# Prefer v2 results if available
+CSV_PATH = ROOT / "analysis" / "full_results_v2.csv"
+if not CSV_PATH.exists():
+    CSV_PATH = ROOT / "analysis" / "full_results.csv"
 OUT_DIR = Path(__file__).parent
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -13,15 +16,23 @@ pdf = pd.read_csv(CSV_PATH)
 loc = pdf[pdf['is_locatable'].astype(str).isin(['1', 'True', 'true'])].copy()
 loc['error_km'] = pd.to_numeric(loc['error_km'], errors='coerce')
 loc = loc.dropna(subset=['error_km'])
-# Keep only methods with >= 20 located to avoid tiny violins
+
+# Define custom order: Ensemble (E), M-series, T-series, then H-series baselines
+method_order = ['E-1', 'E-2',
+               'M-1', 'M-2', 'M-3', 'M-4', 'M-5', 'M-6',
+               'T-1', 'T-4',
+               'H-1', 'H-2', 'H-3', 'H-4']
+# Filter to only include methods that exist in our data
+method_order = [m for m in method_order if m in loc['method_id'].unique()]
+
 counts = loc['method_id'].value_counts()
 keep_methods = counts[counts >= 20].index.tolist()
-loc = loc[loc['method_id'].isin(keep_methods)]
+for baseline in ['H-3', 'H-4']:
+    if baseline in loc['method_id'].unique() and baseline not in keep_methods:
+        keep_methods.append(baseline)
 
-# Define custom order: M-series, T-series, then H-series baselines
-method_order = ['M-1', 'M-2', 'M-3', 'M-4', 'M-5', 'M-6', 'T-1', 'T-4', 'H-1', 'H-2']
-# Filter to only include methods that exist in our data
-method_order = [m for m in method_order if m in keep_methods]
+# apply filter now that list is final
+loc = loc[loc['method_id'].isin(keep_methods)]
 
 plt.figure(figsize=(10, 6))
 sns.violinplot(data=loc, x='method_id', y='error_km', inner='quartile', palette='muted', cut=0, order=method_order)

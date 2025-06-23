@@ -31,6 +31,7 @@ CSV_PATH = ANALYSIS_DIR / "full_results.csv"
 REPORT_PATH = Path(__file__).with_suffix(".md")
 
 THRESHOLDS = [1, 5, 10, 25, 50]  # km
+EXCLUDE_ROW_INDICES = {"10", "38"}  # row_index values to ignore
 
 class AccAgg:
     def __init__(self, name: str):
@@ -66,6 +67,8 @@ per_model_tool: Dict[Tuple[str, str], AccAgg] = {}  # (model, category)-> agg
 with CSV_PATH.open() as fh:
     reader = csv.DictReader(fh)
     for row in reader:
+        if row["row_index"] in EXCLUDE_ROW_INDICES:
+            continue  # skip excluded grants
         if row.get("is_locatable") not in {"1", "true", "True"}:
             continue
         try:

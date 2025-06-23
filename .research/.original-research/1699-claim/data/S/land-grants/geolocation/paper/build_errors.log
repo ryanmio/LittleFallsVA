@@ -1,1 +1,10 @@
+[WARNING] Citeproc: citation karimzadeh2019geotxt not found
 [WARNING] Citeproc: citation key not found
+[WARNING] [makePDF] LaTeX Warning: Citation `ref-karimzadeh2019geotxt' on page 2
+  undefined on input line 318.
+[WARNING] [makePDF] LaTeX Warning: There were undefined references.
+[WARNING] Missing character: There is no ⁻ (U+207B) (U+207B) in font STIXGeneral-Regular/OT:script
+[WARNING] Missing character: There is no ⁸ (U+2078) (U+2078) in font STIXGeneral-Regular/OT:script
+[WARNING] Missing character: There is no ≤ (U+2264) (U+2264) in font STIXGeneral-Italic/OT:script=
+[WARNING] Missing character: There is no ⁻ (U+207B) (U+207B) in font STIXGeneral-Italic/OT:script=
+[WARNING] Missing character: There is no ⁵ (U+2075) (U+2075) in font STIXGeneral-Italic/OT:script=

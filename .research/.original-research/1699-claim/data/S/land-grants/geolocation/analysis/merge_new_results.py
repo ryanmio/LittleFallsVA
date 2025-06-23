@@ -14,8 +14,8 @@ MASTER_CSV = ANALYSIS_DIR / "full_results.csv"
 OUTPUT_CSV = ANALYSIS_DIR / "full_results_v2.csv"
 
 # Incoming new result files
-ENSEMBLE_FULL = GEODIR / "runs/validation---TEST-FULL-H1-final_20250617_075802/results_validation - TEST-FULL-H1-final.csv"
-ENSEMBLE_REDACT = GEODIR / "runs/validation---TEST-FULL-H1-final_20250617_142523/results_validation - TEST-FULL-H1-final.csv"
+ENSEMBLE_FULL = GEODIR / "runs/validation---TEST-FULL-H1-final_20250619_142306/results_validation - TEST-FULL-H1-final.csv"
+ENSEMBLE_REDACT = ENSEMBLE_FULL
 
 CC_FILE = Path("/Users/ryanmioduskiimac/Downloads/mordecai/county_centroid_predictions.csv")
 MORDECAI_FILE = Path("/Users/ryanmioduskiimac/Downloads/mordecai/mordecai3_predictions_enhanced.csv")
@@ -103,7 +103,12 @@ def load_csv(path: Path):
 # -----------------------------------------------------------------------------
 # 1. Start with master rows
 # -----------------------------------------------------------------------------
-rows = load_csv(MASTER_CSV)
+# remove any previous E-2 rows (old redacted ensemble version)
+rows_orig = load_csv(MASTER_CSV)
+rows = [r for r in rows_orig if r.get("method_id") not in ("E-1", "E-2")]
+removed = len(rows_orig) - len(rows)
+if removed:
+    print(f"Removed {removed} old E-2 rows from master prior to merge")
 existing_keys = {(r["row_index"], r["method_id"]) for r in rows}
 print(f"Loaded master rows: {len(rows)}")
 
@@ -169,6 +174,14 @@ print("Added heuristic baselines")
 # 4. Sort rows (row_index asc, then method_id)
 # -----------------------------------------------------------------------------
 rows.sort(key=lambda r: (int(r["row_index"]), r["method_id"]))
+
+# -----------------------------------------------------------------------------
+# 4b. Override locatability flags for problem rows (10, 38)
+# -----------------------------------------------------------------------------
+NON_LOCATABLE = {"10", "38"}
+for r in rows:
+    if r["row_index"] in NON_LOCATABLE:
+        r["is_locatable"] = "0"
 
 # -----------------------------------------------------------------------------
 # 5. Write out

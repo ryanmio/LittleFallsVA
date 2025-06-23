@@ -100,7 +100,7 @@
   model: o3-2025-04-16
   pipeline: one_shot
   description: Five-call ensemble of o3-2025-04-16 with DBSCAN consensus (winner from dev eval)
-  enabled: false
+  enabled: true
   params:
     repeats: 5
     reasoning_effort: low
@@ -113,7 +113,7 @@
   enabled: true
   params:
     repeats: 5
-    reasoning_effort: medium
+    reasoning_effort: low
     service_tier: flex
     consensus_rule: dbscan
     redact_names: true

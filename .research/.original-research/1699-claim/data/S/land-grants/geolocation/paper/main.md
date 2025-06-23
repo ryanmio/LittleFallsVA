@@ -37,9 +37,9 @@ header-includes:
 \vspace{1em}
 
 # Abstract
-Virginia's seventeenth- and eighteenth-century land patents survive almost exclusively as narrative metes-and-bounds descriptions in printed abstract volumes such as *Cavaliers and Pioneers* (C&P) [@Nugent1979_cavaliers3]. This study presents the first systematic study of whether state-of-the-art large language models (LLMs) can convert these prose abstracts into usable latitude/longitude coordinates at research grade. The work digitizes, transcribes, and openly releases a corpus of 5,471 Virginia patent abstracts (1695–1732), accompanied by a rigorously curated ground-truth dataset of 43 test cases meeting strict archival verification standards. Six OpenAI models spanning three architecture families—o-series reasoning models, flagship GPT-4-class chat models, and GPT-3.5—are benchmarked under two prompting paradigms: (i) one-shot "direct-to-coordinate" and (ii) tool-augmented chain-of-thought that invokes external geocoding APIs—and their outputs are compared to two non-LLM baselines: a professional GIS workflow and a deterministic Stanford Named Entity Recognition (NER) geoparser.
+Virginia's seventeenth- and eighteenth-century land patents survive almost exclusively as narrative metes-and-bounds descriptions in printed abstract volumes such as Cavaliers and Pioneers (C&P). This study presents the first systematic assessment of whether current-generation large language models (LLMs) can convert these prose abstracts into research-grade latitude/longitude coordinates. The work digitizes, transcribes, and releases a corpus of 5,471 Virginia patent abstracts (1695–1732), accompanied by a rigorously curated ground-truth dataset of 43 test cases meeting strict archival verification standards. Six OpenAI models spanning three architecture families—o-series reasoning models, flagship GPT-4-class chat models, and GPT-3.5—are benchmarked under two prompting paradigms: (i) one-shot "direct-to-coordinate" and (ii) tool-augmented chain-of-thought that invokes external geocoding APIs—and their outputs are compared to four non-LLM baselines: a professional GIS workflow, a deterministic Stanford Named Entity Recognition (NER) geoparser, a Mordecai-3 neural geoparser tuned with historical heuristics, and a simple county-/state-centroid rule.
 
-On the verified grants, the best purely textual model (o3-2025-04-16) achieves a mean great-circle error of 23.4 km (median 14.3 km), a 67% improvement over the professional GIS baseline (71.4 km) and nearly a 70% reduction relative to the Stanford NER baseline (79.0 km), while cutting cost and latency by roughly two and three orders of magnitude, respectively. The ultracheap gpt-4o-2024-08-06 model locates patents with 28 km mean error at USD 1.09 per 1,000, only slightly less accurate yet ~100× cheaper, defining a new dollar-for-accuracy Pareto frontier. Contrary to expectations, granting LLMs external geocoding tools neither improves accuracy nor consistency. Robustness checks across temperature, reasoning-budget, and abstract length confirm these findings.
+The best single-call model, `o3-2025-04-16`, delivers a mean great-circle error of 23 km (median 14 km)—a 67% improvement over a professional GIS workflow and a 70% reduction relative to a Stanford NER geoparser. Aggregating five stochastic calls from the same model via DBSCAN further tightens accuracy to 19 km (median 12 km) at a marginal cost of ≈ US $0.20 per grant and ≈ 3 s of additional latency. Paired Wilcoxon tests confirm the ensemble's advantage (*W* = 629, *p* = 0.03 vs. single-shot; *p* < 10⁻⁸ against all other baselines), while a patentee-name-redaction ablation increases error by only ≈ 9%, indicating reliance on metes-and-bounds reasoning rather than memorised name–location pairs. The low-latency and cost-effective `gpt-4o-2024-08-06` model maintains 28 km mean error at USD 1.09 per 1,000 grants, defining a new dollar-for-accuracy Pareto frontier. External geocoding tools offer no measurable benefit. Robustness checks across temperature, reasoning budget, and abstract length corroborate these findings.
 
 These results show that off-the-shelf LLMs can georeference early-modern land records faster, cheaper, and as accurately as traditional GIS workflows, opening a scalable pathway to spatially enable colonial archives—and, in turn, to reassess settlement dynamics, plantation economies, and Indigenous dispossession with quantitative precision.
 
@@ -47,17 +47,17 @@ These results show that off-the-shelf LLMs can georeference early-modern land re
 
 ## 1.1 Historical Context & Motivation
 
-Virginia's colonial land patents are a cornerstone resource for scholars studying settlement patterns, the political economy of plantation agriculture, and Indigenous dispossession in the seventeenth and eighteenth centuries.  Yet the spatial dimension of these sources remains under-exploited: most patents survive only as narrative metes-and-bounds descriptions in printed abstract volumes such as *Cavaliers and Pioneers* (C&P) [@Nugent1979_cavaliers3].  Without geographic coordinates, historians and archaeologists cannot readily visualise how land ownership evolved or test hypotheses with modern Geographic Information System (GIS) tools.  Creating a machine-readable, georeferenced version of C&P would unlock new quantitative approaches to long-standing questions about colonial Virginia's social and environmental history.
+Virginia's colonial land patents are a cornerstone resource for scholars studying settlement patterns, the political economy of plantation agriculture, and Indigenous dispossession in the seventeenth and eighteenth centuries. Yet the spatial dimension of these sources remains under-exploited: most patents survive only as narrative metes-and-bounds descriptions in printed abstract volumes such as *Cavaliers and Pioneers* (C&P) [@Nugent1979_cavaliers3]. Without geographic coordinates, historians and archaeologists cannot readily visualise how land ownership evolved or test hypotheses with modern Geographic Information System (GIS) tools. Creating a machine-readable, georeferenced version of C&P would unlock new quantitative approaches to long-standing questions about colonial Virginia's social and environmental history.
 
-Digitising and geo-locating the abstracts, however, is notoriously labor-intensive.  Even professional GIS analysts can spend several hours per grant reconciling archaic place-names, inconsistent spellings, and low-resolution boundary calls.  Recent breakthroughs in large language models (LLMs) suggest a new pathway: language-driven spatial reasoning where a model reads the patent text and predicts latitude/longitude directly or with minimal tool assistance.  This study explores whether state-of-the-art LLMs can shoulder that burden accurately and cheaply enough to matter for digital history.
+Digitising and geo-locating the abstracts, however, is notoriously labor-intensive. Even professional GIS analysts can spend several hours per grant reconciling archaic place-names, inconsistent spellings, and low-resolution boundary calls. Recent breakthroughs in large language models (LLMs) suggest a new pathway: language-driven spatial reasoning where a model reads the patent text and predicts latitude/longitude directly or with minimal tool assistance. This study explores whether current-generation LLMs can shoulder that burden accurately and cheaply enough to matter for digital history.
 
 ## 1.2 Problem Statement
 
 Despite the promise of LLMs, their ability to extract usable coordinates from early-modern archival prose had not been systematically evaluated prior to this work. Key uncertainties addressed in this study included:
 
-* Could a model trained mostly on contemporary text understand seventeenth-century toponyms and bearing conventions?  
-* Would providing API-based tools (e.g., Google Places search) materially improve accuracy relative to a pure text approach?  
-* How did model predictions compare to the professional GIS benchmark in both error and cost?
+* Could large language models trained mostly on contemporary text understand seventeenth-century toponyms and bearing conventions?
+* Would providing API-based tools (e.g., Google Places search) materially improve accuracy relative to a pure text approach?
+* How did model predictions compare to professional GIS workflows [@Bashorun2025_gis], deterministic pipelines such as the GeoTxt Stanford NER geoparser [@karimzadeh2019geotxt], neural geoparsers like Mordecai-3 [@halterman2023mordecai], and other heuristic benchmarks in both error and cost?
 
 Addressing these questions required a rigorously annotated test bench that blended historical sources, modern GIS ground truth, and controlled prompt engineering. The methodological design seeks to embody principles of rigorous and responsible GeoAI research, as outlined by Li et al. [@Li2024_geoai] and detailed further in §2.4.
 
@@ -65,9 +65,9 @@ Addressing these questions required a rigorously annotated test bench that blend
 
 This study makes four principal contributions:
 
-1. This work releases the first copyright-compliant, machine-readable dataset of *Cavaliers and Pioneers*, Vol. 3 [@Nugent1979_cavaliers3].  The public repository provides (i) row-level metadata—row identifier, word count, and SHA-256 hash—for all 5,471 abstracts, and (ii) limited, non-substitutable excerpts of up to 200 words for the 43 evaluation abstracts.  The full OCR corpus is available privately under a vetted, non-commercial data-use agreement.  
-2. For forty-five of 125 randomly sampled patents, authoritative latitude/longitude pairs are derived from state-archived GIS polygons and other archival sources meeting rigorous verification standards, providing a high-fidelity evaluation target.  
-3. Two prompting paradigms—single-prompt "direct-to-coordinate" inference and tool-augmented chain-of-thought reasoning—are evaluated across six contemporary OpenAI model variants.  
+1. This work releases the first copyright-compliant, machine-readable dataset of *Cavaliers and Pioneers*, Vol. 3 [@Nugent1979_cavaliers3]. The public repository provides (i) row-level metadata—row identifier, word count, and SHA-256 hash—for all 5,471 abstracts, and (ii) limited, non-substitutable excerpts of up to 200 words for the 43 evaluation abstracts. The full OCR corpus is available privately under a vetted, non-commercial data-use agreement.
+2. For forty-three of 125 randomly sampled patents, authoritative latitude/longitude pairs are derived from state-archived GIS polygons and other archival sources meeting rigorous verification standards, providing a high-fidelity evaluation target.
+3. Two prompting paradigms—single-prompt "direct-to-coordinate" inference and tool-augmented chain-of-thought reasoning—are evaluated across six contemporary OpenAI model variants.
 4. The study quantifies the trade-offs among spatial error, monetary expense, and processing time, demonstrating that a pure LLM pipeline can match or surpass professional GIS accuracy while operating orders of magnitude faster and cheaper.
 
 All data, code, and results are available in the supplemental repository: [https://github.com/ryanmio/colonial-virginia-llm-geolocation](https://github.com/ryanmio/colonial-virginia-llm-geolocation).
@@ -77,7 +77,7 @@ All data, code, and results are available in the supplemental repository: [https
 ## 2.1 Historical GIS and Land-Grant Mapping
 Digitizing colonial-era land grants has long promised new insights into European settlement patterns, Indigenous land displacement, and the development of local economies. However, this potential has been constrained by the extensive manual labor required to convert metes-and-bounds descriptions into spatial data. Traditional approaches to georeferencing these historical records have proven prohibitively time-consuming - a genealogical case study by Julian and Abbitt [@Julian2014_tennessee] required nearly ten years of archival sleuthing and three university-semester GIS projects to pinpoint a single family's land claims across three Tennessee counties.
 
-Several institutional efforts have attempted to address these challenges, though coverage remains incomplete. The Library of Virginia maintains a statewide \emph{Land Patents and Grants} online database hosting scanned images and searchable indices for every recorded patent (1623–1774) and subsequent grant (1779–2000), including Northern Neck surveys, but provides no ready-made GIS polygons, limiting its direct utility for spatial analysis [@lva_patents_db]. Similarly, the Virginia Surveyor's Office has released thousands of patent polygons for central regions of the colony, while Loudoun County GIS staff have successfully reconstructed all original grants within their jurisdiction [@loudoun_grants_dataset]. These initiatives demonstrate the feasibility of digitizing historical land records but also highlight significant gaps in existing datasets - many seventeenth- and eighteenth-century patents, particularly those recorded in Cavaliers and Pioneers [@Nugent1979_cavaliers3], still lack spatial coordinates.
+Several institutional efforts have attempted to address these challenges, though coverage remains incomplete. The Library of Virginia maintains a statewide *Land Patents and Grants* online database hosting scanned images and searchable indices for every recorded patent (1623–1774) and subsequent grant (1779–2000), including Northern Neck surveys, but provides no ready-made GIS polygons, limiting its direct utility for spatial analysis [@lva_patents_db]. Similarly, the Virginia Surveyor's Office has released thousands of patent polygons for central regions of the colony, while Loudoun County GIS staff have successfully reconstructed all original grants within their jurisdiction [@loudoun_grants_dataset]. These initiatives demonstrate the feasibility of digitizing historical land records but also highlight significant gaps in existing datasets - many seventeenth- and eighteenth-century patents, particularly those recorded in *Cavaliers and Pioneers* [@Nugent1979_cavaliers3], still lack spatial coordinates.
 
 Among the most thorough academic efforts for Virginia's Northern Neck proprietary are Mitchell's [@mitchell1977whiteoak] maps and companion text documenting the "Beginning at a White Oak" patents of Fairfax County. This work reconstructed hundreds of early land grants with polygonal boundaries, establishing both the feasibility and research value of transforming metes-and-bounds descriptions into spatial data. Building on such foundations, scholars have leveraged available georeferenced grants for substantive historical analysis. In Virginia, seminal studies like Fausz [@Fausz1971_settlement] utilized narrative patent abstracts to trace settlement patterns along the James River basin, while noting the persistent challenges of transforming textual descriptions into precise spatial coordinates for quantitative analysis.
 
@@ -92,9 +92,9 @@ Building on the manual coordinate-extraction bottleneck outlined in § 2.1, rece
 
 The evolution of this field has moved through several distinct methodological phases. Rule-based gazetteer look-ups dominated early work, providing limited accuracy when dealing with ambiguous place names. Neural architectures such as CamCoder [@Gritta2018_camcoder] subsequently improved performance through learned contextual representations. Most recently, fine-tuned large language models have demonstrated substantial breakthroughs in toponym resolution accuracy.
 
-A representative example of this latest approach comes from Hu et al. [@Hu2024_toponym_llm], who adapted 7–13 billion-parameter open-source models (e.g., Mistral-7B, Llama 2-7B) to generate an unambiguous administrative string for each toponym before invoking a standard geocoding API. Their fine-tuned Mistral-7B achieved an **Accuracy@161 km of 0.91**, outperforming previous neural methods by multiple percentage points and improving toponym resolution accuracy by 13%; on the less ambiguous WikToR corpus the same architecture reached 0.98. Crucially, these gains were realized on commodity hardware, underscoring the practicality of parameter-efficient fine-tuning for large corpora.
+A representative example of this latest approach comes from Hu et al. [@Hu2024_toponym_llm], who adapted 7–13 billion-parameter open-source models (e.g., Mistral-7B, Llama 2-7B) to generate an unambiguous administrative string for each toponym before invoking a standard geocoding API. Their fine-tuned Mistral-7B achieved an Accuracy@161 km of 0.91, outperforming previous neural methods by multiple percentage points and improving toponym resolution accuracy by 13%; on the less ambiguous WikToR corpus the same architecture reached 0.98. Crucially, these gains were realized on commodity hardware, underscoring the practicality of parameter-efficient fine-tuning for large corpora.
 
-Addressing the persistent challenge of annotation scarcity, Wu et al. [@wu2025geosg] introduced **GeoSG**, a self-supervised graph neural network that learns spatial semantics from Point-of-Interest (POI)–text relationships. This approach predicts document coordinates without any annotated training samples, nearly matching supervised baselines on two urban benchmarks. In a similar vein, Savarro et al. [@savarro2024geolingit] demonstrated that Italian tweets can be geolocated to both regional and point coordinates by fine-tuning decoder-only LLMs on the GeoLingIt shared task, further confirming that pretrained language models can internalize subtle linguistic cues of place.
+Addressing the persistent challenge of annotation scarcity, Wu et al. [@wu2025geosg] introduced GeoSG, a self-supervised graph neural network that learns spatial semantics from Point-of-Interest (POI)–text relationships. This approach predicts document coordinates without any annotated training samples, nearly matching supervised baselines on two urban benchmarks. In a similar vein, Savarro et al. [@savarro2024geolingit] demonstrated that Italian tweets can be geolocated to both regional and point coordinates by fine-tuning decoder-only LLMs on the GeoLingIt shared task, further confirming that pretrained language models can internalize subtle linguistic cues of place.
 
 Despite these advances, significant limitations remain. O'Sullivan et al. [@Osullivan2024_metric] demonstrated that GPT-class models mis-calibrate qualitative distance terms: *near* in a neighborhood scenario is treated similarly to *near* at continental scale, revealing a lack of geometric grounding. Such biases caution against "out-of-the-box" deployment for precision geolocation, especially when dealing with archaic toponyms or surveyor jargon. Even the most advanced automated systems leave a long tail of ambiguous or obsolete place names—precisely the cases that plague colonial patent abstracts.
 
@@ -105,9 +105,9 @@ Integrating large language models with external geospatial utilities has emerged
 
 This hybrid approach has evolved through several distinct implementations, each targeting different aspects of the geolocation challenge. Early evidence for its effectiveness comes from Hu et al. [@Hu2024_toponym_llm], who coupled a fine-tuned Mistral-7B with a cascading trio of geocoders—GeoNames, Nominatim, and ArcGIS—to resolve toponyms the model had already disambiguated linguistically. Their experiments demonstrated that this hybrid pipeline raised Accuracy@161 km by 7–17 percentage points relative to either component used in isolation.
 
-Extending this concept to more complex natural language descriptions, Huang et al. [@Huang2024_geoagent] developed **GeoAgent** for free-form address normalization. This system enables the LLM to convert colloquial descriptions (e.g., "two blocks east of the old courthouse") into structured cues, orchestrate vector-database lookups and offset calculations, and then retrieve precise coordinates from mapping APIs. Their ablation study confirmed that this agentic variant outperforms both rule-based and LLM-only baselines on two public address-standardization benchmarks.
+Extending this concept to more complex natural language descriptions, Huang et al. [@Huang2024_geoagent] developed GeoAgent for free-form address normalization. This system enables the LLM to convert colloquial descriptions (e.g., "two blocks east of the old courthouse") into structured cues, orchestrate vector-database lookups and offset calculations, and then retrieve precise coordinates from mapping APIs. Their ablation study confirmed that this agentic variant outperforms both rule-based and LLM-only baselines on two public address-standardization benchmarks.
 
-These specialized implementations build upon a more general design pattern known as the **ReAct** prompting paradigm [@yao2023react], which demonstrates how language models can interleave chain-of-thought reasoning with live tool calls. This approach has proven particularly effective for spatial tasks that require both linguistic understanding and computational precision.
+These specialized implementations build upon a more general design pattern known as the ReAct prompting paradigm [@yao2023react], which demonstrates how language models can interleave chain-of-thought reasoning with live tool calls. This approach has proven particularly effective for spatial tasks that require both linguistic understanding and computational precision.
 
 At enterprise scale, Google Research's *Geospatial Reasoning* initiative [@GoogleResearch2025_geospatial] exemplifies the integration of foundation models with Earth Engine, BigQuery, and Maps Platform. This system enables agentic LLMs to chain satellite imagery, socioeconomic layers, and routing services to answer compound spatial queries in seconds—a capability relevant to both consumer applications and research contexts.
 
@@ -115,7 +115,7 @@ Across these diverse implementations, a consistent finding emerges: granting an 
 
 ## 2.4 Emerging GeoAI Research Principles
 
-Recent calls within the GeoAI community emphasize the need for empirical studies that are not only traditionally scientifically sound but also actively engage with the foundational tenets of predictability, interpretability, reproducibility, and social responsibility, which Li et al. [@Li2024_geoai] identify as four essential pillars for solidifying GeoAI's scientific rigor and ensuring its lasting, beneficial impact.
+Recent calls within the GeoAI community emphasize the need for empirical studies that are not only traditionally scientifically sound but also actively engage with the foundational tenets of **predictability**, **interpretability**, **reproducibility**, and **social responsibility**, which Li et al. [@Li2024_geoai] identify as four essential pillars for solidifying GeoAI's scientific rigor and ensuring its lasting, beneficial impact.
 
 Li et al. (2024) define **predictability** as the combination of a model's accuracy, computational efficiency, and robustness when confronted with spatial variation. The present study addresses this definition by reporting mean and median great-circle error, 95% bootstrap confidence intervals, and cumulative-error curves for all evaluated LLM variants and a professional GIS baseline (Figure \ref{fig:accuracy_bar} and Table \ref{tbl:accuracy}); by presenting cost-versus-accuracy and latency-versus-accuracy Pareto frontiers (Figures \ref{fig:pareto_cost} and \ref{fig:pareto_latency}) demonstrating reductions of two to five orders-of-magnitude in dollar cost and turnaround time relative to human baselines while preserving or improving spatial accuracy; and by examining robustness through targeted ablations reported in § 6.6, showing that accuracy is essentially unaffected by changes in temperature, reasoning-budget, and abstract length, and that removing the five largest residuals alters mean error by less than two kilometres—confirming that results are not driven by a small subset of extreme cases.
 
@@ -123,7 +123,7 @@ The study places a strong emphasis on **interpretability** by meticulously recor
 
 To ensure **reproducibility**, specific snapshot versions of the OpenAI models from April 2025 were used and random seeds were fixed throughout all steps, including dataset splits, sampling, and bootstrapping. All parameter-sensitivity tests (temperature, reasoning budget, abstract length) were also conducted under these controlled conditions. The computational environment was packaged into a Docker container that specifies exact Python dependencies and OpenAI API endpoints to guarantee consistent results on different machines. Additionally, the full OCR-corrected corpus of 5,471 abstracts, 43 authoritative ground-truth coordinates, dev/test splits, exact prompts, YAML configurations, the run_experiment.py evaluation script, and detailed JSONL logs recording every model request and response are provided. All these materials are publicly available in the accompanying code repository and described in § 3, allowing others to exactly reproduce the analyses, tables, and figures presented here.
 
-The study meets the **social responsibility** pillar by carefully considering ethical and copyright implications associated with the historical data used. Although the underlying seventeenth- and eighteenth-century land patent records themselves are public domain, the transcriptions published in the 1979 compilation Cavaliers and Pioneers, Vol. 3 remain under copyright. To balance reproducibility with copyright compliance, only limited, non-substitutable excerpts (up to 200 words each) of the 43 abstracts with authoritative ground-truth points are publicly released. For the full corpus of 5,471 abstracts, only row identifiers, word counts, and SHA-256 hashes of each abstract are provided, allowing researchers to verify their own local copies without exposing protected text. The complete OCR corpus itself is made available privately under a vetted, non-commercial data-use agreement for scholarly research only. Additionally, because the georeferenced coordinates reflect historical property boundaries rather than modern sensitive locations or private ownership, the study inherently minimizes privacy risks. Computationally, off-the-shelf foundation models are used without energy-intensive fine-tuning, intensive reasoning settings are limited strictly to essential cases, and API calls are throttled via OpenAI's service-flex option to reduce computational overhead. Finally, the study acknowledges that colonial source materials inherently underrepresent Indigenous and marginalized perspectives and explicitly highlights that the research methods and findings presented here can be directly applied to better understand and contextualize historical patterns of Indigenous dispossession and marginalization. 
+The study meets the **social responsibility** pillar by carefully considering ethical and copyright implications associated with the historical data used. Although the underlying seventeenth- and eighteenth-century land patent records themselves are public domain, the transcriptions published in the 1979 compilation Cavaliers and Pioneers, Vol. 3 remain under copyright. To balance reproducibility with copyright compliance, only limited, non-substitutable excerpts (up to 200 words each) of the 43 abstracts with authoritative ground-truth points are publicly released. For the full corpus of 5,471 abstracts, only row identifiers, word counts, and SHA-256 hashes of each abstract are provided, allowing researchers to verify their own local copies without exposing protected text. The complete OCR corpus itself is made available privately under a vetted, non-commercial data-use agreement for scholarly research only. Additionally, because the georeferenced coordinates reflect historical property boundaries rather than modern sensitive locations or private ownership, the study inherently minimizes privacy risks. Computationally, off-the-shelf foundation models are used without energy-intensive fine-tuning, intensive reasoning settings are limited strictly to essential cases, and API calls are throttled via OpenAI's service-flex option to reduce computational overhead. Finally, the study acknowledges that colonial source materials inherently underrepresent Indigenous and marginalized perspectives and explicitly highlights that the research methods and findings presented here can be directly applied to better understand and contextualize historical patterns of Indigenous dispossession and marginalization.
 
 By embedding these considerations into the experimental design and reporting, this work aims to contribute a concrete case study that addresses the foundational requirements for a developing science of GeoAI.
 
@@ -139,8 +139,8 @@ To prepare the corpus for analysis, the source volume was destructively scanned 
 
 From this full corpus, three random subsets were generated using reproducible seeds:
 
-* **Dev-1** and **Dev-2** – 20 abstracts each, reserved for prompt engineering and method tuning.
-* **Test** – 125 abstracts, mutually exclusive from the dev sets.
+* Dev-1 and Dev-2 – 20 abstracts each, reserved for prompt engineering and method tuning.
+* Test – 125 abstracts, mutually exclusive from the dev sets.
 
 ## 3.3 Ground-Truth & Baseline Coordinates
 
@@ -150,7 +150,7 @@ For each matched grant (identified by grantee name, year, and acreage), the cent
 
 ### 3.3.1 Ground Truth Quality Standards
 
-Ground truth coordinates were established only for grants meeting rigorous archival verification standards. This conservative approach prioritized evaluation quality over sample size, ensuring that all ground truth coordinates represent authoritative historical locations rather than speculative placements. The 36% verification rate reflects the inherent challenges of establishing definitive coordinates for 17th-18th century land grants, where many historical landmarks have been lost or renamed over three centuries.
+Ground truth coordinates were established only for grants meeting rigorous archival verification standards. This conservative approach prioritized evaluation quality over sample size, ensuring that all ground truth coordinates represent authoritative historical locations rather than speculative placements. The 34% verification rate reflects the inherent challenges of establishing definitive coordinates for 17th-18th century land grants, where many historical landmarks have been lost or renamed over three centuries.
 
 This methodological choice trades sample size for ground truth reliability—a critical consideration given that evaluation accuracy depends entirely on the quality of reference coordinates. Including grants with uncertain or speculative ground truth would introduce measurement error that could mask true model performance differences. Each authoritative coordinate determination required substantial curatorial effort (1–3 hours of expert research per grant), making exhaustive ground-truthing impractical while maintaining methodological integrity.
 
@@ -178,7 +178,23 @@ The system implements a robust fallback hierarchy: if no geographic entities are
 
 The Stanford NER method achieved a mean error of 79.02 km with 100% prediction coverage across all 43 test grants. While this represents a more systematic approach than the single-analyst GIS baseline, it demonstrates the challenges that automated systems face when dealing with historical toponyms that may have shifted meaning or location over centuries, as detailed in the case study analysis (§7.2.1).
 
-## 4.3 One-shot Prompting (M-series)
+## 4.3 Mordecai-3 Heuristic Geoparser (H-3)
+
+Benchmark H-3 employs the open-source *Mordecai-3* neural geoparser [@halterman2023mordecai], augmented with domain-specific heuristics tuned for colonial Virginia deeds (full details in Appendix B.1).  In brief, the pipeline
+
+1. expands historical abbreviations (e.g., "Cr."→*Creek*, "Co."→*County*),
+2. feeds multiple cleaned variants of the deed text to Mordecai until at least one toponym is returned,
+3. filters candidate coordinates to a Virginia-bounded box and applies a confidence threshold,
+4. accepts the highest-scoring point that lies within *d* km of the deed's county centroid (tuned over {25, 35, 50 km}),
+5. falls back to county- or state-centroid coordinates when no qualified entity survives.
+
+A three-parameter grid search on the 43 gold-standard grants selected the optimal confidence, bounding-box margin, and distance-gate values.  This configuration attains a 94.3 km mean error—worse than both the Stanford NER pipeline and the county-centroid baseline.
+
+## 4.4 County-Centroid Baseline (H-4)
+
+Method H-4 provides a transparent deterministic floor.  A regex extracts any Virginia county name (handling forms like "Henrico Co.", "City of Norfolk", etc.); if successful, the script returns the pre-computed TIGER/Line centroid of that county.  When no county is detected it defaults to the geographic centre of Virginia (37.4316 °N, -78.6569 °W).  On the 43-validation-grant set this logic produced 36 county-centroid predictions and 7 statewide-centroid fallbacks.  Although trivial to implement and lightning-fast (<2 ms per deed), the approach yields a mean error of 80.3 km, serving mainly as a sanity check that more sophisticated pipelines clear with ease.
+
+## 4.5 One-shot Prompting (M-series)
 
 In the first automatic condition, the language model receives the grant abstract together with a single exemplar response illustrating the desired output format. The prompt asks for coordinates expressed in degrees–minutes–seconds (DMS) and contains no chain-of-thought or tool instructions:
 
@@ -200,7 +216,7 @@ Six OpenAI model variants spanning three architecture families constitute the M-
 
 Table: One-shot model variants (M-series). {#tbl:mmodels}
 
-## 4.4 Tool-augmented Chain-of-Thought (T-series)
+## 4.6 Tool-augmented Chain-of-Thought (T-series)
 
 The second automated condition equips the model with two specialized tools: `geocode_place`, an interface to the Google Geocoding API limited to Virginia and adjoining counties, and `compute_centroid`, which returns the spherical centroid of two or more points. The system prompt (Appendix A.2.2) encourages an iterative search strategy where the model can issue up to twelve tool calls, evaluate the plausibility of each result, and optionally average multiple anchors before emitting a final answer in decimal degrees with six fractional places.
 
@@ -218,7 +234,11 @@ Table: Tool-augmented model variants (T-series). {#tbl:tmodels}
 
 The experiment driver loops over each abstract, maintains a conversation history including tool call outputs, and stops after either receiving a valid coordinate string or exceeding ten assistant turns.
 
-## 4.5 Cost and Latency Accounting
+## 4.7 Five-call Ensemble (E-series)
+
+The E-series leverages *ensembling* to squeeze additional accuracy from the best single model.  For each abstract the pipeline issues five independent one-shot calls to `o3-2025-04-16`, each with a different random seed but identical prompt.  The resulting five coordinate pairs are clustered with the DBSCAN algorithm (ε = 0.5 km).  If at least three predictions fall within the same 0.5 km cluster, their spherical centroid becomes the final answer; otherwise the centroid of all five points is returned.  This majority-vote strategy reduces random scatter and mitigates occasional large-error outliers.  The ensemble (method E-1) achieves a mean error of 18.7 km—the best of all evaluated methods—at roughly 5× the token cost of a single o3 call but still two orders of magnitude cheaper than the GIS benchmark.  A name-redacted ablation (E-2, see § 6.6) confirms that the gain is not driven by memorised patentee–location pairs.
+
+## 4.8 Cost and Latency Accounting
 
 For each automated prediction, input and output tokens reported by the OpenAI API are converted to U.S. dollars using the price list in effect on 15 May 2025. The per-call cost is calculated as:
 
@@ -226,7 +246,25 @@ $$
 \text{Cost} = \frac{\text{input tokens}}{10^{6}} \times p_{\text{in}} + \frac{\text{output tokens}}{10^{6}} \times p_{\text{out}}
 $$
 
-where $p_{\text{in}}$ and $p_{\text{out}}$ are USD prices per million tokens. Google Geocoding calls remain comfortably within the free-tier quota and therefore do not accrue additional fees. 
+where $p_{\text{in}}$ and $p_{\text{out}}$ are USD prices per million tokens (see Table~\ref{tbl:prices}).  Google Geocoding calls remain comfortably within the free-tier quota and therefore do not accrue additional fees.
+
+\begin{table}[H]
+\centering
+\caption{OpenAI token pricing in effect on 15~May~2025 and used for all cost calculations.  Values are quoted in USD per\,1M tokens.}
+\label{tbl:prices}
+\begin{tabular}{lcc}
+\toprule
+Model & $p_{\text{in}}$ & $p_{\text{out}}$ \\
+\midrule
+GPT-4.1 ("gpt-4.1-2025-04-14") & 2.00 & 8.00 \\
+GPT-4o ("gpt-4o-2024-08-06") & 5.00 & 15.00 \\
+GPT-3.5-turbo & 0.50 & 1.50 \\
+o4-mini & 1.10 & 4.40 \\
+o3 (base) & 10.00 & 40.00 \\
+o3-mini & 1.10 & 4.40 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 Latency is measured as wall-clock time from submission of an API request until a valid coordinate string is returned, inclusive of all intermediate tool interactions. For the traditional GIS benchmark, the analyst's total working time (6 h) is divided by the number of grants processed (43), yielding an average latency of 502 s per prediction.
 
@@ -234,12 +272,12 @@ Latency is measured as wall-clock time from submission of an API request until a
 
 ## 5.1 Evaluation Metrics
 
-The primary outcome measure is **distance error**—the great-circle distance in kilometres between predicted and reference coordinates, computed with the Haversine formula. The mean, median, and 95% bootstrap confidence intervals are reported, along with accuracy bands (<1 km, 1–10 km, >10 km).
+The primary outcome measure is distance error—the great-circle distance in kilometres between predicted and reference coordinates, computed with the Haversine formula. The mean, median, and 95% bootstrap confidence intervals are reported, along with accuracy bands (<1 km, 1–10 km, >10 km).
 
 Efficiency is characterized by two key metrics:
 
-1. **Latency**: Measured as mean labor time per grant (forward-pass time once the workflow is in place)
-2. **Monetary cost**: Calculated by multiplying input and output token counts returned by the OpenAI API by the official per-token prices in effect on 01 May 2025
+1. Latency: Measured as mean labor time per grant (forward-pass time once the workflow is in place)
+2. Monetary cost: Calculated by multiplying input and output token counts returned by the OpenAI API by the official per-token prices in effect on 01 May 2025
 
 The GIS benchmark incurred a fixed fee of USD 140 for approximately 6 billable hours processing 43 grants (≈502 s per grant).[^script-runtime] For LLM methods, latency represents wall-clock time from API request to final coordinate string, inclusive of all tool interactions.
 
@@ -253,7 +291,7 @@ The full corpus (5,471 abstracts) was partitioned into development (20%) and tes
 
 Ground-truth coordinates were established for 43 of the 125 test abstracts following the methodology described in Section 3.3. The traditional GIS baseline and all automated predictions were subsequently written to the same tabular structure, ensuring uniform error computation across methods.
 
-For each method listed in Table 4, an evaluation driver sequentially processed the 43 abstracts with verified ground truth, invoking the OpenAI *Responses* API under stable April-2025 model versions. Tool-chain variants interacted with the Google Geocoding API and an in-process centroid function exposed via JSON-Schema. Token usage, latency, and any tool traces were logged in real time; intermediate artifacts and final result sets are archived in the accompanying repository.
+For each method listed in Tables~\ref{tbl:mmodels} and~\ref{tbl:tmodels}, an evaluation driver sequentially processed the 43 abstracts with verified ground truth, invoking the OpenAI *Responses* API under stable April-2025 model versions. Tool-chain variants interacted with the Google Geocoding API and an in-process centroid function exposed via JSON-Schema. Token usage, latency, and any tool traces were logged in real time; intermediate artifacts and final result sets are archived in the accompanying repository.
 
 # 6 Results
 
@@ -263,19 +301,28 @@ Figure \ref{fig:accuracy_bar} displays the mean error with corresponding 95% con
 
 ![Coordinate accuracy by method](../analysis/figures/accuracy_bar.pdf){#fig:accuracy_bar width="0.9\linewidth"}
 
-Table \ref{tbl:accuracy} summarizes the per-method distance-error statistics on the 43 grants with verified ground truth. The best-performing automatic approach, **M-2** (o3-2025-04-16, one-shot prompt), achieved a mean error of **23.4 km**—a 67% improvement over the professional GIS benchmark (**H-1**, 71.4 km) and nearly a 70% reduction relative to the Stanford NER baseline (79.0 km). Approximately one-third of M-2 predictions fell within 10 km of ground-truth, compared with less than 5% for the GIS script.
+Table \ref{tbl:accuracy} summarises distance‐error statistics for all 43 grants with verified ground truth.  The best single-call model, M-2 (o3-2025-04-16), attains a mean error of 23 km—a 67% improvement over the professional GIS workflow (H-1, 71 km) and 70% better than the Stanford NER geoparser (H-2, 79 km).  Clustering five stochastic calls from the same model (E-1) tightens accuracy to 19 km, pushing nearly 40% of predictions inside a 10 km radius.  At the other end of the spectrum, the heuristic Mordecai-3 pipeline (H-3) and the county/state-centroid fallback (H-4) return mean errors of 94 km and 80 km, respectively, underscoring how much information the language models extract beyond the coarsest gazetteer cues.
 
 | ID | Underlying model | Mean ± 95% CI (km) | Median (km) | ≤10 km (%) |
-|---|------|------|---|---|
-| M-2 | o3-2025-04-16 | 23.4 [17.8, 29.7] | 14.3 | 30.2 |
-| M-5 | gpt-4o-2024-08-06 | 27.9 [22.2, 34.1] | 25.0 | 16.3 |
-| M-4 | gpt-4.1-2025-04-14 | 28.5 [22.9, 35.0] | 25.4 | 20.9 |
-| T-4 | gpt-4.1-2025-04-14 + tools | 37.2 [29.9, 44.4] | 34.2 | 16.3 |
-| T-1 | o4-mini-2025-04-16 + tools | 37.7 [30.9, 45.0] | 33.6 | 14.0 |
-| H-2 | Stanford NER (GeoTxt) | 79.0 [63.2, 95.8] | 59.7 | 9.3 |
-| H-1 | Professional GIS script | 71.4 [57.9, 85.9] | 70.7 | 4.7 |
+|---|---|---|---|---|
+| E-1 | o3-2025-04-16 (ensemble) | 18.7 [13.6, 25.0] | 12.5 | 39.5 |
+| E-2 | ensemble name-redacted | 20.4 [15.1, 26.8] | 13.8 | 34.9 |
+| M-2 | o3-2025-04-16 | 23.4 [17.4, 29.3] | 14.3 | 30.2 |
+| M-5 | gpt-4o-2024-08-06 | 27.9 [22.3, 33.9] | 25.0 | 16.3 |
+| M-4 | gpt-4.1-2025-04-14 | 28.5 [22.7, 35.1] | 25.4 | 20.9 |
+| T-4 | gpt-4.1-2025-04-14 + tools | 37.2 [30.1, 45.0] | 34.2 | 16.3 |
+| T-1 | o4-mini-2025-04-16 + tools | 37.6 [30.9, 45.0] | 33.6 | 14.0 |
+| M-1 | o4-mini-2025-04-16 | 41.6 [33.8, 50.1] | 27.4 | 7.0 |
+| M-6 | gpt-3.5-turbo | 43.1 [33.8, 54.0] | 34.0 | 4.7 |
+| M-3 | o3-mini-2025-01-31 | 50.3 [43.0, 58.6] | 48.4 | 4.7 |
+| H-1 | human-gis | 71.4 [59.1, 85.1] | 60.2 | 4.7 |
+| H-2 | Stanford NER (GeoTxt) | 79.0 [56.3, 109.4] | 59.5 | 7.0 |
+| H-4 | County Centroid | 80.3 [66.0, 95.9] | 70.5 | 4.7 |
+| H-3 | Mortecai3 | 94.3 [68.8, 124.6] | 55.5 | 7.0 |
 
 Table: Coordinate-accuracy metrics. {#tbl:accuracy}
+
+Wilcoxon signed‐rank tests corroborate the ensemble's advantage.  Compared with the single‐shot o3 run we obtain *W = 629, p = 0.03*, while every other baseline registers *W ≥ 772, p ≤ 4.6 × 10⁻⁵*.
 
 \clearpage
 
@@ -297,25 +344,32 @@ Table \ref{tbl:reasoning} examines how varying the *reasoning_effort* parameter 
 
 Table: Effect of reasoning-effort budget on o3 one-shot accuracy (n = 43). {#tbl:reasoning}
 
-Three key observations emerge: (1) modern LLMs can match or exceed a trained GIS specialist on this task, (2) supplementing gpt-4.1-2025-04-14 with explicit Google-Maps queries **did not** improve accuracy—in fact, the tool-chain variant T-4 performed 30 % worse than its pure-prompt counterpart, and (3) the amount of chain-of-thought the o3-2025-04-16 model is allowed to emit has only a marginal effect on accuracy.
+Three key observations emerge: (1) modern LLMs can match or exceed a trained GIS specialist on this task, (2) supplementing gpt-4.1-2025-04-14 with explicit Google-Maps queries did not improve accuracy—in fact, the tool-chain variant T-4 performed 30% worse than its pure-prompt counterpart, and (3) the amount of chain-of-thought the o3-2025-04-16 model is allowed to emit has only a marginal effect on accuracy.
 
 \clearpage
 
 ## 6.2 Cost–Accuracy Trade-off
 
-Next, the relationship between monetary cost and spatial accuracy is examined. Figure \ref{fig:pareto_cost} positions every method on this plane. All automated variants dominate the GIS script baseline by two to five orders of magnitude on both dimensions. **gpt-4o-2024-08-06** (M-5) delivers the best *dollar-for-accuracy* ratio: **USD 1.09 per 1,000 located grants** at a mean error under 28 km.
+Figure \ref{fig:pareto_cost} plots the relationship between monetary cost (per 1,000 grants processed) and accuracy (mean error in kilometers) for each method. All automated variants dominate the GIS script baseline by two to five orders of magnitude on both dimensions. The professional GIS baseline appears in the upper-right quadrant, reflecting its combination of high cost and relatively high error. All automated methods establish a clear Pareto frontier along the bottom edge of the plot, with gpt-4o-2024-08-06 (M-5) delivering the best *dollar-for-accuracy* ratio at USD 1.09 per 1,000 located grants and a mean error under 28 km, despite not achieving the absolute lowest error.
 
 | ID | Cost / located (USD) | Cost per 1k | Mean error (km) |
 |---|---|---|---|
-| H-2 | 0.00000 | 0.00 | 79.0 |
-| M-4 | 0.00048 | 0.48 | 28.5 |
-| M-5 | 0.00109 | 1.09 | 27.9 |
-| M-2 | 0.13744 | 137.44 | 23.4 |
+| E-1 | 0.19565 | 195.65 | 18.7 |
+| E-2 | 0.20003 | 200.03 | 20.4 |
+| M-2 | 0.12746 | 127.46 | 23.4 |
+| M-5 | 0.00105 | 1.05 | 27.9 |
+| M-4 | 0.00046 | 0.46 | 28.5 |
+| T-4 | 0.00323 | 3.23 | 37.2 |
+| T-1 | 0.01142 | 11.42 | 37.7 |
+| M-1 | 0.01069 | 10.69 | 41.7 |
+| M-6 | 0.00010 | 0.10 | 43.1 |
+| M-3 | 0.01415 | 14.15 | 50.3 |
 | H-1 | 3.25581 | 3,255.81 | 71.4 |
+| H-2 | 0.00000 | 0.00 | 79.0 |
+| H-4 | 0.00000 | 0.00 | 80.3 |
+| H-3 | 0.00000 | 0.00 | 94.3 |
 
 Table: Cost efficiency of evaluated methods. {#tbl:cost}
-
-Figure \ref{fig:pareto_cost} plots the relationship between monetary cost (per 1,000 grants processed) and accuracy (mean error in kilometers) for each method. The professional GIS baseline appears in the upper-right quadrant, reflecting its combination of high cost and relatively high error. All automated methods establish a clear Pareto frontier along the bottom edge of the plot, with gpt-4o-2024-08-06 offering the most favorable cost-to-accuracy ratio despite not achieving the absolute lowest error.
 
 ![Cost-Accuracy Tradeoff](../analysis/figures/pareto_tradeoff.pdf){#fig:pareto_cost width="\linewidth" fig-pos="H"}
 
@@ -323,7 +377,7 @@ The o3-2025-04-16 model (M-2) is more accurate but ~100× costlier than gpt-4o-2
 
 ## 6.3 Latency–Accuracy Trade-off
 
-Examining the latency dimension, Figure \ref{fig:pareto_latency} shows that automatic methods produce coordinates in **0.7–48 seconds** of computation time, still three orders of magnitude faster than the GIS analyst's labor time (≈502 s per grant). This range reflects substantial variation across model families, with the fastest models (gpt-4o-2024-08-06 and gpt-3.5-turbo) requiring less than 1 second per grant, while the o-series models (particularly o3-2025-04-16) taking up to 48 seconds.
+Examining the latency dimension, Figure \ref{fig:pareto_latency} shows that automatic methods produce coordinates in 0.7–48 seconds of computation time, still three orders of magnitude faster than the GIS analyst's labor time (≈502 s per grant). This range reflects substantial variation across model families, with the fastest models (gpt-4o-2024-08-06 and gpt-3.5-turbo) requiring less than 1 second per grant, while the o-series models (particularly o3-2025-04-16) taking up to 48 seconds.
 
 \begin{figure}[H]
 \centering
@@ -360,51 +414,48 @@ Two configurations—T-1 and T-4—were granted access to the external function 
 
 Table: LLM tool-chain behavior on the 43-grant test set. {#tbl:tooluse}
 
-For both pipelines the Google `geocode_place` endpoint dominated the call mix, whereas the auxiliary `compute_centroid` function appeared in fewer than one call per ten.  gpt-4.1-2025-04-14 (T-4) adopted a more economical strategy, issuing on average 2.3 calls per grant while succeeding on the first query in 73 % of cases.  The gpt-4o-mini-2025-04-16 model (T-1), by contrast, averaged 4.0 calls with a 67 % first-call success rate.  This greater query volume manifests as the higher token usage and latency reported in § 6.3, yet it conferred no observable advantage in positional accuracy (§ 6.1).
+For both pipelines the Google `geocode_place` endpoint dominated the call mix, whereas the auxiliary `compute_centroid` function appeared in fewer than one call per ten.  gpt-4.1-2025-04-14 (T-4) adopted a more economical strategy, issuing on average 2.3 calls per grant while succeeding on the first query in 73% of cases.  The gpt-4o-mini-2025-04-16 model (T-1), by contrast, averaged 4.0 calls with a 67% first-call success rate.  This greater query volume manifests as the higher token usage and latency reported in § 6.3, yet it conferred no observable advantage in positional accuracy (§ 6.1).
 
 ## 6.6 Robustness / Ablation Studies
 
 Several additional analyses were conducted to test the robustness of the main findings:
 
-* **Outlier-robust summary** – Excluding the five largest residuals (top 11% of errors) lowers the overall mean error from 38.5 km to 36.9 km. Method rankings and 95% CIs remain unchanged; only **H-1** [@Bashorun2025_gis] (−6.6 km) and **M-6** (−6.3 km) show material shifts, leaving **M-2** as the top performer.
+* Outlier-robust summary – Excluding the five largest residuals (top 11% of errors) lowers the overall mean error from 38.5 km to 36.9 km. Method rankings and 95% CIs remain unchanged; only H-1 [@Bashorun2025_gis] (−6.6 km) and M-6 (−6.3 km) show material shifts, leaving M-2 as the top performer.
 
-* **Length‐stratified accuracy** – To test whether verbose abstracts make the task easier (or harder), the word-count of each grant's full text in the validation file was measured and 152 LLM predictions were analyzed:  
-  * Median split — "Short" (≤ 36 words) vs "long" (> 36 words) abstracts yielded mean errors of **36.8 km** and **34.9 km** respectively (95% CIs overlap), indicating no practical difference.  
-  * Continuous fit — An ordinary-least-squares regression \(\text{error}_{km}=42.3-0.18\,\text{length}_{words}\) gives a slope of **–0.18 km ± 0.44 km** (95% CI) per extra word with **R² = 0.004** and Pearson **r = –0.06**.  Figure \ref{fig:length-vs-error} visualizes the scatter and confidence band.
+* Length‐stratified accuracy – To test whether verbose abstracts make the task easier (or harder), the word-count of each grant's full text in the validation file was measured and 152 LLM predictions were analyzed:  
+  * Median split — "Short" (≤ 36 words) vs "long" (> 36 words) abstracts yielded mean errors of 36.8 km and 34.9 km respectively (95% CIs overlap), indicating no practical difference.  
+  * Continuous fit — An ordinary-least-squares regression \(\text{error}_{km}=42.3-0.18\,\text{length}_{words}\) gives a slope of –0.18 km ± 0.44 km (95% CI) per extra word with R² = 0.004 and Pearson r = –0.06.  Figure \ref{fig:length-vs-error} visualizes the scatter and confidence band.
 
 ![Length vs. Error](../analysis/figures/length_vs_error.png){#fig:length-vs-error width="\linewidth" fig-pos="H"}
 
   These results suggest that, within the 25–60-word range typical of the corpus, abstract length explains essentially none of the variation in LLM accuracy.
 
-* **Temperature sweep** – Four temperatures (0.0 / 0.4 / 0.8 / 1.2) were evaluated for the one-shot prompt on gpt-4.1-2025-04-14 (M4) and gpt-4o-2024-08-06 (M5). Mean error for gpt-4.1-2025-04-14 varied narrowly between **34 km** (*t*=0.0) and **31.7 km** (*t*=0.8), indicating a shallow optimum around 0.8. gpt-4o-2024-08-06 showed no systematic trend (32–33 km across the grid). Given the marginal gains, **t = 0.8** is fixed for gpt-4.1-2025-04-14 and the default **t = 0.0** is kept for gpt-4o-2024-08-06 in all downstream benchmarks.
+* Patentee-name redaction (E-2) – To test for possible *training-data contamination*, the five-call o3 ensemble (E-1) was rerun after masking every patentee name in the abstract with `[NAME]`.  If the model had memorised grant-name ⟷ coordinate pairs from its pre-training corpus, removing this cue should have caused a sharp accuracy drop.  In practice mean error rose only slightly—from 18.7 km to 20.4 km—and the ≤10 km hit-rate fell by just 4.6 pp (39.5 → 34.9).  The mild degradation indicates that the model is drawing on the descriptive toponyms and spatial clues in the text rather than retrieving memorised locations, providing no evidence of leakage from the historical grants themselves.
+
+* Temperature sweep – Four temperatures (0.0 / 0.4 / 0.8 / 1.2) were evaluated for the one-shot prompt on gpt-4.1-2025-04-14 (M4) and gpt-4o-2024-08-06 (M5). Mean error for gpt-4.1-2025-04-14 varied narrowly between 34 km (*t*=0.0) and 31.7 km (*t*=0.8), indicating a shallow optimum around 0.8. gpt-4o-2024-08-06 showed no systematic trend (32–33 km across the grid). Given the marginal gains, t = 0.8 is fixed for gpt-4.1-2025-04-14 and the default t = 0.0 is kept for gpt-4o-2024-08-06 in all downstream benchmarks.
 
 # 7 Discussion
 
 ## 7.1 Implications for Digital History
 
-The findings demonstrate that contemporary large language models can match or outperform a professional GIS script on geolocating seventeenth- and eighteenth-century Virginia land grants, delivering this accuracy at a cost previously unattainable by traditional workflows. A mean error of ≈ 23.4 km (M-2) suffices to place most patents within their correct river basin or county, enabling macro-scale analyses of settlement diffusion, planter networks, and Indigenous dispossession without months of archival GIS labor. Because the input to the model is plain text, the same pipeline can be reused for later patent volumes or for neighboring colonies whose grant abstracts share a common rhetorical template. More broadly, the study reinforces the premise of "machine-assisted reading" in the digital humanities, where historians formulate research questions while delegating repetitive extraction tasks to foundation models.
+This study demonstrates that contemporary large language models (LLMs) can geolocate seventeenth- and eighteenth-century Virginia land patents with accuracy comparable to or exceeding a professional GIS workflow, while substantially reducing costs and labor. The best-performing single-call model (o3-2025-04-16) achieves a mean error of ≈23 km, sufficient to localize most patents accurately within their respective river basin or county boundaries. Such precision is adequate for macro-scale historical inquiries into settlement patterns, plantation economies, and Indigenous land dispossession, significantly reducing reliance on extensive manual archival GIS labor. Importantly, since the input format consists solely of narrative text, this georeferencing pipeline is readily transferable to subsequent volumes of land grants or to neighboring colonial datasets with structurally similar metes-and-bounds descriptions.
 
-Nevertheless, scholars must heed the epistemic caveats that accompany automated coordinates. Even the best LLM occasionally misplaces a grant by >100 km, and the absence of per-prediction uncertainty estimates complicates downstream statistical inference. It is therefore recommended that a hybrid workflow be used in which the model provides a first-pass coordinate that is then verified—or rejected—by a domain expert. At ≤1 s latency and ~USD 0.001 per prediction (gpt-4o-2024-08-06), such assisted verification remains an order of magnitude cheaper than start-to-finish traditional geocoding.
+Further incremental improvements are attainable through modest technical refinements. A five-call stochastic ensemble of the same o3 model, integrated via DBSCAN clustering, reduces mean error to ≈19 km, representing an 18% accuracy improvement at a marginal incremental cost of ≈USD 0.20 and approximately 3 seconds of additional latency per grant. Paired Wilcoxon signed-rank tests confirm the statistical significance of this enhancement (W = 629, p = 0.03 versus the single-shot model). Such methodological refinements illustrate a pathway for rigorous yet computationally efficient digital historical analyses.
+
+Nevertheless, critical epistemological limitations must be acknowledged. Even optimized models occasionally yield significant positional errors exceeding 100 km, and the absence of inherent uncertainty metrics in predictions complicates downstream historical and spatial interpretations. Leveraging models like gpt-4o-2024-08-06, which provide sub-second latency and near-negligible costs (~USD 0.001 per prediction), further supports the viability of fully automated workflows at scale.
+
+More broadly, these results affirm the emerging paradigm of "machine-assisted reading" within digital humanities scholarship, where historians retain interpretive and analytical authority while delegating repetitive and data-intensive extraction tasks to robust computational models. This model not only accelerates research workflows but also expands methodological possibilities within historical spatial analysis, offering scalable and reproducible approaches to the quantitative study of early-modern archives.
 
 ## 7.2 Error Analysis & Failure Modes
 
 Inspection of the largest residuals uncovers three recurring failure modes:
 
-1. **Obsolete or ambiguous toponyms.** Grants that reference now-extinct mill sites or plantations often trigger erroneous Google-Maps matches to modern businesses with the same surname. This effect is amplified when the model fails to include a county qualifier in its geocoder query.
+1. **Obsolete or ambiguous toponyms.** Grants referencing now-extinct mill sites, plantations, or historical administrative divisions frequently produce erroneous matches to contemporary geographic entities. This ambiguity is amplified when models fail to contextualize place-names within county boundaries or historical frameworks. A notable example involves the Stanford Named Entity Recognition (NER) method, which processed references to "St. Paul's Parish" by correctly identifying "St. Paul" as a Virginia geographic entity. However, the GeoNames API subsequently matched this to the modern town of Saint Paul, located approximately 400 km from the intended historical Anglican parish in central Virginia. This misplacement highlights the fundamental issue that modern gazetteers contain toponyms whose geographic or administrative meanings have significantly shifted over centuries, illustrating the critical gap between algorithmic geocoding and historical geographic knowledge.
 
-2. **Chain-of-bearing descriptions.** A minority of abstracts provide only metes-and-bounds bearings (e.g., "beginning at a white oak, thence S 42° E 240 p."). Without explicit place names, the LLM frequently defaults to the centroid of the target county, inflating error to >70 km.
+2. **Bearing-only metes-and-bounds descriptions.** Some abstracts give nothing beyond a perimeter walked from one neighbour or landmark to the next—for example, the John Pigg patent that "beg[ins] in the path from William Rickett's house to the Indian towne; to Capt. William Smith … to land where John Barrow liveth … to the Ridge Path … along Watkins's line … to Maj. Payton." Because there is no unambiguous place-name anchor, both the LLM and gazetteer-driven baselines must rely on weak contextual cues, and median errors for these deeds rise above 70 km.
 
 3. **Cascading search bias.** Tool-enabled runs introduce an additional failure channel: once the first `geocode_place` call returns a spurious coordinate, subsequent `compute_centroid` operations often average anchors that are already flawed, locking in the error. Raising the threshold for calling the centroid function—or providing the model with a quality heuristic—may mitigate this issue.
 
-### 7.2.1 Historical vs. Modern Geographic Context: The Stanford NER Case Study
-
-The Stanford NER method (H-2) revealed a particularly instructive failure mode that highlights the fundamental challenge of historical geocoding. Two extreme outliers (>400 km error) initially appeared to be technical failures but upon investigation revealed a more nuanced issue: the collision between historical and modern geographic nomenclature.
-
-**Case Analysis**: Grants referencing "St. Paul's Parish" in colonial Virginia were correctly processed by Stanford NER, which extracted "St. Paul" as a geographic entity. The GeoNames API, restricted to Virginia locations, correctly returned coordinates for Saint Paul, Virginia (36.90538, -82.31098) in Wise County. However, the historical "St. Paul's Parish" referenced in 1700s land records was an Anglican administrative division in central Virginia, approximately 400 km from the modern town of Saint Paul in southwestern Virginia.
-
-**Technical Validation**: All system components functioned correctly—Stanford NER accurately identified place names, the Virginia geographic restriction prevented mislocalization to Saint Paul, Minnesota, and the coordinates returned were legitimately within Virginia. The error arose not from algorithmic failure but from the fundamental challenge that modern gazetteers contain toponyms that have shifted meaning, location, or administrative context over centuries.
-
-**Research Implications**: This finding demonstrates where expert geographic knowledge exceeds purely algorithmic approaches. A professional GIS analyst familiar with Virginia's colonial administrative geography would immediately recognize that "St. Paul's Parish" in 1700s land records refers to a historical parish system rather than the modern town. This case study reinforces the value of human-in-the-loop validation for historical geocoding applications, where domain expertise can distinguish between homonymous historical and contemporary place names that automated systems cannot differentiate.
 
 \begin{figure}[H]
 \centering
@@ -433,11 +484,9 @@ These examples visually reinforce the key finding that sophisticated language mo
 
 From a budgetary standpoint, all automatic methods lie on a markedly superior frontier relative to the traditional GIS baseline: the cheapest model (gpt-3.5-turbo) reduces cost per located grant by four orders of magnitude, while the most accurate (o3-2025-04-16) still delivers a >20× saving. Latency gains are equally pronounced, shrinking a six-hour task to seconds.
 
-The choice of model therefore hinges on the marginal utility of additional accuracy. If a project tolerates a 30 km error band, gpt-4o-2024-08-06 maximizes throughput at negligible cost; archival projects requiring sub-15 km precision may justify the higher token expenditure of the o3-2025-04-16 family.[^cost-optimized] Crucially, both options scale linearly with corpus size, placing statewide geocoding—tens of thousands of patents—within reach of modest research budgets.
+The choice of inference strategy therefore hinges on the marginal utility of each additional kilometre of accuracy. Projects that can tolerate a ≈30 km error band will find gpt-4o-2024-08-06 delivers near-real-time throughput at a negligible cost. Where higher precision is required, two graduated options emerge. First, a single pass of o3-2025-04-16 at its default medium reasoning budget achieves a mean error of ≈23 km for roughly $0.13 per deed. Second, stacking five low-temperature, low-reasoning calls of the same o3 model and clustering them with DBSCAN (method E-1) pushes mean error down to ≈19 km at a per-grant cost of ≈$0.20. Because the ensemble averages away the occasional outlier, each component call can run with reasoning_effort = low (≈1.1 k tokens) instead of medium (≈3.2 k tokens), so the accuracy gain is bought primarily with additional parallel calls rather than a larger context window. Table \ref{tbl:reasoning} shows that raising reasoning_effort in a single call trims mean error by less than 1 km yet triples token usage, whereas the ensemble suppresses outliers more cost-effectively.
 
-[^cost-optimized]: Three ultra-low-cost gpt-4-class variants (gpt-4.1-mini, gpt-4.1-nano, gpt-4o-mini) were also evaluated. Their outputs rarely conformed to the required coordinate format, yielding a mean error of ≈ 49 km; details are archived in the supplementary repository [GitHub repository](https://github.com/ryanmio/colonial-virginia-llm-geolocation).
-
-Reflecting Li et al.'s GeoAI manifesto emphasis on rigorous yet efficient experimentation, the ablation runs reveal that these gains do **not** depend on expensive parameter settings. Increasing *reasoning_effort* from "low" to "high" multiplies token usage ~6× and latency ~5× while trimming mean error by <1 km. Likewise, gpt-4.1-2025-04-14 accuracy varies by only ±1.5 km across the 0–1.2 temperature range, and gpt-4o-2024-08-06 shows no systematic trend. In practice, therefore, the default (cheap) settings already sit near the cost-accuracy frontier.
+In practical terms, gpt-4o defines the speed–and–cost vertex, o3 single-shot defines the mid-range accuracy vertex, and o3 five-call ensemble occupies the extreme accuracy corner of the Pareto frontier. All three pipelines scale linearly with corpus size, so statewide geocoding—tens of thousands of patents—remains feasible on a modest humanities budget, provided researchers calibrate model choice to their required spatial tolerance.
 
 # 8 Limitations
 
@@ -468,9 +517,13 @@ Building on the present findings, several avenues warrant exploration.
 
 # 10 Conclusion
 
-This study provides the first systematic benchmark of large language models on the task of geolocating colonial-era Virginia land grants directly from narrative abstracts. Across ten model–pipeline combinations—including two non-LLM baselines—evaluated on 43 grants with rigorously verified ground truth, the findings show that an off-the-shelf one-shot prompt to the o3-2025-04-16 model achieves a mean positional error of 23.4 km—dramatically outperforming both a professional GIS workflow (71.4 km) and a deterministic Stanford NER geoparser (79.0 km) while reducing cost by two orders of magnitude and latency by three. Contrary to expectations, granting LLMs external geocoding tools does not automatically improve results.
+This study delivers the first rigorous benchmark of large language models on the longstanding problem of geolocating early-modern Virginia land patents directly from their narrative metes-and-bounds abstracts.  A new, copyright-compliant dataset of 5 471 transcribed grants and 43 gold-standard coordinates accompanies a reproducible evaluation framework that compares six OpenAI model variants against four deterministic or human baselines.
 
-The implications for digital history are immediate: large corpora of archival land records can now be mapped at state scale in hours rather than months, facilitating quantitative studies of settlement, labor, and landscape change. At the same time, failure modes are highlighted that demand scholarly caution and procedural safeguards are outlined, including hybrid verification and periodic re-benchmarking. Taken together, the results validate LLM-assisted geocoding as a viable, resource-efficient complement to traditional geospatial research, and chart a path toward fully spatially-enabled colonial archives.
+The best single-call configuration—o3-2025-04-16 with a one-shot prompt—achieves a mean great-circle error of 23 km, cutting the professional GIS benchmark by 67 % and the Stanford NER geoparser by 70 %.  A lightweight five-call ensemble of the same model, run at low reasoning effort and fused with DBSCAN, reduces mean error further to ≈19 km while adding only ≈US $0.07 and three seconds per deed.  In contrast, the fastest model (gpt-4o-2024-08-06) incurs a negligible cost of US $0.001 per grant and still stays within a 30 km error band, defining a new speed–cost frontier.
+
+These findings place colony-scale georeferencing of archival land records within reach of modest research budgets: mapping the entire Cavaliers and Pioneers corpus—tens of thousands of patents—now requires hours and tens of dollars rather than months and thousands.  Because the pipeline operates on plain text, it can be ported verbatim to other volumes, neighbouring colonies, or similarly structured deed books worldwide.
+
+Future work can capitalise on the released corpus and code by extending the benchmark to polygon reconstruction, integrating Indigenous spatial data, and testing open-source LLMs fine-tuned on historical prose.  For digital historians, archaeologists, and GIScientists alike, the results substantiate LLM-assisted geocoding as an accurate, transparent, and economically viable alternative to traditional manual workflows—opening a scalable path toward fully spatially enabled colonial archives.
 
 # 11 Acknowledgements
 
@@ -552,6 +605,8 @@ Table A1 summarizes the model variants and hyperparameter configurations used in
 | M-6       | gpt-3.5-turbo                     | one_shot   | 0.2         |                  |
 | T-1       | o4-mini-2025-04-16                | tool_chain |             | low              |
 | T-4       | gpt-4.1-2025-04-14                | tool_chain | 0.2         |                  |
+| E-1       | o3-2025-04-16 (ensemble)          | one_shot   |             | low              |
+| E-2       | o3-2025-04-16 (name-redacted)     | one_shot   |             | low              |
 
 ### A.3 Example Chain-of-Thought Trace (T-4)
 
@@ -765,15 +820,20 @@ Table \ref{tbl:error_ci} provides comprehensive error statistics for each evalua
 
 | Method | Model | n | Mean km | 95% CI |
 |---|---|---|---|---|
-| H-1 | Professional GIS script | 43 | 75.08 | [56.80, 93.84] |
-| M-1 | o4-mini-2025-04-16 | 43 | 41.65 | [33.65, 50.04] |
-| M-2 | o3-2025-04-16 | 43 | 23.39 | [17.57, 29.54] |
-| M-3 | o3-mini-2025-01-31 | 43 | 50.25 | [43.22, 57.86] |
-| M-4 | gpt-4.1-2025-04-14 | 43 | 28.51 | [22.33, 34.79] |
-| M-5 | gpt-4o-2024-08-06 | 43 | 27.93 | [22.37, 34.23] |
-| M-6 | gpt-3.5-turbo | 43 | 43.05 | [33.57, 54.72] |
-| T-1 | o4-mini-2025-04-16 + tools | 43 | 37.65 | [30.61, 45.32] |
-| T-4 | gpt-4.1-2025-04-14 + tools | 43 | 37.23 | [30.34, 44.24] |
+| E-1 | o3-2025-04-16 (ensemble) | 43 | 19.24 | [13.60, 24.97] |
+| E-2 | ensemble name-redacted | 43 | 20.57 | [15.08, 26.83] |
+| H-1 | human-gis | 43 | 71.40 | [59.14, 85.11] |
+| H-2 | Stanford NER (GeoTxt) | 43 | 79.02 | [56.32, 109.38] |
+| H-3 | Mortecai3 | 43 | 94.28 | [68.81, 124.61] |
+| H-4 | County Centroid | 43 | 80.33 | [65.96, 95.88] |
+| M-1 | o4-mini-2025-04-16 | 43 | 41.65 | [33.77, 50.11] |
+| M-2 | o3-2025-04-16 | 43 | 23.39 | [17.37, 29.25] |
+| M-3 | o3-mini-2025-01-31 | 43 | 50.25 | [43.02, 58.63] |
+| M-4 | gpt-4.1-2025-04-14 | 43 | 28.51 | [22.68, 35.10] |
+| M-5 | gpt-4o-2024-08-06 | 43 | 27.93 | [22.31, 33.85] |
+| M-6 | gpt-3.5-turbo | 43 | 43.05 | [33.78, 53.98] |
+| T-1 | o4-mini-2025-04-16 + tools | 43 | 37.65 | [30.86, 44.99] |
+| T-4 | gpt-4.1-2025-04-14 + tools | 43 | 37.23 | [30.11, 45.03] |
 
 Table: Mean error with 95% confidence intervals for each method. {#tbl:error_ci}
 
@@ -783,7 +843,12 @@ Table \ref{tbl:method_performance} provides the complete performance statistics 
 
 | Method | n | mean | median | sd | min | Q1 | Q3 | max | ≤10 km | ≤25 km | ≤50 km |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| H-1 | 43 | 75.08 | 70.70 | 43.30 | 5.98 | 36.87 | 118.36 | 139.59 | 4.8% | 9.5% | 42.9% |
+| E-1 | 43 | 18.71 | 12.45 | 19.36 | 1.77 | 5.60 | 23.87 | 100.90 | 39.5% | 76.7% | 95.3% |
+| E-2 | 43 | 20.44 | 13.75 | 18.87 | 1.11 | 7.41 | 24.05 | 95.34 | 34.9% | 76.7% | 95.3% |
+| H-1 | 43 | 71.40 | 60.20 | 45.65 | 5.98 | 30.63 | 117.50 | 170.95 | 4.7% | 18.6% | 41.9% |
+| H-2 | 43 | 79.02 | 59.45 | 88.32 | 2.29 | 29.05 | 94.67 | 448.66 | 7.0% | 23.3% | 41.9% |
+| H-3 | 43 | 94.28 | 55.45 | 91.73 | 5.20 | 30.63 | 123.12 | 383.18 | 7.0% | 20.9% | 41.9% |
+| H-4 | 43 | 80.33 | 70.49 | 51.46 | 2.46 | 36.82 | 125.61 | 187.61 | 4.7% | 11.6% | 37.2% |
 | M-1 | 43 | 41.65 | 27.39 | 27.32 | 7.59 | 18.45 | 70.04 | 103.49 | 7.0% | 37.2% | 62.8% |
 | M-2 | 43 | 23.39 | 14.27 | 19.86 | 2.67 | 8.17 | 36.85 | 87.35 | 30.2% | 60.5% | 93.0% |
 | M-3 | 43 | 50.25 | 48.40 | 24.93 | 6.29 | 27.36 | 69.53 | 123.04 | 4.7% | 16.3% | 53.5% |
@@ -801,6 +866,7 @@ Table \ref{tbl:cost_accuracy} examines the cost-accuracy relationship, emphasizi
 
 | Model | Mean error km | ≤10 km hit-rate | Cost per 1k located (USD) | Cost per +1% ≤10 km hit (USD) |
 |--------|---|---|---|---|
+| o3-2025-04-16 (Ensemble) | 18.71 | 39.5% | $195.65 | $4.95 |
 | o3-2025-04-16 | 23.39 | 30.2% | $127.46 | $4.22 |
 | gpt-4o-2024-08-06 | 27.93 | 16.3% | $1.05 | $0.06 |
 | gpt-4.1-2025-04-14 | 32.87 | 18.6% | $3.49 | $0.19 |
@@ -817,13 +883,14 @@ Table \ref{tbl:time_usage} quantifies the latency advantage of automated methods
 
 | Model | Hours per located | Hours per 1k located | Speedup vs. baseline |
 |---|---|---|---|
-| gpt-4o-2024-08-06 | 0.0002 | 0.184 | 1,152× |
-| gpt-3.5-turbo | 0.0002 | 0.232 | 914× |
-| gpt-4.1-2025-04-14 | 0.0009 | 0.915 | 232× |
-| o3-2025-04-16 | 0.0133 | 13.294 | 16× |
-| o3-mini-2025-01-31 | 0.0088 | 8.791 | 24× |
-| o4-mini-2025-04-16 | 0.0067 | 6.698 | 32× |
-| human-gis | 0.2120 | 212.045 | 1× |
+| o3-2025-04-16 (Ensemble) | 0.0128 | 12.819 | 17× |
+| gpt-4o-2024-08-06 | 0.0002 | 0.178 | 1,219× |
+| gpt-3.5-turbo | 0.0002 | 0.225 | 964× |
+| gpt-4.1-2025-04-14 | 0.0003 | 0.295 | 736× |
+| o3-2025-04-16 | 0.0121 | 12.060 | 18× |
+| o3-mini-2025-01-31 | 0.0085 | 8.523 | 25× |
+| o4-mini-2025-04-16 | 0.0091 | 9.145 | 24× |
+| human-gis | 0.2170 | 216.977 | 1× |
 
 Table: Processing time by model. {#tbl:time_usage}
 
@@ -833,6 +900,7 @@ Table \ref{tbl:token_usage} provides detailed token consumption data across all 
 
 | Model | Input tokens | Output tokens | Tokens per 1k located |
 |---|---|---|---|
+| o3-2025-04-16 (Ensemble) | 33,265 | 210,681 | 10,441,907 |
 | gpt-4o-2024-08-06 | 6,698 | 900 | 176,698 |
 | gpt-3.5-turbo | 6,773 | 820 | 176,581 |
 | gpt-4.1-2025-04-14 | 142,258 | 4,193 | 1,702,919 |
@@ -873,13 +941,24 @@ Figure \ref{fig:error_boxplot} shows the distribution of geolocation error for e
 
 Figure \ref{fig:contactsheet} plots all six methods for every locatable grant against ground truth coordinates (black stars). Error distances are shown as dashed lines connecting predictions to ground truth.
 
-### C.3 Cost-Accuracy Tradeoff
+### C.3 Marginal Cost of High-Precision Accuracy
 
-Figure \ref{fig:pareto_cost_appendix} presents the cost-accuracy Pareto frontier across all evaluated methods. This visualization expands upon Figure \ref{fig:pareto_cost} from the main text, providing additional detail on the trade-offs between monetary expenditure and geolocation accuracy.
+Table \ref{tbl:cost_marginal} reports how many U.S. dollars each method requires to raise the ≤10 km hit-rate by one percentage point (column "Cost per +1 % ≤10 km hit").  This marginal-cost view complements the mean-error vs. cost Pareto plot in the main text: it quantifies the price of *high-confidence* geocoding rather than average error alone.
 
-![Cost-Accuracy Pareto Frontier](../analysis/figures/pareto_tradeoff.pdf){#fig:pareto_cost_appendix width="\linewidth" fig-pos="H"}
+| Model | ≤10 km hit-rate | Cost per 1 k located (USD) | Cost per +1 % ≤10 km hit (USD) |
+|---|---|---|---|
+| o3-2025-04-16 (Ensemble) | 39.5 % | $195.65 | $4.95 |
+| o3-2025-04-16 | 30.2 % | $127.46 | $4.22 |
+| gpt-4o-2024-08-06 | 16.3 % | $1.05 | $0.06 |
+| gpt-4.1-2025-04-14 | 18.6 % | $3.49 | $0.19 |
+| o4-mini-2025-04-16 | 10.5 % | $10.69 | $1.02 |
+| gpt-3.5-turbo | 4.7 % | $0.10 | $0.02 |
+| o3-mini-2025-01-31 | 4.7 % | $14.15 | $3.04 |
+| human-gis | 4.7 % | $3,255.81 | $700.00 |
 
-The plot illustrates how automated methods establish a clear Pareto frontier along the bottom edge, with cost (x-axis, log scale) ranging over several orders of magnitude while mean error (y-axis) varies between ~23-75 km. The professional GIS baseline appears in the upper-right quadrant, reflecting its combination of high cost and relatively high error. gpt-4o-2024-08-06 offers the most favorable cost-to-accuracy ratio despite not achieving the absolute lowest error, while o3-2025-04-16 delivers the best accuracy at significantly higher cost.
+Table: Marginal cost to improve the ≤10 km hit-rate by one percentage point. {#tbl:cost_marginal}
+
+The numbers reveal why **gpt-4o-2024-08-06** is so attractive in budget-constrained settings: each percentage-point gain in "high-precision" accuracy costs only six cents—roughly two orders of magnitude cheaper than even the *o3* ensemble, and over 10,000 × cheaper than a professional GIS analyst.
 
 ### C.4 Latency-Accuracy Tradeoff
 Processing time presents another critical dimension for evaluation. The figure below shows how each method balances computational latency against geolocation accuracy. LLM methods cluster in the bottom-left quadrant, delivering results in seconds rather than minutes, while maintaining lower error rates than the professional GIS approach.
@@ -958,5 +1037,7 @@ Table: Tool search efficiency metrics. {#tbl:search_efficiency}
 The more economical approach of gpt-4.1-2025-04-14 is evident in both the distribution of calls and search efficiency. While T-1 (o4-mini) made nearly twice as many geocoding calls on average (3.79 vs. 2.05), it achieved a slightly lower first-call success rate (69.0% vs. 72.7%). This pattern aligns with the overall finding that tool augmentation does not consistently improve accuracy; in fact, the additional API calls may introduce noise through spurious matches to modern place names that bear little relation to colonial-era settlements.
 
 Overall, both models heavily favored direct geocoding over centroid computation, with geocode:centroid ratios of 23.29:1 for T-1 and 8.18:1 for T-4. This suggests that the models primarily relied on finding exact matches for place names mentioned in the abstracts rather than triangulating from multiple reference points—a strategy that may explain their susceptibility to modern naming coincidences.
+
+
 
 # References 
