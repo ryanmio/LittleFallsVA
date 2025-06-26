@@ -281,8 +281,19 @@ sed -i '' 's/\\includegraphics\[width=\\linewidth\]{figures\/map_outputs/\\inclu
 # Fix the endminipage issue 
 sed -i '' 's/\\endend{minipage}/\\end{minipage}/g' "$CONTENT_TEX"
 
+# Ensure \appendix is on its own line (fix concatenation like \appendixFinally)
+sed -i '' 's/\\appendix\([A-Za-z]/\\appendix\
+\1/g' "$CONTENT_TEX"
+
 # FINAL: Convert any remaining pandocbounded patterns (do this last)
 sed -i '' 's/\\pandocbounded{\\includegraphics\[keepaspectratio\]{figures\/\([^}]*\)}}/\\includegraphics[width=\\textwidth,height=0.8\\textheight,keepaspectratio]{figures\/\1}/g' "$CONTENT_TEX"
+
+# Remove 'A.<num>.<num>' prefixes that may remain (e.g., A.2.1)
+sed -E -i '' 's/\\subsection\{A\.[0-9]+\.[0-9]+ /\\subsection{/g' "$CONTENT_TEX"
+sed -E -i '' 's/\\subsubsection\{A\.[0-9]+\.[0-9]+ /\\subsection{/g' "$CONTENT_TEX"
+
+# Also clean paragraph-level headings (e.g., \paragraph{A.2.1 ...})
+sed -E -i '' 's/\\paragraph\{A\.[0-9]+\.[0-9]+[[:space:]]+/\\paragraph{/' "$CONTENT_TEX"
 
 # 3. Copy bibliography
 cp "$REFS_BIB" "$TEMPLATE_DIR/refs.bib"

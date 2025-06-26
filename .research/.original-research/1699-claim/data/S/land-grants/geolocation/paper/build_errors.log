@@ -1,10 +1,16 @@
-[WARNING] Citeproc: citation karimzadeh2019geotxt not found
 [WARNING] Citeproc: citation key not found
-[WARNING] [makePDF] LaTeX Warning: Citation `ref-karimzadeh2019geotxt' on page 2
-  undefined on input line 318.
-[WARNING] [makePDF] LaTeX Warning: There were undefined references.
-[WARNING] Missing character: There is no ⁻ (U+207B) (U+207B) in font STIXGeneral-Regular/OT:script
-[WARNING] Missing character: There is no ⁸ (U+2078) (U+2078) in font STIXGeneral-Regular/OT:script
-[WARNING] Missing character: There is no ≤ (U+2264) (U+2264) in font STIXGeneral-Italic/OT:script=
-[WARNING] Missing character: There is no ⁻ (U+207B) (U+207B) in font STIXGeneral-Italic/OT:script=
-[WARNING] Missing character: There is no ⁵ (U+2075) (U+2075) in font STIXGeneral-Italic/OT:script=
+[WARNING] Could not fetch resource ../analysis/figures/accuracy_bar.pdf: replacing image with description
+[WARNING] Could not fetch resource ../analysis/figures/error_violin_methods.pdf: replacing image with description
+[WARNING] Could not fetch resource ../analysis/figures/error_violin_core_methods.pdf: replacing image with description
+[WARNING] Could not fetch resource ../analysis/figures/cdf_graphs/cdf_models_combined.pdf: replacing image with description
+[WARNING] Could not fetch resource ../analysis/figures/pareto_tradeoff.pdf: replacing image with description
+[WARNING] Could not fetch resource ../analysis/figures/length_vs_error.png: replacing image with description
+[WARNING] Could not fetch resource ../analysis/figures/error_boxplot.pdf: replacing image with description
+[WARNING] Could not fetch resource ../analysis/mapping_workflow/contact_sheet.png: replacing image with description
+[WARNING] Could not fetch resource ../analysis/figures/pareto_latency_tradeoff.pdf: replacing image with description
+Error producing PDF.
+! Unable to load picture or PDF file '../analysis/figures/latency_boxplot.pdf'.
+<to be read again> 
+                   }
+l.1304 ...../analysis/figures/latency_boxplot.pdf}
+

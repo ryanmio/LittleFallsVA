@@ -30,8 +30,21 @@ agg.to_csv(OUT_DIR / 'pareto_latency_points.csv', index=False)
 
 fig, ax = plt.subplots(figsize=(6,4))
 ax.scatter(agg['hours_per_1k'], agg['mean_error_km'], color='darkorange')
+
+# label mapping
+LABEL_MAP = {
+    'chatgpt-4o-latest': 'gpt-4o-2024-08-06',
+    'human-gis': 'professional GIS'
+}
+
 for _, row in agg.iterrows():
-    ax.text(row['hours_per_1k'], row['mean_error_km'], row['model'], fontsize=8, ha='left', va='bottom')
+    label = LABEL_MAP.get(row['model'], row['model'])
+    x = row['hours_per_1k']
+    y = row['mean_error_km']
+    if label == 'professional GIS':
+        ax.text(x*0.7, y, label, fontsize=8, ha='right', va='bottom')
+    else:
+        ax.text(x, y, label, fontsize=8, ha='left', va='bottom')
 
 ax.set_xscale('log')
 ax.set_xlabel('Wall-clock hours per 1k located (log scale)')

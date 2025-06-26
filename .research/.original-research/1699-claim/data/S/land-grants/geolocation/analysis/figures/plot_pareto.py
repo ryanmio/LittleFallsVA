@@ -23,8 +23,20 @@ sns.set_palette('colorblind')
 fig, ax = plt.subplots(figsize=(6, 4))
 ax.scatter(pdf['cost_per_1k'], pdf['mean_error_km'], color='steelblue', s=30, linewidths=0.8, edgecolor='k')
 
+# Map raw model identifiers to display labels
+LABEL_MAP = {
+    'chatgpt-4o-latest': 'gpt-4o-2024-08-06',
+    'human-gis': 'professional GIS'
+}
+
 for _, row in pdf.iterrows():
-    ax.text(row['cost_per_1k'], row['mean_error_km'], row['model'], fontsize=8, ha='left', va='bottom')
+    label = LABEL_MAP.get(row['model'], row['model'])
+    x = row['cost_per_1k']
+    y = row['mean_error_km']
+    if label == 'professional GIS':
+        ax.text(x*0.7, y, label, fontsize=8, ha='right', va='bottom')
+    else:
+        ax.text(x, y, label, fontsize=8, ha='left', va='bottom')
 
 ax.set_xscale('log')
 ax.set_xlabel('Cost per 1k located (USD, log scale)')

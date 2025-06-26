@@ -98,10 +98,10 @@
 \josisdetails{%
    number=N, year=YYYY, firstpage=xx, lastpage=yy, 
   doi={10.5311/JOSIS.YYYY.II.NNN},
-   received={[Date removed for blind review]}, 
-   returned={January 1, 2000},
-   revised={January 1, 2000},
-   accepted={January 1, 2000}, }
+   received={[Not received]}, 
+   returned={[Not returned]},
+   revised={[Not revised]},
+   accepted={[Not accepted]}, }
 
 \newcommand{\mydoi}[1]{\href{http://dx.doi.org/#1}{doi:\protect\detokenize{#1}}}
 
@@ -139,12 +139,12 @@ urlcolor=black
 \keywords{historical GIS, large language models, geoparsing, colonial Virginia, land grants, digital humanities, spatial history, geolocation}
 
 \begin{abstract}
-Virginia's seventeenth- and eighteenth-century land patents survive almost exclusively as narrative metes-and-bounds descriptions in printed abstract volumes such as \emph{Cavaliers and Pioneers} (C\&P). I present the first systematic study of whether state-of-the-art large language models (LLMs) can convert these prose abstracts into usable latitude/longitude coordinates at research grade. I digitized, transcribed, and openly released a corpus of 5,471 Virginia patent abstracts (1695–1732), accompanied by a rigorously annotated ground-truth dataset of 45 authoritatively georeferenced test cases. I benchmark six OpenAI models spanning three architecture families under two prompting paradigms: (i) one-shot "direct-to-coordinate" and (ii) tool-augmented chain-of-thought that invokes external geocoding APIs.
-
-On the verified grants, the best purely textual model (OpenAI o3) achieves a mean great-circle error of 23.4 km (median 14.3 km), a 67\% improvement over a professional GIS baseline (71.4 km), while cutting cost and latency by roughly two and three orders of magnitude, respectively. The ultracheap GPT-4o variant locates patents with 28 km mean error at USD 1.09 per 1,000, only slightly less accurate yet ~100× cheaper. Contrary to expectations, granting LLMs external geocoding tools neither improves accuracy nor consistency.
-
-These results show that off-the-shelf LLMs can georeference early-modern land records faster, cheaper, and as accurately as traditional GIS workflows, opening a scalable pathway to spatially enable colonial archives—and, in turn, to reassess settlement dynamics, plantation economies, and Indigenous dispossession with quantitative precision.
-\end{abstract}
+Virginia's seventeenth- and eighteenth-century land patents survive primarily as narrative metes-and-bounds descriptions, limiting spatial analysis. This study systematically evaluates current-generation large language models (LLMs) in converting these prose abstracts into research-grade latitude/longitude coordinates. A digitized corpus of 5,471 Virginia patent abstracts (1695–1732) is released, with 43 rigorously verified test cases for benchmarking. Six OpenAI models across three architectures—o-series, GPT-4-class, and GPT-3.5—were tested under two paradigms: direct-to-coordinate and tool-augmented chain-of-thought invoking external geocoding APIs. Results were compared against a professional GIS workflow, Stanford NER geoparser, Mordecai-3 neural geoparser, and a county-centroid heuristic.
+  
+  The top single-call model, o3-2025-04-16, achieved a mean error of 23 km (median 14 km), a 67\% improvement over professional GIS methods and 70\% better than Stanford NER. A five-call ensemble further reduced errors to 19 km (median 12 km) at minimal additional cost (\textasciitilde USD 0.20 per grant). Paired Wilcoxon tests confirm ensemble superiority (W=629, p=0.03 vs. single-shot). A patentee-name redaction ablation slightly increased error (\textasciitilde 9\%), showing reliance on metes-and-bounds reasoning rather than memorization. The cost-effective gpt-4o-2024-08-06 model maintained a 28 km mean error at USD 1.09 per 1,000 grants, establishing a strong cost-accuracy benchmark. External geocoding tools offer no measurable benefit for this task.
+  
+  These findings demonstrate that LLMs can georeference early-modern records as accurately and significantly faster and cheaper than traditional GIS workflows, enabling scalable spatial analysis of colonial archives.
+  \end{abstract}
 
 % Main body generated via Pandoc
 \input{content_blind.tex}
