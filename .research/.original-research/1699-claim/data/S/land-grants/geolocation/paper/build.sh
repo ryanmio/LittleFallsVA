@@ -166,6 +166,7 @@ sed -i '' 's/\\subsection{1\.3 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{2\.1 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{2\.2 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{2\.3 /\\subsection{/g' "$CONTENT_TEX"
+sed -i '' 's/\\subsection{2\.4 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{3\.1 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{3\.2 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{3\.3 /\\subsection{/g' "$CONTENT_TEX"
@@ -360,9 +361,11 @@ cp "$CONTENT_TEX" "$TEMPLATE_DIR/content_blind.tex"
 sed -i '' 's|https://github\.com/ryanmio/colonial-virginia-llm-geolocation|[Repository URL removed for blind review]|g' "$TEMPLATE_DIR/content_blind.tex"
 sed -i '' 's|https://github\.com/ryanmioduskiimac/littlefallsva|[Repository URL removed for blind review]|g' "$TEMPLATE_DIR/content_blind.tex"
 
-# Remove acknowledgments section entirely
-sed -i '' '/\\section{Acknowledgments}/,/^$/d' "$TEMPLATE_DIR/content_blind.tex"
-sed -i '' '/\\subsection{Acknowledgments}/,/^$/d' "$TEMPLATE_DIR/content_blind.tex"
+# Anonymize the Conflict of Interest statement for blind review
+sed -i '' 's/The author is employed as a strategist at a political consulting firm/The author is employed at [Employer removed for blind review]/g' "$TEMPLATE_DIR/content_blind.tex"
+
+# Replace personal names in Acknowledgements for blind review (keep organisations)
+sed -i '' 's/Bimbola Bashorun/a professional GIS analyst/g' "$TEMPLATE_DIR/content_blind.tex"
 
 # Replace any author name references
 sed -i '' 's/Ryan Mioduski/[Author name removed for blind review]/g' "$TEMPLATE_DIR/content_blind.tex"

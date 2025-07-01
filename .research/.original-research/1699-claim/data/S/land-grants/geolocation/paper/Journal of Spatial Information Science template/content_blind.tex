@@ -113,14 +113,13 @@ maintains a statewide \emph{Land Patents and Grants} online database
 hosting scanned images and searchable indices for every recorded patent
 (1623--1774) and subsequent grant (1779--2000), including Northern Neck
 surveys, but provides no ready-made GIS polygons, limiting its direct
-utility for spatial analysis \citep{lva_patents_db}. Similarly, the
-Virginia Surveyor's Office has released thousands of patent polygons for
-central regions of the colony, while Loudoun County GIS staff have
-successfully reconstructed all original grants within their jurisdiction
-\citep{loudoun_grants_dataset}. These initiatives demonstrate the
-feasibility of digitizing historical land records but also highlight
-significant gaps in existing datasets - many seventeenth- and
-eighteenth-century patents still lack spatial coordinates.
+utility for spatial analysis \citep{lva_patents_db}. Similarly, Loudoun
+County GIS staff have successfully reconstructed all original grants
+within their jurisdiction \citep{loudoun_grants_dataset}. These
+initiatives demonstrate the feasibility of digitizing historical land
+records but also highlight significant gaps in existing datasets - many
+seventeenth- and eighteenth-century patents still lack spatial
+coordinates.
 
 Among the most thorough academic efforts for Virginia's Northern Neck
 proprietary are Mitchell's \citep{mitchell1977whiteoak} maps and
@@ -142,7 +141,7 @@ to demonstrate that eighteenth-century town sites often followed
 pre-existing Indigenous trails, while Coughlan and Nelson
 \citep{Coughlan2018_settlement} leveraged a dataset of 1,160 South
 Carolina grants to model settlement patterns based on river access and
-soil fertility. In each case, spatial enablement of historical records
+soil analysis. In each case, spatial enablement of historical records
 revealed patterns difficult to discern through textual sources alone.
 
 In genealogical and historical research communities, semi-automated
@@ -183,19 +182,19 @@ work, providing limited accuracy when dealing with ambiguous place
 names. Neural architectures such as CamCoder \citep{Gritta2018_camcoder}
 subsequently improved performance through learned contextual
 representations. Most recently, fine-tuned large language models have
-demonstrated substantial breakthroughs in toponym resolution accuracy.
-
-A representative example of this latest approach comes from Hu et al.
-\citep{Hu2024_toponym_llm}, who adapted 7--13 billion-parameter
-open-source models (e.g., Mistral-7B, Llama 2-7B) to generate an
+demonstrated substantial breakthroughs in toponym resolution accuracy. A
+representative example of this latest approach comes from Hu et al.
+\citep{Hu2024_toponym_llm}, who fine-tuned Llama 2-7B to generate an
 unambiguous administrative string for each toponym before invoking a
-standard geocoding API. Their fine-tuned Mistral-7B achieved an
-Accuracy@161 km of 0.91, outperforming previous neural methods by
-multiple percentage points and improving toponym resolution accuracy by
-13\%. On the less ambiguous WikToR corpus the same architecture reached
-0.98. Crucially, these gains were realized on commodity hardware,
-underscoring the practicality of parameter-efficient fine-tuning for
-large corpora.
+standard geocoding API. Their model achieved an Accuracy@161 km of 0.90
+on the GeoCorpora set, outperforming previous neural methods and
+improving toponym resolution accuracy by 13\% over the previous best
+neural system. On the less ambiguous WikToR corpus the same architecture
+reached 0.98. Crucially, these gains were realized on commodity
+hardware---the entire experiment ran on a single NVIDIA V100 with 14 GB
+VRAM, showing that parameter‑efficient fine‑tuning is feasible without
+data‑centre hardware---underscoring the practicality of
+parameter-efficient fine-tuning for large corpora.
 
 Addressing the persistent challenge of annotation scarcity, Wu et al.
 \citep{wu2025geosg} introduced GeoSG, a self-supervised graph neural
@@ -239,7 +238,7 @@ outputs in authoritative data and deterministic algorithms.
 This hybrid approach has evolved through several distinct
 implementations, each targeting different aspects of the geolocation
 challenge. Early evidence for its effectiveness comes from Hu et al.
-\citep{Hu2024_toponym_llm}, who coupled a fine-tuned Mistral-7B with a
+\citep{Hu2024_toponym_llm}, who coupled a fine-tuned Llama 2-7B with a
 cascading trio of geocoders---GeoNames, Nominatim, and ArcGIS---to
 resolve toponyms the model had already disambiguated linguistically.
 Their experiments demonstrated that this hybrid pipeline raised
@@ -253,15 +252,18 @@ descriptions (e.g., ``two blocks east of the old courthouse'') into
 structured cues, orchestrate vector-database lookups and offset
 calculations, and then retrieve precise coordinates from mapping APIs.
 Their ablation study confirmed that this agentic variant outperforms
-both rule-based and LLM-only baselines on two public
-address-standardization benchmarks.
+both rule-based and LLM-only baselines on the public GeoGLUE benchmark
+and an in-house Chinese address dataset, demonstrating improved F1
+scores and edit-distance metrics.
 
 These specialized implementations build upon a more general design
 pattern known as the ReAct prompting paradigm \citep{yao2023react},
 which demonstrates how language models can interleave chain-of-thought
-reasoning with live tool calls. This approach has proven particularly
-effective for spatial tasks that require both linguistic understanding
-and computational precision.
+reasoning with live tool calls. While originally demonstrated on
+question-answering and web-shopping tasks, this interleaved
+reasoning-action approach provides a framework that can be adapted to
+tasks requiring both linguistic interpretation and computational
+precision.
 
 At enterprise scale, Google Research's \emph{Geospatial Reasoning}
 initiative \citep{GoogleResearch2025_geospatial} exemplifies the
@@ -282,7 +284,7 @@ chain-of-thought that can issue mid-prompt geocoding and
 distance-calculation calls while processing historical texts with
 archaic toponyms and surveying terminology.
 
-\subsection{2.4 Emerging GeoAI Research
+\subsection{Emerging GeoAI Research
 Principles}\label{emerging-geoai-research-principles}
 
 Recent calls within the GeoAI community emphasize the need for empirical
@@ -571,7 +573,7 @@ implement and lightning-fast (\textless2 ms per deed), the approach
 yields a mean error of 80.3 km, serving mainly as a sanity check that
 more sophisticated pipelines clear with ease.
 
-\subsection{4.5 One-shot Prompting
+\subsection{One-shot Prompting
 (M-series)}\label{one-shot-prompting-m-series}
 
 In the first automatic condition, the language model receives the grant
@@ -612,7 +614,7 @@ M-5 & \passthrough{\lstinline!gpt-4o-2024-08-06!} \\
 M-6 & \passthrough{\lstinline!gpt-3.5-turbo!} \\
 \end{longtable}
 
-\subsection{4.6 Tool-augmented Chain-of-Thought
+\subsection{Tool-augmented Chain-of-Thought
 (T-series)}\label{tool-augmented-chain-of-thought-t-series}
 
 The second automated condition equips the model with two specialized
@@ -662,7 +664,7 @@ The experiment driver loops over each abstract, maintains a conversation
 history including tool call outputs, and stops after either receiving a
 valid coordinate string or exceeding ten assistant turns.
 
-\subsection{4.7 Five-call Ensemble
+\subsection{Five-call Ensemble
 (E-series)}\label{five-call-ensemble-e-series}
 
 The E-series leverages \emph{ensembling} to squeeze additional accuracy
@@ -680,7 +682,7 @@ but still two orders of magnitude cheaper than the GIS benchmark. A
 name-redacted ablation (E-2, see § 6.6) confirms that the gain is not
 driven by memorised patentee--location pairs.
 
-\subsection{4.8 Cost and Latency
+\subsection{Cost and Latency
 Accounting}\label{cost-and-latency-accounting}
 
 For each automated prediction, input and output tokens reported by the
@@ -744,21 +746,15 @@ Efficiency is characterized by two key metrics:
   on 01 May 2025
 \end{enumerate}
 
-The GIS benchmark incurred a fixed fee of USD 140 for approximately 6
-billable hours processing 43 grants (≈502 s per grant).\footnote{The GIS
-  benchmark reflects 6 billable hours of expert labor (\$140 ÷
-  \$23.33/hour), encompassing script development, parameter tuning, and
-  quality assurance across two iterations. While the actual calendar
-  time from initial contact to final delivery was longer (≈49 hours over
-  3 days), the latency metric uses billable labor time to maintain
-  comparability with LLM reasoning time. This approach measures
-  computational/cognitive effort rather than project coordination
-  overhead, providing a fair comparison between bespoke expert analysis
-  and off-the-shelf model inference. The actual script execution time
-  remains negligible (\textless1 s per grant) relative to the
-  development and validation effort.} For LLM methods, latency
-represents wall-clock time from API request to final coordinate string,
-inclusive of all tool interactions.
+The GIS benchmark incurred a fixed fee of USD 140 for approximately six
+billable hours of expert labour---covering script development, parameter
+tuning, and quality assurance---for all 43 grants (≈ 502 s per grant).
+Although the calendar time from first contact to final delivery spanned
+roughly 49 h over three days, the latency metric uses billable labour
+time to remain comparable with LLM wall-clock inference; actual script
+execution was negligible (\textless{} 1 s per grant). For LLM methods,
+latency represents wall-clock time from API request to final coordinate
+string, inclusive of all tool interactions.
 
 All metrics are computed on the 43 test-set abstracts for which
 ground-truth coordinates are available; remaining rows are retained in
@@ -1514,6 +1510,27 @@ economically viable alternative to traditional manual
 workflows---opening a scalable path toward fully spatially enabled
 colonial archives.
 
+\section{Conflict of Interest}\label{conflict-of-interest}
+
+The author declares no conflicts of interest that could reasonably be
+perceived to bias this research. \textbf{Financial:} The research
+received no external funding; the author holds no equity, patents, or
+paid consultancies related to the subject matter. API costs were paid
+personally by the author, though enhanced rate limits (1M/10M tokens
+daily) were provided under OpenAI's standard data sharing agreement for
+research evaluation purposes. \textbf{Professional:} The author is
+employed as a strategist at a political consulting firm; this employer
+had no involvement in study design, data collection, analysis,
+manuscript preparation, or the decision to submit for publication. Any
+opinions expressed are solely those of the author. \textbf{Personal:} No
+personal relationships or affiliations influenced the work.
+\textbf{Intellectual:} The author has not publicly advocated positions
+that would benefit from the results. \textbf{Materials:} All datasets
+used are publicly available (One Shared Story's Central VA Patents,
+Cavaliers and Pioneers Vol. 3); data providers had no editorial input or
+influence over the research. The author has no plans to commercialize
+any methods or create spin-off products from this research.
+
 \section{Acknowledgements}\label{acknowledgements}
 
 This work builds upon the meticulous archival research of Nell Marion
@@ -1521,7 +1538,7 @@ Nugent, whose \emph{Cavaliers and Pioneers} abstracts have preserved
 Virginia's colonial land records for generations of scholars, and the
 rigorous GIS work of One Shared Story, whose Central VA Patents dataset
 enabled the ground truth evaluation essential to this study. The authors
-are deeply grateful to Bimbola Bashorun \citep{Bashorun2025_gis} for
+are deeply grateful to a professional GIS analyst \citep{Bashorun2025_gis} for
 providing the professional GIS benchmark that was crucial to evaluating
 model performance.
 

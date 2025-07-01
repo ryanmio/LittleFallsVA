@@ -3,6 +3,7 @@ import shutil
 from pathlib import Path
 import filecmp
 import sys
+import fnmatch
 
 
 ###############################################################################
@@ -22,9 +23,17 @@ import sys
 
 DEFAULT_MAPPINGS = [
     {
+        # Sync the entire analysis tree but exclude raw OCR extracts or other
+        # copyright-sensitive artefacts.
         "type": "dir",
         "src": "/Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/geolocation/analysis",
-        "dest": "/Users/ryanmioduskiimac/Downloads/colonial-virginia-llm-geolocation/data/analysis",
+        "dest": "/Users/ryanmioduskiimac/Downloads/colonial-virginia-llm-geolocation/analysis",
+        # Any glob pattern listed here will be ignored **relative to the src**
+        # directory.  Add additional patterns as needed.
+        "exclude_patterns": [
+            "*raw_cavaliers_extract*.csv",
+            "*.DS_Store",
+        ],
     },
     {
         "type": "files",
@@ -67,14 +76,18 @@ def _copy_file(src: Path, dest: Path, verbose: bool = True):
         print(f"  [copy] {src} -> {dest}")
 
 
-def _sync_dir(src_dir: Path, dest_dir: Path, verbose: bool = True):
-    """Recursively copy directory contents preserving structure."""
+def _sync_dir(src_dir: Path, dest_dir: Path, verbose: bool = True, exclude_patterns: list[str] | None = None):
+    """Recursively copy directory contents preserving structure with exclusions."""
     if not src_dir.exists():
         print(f"[warn] Source directory {src_dir} does not exist – skipped.", file=sys.stderr)
         return
 
     for src in src_dir.rglob('*'):
         if src.is_dir():
+            continue
+        if _is_excluded(src, src_dir, exclude_patterns):
+            if verbose:
+                print(f"  [skip] {src.relative_to(src_dir)} (excluded)")
             continue
         rel_path = src.relative_to(src_dir)
         dest = dest_dir / rel_path
@@ -99,6 +112,17 @@ def _sync_selected_files(src_dir: Path, dest_dir: Path, items: list[str], verbos
         else:
             _copy_file(src, dest, verbose)
 
+
+def _is_excluded(path: Path, src_root: Path, patterns: list[str] | None) -> bool:
+    """Return True if *path* (relative to *src_root*) matches any pattern."""
+    if not patterns:
+        return False
+    rel = path.relative_to(src_root)
+    for pat in patterns:
+        if fnmatch.fnmatch(str(rel), pat):
+            return True
+    return False
+
 ###############################################################################
 # Main logic                                                                  #
 ###############################################################################
@@ -116,7 +140,8 @@ def run_sync(mappings, dry_run: bool = False, verbose: bool = True):
             continue
 
         if mtype == 'dir':
-            _sync_dir(src, dest, verbose)
+            exclude = mapping.get('exclude_patterns', [])
+            _sync_dir(src, dest, verbose, exclude)
         elif mtype == 'files':
             items = mapping.get('items', [])
             _sync_selected_files(src, dest, items, verbose)
