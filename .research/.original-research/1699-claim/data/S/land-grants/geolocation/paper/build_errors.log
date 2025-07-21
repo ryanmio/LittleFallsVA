@@ -1,7 +1,4 @@
 [WARNING] Citeproc: citation key not found
-[WARNING] [makePDF] LaTeX Warning: Reference `app-cot-trace' on page 19
-  undefined on input line 1358.
+[WARNING] [makePDF] LaTeX Warning: Reference `app-cot-trace' on page 20
+  undefined on input line 1380.
 [WARNING] [makePDF] LaTeX Warning: There were undefined references.
-[WARNING] Missing character: There is no ≤ (U+2264) (U+2264) in font STIXGeneral-Italic/OT:script=
-[WARNING] Missing character: There is no ⁻ (U+207B) (U+207B) in font STIXGeneral-Italic/OT:script=
-[WARNING] Missing character: There is no ⁵ (U+2075) (U+2075) in font STIXGeneral-Italic/OT:script=

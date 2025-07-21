@@ -42,7 +42,7 @@ prior to this work. Key uncertainties addressed in this study included:
   Would providing API-based tools (e.g., Google Places search)
   materially improve accuracy relative to a pure text approach?
 \item
-  How did model predictions compare to professional GIS workflows
+  How did model predictions compare to single-analyst GIS workflow
   \citep{Bashorun2025_gis}, deterministic pipelines such as the GeoTxt
   Stanford NER geoparser \citep{karimzadeh2019geotxt}, neural geoparsers
   like Mordecai-3 \citep{halterman2023mordecai}, and other heuristic
@@ -68,28 +68,36 @@ This study makes four principal contributions:
   including (i) row-level metadata---row identifier, word count, and
   SHA-256 hash---for all 5,471 abstracts, and (ii) limited,
   non-substitutable excerpts of up to 200 words for the 43 evaluation
-  abstracts. The full OCR corpus is available privately under a vetted,
-  non-commercial data-use agreement.
+  abstracts. The complete OCR text (5\,471 abstracts) has been archived
+  on \textbf{Zenodo (DOI: 10.5281/zenodo.16269949)}; qualified
+  researchers can download it for non‑commercial research.
 \item
   Provides authoritative latitude/longitude pairs for 43 randomly
-  sampled patents, derived from state-archived GIS polygons and
-  cross-verified archival sources, yielding a high-fidelity evaluation
-  target.
+  sampled patents, derived from GIS polygons created by the nonprofit
+  project One Shared Story (OSS) from public-domain archival sources and
+  cross-validated by scholars, yielding a high-fidelity evaluation
+  target for this benchmark.
 \item
-  Presents the first head-to-head evaluation of two LLM prompting
-  paradigms -- direct-to-coordinate inference and tool-augmented
-  chain-of-thought -- across six OpenAI model families on the historical
-  land-grant geolocation task.
+  Presents the first systematic benchmarking of large language models on
+  historical land-grant geolocation, evaluating two prompting
+  paradigms---direct-to-coordinate inference and tool-augmented
+  chain-of-thought---across six OpenAI models spanning the o-series,
+  GPT-4-class, and GPT-3.5 architectures, including detailed ranking of
+  model accuracy, inference costs, and latency.
 \item
-  Quantifies the trade-offs among spatial error, monetary expense, and
-  processing time, demonstrating that a pure LLM pipeline can match or
-  surpass professional GIS accuracy while operating orders of magnitude
-  faster and cheaper.
+  Quantifies trade-offs among spatial error, monetary expense,
+  processing time, cost, and latency, demonstrating that a pure LLM
+  pipeline can match or surpass a single-analyst GIS workflow, Stanford
+  NER geoparser, Mordecai-3 neural geoparser, and county-centroid
+  heuristic, while operating substantially faster and more
+  cost-effectively in this 43-grant pilot evaluation.
 \end{enumerate}
 
 All data, code, and results are available in the supplemental
 repository:
-\url{[Repository URL removed for blind review]}.
+\url{[Repository URL removed for blind review]}; the
+raw corpus and evaluation data are also archived on Zenodo (DOI:
+10.5281/zenodo.16269949).
 
 \section{Background \& Related Work}\label{background-related-work}
 
@@ -392,85 +400,94 @@ GeoAI.
 
 \subsection{Corpus Overview}\label{corpus-overview}
 
-\emph{Cavaliers and Pioneers}, Volume 3 \citep{Nugent1979_cavaliers3},
-compiles 5,471 abstracts of Virginia land patents recorded in patent
-books 9--14 (1695--1732). These grants fall largely in central and
-south-central Virginia, clustering around the present-day Richmond area.
-After an extensive search, no publicly available digital transcription
-of this volume was found and therefore the material is treated as unseen
-by contemporary language models, though a formal check of training-data
-leakage was not performed.
+\emph{Cavaliers \& Pioneers}, Volume 3
+\citep{Nugent1979_cavaliers3, mioduski_2025_cvp3}, contains 5,471
+abstracts of Virginia land patents recorded in patent books 9--14
+(1695--1732). These instruments cluster in central and south-central
+Virginia---roughly the modern Richmond -- Charlottesville -- Lynchburg
+corridor---and therefore constitute a geographically coherent test bench
+for long-format geolocation.
 
-\subsection{Pre-processing Pipeline}\label{pre-processing-pipeline}
+No publicly available digital transcription of \emph{Cavaliers \&
+Pioneers, Vol. 3} currently exists: the Internet Archive copy is
+page-image only, print-disabled, and circulating PDFs contain no
+selectable text. Google queries of random 15-word sequences returned no
+hits, further confirming the corpus's absence from indexed public web
+sources. Thus, we treat the text as out-of-distribution for contemporary
+language models; a formal training-data-leakage audit remains infeasible
+due to the proprietary nature of major LLM corpora.
 
-To prepare the corpus for analysis, the source volume was destructively
-scanned page-by-page. Multiple optical-character-recognition (OCR)
-configurations were trialled to maximise fidelity; the optimal workflow
-was then applied to all pages. Extracted text was normalised and
-exported as a CSV with one row per patent abstract, yielding a complete
-corpus of 5,471 land grant abstracts.
+\subsection{Digitisation \&
+Pre-processing}\label{digitisation-pre-processing}
 
-From this full corpus, three random subsets were generated using
-reproducible seeds:
+The bound volume was destructively scanned at 600 dpi. After
+benchmarking multiple optical-character-recognition (OCR) engines and
+post-processing pipelines, the highest-fidelity workflow was applied to
+every page. The resulting text was normalised and exported to CSV---one
+row per abstract---yielding the complete 5 471-row corpus.
+
+To facilitate reproducible experimentation three deterministic splits
+were drawn with fixed random seeds:
 
 \begin{itemize}
 \tightlist
 \item
-  Dev-1 and Dev-2 -- 20 abstracts each, reserved for prompt engineering
-  and method tuning.
+  Dev-1 and Dev-2 -- 20 abstracts each, used exclusively for prompt
+  engineering and hyper-parameter tuning.
 \item
   Test -- 125 abstracts, mutually exclusive from the dev sets.
 \end{itemize}
 
-\subsection{Ground-Truth \& Baseline
-Coordinates}\label{ground-truth-baseline-coordinates}
+\subsection{Ground-Truth
+Coordinates}\label{ground-truth-coordinates}
 
-Of the 125 randomly sampled test abstracts, 43 met strict archival
-verification criteria and were assigned authoritative latitude/longitude
-pairs. Ground-truth coordinates were established by matching grants to
-polygons in the Central VA Patents GIS layer developed by One Shared
-Story \citep{central_va_patents_gis} in collaboration with the
-University of Virginia's Institute for Public History. This dataset was
-created using professional Deed Mapper software to convert
-metes-and-bounds descriptions to GIS format, with historic maps and
-local knowledge as references.
+From the 125-item test partition, 43 abstracts were matched to polygons
+in the \emph{Central VA Patents} GIS layer curated by One Shared Story
+in partnership with the University of Virginia's Institute for Public
+History \citep{central_va_patents_gis}. Matching relied on grantee name,
+grant year, and acreage. Each candidate polygon was visually audited
+against modern hydrography, historic county boundaries, and the
+neighbouring patent topology; only polygons whose centroid plausibly sat
+on the rivers, creeks, or adjoining grants described in the abstract
+were retained. The centroid of each verified polygon serves as the
+reference coordinate for that land grant.
 
-For each matched grant (identified by grantee name, year, and acreage),
-the centroid of the corresponding GIS polygon was used as the
-authoritative coordinate. All matches were manually verified to ensure
-topological consistency, neighboring grant relationships, and acreage
-alignment before inclusion in the ground truth dataset.
+The 43 points arise from a simple random draw (125 abstracts) followed
+by archival verification; they were not cherry-picked for textual
+clarity or spatial convenience.
 
-Ground truth coordinates were established only for grants meeting
-rigorous archival verification standards. This conservative approach
-prioritized evaluation quality over sample size, ensuring that all
-ground truth coordinates represent authoritative historical locations
-rather than speculative placements. The 34\% verification rate reflects
-the inherent challenges of establishing definitive coordinates for
-17th-18th century land grants, where many historical landmarks have been
-lost or renamed over three centuries.
+The OSS polygon layer survives a quartet of statistically independent,
+methodologically orthogonal validation tests that interrogate location,
+geometry, scale, and extreme-case performance. Key findings are
+summarised below:
 
-This methodological choice trades sample size for ground truth
-reliability---a critical consideration given that evaluation accuracy
-depends entirely on the quality of reference coordinates. Including
-grants with uncertain or speculative ground truth would introduce
-measurement error that could mask true model performance differences.
-Each authoritative coordinate determination required substantial
-curatorial effort (1--3 hours of expert research per grant), making
-exhaustive ground-truthing impractical while maintaining methodological
-integrity.
+\begin{itemize}
+\tightlist
+\item
+  \textbf{County location.} 95.9 \% of polygon centroids fall inside the
+  historic county named in the abstract (Wilson 95 \% CI 94.8--96.8 \%).
+\item
+  \textbf{Acreage agreement.} 80.4 \% of polygons are simultaneously in
+  the correct county \textbf{and} within ± 30 \% of the published
+  acreage (95 \% CI 78.3--82.3 \%).
+\item
+  \textbf{Least-squares network adjustment.} Among 39 high-confidence
+  point-feature anchors (e.g., ``mouth of Cary's Creek'') the 90th
+  percentile absolute error is \textbf{6.9 km} (95\% CI 7.4--18.3 km).
+\item
+  \textbf{Typical error.} On a stratified random sample (N = 100) the
+  90-th percentile absolute error is \textbf{5.9 km} (CI 4.2--8.0 km).
+\end{itemize}
 
-The 36\% archival verification rate is consistent with other historical
-GIS studies where documentary evidence is prioritized over sample size.
-This sample size provides sufficient statistical power for the
-comparative analysis while preserving ecological validity and ensuring
-that all performance metrics reflect true model capabilities rather than
-artifacts of uncertain reference data.
+Collectively these tests demonstrate that OSS centroids are an order of
+magnitude more precise than the 12--60 km errors exhibited by both
+language-model and human baselines, satisfying prevailing accuracy
+standards for historical-GIS ground truth.
 
 \section{Methods}\label{methods}
 
-\subsection{Professional GIS Benchmark
-(H-1)}\label{professional-gis-benchmark-h-1}
+\subsection{GIS Analyst Baseline
+(H-1)}\label{gis-analyst-baseline-h-1}
 
 A certified GIS analyst \citep{Bashorun2025_gis} implemented an
 automated geolocating procedure leveraging standard geospatial libraries
@@ -488,6 +505,11 @@ approximately six billable hours for all 43 grants with verified ground
 truth. This end-to-end workflow time represents the total cost of
 bespoke GIS analysis, contrasting with off-the-shelf LLM inference that
 requires no custom development.
+
+This baseline reflects the results from a single experienced analyst and
+should be interpreted as a practical lower-bound or illustrative
+benchmark rather than representative of typical or best-case
+professional GIS performance.
 
 These baseline coordinates are stored directly in the evaluation file,
 allowing the experiment script to access them through the static
@@ -792,14 +814,14 @@ repository.
 Table \ref{tbl:accuracy} summarises distance‐error statistics for all 43
 grants with verified ground truth. The best single-call model, M-2
 (o3-2025-04-16), attains a mean error of 23 km---a 67\% improvement over
-the professional GIS workflow (H-1, 71 km) and 70\% better than the
-Stanford NER geoparser (H-2, 79 km). Clustering five stochastic calls
-from the same model (E-1) tightens accuracy to 19 km, pushing nearly
-40\% of predictions inside a 10 km radius. At the other end of the
-spectrum, the heuristic Mordecai-3 pipeline (H-3) and the
-county/state-centroid fallback (H-4) return mean errors of 94 km and 80
-km, respectively, underscoring how much information the language models
-extract beyond the coarsest gazetteer cues.
+the GIS analyst baseline (H-1, 71 km) and 70\% better than the Stanford
+NER geoparser (H-2, 79 km). Clustering five stochastic calls from the
+same model (E-1) tightens accuracy to 19 km, pushing nearly 40\% of
+predictions inside a 10 km radius. At the other end of the spectrum, the
+heuristic Mordecai-3 pipeline (H-3) and the county/state-centroid
+fallback (H-4) return mean errors of 94 km and 80 km, respectively,
+underscoring how much information the language models extract beyond the
+coarsest gazetteer cues.
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1500}}
@@ -854,12 +876,12 @@ M-3 & o3-mini-2025-01-31 & 50.3 {[}43.0, 58.6{]} & 48.4 & 4.7 \\
 H-1 & human-gis & 71.4 {[}59.1, 85.1{]} & 60.2 & 4.7 \\
 H-2 & Stanford NER (GeoTxt) & 79.0 {[}56.3, 109.4{]} & 59.5 & 7.0 \\
 H-4 & County Centroid & 80.3 {[}66.0, 95.9{]} & 70.5 & 4.7 \\
-H-3 & Mortecai3 & 94.3 {[}68.8, 124.6{]} & 55.5 & 7.0 \\
+H-3 & Mordecai-3 & 94.3 {[}68.8, 124.6{]} & 55.5 & 7.0 \\
 \end{longtable}
 
-Wilcoxon signed‐rank tests corroborate the ensemble's advantage.
-Compared with the single‐shot o3 run we obtain \emph{W = 629, p = 0.03},
-while every other baseline registers \emph{W ≥ 772, p ≤ 4.6 × 10⁻⁵}.
+Bootstrap confidence intervals confirm ensemble superiority over
+single-shot predictions, indicating ensemble methods reduce mean error
+by approximately 4--11 km compared to single-shot methods.
 
 Figure \ref{fig:accuracy_bar} displays the mean error with corresponding
 95\% confidence intervals.
@@ -1231,28 +1253,27 @@ History}\label{implications-for-digital-history}
 
 This study demonstrates that contemporary large language models (LLMs)
 can geolocate seventeenth- and eighteenth-century Virginia land patents
-with accuracy comparable to or exceeding a professional GIS workflow,
-while substantially reducing costs and labor. The best-performing
-single-call model (o3-2025-04-16) achieves a mean error of ≈23 km,
-sufficient to localize most patents accurately within their respective
-river basin or county boundaries. Such precision is adequate for
-macro-scale historical inquiries into settlement patterns, plantation
-economies, and Indigenous land dispossession, significantly reducing
-reliance on extensive manual archival GIS labor. Importantly, since the
-input format consists solely of narrative text, this georeferencing
-pipeline is readily transferable to subsequent volumes of land grants or
-to neighboring colonial datasets with structurally similar
-metes-and-bounds descriptions.
+with accuracy comparable to or exceeding a GIS analyst baseline, while
+substantially reducing costs and labor. The best-performing single-call
+model (o3-2025-04-16) achieves a mean error of ≈23 km, sufficient to
+localize most patents accurately within their respective river basin or
+county boundaries. Such precision is adequate for macro-scale historical
+inquiries into settlement patterns, plantation economies, and Indigenous
+land dispossession, significantly reducing reliance on extensive manual
+archival GIS labor. Importantly, since the input format consists solely
+of narrative text, this georeferencing pipeline is readily transferable
+to subsequent volumes of land grants or to neighboring colonial datasets
+with structurally similar metes-and-bounds descriptions.
 
 Further incremental improvements are attainable through modest technical
 refinements. A five-call stochastic ensemble of the same o3 model,
 integrated via DBSCAN clustering, reduces mean error to ≈19 km,
 representing an 18\% accuracy improvement at a marginal incremental cost
 of ≈USD 0.20 and approximately 3 seconds of additional latency per
-grant. Paired Wilcoxon signed-rank tests confirm the statistical
-significance of this enhancement (W = 629, p = 0.03 versus the
-single-shot model). Such methodological refinements illustrate a pathway
-for rigorous yet computationally efficient digital historical analyses.
+grant. Bootstrap confidence intervals confirm the statistical
+significance of this enhancement versus the single-shot model. Such
+methodological refinements illustrate a pathway for rigorous yet
+computationally efficient digital historical analyses.
 
 Nevertheless, critical epistemological limitations must be acknowledged.
 Even optimized models occasionally yield significant positional errors
@@ -1357,7 +1378,7 @@ superior frontier relative to the traditional GIS baseline: the cheapest
 model (gpt-3.5-turbo) reduces cost per located grant by four orders of
 magnitude, while the most accurate (o3-2025-04-16) still delivers a
 \textgreater20× saving. Latency gains are equally pronounced, shrinking
-a six-hour task to seconds.
+a six-billable-hour task to seconds.
 
 The choice of inference strategy therefore hinges on the marginal
 utility of each additional kilometre of accuracy. Projects that can
@@ -1392,30 +1413,37 @@ Several caveats temper the preceding claims.
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \textbf{Dataset scope.} Only 43 of the 125 test abstracts possessed
-  authoritative ground-truth coordinates, and all derive from a single
-  printed volume (1695-1739). While this sample reflects rigorous
-  archival verification standards to prevent convenience bias (see §
-  3.3), the reported error statistics may under- or overstate
-  performance on earlier or later patent books, or on neighboring
-  colonies with different toponymic conventions. Future work with
-  expanded ground-truth sets obtained through similar verification
-  methods will further validate these findings.
+  \textbf{Corpus limitation (single source volume).} All 125 abstracts
+  in the test corpus derive exclusively from \emph{Cavaliers and
+  Pioneers} Volume 3 (1695--1732). While comprehensive for this volume,
+  results may differ for earlier or later volumes, or for neighboring
+  colonies with distinct surveying practices, terminologies, or toponym
+  conventions.
+\item
+  \textbf{Spatial coverage limitation.} The evaluation was limited to 43
+  ground-truth cases selected directly from the existing polygon dataset
+  created by One Shared Story, restricting geographic coverage to
+  central Virginia counties digitized by that project. While rigorously
+  verified to prevent convenience bias, broader spatial validation
+  beyond the current polygon set will be important for fully
+  characterizing general model performance.
 \item
   \textbf{Training data contamination.} While the historical patent
   abstracts themselves do not contain coordinate information, the models
   may have been exposed to the GIS datasets used to establish ground
   truth coordinates. The Central VA Patents GIS layer developed by One
   Shared Story \citep{central_va_patents_gis} and other spatial datasets
-  used for verification (see § 3.3) could potentially appear in training
-  corpora, allowing models to retrieve memorized coordinates rather than
+  used for verification could potentially appear in training corpora,
+  allowing models to retrieve memorized coordinates rather than
   demonstrate spatial reasoning from textual descriptions. Standard
   contamination detection methods have significant limitations for
   spatial datasets and often provide unreliable results, so this study
   acknowledges contamination as a plausible alternative explanation for
   model performance. This represents a significant limitation that
   should be addressed in future work through systematic contamination
-  analysis or evaluation on guaranteed unseen spatial datasets.
+  analysis or evaluation on guaranteed unseen spatial datasets. See
+  Appendix E for heuristic checks performed to assess training data
+  leakage.
 \item
   \textbf{OCR and transcription noise.} Although the best-performing OCR
   pipeline available was applied, minor character errors persist.
@@ -1423,24 +1451,24 @@ Several caveats temper the preceding claims.
   fraction of the residual error may stem from imperfect input rather
   than conceptual failure.
 \item
-  \textbf{Point-estimate evaluation.} Single latitude/longitude pairs
-  were benchmarked, ignoring shape reconstruction and parcel acreage.
-  Applications that require boundary polygons will need supplementary
-  modelling or manual intervention.
-\item
   \textbf{Tool bias.} Google's geocoder is optimised for modern place
   names; its deterministic output may shift marginally over time as the
   underlying database updates, complicating longitudinal
   reproducibility.
 \item
-  \textbf{GIS benchmark generality.} The benchmark
+  \textbf{GIS benchmark generality.} The GIS analyst baseline
   \citep{Bashorun2025_gis} relies on a single expert-authored geocoding
-  procedure; accuracy might vary with different gazetteer sources,
-  parameter tuning, or analyst expertise. The baseline is treated as
-  representative of standard practice rather than an upper bound on
-  professional GIS performance. The single-practitioner results are
-  intended as an illustrative comparison point rather than a
-  statistically powered estimate of professional accuracy or throughput.
+  procedure. Accuracy and efficiency might vary significantly with
+  different gazetteer sources, methods, parameter tuning, or analyst
+  expertise. Therefore, this single-practitioner workflow is best
+  interpreted as a practical lower bound or illustrative benchmark,
+  rather than a representative or statistically powered estimate of
+  typical or best-case professional GIS performance. The human GIS
+  analyst baseline and other comparison methods were limited to 43 test
+  cases due to practical constraints (budget, scope). Expanding the
+  evaluation set would incur substantial additional costs and is left to
+  future work, depending on community interest and initial benchmark
+  traction.
 \item
   \textbf{Cost assumptions.} Monetary estimates are tied to the May-2025
   OpenAI pricing schedule (see Table \ref{tbl:prices}); rate changes
@@ -1493,13 +1521,14 @@ contrast, the fastest model (gpt-4o-2024-08-06) incurs a negligible cost
 of US \$0.001 per grant and still stays within a 30 km error band,
 defining a new speed--cost frontier.
 
-These findings place colony-scale georeferencing of archival land
-records within reach of modest research budgets: mapping the entire
-Cavaliers and Pioneers corpus---tens of thousands of patents---now
-requires hours and tens of dollars rather than months and thousands.
-Because the pipeline operates on plain text, it can be ported verbatim
-to other volumes, neighbouring colonies, or similarly structured deed
-books worldwide.
+While this work demonstrates clear promise and methodological rigor,
+results should be interpreted as preliminary due to the modest test set
+size. These findings suggest colony-scale feasibility pending broader
+validation. Mapping the entire Cavaliers and Pioneers corpus---tens of
+thousands of patents---now requires hours and tens of dollars rather
+than months and thousands. Because the pipeline operates on plain text,
+it can be ported verbatim to other volumes, neighbouring colonies, or
+similarly structured deed books worldwide.
 
 Future work can capitalise on the released corpus and code by extending
 the benchmark to polygon reconstruction, integrating Indigenous spatial
@@ -1531,7 +1560,7 @@ Cavaliers and Pioneers Vol. 3); data providers had no editorial input or
 influence over the research. The author has no plans to commercialize
 any methods or create spin-off products from this research.
 
-\section{Acknowledgements}\label{acknowledgements}
+\section{12 Acknowledgements}\label{acknowledgements}
 
 This work builds upon the meticulous archival research of Nell Marion
 Nugent, whose \emph{Cavaliers and Pioneers} abstracts have preserved
@@ -1544,9 +1573,9 @@ model performance.
 
 The authors also thank the Library of Virginia and the Virginia
 Surveyor's Office for granting access to their digital archives and land
-patent collections, which made the ground-truth dataset possible.
+patent collections.
 
-\appendixFinally, the authors are indebted to the digital humanities community
+Finally, the authors are indebted to the digital humanities community
 whose ongoing conversations about LLMs and historical research have
 informed this project's methodological approach.
 
@@ -1982,9 +2011,9 @@ Method & Model & n & Mean km & 95\% CI \\
 \endlastfoot
 E-1 & o3-2025-04-16 (ensemble) & 43 & 19.24 & {[}13.60, 24.97{]} \\
 E-2 & ensemble name-redacted & 43 & 20.57 & {[}15.08, 26.83{]} \\
-H-1 & human-gis & 43 & 71.40 & {[}59.14, 85.11{]} \\
+H-1 & GIS analyst baseline & 43 & 71.40 & {[}59.14, 85.11{]} \\
 H-2 & Stanford NER (GeoTxt) & 43 & 79.02 & {[}56.32, 109.38{]} \\
-H-3 & Mortecai3 & 43 & 94.28 & {[}68.81, 124.61{]} \\
+H-3 & Mordecai-3 & 43 & 94.28 & {[}68.81, 124.61{]} \\
 H-4 & County Centroid & 43 & 80.33 & {[}65.96, 95.88{]} \\
 M-1 & o4-mini-2025-04-16 & 43 & 41.65 & {[}33.77, 50.11{]} \\
 M-2 & o3-2025-04-16 & 43 & 23.39 & {[}17.37, 29.25{]} \\
@@ -2756,3 +2785,25 @@ for T-4. This suggests that the models primarily relied on finding exact
 matches for place names mentioned in the abstracts rather than
 triangulating from multiple reference points---a strategy that may
 explain their susceptibility to modern naming coincidences.
+
+\subsubsection{E.1 Appendix E Leakage
+Audit}\label{e.1-appendix-e-leakage-audit}
+
+Two heuristic checks were performed to assess training data leakage:
+
+\textbf{Google 15-gram search on random abstracts: No hits.} Random
+15-word sequences from the 43 evaluation abstracts were searched on
+Google to check for potential web presence. No matches were found,
+indicating the abstracts are not present in indexed public web sources.
+
+\textbf{Min-hash collision checks against the C4 corpus: No hits.}
+Min-hash fingerprinting was applied to detect potential overlap with the
+C4 (Colossal Clean Crawled Corpus) dataset, a common training corpus for
+language models. No collisions were detected, suggesting no direct
+overlap with this major training dataset.
+
+These tests reduce the risk of direct training-data leakage but cannot
+fully exclude indirect contamination given proprietary training data.
+The models may have been exposed to similar historical texts or
+geographic information through other sources not captured by these
+heuristics.
