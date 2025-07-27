@@ -56,6 +56,10 @@ cat > "$PAPER_DIR/styling.tex" << EOF
 }
 EOF
 
+# ------------------ arXiv-style title ------------------
+# Note: Footnotes are now handled in main.md, so we don't need a separate title file
+# The main.md file contains the title with footnote symbols and the footnote box
+
 # Generate PDF with proper cross-references
 echo "Generating PDF..."
 pandoc -s "$MAIN_MD" -o "$OUTPUT_PDF" \
@@ -391,3 +395,72 @@ echo "  - $TEMPLATE_DIR/content_blind.tex"
 echo "  - $TEMPLATE_DIR/article_blind.pdf (if LaTeX compilation succeeded)"
 
 echo "JOSIS update complete." 
+
+# ---------------- arXiv build ----------------
+#   Creates a minimal, self-contained directory ready to zip and upload to Overleaf
+#   or directly to the arXiv submission form.  Structure mirrors the JOSIS routine
+#   but keeps only what arXiv needs: main.tex + refs.bib + figures/
+# --------------------------------------------------------
+
+ARXIV_DIR="$PAPER_DIR/arXiv"
+
+# Start fresh
+rm -rf "$ARXIV_DIR"
+mkdir -p "$ARXIV_DIR/figures"
+
+echo "\n==== Building arXiv upload package at: $ARXIV_DIR ===="
+
+# 1. Convert Markdown to a single LaTeX file (article class)
+# NOTE: Keep it simple—arXiv supports \documentclass{article} with natbib.
+ARXIV_TEX="$ARXIV_DIR/main.tex"
+
+pandoc "$MAIN_MD" \
+  --from markdown \
+  --to latex \
+  --citeproc \
+  --bibliography="$REFS_BIB" \
+  --csl="$PAPER_DIR/apa.csl" \
+  $CROSSREF \
+  --metadata link-citations=true \
+  -V documentclass=article \
+  -V fontsize=11pt \
+  -V geometry:margin=1in \
+  -o "$ARXIV_TEX"
+
+# 2. Fix figure paths inside main.tex so they match arXiv directory structure
+sed -i '' 's|\.{2}/analysis/figures/|figures/|g' "$ARXIV_TEX"
+sed -i '' 's|\.{2}/analysis/mapping_workflow/|figures/mapping_workflow/|g' "$ARXIV_TEX"
+
+# 3. Copy bibliography
+cp "$REFS_BIB" "$ARXIV_DIR/refs.bib"
+
+# 4. Copy figures (analysis/figures and mapping_workflow) into arXiv package
+if [ -d "$FIGURES_DIR" ]; then
+  rsync -av --delete "$FIGURES_DIR/" "$ARXIV_DIR/figures/" | grep -v '/$'
+fi
+MAPPING_DIR="$(dirname "$PAPER_DIR")/analysis/mapping_workflow"
+if [ -d "$MAPPING_DIR" ]; then
+  mkdir -p "$ARXIV_DIR/figures/mapping_workflow"
+  rsync -av --delete "$MAPPING_DIR/" "$ARXIV_DIR/figures/mapping_workflow/" | grep -v '/$'
+fi
+
+# 5. Preview compile (optional, using pdflatex)
+if command -v pdflatex &> /dev/null; then
+  (
+    cd "$ARXIV_DIR" || exit 1
+    echo "Compiling arXiv preview PDF…"
+    pdflatex -interaction=nonstopmode main.tex >/dev/null 2>&1 || true
+    bibtex main >/dev/null 2>&1 || true
+    pdflatex -interaction=nonstopmode main.tex >/dev/null 2>&1 || true
+    pdflatex -interaction=nonstopmode main.tex >/dev/null 2>&1 || true
+  )
+  if [ -f "$ARXIV_DIR/main.pdf" ]; then
+    echo "arXiv preview PDF built at $ARXIV_DIR/main.pdf"
+  else
+    echo "⚠️  arXiv LaTeX build had warnings/errors—see log in $ARXIV_DIR for details."
+  fi
+else
+  echo "pdflatex not available; skipping local arXiv PDF compilation."
+fi
+
+echo "arXiv package is ready. Compress $ARXIV_DIR into a zip/tar.gz and upload to Overleaf or arXiv." 

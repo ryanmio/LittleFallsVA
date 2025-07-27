@@ -4,14 +4,9 @@
 % Store the original \maketitle command
 \let\oldPandocMakeTitle\maketitle
 
-% Redefine \maketitle
+% Redefine \maketitle - now just execute the original since footnotes are handled in main.md
 \renewcommand{\maketitle}{%
-  \oldPandocMakeTitle% % Execute the original \maketitle first
-  % Now add our custom content after the original title block
-  \begin{center}%
-    \vspace{1em}% % Add a bit of vertical space after the date
-    \small{Code and data: \url{https://github.com/ryanmio/colonial-virginia-llm-geolocation}}%
-  \end{center}%
+  \oldPandocMakeTitle% % Execute the original \maketitle
 }
 
 % The \hypersetup for PDF metadata can remain as it's good practice
