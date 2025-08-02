@@ -58,10 +58,7 @@ sed -i '' '/\\end{tabular}\\caption{Coordinate-accuracy metrics.}\\label{tbl:acc
 sed -i '' 's/\\begin{figure}/\\begin{figure*}/g' "$TEX_OUT"
 sed -i '' 's/\\end{figure}/\\end{figure*}/g' "$TEX_OUT"
 
-# Ensure Discussion section starts fresh
-sed -i '' '/\\section{7 Discussion}/{i\
-\\clearpage
-}' "$TEX_OUT"
+# (Removed) Do not force a clear page before Discussion; let floats settle naturally
 
 # Ensure Appendices starts on fresh one-column page
 sed -i '' '/\\section{Appendices}/{i\
@@ -126,6 +123,14 @@ sed -i '' '/\\begin{table}\[H\]/s/\\[H\\]/[tbp]/' "$TEX_OUT"
 sed -i '' '/\\begin{table\*}\[H\]/s/\\[H\\]/[tbp]/' "$TEX_OUT"
 sed -i '' '/\\begin{figure\*}\[H\]/s/\\[H\\]/[tbp]/' "$TEX_OUT"
 sed -i '' '/\\begin{figure}\[H\]/s/\\[H\\]/[tbp]/' "$TEX_OUT"
+
+# Force token pricing table to stay near the cost equation
+sed -i '' 's/\\begin{table}\[H\]/\\begin{table}[ht!]/' "$TEX_OUT"
+
+# Make length vs error figure smaller so it doesn't take a whole page
+sed -i '' '/\\label{fig:length-vs-error}/,/\\end{figure\*}/ {
+  /\\includegraphics/s/\\[keepaspectratio\\]/[width=0.7\\textwidth]/g
+}' "$TEX_OUT"
 
 echo "Compiling PDF…"
 cd "$PAPER_DIR"
