@@ -541,10 +541,6 @@ All AI-assisted processes, as well as the methodologies and findings, are fully 
 
 This work builds upon the meticulous archival research of Nell Marion Nugent, whose *Cavaliers and Pioneers* abstracts have preserved Virginia's colonial land records for generations of scholars, and the rigorous GIS work of One Shared Story, whose Central VA Patents dataset enabled the ground truth evaluation essential to this study. The authors are deeply grateful to Bimbola Bashorun [@Bashorun2025_gis] for providing the professional GIS benchmark that was crucial to evaluating model performance.
 
-The authors also thank the Library of Virginia and the Virginia Surveyor's Office for granting access to their digital archives and land patent collections.
-
-Finally, the authors are indebted to the digital humanities community whose ongoing conversations about LLMs and historical research have informed this project's methodological approach.
-
 # Appendices
 
 ## Appendix A Supplementary Methods & Materials

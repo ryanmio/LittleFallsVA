@@ -42,14 +42,25 @@ pandoc "$MAIN_MD" \
   --metadata link-citations=true \
   -o "$TEX_OUT"
 
-# Post-process to enforce column layout: Section 6 (one column), Section 7+ (back to two), Appendix (one column)
-# Insert \onecolumn before section 6, \twocolumn before section 7, \onecolumn before first Appendix heading
-sed -i '' '/\\section{6 Results}/{i\
-\\clearpage\\onecolumn
-}' "$TEX_OUT"
+# Post-process to enforce safer table layout in two-column mode
+# Remove problematic onecolumn/twocolumn commands and let tables stay in natural layout
 
+# Remove any existing onecolumn/twocolumn commands that might be causing issues
+sed -i '' '/\\onecolumn/d' "$TEX_OUT"
+sed -i '' '/\\twocolumn/d' "$TEX_OUT"
+
+# Fix any malformed table structures that might have been created
+# Remove any duplicate caption/label combinations
+sed -i '' '/\\end{tabular}\\caption{Coordinate-accuracy metrics.}\\label{tbl:accuracy}\\end{table*}/d' "$TEX_OUT"
+
+# Convert key figures to figure* for full width presentation
+# These are the main results figures that benefit from full width
+sed -i '' 's/\\begin{figure}/\\begin{figure*}/g' "$TEX_OUT"
+sed -i '' 's/\\end{figure}/\\end{figure*}/g' "$TEX_OUT"
+
+# Ensure Discussion section starts fresh
 sed -i '' '/\\section{7 Discussion}/{i\
-\\clearpage\\twocolumn
+\\clearpage
 }' "$TEX_OUT"
 
 # Ensure Appendices starts on fresh one-column page
@@ -101,6 +112,20 @@ sed -i '' 's|\\begin{subfigure}{0\\.48\\textwidth}|\\begin{subfigure}[t]{0.48\\t
 sed -i '' '/\\usepackage{graphicx}/a\
 \\usepackage{subcaption}\
 ' "$TEX_OUT"
+
+# --- Fix missing 4.5–4.8 subsection numbers ---
+sed -i '' \
+  -e 's/\\subsection{One-shot Prompting/\\subsection{4.5 One-shot Prompting/' \
+  -e 's/\\subsection{Tool-augmented Chain-of-Thought/\\subsection{4.6 Tool-augmented Chain-of-Thought/' \
+  -e 's/\\subsection{Five-call Ensemble/\\subsection{4.7 Five-call Ensemble/' \
+  -e 's/\\subsection{Cost and Latency/\\subsection{4.8 Cost and Latency/' \
+  "$TEX_OUT"
+
+# Add sed commands to change [H] spec to [tbp] in table, table*, figure*, and figure environments to allow floats
+sed -i '' '/\\begin{table}\[H\]/s/\\[H\\]/[tbp]/' "$TEX_OUT"
+sed -i '' '/\\begin{table\*}\[H\]/s/\\[H\\]/[tbp]/' "$TEX_OUT"
+sed -i '' '/\\begin{figure\*}\[H\]/s/\\[H\\]/[tbp]/' "$TEX_OUT"
+sed -i '' '/\\begin{figure}\[H\]/s/\\[H\\]/[tbp]/' "$TEX_OUT"
 
 echo "Compiling PDF…"
 cd "$PAPER_DIR"

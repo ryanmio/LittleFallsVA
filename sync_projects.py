@@ -52,6 +52,19 @@ DEFAULT_MAPPINGS = [
             "math_fix.tex",
         ],
     },
+    {
+        "type": "files",
+        "src": "/Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/geolocation/paper/arXiv",
+        "dest": "/Users/ryanmioduskiimac/Downloads/colonial-virginia-llm-geolocation/paper/arXiv",
+        "items": [
+            "main_two_column.pdf",
+            "main_two_column.tex",
+            "build_two_column.sh",
+            "code_style_two_column.tex",
+            "refs.bib",
+            "numeric_superscript.csl",
+        ],
+    },
 ]
 
 ###############################################################################

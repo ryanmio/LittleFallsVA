@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  27 JUL 2025 12:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  1 AUG 2025 20:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -391,6 +391,26 @@ File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
 
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen193
+\TX@old@table=\dimen194
+\TX@old@col=\dimen195
+\TX@target=\dimen196
+\TX@delta=\dimen197
+\TX@cols=\count312
+\TX@ftn=\toks32
+)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+2264 (decimal 8804)
+   defining Unicode char U+2265 (decimal 8805)
+   defining Unicode char U+2248 (decimal 8776)
+   defining Unicode char U+2212 (decimal 8722)
+   defining Unicode char U+0394 (decimal 916)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2260 (decimal 8800)
+
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 
@@ -427,15 +447,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ing.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count312
+\c@section@level=\count313
 )
 (/usr/local/texlive/2025basic/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen193
-\Hy@linkcounter=\count313
-\Hy@pagecounter=\count314
+\@linkdim=\dimen198
+\Hy@linkcounter=\count314
+\Hy@pagecounter=\count315
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
@@ -445,7 +465,7 @@ Now handling font encoding PD1 ...
 (/usr/local/texlive/2025basic/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count315
+\Hy@SavedSpaceFactor=\count316
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
@@ -460,14 +480,14 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count316
+\c@Hy@tempcnt=\count317
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen194
+\XeTeXLinkMargin=\dimen199
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -476,9 +496,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count317
-\Field@Width=\dimen195
-\Fld@charsize=\dimen196
+\Fld@menulength=\count318
+\Field@Width=\dimen256
+\Fld@charsize=\dimen257
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -490,9 +510,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count318
-\c@Item=\count319
-\c@Hfootnote=\count320
+\Hy@abspage=\count319
+\c@Item=\count320
+\c@Hfootnote=\count321
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -504,8 +524,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count321
-\c@bookmark@seq@number=\count322
+\Fld@listcount=\count322
+\c@bookmark@seq@number=\count323
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/rerunfilecheck/rerunfilechec
 k.sty
@@ -523,10 +543,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 )
-\BKM@id=\count323
+\BKM@id=\count324
 ))
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 15
-4.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 17
+2.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -534,43 +554,43 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
 ef
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count324
+\l__color_backend_stack_int=\count325
 \l__pdf_internal_box=\box66
 ) (./main_two_column.aux)
 \openout1 = `main_two_column.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count325
-\scratchdimen=\dimen197
+\scratchcounter=\count326
+\scratchdimen=\dimen258
 \scratchbox=\box67
-\nofMPsegments=\count326
-\nofMParguments=\count327
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count328
-\MPscratchDim=\dimen198
-\MPnumerator=\count329
-\makeMPintoPDFobject=\count330
-\everyMPtoPDFconversion=\toks33
+\nofMPsegments=\count327
+\nofMParguments=\count328
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count329
+\MPscratchDim=\dimen259
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
+\everyMPtoPDFconversion=\toks34
 )
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.s
 ty
@@ -616,20 +636,20 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 154.
-Package microtype Info: Applying patch `item' on input line 154.
-Package microtype Info: Applying patch `toc' on input line 154.
-Package microtype Info: Applying patch `eqnum' on input line 154.
-Package microtype Info: Applying patch `footnote' on input line 154.
-Package microtype Info: Applying patch `verbatim' on input line 154.
-LaTeX Info: Redefining \microtypesetup on input line 154.
+LaTeX Info: Redefining \microtypecontext on input line 172.
+Package microtype Info: Applying patch `item' on input line 172.
+Package microtype Info: Applying patch `toc' on input line 172.
+Package microtype Info: Applying patch `eqnum' on input line 172.
+Package microtype Info: Applying patch `footnote' on input line 172.
+Package microtype Info: Applying patch `verbatim' on input line 172.
+LaTeX Info: Redefining \microtypesetup on input line 172.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 154.
+LaTeX Info: Redefining \showhyphens on input line 172.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -641,39 +661,39 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count331
-Package hyperref Info: Link coloring OFF on input line 154.
+\c@lstlisting=\count332
+Package hyperref Info: Link coloring OFF on input line 172.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-56.
+74.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-56.
+74.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-156.
+174.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-156.
+174.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 156.
+(Font)              <12> on input line 174.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 156.
+(Font)              <8> on input line 174.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 156.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 156
+(Font)              <6> on input line 174.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 174
 .
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -682,7 +702,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 156
+LaTeX Font Info:    Trying to load font information for U+msb on input line 174
 .
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -692,17 +712,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 192.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-92.
+(Font)              <5> on input line 210.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+10.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 206.
+(Font)              <10> on input line 224.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 206.
+(Font)              <7> on input line 224.
 
 Underfull \vbox (badness 1137) has occurred while \output is active []
 
@@ -715,19 +735,19 @@ usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}
 
 
 {/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Underfull \hbox (badness 1902) in paragraph at lines 279--286
+Underfull \hbox (badness 1902) in paragraph at lines 297--304
 []\T1/lmr/m/n/10 (+20) Presents the first sys-tem-atic bench-mark-ing
  []
 
 
-Underfull \hbox (badness 3826) in paragraph at lines 279--286
+Underfull \hbox (badness 3826) in paragraph at lines 297--304
 \T1/lmr/m/n/10 (+20) grant ge-olo-ca-tion, eval-u-at-ing two prompt-
  []
 
 
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 303--303
+Underfull \hbox (badness 1048) in paragraph at lines 321--321
 [][]\T1/lmr/bx/n/12 (+20) 2.1 His-tor-i-cal GIS and Land-Grant
  []
 
@@ -749,7 +769,7 @@ Underfull \vbox (badness 5217) has occurred while \output is active []
 
 
 [5]
-Underfull \hbox (badness 2495) in paragraph at lines 637--642
+Underfull \hbox (badness 2495) in paragraph at lines 655--660
 \T1/lmr/m/n/10 (+20) recognition (OCR) en-gines and post-processing
  []
 
@@ -758,61 +778,30 @@ Underfull \hbox (badness 2495) in paragraph at lines 637--642
 
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 778--781
+Underfull \hbox (badness 10000) in paragraph at lines 796--799
 []\T1/lmr/m/n/10 (+20) expands his-tor-i-cal ab-bre-vi-a-tions (e.g.,
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 784--787
+Underfull \hbox (badness 1946) in paragraph at lines 802--805
 []\T1/lmr/m/n/10 (+20) filters can-di-date co-or-di-nates to a Virginia-
  []
 
 
 
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
-22.
+40.
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 823.
-
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.824 ...Y the coordinates in this format: [DD]°[
-                                                  MM]'[SS].[SSSSS]"N [DDD]°...
-
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
+(Font)              <9> on input line 841.
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-824.
+842.
+
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.824 ...ormat: [DD]°[MM]'[SS].[SSSSS]"N [DDD]°[
-                                                  MM]'[SS].[SSSSS]"W
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
 
 ! Package longtable Error: longtable not in 1-column mode.
 
@@ -820,13 +809,13 @@ See the longtable package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.833 \begin{longtable}
+l.851 \begin{longtable}
                        []{@{}ll@{}}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.846 M-1 & \passthrough
+l.864 M-1 & \passthrough
                         {\lstinline!o4-mini-2025-04-16!} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -835,7 +824,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.847 M-2 & \passthrough
+l.865 M-2 & \passthrough
                         {\lstinline!o3-2025-04-16!} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -844,7 +833,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.848 M-3 & \passthrough
+l.866 M-3 & \passthrough
                         {\lstinline!o3-mini-2025-01-31!} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -853,7 +842,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.849 M-4 & \passthrough
+l.867 M-4 & \passthrough
                         {\lstinline!gpt-4.1-2025-04-14!} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -862,7 +851,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.850 M-5 & \passthrough
+l.868 M-5 & \passthrough
                         {\lstinline!gpt-4o-2024-08-06!} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -871,7 +860,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.851 M-6 & \passthrough
+l.869 M-6 & \passthrough
                         {\lstinline!gpt-3.5-turbo!} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -880,7 +869,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.858 tools: \passthrough
+l.876 tools: \passthrough
                          {\lstinline!geocode\_place!}, an interface to the
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -889,7 +878,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.860 \passthrough
+l.878 \passthrough
                   {\lstinline!compute\_centroid!}, which returns the spherical
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -908,13 +897,13 @@ See the longtable package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.878 \begin{longtable}
+l.896 \begin{longtable}
                        []{@{}ll@{}}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.891 T-1 & \passthrough
+l.909 T-1 & \passthrough
                         {\lstinline!o4-mini-2025-04-16!} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -923,7 +912,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.892 T-2 & \passthrough
+l.910 T-2 & \passthrough
                         {\lstinline!o3-2025-04-16!} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -932,7 +921,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.893 T-3 & \passthrough
+l.911 T-3 & \passthrough
                         {\lstinline!o3-mini-2025-01-31!} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -941,7 +930,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.894 T-4 & \passthrough
+l.912 T-4 & \passthrough
                         {\lstinline!gpt-4.1-2025-04-14!} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -950,7 +939,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.895 T-5 & \passthrough
+l.913 T-5 & \passthrough
                         {\lstinline!computer-use-preview-2025-03-11!} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -959,7 +948,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.903 independent one-shot calls to \passthrough
+l.921 independent one-shot calls to \passthrough
                                                 {\lstinline!o3-2025-04-16!},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -975,7 +964,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.905 ...e clustered with the DBSCAN algorithm (ε
+l.923 ...e clustered with the DBSCAN algorithm (ε
                                                    = 0.5
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -989,154 +978,129 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.932 \begin{table}[H]
+l.950 \begin{table}[H]
                       
 Option `H' ignored and `p' used.
 
 
-Underfull \hbox (badness 2698) in paragraph at lines 934--934
+Underfull \hbox (badness 2698) in paragraph at lines 952--952
 []\T1/lmr/m/n/10 (+20) Table 3: |Ope-nAI to-ken pric-ing in ef-fect on
  []
-
-
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.982 ...uality assurance---for all 43 grants (≈
-                                                   502 s per grant).
-You may provide a definition with
-\DeclareUnicodeCharacter 
 
 
 
 [8{/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
 
 
+! Package longtable Error: longtable not in 1-column mode.
 
-[9]
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
+See the longtable package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1054 ≤
-          10 km (\%)
-You may provide a definition with
-\DeclareUnicodeCharacter 
+l.1053 \begin{longtable}
+                        []{@{}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
+Overfull \hbox (5.00348pt too wide) in paragraph at lines 1069--1070
+[]\T1/lmr/m/n/10 (-20) Median 
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1068 ≤
-          10 km (\%)
-You may provide a definition with
-\DeclareUnicodeCharacter 
 
-<figures/accuracy_bar.pdf, id=180, 505.89pt x 289.08pt>
+Overfull \hbox (5.00348pt too wide) in paragraph at lines 1083--1084
+[]\T1/lmr/m/n/10 (-20) Median 
+ []
+
+<figures/accuracy_bar.pdf, id=175, 505.89pt x 289.08pt>
 File: figures/accuracy_bar.pdf Graphic file (type pdf)
 <use figures/accuracy_bar.pdf>
-Package pdftex.def Info: figures/accuracy_bar.pdf  used on input line 1101.
+Package pdftex.def Info: figures/accuracy_bar.pdf  used on input line 1118.
 (pdftex.def)             Requested size: 505.88875pt x 289.07928pt.
-<figures/error_violin_methods.pdf, id=182, 722.7pt x 433.62pt>
+<figures/error_violin_methods.pdf, id=177, 722.7pt x 433.62pt>
 File: figures/error_violin_methods.pdf Graphic file (type pdf)
 <use figures/error_violin_methods.pdf>
 Package pdftex.def Info: figures/error_violin_methods.pdf  used on input line 1
-110.
+127.
 (pdftex.def)             Requested size: 722.69823pt x 433.61894pt.
-<figures/error_violin_core_methods.pdf, id=184, 722.7pt x 433.62pt>
+
+
+[9] [10 <./figures/accuracy_bar.pdf> <./figures/error_violin_methods.pdf>]
+<figures/error_violin_core_methods.pdf, id=269, 722.7pt x 433.62pt>
 File: figures/error_violin_core_methods.pdf Graphic file (type pdf)
 <use figures/error_violin_core_methods.pdf>
 Package pdftex.def Info: figures/error_violin_core_methods.pdf  used on input l
-ine 1126.
+ine 1143.
 (pdftex.def)             Requested size: 722.69823pt x 433.61894pt.
-<figures/cdf_graphs/cdf_models_combined.pdf, id=186, 433.62pt x 289.08pt>
+<figures/cdf_graphs/cdf_models_combined.pdf, id=271, 433.62pt x 289.08pt>
 File: figures/cdf_graphs/cdf_models_combined.pdf Graphic file (type pdf)
 <use figures/cdf_graphs/cdf_models_combined.pdf>
 Package pdftex.def Info: figures/cdf_graphs/cdf_models_combined.pdf  used on in
-put line 1136.
+put line 1153.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
 
-See the LaTeX manual or LaTeX Companion for explanation.
+! Package longtable Error: longtable not in 1-column mode.
+
+See the longtable package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1144 highly-accurate predictions (≤
-                                        10 km) increases by approximately 7
-You may provide a definition with
-\DeclareUnicodeCharacter 
+l.1172 \begin{longtable}
+                        []{@{}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
+Overfull \hbox (5.32071pt too wide) in paragraph at lines 1185--1186
+[]\T1/lmr/m/n/10 (-20) Underlying 
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
+
+Overfull \hbox (5.32071pt too wide) in paragraph at lines 1201--1202
+[]\T1/lmr/m/n/10 (-20) Underlying 
+ []
+
+
+
+
+! Package longtable Error: longtable not in 1-column mode.
+
+See the longtable package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1174 ≤
-          10 km (\%)
-You may provide a definition with
-\DeclareUnicodeCharacter 
+l.1234 \begin{longtable}
+                        []{@{}llll@{}}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1190 ≤
-          10 km (\%)
-You may provide a definition with
-\DeclareUnicodeCharacter 
+Overfull \hbox (25.15169pt too wide) in alignment at lines 1234--1240
+ [] [] [] [] 
+ []
 
 
+Overfull \hbox (25.15169pt too wide) in alignment at lines 1240--1244
+ [] [] [] [] 
+ []
 
-[10
+
+Overfull \hbox (25.15169pt too wide) in alignment at lines 1244--1246
+ [] [] [] [] 
+ []
 
 
-]
+Overfull \hbox (25.15169pt too wide) in alignment at lines 1246--1261
+ [] [] [] [] 
+ []
 
-[11 <./figures/accuracy_bar.pdf> <./figures/error_violin_methods.pdf>]
-
-[12 <./figures/error_violin_core_methods.pdf> <./figures/cdf_graphs/cdf_models_
-combined.pdf>]
-<figures/pareto_tradeoff.pdf, id=329, 433.62pt x 289.08pt>
+<figures/pareto_tradeoff.pdf, id=274, 433.62pt x 289.08pt>
 File: figures/pareto_tradeoff.pdf Graphic file (type pdf)
 <use figures/pareto_tradeoff.pdf>
-Package pdftex.def Info: figures/pareto_tradeoff.pdf  used on input line 1248.
+Package pdftex.def Info: figures/pareto_tradeoff.pdf  used on input line 1265.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
-
-
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1262 analyst's labor time (≈
-                                502 s per grant). This range reflects substa...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
 
 ! LaTeX Error: Unknown float option `H'.
 
@@ -1144,22 +1108,66 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1268 \begin{figure}[H]
-                        
+l.1285 \begin{figure*}[H]
+                         
 Option `H' ignored and `p' used.
 
-<figures/latency_boxplot.pdf, id=331, 505.89pt x 289.08pt>
+<figures/latency_boxplot.pdf, id=276, 505.89pt x 289.08pt>
 File: figures/latency_boxplot.pdf Graphic file (type pdf)
 <use figures/latency_boxplot.pdf>
-Package pdftex.def Info: figures/latency_boxplot.pdf  used on input line 1270.
+Package pdftex.def Info: figures/latency_boxplot.pdf  used on input line 1287.
 (pdftex.def)             Requested size: 352.31625pt x 201.32684pt.
 
+! Package longtable Error: longtable not in 1-column mode.
 
-[13]
+See the longtable package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1302 \begin{longtable}
+                        []{@{}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-[14 <./figures/pareto_tradeoff.pdf> <./figures/latency_boxplot.pdf>]
+
+
+[11] [12 <./figures/error_violin_core_methods.pdf> <./figures/cdf_graphs/cdf_mo
+dels_combined.pdf>] [13 <./figures/pareto_tradeoff.pdf> <./figures/latency_boxp
+lot.pdf>]
+
+! Package longtable Error: longtable not in 1-column mode.
+
+See the longtable package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1351 \begin{longtable}
+                        []{@{}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.70943pt too wide) in paragraph at lines 1361--1362
+[]\T1/lmr/m/n/10 (-20) Method  
+ []
+
+
+Overfull \hbox (1.78925pt too wide) in paragraph at lines 1367--1368
+[]\T1/lmr/m/n/10 (-20) geo:cent 
+ []
+
+
+Overfull \hbox (0.70943pt too wide) in paragraph at lines 1375--1376
+[]\T1/lmr/m/n/10 (-20) Method  
+ []
+
+
+Overfull \hbox (1.78925pt too wide) in paragraph at lines 1381--1382
+[]\T1/lmr/m/n/10 (-20) geo:cent 
+ []
+
 ! Undefined control sequence.
-l.1376 For both pipelines the Google \passthrough
+l.1393 For both pipelines the Google \passthrough
                                                  {\lstinline!geocode\_place!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1168,7 +1176,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.1378 \passthrough
+l.1395 \passthrough
                    {\lstinline!compute\_centroid!} function appeared in fewer
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1177,33 +1185,9 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-! LaTeX Error: Unicode character − (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1398 ...\citeproc{ref-Bashorun2025_gis}{2}} (−
-                                                  6.6 km) and
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character − (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1399   M-6 (−
-                 6.3 km) show material shifts.
-You may provide a definition with
-\DeclareUnicodeCharacter 
 
 ! Undefined control sequence.
-l.1404   \passthrough
+l.1421   \passthrough
                      {\lstinline![NAME]!}. If the model had memorised
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1219,101 +1203,45 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1405   grant-name ⟷
+l.1422   grant-name ⟷
                         coordinate pairs from its pre-training corpus, removing
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1407 ...---from 18.7 km to 20.4 km---and the ≤
-                                                  10 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-
-[15]
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1427     Median split --- ``Short'' (≤
-                                           36 words) vs ``long'' (\textgreat...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1427--1432
+Underfull \hbox (badness 10000) in paragraph at lines 1444--1449
 
  []
 
-<figures/length_vs_error.png, id=408, 433.62pt x 289.08pt>
+
+
+[14]
+Underfull \hbox (badness 7064) in paragraph at lines 1449--1454
+[]\T1/lmr/m/n/10 (+20) Continuous fit --- An ordinary-least-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1449--1454
+\T1/lmr/m/n/10 (+20) squares re-gres-sion ([]\T1/lmr/m/it/10 (+20) {km}=42.3-
+ []
+
+<figures/length_vs_error.png, id=404, 433.62pt x 289.08pt>
 File: figures/length_vs_error.png Graphic file (type png)
 <use figures/length_vs_error.png>
-Package pdftex.def Info: figures/length_vs_error.png  used on input line 1442.
+Package pdftex.def Info: figures/length_vs_error.png  used on input line 1459.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
 
-[16 <./figures/length_vs_error.png>]
-
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1459 ...2025-04-16) achieves a mean error of ≈
-                                                  23 km, sufficient to
-You may provide a definition with
-\DeclareUnicodeCharacter 
 
 
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1471 ...AN clustering, reduces mean error to ≈
-                                                  19 km,
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1473 of ≈
-             USD 0.20 and approximately 3 seconds of additional latency per
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
+[15] [16 <./figures/length_vs_error.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 ! Undefined control sequence.
-l.1531   \passthrough
+l.1548   \passthrough
                      {\lstinline!geocode\_place!} call returns a spurious
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1322,7 +1250,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.1532   coordinate, subsequent \passthrough
+l.1549   coordinate, subsequent \passthrough
                                             {\lstinline!compute\_centroid!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1337,187 +1265,50 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1539 \begin{figure}[H]
-                        
+l.1556 \begin{figure*}[H]
+                         
 Option `H' ignored and `p' used.
 
 <map_outputs/grant_1_map.png, id=416, 433.62pt x 433.62pt>
 File: map_outputs/grant_1_map.png Graphic file (type png)
 <use map_outputs/grant_1_map.png>
-Package pdftex.def Info: map_outputs/grant_1_map.png  used on input line 1543.
+Package pdftex.def Info: map_outputs/grant_1_map.png  used on input line 1560.
 (pdftex.def)             Requested size: 225.4804pt x 225.48369pt.
 <map_outputs/grant_19_map.png, id=417, 433.62pt x 433.62pt>
 File: map_outputs/grant_19_map.png Graphic file (type png)
 <use map_outputs/grant_19_map.png>
-Package pdftex.def Info: map_outputs/grant_19_map.png  used on input line 1550.
+Package pdftex.def Info: map_outputs/grant_19_map.png  used on input line 1567.
 
 (pdftex.def)             Requested size: 225.4804pt x 225.48369pt.
 
 
 [17
 
-
 ]
 
 
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1583 tolerate a ≈
-                     30 km error band will find gpt-4o-2024-08-06 delivers
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1587 error of ≈
-                   23 km for roughly \$0.13 per deed. Second, stacking five
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1589 ...ethod E-1) pushes mean error down to ≈
-                                                  19 km at a
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1590 per-grant cost of ≈
-                            \$0.20. Because the ensemble averages away the
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1592 low (≈
-               1.1 k tokens) instead of medium (≈3.2 k tokens), so the acc...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1592 ...(≈1.1 k tokens) instead of medium (≈
-                                                  3.2 k tokens), so the accu...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-
-[18 <./map_outputs/grant_1_map.png> <./map_outputs/grant_19_map.png>]
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1690--1694
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 1707--1711
 []\T1/lmr/bx/n/10 (+20) Prompt en-gi-neer-ing at scale. \T1/lmr/m/n/10 (+20) A
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 1690--1694
+Underfull \hbox (badness 1622) in paragraph at lines 1707--1711
 \T1/lmr/m/n/10 (+20) re-fine prompts or se-lect be-tween tool and
  []
 
 
 
+
+
 [19]
 
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1719 ≈
-          19 km while adding only ≈US \$0.07 and three seconds per deed. In
-You may provide a definition with
-\DeclareUnicodeCharacter 
 
 
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
+[20
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1719 ≈19 km while adding only ≈
-                                     US \$0.07 and three seconds per deed. In
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-
-
-
-[20]
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1844 ... the coordinates in this format: [DD]°[
-                                                  MM]'[SS].[SSSSS]"N [DDD]°...
-
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1844 ...rmat: [DD]°[MM]'[SS].[SSSSS]"N [DDD]°[
-                                                  MM]'[SS].[SSSSS]"W
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
+] [21 <./map_outputs/grant_1_map.png> <./map_outputs/grant_19_map.png>]
 
 ! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�\lst@EC�).
 
@@ -1525,7 +1316,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1858 • 
+l.1867 • 
            `geocode_place(query, strategy)`
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1540,7 +1331,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1859     – 
+l.1868     – 
                Look up a place name via the Google Geocoding API (Virginia-r...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1556,7 +1347,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1860     – 
+l.1869     – 
                Returns JSON: `{lat, lng, formatted_address, strategy, query_...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1572,7 +1363,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1861 • 
+l.1870 • 
            `compute_centroid(points)`
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1587,7 +1378,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1862     – 
+l.1871     – 
                Accepts **two or more** objects like `{lat: 37.1, lng: -76.7}...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1598,7 +1389,8 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 
 
-[21
+[22
+
 
 ]
 
@@ -1608,7 +1400,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1871 3. Optional centroid use – 
+l.1880 3. Optional centroid use – 
                                     if the grant text clearly places the tra...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1624,7 +1416,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1875 5. Final answer – 
+l.1884 5. Final answer – 
                            reply with **only** the coordinates in decimal de...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1640,7 +1432,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1878 • 
+l.1887 • 
            Always perform at least one successful `geocode_place` call befor...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1656,7 +1448,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1879 • 
+l.1888 • 
            Invoke `compute_centroid` only when you already have two or more ...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1672,7 +1464,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1880 • 
+l.1889 • 
            Never invent coordinates—derive them from tool output.
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1687,7 +1479,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1880 • Never invent coordinates—derive 
+l.1889 • Never invent coordinates—derive 
                                              them from tool output.
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1702,7 +1494,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1881 • 
+l.1890 • 
            Return no explanatory text, symbols, or degree signs—just `lat,...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1718,7 +1510,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1881 ...y text, symbols, or degree signs—just 
+l.1890 ...y text, symbols, or degree signs—just 
                                                   `lat, lon`.
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1728,11 +1520,11 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 
 
-[22]
-
 [23]
+
+[24]
 ! Undefined control sequence.
-l.2057 \passthrough
+l.2066 \passthrough
                    {\lstinline!37.166303, -77.240091!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1741,7 +1533,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2071 ...{Responses} request via the \passthrough
+l.2080 ...{Responses} request via the \passthrough
                                                   {\lstinline!tools!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1750,7 +1542,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2073 \passthrough
+l.2082 \passthrough
                    {\lstinline!function\_call!} objects whose arguments are
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1759,7 +1551,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2076 \passthrough
+l.2085 \passthrough
                    {\lstinline!function\_call\_output!} item containing the
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1769,7 +1561,7 @@ and I'll forget about whatever was undefined.
 
 
 
-[24]
+[25]
 
 ! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�\lst@EC�).
 
@@ -1777,7 +1569,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2081 // geocode_place – 
+l.2090 // geocode_place – 
                             wrapper around Google Geocoding API (Virginia-re...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1787,7 +1579,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 ! Undefined control sequence.
-l.2106 The driver maps the call to \passthrough
+l.2115 The driver maps the call to \passthrough
                                                {\lstinline!google\_geocode()!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1796,7 +1588,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2108 \passthrough
+l.2117 \passthrough
                    {\lstinline!components=administrative\_area:VA!} filter,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1805,7 +1597,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2111 \passthrough
+l.2120 \passthrough
                    {\lstinline!\{lat, lng, formatted\_address, strategy, que...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1820,7 +1612,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2116 // compute_centroid – 
+l.2125 // compute_centroid – 
                                spherical mean of ≥2 anchor points
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1835,7 +1627,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2116 ...ute_centroid – spherical mean of ≥2 
+l.2125 ...ute_centroid – spherical mean of ≥2 
                                                   anchor points
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1845,9 +1637,9 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 
 
-[25]
+[26]
 ! Undefined control sequence.
-l.2142 The backend converts each \passthrough
+l.2151 The backend converts each \passthrough
                                              {\lstinline!(lat, lng)!} pair to a
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1856,7 +1648,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2157 ...mph{Invocation.} It emits a \passthrough
+l.2166 ...mph{Invocation.} It emits a \passthrough
                                                   {\lstinline!function\_call!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1865,7 +1657,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2163   \passthrough
+l.2172   \passthrough
                      {\lstinline!function\_call\_output!} message appended to
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1874,7 +1666,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2168   \passthrough
+l.2177   \passthrough
                      {\lstinline!compute\_centroid!}, or (iii) produces a final
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1883,7 +1675,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2179 \passthrough
+l.2188 \passthrough
                    {\lstinline!run\_experiment.py!}, which exposes a
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1892,7 +1684,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2182 \passthrough
+l.2191 \passthrough
                    {\lstinline!--dry-run!},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1901,7 +1693,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2183 \passthrough
+l.2192 \passthrough
                    {\lstinline!--max-rows!}). The driver
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1910,7 +1702,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2193   \passthrough
+l.2202   \passthrough
                      {\lstinline!function\_call!} requests to the tool back-end
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1919,7 +1711,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2197   \passthrough
+l.2206   \passthrough
                      {\lstinline!runs/<method>/calls.jsonl!}, and
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1928,7 +1720,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2200   (\passthrough
+l.2209   (\passthrough
                       {\lstinline!results\_<evalset>.csv!}) and a Markdown run
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1936,196 +1728,18 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[26]
+[27]
 
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2257 bands. The ``≤
-                       X km'' columns show the percentage of predictions wit...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Overfull \hbox (5.08284pt too wide) in paragraph at lines 2277--2278
-[]\T1/lmr/m/n/10 (-20) Method  
- []
-
-
-Overfull \hbox (2.8987pt too wide) in paragraph at lines 2283--2284
-[]\T1/lmr/m/n/10 (-20) median  
- []
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2295 ≤
-          10 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2297 ≤
-          25 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2299 ≤
-          50 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Overfull \hbox (5.08284pt too wide) in paragraph at lines 2305--2306
-[]\T1/lmr/m/n/10 (-20) Method  
- []
-
-
-Overfull \hbox (2.8987pt too wide) in paragraph at lines 2311--2312
-[]\T1/lmr/m/n/10 (-20) median  
- []
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2323 ≤
-          10 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2325 ≤
-          25 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2327 ≤
-          50 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2369 per +1\% ≤
-                   10 km hit'' indicates the marginal cost of improving
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2386 ≤
-          10 km hit-rate
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2390 Cost per +1\% ≤
-                        10 km hit (USD)
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2400 ≤
-          10 km hit-rate
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2404 Cost per +1\% ≤
-                        10 km hit (USD)
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-
-[27] [28]
-<figures/error_boxplot.pdf, id=717, 505.89pt x 289.08pt>
+[28] [29]
+<figures/error_boxplot.pdf, id=721, 505.89pt x 289.08pt>
 File: figures/error_boxplot.pdf Graphic file (type pdf)
 <use figures/error_boxplot.pdf>
-Package pdftex.def Info: figures/error_boxplot.pdf  used on input line 2583.
+Package pdftex.def Info: figures/error_boxplot.pdf  used on input line 2592.
 (pdftex.def)             Requested size: 505.88875pt x 289.07928pt.
 
 
-LaTeX Warning: File `map_outputs/contact_sheet.png' not found on input line 259
-1.
+LaTeX Warning: File `map_outputs/contact_sheet.png' not found on input line 260
+0.
 
 
 ! Package pdftex.def Error: File `map_outputs/contact_sheet.png' not found: usi
@@ -2135,752 +1749,32 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2591 ...ctratio]{map_outputs/contact_sheet.png}}
+l.2600 ...ctratio]{map_outputs/contact_sheet.png}}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2607 requires to raise the ≤
-                                10 km hit-rate by one percentage point (column
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2608 ``Cost per +1 \% ≤
-                           10 km hit''). This marginal-cost view complements...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-
-[29 <./figures/error_boxplot.pdf>]
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2619 hit-rate by one percentage point.}
-                                         \tabularnewline
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2619 hit-rate by one percentage point.}
-                                         \tabularnewline
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2624 ≤
-          10 km hit-rate
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2628 Cost per +1 \% ≤
-                         10 km hit (USD)
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2636 ≤
-          10 km hit-rate
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2640 Cost per +1 \% ≤
-                         10 km hit (USD)
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-<figures/pareto_latency_tradeoff.pdf, id=776, 433.62pt x 289.08pt>
+[30 <./figures/error_boxplot.pdf>]
+<figures/pareto_latency_tradeoff.pdf, id=780, 433.62pt x 289.08pt>
 File: figures/pareto_latency_tradeoff.pdf Graphic file (type pdf)
 <use figures/pareto_latency_tradeoff.pdf>
 Package pdftex.def Info: figures/pareto_latency_tradeoff.pdf  used on input lin
-e 2673.
+e 2682.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2681 of ≈
-             502 s per grant. Note the logarithmic scale on the x-axis.
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Overfull \hbox (6.31047pt too wide) in paragraph at lines 2723--2724
+Overfull \hbox (1.4795pt too wide) in paragraph at lines 2732--2733
 []\T1/lmr/m/n/10 (-20) median  
  []
 
 
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2731 ≤
-          1 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2733 ≤
-          5 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2735 ≤
-          10 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2737 ≤
-          25 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2739 ≤
-          50 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Overfull \hbox (6.31047pt too wide) in paragraph at lines 2751--2752
+Overfull \hbox (1.4795pt too wide) in paragraph at lines 2760--2761
 []\T1/lmr/m/n/10 (-20) median  
  []
 
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2759 ≤
-          1 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2761 ≤
-          5 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2763 ≤
-          10 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2765 ≤
-          25 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2767 ≤
-          50 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Overfull \hbox (0.86607pt too wide) in paragraph at lines 2774--2774
-[]|\T1/lmr/m/n/10 (-20) 20.9%|  
- []
-
-
-Overfull \hbox (0.86607pt too wide) in paragraph at lines 2774--2774
-[]|\T1/lmr/m/n/10 (-20) 48.8%|  
- []
-
-
-Overfull \hbox (0.86607pt too wide) in paragraph at lines 2774--2775
-[]|\T1/lmr/m/n/10 (-20) 86.0%|  
- []
-
-
-Overfull \hbox (2.49973pt too wide) in paragraph at lines 2775--2776
-[]|\T1/lmr/m/n/10 (-20) 101.85|  
- []
-
-
-Overfull \hbox (0.86607pt too wide) in paragraph at lines 2776--2776
-[]|\T1/lmr/m/n/10 (-20) 14.0%|  
- []
-
-
-Overfull \hbox (0.86607pt too wide) in paragraph at lines 2776--2776
-[]|\T1/lmr/m/n/10 (-20) 16.3%|  
- []
-
-
-Overfull \hbox (0.86607pt too wide) in paragraph at lines 2776--2776
-[]|\T1/lmr/m/n/10 (-20) 32.6%|  
- []
-
-
-Overfull \hbox (0.86607pt too wide) in paragraph at lines 2776--2777
-[]|\T1/lmr/m/n/10 (-20) 74.4%|  
- []
-
-
-Overfull \hbox (2.49973pt too wide) in paragraph at lines 2777--2777
-[]|\T1/lmr/m/n/10 (-20) 103.49|  
- []
-
-
-Overfull \hbox (0.86607pt too wide) in paragraph at lines 2778--2778
-[]|\T1/lmr/m/n/10 (-20) 37.2%|  
- []
-
-
-Overfull \hbox (0.86607pt too wide) in paragraph at lines 2778--2779
-[]|\T1/lmr/m/n/10 (-20) 62.8%|  
- []
-
-
-Overfull \hbox (2.49973pt too wide) in paragraph at lines 2779--2780
-[]|\T1/lmr/m/n/10 (-20) 110.19|  
- []
-
-
-Overfull \hbox (0.86607pt too wide) in paragraph at lines 2780--2780
-[]|\T1/lmr/m/n/10 (-20) 11.6%|  
- []
-
-
-Overfull \hbox (0.86607pt too wide) in paragraph at lines 2780--2780
-[]|\T1/lmr/m/n/10 (-20) 14.0%|  
- []
-
-
-Overfull \hbox (0.86607pt too wide) in paragraph at lines 2780--2780
-[]|\T1/lmr/m/n/10 (-20) 32.6%|  
- []
-
-
-Overfull \hbox (0.86607pt too wide) in paragraph at lines 2780--2781
-[]|\T1/lmr/m/n/10 (-20) 69.8%|  
- []
-
-[30]
-
-! LaTeX Error: Unicode character Δ (U+0394)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2788 (pp) changes in accuracy bands. ``Δ
-                                            Mean \%'' shows percent change in
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character Δ (U+0394)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2813 Δ
-          Mean \%
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character Δ (U+0394)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2815 Δ
-          ≤1 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2815 Δ ≤
-             1 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character Δ (U+0394)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2817 Δ
-          ≤5 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2817 Δ ≤
-             5 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character Δ (U+0394)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2819 Δ
-          ≤10 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2819 Δ ≤
-             10 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character Δ (U+0394)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2821 Δ
-          ≤25 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2821 Δ ≤
-             25 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character Δ (U+0394)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2823 Δ
-          ≤50 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2823 Δ ≤
-             50 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character Δ (U+0394)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2835 Δ
-          Mean \%
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character Δ (U+0394)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2837 Δ
-          ≤1 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2837 Δ ≤
-             1 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character Δ (U+0394)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2839 Δ
-          ≤5 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2839 Δ ≤
-             5 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character Δ (U+0394)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2841 Δ
-          ≤10 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2841 Δ ≤
-             10 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character Δ (U+0394)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2843 Δ
-          ≤25 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2843 Δ ≤
-             25 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character Δ (U+0394)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2845 Δ
-          ≤50 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2845 Δ ≤
-             50 km pp
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Overfull \hbox (1.42552pt too wide) in paragraph at lines 2885--2886
-[]\T1/lmr/m/n/10 (-20) Method  
- []
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2901 ≤
-          10 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2903 ≤
-          25 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2905 ≤
-          50 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Overfull \hbox (1.42552pt too wide) in paragraph at lines 2911--2912
-[]\T1/lmr/m/n/10 (-20) Method  
- []
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2927 ≤
-          10 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2929 ≤
-          25 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≤ (U+2264)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2931 ≤
-          50 km
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-
-[31]
-
-[32 <./figures/pareto_latency_tradeoff.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 3063--3063
+[31] [32]
+Underfull \hbox (badness 10000) in paragraph at lines 3072--3072
 []|\T1/lmr/m/n/10 (+20) Halterman, A. Morde-cai 3: A neu-ral geop-arser and eve
 nt geocoder. (2023)
  []
@@ -2889,20 +1783,22 @@ nt geocoder. (2023)
 
 [33]
 
-[34] (./main_two_column.aux)
+[34 <./figures/pareto_latency_tradeoff.pdf>]
+
+[35] (./main_two_column.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 17964 strings out of 474662
- 286055 string characters out of 5751110
- 1163637 words of memory out of 5000000
- 40135 multiletter control sequences out of 15000+600000
- 641284 words of font info for 214 fonts, out of 8000000 for 9000
+ 18018 strings out of 474662
+ 286919 string characters out of 5751110
+ 1165084 words of memory out of 5000000
+ 40193 multiletter control sequences out of 15000+600000
+ 640880 words of font info for 210 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 83i,13n,93p,1012b,2084s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,13n,93p,1012b,2094s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></u
 sr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/lo
 cal/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/t
@@ -2918,10 +1814,10 @@ ri10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmsy10.
 pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></
 usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/l
 ocal/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
-Output written on main_two_column.pdf (34 pages, 4959838 bytes).
+Output written on main_two_column.pdf (35 pages, 4963145 bytes).
 PDF statistics:
- 1271 PDF objects out of 1440 (max. 8388607)
- 943 compressed objects within 10 object streams
- 370 named destinations out of 1000 (max. 500000)
+ 1275 PDF objects out of 1440 (max. 8388607)
+ 946 compressed objects within 10 object streams
+ 371 named destinations out of 1000 (max. 500000)
  47720 words of extra memory for PDF output out of 51595 (max. 10000000)
 
