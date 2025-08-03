@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  2 AUG 2025 12:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 AUG 2025 10:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count196
 \c@section=\count197
@@ -329,61 +329,31 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 )
 \Gin@req@height=\dimen179
 \Gin@req@width=\dimen180
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
-
-(/usr/local/texlive/2025basic/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2023/08/05 v3.6o Customizing captions (AR)
-
-(/usr/local/texlive/2025basic/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen181
-\captionmargin=\dimen182
-\caption@leftmargin=\dimen183
-\caption@rightmargin=\dimen184
-\caption@width=\dimen185
-\caption@indent=\dimen186
-\caption@parindent=\dimen187
-\caption@hangindent=\dimen188
-Package caption Info: Standard document class detected.
-)
-\c@caption@flags=\count300
-\c@continuedfloat=\count301
-Package caption Info: longtable package is loaded.
-
-(/usr/local/texlive/2025basic/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
-))
-Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count302
-Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count303
 )
 \pandoc@box=\box63
 \cslhangindent=\skip64
 \csllabelwidth=\skip65
-
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count304
+\lst@mode=\count300
 \lst@gtempboxa=\box64
 \lst@token=\toks31
-\lst@length=\count305
-\lst@currlwidth=\dimen189
-\lst@column=\count306
-\lst@pos=\count307
-\lst@lostspace=\dimen190
-\lst@width=\dimen191
-\lst@newlines=\count308
-\lst@lineno=\count309
-\lst@maxwidth=\dimen192
+\lst@length=\count301
+\lst@currlwidth=\dimen181
+\lst@column=\count302
+\lst@pos=\count303
+\lst@lostspace=\dimen182
+\lst@width=\dimen183
+\lst@newlines=\count304
+\lst@lineno=\count305
+\lst@maxwidth=\dimen184
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
 )
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-\c@lstnumber=\count310
-\lst@skipnumbers=\count311
+\c@lstnumber=\count306
+\lst@skipnumbers=\count307
 \lst@framebox=\box65
 )
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/listings/listings.cfg
@@ -393,12 +363,12 @@ Package: listings 2024/09/23 1.10c (Carsten Heinz)
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-\TX@col@width=\dimen193
-\TX@old@table=\dimen194
-\TX@old@col=\dimen195
-\TX@target=\dimen196
-\TX@delta=\dimen197
-\TX@cols=\count312
+\TX@col@width=\dimen185
+\TX@old@table=\dimen186
+\TX@old@col=\dimen187
+\TX@target=\dimen188
+\TX@delta=\dimen189
+\TX@cols=\count308
 \TX@ftn=\toks32
 )
    defining Unicode char U+00B0 (decimal 176)
@@ -447,15 +417,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ing.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count313
+\c@section@level=\count309
 )
 (/usr/local/texlive/2025basic/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen198
-\Hy@linkcounter=\count314
-\Hy@pagecounter=\count315
+\@linkdim=\dimen190
+\Hy@linkcounter=\count310
+\Hy@pagecounter=\count311
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
@@ -465,7 +435,7 @@ Now handling font encoding PD1 ...
 (/usr/local/texlive/2025basic/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count316
+\Hy@SavedSpaceFactor=\count312
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
@@ -480,14 +450,14 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count317
+\c@Hy@tempcnt=\count313
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen199
+\XeTeXLinkMargin=\dimen191
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -496,9 +466,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count318
-\Field@Width=\dimen256
-\Fld@charsize=\dimen257
+\Fld@menulength=\count314
+\Field@Width=\dimen192
+\Fld@charsize=\dimen193
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -510,9 +480,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count319
-\c@Item=\count320
-\c@Hfootnote=\count321
+\Hy@abspage=\count315
+\c@Item=\count316
+\c@Hfootnote=\count317
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -524,8 +494,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count322
-\c@bookmark@seq@number=\count323
+\Fld@listcount=\count318
+\c@bookmark@seq@number=\count319
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/rerunfilecheck/rerunfilechec
 k.sty
@@ -543,10 +513,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 )
-\BKM@id=\count324
+\BKM@id=\count320
 ))
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 17
-2.
+1.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -554,42 +524,42 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
 ef
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count325
+\l__color_backend_stack_int=\count321
 \l__pdf_internal_box=\box66
 ) (./main_two_column.aux)
 \openout1 = `main_two_column.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count326
-\scratchdimen=\dimen258
+\scratchcounter=\count322
+\scratchdimen=\dimen194
 \scratchbox=\box67
-\nofMPsegments=\count327
-\nofMParguments=\count328
+\nofMPsegments=\count323
+\nofMParguments=\count324
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count329
-\MPscratchDim=\dimen259
-\MPnumerator=\count330
-\makeMPintoPDFobject=\count331
+\MPscratchCnt=\count325
+\MPscratchDim=\dimen195
+\MPnumerator=\count326
+\makeMPintoPDFobject=\count327
 \everyMPtoPDFconversion=\toks34
 )
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.s
@@ -621,35 +591,35 @@ e
 * \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=4.0pt
+* \marginparwidth=59.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
-* \@twocolumntrue
+* \@twocolumnfalse
 * \@twosidefalse
 * \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 172.
-Package microtype Info: Applying patch `item' on input line 172.
-Package microtype Info: Applying patch `toc' on input line 172.
-Package microtype Info: Applying patch `eqnum' on input line 172.
-Package microtype Info: Applying patch `footnote' on input line 172.
-Package microtype Info: Applying patch `verbatim' on input line 172.
-LaTeX Info: Redefining \microtypesetup on input line 172.
+LaTeX Info: Redefining \microtypecontext on input line 171.
+Package microtype Info: Applying patch `item' on input line 171.
+Package microtype Info: Applying patch `toc' on input line 171.
+Package microtype Info: Applying patch `eqnum' on input line 171.
+Package microtype Info: Applying patch `footnote' on input line 171.
+Package microtype Info: Applying patch `verbatim' on input line 171.
+LaTeX Info: Redefining \microtypesetup on input line 171.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 172.
+LaTeX Info: Redefining \showhyphens on input line 171.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -657,43 +627,39 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: hyperref package is loaded.
-Package caption Info: listings package is loaded.
-Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count332
-Package hyperref Info: Link coloring OFF on input line 172.
+\c@lstlisting=\count328
+Package hyperref Info: Link coloring OFF on input line 171.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-74.
+73.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-74.
+73.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-174.
+173.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-174.
+173.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 174.
+(Font)              <12> on input line 173.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 174.
+(Font)              <8> on input line 173.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 174.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 174
+(Font)              <6> on input line 173.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 173
 .
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -702,7 +668,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 174
+LaTeX Font Info:    Trying to load font information for U+msb on input line 173
 .
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -712,164 +678,76 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 210.
+(Font)              <9> on input line 209.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 209.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-10.
+09.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 224.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 224.
 
-Underfull \vbox (badness 1137) has occurred while \output is active []
+[1
 
-
-
-
-
-[1{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/
-usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}
-
-
-{/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Underfull \hbox (badness 1902) in paragraph at lines 297--304
-[]\T1/lmr/m/n/10 (+20) Presents the first sys-tem-atic bench-mark-ing
- []
-
-
-Underfull \hbox (badness 3826) in paragraph at lines 297--304
-\T1/lmr/m/n/10 (+20) grant ge-olo-ca-tion, eval-u-at-ing two prompt-
- []
-
-
-
-
-Underfull \hbox (badness 1048) in paragraph at lines 321--321
-[][]\T1/lmr/bx/n/12 (+20) 2.1 His-tor-i-cal GIS and Land-Grant
- []
-
-
+{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/us
+r/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/t
+exlive/2025basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 
 [2]
-
-
-Underfull \vbox (badness 5217) has occurred while \output is active []
-
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 308.
 
 
 [3]
 
-
-
 [4]
+Underfull \hbox (badness 2478) in paragraph at lines 466--476
+[]\T1/lmr/m/n/10.95 (+20) Extending this con-cept to more com-plex nat-u-ral la
+n-guage de-scrip-tions, Huang et al.
+ []
+
+
+Underfull \hbox (badness 1527) in paragraph at lines 466--476
+\T1/lmr/m/n/10.95 (+20) [@Huang2024_geoagent] de-vel-oped GeoA-gent for free-fo
+rm ad-dress nor-mal-iza-tion. This
+ []
+
+
+Overfull \hbox (16.39018pt too wide) in paragraph at lines 486--493
+[]\T1/lmr/m/n/10.95 (-20) At en-ter-prise scale, Google Re-search's \T1/lmr/m/i
+t/10.95 (-20) Geospa-tial Rea-son-ing \T1/lmr/m/n/10.95 (-20) ini-tia-tive [@Go
+ogleRe-search2025_geospatial]
+ []
 
 
 
 [5]
-Underfull \hbox (badness 2495) in paragraph at lines 655--660
-\T1/lmr/m/n/10 (+20) recognition (OCR) en-gines and post-processing
- []
-
-
-
-
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 796--799
-[]\T1/lmr/m/n/10 (+20) expands his-tor-i-cal ab-bre-vi-a-tions (e.g.,
- []
 
+[7]
 
-Underfull \hbox (badness 1946) in paragraph at lines 802--805
-[]\T1/lmr/m/n/10 (+20) filters can-di-date co-or-di-nates to a Virginia-
- []
+[8]
 
-
-
+[9]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
-40.
-(/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/t1lmtt.fd
+18.
+ (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 841.
+(Font)              <10> on input line 819.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 819.
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-842.
+820.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-
-! Package longtable Error: longtable not in 1-column mode.
-
-See the longtable package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.851 \begin{longtable}
-                       []{@{}ll@{}}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 ! Undefined control sequence.
-l.864 M-1 & \passthrough
-                        {\lstinline!o4-mini-2025-04-16!} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.865 M-2 & \passthrough
-                        {\lstinline!o3-2025-04-16!} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.866 M-3 & \passthrough
-                        {\lstinline!o3-mini-2025-01-31!} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.867 M-4 & \passthrough
-                        {\lstinline!gpt-4.1-2025-04-14!} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.868 M-5 & \passthrough
-                        {\lstinline!gpt-4o-2024-08-06!} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.869 M-6 & \passthrough
-                        {\lstinline!gpt-3.5-turbo!} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.876 tools: \passthrough
+l.851 tools: \passthrough
                          {\lstinline!geocode\_place!}, an interface to the
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -878,7 +756,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.878 \passthrough
+l.853 \passthrough
                   {\lstinline!compute\_centroid!}, which returns the spherical
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -888,67 +766,10 @@ and I'll forget about whatever was undefined.
 
 
 
-[7{/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/u
-sr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
-
-! Package longtable Error: longtable not in 1-column mode.
-
-See the longtable package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.896 \begin{longtable}
-                       []{@{}ll@{}}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+[10{/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/
+usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
 ! Undefined control sequence.
-l.909 T-1 & \passthrough
-                        {\lstinline!o4-mini-2025-04-16!} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.910 T-2 & \passthrough
-                        {\lstinline!o3-2025-04-16!} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.911 T-3 & \passthrough
-                        {\lstinline!o3-mini-2025-01-31!} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.912 T-4 & \passthrough
-                        {\lstinline!gpt-4.1-2025-04-14!} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.913 T-5 & \passthrough
-                        {\lstinline!computer-use-preview-2025-03-11!} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.921 independent one-shot calls to \passthrough
+l.893 independent one-shot calls to \passthrough
                                                 {\lstinline!o3-2025-04-16!},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -964,135 +785,50 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.923 ...e clustered with the DBSCAN algorithm (ε
+l.895 ...e clustered with the DBSCAN algorithm (ε
                                                    = 0.5
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
 
+[11{/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
 
-Underfull \hbox (badness 2698) in paragraph at lines 952--952
-[]\T1/lmr/m/n/10 (+20) Table 3: |Ope-nAI to-ken pric-ing in ef-fect on
- []
-
-
-
-[8{/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-
-! Package longtable Error: longtable not in 1-column mode.
-
-See the longtable package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1053 \begin{longtable}
-                        []{@{}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (5.00348pt too wide) in paragraph at lines 1069--1070
-[]\T1/lmr/m/n/10 (-20) Median 
- []
-
-
-Overfull \hbox (5.00348pt too wide) in paragraph at lines 1083--1084
-[]\T1/lmr/m/n/10 (-20) Median 
- []
-
-
-
-[9]
-<figures/accuracy_bar.pdf, id=182, 505.89pt x 289.08pt>
+[12]
+<figures/accuracy_bar.pdf, id=134, 505.89pt x 289.08pt>
 File: figures/accuracy_bar.pdf Graphic file (type pdf)
 <use figures/accuracy_bar.pdf>
-Package pdftex.def Info: figures/accuracy_bar.pdf  used on input line 1118.
+Package pdftex.def Info: figures/accuracy_bar.pdf  used on input line 1090.
 (pdftex.def)             Requested size: 505.88875pt x 289.07928pt.
-<figures/error_violin_methods.pdf, id=184, 722.7pt x 433.62pt>
+<figures/error_violin_methods.pdf, id=136, 722.7pt x 433.62pt>
 File: figures/error_violin_methods.pdf Graphic file (type pdf)
 <use figures/error_violin_methods.pdf>
 Package pdftex.def Info: figures/error_violin_methods.pdf  used on input line 1
-127.
+099.
 (pdftex.def)             Requested size: 722.69823pt x 433.61894pt.
-<figures/error_violin_core_methods.pdf, id=186, 722.7pt x 433.62pt>
+
+
+[13]
+
+[14 <./figures/accuracy_bar.pdf> <./figures/error_violin_methods.pdf>]
+<figures/error_violin_core_methods.pdf, id=229, 722.7pt x 433.62pt>
 File: figures/error_violin_core_methods.pdf Graphic file (type pdf)
 <use figures/error_violin_core_methods.pdf>
 Package pdftex.def Info: figures/error_violin_core_methods.pdf  used on input l
-ine 1143.
+ine 1115.
 (pdftex.def)             Requested size: 722.69823pt x 433.61894pt.
-<figures/cdf_graphs/cdf_models_combined.pdf, id=188, 433.62pt x 289.08pt>
+<figures/cdf_graphs/cdf_models_combined.pdf, id=231, 433.62pt x 289.08pt>
 File: figures/cdf_graphs/cdf_models_combined.pdf Graphic file (type pdf)
 <use figures/cdf_graphs/cdf_models_combined.pdf>
 Package pdftex.def Info: figures/cdf_graphs/cdf_models_combined.pdf  used on in
-put line 1153.
+put line 1125.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
-
-
-! Package longtable Error: longtable not in 1-column mode.
-
-See the longtable package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1172 \begin{longtable}
-                        []{@{}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (5.32071pt too wide) in paragraph at lines 1185--1186
-[]\T1/lmr/m/n/10 (-20) Underlying 
- []
-
-
-Overfull \hbox (5.32071pt too wide) in paragraph at lines 1201--1202
-[]\T1/lmr/m/n/10 (-20) Underlying 
- []
-
-[10]
-
-! Package longtable Error: longtable not in 1-column mode.
-
-See the longtable package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1234 \begin{longtable}
-                        []{@{}llll@{}}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (25.15169pt too wide) in alignment at lines 1234--1240
- [] [] [] [] 
- []
-
-
-Overfull \hbox (25.15169pt too wide) in alignment at lines 1240--1244
- [] [] [] [] 
- []
-
-
-Overfull \hbox (25.15169pt too wide) in alignment at lines 1244--1246
- [] [] [] [] 
- []
-
-
-Overfull \hbox (25.15169pt too wide) in alignment at lines 1246--1261
- [] [] [] [] 
- []
-
-<figures/pareto_tradeoff.pdf, id=199, 433.62pt x 289.08pt>
+ [15 <./figures/error_violin_core_methods.pdf>]
+<figures/pareto_tradeoff.pdf, id=277, 433.62pt x 289.08pt>
 File: figures/pareto_tradeoff.pdf Graphic file (type pdf)
 <use figures/pareto_tradeoff.pdf>
-Package pdftex.def Info: figures/pareto_tradeoff.pdf  used on input line 1265.
+Package pdftex.def Info: figures/pareto_tradeoff.pdf  used on input line 1237.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
-
 
 
 ! LaTeX Error: Unknown float option `H'.
@@ -1101,67 +837,23 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1285 \begin{figure*}[H]
-                         
+l.1257 \begin{figure}[H]
+                        
 Option `H' ignored and `p' used.
 
-<figures/latency_boxplot.pdf, id=201, 505.89pt x 289.08pt>
+<figures/latency_boxplot.pdf, id=279, 505.89pt x 289.08pt>
 File: figures/latency_boxplot.pdf Graphic file (type pdf)
 <use figures/latency_boxplot.pdf>
-Package pdftex.def Info: figures/latency_boxplot.pdf  used on input line 1287.
+Package pdftex.def Info: figures/latency_boxplot.pdf  used on input line 1259.
 (pdftex.def)             Requested size: 352.31625pt x 201.32684pt.
 
-! Package longtable Error: longtable not in 1-column mode.
 
-See the longtable package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1302 \begin{longtable}
-                        []{@{}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+[16]
 
-
-
-[11] [12 <./figures/accuracy_bar.pdf> <./figures/error_violin_methods.pdf>]
-[13 <./figures/error_violin_core_methods.pdf> <./figures/cdf_graphs/cdf_models_
-combined.pdf>] [14 <./figures/pareto_tradeoff.pdf> <./figures/latency_boxplot.p
+[17 <./figures/cdf_graphs/cdf_models_combined.pdf> <./figures/pareto_tradeoff.p
 df>]
-
-! Package longtable Error: longtable not in 1-column mode.
-
-See the longtable package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1351 \begin{longtable}
-                        []{@{}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (0.70943pt too wide) in paragraph at lines 1361--1362
-[]\T1/lmr/m/n/10 (-20) Method  
- []
-
-
-Overfull \hbox (1.78925pt too wide) in paragraph at lines 1367--1368
-[]\T1/lmr/m/n/10 (-20) geo:cent 
- []
-
-
-Overfull \hbox (0.70943pt too wide) in paragraph at lines 1375--1376
-[]\T1/lmr/m/n/10 (-20) Method  
- []
-
-
-Overfull \hbox (1.78925pt too wide) in paragraph at lines 1381--1382
-[]\T1/lmr/m/n/10 (-20) geo:cent 
- []
-
 ! Undefined control sequence.
-l.1393 For both pipelines the Google \passthrough
+l.1365 For both pipelines the Google \passthrough
                                                  {\lstinline!geocode\_place!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1170,7 +862,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.1395 \passthrough
+l.1367 \passthrough
                    {\lstinline!compute\_centroid!} function appeared in fewer
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1178,8 +870,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+
+[18]
 ! Undefined control sequence.
-l.1421   \passthrough
+l.1392   \passthrough
                      {\lstinline![NAME]!}. If the model had memorised
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1195,43 +890,36 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1422   grant-name ⟷
+l.1393   grant-name ⟷
                         coordinate pairs from its pre-training corpus, removing
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1449
+Underfull \hbox (badness 10000) in paragraph at lines 1415--1420
 
  []
 
 
-Underfull \hbox (badness 7064) in paragraph at lines 1449--1454
-[]\T1/lmr/m/n/10 (+20) Continuous fit --- An ordinary-least-
+Overfull \hbox (8.9505pt too wide) in paragraph at lines 1420--1425
+[]\T1/lmr/m/n/10.95 (-20) Continuous fit --- An ordinary-least-squares re-gres-
+sion ([]\T1/lmr/m/it/10.95 (-20) {km}=42.3-0.18,[]\T1/lmr/m/n/10.95 (-20) {word
+s})
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1449--1454
-\T1/lmr/m/n/10 (+20) squares re-gres-sion ([]\T1/lmr/m/it/10 (+20) {km}=42.3-
- []
-
-<figures/length_vs_error.png, id=401, 433.62pt x 289.08pt>
+<figures/length_vs_error.png, id=318, 433.62pt x 289.08pt>
 File: figures/length_vs_error.png Graphic file (type png)
 <use figures/length_vs_error.png>
-Package pdftex.def Info: figures/length_vs_error.png  used on input line 1459.
+Package pdftex.def Info: figures/length_vs_error.png  used on input line 1430.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
 
-[15]
+[19]
 
-
-
-[16 <./figures/length_vs_error.png>]
+[20 <./figures/latency_boxplot.pdf> <./figures/length_vs_error.png>]
 ! Undefined control sequence.
-l.1547   \passthrough
+l.1518   \passthrough
                      {\lstinline!geocode\_place!} call returns a spurious
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1240,7 +928,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.1548   coordinate, subsequent \passthrough
+l.1519   coordinate, subsequent \passthrough
                                             {\lstinline!compute\_centroid!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1255,44 +943,138 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1555 \begin{figure*}[H]
-                         
+l.1526 \begin{figure}[H]
+                        
 Option `H' ignored and `p' used.
 
-<map_outputs/grant_1_map.png, id=421, 433.62pt x 433.62pt>
+
+! LaTeX Error: Environment subfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1528 \begin{subfigure}
+                        {0.48\textwidth}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.1528 \begin{subfigure}{0.48\textwidth}
+                                        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.1528 \begin{subfigure}{0.48\textwidth}
+                                        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+<map_outputs/grant_1_map.png, id=377, 433.62pt x 433.62pt>
 File: map_outputs/grant_1_map.png Graphic file (type png)
 <use map_outputs/grant_1_map.png>
-Package pdftex.def Info: map_outputs/grant_1_map.png  used on input line 1559.
-(pdftex.def)             Requested size: 225.4804pt x 225.48369pt.
-<map_outputs/grant_19_map.png, id=422, 433.62pt x 433.62pt>
+Package pdftex.def Info: map_outputs/grant_1_map.png  used on input line 1530.
+(pdftex.def)             Requested size: 469.75502pt x 469.7781pt.
+
+! LaTeX Error: \begin{figure} on input line 1526 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1533 \end{subfigure}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment subfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1535 \begin{subfigure}
+                        {0.48\textwidth}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.1535 \begin{subfigure}{0.48\textwidth}
+                                        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.1535 \begin{subfigure}{0.48\textwidth}
+                                        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+<map_outputs/grant_19_map.png, id=378, 433.62pt x 433.62pt>
 File: map_outputs/grant_19_map.png Graphic file (type png)
 <use map_outputs/grant_19_map.png>
-Package pdftex.def Info: map_outputs/grant_19_map.png  used on input line 1566.
+Package pdftex.def Info: map_outputs/grant_19_map.png  used on input line 1537.
 
-(pdftex.def)             Requested size: 225.4804pt x 225.48369pt.
+(pdftex.def)             Requested size: 469.75502pt x 469.7781pt.
+
+! LaTeX Error: \begin{figure} on input line 1526 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1540 \end{subfigure}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Float too large for page by 425.35086pt on input line 1543.
 
 
 
+[21]
 
-[17]
+[22 <./map_outputs/grant_1_map.png> <./map_outputs/grant_19_map.png>]
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1706--1710
-[]\T1/lmr/bx/n/10 (+20) Prompt en-gi-neer-ing at scale. \T1/lmr/m/n/10 (+20) A
+[23]
+Underfull \hbox (badness 1043) in paragraph at lines 1670--1675
+[]\T1/lmr/bx/n/10.95 (+20) Corpus ex-pan-sion. \T1/lmr/m/n/10.95 (+20) Digi-tis
+-ing the re-main-ing vol-umes of \T1/lmr/m/it/10.95 (+20) Cav-a-liers and Pi-o-
+neers
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 1706--1710
-\T1/lmr/m/n/10 (+20) re-fine prompts or se-lect be-tween tool and
- []
 
+[24]
 
+[25]
 
-[18]
-
-
-
-[19] [20 <./map_outputs/grant_1_map.png> <./map_outputs/grant_19_map.png>]
+[26]
 
 ! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�\lst@EC�).
 
@@ -1300,7 +1082,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1866 • 
+l.1833 • 
            `geocode_place(query, strategy)`
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1315,7 +1097,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1867     – 
+l.1834     – 
                Look up a place name via the Google Geocoding API (Virginia-r...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1331,7 +1113,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1868     – 
+l.1835     – 
                Returns JSON: `{lat, lng, formatted_address, strategy, query_...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1347,7 +1129,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1869 • 
+l.1836 • 
            `compute_centroid(points)`
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1362,7 +1144,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1870     – 
+l.1837     – 
                Accepts **two or more** objects like `{lat: 37.1, lng: -76.7}...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1372,18 +1154,13 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-
-[21
-
-]
-
 ! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�\lst@EC�).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1879 3. Optional centroid use – 
+l.1846 3. Optional centroid use – 
                                     if the grant text clearly places the tra...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1399,7 +1176,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1883 5. Final answer – 
+l.1850 5. Final answer – 
                            reply with **only** the coordinates in decimal de...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1415,7 +1192,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1886 • 
+l.1853 • 
            Always perform at least one successful `geocode_place` call befor...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1431,7 +1208,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1887 • 
+l.1854 • 
            Invoke `compute_centroid` only when you already have two or more ...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1447,7 +1224,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1888 • 
+l.1855 • 
            Never invent coordinates—derive them from tool output.
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1462,7 +1239,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1888 • Never invent coordinates—derive 
+l.1855 • Never invent coordinates—derive 
                                              them from tool output.
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1477,7 +1254,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1889 • 
+l.1856 • 
            Return no explanatory text, symbols, or degree signs—just `lat,...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1493,7 +1270,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1889 ...y text, symbols, or degree signs—just 
+l.1856 ...y text, symbols, or degree signs—just 
                                                   `lat, lon`.
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1503,11 +1280,13 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 
 
-[22]
+[27]
 
-[23]
+[28]
+
+[29]
 ! Undefined control sequence.
-l.2065 \passthrough
+l.2032 \passthrough
                    {\lstinline!37.166303, -77.240091!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1516,7 +1295,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2079 ...{Responses} request via the \passthrough
+l.2046 ...{Responses} request via the \passthrough
                                                   {\lstinline!tools!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1525,7 +1304,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2081 \passthrough
+l.2048 \passthrough
                    {\lstinline!function\_call!} objects whose arguments are
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1534,7 +1313,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2084 \passthrough
+l.2051 \passthrough
                    {\lstinline!function\_call\_output!} item containing the
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1543,16 +1322,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-
-[24]
-
 ! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�\lst@EC�).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2089 // geocode_place – 
+l.2056 // geocode_place – 
                             wrapper around Google Geocoding API (Virginia-re...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1561,8 +1337,11 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
+
+
+[30]
 ! Undefined control sequence.
-l.2114 The driver maps the call to \passthrough
+l.2081 The driver maps the call to \passthrough
                                                {\lstinline!google\_geocode()!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1571,7 +1350,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2116 \passthrough
+l.2083 \passthrough
                    {\lstinline!components=administrative\_area:VA!} filter,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1580,7 +1359,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2119 \passthrough
+l.2086 \passthrough
                    {\lstinline!\{lat, lng, formatted\_address, strategy, que...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1595,7 +1374,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2124 // compute_centroid – 
+l.2091 // compute_centroid – 
                                spherical mean of ≥2 anchor points
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1610,7 +1389,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2124 ...ute_centroid – spherical mean of ≥2 
+l.2091 ...ute_centroid – spherical mean of ≥2 
                                                   anchor points
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1620,9 +1399,9 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 
 
-[25]
+[31]
 ! Undefined control sequence.
-l.2150 The backend converts each \passthrough
+l.2117 The backend converts each \passthrough
                                              {\lstinline!(lat, lng)!} pair to a
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1631,7 +1410,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2165 ...mph{Invocation.} It emits a \passthrough
+l.2132 ...mph{Invocation.} It emits a \passthrough
                                                   {\lstinline!function\_call!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1640,7 +1419,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2171   \passthrough
+l.2138   \passthrough
                      {\lstinline!function\_call\_output!} message appended to
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1649,7 +1428,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2176   \passthrough
+l.2143   \passthrough
                      {\lstinline!compute\_centroid!}, or (iii) produces a final
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1658,7 +1437,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2187 \passthrough
+l.2154 \passthrough
                    {\lstinline!run\_experiment.py!}, which exposes a
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1667,7 +1446,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2190 \passthrough
+l.2157 \passthrough
                    {\lstinline!--dry-run!},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1676,7 +1455,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2191 \passthrough
+l.2158 \passthrough
                    {\lstinline!--max-rows!}). The driver
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1685,7 +1464,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2201   \passthrough
+l.2168   \passthrough
                      {\lstinline!function\_call!} requests to the tool back-end
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1694,7 +1473,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2205   \passthrough
+l.2172   \passthrough
                      {\lstinline!runs/<method>/calls.jsonl!}, and
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1703,7 +1482,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2208   (\passthrough
+l.2175   (\passthrough
                       {\lstinline!results\_<evalset>.csv!}) and a Markdown run
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1711,64 +1490,91 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[26]
-
-[27] [28]
-<figures/error_boxplot.pdf, id=717, 505.89pt x 289.08pt>
-File: figures/error_boxplot.pdf Graphic file (type pdf)
-<use figures/error_boxplot.pdf>
-Package pdftex.def Info: figures/error_boxplot.pdf  used on input line 2591.
-(pdftex.def)             Requested size: 505.88875pt x 289.07928pt.
-
-
-LaTeX Warning: File `map_outputs/contact_sheet.png' not found on input line 259
-9.
-
-
-! Package pdftex.def Error: File `map_outputs/contact_sheet.png' not found: usi
-ng draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2599 ...ctratio]{map_outputs/contact_sheet.png}}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-
-[29 <./figures/error_boxplot.pdf>]
-<figures/pareto_latency_tradeoff.pdf, id=776, 433.62pt x 289.08pt>
-File: figures/pareto_latency_tradeoff.pdf Graphic file (type pdf)
-<use figures/pareto_latency_tradeoff.pdf>
-Package pdftex.def Info: figures/pareto_latency_tradeoff.pdf  used on input lin
-e 2681.
-(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
-
-Overfull \hbox (1.4795pt too wide) in paragraph at lines 2731--2732
-[]\T1/lmr/m/n/10 (-20) median  
- []
-
-
-Overfull \hbox (1.4795pt too wide) in paragraph at lines 2759--2760
-[]\T1/lmr/m/n/10 (-20) median  
- []
-
-[30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 3071--3071
-[]|\T1/lmr/m/n/10 (+20) Halterman, A. Morde-cai 3: A neu-ral geop-arser and eve
-nt geocoder. (2023)
- []
-
 
 
 [32]
+Overfull \hbox (2.74075pt too wide) in paragraph at lines 2252--2253
+[]\T1/lmr/m/n/10.95 (-20) Method  
+ []
 
-[33 <./figures/pareto_latency_tradeoff.pdf>]
 
-[34] (./main_two_column.aux)
+Overfull \hbox (2.74075pt too wide) in paragraph at lines 2280--2281
+[]\T1/lmr/m/n/10.95 (-20) Method  
+ []
+
+
+
+[33]
+
+[34]
+<figures/error_boxplot.pdf, id=677, 505.89pt x 289.08pt>
+File: figures/error_boxplot.pdf Graphic file (type pdf)
+<use figures/error_boxplot.pdf>
+Package pdftex.def Info: figures/error_boxplot.pdf  used on input line 2557.
+(pdftex.def)             Requested size: 505.88875pt x 289.07928pt.
+
+
+[35]
+<map_outputs/contact_sheet.png, id=687, 1031.052pt x 1045.506pt>
+File: map_outputs/contact_sheet.png Graphic file (type png)
+<use map_outputs/contact_sheet.png>
+Package pdftex.def Info: map_outputs/contact_sheet.png  used on input line 2565
+.
+(pdftex.def)             Requested size: 1031.0495pt x 1045.50345pt.
+ [36 <./figures/error_boxplot.pdf>]
+<figures/pareto_latency_tradeoff.pdf, id=745, 433.62pt x 289.08pt>
+File: figures/pareto_latency_tradeoff.pdf Graphic file (type pdf)
+<use figures/pareto_latency_tradeoff.pdf>
+Package pdftex.def Info: figures/pareto_latency_tradeoff.pdf  used on input lin
+e 2647.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+
+Overfull \hbox (4.4276pt too wide) in paragraph at lines 2697--2698
+[]\T1/lmr/m/n/10.95 (-20) median  
+ []
+
+
+Overfull \hbox (0.1046pt too wide) in alignment at lines 2686--2716
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.4276pt too wide) in paragraph at lines 2725--2726
+[]\T1/lmr/m/n/10.95 (-20) median  
+ []
+
+
+Overfull \hbox (0.1046pt too wide) in alignment at lines 2716--2744
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (0.1046pt too wide) in alignment at lines 2744--2746
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (0.1046pt too wide) in alignment at lines 2746--2755
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[37]
+
+[38]
+
+[39 <./map_outputs/contact_sheet.png (PNG copy)>]
+
+[40 <./figures/pareto_latency_tradeoff.pdf>]
+Underfull \hbox (badness 1394) in paragraph at lines 2981--2987
+[]\T1/lmr/m/n/10.95 (+20) Overall, both mod-els heav-ily fa-vored di-rect geoco
+d-ing over cen-troid com-pu-ta-tion, with
+ []
+
+
+
+[41]
+
+[42] (./main_two_column.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1779,32 +1585,29 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 18017 strings out of 474662
- 286912 string characters out of 5751110
- 1165084 words of memory out of 5000000
- 40193 multiletter control sequences out of 15000+600000
- 640880 words of font info for 210 fonts, out of 8000000 for 9000
+ 16549 strings out of 474662
+ 257579 string characters out of 5751110
+ 1258322 words of memory out of 5000000
+ 38711 multiletter control sequences out of 15000+600000
+ 642875 words of font info for 223 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 83i,13n,93p,1012b,2094s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,13n,93p,1012b,2086s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></u
 sr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/lo
 cal/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/t
-exlive/2025basic/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive
-/2025basic/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025b
-asic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025basic/t
-exmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2025basic/texmf-d
-ist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025basic/texmf-dist/fon
-ts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type
-1/public/lm/lmr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/publi
-c/lm/lmr9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lm
-ri10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmsy10.
-pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></
-usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/l
-ocal/texlive/2025basic/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
-Output written on main_two_column.pdf (34 pages, 4963289 bytes).
+exlive/2025basic/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive
+/2025basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025b
+asic/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2025basic/t
+exmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025basic/texmf-di
+st/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025basic/texmf-dist/font
+s/type1/public/lm/lmr9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1
+/public/lm/lmri10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/publ
+ic/lm/lmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm
+/lmtt10.pfb>
+Output written on main_two_column.pdf (42 pages, 22872156 bytes).
 PDF statistics:
- 1271 PDF objects out of 1440 (max. 8388607)
- 943 compressed objects within 10 object streams
- 370 named destinations out of 1000 (max. 500000)
- 47720 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1259 PDF objects out of 1440 (max. 8388607)
+ 930 compressed objects within 10 object streams
+ 380 named destinations out of 1000 (max. 500000)
+ 47725 words of extra memory for PDF output out of 51595 (max. 10000000)
 
