@@ -1525,19 +1525,19 @@ modes:
 
 \begin{figure}[H]
 \centering
-\begin{subfigure}{0.48\textwidth}
+\begin{minipage}{0.48\textwidth}
   \centering
   \includegraphics[width=\linewidth]{map_outputs/grant_1_map.png}
   \caption{Success example: Grant 1.}
   \label{fig:grant1}
-\end{subfigure}
-\hfill % Maximal horizontal space between subfigures
-\begin{subfigure}{0.48\textwidth}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
   \centering
   \includegraphics[width=\linewidth]{map_outputs/grant_19_map.png}
   \caption{Failure-mode example: Grant 19.}
   \label{fig:grant19}
-\end{subfigure}
+\end{minipage}
 \caption{Grant examples: Grant 1 (left) shows a success case where the o3 model (M-2) and tool-chain gpt-4.1 (T-4) are close to ground truth. Grant 19 (right) illustrates a failure mode where an early spurious geocoder hit sends the tool-chain prediction far from ground truth, whereas the unguided model remains closer to the actual location. Basemap © OSM.}
 \label{fig:grant_maps}
 \end{figure}

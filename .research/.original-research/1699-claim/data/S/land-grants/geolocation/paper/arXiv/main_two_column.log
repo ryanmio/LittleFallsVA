@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 AUG 2025 10:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 AUG 2025 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -947,121 +947,22 @@ l.1526 \begin{figure}[H]
                         
 Option `H' ignored and `p' used.
 
-
-! LaTeX Error: Environment subfigure undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1528 \begin{subfigure}
-                        {0.48\textwidth}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.1528 \begin{subfigure}{0.48\textwidth}
-                                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.1528 \begin{subfigure}{0.48\textwidth}
-                                        
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
 <map_outputs/grant_1_map.png, id=377, 433.62pt x 433.62pt>
 File: map_outputs/grant_1_map.png Graphic file (type png)
 <use map_outputs/grant_1_map.png>
 Package pdftex.def Info: map_outputs/grant_1_map.png  used on input line 1530.
-(pdftex.def)             Requested size: 469.75502pt x 469.7781pt.
-
-! LaTeX Error: \begin{figure} on input line 1526 ended by \end{subfigure}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1533 \end{subfigure}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Environment subfigure undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1535 \begin{subfigure}
-                        {0.48\textwidth}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.1535 \begin{subfigure}{0.48\textwidth}
-                                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.1535 \begin{subfigure}{0.48\textwidth}
-                                        
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
+(pdftex.def)             Requested size: 225.4804pt x 225.48369pt.
 <map_outputs/grant_19_map.png, id=378, 433.62pt x 433.62pt>
 File: map_outputs/grant_19_map.png Graphic file (type png)
 <use map_outputs/grant_19_map.png>
 Package pdftex.def Info: map_outputs/grant_19_map.png  used on input line 1537.
 
-(pdftex.def)             Requested size: 469.75502pt x 469.7781pt.
-
-! LaTeX Error: \begin{figure} on input line 1526 ended by \end{subfigure}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1540 \end{subfigure}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: Float too large for page by 425.35086pt on input line 1543.
-
+(pdftex.def)             Requested size: 225.4804pt x 225.48369pt.
 
 
 [21]
 
-[22 <./map_outputs/grant_1_map.png> <./map_outputs/grant_19_map.png>]
-
-[23]
+[22]
 Underfull \hbox (badness 1043) in paragraph at lines 1670--1675
 []\T1/lmr/bx/n/10.95 (+20) Corpus ex-pan-sion. \T1/lmr/m/n/10.95 (+20) Digi-tis
 -ing the re-main-ing vol-umes of \T1/lmr/m/it/10.95 (+20) Cav-a-liers and Pi-o-
@@ -1070,11 +971,11 @@ neers
 
 
 
+[23]
+
 [24]
 
 [25]
-
-[26]
 
 ! LaTeX Error: Invalid UTF-8 byte sequence (â\lst@EC€\lst@EC¢).
 
@@ -1280,11 +1181,11 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 
 
+[26]
+
 [27]
 
 [28]
-
-[29]
 ! Undefined control sequence.
 l.2032 \passthrough
                    {\lstinline!37.166303, -77.240091!}
@@ -1339,7 +1240,7 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 
 
-[30]
+[29]
 ! Undefined control sequence.
 l.2081 The driver maps the call to \passthrough
                                                {\lstinline!google\_geocode()!}
@@ -1399,7 +1300,7 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 
 
-[31]
+[30]
 ! Undefined control sequence.
 l.2117 The backend converts each \passthrough
                                              {\lstinline!(lat, lng)!} pair to a
@@ -1492,7 +1393,7 @@ and I'll forget about whatever was undefined.
 
 
 
-[32]
+[31]
 Overfull \hbox (2.74075pt too wide) in paragraph at lines 2252--2253
 []\T1/lmr/m/n/10.95 (-20) Method  
  []
@@ -1504,31 +1405,37 @@ Overfull \hbox (2.74075pt too wide) in paragraph at lines 2280--2281
 
 
 
-[33]
+[32]
 
-[34]
-<figures/error_boxplot.pdf, id=677, 505.89pt x 289.08pt>
+[33]
+<figures/error_boxplot.pdf, id=668, 505.89pt x 289.08pt>
 File: figures/error_boxplot.pdf Graphic file (type pdf)
 <use figures/error_boxplot.pdf>
 Package pdftex.def Info: figures/error_boxplot.pdf  used on input line 2557.
 (pdftex.def)             Requested size: 505.88875pt x 289.07928pt.
 
 
-[35]
-<map_outputs/contact_sheet.png, id=687, 1031.052pt x 1045.506pt>
+[34]
+<map_outputs/contact_sheet.png, id=678, 1031.052pt x 1045.506pt>
 File: map_outputs/contact_sheet.png Graphic file (type png)
 <use map_outputs/contact_sheet.png>
 Package pdftex.def Info: map_outputs/contact_sheet.png  used on input line 2565
 .
 (pdftex.def)             Requested size: 1031.0495pt x 1045.50345pt.
- [36 <./figures/error_boxplot.pdf>]
-<figures/pareto_latency_tradeoff.pdf, id=745, 433.62pt x 289.08pt>
+<figures/pareto_latency_tradeoff.pdf, id=681, 433.62pt x 289.08pt>
 File: figures/pareto_latency_tradeoff.pdf Graphic file (type pdf)
 <use figures/pareto_latency_tradeoff.pdf>
 Package pdftex.def Info: figures/pareto_latency_tradeoff.pdf  used on input lin
 e 2647.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
+
+[35]
+
+[36 <./map_outputs/grant_1_map.png> <./map_outputs/grant_19_map.png> <./figures
+/error_boxplot.pdf>]
+
+[37 <./map_outputs/contact_sheet.png (PNG copy)>]
 Overfull \hbox (4.4276pt too wide) in paragraph at lines 2697--2698
 []\T1/lmr/m/n/10.95 (-20) median  
  []
@@ -1558,19 +1465,17 @@ Overfull \hbox (0.1046pt too wide) in alignment at lines 2746--2755
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
-[37]
 
-[38]
 
-[39 <./map_outputs/contact_sheet.png (PNG copy)>]
-
-[40 <./figures/pareto_latency_tradeoff.pdf>]
+[38 <./figures/pareto_latency_tradeoff.pdf>] [39]
 Underfull \hbox (badness 1394) in paragraph at lines 2981--2987
 []\T1/lmr/m/n/10.95 (+20) Overall, both mod-els heav-ily fa-vored di-rect geoco
 d-ing over cen-troid com-pu-ta-tion, with
  []
 
 
+
+[40]
 
 [41]
 
@@ -1585,10 +1490,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 16549 strings out of 474662
- 257579 string characters out of 5751110
- 1258322 words of memory out of 5000000
- 38711 multiletter control sequences out of 15000+600000
+ 16546 strings out of 474662
+ 257505 string characters out of 5751110
+ 1259322 words of memory out of 5000000
+ 38708 multiletter control sequences out of 15000+600000
  642875 words of font info for 223 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  83i,13n,93p,1012b,2086s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1604,7 +1509,7 @@ s/type1/public/lm/lmr9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1
 /public/lm/lmri10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm
 /lmtt10.pfb>
-Output written on main_two_column.pdf (42 pages, 22872156 bytes).
+Output written on main_two_column.pdf (42 pages, 22871457 bytes).
 PDF statistics:
  1259 PDF objects out of 1440 (max. 8388607)
  930 compressed objects within 10 object streams
