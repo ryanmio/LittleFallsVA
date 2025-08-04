@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 AUG 2025 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  4 AUG 2025 08:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -937,33 +937,11 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1526 \begin{figure}[H]
-                        
-Option `H' ignored and `p' used.
-
-<map_outputs/grant_1_map.png, id=377, 433.62pt x 433.62pt>
-File: map_outputs/grant_1_map.png Graphic file (type png)
-<use map_outputs/grant_1_map.png>
-Package pdftex.def Info: map_outputs/grant_1_map.png  used on input line 1530.
-(pdftex.def)             Requested size: 225.4804pt x 225.48369pt.
-<map_outputs/grant_19_map.png, id=378, 433.62pt x 433.62pt>
-File: map_outputs/grant_19_map.png Graphic file (type png)
-<use map_outputs/grant_19_map.png>
-Package pdftex.def Info: map_outputs/grant_19_map.png  used on input line 1537.
-
-(pdftex.def)             Requested size: 225.4804pt x 225.48369pt.
-
 
 [21]
 
 [22]
-Underfull \hbox (badness 1043) in paragraph at lines 1670--1675
+Underfull \hbox (badness 1043) in paragraph at lines 1651--1656
 []\T1/lmr/bx/n/10.95 (+20) Corpus ex-pan-sion. \T1/lmr/m/n/10.95 (+20) Digi-tis
 -ing the re-main-ing vol-umes of \T1/lmr/m/it/10.95 (+20) Cav-a-liers and Pi-o-
 neers
@@ -983,7 +961,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1833 • 
+l.1814 • 
            `geocode_place(query, strategy)`
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -998,7 +976,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1834     – 
+l.1815     – 
                Look up a place name via the Google Geocoding API (Virginia-r...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1014,7 +992,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1835     – 
+l.1816     – 
                Returns JSON: `{lat, lng, formatted_address, strategy, query_...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1030,7 +1008,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1836 • 
+l.1817 • 
            `compute_centroid(points)`
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1045,7 +1023,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1837     – 
+l.1818     – 
                Accepts **two or more** objects like `{lat: 37.1, lng: -76.7}...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1061,7 +1039,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1846 3. Optional centroid use – 
+l.1827 3. Optional centroid use – 
                                     if the grant text clearly places the tra...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1077,7 +1055,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1850 5. Final answer – 
+l.1831 5. Final answer – 
                            reply with **only** the coordinates in decimal de...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1093,7 +1071,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1853 • 
+l.1834 • 
            Always perform at least one successful `geocode_place` call befor...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1109,7 +1087,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1854 • 
+l.1835 • 
            Invoke `compute_centroid` only when you already have two or more ...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1125,7 +1103,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1855 • 
+l.1836 • 
            Never invent coordinates—derive them from tool output.
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1140,7 +1118,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1855 • Never invent coordinates—derive 
+l.1836 • Never invent coordinates—derive 
                                              them from tool output.
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1155,7 +1133,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1856 • 
+l.1837 • 
            Return no explanatory text, symbols, or degree signs—just `lat,...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1171,7 +1149,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1856 ...y text, symbols, or degree signs—just 
+l.1837 ...y text, symbols, or degree signs—just 
                                                   `lat, lon`.
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1187,7 +1165,7 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 [28]
 ! Undefined control sequence.
-l.2032 \passthrough
+l.2013 \passthrough
                    {\lstinline!37.166303, -77.240091!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1196,7 +1174,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2046 ...{Responses} request via the \passthrough
+l.2027 ...{Responses} request via the \passthrough
                                                   {\lstinline!tools!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1205,7 +1183,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2048 \passthrough
+l.2029 \passthrough
                    {\lstinline!function\_call!} objects whose arguments are
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1214,7 +1192,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2051 \passthrough
+l.2032 \passthrough
                    {\lstinline!function\_call\_output!} item containing the
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1229,7 +1207,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2056 // geocode_place – 
+l.2037 // geocode_place – 
                             wrapper around Google Geocoding API (Virginia-re...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1242,7 +1220,7 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 [29]
 ! Undefined control sequence.
-l.2081 The driver maps the call to \passthrough
+l.2062 The driver maps the call to \passthrough
                                                {\lstinline!google\_geocode()!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1251,7 +1229,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2083 \passthrough
+l.2064 \passthrough
                    {\lstinline!components=administrative\_area:VA!} filter,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1260,7 +1238,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2086 \passthrough
+l.2067 \passthrough
                    {\lstinline!\{lat, lng, formatted\_address, strategy, que...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1275,7 +1253,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2091 // compute_centroid – 
+l.2072 // compute_centroid – 
                                spherical mean of ≥2 anchor points
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1290,7 +1268,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2091 ...ute_centroid – spherical mean of ≥2 
+l.2072 ...ute_centroid – spherical mean of ≥2 
                                                   anchor points
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1302,7 +1280,7 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 [30]
 ! Undefined control sequence.
-l.2117 The backend converts each \passthrough
+l.2098 The backend converts each \passthrough
                                              {\lstinline!(lat, lng)!} pair to a
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1311,7 +1289,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2132 ...mph{Invocation.} It emits a \passthrough
+l.2113 ...mph{Invocation.} It emits a \passthrough
                                                   {\lstinline!function\_call!}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1320,7 +1298,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2138   \passthrough
+l.2119   \passthrough
                      {\lstinline!function\_call\_output!} message appended to
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1329,7 +1307,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2143   \passthrough
+l.2124   \passthrough
                      {\lstinline!compute\_centroid!}, or (iii) produces a final
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1338,7 +1316,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2154 \passthrough
+l.2135 \passthrough
                    {\lstinline!run\_experiment.py!}, which exposes a
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1347,7 +1325,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2157 \passthrough
+l.2138 \passthrough
                    {\lstinline!--dry-run!},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1356,7 +1334,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2158 \passthrough
+l.2139 \passthrough
                    {\lstinline!--max-rows!}). The driver
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1365,7 +1343,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2168   \passthrough
+l.2149   \passthrough
                      {\lstinline!function\_call!} requests to the tool back-end
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1374,7 +1352,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2172   \passthrough
+l.2153   \passthrough
                      {\lstinline!runs/<method>/calls.jsonl!}, and
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1383,7 +1361,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.2175   (\passthrough
+l.2156   (\passthrough
                       {\lstinline!results\_<evalset>.csv!}) and a Markdown run
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1394,12 +1372,12 @@ and I'll forget about whatever was undefined.
 
 
 [31]
-Overfull \hbox (2.74075pt too wide) in paragraph at lines 2252--2253
+Overfull \hbox (2.74075pt too wide) in paragraph at lines 2233--2234
 []\T1/lmr/m/n/10.95 (-20) Method  
  []
 
 
-Overfull \hbox (2.74075pt too wide) in paragraph at lines 2280--2281
+Overfull \hbox (2.74075pt too wide) in paragraph at lines 2261--2262
 []\T1/lmr/m/n/10.95 (-20) Method  
  []
 
@@ -1408,92 +1386,111 @@ Overfull \hbox (2.74075pt too wide) in paragraph at lines 2280--2281
 [32]
 
 [33]
-<figures/error_boxplot.pdf, id=668, 505.89pt x 289.08pt>
+<figures/error_boxplot.pdf, id=666, 505.89pt x 289.08pt>
 File: figures/error_boxplot.pdf Graphic file (type pdf)
 <use figures/error_boxplot.pdf>
-Package pdftex.def Info: figures/error_boxplot.pdf  used on input line 2557.
+Package pdftex.def Info: figures/error_boxplot.pdf  used on input line 2538.
 (pdftex.def)             Requested size: 505.88875pt x 289.07928pt.
 
 
 [34]
-<map_outputs/contact_sheet.png, id=678, 1031.052pt x 1045.506pt>
+
+[35 <./figures/error_boxplot.pdf>]
+<map_outputs/grant_1_map.png, id=727, 433.62pt x 433.62pt>
+File: map_outputs/grant_1_map.png Graphic file (type png)
+<use map_outputs/grant_1_map.png>
+Package pdftex.def Info: map_outputs/grant_1_map.png  used on input line 2550.
+(pdftex.def)             Requested size: 225.4804pt x 225.48369pt.
+<map_outputs/grant_19_map.png, id=728, 433.62pt x 433.62pt>
+File: map_outputs/grant_19_map.png Graphic file (type png)
+<use map_outputs/grant_19_map.png>
+Package pdftex.def Info: map_outputs/grant_19_map.png  used on input line 2554.
+
+(pdftex.def)             Requested size: 225.4804pt x 225.48369pt.
+<map_outputs/contact_sheet.png, id=729, 1031.052pt x 1045.506pt>
 File: map_outputs/contact_sheet.png Graphic file (type png)
 <use map_outputs/contact_sheet.png>
-Package pdftex.def Info: map_outputs/contact_sheet.png  used on input line 2565
+Package pdftex.def Info: map_outputs/contact_sheet.png  used on input line 2568
 .
 (pdftex.def)             Requested size: 1031.0495pt x 1045.50345pt.
-<figures/pareto_latency_tradeoff.pdf, id=681, 433.62pt x 289.08pt>
+
+
+[36
+
+ <./map_outputs/grant_1_map.png> <./map_outputs/grant_19_map.png>]
+
+[37 <./map_outputs/contact_sheet.png (PNG copy)>]
+
+[38
+
+]
+<figures/pareto_latency_tradeoff.pdf, id=752, 433.62pt x 289.08pt>
 File: figures/pareto_latency_tradeoff.pdf Graphic file (type pdf)
 <use figures/pareto_latency_tradeoff.pdf>
 Package pdftex.def Info: figures/pareto_latency_tradeoff.pdf  used on input lin
-e 2647.
+e 2654.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
 
-[35]
+[39
 
-[36 <./map_outputs/grant_1_map.png> <./map_outputs/grant_19_map.png> <./figures
-/error_boxplot.pdf>]
-
-[37 <./map_outputs/contact_sheet.png (PNG copy)>]
-Overfull \hbox (4.4276pt too wide) in paragraph at lines 2697--2698
+ <./figures/pareto_latency_tradeoff.pdf>]
+Overfull \hbox (4.4276pt too wide) in paragraph at lines 2706--2707
 []\T1/lmr/m/n/10.95 (-20) median  
  []
 
 
-Overfull \hbox (0.1046pt too wide) in alignment at lines 2686--2716
+Overfull \hbox (0.1046pt too wide) in alignment at lines 2695--2725
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4.4276pt too wide) in paragraph at lines 2725--2726
+Overfull \hbox (4.4276pt too wide) in paragraph at lines 2734--2735
 []\T1/lmr/m/n/10.95 (-20) median  
  []
 
 
-Overfull \hbox (0.1046pt too wide) in alignment at lines 2716--2744
+Overfull \hbox (0.1046pt too wide) in alignment at lines 2725--2753
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.1046pt too wide) in alignment at lines 2744--2746
+Overfull \hbox (0.1046pt too wide) in alignment at lines 2753--2755
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.1046pt too wide) in alignment at lines 2746--2755
+Overfull \hbox (0.1046pt too wide) in alignment at lines 2755--2764
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
 
-[38 <./figures/pareto_latency_tradeoff.pdf>] [39]
-Underfull \hbox (badness 1394) in paragraph at lines 2981--2987
+[40
+
+]
+Underfull \hbox (badness 1394) in paragraph at lines 2990--2996
 []\T1/lmr/m/n/10.95 (+20) Overall, both mod-els heav-ily fa-vored di-rect geoco
 d-ing over cen-troid com-pu-ta-tion, with
  []
 
 
 
-[40]
-
 [41]
 
-[42] (./main_two_column.aux)
+[42]
+
+[43] (./main_two_column.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 16546 strings out of 474662
- 257505 string characters out of 5751110
- 1259322 words of memory out of 5000000
- 38708 multiletter control sequences out of 15000+600000
+ 16543 strings out of 474662
+ 257468 string characters out of 5751110
+ 1257949 words of memory out of 5000000
+ 38706 multiletter control sequences out of 15000+600000
  642875 words of font info for 223 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  83i,13n,93p,1012b,2086s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1509,10 +1506,10 @@ s/type1/public/lm/lmr9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1
 /public/lm/lmri10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/lm
 /lmtt10.pfb>
-Output written on main_two_column.pdf (42 pages, 22871457 bytes).
+Output written on main_two_column.pdf (43 pages, 22871617 bytes).
 PDF statistics:
- 1259 PDF objects out of 1440 (max. 8388607)
- 930 compressed objects within 10 object streams
- 380 named destinations out of 1000 (max. 500000)
+ 1264 PDF objects out of 1440 (max. 8388607)
+ 934 compressed objects within 10 object streams
+ 379 named destinations out of 1000 (max. 500000)
  47725 words of extra memory for PDF output out of 51595 (max. 10000000)
 

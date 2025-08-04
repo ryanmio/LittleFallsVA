@@ -29,6 +29,7 @@ header-includes:
   - \DeclareUnicodeCharacter{2014}{---}
   - \DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}
   - \usepackage{footnote}
+  - \usepackage{placeins}
 ---
 
 \vspace{1em}
@@ -468,25 +469,6 @@ Inspection of the largest residuals uncovers three recurring failure modes:
 
 3. **Cascading search bias.** Tool-enabled runs introduce an additional failure channel: once the first `geocode_place` call returns a spurious coordinate, subsequent `compute_centroid` operations often average anchors that are already flawed, locking in the error. Raising the threshold for calling the centroid function—or providing the model with a quality heuristic—may mitigate this issue.
 
-
-\begin{figure}[H]
-\centering
-\begin{minipage}{0.48\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{../analysis/mapping_workflow/map_outputs/grant_1_map.png}
-  \caption{Success example: Grant 1.}
-  \label{fig:grant1}
-\end{minipage}
-\hfill
-\begin{minipage}{0.48\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{../analysis/mapping_workflow/map_outputs/grant_19_map.png}
-  \caption{Failure-mode example: Grant 19.}
-  \label{fig:grant19}
-\end{minipage}
-\caption{Grant examples: Grant 1 (left) shows a success case where the o3 model (M-2) and tool-chain gpt-4.1 (T-4) are close to ground truth. Grant 19 (right) illustrates a failure mode where an early spurious geocoder hit sends the tool-chain prediction far from ground truth, whereas the unguided model remains closer to the actual location. Basemap © OSM.}
-\label{fig:grant_maps}
-\end{figure}
 
 In Grant 1 (LEWIS GREEN), language-only inference (M-2) achieves county-level precision (9 km error), and the tool-chain (T-4) further reduces the error to just 1.5 km. In Grant 19, a spurious geocoder hit sends the tool-chain prediction far from ground truth, whereas the unguided models remain within a reasonable distance—a pattern that typifies the cascading search bias described above.
 
@@ -957,11 +939,33 @@ Figure \ref{fig:error_boxplot} shows the distribution of geolocation error for e
 
 ![Error Distribution Boxplot by Method](../analysis/figures/error_boxplot.pdf){#fig:error_boxplot width="\linewidth" fig-pos="H"}
 
+\clearpage
+
 ### C.2 Error Maps
 
-![Grid view of all 43 mapped grants showing ground truth and predictions.](../analysis/mapping_workflow/contact_sheet.png){#fig:contactsheet width="0.95\\linewidth"}
+```{=latex}
+\begin{figure}[htbp]
+\centering
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{../analysis/mapping_workflow/map_outputs/grant_1_map.png}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{../analysis/mapping_workflow/map_outputs/grant_19_map.png}
+  \end{minipage}
+  \caption{Error‐map examples: Grant 1 (left, success) and Grant 19 (right, failure mode).}
+  \label{fig:grant-pairs}
+\end{figure}
+```
 
-Figure \ref{fig:contactsheet} plots all six methods for every locatable grant against ground truth coordinates (black stars). Error distances are shown as dashed lines connecting predictions to ground truth. For cartographic clarity the H-2, H-3, and H-4 baselines are omitted; their substantially larger positional errors would require a map extent so broad that the fine-scale patterns of interest would be lost.
+Grant 1 (left) shows a success case where the o3 model (M-2) and tool-chain gpt-4.1 (T-4) are close to ground truth. Grant 19 (right) illustrates a failure mode where an early spurious geocoder hit sends the tool-chain prediction far from ground truth, whereas the unguided model remains closer to the actual location. Basemap © OSM.
+
+![Grid view of all 43 mapped grants showing ground truth and predictions.](../analysis/mapping_workflow/contact_sheet.png){#fig:all-grants width="0.95\\linewidth"}
+
+Figure \ref{fig:all-grants} plots all six methods for every locatable grant against ground truth coordinates (black stars). Error distances are shown as dashed lines connecting predictions to ground truth. For cartographic clarity the H-2, H-3, and H-4 baselines are omitted; their substantially larger positional errors would require a map extent so broad that the fine-scale patterns of interest would be lost.
+
+\clearpage
 
 ### C.3 Marginal Cost of High-Precision Accuracy
 
@@ -982,12 +986,16 @@ Table: Marginal cost to improve the ≤10 km hit-rate by one percentage point. {
 
 The numbers reveal why **gpt-4o-2024-08-06** is so attractive in budget-constrained settings: each percentage-point gain in "high-precision" accuracy costs only six cents—roughly two orders of magnitude cheaper than even the *o3* ensemble, and over 10,000 × cheaper than a professional GIS analyst.
 
+\clearpage
+
 ### C.4 Latency-Accuracy Tradeoff
 Processing time presents another critical dimension for evaluation. The figure below shows how each method balances computational latency against geolocation accuracy. LLM methods cluster in the bottom-left quadrant, delivering results in seconds rather than minutes, while maintaining lower error rates than the professional GIS approach.
 
 ![Latency-Accuracy Tradeoff](../analysis/figures/pareto_latency_tradeoff.pdf){#fig:pareto_latency width="\linewidth" fig-pos="H"}
 
 Figure \ref{fig:pareto_latency}: Latency-Accuracy Tradeoff. This figure plots mean error (km) against processing time per grant (seconds) for each evaluated method. All automatic methods produce coordinates in 0.2–13 s of computation time, compared to the GIS analyst's labor time of ≈502 s per grant. Note the logarithmic scale on the x-axis.
+
+\clearpage
 
 ## Appendix D Tool Augmentation Analysis
 

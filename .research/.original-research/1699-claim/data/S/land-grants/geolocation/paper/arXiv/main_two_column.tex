@@ -1523,25 +1523,6 @@ modes:
   mitigate this issue.
 \end{enumerate}
 
-\begin{figure}[H]
-\centering
-\begin{minipage}{0.48\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{map_outputs/grant_1_map.png}
-  \caption{Success example: Grant 1.}
-  \label{fig:grant1}
-\end{minipage}
-\hfill
-\begin{minipage}{0.48\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{map_outputs/grant_19_map.png}
-  \caption{Failure-mode example: Grant 19.}
-  \label{fig:grant19}
-\end{minipage}
-\caption{Grant examples: Grant 1 (left) shows a success case where the o3 model (M-2) and tool-chain gpt-4.1 (T-4) are close to ground truth. Grant 19 (right) illustrates a failure mode where an early spurious geocoder hit sends the tool-chain prediction far from ground truth, whereas the unguided model remains closer to the actual location. Basemap © OSM.}
-\label{fig:grant_maps}
-\end{figure}
-
 In Grant 1 (LEWIS GREEN), language-only inference (M-2) achieves
 county-level precision (9 km error), and the tool-chain (T-4) further
 reduces the error to just 1.5 km. In Grant 19, a spurious geocoder hit
@@ -2558,21 +2539,45 @@ and central tendency.
 \caption{Error Distribution Boxplot by Method}\label{fig:error_boxplot}
 \end{figure}
 
+\clearpage
+
 \subsubsection{C.2 Error Maps}\label{c.2-error-maps}
+
+\begin{figure}[htbp]
+\centering
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{map_outputs/grant_1_map.png}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{map_outputs/grant_19_map.png}
+  \end{minipage}
+  \caption{Error‐map examples: Grant 1 (left, success) and Grant 19 (right, failure mode).}
+  \label{fig:grant-pairs}
+\end{figure}
+
+Grant 1 (left) shows a success case where the o3 model (M-2) and
+tool-chain gpt-4.1 (T-4) are close to ground truth. Grant 19 (right)
+illustrates a failure mode where an early spurious geocoder hit sends
+the tool-chain prediction far from ground truth, whereas the unguided
+model remains closer to the actual location. Basemap © OSM.
 
 \begin{figure}
 \centering
 \pandocbounded{\includegraphics[keepaspectratio]{map_outputs/contact_sheet.png}}
 \caption{Grid view of all 43 mapped grants showing ground truth and
-predictions.}\label{fig:contactsheet}
+predictions.}\label{fig:all-grants}
 \end{figure}
 
-Figure \ref{fig:contactsheet} plots all six methods for every locatable
+Figure \ref{fig:all-grants} plots all six methods for every locatable
 grant against ground truth coordinates (black stars). Error distances
 are shown as dashed lines connecting predictions to ground truth. For
 cartographic clarity the H-2, H-3, and H-4 baselines are omitted; their
 substantially larger positional errors would require a map extent so
 broad that the fine-scale patterns of interest would be lost.
+
+\clearpage
 
 \subsubsection{C.3 Marginal Cost of High-Precision
 Accuracy}\label{c.3-marginal-cost-of-high-precision-accuracy}
@@ -2633,6 +2638,8 @@ budget-constrained settings: each percentage-point gain in
 magnitude cheaper than even the \emph{o3} ensemble, and over 10,000 ×
 cheaper than a professional GIS analyst.
 
+\clearpage
+
 \subsubsection{C.4 Latency-Accuracy
 Tradeoff}\label{c.4-latency-accuracy-tradeoff}
 
@@ -2653,6 +2660,8 @@ plots mean error (km) against processing time per grant (seconds) for
 each evaluated method. All automatic methods produce coordinates in
 0.2--13 s of computation time, compared to the GIS analyst's labor time
 of ≈502 s per grant. Note the logarithmic scale on the x-axis.
+
+\clearpage
 
 \subsection{Appendix D Tool Augmentation
 Analysis}\label{appendix-d-tool-augmentation-analysis}
