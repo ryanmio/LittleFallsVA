@@ -999,11 +999,9 @@ Figure \ref{fig:pareto_latency}: Latency-Accuracy Tradeoff. This figure plots me
 
 ## Appendix D Tool Augmentation Analysis
 
-Table \ref{tbl:tool_direct_comparison} isolates the impact of providing tool access to identical models, revealing that tool augmentation does not consistently improve accuracy. For gpt-4.1-2025-04-14, enabling tool access increases mean error by 30.6%, while for the o4-mini model, it decreases error by 9.6%.
-
 ### D.1 Direct Tool vs. Non-Tool Comparison
 
-Table \ref{tbl:tool_direct_comparison} provides a head-to-head comparison of identical models with and without tool access. This controls for model architecture effects and isolates the impact of tool access alone.
+Table \ref{tbl:tool_direct_comparison} isolates the impact of providing tool access to identical models, revealing that tool augmentation does not consistently improve accuracy. For gpt-4.1-2025-04-14, enabling tool access increases mean error by 30.6%, while for the o4-mini model, it decreases error by 9.6%.
 
 | Model | Category | mean | median | sd | min | max | ≤1 km | ≤5 km | ≤10 km | ≤25 km | ≤50 km |
 |------|-----|---|---|---|---|---|---|---|---|---|---|
@@ -1012,7 +1010,7 @@ Table \ref{tbl:tool_direct_comparison} provides a head-to-head comparison of ide
 | o4-mini-2025-04-16 | one shot | 41.65 | 27.39 | 27.32 | 7.59 | 103.49 | 0.0% | 0.0% | 7.0% | 37.2% | 62.8% |
 | o4-mini-2025-04-16 | tool chain | 37.65 | 33.61 | 24.54 | 0.59 | 110.19 | 4.7% | 11.6% | 14.0% | 32.6% | 69.8% |
 
-Table: Side-by-side comparison of identical models with and without tool access. {#tbl:tool_direct_comparison}
+Table: Comparison of identical models with and without tool access. {#tbl:tool_direct_comparison}
 
 ### D.2 Quantified Tool Effect
 

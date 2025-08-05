@@ -13,8 +13,9 @@ fi
 
 # Generate LaTeX - SINGLE COLUMN for reliable figure placement
 pandoc "$SRC" \
-  --from markdown --to latex --citeproc \
+  --from markdown --to latex \
   --filter pandoc-crossref \
+  --citeproc \
   --bibliography="$ROOT/refs.bib" \
   -V documentclass=article \
   -V geometry:margin=1in -V fontsize=11pt \
@@ -47,7 +48,5 @@ fi
 cd "$ROOT"
 FILE_BASENAME=$(basename "$OUT_TEX" .tex)
 
-pdflatex -interaction=nonstopmode "$FILE_BASENAME.tex"
-bibtex   "$FILE_BASENAME" || true
 pdflatex -interaction=nonstopmode "$FILE_BASENAME.tex"
 pdflatex -interaction=nonstopmode "$FILE_BASENAME.tex" 
