@@ -37,11 +37,11 @@ _ACRE_RE = re.compile(r"(\d+(?:\.\d+)?)\s*a(?:c|cs|cres|res)?\.?", re.IGNORECASE
 _YEAR_RE = re.compile(r"(16|17|18)\d{2}")
 # Capture words before Co/County/City/Go (handle OCR corruption)
 _COUNTY_RE = re.compile(
-    r"([A-Z][A-Za-z &'\.\-:8é!]{2,15})"  # candidate county words
-    r"\s*[,:';]?\s*"
-    r"(?:Co|Go)\b"                      # explicit word-boundary after Co/Go
-    r"(?:\s+[a-z]{1,3})?"               # allow trailing OCR garbage like 'cn'
-    r"\s*[\.,:;']?",
+    r"([A-Z][A-Za-z &'\u2018\u2019\.\-:8é!]{2,20})"   # candidate county words (incl. curly quotes)
+    r"\s*[,:';\u2018\u2019`\"]?\s*"
+    r"(?:Co|Go|Cnty|County|City|Citty)\b"  # handle City/Citty and County/Cnty
+    r"(?:\s+[a-z]{1,3})?"                  # allow trailing OCR garbage like 'cn'
+    r"\s*[\.,:;'\u2018\u2019]?",
     re.IGNORECASE,
 )
 
@@ -123,6 +123,7 @@ _COUNTY_ABBR_MAP: Dict[str, str] = {
     # Surry variants
     "SURRV": "Surry",
     "SURRY": "Surry",
+    "SURREY": "Surry",
     # Essex variants
     "ESSEX": "Essex",
     "ESX": "Essex",
@@ -192,6 +193,8 @@ _COUNTY_ABBR_MAP: Dict[str, str] = {
     "HENSICO": "Henrico",
     "SURTY": "Surry",
     "GLOSTER": "Gloucester",
+    "GLOS": "Gloucester",
+    "GLOST": "Gloucester",
     "GLOUSTER": "Gloucester",
     "PR ANN": "Princess Anne",
     "SPOTSYLY": "Spotsylvania",
@@ -219,13 +222,113 @@ _COUNTY_ABBR_MAP: Dict[str, str] = {
     "IGHT": "Isle Of Wight",
     "OF WICHT": "Isle Of Wight",
     "IN PR ANNE": "Princess Anne",
+    # Volume II additions / abbreviations
+    "RAPPA": "Rappahannock",
+    "RAPPAHANNOCK": "Rappahannock",
+    "RAPPAH": "Rappahannock",
+    "LANCASTER": "Lancaster",
+    "LANCAS": "Lancaster",
+    "STAFF": "Stafford",
+    "STAFFORD": "Stafford",
+    "STAFFD": "Stafford",
+    "WESTMORELAND": "Westmoreland",
+    "W MORELAND": "Westmoreland",
+    "WMORELAND": "Westmoreland",
+    "W MOREL": "Westmoreland",
+    "WIGHT": "Isle Of Wight",
+    "IS OF W": "Isle Of Wight",
+    "IS OF WIGHT": "Isle Of Wight",
+    "CHAS": "Charles City",
+    "CITTY": "James City",  # if paired with James/Chas upstream
+    "JAMES": "James City",
+    "NORF": "Norfolk",
+    "NORFOLK": "Norfolk",
+    "WARWICKE": "Warwick",
+    "WARWICK": "Warwick",
+    "MIDLESEX": "Middlesex",
+    "GLOSTER": "Gloucester",
+    "NANZEMOND": "Nansemond",
+    "NANSIMOND": "Nansemond",
+    "NANSIMON": "Nansemond",
+    "NANSEMUND": "Nansemond",
+    "ACCOMAC": "Accomack",
+    "ACCOMACKE": "Accomack",
+    "ACCAMACK": "Accomack",
+    "ACCO MACK": "Accomack",
+    "ACCORNACKE": "Accomack",
+    # Additional Nansemond spellings
+    "NANCIMOND": "Nansemond",
+    "NANCEMOND": "Nansemond",
+    "NANZIMOND": "Nansemond",
+    "NANZEMIOND": "Nansemond",
+    "NARISAMOND": "Nansemond",
+    "NANZEMEND": "Nansemond",
+    "NANCIMORN": "Nansemond",
+    "NANSIMUND": "Nansemond",
+    "NANZIMUND": "Nansemond",
+    "NANSAMUND": "Nansemond",
+    "NANZEMCND": "Nansemond",
+    "NANSEMNOND": "Nansemond",
+    "NANSEMOND": "Nansemond",
+    # Rappahannock variants
+    "RAPPA": "Rappahannock",
+    "KAPPA": "Rappahannock",
+    # Northumberland variants
+    "NUMBERLAND": "Northumberland",
+    "NUMBERLAND": "Northumberland",
+    # Westmoreland variants
+    "WMORCLAND": "Westmoreland",
+    "WMORELAND": "Westmoreland",
+    # Northampton variants
+    "NRAMPTON": "Northampton",
+    # Henrico variants
+    "HENFICO": "Henrico",
+    "HENRICO": "Henrico",
+    # Isle of Wight variants
+    "IS OF WISHT": "Isle Of Wight",
+    "IS OF WIGHT": "Isle Of Wight",
+    "ISLE OF WIGHT": "Isle Of Wight",
+    # Surry variants
+    "SURRY": "Surry",
+    # OCR/typo variants
+    "FERRES": "Rappahannock",  # "freshes" OCR error
+    "FRESHES": "Rappahannock",
+    # Lower Norfolk forms
+    "LOW NORF": "Norfolk",
+    "LOW NORFOLK": "Norfolk",
+    "LOWER NORF": "Norfolk",
+    "LOWER NORFOLK": "Norfolk",
+    # Northumberland / Westmoreland truncations
+    "UMBERLAND": "Northumberland",
+    "NUMBERLAND": "Northumberland",
+    "NORTHD": "Northumberland",
+    "NORTHUMBL": "Northumberland",
+    "NTHUMBERLAND": "Northumberland",
+    "MORELAND": "Westmoreland",
+    "W'MORELAND": "Westmoreland",
+    "WMORCLAND": "Westmoreland",
+    # Northampton forms
+    "NORTH'TON": "Northampton",
+    "N'TON": "Northampton",
+    "NORTHAMPTN": "Northampton",
+    "NORTHAMPT": "Northampton",
+    "NAMBTON": "Northampton",
+    "NARAPTON": "Northampton",
+    # Henrico historical/ocr
+    "HENRICOE": "Henrico",
+    # Yorke variant
+    "YORKE": "York",
+    # City shorthand for Charles City
+    "CHES CITY": "Charles City",
 }
 
 _CANONICAL_COUNTIES = {
     "HENRICO","PRINCE GEORGE","SURRY","ISLE OF WIGHT","SPOTSYLVANIA","HANOVER","BRUNSWICK",
     "NANSEMOND","KING WILLIAM","GOOCHLAND","KING & QUEEN","NEW KENT","ESSEX","NORFOLK",
     "PRINCESS ANNE","CHARLES CITY","MIDDLESEX","JAMES CITY","GLOUCESTER","ACCOMACK",
-    "CAROLINE","WARWICK","YORK","NORTHAMPTON","ELIZABETH CITY"
+    "CAROLINE","WARWICK","YORK","NORTHAMPTON","ELIZABETH CITY",
+    # Volume II earlier counties
+    "RAPPAHANNOCK","LANCASTER","STAFFORD","NORTHUMBERLAND","WESTMORELAND"
 }
 
 
@@ -308,11 +411,12 @@ def _extract_from_text(text: str) -> Tuple[Optional[str], Optional[float], Optio
 
     def _clean_raw_cty(raw: str) -> str:
         raw = raw.replace(".", "").replace("8&", "&").replace("::", "s").replace("é", "e").replace("ém", "e")
-        raw = re.sub(r"['`]", "", raw)
+        raw = re.sub(r"['`\u2018\u2019]", "", raw)
         raw = re.sub(r"\s+", " ", raw)
-        if ' of ' in raw.lower():
-            raw = raw.split(' of ')[-1]
+        # Avoid using trailing segment after ' of ' – often denotes person origin
         raw = raw.strip().lstrip('-')
+        # Drop trailing administrative words
+        raw = re.sub(r"\s+(?:CO|CNTY|COUNTY|CITY|CITTY)\b", "", raw, flags=re.IGNORECASE)
         if raw.upper().startswith(('UP', 'LOW')):
             tokens = raw.split()
             if len(tokens) > 1:
@@ -323,6 +427,49 @@ def _extract_from_text(text: str) -> Tuple[Optional[str], Optional[float], Optio
             raw = raw[4:].strip()
         raw = re.sub(r'^[\d% ]+', '', raw)
         return raw
+
+    # City/Citty explicit cues
+    if county is None:
+        m_city = re.search(r"\b(ELIZ|ELIZA(?:BETH)?|JAMES|JAS|CHAS|CHES|CHARLES)[\.,]?\s+(?:CITT?Y|CITY)\b", head, re.IGNORECASE)
+        if m_city:
+            tok = m_city.group(1).upper()
+            if tok.startswith("ELIZ"):
+                county = "Elizabeth City"
+            elif tok.startswith("JAMES"):
+                county = "James City"
+            elif tok in {"CHAS", "CHARLES", "CHES"}:
+                county = "Charles City"
+
+    # Directional side of <County> Co. (e.g., S. side of Rappa. Co.)
+    if county is None:
+        m_side = re.search(r"\b[NSWE][\.:]?\s*side\s+of\s+([A-Za-z\.'\u2018\u2019 ]{2,25})\s+[\u2018\u2019'`\",]?\s*(?:Co|Cnty|County|City|Citty)\.?\b", head, re.IGNORECASE)
+        if m_side:
+            raw_cty = _clean_raw_cty(m_side.group(1))
+            norm_cty = _normalise_county(raw_cty)
+            if norm_cty:
+                county = norm_cty
+
+    # Upper/Lower part of <County> Co.
+    if county is None:
+        m_part = re.search(r"\b(?:UP\.?|LOW\.?|UPPER|LOWER)\s*(?:part|pt)\s+of\s+([A-Za-z\.'\u2018\u2019 ]{2,25})\s+[\u2018\u2019'`\",]?\s*(?:Co|Cnty|County)\.?\b", head, re.IGNORECASE)
+        if m_part:
+            raw_cty = _clean_raw_cty(m_part.group(1))
+            norm_cty = _normalise_county(raw_cty)
+            if norm_cty:
+                county = norm_cty
+
+    # Parish of X → X
+    if county is None:
+        m_par = re.search(r"\b(?:UP\.?|LOW\.?|UPPER|LOWER)?\s*(?:PAR\.?|PARISH|FER\.?)[\s,]+OF\s+([A-Z][A-Za-z '\.\-\u2018\u2019]{2,20})(?:\s+(?:Co|Cnty|County|City|Citty)\.?\b)?", head, re.IGNORECASE)
+        if m_par:
+            raw_cty = _clean_raw_cty(m_par.group(1))
+            norm_cty = _normalise_county(raw_cty)
+            if norm_cty:
+                county = norm_cty
+
+    # Is. of W. → Isle Of Wight
+    if county is None and re.search(r"\bIS\.?\s+OF\s+W\.?\b", head, re.IGNORECASE):
+        county = "Isle Of Wight"
 
     county_candidates: List[str] = []
     if acre_end > 0:
@@ -352,6 +499,27 @@ def _extract_from_text(text: str) -> Tuple[Optional[str], Optional[float], Optio
                 county_candidates.append(norm_cty)
     if county_candidates:
         county = county_candidates[0]
+    else:
+        # Fallback: standalone county tokens commonly seen in Volume II
+        fallback_pat = re.compile(
+            r"\b(RAPPA\.?|RAPPAHANNOCK|LANCASTER|LANCAS|STAFF\.?|STAFFORD|STAFFD|W'?MORELAND|WESTMORELAND|NORF\.?|NORFOLK|GLOSTER|GLOUCESTER|MIDLESEX|MIDDLESEX|NANZ?EMOND|NANSIMOND|NANSEMUND|YORK|ESSEX|ACCOMACK|ACCOMACKE|ACCAMACK|NEW\s+KENT|NORTHUMBERLAND|NORTHUMBL|NTHUMBERLAND)\b",
+            re.IGNORECASE,
+        )
+        for m in fallback_pat.finditer(head):
+            token = m.group(1)
+            # Skip origins like "of X"
+            ctx = head[max(0, m.start()-6):m.start()].lower()
+            if " of " in ctx:
+                continue
+            token_key = re.sub(r"[^A-Za-z ]", "", token).upper()
+            mapped = _COUNTY_ABBR_MAP.get(token_key) or _COUNTY_ABBR_MAP.get(token_key.replace(" ", ""))
+            if not mapped:
+                # Try direct candidate
+                mapped = " ".join(w.capitalize() for w in token_key.split())
+            norm = _normalise_county(mapped)
+            if norm:
+                county = norm
+                break
 
     return name, acreage, year, county
 
