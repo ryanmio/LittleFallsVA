@@ -17,6 +17,9 @@ OUTPUT_CSV = ANALYSIS_DIR / "full_results_v2.csv"
 ENSEMBLE_FULL = GEODIR / "runs/validation---TEST-FULL-H1-final_20250619_142306/results_validation - TEST-FULL-H1-final.csv"
 ENSEMBLE_REDACT = ENSEMBLE_FULL
 
+# New: latest benchmark run results (M-7, M-8)
+NEW_RESULTS = GEODIR / "runs/validation---TEST-FULL-H1-final_20250807_201120" / "results_validation - TEST-FULL-H1-final.csv"
+
 CC_FILE = Path("/Users/ryanmioduskiimac/Downloads/mordecai/county_centroid_predictions.csv")
 MORDECAI_FILE = Path("/Users/ryanmioduskiimac/Downloads/mordecai/mordecai3_predictions_enhanced.csv")
 
@@ -106,9 +109,11 @@ def load_csv(path: Path):
 # remove any previous E-2 rows (old redacted ensemble version)
 rows_orig = load_csv(MASTER_CSV)
 rows = [r for r in rows_orig if r.get("method_id") not in ("E-1", "E-2")]
+# also remove any previous M-7/M-8 rows to avoid duplicates
+rows = [r for r in rows if r.get("method_id") not in ("M-7", "M-8")]
 removed = len(rows_orig) - len(rows)
 if removed:
-    print(f"Removed {removed} old E-2 rows from master prior to merge")
+    print(f"Removed {removed} old rows (E-2/M-7/M-8) from master prior to merge")
 existing_keys = {(r["row_index"], r["method_id"]) for r in rows}
 print(f"Loaded master rows: {len(rows)}")
 
@@ -116,6 +121,8 @@ print(f"Loaded master rows: {len(rows)}")
 # 2. Append E-1 / E-2 rows (already have error_km)
 # -----------------------------------------------------------------------------
 for p in (ENSEMBLE_FULL, ENSEMBLE_REDACT):
+    if not p.exists():
+        continue
     for r in load_csv(p):
         mid = "E-1" if r["method_id"] == "o3_ensemble5" else "E-2"
         key = (r["row_index"], mid)
@@ -129,10 +136,32 @@ for p in (ENSEMBLE_FULL, ENSEMBLE_REDACT):
 print("Added ensemble rows")
 
 # -----------------------------------------------------------------------------
+# 2b. Append latest run results (e.g., M-7, M-8)
+# -----------------------------------------------------------------------------
+if NEW_RESULTS.exists():
+    for r in load_csv(NEW_RESULTS):
+        mid = r.get("method_id", "")
+        key = (r["row_index"], mid)
+        if key in existing_keys:
+            continue
+        # normalise fields and add is_locatable
+        r.setdefault("is_mock", "0")
+        err = r.get("error_km", "")
+        r["is_locatable"] = "1" if (str(err).strip() != "") else "0"
+        rows.append(r)
+        existing_keys.add(key)
+    print(f"Added rows from latest run: {NEW_RESULTS}")
+else:
+    print(f"WARNING: NEW_RESULTS not found at {NEW_RESULTS}")
+
+# -----------------------------------------------------------------------------
 # 3. County centroid + Mordecai baselines
 # -----------------------------------------------------------------------------
 
 def ingest_baseline(path: Path, mid: str, model: str):
+    if not path.exists():
+        print(f"Baseline file missing: {path}")
+        return
     with open(path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for r in reader:

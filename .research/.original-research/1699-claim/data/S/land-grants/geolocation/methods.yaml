@@ -51,6 +51,20 @@
   enabled: false
   params:
     temperature: 0.2
+- id: M-7
+  model: gpt-5-2025-08-07
+  pipeline: one_shot
+  description: One-shot DMS, GPT-5
+  enabled: true
+  params:
+    reasoning_effort: medium
+- id: M-8
+  model: gpt-5-mini-2025-08-07
+  pipeline: one_shot
+  description: One-shot DMS, GPT-5-mini
+  enabled: true
+  params:
+    reasoning_effort: medium
 - id: T-1
   model: o4-mini-2025-04-16
   pipeline: tool_chain
@@ -100,7 +114,7 @@
   model: o3-2025-04-16
   pipeline: one_shot
   description: Five-call ensemble of o3-2025-04-16 with DBSCAN consensus (winner from dev eval)
-  enabled: true
+  enabled: false
   params:
     repeats: 5
     reasoning_effort: low
@@ -110,7 +124,7 @@
   model: o3-2025-04-16
   pipeline: one_shot
   description: Five-call o3 ensemble with patentee names redacted
-  enabled: true
+  enabled: false
   params:
     repeats: 5
     reasoning_effort: low
