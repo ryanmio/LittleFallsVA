@@ -1,0 +1,17 @@
+---
+- id: M-2
+  model: o3-2025-04-16
+  pipeline: one_shot
+  description: One-shot DMS with reasoning capture (o3 base model)
+  enabled: true
+  params:
+    reasoning_effort: medium
+    service_tier: flex
+- id: T-2
+  model: o3-2025-04-16
+  pipeline: tool_chain
+  description: Tool-chain with Google + reasoning capture (o3 base model)
+  enabled: true
+  params:
+    reasoning_effort: medium
+    service_tier: flex 

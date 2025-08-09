@@ -75,7 +75,7 @@ except ImportError:  # pragma: no cover – `tqdm` is optional
 # Configurable constants – adjust here or via CLI arguments
 # -----------------------------------------------------------------------------
 DEFAULT_INPUT_DIR = Path(
-    "/Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-vol2-extraction/pdf scans"
+    "/Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-vol2-extraction/pdf-scans"
 )
 DEFAULT_OUTPUT_DIR = Path(
     "/Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-vol2-extraction/OCR-output"
@@ -83,6 +83,14 @@ DEFAULT_OUTPUT_DIR = Path(
 DEFAULT_VOLUME_NAME = "volume2"
 DEFAULT_PSM = 3
 DEFAULT_OEM = 3
+DEFAULT_PROCESSING_ORDER = [
+    "volume2book6part1.pdf",
+    "book6pt2.pdf",
+    "book6pt3.pdf",
+    "book7pt1.pdf",
+    "book7p2.pdf",
+    "book8.pdf",
+]
 
 # OCRmyPDF parameters mirroring the Volume 3 pipeline
 OCR_ARGS = [
@@ -97,6 +105,8 @@ OCR_ARGS = [
     "eng",
     "--tesseract-config",
     "preserve_interword_spaces=1",
+    "-v",
+    "1",
     "--output-type",
     "none",
 ]
@@ -111,11 +121,10 @@ logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
 # -----------------------------------------------------------------------------
 
 def run_cmd(cmd: List[str]) -> None:
-    """Run *cmd* raising a RuntimeError on non-zero exit."""
-    logger.debug("Running command: %s", " ".join(cmd))
-    proc = subprocess.run(cmd, capture_output=True, text=True)
+    """Run *cmd* inheriting parent stdout/stderr so logs stream to run.log."""
+    logger.info("RUN: %s", " ".join(cmd))
+    proc = subprocess.run(cmd)
     if proc.returncode != 0:
-        logger.error(proc.stderr)
         raise RuntimeError(f"Command failed with exit code {proc.returncode}: {' '.join(cmd)}")
 
 
@@ -129,9 +138,11 @@ def ocr_single_pdf(pdf_path: Path, output_dir: Path) -> tuple[Path, Path]:
         logger.info("[skip] %s already OCR'd", pdf_path.name)
         return output_pdf, sidecar_txt
 
+    # Use '-' as output target with --output-type none; ocrmypdf will not write a PDF
     cmd = OCR_ARGS + ["--sidecar", str(sidecar_txt), str(pdf_path), "-"]
     logger.info("OCRing %s for text extraction only", pdf_path.name)
     run_cmd(cmd)
+    logger.info("Finished OCR %s", pdf_path.name)
     return output_pdf, sidecar_txt
 
 
@@ -190,9 +201,13 @@ def process_volume(
 ) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    pdf_files = sorted(input_dir.glob("*.pdf"))
+    pdf_files = list(input_dir.glob("*.pdf"))
     if not pdf_files:
         raise FileNotFoundError(f"No PDFs found in {input_dir}")
+
+    order_rank = {name: idx for idx, name in enumerate(DEFAULT_PROCESSING_ORDER)}
+    pdf_files.sort(key=lambda p: (order_rank.get(p.name, len(order_rank)), p.name))
+    logger.info("Processing order: %s", ", ".join(p.name for p in pdf_files))
 
     sidecars: List[Path] = []
 

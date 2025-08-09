@@ -1,0 +1,19 @@
+\usepackage{titling}
+\usepackage{url}
+
+% Store the original \maketitle command
+\let\oldPandocMakeTitle\maketitle
+
+% Redefine \maketitle - now just execute the original since footnotes are handled in main.md
+\renewcommand{\maketitle}{%
+  \oldPandocMakeTitle% % Execute the original \maketitle
+}
+
+% The \hypersetup for PDF metadata can remain as it's good practice
+% and separate from the visual display.
+\AtBeginDocument{%
+  \hypersetup{pdfinfo={
+    Title={Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants},
+    Author={Ryan Mioduski, Independent Researcher}
+  }}%
+} 

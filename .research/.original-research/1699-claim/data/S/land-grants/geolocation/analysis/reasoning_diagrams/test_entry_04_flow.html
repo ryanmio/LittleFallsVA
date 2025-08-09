@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reasoning Flow Diagram</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .mermaid {
+            margin: 20px auto;
+            overflow: auto;
+        }
+        .steps-table {
+            margin-top: 30px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .steps-table th, .steps-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .steps-table th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reasoning Flow Diagram: test_entry_04_flow</h1>
+        
+        <div class="mermaid">
+flowchart TD
+  classDef reason fill:#d0e6ff,stroke:#4c8eda;
+  classDef tool   fill:#ffefd5,stroke:#d38e00;
+  classDef pred   fill:#d2ffd5,stroke:#006400;
+  subgraph OneShot
+  A1["**Exploring Holloway Swamp**  I'm looking into Holloway Swamp, which might be in…"]:::reason
+  A2["**Locating Coordinates for Holloway Swamp**  I'm considering the farmland south …"]:::reason
+  A1 --> A2
+  A3["37°00'07.20000"N 77°07'58.80000"W"]:::pred
+  A2 --> A3
+  end
+  subgraph ToolChain
+  B1["**Locating Blackwater and Holloway Swamps**  I need to parse a land grant descri…"]:::reason
+  B2["**Confirming swamp coordinates**  I've noted the coordinates for Holloway Swamp …"]:::reason
+  B1 --> B2
+  B3["**Determining intersection coordinates**  I'm looking at the coordinates 37.1081…"]:::reason
+  B2 --> B3
+  B4["ResponseReasoningItem(id='rs_6829d33fd3d881918cb853eac463ec0a06fbf8e75786ea0e', …"]:::reason
+  B3 --> B4
+  B5["**Checking locations and features**  I found the coordinates 37.1733, -77.2397, …"]:::reason
+  B4 --> B5
+  B6["**Clarifying locations**  I’m trying to pin down Holloway Swamp's location at co…"]:::reason
+  B5 --> B6
+  B7["**Refining the search**  I’m considering searching for "Connells Mill pond black…"]:::reason
+  B6 --> B7
+  B8["**Refining coordinates for Blackwater Swamp**  I’m analyzing the coordinates: la…"]:::reason
+  B7 --> B8
+  B9["**Evaluating coordinates and centroid**  I found the coordinates 37.1733, -77.23…"]:::reason
+  B8 --> B9
+  B10["**Calculating the centroid**  I’ve identified two anchor points: Blackwater Swam…"]:::reason
+  B9 --> B10
+  B11["geocode_place()"]:::tool
+  click B11 call "{
+  "tool": "geocode_place",
+  "args": {
+    "query": "Holloway Swamp, Sussex County, Virginia",
+    "strategy": "natural_feature"
+  },
+  "result": {
+    "lat": 36.9058167,
+    "lng": -77.2405153,
+    "formatted_address": "Sussex County, VA, USA",
+    "strategy": "natural_feature",
+    "query_used": "Holloway Swamp, Sussex County, Virginia point, Virginia"
+  }
+}" _blank
+  B10 --> B11
+  B12["geocode_place()"]:::tool
+  click B12 call "{
+  "tool": "geocode_place",
+  "args": {
+    "query": "Blackwater Swamp, Sussex County, Virginia",
+    "strategy": "natural_feature"
+  },
+  "result": {
+    "lat": 37.10810973086775,
+    "lng": -77.15139208254142,
+    "formatted_address": "Blackwater Swamp, Virginia 23842, USA",
+    "strategy": "natural_feature",
+    "query_used": "Blackwater Swamp, Sussex County, Virginia point, Virginia"
+  }
+}" _blank
+  B11 --> B12
+  B13["geocode_place()"]:::tool
+  click B13 call "{
+  "tool": "geocode_place",
+  "args": {
+    "query": "Holloway Swamp and Blackwater Swamp confluence, Virginia",
+    "strategy": "natural_feature"
+  },
+  "result": {
+    "lat": 37.4315734,
+    "lng": -78.6568942,
+    "formatted_address": "Virginia, USA",
+    "strategy": "natural_feature",
+    "query_used": "Holloway Swamp and Blackwater Swamp confluence, Virginia point, Virginia"
+  }
+}" _blank
+  B12 --> B13
+  B14["geocode_place()"]:::tool
+  click B14 call "{
+  "tool": "geocode_place",
+  "args": {
+    "query": "Holloway Branch, Blackwater Swamp, Prince George County, Virginia",
+    "strategy": "natural_feature"
+  },
+  "result": {
+    "lat": 37.1733,
+    "lng": -77.2396666,
+    "formatted_address": "Blackwater Dr, Virginia 23842, USA",
+    "strategy": "natural_feature",
+    "query_used": "Holloway Branch, Blackwater Swamp, Prince George County, Virginia point, Virginia"
+  }
+}" _blank
+  B13 --> B14
+  B15["geocode_place()"]:::tool
+  click B15 call "{
+  "tool": "geocode_place",
+  "args": {
+    "query": "Halloway Swamp, Virginia",
+    "strategy": "natural_feature"
+  },
+  "result": {
+    "lat": 37.4315734,
+    "lng": -78.6568942,
+    "formatted_address": "Virginia, USA",
+    "strategy": "natural_feature",
+    "query_used": "Halloway Swamp, Virginia point, Virginia"
+  }
+}" _blank
+  B14 --> B15
+  B16["geocode_place()"]:::tool
+  click B16 call "{
+  "tool": "geocode_place",
+  "args": {
+    "query": "Holloway Swamp, Prince George County, Virginia",
+    "strategy": "natural_feature"
+  },
+  "result": {
+    "lat": 37.1593052,
+    "lng": -77.2405153,
+    "formatted_address": "Prince George County, VA, USA",
+    "strategy": "natural_feature",
+    "query_used": "Holloway Swamp, Prince George County, Virginia point, Virginia"
+  }
+}" _blank
+  B15 --> B16
+  B17["geocode_place()"]:::tool
+  click B17 call "{
+  "tool": "geocode_place",
+  "args": {
+    "query": "Blackwater Swamp, Prince George County, Virginia",
+    "strategy": "natural_feature"
+  },
+  "result": {
+    "lat": 37.1733,
+    "lng": -77.2396666,
+    "formatted_address": "Blackwater Dr, Virginia 23842, USA",
+    "strategy": "natural_feature",
+    "query_used": "Blackwater Swamp, Prince George County, Virginia point, Virginia"
+  }
+}" _blank
+  B16 --> B17
+  B18["compute_centroid()"]:::tool
+  click B18 call "{
+  "tool": "compute_centroid",
+  "args": {
+    "points": [
+      {
+        "lat": 37.1733,
+        "lng": -77.2396666
+      },
+      {
+        "lat": 37.1593052,
+        "lng": -77.2405153
+      }
+    ]
+  },
+  "result": {
+    "lat": 37.16630260075652,
+    "lng": -77.24009098928921
+  }
+}" _blank
+  B17 --> B18
+  B19["37.166303, -77.240091"]:::pred
+  B18 --> B19
+  end
+        </div>
+
+        
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+</html>

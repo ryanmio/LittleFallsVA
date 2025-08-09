@@ -1,0 +1,3 @@
+row_index,method_id,model,pipeline,prompt_id,prompt_version,prediction,input_tokens,output_tokens,reasoning_tokens,total_tokens,latency_s,error_km,is_mock
+1,o3_ensemble5,o3-2025-04-16,one_shot,one_shot_dms_v1,v1,"36.933391620576714, -77.41010021892036",750,3069,2944,3819,100.94921636581421,1.803272154869987,0
+1,o3_ensemble5_redact,o3-2025-04-16,one_shot,one_shot_dms_v1,v1,"36.911443393793526, -77.37952184442983",740,6141,6016,6881,118.81509375572205,2.691541629247079,0

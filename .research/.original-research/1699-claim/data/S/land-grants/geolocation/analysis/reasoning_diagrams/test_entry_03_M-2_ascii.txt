@@ -1,0 +1,43 @@
+Reasoning flow for test_entry_03 using M-2
+================================================================================
+
+INPUT: test_entry_03
+|
+|
+↓
+
+METHOD: M-2 (one_shot)
+|
+|
+↓
+
+REASONING STEP 1:
+--------------------------------------------------------------------------------
+**Finding intersection coordinates**  I need to find a precise coordinate
+that represents the "beginning" of the tract or the approximate centroid.
+The tract starts near Capt Damerfield's and goes down the south branch of
+Crump's Creek to the mouth of Gentry's Branch. It seems I need the
+intersection where Gentry's Branch meets the South Branch of Crump Creek.
+I'll look for these streams on the map and approximate the coordinate to
+around 37.7900N, -77.5900W.
+|
+|
+↓
+
+REASONING STEP 2:
+--------------------------------------------------------------------------------
+**Investigating Crump Creek location**  I’m looking into the Crump Creek
+location in Hanover County near Montpelier, around coordinates 37.780N,
+-77.690. Montpelier itself sits at 37.82N, -77.67W, so I suspect Crump
+Creek is on the south side. I remember Crump's Millpond, part of the
+Diascund Creek network in New Kent, but that's more southeast. Genealogical
+records suggest Crump's Creek is in Hanover, with references to early land
+ownership. I'll estimate a coordinate of about 37.788N, -77.546W, but I
+want to refine it further by researching offline.
+|
+|
+↓
+
+OUTPUT:
+--------------------------------------------------------------------------------
+37°45'12.50000"N 77°32'50.00000"W

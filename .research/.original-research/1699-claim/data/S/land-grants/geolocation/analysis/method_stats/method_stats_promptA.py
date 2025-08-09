@@ -6,35 +6,16 @@ import json
 from collections import defaultdict
 
 # Paths (relative to repo root)
-ROOT = Path(__file__).resolve().parents[1]  # project root (parent of analysis/)
-DATA_ROOT = ROOT / ".research/.original-research/1699-claim/data/S/land-grants/geolocation"
+ROOT = Path(__file__).resolve().parents[1]  # analysis directory
+RESULTS_CSV = ROOT / "full_results.csv"  # Use the full_results.csv in analysis directory
+PRICING_YAML = ROOT.parent / "pricing.yaml"  # pricing.yaml is in the parent directory
 
-RESULTS_CSV = DATA_ROOT / "runs/validation---TEST-FULL-H1_20250505_191624/validation - RESULTS-CLEANED.csv"
-EVAL_CSV = DATA_ROOT / "validation - TEST-FULL-H1.csv"
-PRICING_YAML = DATA_ROOT / "pricing.yaml"
-CALLS_JSONL = DATA_ROOT / "runs/validation---TEST-FULL-H1_20250505_191624/calls.jsonl"
-
-# Load data
+# Load data - full_results.csv should have all the data we need
 results_df = pd.read_csv(RESULTS_CSV)
-# row_index appears numeric
-results_df['row_index'] = pd.to_numeric(results_df['row_index'], errors='coerce').astype('Int64')
 
-# Evaluation set (for has_ground_truth)
-eval_df = pd.read_csv(EVAL_CSV)
-# The evaluation csv doesn't have row_index; create by enumerating from 1 maybe? Actually row_index matches enumeration starting 1? We'll create sequential index.
-# Deduce mapping: assume row_index is positional (1-based). So create column row_index by reset index +1
-if 'row_index' not in eval_df.columns:
-    eval_df = eval_df.reset_index().rename(columns={'index': 'row_index'})
-    eval_df['row_index'] += 1
-
-# Keep only required columns
-eval_df = eval_df[['row_index', 'has_ground_truth']]
-
-# Merge
-merged = results_df.merge(eval_df, on='row_index', how='left', validate='many_to_one', suffixes=('', '_eval'))
-
-# Filter conditions
-df = merged[(merged['has_ground_truth'] == 1) & (merged['is_locatable'] == 1)]
+# The full_results.csv should already have the ground truth filtering built in
+# Filter to only rows that are locatable and have ground truth
+df = results_df[(results_df['is_locatable'] == 1) & (results_df['error_km'].notna())]
 
 # Ensure numeric columns
 for col in ['error_km', 'latency_s', 'total_tokens', 'input_tokens', 'output_tokens']:
@@ -68,27 +49,13 @@ def compute_token_cost(row):
 
 df['token_cost'] = df.apply(compute_token_cost, axis=1)
 
-# Google API calls & cost (from calls.jsonl)
-geo_calls = defaultdict(int)  # key (row_index, method_id) -> count
-if CALLS_JSONL.exists():
-    with open(CALLS_JSONL, 'r') as cf:
-        for line in cf:
-            rec = json.loads(line)
-            row_idx = rec.get('row_index')
-            m_id = rec.get('method_id')
-            tool_trace = rec.get('tool_trace', [])
-            if not tool_trace:
-                tool_trace = rec.get('response', {}).get('tool_trace', [])
-            cnt = sum(1 for t in tool_trace if t.get('tool_name') == 'geocode_place')
-            geo_calls[(row_idx, m_id)] += cnt
-
-# Map onto df
-def get_geo_calls(r):
-    return geo_calls.get((int(r['row_index']), r['method_id']), 0)
-
-df['google_calls'] = df.apply(get_geo_calls, axis=1)
-
+# Google API calls & cost - if this data is in full_results.csv, use it directly
+# Otherwise set to 0 for methods that don't use tools
+if 'google_calls' in df.columns:
 df['google_cost'] = df['google_calls'] * 0.005
+else:
+    df['google_calls'] = 0
+    df['google_cost'] = 0.0
 
 # Aggregate per method_id
 rows = []

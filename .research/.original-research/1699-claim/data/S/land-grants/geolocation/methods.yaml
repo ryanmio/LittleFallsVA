@@ -11,7 +11,7 @@
   model: o4-mini-2025-04-16
   pipeline: one_shot
   description: One-shot DMS, baseline (o4-mini)
-  enabled: true
+  enabled: false
   params:
     reasoning_effort: medium
     service_tier: flex
@@ -19,7 +19,7 @@
   model: o3-2025-04-16
   pipeline: one_shot
   description: One-shot DMS, o3 base model
-  enabled: true
+  enabled: false
   params:
     reasoning_effort: medium
     service_tier: flex
@@ -27,35 +27,49 @@
   model: o3-mini-2025-01-31
   pipeline: one_shot
   description: One-shot DMS, o3-mini
-  enabled: true
+  enabled: false
   params:
     reasoning_effort: medium
 - id: M-4
   model: gpt-4.1-2025-04-14
   pipeline: one_shot
   description: One-shot DMS, GPT-4.1
-  enabled: true
+  enabled: false
   params:
     temperature: 0.2
 - id: M-5
   model: chatgpt-4o-latest
   pipeline: one_shot
   description: One-shot DMS, 4o-latest
-  enabled: true
+  enabled: false
   params:
     temperature: 0.2
 - id: M-6
   model: gpt-3.5-turbo
   pipeline: one_shot
   description: One-shot DMS, GPT-3.5 turbo baseline dumb
-  enabled: true
+  enabled: false
   params:
     temperature: 0.2
+- id: M-7
+  model: gpt-5-2025-08-07
+  pipeline: one_shot
+  description: One-shot DMS, GPT-5
+  enabled: true
+  params:
+    reasoning_effort: medium
+- id: M-8
+  model: gpt-5-mini-2025-08-07
+  pipeline: one_shot
+  description: One-shot DMS, GPT-5-mini
+  enabled: true
+  params:
+    reasoning_effort: medium
 - id: T-1
   model: o4-mini-2025-04-16
   pipeline: tool_chain
   description: Tool-chain with Google, o4-mini
-  enabled: true
+  enabled: false
   params:
     reasoning_effort: low
     service_tier: flex
@@ -78,7 +92,7 @@
   model: gpt-4.1-2025-04-14
   pipeline: tool_chain
   description: Tool-chain, GPT-4.1
-  enabled: true
+  enabled: false
   params:
     temperature: 0.2
 - id: T-5
@@ -92,7 +106,28 @@
   model: human-gis
   pipeline: static
   description: Human GIS professional baseline (static predictions from dataset)
-  enabled: true
+  enabled: false
   params:
     fixed_cost_usd: 140.0
     billed_hours: 6.0
+- id: o3_ensemble5
+  model: o3-2025-04-16
+  pipeline: one_shot
+  description: Five-call ensemble of o3-2025-04-16 with DBSCAN consensus (winner from dev eval)
+  enabled: false
+  params:
+    repeats: 5
+    reasoning_effort: low
+    service_tier: flex
+    consensus_rule: dbscan
+- id: o3_ensemble5_redact
+  model: o3-2025-04-16
+  pipeline: one_shot
+  description: Five-call o3 ensemble with patentee names redacted
+  enabled: false
+  params:
+    repeats: 5
+    reasoning_effort: low
+    service_tier: flex
+    consensus_rule: dbscan
+    redact_names: true

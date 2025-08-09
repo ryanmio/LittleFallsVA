@@ -23,8 +23,9 @@ REPORT_PATH = OUT_DIR / "extended_accuracy_stats.md"
 CDF_PATH = OUT_DIR / "cdf_overall.csv"
 
 THRESHOLDS = [1, 5, 10, 25, 50]
+EXCLUDE_ROW_INDICES = {"10", "38"}  # rows flagged as unlocatable
 BOOT_ITERS = 1000
-OUTLIER_TOP_N = 5
+OUTLIER_TOP_N = 10
 
 class Agg:
     def __init__(self, name: str):
@@ -84,6 +85,8 @@ global_pairs: List[Tuple[str, str, str, float]] = []  # row_id, method, model, e
 with CSV_PATH.open() as fh:
     reader = csv.DictReader(fh)
     for row in reader:
+        if row["row_index"] in EXCLUDE_ROW_INDICES:
+            continue
         if row.get("is_locatable") not in {"1", "true", "True"}:
             continue
         try:

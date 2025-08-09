@@ -1,0 +1,162 @@
+\begin{thebibliography}{18}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bashorun(2025)]{Bashorun2025_gis}
+Bimbola Bashorun.
+\newblock Colonial virginia land grants geocoding dataset, April 2025.
+\newblock Expert GIS baseline created for comparative evaluation in geolocation
+  research.
+
+\bibitem[Coughlan and Nelson(2018)]{Coughlan2018_settlement}
+Michael~R. Coughlan and Donald~R. Nelson.
+\newblock Influences of native american land use on the colonial euro-american
+  settlement of the south carolina piedmont.
+\newblock \emph{PLOS ONE}, 13\penalty0 (3):\penalty0 e0195036, 2018.
+\newblock \doi{10.1371/journal.pone.0195036}.
+
+\bibitem[{Direct Line Software}(2010)]{DeedMapper_software}
+{Direct Line Software}.
+\newblock Deedmapper 4.2.
+\newblock Commercial software for historical deed mapping, 2010.
+\newblock URL \url{https://directlinesoftware.com/deeds/}.
+\newblock Windows application for plotting metes-and-bounds and public domain
+  property descriptions.
+
+\bibitem[Dobbs(2009)]{Dobbs2009_backcountry}
+G.~Rebecca Dobbs.
+\newblock Backcountry settlement development and indian trails: A gis
+  land-grant analysis.
+\newblock \emph{Social Science Computer Review}, 27\penalty0 (3):\penalty0
+  331--347, 2009.
+\newblock \doi{10.1177/0894439308329760}.
+
+\bibitem[Fausz(1971)]{Fausz1971_settlement}
+John~Frederick Fausz.
+\newblock \emph{Patterns of Settlement in the {James} {River} {Basin},
+  1607-1642}.
+\newblock Master's thesis, College of William and Mary, 1971.
+\newblock URL \url{https://dx.doi.org/doi:10.21220/s2-jedw-z031}.
+\newblock Paper 1539624744.
+
+\bibitem[Gritta et~al.(2018)Gritta, Pilehvar, and Collier]{Gritta2018_camcoder}
+Milan Gritta, Mohammad~Taher Pilehvar, and Nigel Collier.
+\newblock Which melbourne? augmenting geocoding with maps.
+\newblock In \emph{Proceedings of the 56th Annual Meeting of the Association
+  for Computational Linguistics (ACL 2018)}, pages 1285--1296, Melbourne,
+  Australia, 2018. Association for Computational Linguistics.
+\newblock \doi{10.17863/CAM.27796}.
+\newblock Introduces the CamCoder neural geocoder model.
+
+\bibitem[Hu and Kersten(2024)]{Hu2024_toponym_llm}
+Xuke Hu and Jens Kersten.
+\newblock Enhancing toponym resolution with fine-tuned {LLMs} ({Llama2}).
+\newblock In \emph{Proceedings of the Second International Workshop on
+  Geographic Information Extraction from Texts at ECIR 2024 (GeoExT@ECIR)},
+  pages 52--56. CEUR-WS.org, 2024.
+\newblock Fine-tuned Llama2 7B outperforms previous SOTA on toponym resolution
+  by 13\% and reduces mean error by 83\%.
+
+\bibitem[Huang et~al.(2024)Huang, Chen, Li, Qu, Xiao, Liu, and
+  Chen]{Huang2024_geoagent}
+Chenghua Huang, Shisong Chen, Zhixu Li, Jianfeng Qu, Yanghua Xiao, Jiaxin Liu,
+  and Zhigang Chen.
+\newblock Geoagent: To empower llms using geospatial tools for address
+  standardization.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  ACL 2024}, pages 6048--6063, Bangkok, Thailand, 2024. Association for
+  Computational Linguistics.
+\newblock \doi{10.18653/v1/2024.findings-acl.362}.
+
+\bibitem[Julian and Abbitt(2014)]{Julian2014_tennessee}
+Glenn~M. Julian and Robbyn J.~F. Abbitt.
+\newblock Gis and genealogy: Teaching gis while learning about the past.
+\newblock \emph{ArcUser}, Spring 2014.
+\newblock URL
+  \url{https://www.esri.com/about/newsroom/arcuser/gis-and-genealogy}.
+\newblock Project mapping Julian family land grants across McMinn, Hamilton,
+  and Bradley Counties in Tennessee through multi-semester student GIS work.
+
+\bibitem[{Library of Virginia}(2025)]{lva_patents_db}
+{Library of Virginia}.
+\newblock Virginia land office patents and grants online database.
+\newblock Web portal, 2025.
+\newblock URL \url{https://lva-virginia.libguides.com/land-grants}.
+\newblock Scanned images and searchable indices for 1623–2000 patents &
+  grants; includes Northern Neck survey plats but no GIS polygons.
+
+\bibitem[{Loudoun County Office of Mapping}(2015)]{loudoun_grants_dataset}
+{Loudoun County Office of Mapping}.
+\newblock Original land grants of loudoun county, va [gis dataset].
+\newblock Interactive ArcGIS WebMap, 2015.
+\newblock URL
+  \url{https://www.arcgis.com/apps/MapTools/index.html?appid=d3c4ba1031564f919ca28c9bb5a48350}.
+\newblock Polygon shapefiles digitised from historian Wynne Saffer's USGS quad
+  maps; covers all Northern Neck grants inside modern Loudoun County (early
+  1700s–1800s).
+
+\bibitem[Mitchell(1977)]{mitchell1977whiteoak}
+Beth Mitchell.
+\newblock \emph{Beginning at a White Oak: Patents and Northern Neck Grants of
+  Fairfax County, Virginia}.
+\newblock Office of Comprehensive Planning, Fairfax County, 1977.
+\newblock URL
+  \url{https://www.fairfaxcounty.gov/history-commission/sites/history-commission/files/assets/documents/resources/map.pdf}.
+\newblock Includes companion historical GIS map of patent & grant polygons.
+
+\bibitem[Nugent(1979)]{Nugent1979_cavaliers3}
+Nell~Marion Nugent.
+\newblock \emph{Cavaliers and Pioneers: Abstracts of Virginia Land Patents and
+  Grants, Volume Three: 1695-1732}.
+\newblock Virginia State Library, Richmond, Virginia, 1979.
+\newblock Transcribed from Patent Books 9-14, containing 5,471 grant abstracts.
+
+\bibitem[O'Sullivan et~al.(2024)O'Sullivan, Schneider, and
+  Samet]{Osullivan2024_metric}
+Kent O'Sullivan, Nicole~R. Schneider, and Hanan Samet.
+\newblock Metric reasoning in large language models.
+\newblock In \emph{Proceedings of the 32nd ACM SIGSPATIAL International
+  Conference on Advances in Geographic Information Systems (SIGSPATIAL '24)},
+  pages 501--504, 2024.
+\newblock \doi{10.1145/3678717.3691226}.
+
+\bibitem[Savarro et~al.(2024)Savarro, Zago, and Zoia]{savarro2024geolingit}
+Davide Savarro, Davide Zago, and Stefano Zoia.
+\newblock Leveraging large language models to geolocate linguistic variations
+  in social media posts.
+\newblock \emph{arXiv preprint arXiv:2407.16047}, 2024.
+\newblock \doi{10.48550/arXiv.2407.16047}.
+\newblock GeoLingIt shared‐task winner: fine-tuned LLM predicts both Italian
+  region and coordinates for tweets.
+
+\bibitem[Schottlander and Shekel(2025)]{GoogleResearch2025_geospatial}
+David Schottlander and Tomer Shekel.
+\newblock Geospatial reasoning: Unlocking insights with generative ai and
+  multiple foundation models.
+\newblock Google Research Blog, April 2025.
+\newblock URL
+  \url{https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/}.
+\newblock Accessed August 2025.
+
+\bibitem[Wu et~al.(2025)Wu, Zeng, Liu, Xu, Ye, Zhou, Yao, and Li]{wu2025geosg}
+Yuxing Wu, Zhuang Zeng, Kaiyue Liu, Zhouzheng Xu, Yaqin Ye, Shunping Zhou,
+  Huangbao Yao, and Shengwen Li.
+\newblock Text geolocation prediction via self-supervised learning.
+\newblock \emph{ISPRS International Journal of Geo‐Information}, 14\penalty0
+  (4):\penalty0 170, 2025.
+\newblock \doi{10.3390/ijgi14040170}.
+
+\bibitem[Yao et~al.(2023)Yao, Zhao, Yu, Du, Shafran, Narasimhan, and
+  Cao]{yao2023react}
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan,
+  and Yuan Cao.
+\newblock React: Synergizing reasoning and acting in language models.
+\newblock In \emph{Proceedings of the 11th International Conference on Learning
+  Representations}, 2023.
+\newblock \doi{10.48550/arXiv.2210.03629}.
+\newblock URL \url{https://arxiv.org/abs/2210.03629}.
+
+\end{thebibliography}

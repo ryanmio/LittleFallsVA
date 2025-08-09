@@ -1,0 +1,91 @@
+row_index,method_id,model,pipeline,prompt_id,prompt_version,prediction,input_tokens,output_tokens,reasoning_tokens,total_tokens,latency_s,error_km,is_mock
+1,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°56'09.60000""N 077°25'48.00000""W",150,4121,4096,4271,59.17801284790039,3.575286351621271,0
+1,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°59'30.00000""N 076°58'15.00000""W",150,1625,1600,1775,9.852906942367554,37.77180504268093,0
+2,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°48'25.92000""N 077°21'31.42800""W",162,5145,5120,5307,98.0208899974823,12.794693601489532,0
+2,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"Do you want the coordinates for the mouth of Gentry's Branch (as described), or for Capt. Dangerfield’s plantation / Jones’s plantation (the beginning point)?",162,1192,1152,1354,10.372313022613525,,0
+3,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°56'48.66000""N 076°59'37.39200""W",138,5209,5184,5347,51.85330891609192,24.65855103613374,0
+3,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°56'00.99960""N 076°40'23.52000""W",138,1497,1472,1635,9.458417892456055,37.42849380228986,0
+4,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"38°17'34.08000""N 078°27'10.44000""W",157,3097,3072,3254,35.99737310409546,15.906986606785006,0
+4,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"38°14'30.12345""N 077°48'15.67890""W",157,1113,1088,1270,6.573582887649536,45.408522760069985,0
+5,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°57'22.96800""N 077°43'36.91200""W",153,6297,6272,6450,104.81406497955322,23.360224741019902,0
+5,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"I can do that, but I’ll need to consult historical maps/records online to locate the exact spot. May I proceed to search the web for the grant and Beech Creek in Hanover County?",153,1902,1856,2055,11.881192922592163,,0
+6,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°48'45.00000""N 076°48'54.00000""W",123,3289,3264,3412,52.89710998535156,51.316818536911796,0
+6,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°58'40.12345""N 076°37'10.54321""W",123,1113,1088,1236,6.830968141555786,74.985380027602,0
+7,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"38°08'20.40000""N 078°10'12.00000""W",155,9241,9216,9396,190.94680190086365,9.60777693210702,0
+7,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"I can’t locate this grant precisely from the transcription alone. Can you confirm the unclear words — particularly ""Biw Ren"" (is it ""Big Run"", ""Rappahannock"", or something else?) — or provide the original image or a source citation/map?",155,1405,1344,1560,10.342859029769897,,0
+8,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°12'21.60000""N 077°39'37.80000""W",127,3609,3584,3736,75.13920879364014,5.141549236205673,0
+8,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"I don’t have enough information to pinpoint the grant from that brief description. Do you want the coordinates for the creek mouth, the center of the 200-acre parcel, or the patent’s bounding points? May I look up historic maps and land records online to locate it precisely?",127,1342,1280,1469,10.818732738494873,,0
+9,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"38°05'00.00000""N 077°45'00.00000""W",161,4441,4416,4602,81.18305110931396,7.707893880151844,0
+9,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"38°10'15.00000""N 077°38'30.00000""W",161,1305,1280,1466,13.58297085762024,17.617405239397865,0
+10,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°41'24.72000""N 077°12'45.90000""W",137,6105,6080,6242,73.42841601371765,190.99163530258235,0
+10,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"Do you want the approximate centroid of the 400-acre grant (the parcel's center), or the location of the confluence between the North and Middle forks of Reedy Swamp?",137,1259,1216,1396,8.87307095527649,,0
+11,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°26'07.80000""N 077°39'10.80000""W",143,4121,4096,4264,47.76496386528015,15.499969561680107,0
+11,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°17'54.12345""N 077°23'59.54321""W",143,1689,1664,1832,10.594367980957031,23.298891666356585,0
+12,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"38°16'33.00000""N 077°47'12.00000""W",165,8537,8512,8702,184.21566581726074,43.0908087496023,0
+12,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"38°16'45.12345""N 077°52'30.54321""W",165,1753,1728,1918,11.923583984375,35.76605373990408,0
+13,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°57'18.00000""N 077°46'36.00000""W",125,5017,4992,5142,74.64406323432922,5.541555088031096,0
+13,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°46'12.34567""N 077°28'33.21098""W",125,1241,1216,1366,7.330834865570068,34.72096480526107,0
+14,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°33'42.12000""N 077°47'31.92000""W",154,2777,2752,2931,54.573405027389526,7.708180938557655,0
+14,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"Do you want the parcel’s approximate centroid, the mouth of Fine Creek, or a specific corner referenced to Pleasants’s line? Also may I consult modern maps/sources to determine the precise coordinates?",154,1519,1472,1673,10.483906030654907,,0
+15,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°25'48.00000""N 077°39'39.60000""W",143,5081,5056,5224,49.08374214172363,4.5744883903284785,0
+15,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°23'10.00000""N 077°29'40.00000""W",143,1497,1472,1640,14.230056762695312,19.236758995393018,0
+16,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°31'31.29600""N 077°25'00.98400""W",195,4441,4416,4636,104.71769595146179,4.2837938174653285,0
+16,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°27'41.12345""N 077°22'57.54321""W",195,1497,1472,1692,12.443599224090576,10.521370224236689,0
+17,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°45'06.84000""N 077°01'27.84000""W",130,5529,5504,5659,41.974127769470215,29.73527270462485,0
+17,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°48'28.08000""N 076°56'56.04000""W",130,1945,1920,2075,19.167436122894287,32.708892952010814,0
+18,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°03'18.00000""N 077°01'48.00000""W",139,4057,4032,4196,71.9877917766571,12.598559396744829,0
+18,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"I can’t reliably produce precise coordinates for a historical land grant without consulting external historical maps or databases, and I won’t fabricate them. If you’d like, I can look this up and return exact coordinates — shall I proceed?",139,1396,1344,1535,11.243408918380737,,0
+19,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°43'57.00000""N 077°18'30.60000""W",127,6425,6400,6552,68.6212682723999,22.321320971144587,0
+19,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°50'13.12345""N 076°41'52.54321""W",127,1241,1216,1368,7.969312906265259,38.211878537838594,0
+20,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"38°02'30.48000""N 077°47'08.52000""W",115,3993,3968,4108,60.77858591079712,11.180561332303075,0
+20,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,Do you want the tract's centroid (single representative point) or the full historic parcel boundary? May I search historical patent records and maps to locate it?,115,1125,1088,1240,10.112114906311035,,0
+21,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°45'22.52016""N 077°35'40.91028""W",128,4953,4928,5081,87.56378316879272,35.14780641033014,0
+21,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°42'53.56200""N 077°25'49.12800""W",128,2073,2048,2201,17.66394281387329,50.253506429005306,0
+22,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°57'30.60000""N 077°12'21.60000""W",182,4633,4608,4815,66.57843089103699,109.84356805077992,0
+22,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,I can’t determine precise coordinates from that description alone. May I search historical land records and maps (online resources) to locate this grant?,182,1314,1280,1496,9.078283071517944,,0
+23,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°46'48.00000""N 076°48'00.00000""W",153,4185,4160,4338,77.82391500473022,8.184750656467413,0
+23,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"I don’t have enough information to locate this grant precisely. Can you provide any of the following: a scanned image or transcription of the original patent/survey, nearby rivers/roads or modern place names, or a patent/session file number?",153,1270,1216,1423,9.242141962051392,,0
+24,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°43'12.50400""N 076°58'49.08000""W",192,5465,5440,5657,111.63454914093018,81.56149968307528,0
+24,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°37'32.99880""N 076°59'15.00000""W",192,1817,1792,2009,13.326884031295776,88.57727007797591,0
+25,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°57'16.02000""N 077°56'33.82800""W",178,5145,5120,5323,71.2971351146698,22.356546364150265,0
+25,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°50'44.16000""N 077°38'39.48000""W",178,1433,1408,1611,14.398658037185669,19.90905448818004,0
+26,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"38°19'04.54800""N 077°31'02.35200""W",213,3929,3904,4142,42.364556074142456,2.8386188075085625,0
+26,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"Do you want a single representative point (e.g., Ewetree Point) or the approximate polygon/bounds of the entire 1,071‑acre grant? May I use online historical maps and county records to locate it precisely?",213,1845,1792,2058,14.502705097198486,,0
+27,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°52'46.20000""N 077°25'40.80000""W",131,3673,3648,3804,52.700268030166626,46.79897166054256,0
+27,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°54'23.12345""N 077°29'12.54321""W",131,1177,1152,1308,10.777918100357056,40.837524089434424,0
+28,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°53'16.80000""N 076°51'07.20000""W",127,7641,7616,7768,156.65310192108154,15.445892287066858,0
+28,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°54'13.50000""N 076°52'40.20000""W",127,1497,1472,1624,10.107233047485352,13.324016543382276,0
+29,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°36'20.16000""N 077°20'42.36000""W",160,4825,4800,4985,58.66494679450989,41.23044804032617,0
+29,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°30'12.34567""N 077°03'45.12345""W",160,1561,1536,1721,13.967550992965698,65.94045739346335,0
+30,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°52'36.00000""N 077°09'00.00000""W",130,3161,3136,3291,33.91691303253174,3.6309515490635,0
+30,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,I don’t have the external mapping sources needed to identify that historic feature precisely. May I search the web and historical maps to find the exact coordinates?,130,932,896,1062,6.6914591789245605,,0
+31,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"38°16'51.60000""N 078°10'08.40000""W",116,5849,5824,5965,112.20127272605896,23.647590254146944,0
+31,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"38°13'30.00000""N 077°37'12.00000""W",116,1817,1792,1933,10.437064170837402,28.837469879649774,0
+32,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°57'00.00000""N 076°54'00.00000""W",142,5657,5632,5799,50.21542811393738,20.12638012084338,0
+32,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°06'45.12345""N 076°50'30.54321""W",142,1177,1152,1319,8.843745946884155,17.714752607780788,0
+33,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°49'47.64000""N 077°37'54.84000""W",162,5657,5632,5819,124.639004945755,2.6952885371086475,0
+33,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°47'12.34567""N 077°21'45.12345""W",162,1305,1280,1467,12.052007913589478,21.5788346550558,0
+34,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°58'30.00000""N 077°00'45.00000""W",120,9049,9024,9169,213.80961418151855,18.324512610543767,0
+34,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°02'55.12345""N 076°50'10.54321""W",120,1369,1344,1489,8.282959222793579,28.77340073179385,0
+35,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°25'39.00000""N 077°44'33.00000""W",170,4057,4032,4227,91.23459362983704,5.467958835093467,0
+35,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°26'56.04000""N 077°30'10.08000""W",170,1689,1664,1859,10.192909955978394,16.51793318237965,0
+36,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°00'00.00000""N 077°16'12.00000""W",285,5593,5568,5878,93.51148819923401,21.410504781462862,0
+36,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°22'12.00000""N 077°05'24.00000""W",285,1369,1344,1654,15.482095003128052,24.65636072923636,0
+37,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°05'35.52000""N 077°12'17.46000""W",141,4249,4224,4390,45.82278895378113,11.954489191841732,0
+37,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°13'55.32240""N 077°23'48.40800""W",141,1561,1536,1702,16.138587951660156,21.930086299268034,0
+38,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"Could you provide the county, watercourse/adjacencies, or the patent book and page number? The brief abstract isn’t enough to pinpoint the tract’s location to precise coordinates.",103,1963,1920,2066,29.137943029403687,,0
+38,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,I don’t have enough information to locate this grant precisely. Please provide the county or the full grant book/survey reference (or a link/image of the original grant or survey description such as metes-and-bounds).,103,754,704,857,4.5844621658325195,,0
+39,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°42'50.00000""N 077°03'00.00000""W",133,4697,4672,4830,64.19190311431885,6.877745345322806,0
+39,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"I can’t determine a precise lat/long from that brief description alone. Please provide the patent/survey plat or more boundary details (metes and bounds, adjacent tracts, or a plat image) or confirm you want a best-effort estimate of a point on the south bank of the Nottoway River in Isle of Wight County.",133,1293,1216,1426,9.104560136795044,,0
+40,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°33'48.60000""N 077°13'51.60000""W",130,4441,4416,4571,80.23833417892456,9.705320327121344,0
+40,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°59'12.34567""N 076°39'45.12345""W",130,2713,2688,2843,21.06924605369568,70.32567892388482,0
+41,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°54'07.20000""N 077°33'41.40000""W",111,5529,5504,5640,151.0848491191864,39.547146149290434,0
+41,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"I can do that, but I need to look up historic grant records/maps to identify which Beaver Creek and the precise parcel. May I search the web and historical GIS sources to locate the 1731 grant for Richard Clough in Hanover County?",111,759,704,870,7.428316116333008,,0
+42,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°50'18.60000""N 077°40'19.20000""W",129,3865,3840,3994,47.29459309577942,16.072671654757503,0
+42,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,I can’t determine precise coordinates from the provided description alone. May I look this up in historical land-grant records/maps to locate it accurately?,129,1123,1088,1252,7.040649175643921,,0
+43,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°42'30.96000""N 077°53'08.52000""W",141,3353,3328,3494,75.87961292266846,39.88951762258677,0
+43,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°40'18.12345""N 077°48'36.54321""W",141,1433,1408,1574,9.556477785110474,46.99698828860121,0
+44,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°52'41.88000""N 076°48'37.80000""W",124,3865,3840,3989,62.69678068161011,51.061352726148066,0
+44,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"36°56'30.12345""N 076°47'52.54321""W",124,1305,1280,1429,12.408849000930786,56.338374685290816,0
+45,M-7,gpt-5-2025-08-07,one_shot,one_shot_dms_v1,v1,"38°00'45.00000""N 077°19'44.40000""W",153,5273,5248,5426,84.58878588676453,31.47296612877741,0
+45,M-8,gpt-5-mini-2025-08-07,one_shot,one_shot_dms_v1,v1,"37°33'56.16000""N 076°47'34.08000""W",153,1753,1728,1906,15.33297610282898,99.87102293178718,0
