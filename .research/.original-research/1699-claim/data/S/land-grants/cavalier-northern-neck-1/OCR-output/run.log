@@ -1,0 +1,2497 @@
+[INFO] Processing order: nn_supp.pdf
+OCR PDFs:   0%|          | 0/1 [00:00<?, ?it/s][INFO] OCRing nn_supp.pdf for text extraction only
+[INFO] RUN: ocrmypdf --rotate-pages --deskew --tesseract-oem 3 --tesseract-pagesegmode 3 --language eng --tesseract-config preserve_interword_spaces=1 -v 1 --output-type none --sidecar /Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-northern-neck-1/OCR-output/nn_supp_ocr.txt /Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-northern-neck-1/pdf-scans/nn_supp.pdf -
+ocrmypdf 16.10.4
+Running: ['tesseract', '--version']
+Found tesseract 5.5.0
+Running: ['tesseract', '--version']
+Running: ['tesseract', '--version']
+Running: ['gs', '--version']
+Found gs 10.5.1
+Running: ['gs', '--version']
+Running: ['tesseract', '--list-langs']
+stdout/stderr = List of available languages in "/usr/local/share/tessdata/" (163):
+afr
+amh
+ara
+asm
+aze
+aze_cyrl
+bel
+ben
+bod
+bos
+bre
+bul
+cat
+ceb
+ces
+chi_sim
+chi_sim_vert
+chi_tra
+chi_tra_vert
+chr
+cos
+cym
+dan
+deu
+div
+dzo
+ell
+eng
+enm
+epo
+equ
+est
+eus
+fao
+fas
+fil
+fin
+fra
+frk
+frm
+fry
+gla
+gle
+glg
+grc
+guj
+hat
+heb
+hin
+hrv
+hun
+hye
+iku
+ind
+isl
+ita
+ita_old
+jav
+jpn
+jpn_vert
+kan
+kat
+kat_old
+kaz
+khm
+kir
+kmr
+kor
+kor_vert
+lao
+lat
+lav
+lit
+ltz
+mal
+mar
+mkd
+mlt
+mon
+mri
+msa
+mya
+nep
+nld
+nor
+oci
+ori
+osd
+pan
+pol
+por
+pus
+que
+ron
+rus
+san
+script/Arabic
+script/Armenian
+script/Bengali
+script/Canadian_Aboriginal
+script/Cherokee
+script/Cyrillic
+script/Devanagari
+script/Ethiopic
+script/Fraktur
+script/Georgian
+script/Greek
+script/Gujarati
+script/Gurmukhi
+script/HanS
+script/HanS_vert
+script/HanT
+script/HanT_vert
+script/Hangul
+script/Hangul_vert
+script/Hebrew
+script/Japanese
+script/Japanese_vert
+script/Kannada
+script/Khmer
+script/Lao
+script/Latin
+script/Malayalam
+script/Myanmar
+script/Oriya
+script/Sinhala
+script/Syriac
+script/Tamil
+script/Telugu
+script/Thaana
+script/Thai
+script/Tibetan
+script/Vietnamese
+sin
+slk
+slv
+snd
+snum
+spa
+spa_old
+sqi
+srp
+srp_latn
+sun
+swa
+swe
+syr
+tam
+tat
+tel
+tgk
+tha
+tir
+ton
+tur
+uig
+ukr
+urd
+uzb
+uzb_cyrl
+vie
+yid
+yor
+
+pikepdf mmap enabled
+os.symlink(/Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-northern-neck-1/pdf-scans/nn_supp.pdf, /var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin)
+Gathering info with 1 thread workers
+pikepdf mmap enabled
+
+Using Tesseract OpenMP thread limit 1
+Start processing 8 pages concurrently
+pikepdf mmap enabled
+pikepdf mmap enabled
+    1 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=1', '-dLastPage=1', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000001_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+pikepdf mmap enabled
+    2 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=2', '-dLastPage=2', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000002_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+pikepdf mmap enabled
+    3 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=3', '-dLastPage=3', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000003_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+pikepdf mmap enabled
+pikepdf mmap enabled
+pikepdf mmap enabled
+pikepdf mmap enabled
+    4 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=4', '-dLastPage=4', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000004_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    5 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=5', '-dLastPage=5', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000005_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    6 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=6', '-dLastPage=6', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000006_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    7 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=7', '-dLastPage=7', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000007_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    8 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=8', '-dLastPage=8', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000008_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    2 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 2 through 2.
+Page 2
+
+    4 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 4 through 4.
+Page 4
+
+    2 Rotating output by 0
+    1 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 1 through 1.
+Page 1
+
+    4 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000004_rasterize_preview.jpg', 'stdout']
+    1 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000001_rasterize_preview.jpg', 'stdout']
+    2 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000002_rasterize_preview.jpg', 'stdout']
+    8 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 8 through 8.
+Page 8
+
+    6 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 6 through 6.
+Page 6
+
+    3 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 3 through 3.
+Page 3
+
+    7 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 7 through 7.
+Page 7
+
+    3 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000003_rasterize_preview.jpg', 'stdout']
+    8 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000008_rasterize_preview.jpg', 'stdout']
+    6 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000006_rasterize_preview.jpg', 'stdout']
+    7 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000007_rasterize_preview.jpg', 'stdout']
+    5 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 5 through 5.
+Page 5
+
+    5 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000005_rasterize_preview.jpg', 'stdout']
+    4 [tesseract] Too few characters. Skipping this page
+    4 [tesseract] Too few characters. Skipping this page
+    4 [tesseract] Error during processing.
+    4 page is facing ⇧, confidence 0.00 - no change
+    4 Rasterize with png16m, rotation 0
+    4 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=4', '-dLastPage=4', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000004_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    4 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 4 through 4.
+Page 4
+
+    1 page is facing ⇧, confidence 4.54 - no change
+    1 Rasterize with png16m, rotation 0
+    1 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=1', '-dLastPage=1', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000001_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    2 page is facing ⇧, confidence 28.34 - rotation appears correct
+    2 Rasterize with png16m, rotation 0
+    2 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=2', '-dLastPage=2', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000002_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    1 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 1 through 1.
+Page 1
+
+    4 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000004_rasterize.png', 'stdout']
+    8 page is facing ⇧, confidence 24.76 - rotation appears correct
+    8 Rasterize with png16m, rotation 0
+    8 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=8', '-dLastPage=8', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000008_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    6 page is facing ⇧, confidence 26.03 - rotation appears correct
+    6 Rasterize with png16m, rotation 0
+    6 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=6', '-dLastPage=6', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000006_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    5 page is facing ⇧, confidence 18.07 - rotation appears correct
+    5 Rasterize with png16m, rotation 0
+    5 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=5', '-dLastPage=5', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000005_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    7 page is facing ⇧, confidence 19.55 - rotation appears correct
+    7 Rasterize with png16m, rotation 0
+    7 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=7', '-dLastPage=7', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000007_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    3 page is facing ⇧, confidence 24.27 - rotation appears correct
+    3 Rasterize with png16m, rotation 0
+    3 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=3', '-dLastPage=3', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000003_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    2 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 2 through 2.
+Page 2
+
+    5 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 5 through 5.
+Page 5
+
+    8 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 8 through 8.
+Page 8
+
+    6 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 6 through 6.
+Page 6
+
+    4 [tesseract] Empty page!!
+    7 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 7 through 7.
+Page 7
+
+    1 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000001_rasterize.png', 'stdout']
+    3 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 3 through 3.
+Page 3
+
+    2 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000002_rasterize.png', 'stdout']
+    4 resolution (299.9994, 299.9994)
+    1 Deskew angle: 0.000
+    5 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000005_rasterize.png', 'stdout']
+    6 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000006_rasterize.png', 'stdout']
+    8 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000008_rasterize.png', 'stdout']
+    7 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000007_rasterize.png', 'stdout']
+    2 Deskew angle: 0.000
+    3 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000003_rasterize.png', 'stdout']
+    4 convert
+    4 PIL format = PNG
+    4 imgformat = PNG
+    4 input dpi = 300 x 300
+    1 resolution (299.9994, 299.9994)
+    4 rotation = 0°
+    4 input colorspace = RGB
+    4 width x height = 2480px x 3507px
+    4 read_images() embeds a PNG
+    4 convert done
+    4 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000004_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000004_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+    5 Deskew angle: 0.430
+    2 resolution (299.9994, 299.9994)
+    6 Deskew angle: -0.642
+    8 Deskew angle: -0.865
+    7 Deskew angle: 0.842
+    1 convert
+    1 PIL format = PNG
+    1 imgformat = PNG
+    1 input dpi = 300 x 300
+    4 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+    4 [tesseract] Empty page!!
+    4 [tesseract] Empty page!!
+    4 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+    9 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=9', '-dLastPage=9', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000009_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    4 Emplacement update
+    4 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+    4 Grafting
+    4 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+    4 Page rotation: (content, auto) -> page = (0, 0) -> 0
+    1 rotation = 0°
+    1 input colorspace = RGB
+    1 width x height = 2480px x 3507px
+    1 read_images() embeds a PNG
+    1 convert done
+    1 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000001_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000001_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+    3 Deskew angle: 0.710
+    9 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 9 through 9.
+Page 9
+
+    9 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000009_rasterize_preview.jpg', 'stdout']
+    2 convert
+    2 PIL format = PNG
+    2 imgformat = PNG
+    2 input dpi = 300 x 300
+    2 rotation = 0°
+    2 input colorspace = RGB
+    2 width x height = 2480px x 3507px
+    2 read_images() embeds a PNG
+    2 convert done
+    2 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000002_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000002_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+    1 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+    1 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+    1 eng
+    1 eng
+    1 eng
+    1 eng
+    1 eng
+    1 eng
+    1 eng
+    1 eng
+    1 eng
+    1 eng
+    1 eng
+    1 eng
+    1 eng
+    1 eng
+    1 eng
+   10 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=10', '-dLastPage=10', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000010_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    1 Emplacement update
+    1 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+    1 Grafting
+    1 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+    1 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   10 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 10 through 10.
+Page 10
+
+   10 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000010_rasterize_preview.jpg', 'stdout']
+    6 resolution (299.9994, 299.9994)
+    9 page is facing ⇧, confidence 23.37 - rotation appears correct
+    9 Rasterize with png16m, rotation 0
+    9 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=9', '-dLastPage=9', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000009_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    5 resolution (299.9994, 299.9994)
+    8 resolution (299.9994, 299.9994)
+    7 resolution (299.9994, 299.9994)
+    2 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+    2 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+    2 eng
+   11 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=11', '-dLastPage=11', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000011_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    2 Emplacement update
+    3 resolution (299.9994, 299.9994)
+    2 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+    2 Grafting
+    2 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+    2 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   11 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 11 through 11.
+Page 11
+
+    9 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 9 through 9.
+Page 9
+
+   11 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000011_rasterize_preview.jpg', 'stdout']
+   10 page is facing ⇧, confidence 20.52 - rotation appears correct
+   10 Rasterize with png16m, rotation 0
+   10 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=10', '-dLastPage=10', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000010_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    6 convert
+    6 PIL format = PNG
+    6 imgformat = PNG
+    6 input dpi = 300 x 300
+   10 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 10 through 10.
+Page 10
+
+    5 convert
+    5 PIL format = PNG
+    5 imgformat = PNG
+    5 input dpi = 300 x 300
+    8 convert
+    8 PIL format = PNG
+    8 imgformat = PNG
+    8 input dpi = 300 x 300
+    6 rotation = 0°
+    6 input colorspace = RGB
+    6 width x height = 2480px x 3507px
+    6 read_images() embeds a PNG
+    6 convert done
+    6 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000006_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000006_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+    7 convert
+    7 PIL format = PNG
+    7 imgformat = PNG
+    7 input dpi = 300 x 300
+    3 convert
+    3 PIL format = PNG
+    3 imgformat = PNG
+    3 input dpi = 300 x 300
+    5 rotation = 0°
+    5 input colorspace = RGB
+    5 width x height = 2480px x 3507px
+    9 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000009_rasterize.png', 'stdout']
+    5 read_images() embeds a PNG
+    5 convert done
+    5 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000005_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000005_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+    8 rotation = 0°
+    8 input colorspace = RGB
+    8 width x height = 2480px x 3507px
+    8 read_images() embeds a PNG
+    8 convert done
+    8 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000008_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000008_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+    3 rotation = 0°
+    3 input colorspace = RGB
+    3 width x height = 2480px x 3507px
+    7 rotation = 0°
+    7 input colorspace = RGB
+    7 width x height = 2480px x 3507px
+    3 read_images() embeds a PNG
+    7 read_images() embeds a PNG
+    7 convert done
+    7 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000007_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000007_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+    3 convert done
+    3 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000003_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000003_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   11 page is facing ⇧, confidence 19.84 - rotation appears correct
+   11 Rasterize with png16m, rotation 0
+   11 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=11', '-dLastPage=11', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000011_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   10 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000010_rasterize.png', 'stdout']
+    9 Deskew angle: 0.510
+   11 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 11 through 11.
+Page 11
+
+   10 Deskew angle: -0.453
+   11 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000011_rasterize.png', 'stdout']
+   11 Deskew angle: 0.470
+    3 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+    3 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    9 resolution (299.9994, 299.9994)
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    3 eng
+    6 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+    6 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    3 eng
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    3 eng
+    3 eng
+   12 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=12', '-dLastPage=12', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000012_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    3 Emplacement update
+    6 eng
+    3 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+    3 Grafting
+    3 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+    3 Page rotation: (content, auto) -> page = (0, 0) -> 0
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    6 eng
+    5 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+    5 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+    5 eng
+    5 eng
+    5 eng
+    5 eng
+    5 eng
+    5 eng
+    5 eng
+    5 eng
+    5 eng
+    6 eng
+    5 eng
+    5 eng
+    5 eng
+    5 eng
+    6 eng
+   12 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 12 through 12.
+Page 12
+
+    6 eng
+    5 eng
+    5 eng
+    5 eng
+    6 eng
+    8 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+    6 eng
+    5 eng
+    8 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+    8 eng
+    8 eng
+    8 eng
+    8 eng
+    5 eng
+   10 resolution (299.9994, 299.9994)
+    8 eng
+    6 eng
+    8 eng
+    8 eng
+    8 eng
+    8 eng
+    8 eng
+    5 eng
+    6 eng
+   12 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000012_rasterize_preview.jpg', 'stdout']
+    8 eng
+    6 eng
+    5 eng
+    8 eng
+    8 eng
+    8 eng
+    8 eng
+    6 eng
+    8 eng
+    6 eng
+    8 eng
+    5 eng
+    5 eng
+    6 eng
+    5 eng
+    8 eng
+    5 eng
+    7 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+    7 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+    7 eng
+    6 eng
+    7 eng
+    8 eng
+    7 eng
+    6 eng
+    5 eng
+    8 eng
+    7 eng
+    6 eng
+    5 eng
+    8 eng
+    7 eng
+    7 eng
+    5 eng
+    7 eng
+    8 eng
+    6 eng
+    7 eng
+    7 eng
+    7 eng
+    7 eng
+    7 eng
+    5 eng
+    7 eng
+    6 eng
+    8 eng
+    5 eng
+    7 eng
+    6 eng
+    8 eng
+    7 eng
+    6 eng
+    5 eng
+    8 eng
+    5 eng
+    6 eng
+    7 eng
+    5 eng
+    8 eng
+    6 eng
+    7 eng
+    6 eng
+    8 eng
+    7 eng
+    5 eng
+    8 eng
+    6 eng
+    7 eng
+    5 eng
+    6 eng
+    8 eng
+    5 eng
+    6 eng
+    7 eng
+    5 eng
+    5 eng
+    8 eng
+    6 eng
+    7 eng
+    5 eng
+    6 eng
+    6 eng
+    8 eng
+    5 eng
+    7 eng
+    5 eng
+    8 eng
+    6 eng
+    5 eng
+    8 eng
+    7 eng
+    7 eng
+    8 eng
+    6 eng
+    5 eng
+    6 eng
+    9 convert
+    7 eng
+    8 eng
+    9 PIL format = PNG
+    5 eng
+    6 eng
+    9 imgformat = PNG
+    9 input dpi = 300 x 300
+    7 eng
+    6 eng
+    8 eng
+    6 eng
+    7 eng
+    5 eng
+    8 eng
+    7 eng
+    5 eng
+    6 eng
+    8 eng
+    5 eng
+    7 eng
+    6 eng
+    5 eng
+    8 eng
+    7 eng
+    8 eng
+    6 eng
+    5 eng
+    7 eng
+    8 eng
+    5 eng
+    6 eng
+    7 eng
+   12 page is facing ⇧, confidence 23.17 - rotation appears correct
+   12 Rasterize with png16m, rotation 0
+   12 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=12', '-dLastPage=12', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000012_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    8 eng
+    8 eng
+    5 eng
+    7 eng
+    8 eng
+    9 rotation = 0°
+    5 eng
+   13 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=13', '-dLastPage=13', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000013_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    9 input colorspace = RGB
+    7 eng
+    8 eng
+    9 width x height = 2480px x 3507px
+    6 Emplacement update
+    5 eng
+    7 eng
+    8 eng
+    5 eng
+    7 eng
+    6 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+    9 read_images() embeds a PNG
+    8 eng
+    6 Grafting
+    9 convert done
+    8 eng
+    7 eng
+    5 eng
+    6 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+    9 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000009_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000009_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+    8 eng
+    7 eng
+    6 Page rotation: (content, auto) -> page = (0, 0) -> 0
+    5 eng
+    7 eng
+    8 eng
+    5 eng
+    7 eng
+    8 eng
+    5 eng
+   13 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 13 through 13.
+Page 13
+
+    8 eng
+    5 eng
+    8 eng
+    7 eng
+    7 eng
+    5 eng
+    7 eng
+    8 eng
+    5 eng
+    8 eng
+    7 eng
+    8 eng
+   13 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000013_rasterize_preview.jpg', 'stdout']
+   11 resolution (299.9994, 299.9994)
+    8 eng
+    7 eng
+   14 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=14', '-dLastPage=14', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000014_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    5 Emplacement update
+    7 eng
+    7 eng
+    8 eng
+    5 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+    5 Grafting
+    8 eng
+    7 eng
+    5 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+    5 Page rotation: (content, auto) -> page = (0, 0) -> 0
+    8 eng
+    7 eng
+    8 eng
+    8 eng
+    7 eng
+    8 eng
+    7 eng
+   12 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 12 through 12.
+Page 12
+
+    8 eng
+    8 eng
+    7 eng
+   10 convert
+   10 PIL format = PNG
+   10 imgformat = PNG
+   10 input dpi = 300 x 300
+    7 eng
+   15 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=15', '-dLastPage=15', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000015_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    8 Emplacement update
+    8 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+    8 Grafting
+    8 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+    8 Page rotation: (content, auto) -> page = (0, 0) -> 0
+    7 eng
+    7 eng
+    7 eng
+   14 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 14 through 14.
+Page 14
+
+    7 eng
+    7 eng
+   14 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000014_rasterize_preview.jpg', 'stdout']
+    7 eng
+    7 eng
+    7 eng
+   10 rotation = 0°
+   10 input colorspace = RGB
+   10 width x height = 2480px x 3507px
+    7 eng
+    7 eng
+   10 read_images() embeds a PNG
+   10 convert done
+   16 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=16', '-dLastPage=16', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000016_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+    7 Emplacement update
+   15 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 15 through 15.
+Page 15
+
+    7 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+    7 Grafting
+    7 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+    7 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   10 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000010_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000010_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   15 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000015_rasterize_preview.jpg', 'stdout']
+   16 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 16 through 16.
+Page 16
+
+   16 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000016_rasterize_preview.jpg', 'stdout']
+   11 convert
+   11 PIL format = PNG
+   11 imgformat = PNG
+   11 input dpi = 300 x 300
+   12 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000012_rasterize.png', 'stdout']
+   13 page is facing ⇧, confidence 22.10 - rotation appears correct
+   13 Rasterize with png16m, rotation 0
+   13 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=13', '-dLastPage=13', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000013_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   11 rotation = 0°
+   11 input colorspace = RGB
+   11 width x height = 2480px x 3507px
+   11 read_images() embeds a PNG
+   11 convert done
+   11 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000011_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000011_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   14 page is facing ⇧, confidence 18.53 - rotation appears correct
+   14 Rasterize with png16m, rotation 0
+   14 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=14', '-dLastPage=14', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000014_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   15 page is facing ⇧, confidence 19.80 - rotation appears correct
+   15 Rasterize with png16m, rotation 0
+   15 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=15', '-dLastPage=15', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000015_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   13 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 13 through 13.
+Page 13
+
+   16 page is facing ⇧, confidence 21.21 - rotation appears correct
+   16 Rasterize with png16m, rotation 0
+   16 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=16', '-dLastPage=16', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000016_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   14 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 14 through 14.
+Page 14
+
+   12 Deskew angle: -0.779
+   15 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 15 through 15.
+Page 15
+
+   16 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 16 through 16.
+Page 16
+
+   13 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000013_rasterize.png', 'stdout']
+   14 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000014_rasterize.png', 'stdout']
+    9 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+    9 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+   15 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000015_rasterize.png', 'stdout']
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+    9 eng
+   10 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   10 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   10 eng
+   10 eng
+   10 eng
+   10 eng
+   10 eng
+   10 eng
+   10 eng
+   10 eng
+    9 eng
+   10 eng
+   10 eng
+   10 eng
+   10 eng
+   10 eng
+   10 eng
+   10 eng
+   16 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000016_rasterize.png', 'stdout']
+   10 eng
+    9 eng
+   10 eng
+   10 eng
+   10 eng
+   10 eng
+    9 eng
+   10 eng
+   14 Deskew angle: -0.178
+    9 eng
+   10 eng
+   10 eng
+    9 eng
+   10 eng
+    9 eng
+   13 Deskew angle: 0.498
+   10 eng
+    9 eng
+   10 eng
+   10 eng
+    9 eng
+   10 eng
+    9 eng
+   10 eng
+   10 eng
+   10 eng
+    9 eng
+   10 eng
+    9 eng
+    9 eng
+   10 eng
+    9 eng
+    9 eng
+   10 eng
+   10 eng
+   10 eng
+    9 eng
+   10 eng
+   10 eng
+   10 eng
+   10 eng
+    9 eng
+   15 Deskew angle: 0.630
+   10 eng
+    9 eng
+   10 eng
+    9 eng
+   10 eng
+    9 eng
+   10 eng
+    9 eng
+   10 eng
+   10 eng
+    9 eng
+    9 eng
+   10 eng
+   10 eng
+    9 eng
+   10 eng
+    9 eng
+    9 eng
+   10 eng
+    9 eng
+   10 eng
+   10 eng
+   10 eng
+    9 eng
+    9 eng
+   10 eng
+    9 eng
+   16 Deskew angle: -0.934
+    9 eng
+   10 eng
+   10 eng
+   10 eng
+    9 eng
+    9 eng
+    9 eng
+   10 eng
+    9 eng
+   12 resolution (299.9994, 299.9994)
+   11 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   10 eng
+   10 eng
+   10 eng
+   17 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=17', '-dLastPage=17', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000017_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   11 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   10 eng
+   11 eng
+    9 Emplacement update
+   11 eng
+   10 eng
+   11 eng
+   11 eng
+    9 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+    9 Grafting
+   11 eng
+   11 eng
+   11 eng
+    9 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   10 eng
+   11 eng
+    9 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   11 eng
+   10 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   18 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=18', '-dLastPage=18', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000018_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   11 eng
+   11 eng
+   10 Emplacement update
+   10 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   10 Grafting
+   10 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   10 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   17 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 17 through 17.
+Page 17
+
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   17 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000017_rasterize_preview.jpg', 'stdout']
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   18 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 18 through 18.
+Page 18
+
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   18 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000018_rasterize_preview.jpg', 'stdout']
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   11 eng
+   19 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=19', '-dLastPage=19', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000019_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   11 Emplacement update
+   11 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   11 Grafting
+   11 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   11 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   19 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 19 through 19.
+Page 19
+
+   19 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000019_rasterize_preview.jpg', 'stdout']
+   14 resolution (299.9994, 299.9994)
+   13 resolution (299.9994, 299.9994)
+   15 resolution (299.9994, 299.9994)
+   12 convert
+   12 PIL format = PNG
+   12 imgformat = PNG
+   12 input dpi = 300 x 300
+   17 page is facing ⇧, confidence 16.93 - rotation appears correct
+   17 Rasterize with png16m, rotation 0
+   17 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=17', '-dLastPage=17', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000017_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   12 rotation = 0°
+   12 input colorspace = RGB
+   12 width x height = 2480px x 3507px
+   12 read_images() embeds a PNG
+   12 convert done
+   12 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000012_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000012_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   18 page is facing ⇧, confidence 19.62 - rotation appears correct
+   18 Rasterize with png16m, rotation 0
+   18 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=18', '-dLastPage=18', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000018_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   16 resolution (299.9994, 299.9994)
+   17 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 17 through 17.
+Page 17
+
+   14 convert
+   14 PIL format = PNG
+   14 imgformat = PNG
+   14 input dpi = 300 x 300
+   14 rotation = 0°
+   14 input colorspace = RGB
+   14 width x height = 2480px x 3507px
+   14 read_images() embeds a PNG
+   14 convert done
+   14 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000014_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000014_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   19 page is facing ⇧, confidence 28.34 - rotation appears correct
+   19 Rasterize with png16m, rotation 0
+   19 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=19', '-dLastPage=19', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000019_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   18 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 18 through 18.
+Page 18
+
+   13 convert
+   13 PIL format = PNG
+   13 imgformat = PNG
+   13 input dpi = 300 x 300
+   15 convert
+   15 PIL format = PNG
+   15 imgformat = PNG
+   15 input dpi = 300 x 300
+   13 rotation = 0°
+   13 input colorspace = RGB
+   13 width x height = 2480px x 3507px
+   13 read_images() embeds a PNG
+   13 convert done
+   13 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000013_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000013_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   15 rotation = 0°
+   15 input colorspace = RGB
+   15 width x height = 2480px x 3507px
+   15 read_images() embeds a PNG
+   19 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 19 through 19.
+Page 19
+
+   15 convert done
+   15 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000015_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000015_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   17 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000017_rasterize.png', 'stdout']
+   16 convert
+   16 PIL format = PNG
+   16 imgformat = PNG
+   16 input dpi = 300 x 300
+   16 rotation = 0°
+   16 input colorspace = RGB
+   16 width x height = 2480px x 3507px
+   16 read_images() embeds a PNG
+   16 convert done
+   16 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000016_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000016_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   18 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000018_rasterize.png', 'stdout']
+   19 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000019_rasterize.png', 'stdout']
+   17 Deskew angle: 0.625
+   18 Deskew angle: -0.791
+   14 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   14 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   19 Deskew angle: 0.682
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   14 eng
+   20 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=20', '-dLastPage=20', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000020_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   14 Emplacement update
+   14 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   14 Grafting
+   14 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   14 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   12 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   12 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   20 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 20 through 20.
+Page 20
+
+   12 eng
+   12 eng
+   20 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000020_rasterize_preview.jpg', 'stdout']
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   12 eng
+   15 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   15 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   15 eng
+   15 eng
+   15 eng
+   15 eng
+   12 eng
+   15 eng
+   15 eng
+   15 eng
+   12 eng
+   15 eng
+   12 eng
+   15 eng
+   15 eng
+   15 eng
+   12 eng
+   17 resolution (299.9994, 299.9994)
+   15 eng
+   15 eng
+   15 eng
+   15 eng
+   15 eng
+   15 eng
+   13 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   13 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   13 eng
+   13 eng
+   13 eng
+   13 eng
+   12 eng
+   15 eng
+   12 eng
+   13 eng
+   13 eng
+   13 eng
+   13 eng
+   13 eng
+   13 eng
+   12 eng
+   13 eng
+   15 eng
+   13 eng
+   15 eng
+   12 eng
+   15 eng
+   13 eng
+   12 eng
+   15 eng
+   13 eng
+   12 eng
+   12 eng
+   15 eng
+   13 eng
+   12 eng
+   15 eng
+   13 eng
+   12 eng
+   13 eng
+   15 eng
+   12 eng
+   13 eng
+   12 eng
+   15 eng
+   12 eng
+   13 eng
+   13 eng
+   15 eng
+   13 eng
+   15 eng
+   12 eng
+   13 eng
+   15 eng
+   13 eng
+   15 eng
+   13 eng
+   15 eng
+   12 eng
+   13 eng
+   15 eng
+   13 eng
+   12 eng
+   15 eng
+   13 eng
+   16 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   16 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   16 eng
+   16 eng
+   16 eng
+   16 eng
+   16 eng
+   13 eng
+   16 eng
+   15 eng
+   16 eng
+   13 eng
+   16 eng
+   16 eng
+   13 eng
+   16 eng
+   21 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=21', '-dLastPage=21', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000021_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   15 eng
+   16 eng
+   13 eng
+   16 eng
+   15 eng
+   13 eng
+   12 Emplacement update
+   16 eng
+   15 eng
+   16 eng
+   20 page is facing ⇧, confidence 27.09 - rotation appears correct
+   12 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   13 eng
+   16 eng
+   15 eng
+   20 Rasterize with png16m, rotation 0
+   12 Grafting
+   13 eng
+   20 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=20', '-dLastPage=20', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000020_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   16 eng
+   12 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   12 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   15 eng
+   16 eng
+   13 eng
+   13 eng
+   16 eng
+   15 eng
+   19 resolution (299.9994, 299.9994)
+   13 eng
+   15 eng
+   16 eng
+   13 eng
+   21 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 21 through 21.
+Page 21
+
+   15 eng
+   16 eng
+   16 eng
+   15 eng
+   13 eng
+   18 resolution (299.9994, 299.9994)
+   13 eng
+   16 eng
+   16 eng
+   13 eng
+   15 eng
+   21 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000021_rasterize_preview.jpg', 'stdout']
+   16 eng
+   13 eng
+   16 eng
+   15 eng
+   15 eng
+   16 eng
+   13 eng
+   15 eng
+   16 eng
+   13 eng
+   16 eng
+   15 eng
+   13 eng
+   15 eng
+   16 eng
+   15 eng
+   13 eng
+   15 eng
+   13 eng
+   13 eng
+   15 eng
+   20 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 20 through 20.
+Page 20
+
+   16 eng
+   13 eng
+   16 eng
+   15 eng
+   13 eng
+   15 eng
+   15 eng
+   13 eng
+   16 eng
+   16 eng
+   13 eng
+   13 eng
+   16 eng
+   16 eng
+   16 eng
+   13 eng
+   22 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=22', '-dLastPage=22', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000022_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   16 eng
+   15 Emplacement update
+   15 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   15 Grafting
+   15 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   15 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   13 eng
+   16 eng
+   13 eng
+   16 eng
+   13 eng
+   13 eng
+   16 eng
+   13 eng
+   16 eng
+   13 eng
+   16 eng
+   16 eng
+   23 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=23', '-dLastPage=23', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000023_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   13 Emplacement update
+   13 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   13 Grafting
+   16 eng
+   13 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   16 eng
+   13 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   16 eng
+   16 eng
+   16 eng
+   22 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 22 through 22.
+Page 22
+
+   16 eng
+   16 eng
+   16 eng
+   16 eng
+   16 eng
+   22 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000022_rasterize_preview.jpg', 'stdout']
+   16 eng
+   16 eng
+   16 eng
+   23 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 23 through 23.
+Page 23
+
+   16 eng
+   16 eng
+   16 eng
+   23 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000023_rasterize_preview.jpg', 'stdout']
+   16 eng
+   17 convert
+   17 PIL format = PNG
+   17 imgformat = PNG
+   17 input dpi = 300 x 300
+   24 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=jpeggray', '-dFirstPage=24', '-dLastPage=24', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000024_rasterize_preview.jpg', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   16 Emplacement update
+   16 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   16 Grafting
+   16 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   16 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   17 rotation = 0°
+   17 input colorspace = RGB
+   17 width x height = 2480px x 3507px
+   17 read_images() embeds a PNG
+   17 convert done
+   17 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000017_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000017_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   24 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 24 through 24.
+Page 24
+
+   24 Running: ['tesseract', '-l', 'osd', '--oem', '3', '--psm', '0', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000024_rasterize_preview.jpg', 'stdout']
+   21 page is facing ⇧, confidence 26.96 - rotation appears correct
+   21 Rasterize with png16m, rotation 0
+   21 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=21', '-dLastPage=21', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000021_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   19 convert
+   19 PIL format = PNG
+   19 imgformat = PNG
+   19 input dpi = 300 x 300
+   23 [tesseract] Too few characters. Skipping this page
+   23 [tesseract] Too few characters. Skipping this page
+   23 [tesseract] Error during processing.
+   23 page is facing ⇧, confidence 0.00 - no change
+   23 Rasterize with png16m, rotation 0
+   23 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=23', '-dLastPage=23', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000023_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   19 rotation = 0°
+   19 input colorspace = RGB
+   19 width x height = 2480px x 3507px
+   19 read_images() embeds a PNG
+   19 convert done
+   19 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000019_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000019_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   24 [tesseract] Too few characters. Skipping this page
+   24 [tesseract] Too few characters. Skipping this page
+   24 [tesseract] Error during processing.
+   24 page is facing ⇧, confidence 0.00 - no change
+   24 Rasterize with png16m, rotation 0
+   24 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=24', '-dLastPage=24', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000024_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   18 convert
+   18 PIL format = PNG
+   18 imgformat = PNG
+   18 input dpi = 300 x 300
+   20 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000020_rasterize.png', 'stdout']
+   21 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 21 through 21.
+Page 21
+
+   23 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 23 through 23.
+Page 23
+
+   18 rotation = 0°
+   18 input colorspace = RGB
+   18 width x height = 2480px x 3507px
+   18 read_images() embeds a PNG
+   18 convert done
+   18 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000018_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000018_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   24 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 24 through 24.
+Page 24
+
+   22 page is facing ⇧, confidence 23.89 - rotation appears correct
+   22 Rasterize with png16m, rotation 0
+   22 Running: ['gs', '-dSAFER', '-dBATCH', '-dNOPAUSE', '-dInterpolateControl=-1', '-sDEVICE=png16m', '-dFirstPage=22', '-dLastPage=22', '-r300.000000x300.000000', '-dPDFSTOPONERROR', '-o', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000022_rasterize.png', '-sstdout=%stderr', '-dAutoRotatePages=/None', '-f', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/origin.pdf']
+   23 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000023_rasterize.png', 'stdout']
+   20 Deskew angle: -0.143
+   21 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000021_rasterize.png', 'stdout']
+   22 stderr = GPL Ghostscript 10.05.1 (2025-04-29)
+Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 22 through 22.
+Page 22
+
+   24 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000024_rasterize.png', 'stdout']
+   23 Deskew angle: 0.000
+   24 [tesseract] Empty page!!
+   21 Deskew angle: 0.888
+   23 resolution (299.9994, 299.9994)
+   22 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '2', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000022_rasterize.png', 'stdout']
+   24 resolution (299.9994, 299.9994)
+   23 convert
+   23 PIL format = PNG
+   23 imgformat = PNG
+   23 input dpi = 300 x 300
+   23 rotation = 0°
+   23 input colorspace = RGB
+   23 width x height = 2480px x 3507px
+   23 read_images() embeds a PNG
+   23 convert done
+   23 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000023_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000023_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   22 Deskew angle: -0.625
+   17 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   17 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   17 eng
+   17 eng
+   17 eng
+   17 eng
+   20 resolution (299.9994, 299.9994)
+   17 eng
+   24 convert
+   24 PIL format = PNG
+   17 eng
+   24 imgformat = PNG
+   24 input dpi = 300 x 300
+   19 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   17 eng
+   19 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   24 rotation = 0°
+   19 eng
+   17 eng
+   24 input colorspace = RGB
+   19 eng
+   17 eng
+   24 width x height = 2480px x 3507px
+   19 eng
+   24 read_images() embeds a PNG
+   24 convert done
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   24 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000024_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000024_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   17 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   17 eng
+   17 eng
+   19 eng
+   19 eng
+   19 eng
+   19 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   19 eng
+   19 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   23 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   23 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   23 Emplacement update
+   23 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   23 Grafting
+   19 eng
+   19 eng
+   23 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   19 eng
+   23 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   17 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   17 eng
+   17 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   17 eng
+   17 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   24 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   19 eng
+   17 eng
+   24 [tesseract] Empty page!!
+   19 eng
+   24 [tesseract] Empty page!!
+   19 eng
+   19 eng
+   17 eng
+   19 eng
+   24 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   19 eng
+   17 eng
+   18 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   19 eng
+   17 eng
+   19 eng
+   17 eng
+   19 eng
+   18 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   17 eng
+   18 eng
+   19 eng
+   18 eng
+   19 eng
+   17 eng
+   18 eng
+   24 Emplacement update
+   19 eng
+   18 eng
+   21 resolution (299.9994, 299.9994)
+   19 eng
+   18 eng
+   24 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   19 eng
+   18 eng
+   24 Grafting
+   19 eng
+   18 eng
+   19 eng
+   18 eng
+   19 eng
+   18 eng
+   24 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   18 eng
+   19 eng
+   19 eng
+   24 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   18 eng
+   19 eng
+   17 Emplacement update
+   17 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   17 Grafting
+   18 eng
+   19 eng
+   17 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   17 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   19 eng
+   19 eng
+   19 eng
+   18 eng
+   19 eng
+   18 eng
+   19 eng
+   18 eng
+   19 eng
+   19 eng
+   19 eng
+   19 eng
+   19 eng
+   19 eng
+   18 eng
+   19 eng
+   19 eng
+   18 eng
+   19 eng
+   18 eng
+   19 eng
+   18 eng
+   19 eng
+   19 eng
+   18 eng
+   19 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   19 Emplacement update
+   18 eng
+   19 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   18 eng
+   19 Grafting
+   18 eng
+   19 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   19 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   18 eng
+   18 eng
+   20 convert
+   20 PIL format = PNG
+   20 imgformat = PNG
+   20 input dpi = 300 x 300
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   20 rotation = 0°
+   20 input colorspace = RGB
+   20 width x height = 2480px x 3507px
+   18 eng
+   20 read_images() embeds a PNG
+   20 convert done
+   20 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000020_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000020_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   22 resolution (299.9994, 299.9994)
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 eng
+   18 Emplacement update
+   18 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   18 Grafting
+   18 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   18 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   21 convert
+   21 PIL format = PNG
+   21 imgformat = PNG
+   21 input dpi = 300 x 300
+   21 rotation = 0°
+   21 input colorspace = RGB
+   21 width x height = 2480px x 3507px
+   21 read_images() embeds a PNG
+   21 convert done
+   21 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000021_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000021_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   22 convert
+   22 PIL format = PNG
+   22 imgformat = PNG
+   22 input dpi = 300 x 300
+   22 rotation = 0°
+   22 input colorspace = RGB
+   22 width x height = 2480px x 3507px
+   22 read_images() embeds a PNG
+   22 convert done
+   22 Running: ['tesseract', '-l', 'eng', '--oem', '3', '--psm', '3', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000022_ocr.png', '/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/000022_ocr_hocr', 'hocr', 'txt', 'preserve_interword_spaces=1']
+   20 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   20 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 eng
+   20 Emplacement update
+   20 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   20 Grafting
+   20 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   20 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   21 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   21 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 eng
+   21 Emplacement update
+   21 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   21 Grafting
+   21 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   21 Page rotation: (content, auto) -> page = (0, 0) -> 0
+   22 [tesseract] read_params_file: Can't open preserve_interword_spaces=1
+   22 pikepdf.Matrix(0.24, 0, 0, -0.24, 0, 841.68)
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 eng
+   22 Emplacement update
+   22 Text rotation: (text, autorotate, content) -> text misalignment = (0, 0, 0) -> 0
+   22 Grafting
+   22 Grafting with ctm pikepdf.Matrix(1, 0, 0, 1, 0, 0)
+   22 Page rotation: (content, auto) -> page = (0, 0) -> 0
+
+/var/folders/j6/9jm_j3kn7dlfhjnddm11qpx00000gn/T/ocrmypdf.io.m9uc88rd/sidecar.txt -> /Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-northern-neck-1/OCR-output/nn_supp_ocr.txt
+Output sent to stdout
+[INFO] Finished OCR nn_supp.pdf
+OCR PDFs: 100%|██████████| 1/1 [02:32<00:00, 152.07s/it]OCR PDFs: 100%|██████████| 1/1 [02:32<00:00, 152.08s/it]
+[INFO] Concatenating 1 text files → /Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-northern-neck-1/OCR-output/nn1_ocr.txt
+[INFO] Skipped PDF generation to focus on text extraction
+[INFO] Wrote cleaned text → /Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-northern-neck-1/OCR-output/nn1_clean.txt
+[INFO] CSV with 32 grant entries written → /Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-northern-neck-1/OCR-output/grant_blobs_volume2.csv
+/Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-northern-neck-1/OCR-output/grant_blobs_volume2.csv

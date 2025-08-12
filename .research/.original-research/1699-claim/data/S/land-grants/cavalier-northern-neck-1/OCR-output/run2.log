@@ -1,0 +1,7 @@
+[INFO] Processing order: nn_supp.pdf
+OCR PDFs:   0%|          | 0/1 [00:00<?, ?it/s][INFO] [skip] nn_supp.pdf already OCR'd
+OCR PDFs: 100%|██████████| 1/1 [00:00<00:00, 749.65it/s]
+[INFO] Concatenating 1 text files → /Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-northern-neck-1/OCR-output/nn1_ocr.txt
+[INFO] Wrote cleaned text → /Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-northern-neck-1/OCR-output/nn1_clean.txt
+[INFO] CSV with 114 grant entries written → /Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-northern-neck-1/OCR-output/grant_blobs_nn1.csv
+/Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/cavalier-northern-neck-1/OCR-output/grant_blobs_nn1.csv

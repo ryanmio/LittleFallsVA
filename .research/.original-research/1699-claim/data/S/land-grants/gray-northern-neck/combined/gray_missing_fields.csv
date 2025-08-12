@@ -1,0 +1,1949 @@
+grant_id,name_std,acreage,year,county_text,raw_entry,missing_name,missing_county
+GRAY_1_0,2-1: Henry Lewis,160.0,1694.0,,"2-1: Henry Lewis 160 A. [part missing] adj. William Perce, Luke Thornton, Col.
+John Walker. 1 Oct. 1694.",False,True
+GRAY_1_19,2-20: Jonathan Mothershead,301.0,1694.0,,"2-20: Jonathan Mothershead 301 A. on Little Hunting Cr. Wrnt. to Mr. Bland 5
+Oct. 1694. Adj. Giles Vandegasteel, Edward Keninton. 5 Oct. 1694.",False,True
+GRAY_1_20,2-21: Anthony Beard,492.0,1694.0,,"2-21: Anthony Beard 492 A. in Washington Par. Wrnt. to Mr. Alexander Spence 5
+Oct. 1694. On road from Appomatox Cr. to Washington's Mill, near John Weedon,
+the Indian Path, adj. Daniel White. 5 Oct. 1694.",False,True
+GRAY_1_26,2-28: William Carter,89.0,1694.0,,"2-28: William Carter 89 A. in Richmond Co. on Charles Beaver dam. Wrnt. 9 Oct.
+returned by Mr. Moseley's Surv. Adj. Carter's Plantation, David Sterne,
+Giles Matthews, James Trent. 9 Oct. 1694.",False,True
+GRAY_1_37,2-39: John Matthews,2466.0,1694.0,,"2-39: John Matthews 2466 A. on S.W. side Great Hunting Cr., adj. his own head
+line, S. Br. Little Hunting Cr. 13 Oct. 1694.",False,True
+GRAY_1_38,2-39: Mr,690.0,1694.0,,"2-39: Mr. William Downing surv'd 690 A. Mr. William Paine bought 350 A. Grant
+to Paine. On Potowmack Cr., adj. Mal'a Peal. 11 Oct. 1694.Will devised to William, son, and Mary & Margaret, daus. of Capt. John Norgrave,
+for life but no longer. William, Mary, & Margaret being dead & no heir appearing
+nor further disposition from Langford, Escheat Grant to Mr. Joseph Whitson who
+purchased the three estates. Adj. Capt. Giles Brant. 14 Oct. 1694.",False,True
+GRAY_1_39,2-41: Thomas Norman 90 1/,3.0,1694.0,,"2-41: Thomas Norman 90 1/3 A. of Marsh on Oquia Cr. Wrnt. 21 Oct. 1694. Surv.
+by Capt. George Brent. Adj. John Fosaker, Thomas Norman. 21 Oct. 1694.",False,True
+GRAY_1_51,2-51: William Williams,186.0,1694.0,,2-51: William Williams 186 A. on Doegs Run adj. his other land. 1 Nov. 1694.,False,True
+GRAY_1_53,2-53: Mr,90.0,1694.0,,"2-53: Mr. Francis Triplett 90 A. adj. 300 A he bought of Mr. William Underwood
+& 200 A. bought of one Coleman. Surv. by Mr. Edwyn Conway. Between Rappahanock
+and Potowmack, adj- Coleman's land, on Mattox Cr. 2 Nov. 1694.",False,True
+GRAY_1_58,2-57: William Colston(coleston),100.0,1694.0,,"2-57: William Colston(Coleston) 100 A. on Totaskey Cr. in Richmond Co. adj. Mr.
+James Williamson. 14 Nov. 1694.",False,True
+GRAY_1_64,2-62: William Smith,84.0,1694.0,,"2-62: William Smith of Richmond Co. 84 A. in Richmond Co. on Bryary Swamp.
+Surv. by Mr. Edwin Conway. Adj. Daniel O Neall, land formerly Edmund Goodman's
+now Smith's, Doctor Deacre's Rd. 20 Nov. 1694.",False,True
+GRAY_1_65,2-63: John Rankin,32.0,1694.0,,"2-63: John Rankin 32 A. on Marrattico Cr. in Richmond Co. Surv. by Mr. Edwin
+Conway. Adj. Mr. John Ockley, Mr. John Overton. 20 Nov. 1694.",False,True
+GRAY_1_68,2-65: Thomas Wilson,50.0,1694.0,,"2-65: Thomas Wilson of Westmoreland Co. died seized of 50 A. between Rappahanock and Potowmack Rs. Escheat Grant to Col. William Peirce of said Co. Adj.
+George Bruce, Leonard Dozier, land Richard Burk leased to Peirce. 23 Nov. 1694.",False,True
+GRAY_1_73,2-73: Mr,119.0,1694.0,,"2-73: Mr. Robert Pritchard 119 A. adj. Mr. Joseph Ball, Stephen Tomlin, land of
+orphans of Mr. William Frisell, dec'd. 24 Nov. 1694.",False,True
+GRAY_1_79,2-78: Ralph Walker,1283.0,1694.0,,"2-78: Ralph Walker of Staffford Co. 1 Oct. 1694 suggested 1283 A. ungranted.
+Mr. G. Brent Jr. & Mr. William Chandler to Surv. Deed for 1250 A. on Rocky Run
+of Austins Run. 1 Nov. 1694.",False,True
+GRAY_1_81,2-79: Mr,75.0,1694.0,,"2-79: Mr. Vincent Cox 75 A. in Yeocomico forrest adj. Cox's other land, Henry
+Duncham, Robert Selfe. 28 Nov. 1694.",False,True
+GRAY_1_83,2-82: Thomas Dusin,126.0,1694.0,,"2-82: Thomas Dusin 126 A. on Totaskey Cr. adj. Mr. William Thatcher, Mrs.
+Wilks. Land was surv'd by Mr. William Moseley for Peter Elmore who sold to
+Dusin. 28 Nov. 1694.",False,True
+GRAY_1_98,2-98: Ed,50.0,1694.0,,"2-98: Ed. Crooker died seized of 50 A. in Richmond Co. between Farnam &
+Marrattico Crs. Grant to Mr. Alexander Newman of Richmond Co. Adj. Mr. Robt.
+Palmer. 18 Dec. 1694.",False,True
+GRAY_1_100,2-100: William Hancock,300.0,1694.0,,"2-100: William Hancock of Richmond Co. 300 A. on Totaskey Cr. - part of Patent
+granted Thomas Freswater who sold to Hancock. Adj. Daniel Swillivant, Wilcocks's
+line. 18 Dec. 1694.",False,True
+GRAY_1_101,2-101: Andrew Farmer In 1653 Patented,300.0,1694.0,,"2-101: Andrew Farmer in 1653 patented 300 A. He died without heirs. Escheat
+Grant to Capt. John Washington of Westmoreland Co. On upper Machoduck Cr. called
+Mattopony, where Mr. Dade formerly lived, adj. Sims Path, Mr. Buckners line. 19
+Dec. 1694.",False,True
+GRAY_1_118,2-123: Alexander Swan,78.0,1694.0,,"2-123: Alexander Swan of Lancaster Co. 78 A. on Farnham Cr. in Richmond Co.
+adj. line of Fauntleroy, on White Oak Sw., John Aimes, other tract of Williams,
+William Wheeler. 11 Feb. 1694/5.",False,True
+GRAY_1_125,2-130: Thomas Porter,175.0,1694.0,,"2-130: Thomas Porter 175 A. adj. George King, Henry Bury, Porter's plantation,
+Br. of Machotick, Hale's road. 7 Mar. 1694/5.",False,True
+GRAY_1_127,2-132: Robert Peck,100.0,1694.0,,"2-132: Robert Peck 100 A. of 550 A. surv'd for Henry Bury adj. William Lippet,
+Mr. Savage, Henry Bury, Symonds marked tree, Mr. James Kay, a Surv. for Robert
+Peck. 7 Mar. 1694/5.",False,True
+GRAY_1_128,2-134: Gerrard Ford,250.0,1694.0,,"2-134: Gerrard Ford 250 A. on Attopin Cr. or called Rosiers Cr., Sw. by
+Potowmack R., adj. Mr. Lawrance Washington, Francis Gray, Ford's other land,
+Thomas ArrowSmith. 9 Mar. 1694/5.",False,True
+GRAY_1_130,2-135: Ralph Whiting,250.0,1694.0,,"2-135: Ralph Whiting 250 A. adj. Esquire Wormeley, on Chingateague Brs. 11
+Mar. 1694/5.",False,True
+GRAY_1_131,2-136: Ralph Whiting,450.0,1694.0,,"2-136: Ralph Whiting 450 A. adj. William Lippett, Simson's marked oak, James
+Kay, Henry Bury, Robert Peck. Said 450 A. is part of 550 A. surv'd for Henry
+Bury. 11 Mar. 1694/5.",False,True
+GRAY_1_132,2-137: James Matthews,100.0,1694.0,,"2-137: James Matthews 100 A. adj. John Griffins, John Easter, on Chingateague.
+11 Mar. 1694/5.",False,True
+GRAY_1_133,2-137: John Easter,123.0,1694.0,,2-137: John Easter 123 A. on main Run of Chingateague. 11 Mar. 1694/5.,False,True
+GRAY_1_134,2-138: John Griffin,450.0,1694.0,,"2-138: John Griffin 450 A. adj. Ralph Whiting, James Matthews, on main Run of
+Chingateague, Esquire Wormeley. 11 Mar. 1694/5.",False,True
+GRAY_1_135,2-138: John Motts,240.0,1694.0,,"2-138: John Motts 240 A. below Chatwin's Bridge, adj. Chatwins line, Richard
+Alderson, land known as the Short Neck. 13 Mar. 1694/5.",False,True
+GRAY_1_136,2-139: Henry Stoneham,117.0,1694.0,,"2-139: Henry Stoneham 117 A. adj. land called Short Neck, Mr. Alexander Newman.
+13 Mar. 1694/5.",False,True
+GRAY_1_137,2-139: Edward Platt,106.0,1694.0,,"2-139: Edward Platt 106 A. on Br. of Mechotick dam, adj. Mr. William & John
+Bumbury, Mr. Simon Cox, George King. 15 Mar. 1694/5.",False,True
+GRAY_1_138,2-140: Joseph Henson,391.0,1694.0,,"2-140: Joseph Henson 391 A. upon the Clift, by the Run. 16 Mar. 1694/5.",False,True
+GRAY_1_140,2-142: Maxfield Brown,228.0,1694.0,,"2-142: Maxfield Brown 228 A. adj. Mr. Francis Wright's land formerly Col. John
+Washington's dec'd, orphans of William Brown dec'd, John Rosse. 19 Mar. 1694/5.",False,True
+GRAY_1_141,2-143: John Hornesby,107.0,1694.0,,"2-143: John Hornesby 107 A. adj. Mr. Christopher Neal, Mr. Taylor, by Br. of
+Wiccomoco R. 21 Mar. 1694/5.",False,True
+GRAY_1_142,2-144: Arthur Marsh,50.0,1695.0,,"2-144: Arthur Marsh 50 A. on Wiccomoco R. adj. James Pope, road from said R. to
+Corotoman, other tract of Marsh's. 26 Mar. 1695.",False,True
+GRAY_1_148,2-152: Thomas Salisbury,300.0,1695.0,,"2-152: Thomas Salisbury 300 A. ona Sw. adj. William Griffins, Christopher
+Garlington, in main woods. 27 Mar. 1695.",False,True
+GRAY_1_150,2-154: Thomas Glascock,428.0,1695.0,,"2-154: Thomas Glascock 428 A. adj Mr. John Tarpley, Mill Br. out of Totaskey
+Mill Pond, Henry Corbin, Esq., William Guleton(?), on Main Sw. of Toteskey. 1
+Apr. 1695.",False,True
+GRAY_1_151,2-154: William Champ,202.0,1695.0,,"2-154: William Champ 202 A. adj. Matthew Martin, Samuel Jackson, George
+Calvert, John Champ. 4 Apr. 1695.",False,True
+GRAY_1_152,2-155: Richard Alderson,83.0,1695.0,,"2-155: Richard Alderson 83 A. adj. Mr. Thomas Chatwin, John Mott, Alderson's
+other land. 4 Apr. 1695.",False,True
+GRAY_1_154,2-157: Randell Kerk,254.0,1695.0,,"2-157: Randell Kerk, orphan to Randell Kerk, dec'd. 254 A. by a Br. out of
+Nominey Bay called Corriwoman. 5 Apr. 1695.",False,True
+GRAY_1_156,2-159: Thomas Marder,243.0,1695.0,,"2-159: Thomas Marder 243 A. on Attopin Beaver dam, adj. Daniel White & William
+Baltrop, Path from Lawrence Washington's Mill to Nanjatico, Orphan of Thomas
+Rowland, dec'd. 15 May 1695.",False,True
+GRAY_1_157,2-159: Richard Duncon,150.0,1695.0,,"2-159: Richard Duncon 150 A. adj. William Baltrop, Francis Grege. 15 May 1695.
+2-160: William Bennett 100 A. adj. land formerly Capt. Alexanders. 17 May 1695.
+2-160: Richard Oldham 350 A. adj. John Adams, Thomas Timons(Timmons), Holly
+Bush Sw., Trickohoe Sw.,  Grooles land, Brawford's land, Michael Melton,
+Chandler's Sw., Maratico Rd. 22 May 1695.",False,True
+GRAY_1_158,2-161: Samuell Churchill,591.0,1695.0,,"2-161:  Samuell Churchill, William Hill, Richard & James Oldham 591 A. adj.
+James More Sometime, Anthony Lynson, a Br. of Yeocomico, Morotico Rd., Reedy Br.
+of Tokossley, ____Nichols's land, Stephen Wells. 22 May 1695.",False,True
+GRAY_1_159,2-163: Richard Nevett,449.0,1695.0,,"2-163: Richard Nevett 449 A. on Little Burbeges Cr., by the White Marsh, a Br.
+2-163: Anthony Windsor 236 A. adj. land of Richard Brown & Thomas Butler
+formerly taken up by Thomas Therwhitt. 25 May 1695.",False,True
+GRAY_1_161,2-166: [see 2- 164] Thomas Bonison Son,204.0,1695.0,,"2-166: [See 2- 164] Thomas Bonison son of Abiah 10 July 1682 sold 204 A. of
+1300 A. to Thomas Martin. Adj. Major Bristow, Tabb Cr., Major Bristow's Sw.,
+Epie's Sw., S.W. side of old road to where old Ashley lives. 27 May 1695.",False,True
+GRAY_1_162,2-167: [see 2-164] Thomas Binnison Son,100.0,1695.0,,"2-167: [See 2-164] Thomas Binnison son of Abiah 5 Sept. 1682 sold Richard
+Harrowell (Harwell) 100 A. on Great Sw. of Haddoways Cr., adj. Durty Sw., near
+Harrowell's house, Mr. Robert Griggs. 27 May 1695.",False,True
+GRAY_1_163,2-168: John Harris,100.0,1695.0,,"2-168: John Harris 100 A. on Main Br. of Wiccomoco R. adj. Charles Walton,
+William & Walter Albin, Dennis Connoway. 7 June 1695.",False,True
+GRAY_1_164,2-169: John Harris,350.0,1695.0,,"2-169: John Harris 350 A. on S.E. Br. of Wiccomoco, on Reedy Br., adj. land
+formerly of John Palmer. 7 June 1695.",False,True
+GRAY_1_165,2-169: John Haynie,80.0,1695.0,,"2-169: John Haynie, Sr. 80 A. adj. Mr. Peter Presley, land formerly Mr. Geruard
+Dodson, Richard Nelmes, dec'd., Br. of Chingoham Cr. 7 June 1695.",False,True
+GRAY_1_166,2-170: Anthony Haynie,300.0,1695.0,,"2-170: Anthony Haynie 300 A. adj. Mr. John Chandler dec'd, Col. John Frussell &
+Geraurd Dodson both dec'd, Richard Russell dec'd, John Haynie Sr., John Hughlett
+Sr., Chickacoane R. 7 June 1695.",False,True
+GRAY_1_167,2-170: Meridith Price,378.0,1695.0,,"2-170: Meridith Price 378 A. adj. Samuel Reed, William Howell. 8 June 1695.",False,True
+GRAY_1_168,2-171: Meridith Price,67.0,1695.0,,"2-171: Meridith Price 67 A. adj. Attopin dam, Nanjattico Path, Nicholas
+Sexeston. 8 June 1695.",False,True
+GRAY_1_169,2-172: Philip Saunders,131.0,1695.0,,"2-172: Philip Saunders 131 A. adj. Capt. William Hardidge dec'd., surv. for
+Nicholas Silvester in Betty's Neck, Curioman Sw., Thomas Crane. 2 July 1695.",False,True
+GRAY_1_170,2-173: John Hawford,159.0,1695.0,,"2-173: John Hawford 159 A. 5 July 1695.
+2-174: Henry Thornton 159 A. 5 July 1695.",False,True
+GRAY_1_171,2-175: John Engoe,300.0,1695.0,,"2-175: John Engoe 300 A. adj. Josias Draper near Mechotick Path, land conveyed
+to Josias Draper by James Fox. 16 July 1695.",False,True
+GRAY_1_172,2-175: Alexander Spence,328.0,1695.0,,"2-175: Alexander Spence 328 A. adj. Mr. John Minor, Richard Sturman, Edward
+Franeklin, Patrick Spence, near Minors spring at the Ct.house. 15 July 1695.",False,True
+GRAY_1_173,2-176: Philip Shapleigh,80.0,1695.0,,"2-176: Philip Shapleigh 80 A. on Herring Cr. main Br. adj. Ralph Warrington,
+Mr. Thomas Hobson, John Bearmore. 15 July 1695.",False,True
+GRAY_1_175,2-177: William Smith,135.0,1695.0,,"2-177: William Smith 135 A. adj. land of Mr. Thomas Robinson & Edward Lewis,
+land of Thomas Pervis & Edward Lewis, Mr. Sysan, George Bryars. 22 July 1695.
+1695.",False,True
+GRAY_1_176,2-178: John Simpson,217.0,1695.0,,"2-178: John Simpson 217 A. adj. Capt. George Brent, Guine's corner, George
+Mason, up Meddower Run. 26 July 1695.",False,True
+GRAY_1_177,2-179: John Simpson,200.0,1695.0,,"2-179: John Simpson 200 A. adj. Lewis Griffin, Simpson's own land, Major
+Haston, Battin's line. 27 July 1695.",False,True
+GRAY_1_178,2-180: Lewis Griffie,205.0,1695.0,,"2-180: Lewis Griffie 205 A. adj. John Owen, Griffie's other land, line between
+Griffie & Simpson, Battin's line, Mary Webb. 27 July 1695.",False,True
+GRAY_1_179,2-181: Angelo Jacobus,454.0,1695.0,,"2-181: Angelo Jacobus of Richmond Co. 454 A. adj. Henry Strishton, John
+Clistier, James Williamson, dec'd. 30 July 1695.",False,True
+GRAY_1_180,2-181: Angelo Jacobus,190.0,1695.0,,"2-181: Angelo Jacobus of Richmond Co. 190 A. adj Mr. Richard Melalph(?), William
+Smith, orphans of Col. Moore Frankleroy, John Hawford, Mr. George Eale, William
+Yeatter, other land of Jacobus. 30 July 1695.",False,True
+GRAY_1_182,2-183: William Taylor,184.0,1695.0,,"2-183: William Taylor of Richmond Co. 184 A. adj. Robert Peck, Peter Butler and
+son, + + + + Cox. 16 Aug. 1695.",False,True
+GRAY_1_183,2-184: John Bury 91 3/,4.0,1695.0,,"2-184: John Bury 91 3/4 A. adj. Thomas Arnold, James Green, line of Proster &
+Chuttwood, land of Simpsons & Henry Bury, Br. of Chingateague. 16 Aug. 1695.",False,True
+GRAY_1_184,2-185: Col,600.0,1695.0,,"2-185: Col. Isaac Alerton 600 A. opposite Dogges Island, adj. William Harris,
+Thomas Carter, Robert Collingwood. 31 Aug. 1695.",False,True
+GRAY_1_185,2-185: Elias Hugher,49.0,1695.0,,"2-185: Elias Hugher of Westmoreland Co. 49 A. adj. land surv'd for Mary
+Stockman in the Clavis, John Davice. 2 Sept. 1695.",False,True
+GRAY_1_187,2-187: Thomas Watkins(wootkins),803.0,1695.0,,"2-187: Thomas Watkins(Wootkins) of Stafford Co. 803 A. adj. two tracts of Capt.
+Malach. Peale. 9 Sept. 1695.",False,True
+GRAY_1_189,2-189: Thomas Craine,238.0,1695.0,,"2-189: Thomas Craine of Westmoreland Co. 238 A. adj. William Mozely & Ed.
+Waslipton on Coryoman main Br., Nicholas Silvester, Phil. Saunders. 9 Sept.
+1695.",False,True
+GRAY_1_190,2-190: John Longworth,130.0,1695.0,,"2-190: John Longworth of Westmoreland Co. 130 A. adj. Mr. William Harding,
+Mrs. Katherine Brent, being part of 1004 A. Patent to Richard Sleman, dec'd. 9
+Sept. 1695.",False,True
+GRAY_1_191,2-191: George Smith,270.0,1695.0,,"2-191: George Smith of Stafford Co. 270 A. by Doges Run including an Island in
+Run in bounds of said land. 13 Sept. 1695.",False,True
+GRAY_1_193,2-193: George Hutton,256.0,1695.0,,"2-193: George Hutton of Northumberland Co. 256 A. onE. side of a Br. of
+Yecomoco R. adj. James Moore. 24 Sept. 1695.",False,True
+GRAY_1_194,2-194: John Manning,147.0,1695.0,,"2-194: John Manning of Westmoreland Co. 147 A. adj. William Saxton, Francis
+Wright Gent., Randall Davenport. 25 Sept. 1695.",False,True
+GRAY_1_195,2-195: Richard Cundeffe,2.0,1695.0,,"2-195: Richard Cundeffe of Northumberland Co. 267 1/2 A. adj. Edmond Rasey, Mr.
+William Theritt. 26 Sept. 1695.",False,True
+GRAY_1_196,2-195: John Strickley,116.0,1695.0,,"2-195: John Strickley 116 A. adj. land granted Edward Mihill now possessed by
+Mrs. Elizabeth Spencer & John Iues?, Mr. John Chinn dec'd., Maratico Cr. 30
+Sept. 1695.",False,True
+GRAY_1_199,2-197: John Harris & Edward Fielding,850.0,1695.0,,"2-197: John Harris & Edward Fielding of Northumberland Co. 850 A. on main & E.
+Brs. of Wicomico R. adj. Fielding's Mill dam, Reedy Br., land granted Harris,
+John Palmer dec'd., James Pope dec'd., Arthur Marsh. 30 Sept. 1695.",False,True
+GRAY_1_200,2-198: John Barten,200.0,1695.0,,"2-198: John Barten of Northumberland Co. 200 A. adj. Thomas Steele, said
+Spencer. 3 Oct. 1695.",False,True
+GRAY_1_202,2-201: Andrew Chambers,134.0,1695.0,,"2-201: Andrew Chambers of Stafford Co. 134 A. adj. Meshodick dam, Jordan's
+Bridge, a path out of Potowmack road towards Rappahanock, William Bennett, line
+of Paul Littlefield now William Bennett's. 5 Oct. 1695.",False,True
+GRAY_1_203,2-202: James Hassibrigg,69.0,1695.0,,"2-202: James Hassibrigg of Westmoreland Co. 69 A. on Br. of Cose Cost Bay,
+adj. Thomas Harniss, William Robisson, Richard Midleton. 8 Oct. 1695.",False,True
+GRAY_1_204,2-203: John Carpenter,69.0,1695.0,,"2-203: John Carpenter of Westmoreland Co. 69 A. on a Br. called Coss Cost in the
+Clivis, adj. William Robisson, James Hassibrigg, William Kemp. 8 Oct. 1695.",False,True
+GRAY_1_205,2-204: Thomas Beard,83.0,1695.0,,"2-204: Thomas Beard of Westmoreland Co. 83 A. adj. John Lancett in the Cleves,
+Robert Foster, Mr. Andrew Munrow. 14 Oct. 1695.",False,True
+GRAY_1_206,2-204: Henry Brent,1200.0,1695.0,,"2-204: Henry Brent of Stafford Co. 1200 A. on S. Run of Acquia adj. Mr.
+Nicholas Brent, Mr. John Pike. 26 Oct. 1695.",False,True
+GRAY_1_207,2-205: William Smoote,118.0,1695.0,,"2-205: William Smoote 118 A. on Br. of Briery Sw., adj. Mr. Ockly's(Ockley's)
+line by the Ridge Rd., Edward Riley, John Ingor. 15 Nov. 1695.",False,True
+GRAY_1_210,2-208: John Squires,44.0,1695.0,,"2-208: John Squires of Northumberland Co. 44 A. adj. Mr. James Johnson, by Main
+Br. of Mattopany, near road from Mrs. Flint's to John Squires, Mr. Clayton's
+land + + + ++ Mr. James Claughton. 2 Dec. 1695.",False,True
+GRAY_1_213,2-211: Simon Conwell,30.0,1695.0,,"2-211: Simon Conwell of Stafford Co. 30 A. upon Potomack R. adj. Bushroad's
+line. 10 Dec. 1695.",False,True
+GRAY_1_214,2-212: Christpher Jones,53.0,1695.0,,"2-212: Christpher Jones of Richmond Co. 53 A. adj. land of Killingar &
+Chittwood, John Overton, John Ockley, Mr. William Thatcher. 14 Dec. 1695.",False,True
+GRAY_1_215,2-213: John Jacob,218.0,1695.0,,"2-213: John Jacob 218 A. on Mattison's Sw. in Richmond Co., adj. corner of
+Tunes. 14 Dec. 1695.",False,True
+GRAY_1_216,2-213: Richard Bryan,200.0,1695.0,,"2-213: Richard Bryan of Stafford Co. 200 A. adj. Indian Cabin Br., Bryan's
+other land, Thomas Harrison, David Anderson. 15 Oct. 1695.",False,True
+GRAY_1_217,2-214: John Gibson,232.0,1695.0,,"2-214: John Gibson of Lancaster Co. 232 A. on Br. of Coritoman near the R. adj.
+Mr. William Lawrence, Carter's Patent. 1 Jan. 1695.",False,True
+GRAY_1_219,2-216: Bartholuma Wood,221.0,1695.0,,"2-216: Bartholuma Wood of Richmond Co. 221 A. adj. Mr. Dennis McCarty, on Coane
+Roade, Moratico, James Pope, Merriman's line, Wood's own land. 4 Jan. 1695/6.",False,True
+GRAY_1_220,2-217: William Hartland,134.0,1695.0,,"2-217: William Hartland of Lancaster Co. 134 A., 20 A. allowed for water, so
+only 114 A. in bounds. adj. William Garton, Nontipoyson Cr., Abraham Currell. 4
+Jan. 1695/6.",False,True
+GRAY_1_222,2-219: Morgan Williams,16.0,1695.0,,"2-219: Morgan Williams of Westmoreland Co. 16 A. adj. Col. William Peirce,
+Capt. George Brent. 9 Jan. 1695/6.",False,True
+GRAY_1_223,2-220: Thomas Bush,70.0,1695.0,,"2-220: Thomas Bush of Lancaster Co. 70 A. adj. Abraham Moon, Mr. Alex'r Newman,
+Philip Saunders, Moratico Mill Swamp. 13 Jan. 1695/6.",False,True
+GRAY_1_224,2-221: George Bush,253.0,1695.0,,"2-221: George Bush, John Bush, & Abraham Bush of Lancaster Co. 253 A. adj.
+Abraham Bush on Moratico Sw., path to Rich'd Welches, Mr. Thomas Chattin, Henry
+Stoneham, path to Rowleys, Job Hill, Robert Youngs, Peter Elmer. 13 Jan 1695/6.",False,True
+GRAY_1_226,2-225: Nicholas Rochester,100.0,1695.0,,2-225: Nicholas Rochester 100 A. adj. John Jenkens. 7 Jan 1695/6.,False,True
+GRAY_1_227,2-226: Thomas Mouerly,113.0,1695.0,,"2-226: Thomas Mouerly of Westmoreland Co. 113 A. on S. side of a Br. adj. 1000
+A. patented by William Beasley & Edward Hawly. 7 Feb. 1695/6.",False,True
+GRAY_1_235,2-235: Mr,234.0,1695.0,,"2-235: Mr. John Harney of Stafford Co. 234 A. adj. Harney's land, Nathaniel
+Jones. Land is in bounds of land formerly bought by Harney of Mr. Fra. Dade.
+23 Mar. 1695/6.",False,True
+GRAY_1_237,2-236: William Lippett,350.0,1694.0,,"2-236: William Lippett of Rappahanock Co. dec'd purchased of James Green of
+Westmoreland Co. dec'd 350 A., 1/3 of 1050 A., 22 Mar. 1694/5. Escheat Grant to
+Peter Buttler of Richmond Co. Adj. Robert & John Alexander and Henry Pate. 23
+Apr. 1696.",False,True
+GRAY_1_238,2-237: Thomas Yeals,88.0,1696.0,,"2-237: Thomas Yeals 88 A. adj. John Grymes, Thomas George dec'd, Thomas Bryant
+Sr. 8 May 1696.
+2-238: John Jones of Northumberland Co. 88 A. adj. Walter Allin, John Hill, John
+Linkhorn. 11 May 1696.",False,True
+GRAY_1_239,2-239: Zacharia Thomas,65.0,1696.0,,"2-239: Zacharia Thomas of Northumberland Co. 65 A. adj. Mr. Thomas Hobson, Sr.,
+John Bearmore alias Holt, Wadington's line, Hering(Herring) pond. 16 May 1696.",False,True
+GRAY_1_241,2-241: Col,25.0,1696.0,,"2-241: Col. John Washington of Westmoreland Co. patented Islands & Marsh at
+mouth of Popes Cr. which he deserted. Capt. Lawrance Washington, son of Col.
+John Washington obtained Grant of said 25 A. 24 June 1696.",False,True
+GRAY_1_242,2-241: Pithogeras Powell,71.0,1696.0,,"2-241: Pithogeras Powell 71 A. adj. Green's line, in line of Cloathworker, adj.
+Mr. James Harrison. 27 June 1696. 5",False,True
+GRAY_1_244,2-244: William Wood,150.0,1696.0,,"2-244: William Wood of Lancaster Co. 150 A. adj. Bartholw: Wood, Richard Wood,
+John Davis, John Hill, Patrick Graham. 2 July 1696.",False,True
+GRAY_1_245,2-245: Stephen Wells,166.0,1696.0,,"2-245: Stephen Wells of Northumberland Co. 166 A. adj. Mr. William Barber, on
+Br. of Mattopany, Edward Lewis. 9 July 1696.",False,True
+GRAY_1_246,2-245: Stephen Wells,36.0,1696.0,,"2-245: Stephen Wells of Northumberland Co. 36 A. on Br. of Mattopany, adj. Mr.
+William Barber. 9 July 1696.",False,True
+GRAY_1_249,2-249: Charles Fallon,638.0,1696.0,,"2-249: Charles Fallon of Northumberland Co. 638 A. near land of Mr. John
+Thomas al's Mr. Gaylard, Mr. John Downing, James Grope, formerly David Jennings,
+Pope's corner, Wiccomico R. 3 Aug. 1696.",False,True
+GRAY_1_251,2-252: John Bayley,203.0,1696.0,,"2-252: John Bayley of Westmoreland Co. 203 A. adj. Robert Midleton, Peter
+Smith, land of Bayley. 1 Sept. 1696.",False,True
+GRAY_1_255,2-257: Abiah Bonnison An Alien [see 2-164],150.0,1696.0,,"2-257: Abiah Bonnison an alien [See 2-164]. Thomas Bonnison, son of Abiah, of
+Lancaster Co. sold Edward Gibson 150 A. which Gibson conveyed to Abraham Cornell
+who conveyed 50 A. to Samuel Smith of Lancaster Co. Smith died and gave same to
+his wife. William Lawrance who m. wid. of Samuel Smith asks Grant of said 50 A.
+in his name. Adj. Major Bristowe, on Long Cove, Mr. Smith. 30 Oct. 1696.",False,True
+GRAY_1_256,2-258: Richard Martin,542.0,1696.0,,"2-258: Richard Martin of Stafford Co. 542 A. on Waring Run of Acckick, Waring
+meadows. 2 Nov. 1696.",False,True
+GRAY_1_257,2-259: Robert Scoffield (scoffield Jr,2.0,1696.0,,"2-259: Robert Scoffield (Scoffield Jr.) of Lancaster Co. 191 1/2 A. adj. Mr.
+Charles Lee alias Muaston, Mr. Mottrum Wright alias Griggs, Mr. Lawson. 4 Nov.
+1696.",False,True
+GRAY_1_259,2-260: Thomas Owsley,600.0,1696.0,,2-260: Thomas Owsley of Stafford Co. 600 A. adj. John Thomas. 17 Nov. 1696.,False,True
+GRAY_1_260,2-261: Samuel Thompson,164.0,1696.0,,"2-261: Samuel Thompson of Westmoreland Co. 164 A. adj. Mr. Thomas Bowcock, Mr.
+Abraham Blagge, land of Thompson. 14 Dec. 1696.",False,True
+GRAY_1_261,2-262: William Brown,100.0,1696.0,,"2-262: William Brown of Richmond Co. 100 A. adj. Henry Cryton, Walter Granger,
+John Crask, William Bailey, William Brown. 20 Feb. 1696/7.",False,True
+GRAY_1_262,2-263: John Combs,200.0,1696.0,,"2-263: John Combs of Richmond Co. 200 A. adj. land of William Yarett now Mr.
+Tankard's, Underwood's line, near Indian Needs old field. 13 Mar. 1696/7.",False,True
+GRAY_1_263,2-263: John Wright Smith (index John Wright),440.0,1696.0,,"2-263: John Wright Smith (index John Wright) of Westmoreland Co. 440 A. adj.
+Capt. Peal's corner. 15 Mar. 1696/7.",False,True
+GRAY_1_264,2-264: John Willis,210.0,1696.0,,"2-264: John Willis of Richmond Co. 210 A. adj. Mary Gunstocker, Indian, on
+Rappahanock R. side in the Clivis, Thomas Goffe, John Combs. 19 Mar. 1696/7.",False,True
+GRAY_1_265,2-265: Thomas Kendall,105.0,1696.0,,"2-265: Thomas Kendall of Richmond Co. 105 A. on a Pocoson of Rappahanock R.,
+adj. Mary Gunstocker, Indian, in the Clivis, Thomas Goffe. 19 Mar. 1696/7.",False,True
+GRAY_1_266,2-266: Thomas Goffe,105.0,1696.0,,"2-266: Thomas Goffe of Richmond Co. 105 A. adj. Thomas Kendall, Mary Gunstocker
+in the Clivis, Mr. John Willis, near the head of Warasque Cr. 19 Mar. 1696/7.",False,True
+GRAY_1_267,2-266: Ralph Whiting,150.0,1696.0,,"2-266: Ralph Whiting of Richmond Co. 150 A. adj. his other land, Rappahanock
+R., Ralph Wormeley Esq., by mouth of Chingoteage Cr. 19 Mar. 1696/7.",False,True
+GRAY_1_268,2-267: Thomas Owsley (howsley),640.0,1696.0,,"2-267: Thomas Owsley (Howsley) 640 A. Easterly on middle of Anocostin Island,
+alias my Lord's Island. 20 Mar. 1696/7.",False,True
+GRAY_1_270,2-268: Abiah Bonnison,99.0,1697.0,,"2-268: Abiah Bonnison, an alien [See 2-164]. Thomas Bonnison, son of Abiah, 8
+Feb. 1682 sold 99 A. to Edward Gibson who sold to Robert Bristowe Esq. Grant
+to Bristowe. Adj. Thomas Bonnison, Mr. John Pinkard, Thomas Martin, Robert
+Bristowe, Esq., Mr. Samuel Smith. 26 Apr. 1697.",False,True
+GRAY_1_273,2-299: Anthony Carpenter,50.0,1698.0,,"2-299: Anthony Carpenter of Westmoreland Co. 50 A. beginning in a Sw. near
+Horse Bridge, adj. William Robison (Robertson). 27 Feb. 1698/9.",False,True
+GRAY_1_274,2-299: Thomas Cheney,100.0,1698.0,,"2-299: Thomas Cheney of Rappahanock dec'd 1 Sept. 1673, (acknowledged in Ct.
+Records 3 Sept. 1673), purchased of Thomas Shore of Richmond Co. 100 A. Land
+Escheated. Grant to Gerard Newton of Richmond Co. Adj. land of Thomas Coely now
+occupied by Newton. Said 100 A. is part of a parcel granted Thomas & Miles
+Kergill now in tenor of Newton. 14 Mar. 1698/9.",False,True
+GRAY_1_275,2-300: John Hill,111.0,1699.0,,"2-300: John Hill of Richmond Co. 111 A. adj. George Davenport, crosssing two
+Brs. of Marattico, William West. 30 Mar. 1699.",False,True
+GRAY_1_277,2-302: George Enoe (enock In Index),229.0,1699.0,,2-302: George Enoe (Enock in index) of Stafford Co. 229 A. 3 Apr. 1699.,False,True
+GRAY_1_278,2-302: Col,500.0,1699.0,,"2-302: Col. Cadwallader Jones of Stafford Co. 500 A. adj. Col. William Fitzhugh,
+near a Br. of Accotincke. 5 July 1699.",False,True
+GRAY_1_285,2-308: George Davenport,555.0,1699.0,,"2-308: George Davenport of Richmond Co. 555 A. on Moratico Cr., adj. David
+Burks, Thomas Elver, John Hill, Davenport's old Patent, plantation of Creele.
+30 Sept. 1699.",False,True
+GRAY_1_289,(ae,300.0,1699.0,,"(AE.2-311: John Ball of Stafford Co. 300 A. on Doeges Run, adj. Capt. George Mason.
+8 Mar. 1699.",False,True
+GRAY_1_294,2-315: William Smoot,262.0,1700.0,,"2-315: William Smoot, Sr., 262 A. in Richmond Co. adj. his other land, Bryary
+Sw. James Gilbert, Mr. Lueson, Mr. Grimes line, line of Clears. 29 Apr. 1700.",False,True
+GRAY_1_300,End,1260.0,1703.0,,"End of Book No. 2
+3-1: Thomas Vicars of Gloster Co. Clk dec'd obtained Grant 12 Sept. 1690 from
+Phillip Ludwell Esq. Agt. for 1260 A. on Rappahanock R. in Rappahanock now
+Richmond Co. Vicars gave land to his dau. Martha, an infant. Dorothy Knowles,
+wid. of Vicaris & mother of Martha asked Patent in name of Martha. Adj. Mr.
+John Buckner, Mr. Mott, on Gravelly Run. 2 June 1703.",False,True
+GRAY_1_302,3-3: John Simons,116.0,1703.0,,"3-3: John Simons of Richmond Co. 116 A. Edwin Conway srvr. Adj. Griffin's line,
+Thomas Yates, Mr. John Grimes. 9 Dec. 1703.",False,True
+GRAY_1_303,3-4: Edward Taylor,83.0,1703.0,,"3-4: Edward Taylor of Richmond Co. 83 A. in Richmond Co. Charles Smith srvr.
+Adj. Ralph Wormeley Esq. dec'd, William ffreak, on Partridge's Cr. 9 Dec. 1703.",False,True
+GRAY_1_308,3-9: Lawrence Pope,376.0,1703.0,,"3-9: Lawrence Pope of Westmoreland Co. 376 A. adj. Thomas Steele, John Barton
+dec'd, Rappahanock Cr., Edward Washington. Wrnt. 1 Sept. 1703. Surv. by Thomas
+Thompson. 8 Jan. 1703/4.",False,True
+GRAY_1_309,3-10: Bryan Stott,70.0,1703.0,,"3-10: Bryan Stott of Lancaster Co. 70 A. adj. Mr. Andrew Jackson, John Callihan,
+Morattico Cr. Wrnt. 3 July 1703. Surv. by Edwin Conway. 8 Jan. 1703/4.",False,True
+GRAY_1_310,3-11: Dennis Conway,110.0,1703.0,,"3-11: Dennis Conway of Northumberland Co. 110 A. adj. land of Capt. John Cralee
+late Mr. Fielding, Wiccocomoko R., Rumney Marsh, Robert Christopher, Riddg Rd.
+to Cone Mill, Mrs. Jane Yarrett, George Dawkins, John Boaz, Mr. Conway, Peter
+Russell. Wrnt. 8 Sept. 1703. Surv. by Lt. Col. George Cooper. 11 Jan. 1703/4.",False,True
+GRAY_1_312,3-14: William Downing,9.0,1703.0,,"3-14: William Downing of Stafford Co. 9 A. 156 Po. Wrnt. 4 Dec. Last. Surv. by
+Mr. Thomas Gregg. On Potomack Cr., near his house. 14 Feb. 1703.",False,True
+GRAY_1_314,3-16: George Eskidge,58.0,1703.0,,"3-16: George Eskidge of Westmoreland Co. 58 A. on Cr. falling into Yeocomoco
+R. adj. George Rust, James Coleman, Thomas Allison. Wrnt. 11 Aug. Last. Surv.
+by Thomas Thompson. 16 Feb. 1703/4.",False,True
+GRAY_1_315,3-17: Thomas Thompson,63.0,1703.0,,"3-17: Thomas Thompson of Westmoreland Co. 63 A. Wrnt. 8 Sept. Last. Surv. by
+Mr. George Eskeridge. On Br. of Nomini R., adj. Col. William Pierce, Rich'd
+Sturmon, dec'd. 16 Feb. 1703/4.",False,True
+GRAY_1_317,3-19: Thomas Walker & Edward Mountjoy,931.0,1703.0,,"3-19: Thomas Walker & Edward Mountjoy of Stafford Co. 931 A. in Richmond Co.
+Wrnt. 1 June Last. Surv. by Mr. Thomas Gregg. On Rappahanock R. about 10 mi.
+above the falls, opposite an Island in the R., by Richland Run. 10 Mar. 1703/4.",False,True
+GRAY_1_319,3-21: Thomas Wallis,1040.0,1703.0,,"3-21: Thomas Wallis of Stafford Co. Wrnt. 9 Mar. 1694/5 for 1040 A. on Fall
+Run of Rappahanock. Wallis never made settlement nor paid Quitrent. 29 Sept.
+1703 proprietors reentered. Grant to James Innis of Lancaster Co. for 628 A. of
+said land in Richmond Co. adj. Mr. John Waugh, land surveyed 11 Nov. Last by
+Edwin Conway for Robert Carter Esq. who assigned to Innis. 10 Mar. 1703/4.",False,True
+GRAY_1_320,3-22: Robert Carter,624.0,1703.0,,"3-22: Robert Carter of Lancaster Co. Esq. 624 A. in Richmond Co. Surv. 10 Nov.
+Last by Edwin Conway. Above falls of Rappahanock R. Carter assigned his Right
+to James Innis. 10 Mar. 1703/4.",False,True
+GRAY_1_327,3-29: Thomas Wallis,1040.0,1704.0,,"3-29: Thomas Wallis of Stafford Co. obtained Deed 9 Mar. 1694/5 for 1040 A. on
+Rappahanock. He made no settlement nor paid Quitrents. Grant to James Innis of
+Lancaster Co. on Gravelly Run, Rappahanock R. Surv. by Edwin Conway 10 Nov.
+Last for 975 A. 1 June 1704.",False,True
+GRAY_1_328,3-30: Andrew Jackson,908.0,1704.0,,"3-30: Andrew Jackson of Lancaster Co. 908 A. in Richmond Co. adj. Mr. James
+Innis, Mr. John Waugh. Wrnt. 16 Oct. Last. Surv. by Edwin Conway. 2 June 1704.",False,True
+GRAY_1_329,3-31: Capt,1200.0,1704.0,,"3-31: Capt. Alexander Swan of Lancaster Co. 1200 A. in Richmond Co. Wrnt. 18
+Oct. Last. Surv. by Edwin Conway. Adj. Mr. James Innis, Mr. Andrew Jackson,
+Mr. John Waugh, on Rocky Penn Run above Falls of Rappahannock R. 3 June 1704.",False,True
+GRAY_1_330,3-32: Thomas Knight,1250.0,1704.0,,"3-32: Thomas Knight of Northumberland Co. 1250 A. in Richomnd Co. Wrnt. 19 Oct.
+Last. Surv. by Edwin Conway. On Rappahanock R., adj. Mr. John Waugh, on Rocky
+Penn Run. 5 June 1704.",False,True
+GRAY_1_331,3-33: Hancock Lee,1353.0,1704.0,,"3-33: Hancock Lee of Northumberland Co. 1353 A. in Richmond Co. Wrnt. 20
+Oct. Last. Surv. by Edwin Conway. Adj. Mr. Thomas Knight, Horse Penn Run of
+Rappahanock R. 6 June 1704.",False,True
+GRAY_1_333,3-35: Andrew Jackson,1238.0,1704.0,,"3-35: Andrew Jackson of Lancaster Co. 1238 A. in Richmond Co. on Great Run of
+Rappahanock R. above falls. Wrnt. 16 Feb. Last. Surv. by Mr. Thomas Gregg. 29
+July 1704.",False,True
+GRAY_1_334,3-36: Samuel Churchill,344.0,1704.0,,"3-36: Samuel Churchill of Richmond Co. 344 A. in Richmond Co. Surv. by George
+Cooper. Adj. said Churchill, Thomas & Edward Lewis, Mr. Thomas ffreshwater, Esq.
+Corbin. 10 Aug. 1704.",False,True
+GRAY_1_335,3-37: George Downing,70.0,1704.0,,"3-37: George Downing of Northumberland Co. 70 A. by Will of his father,
+William Downing who bought same of John Palmer assignee of Partin Hudnall.
+Wrnt. 20 Oct. Last. Surv. by George Cooper. Near Rd. to Thomas Downings &
+Joseph Palmers, Br. of ffishing or Howson's Cr., Capt. Howsen's Sw., Henry
+Mayes. 10 Aug. 1704.
+10 Aug. 1704.",False,True
+GRAY_1_338,3-41: James Story,444.0,1704.0,,"3-41: James Story of Richmond Co. 444 A. in Richmond Co. Wrnt. 25 Oct. Last.
+Surv. by Edwin Conway. On Rappahanock R. adj. Mr. James Innis. 21 Aug. 1704.",False,True
+GRAY_1_340,3-43: Alexander Swan,150.0,1701.0,,"3-43: Alexander Swan of Lancaster Co. 8 Sept. Last set forth that Thomas
+Tatnall of said Co. died seized of 150 A. in Christ Church Psh. on Corotoman Cr.
+leaving one dau. Elizabeth who died an infant. Escheat of land due to Elizabeth,
+wid. of Tatnall & mother of Elizabeth who sold her Right to Swan 3 May 1701.
+ce by Joseph Tayloe Clk of Co. Ct. Adj. Robert Carter, Esq. 23 Aug.
+704.",False,True
+GRAY_1_343,3-46: William Lawrence,50.0,1696.0,,"3-46: William Lawrence of said Co. died seized of 50 A. Escheating from Abiah
+Bonnison 30 Oct. 1696. Robert Lennis of Lancaster Co. m. wid. of Lawrence.
+Endorsement by Joseph Tayloe Clk of said Co. Linnis obtained Escheat Deed of
+land in Christ Church Psh. adj. Major Bristoe line, Long Cove, Little Br., Mr.
+Smith. 23 Aug. 1704.",False,True
+GRAY_1_350,3-54: Capt,470.0,1704.0,,"3-54: Capt. William Jones of Northumberland Co. [See 3-52] Thomas Lund of
+Stafford Co. is in possession of 470 A. conveyed by Robert Howsen to Christopher
+Lund, his father. and descended to Thomas. Grant to Thomas Lund. On Chotank
+Cr., adj. Oliver Balfe, Samuel Hayward. 25 Sept. 1704.",False,True
+GRAY_1_351,3-55: Capt,50.0,1704.0,,"3-55: Capt. William Jones of Northumberland Co. [See 3-52] Thomas Ellis of
+Stafford Co. uncle of ffrancis Hunt minor Eldest son of ffrancis Hunt of said
+Co. dec'd, in behalf of ffrancis sets forth that Hunt the father had 50 A. from
+Howsen. Escheat Grant to ffrancis Hunt. Adj. Thomas Lund, land formerly Mr.
+Dowding's, Thomas 0 Donell. 26 Sept. 1704.",False,True
+GRAY_1_352,3-56: Capt,50.0,1704.0,,"3-56: Capt. William Jones of Northumberland Co. [See 3-52] Thomas Ellis uncle
+to ffrancis Hunt minor eldest son of ffrancis Hunt & Isabella his wife of
+Stafford Co. dec'd, in behalf of ffrancis the son, set forth that the father in
+Right of Isabella had 50 A. bought of Howsen by Henry Adams who conveyed to
+Thomas 0 Donell who gave by Will to Isabella. Grant to ffrancis Hunt, heir to
+Isabella his mother. Adj. Willford Kelley son of Edmond Kelley, 200 A.
+bequeathed by 0 Donell to Mr. George Brent son of Capt. George Brent, Robert
+Richardson, line of Hunt & Brent. 26 Sept. 1704.",False,True
+GRAY_1_354,3-58: Capt,200.0,1700.0,,"3-58: Capt. William Jones of Northumberland Co. [See 3-52] Col. Rice Hoe of
+Stafford Co. for himself and his son Rice Hoe set forth they possess 200 A. of a
+greater tract conveyed to Thomas 0 Donnell and by 0 Donnell's last Will to
+George Brent son of Capt. George Brent. Brent sold to Rice Hoe the father 15
+Aug. 1700. Grant to Rice Hoe, Sr. & Rice Hoe, Jr. Adj. Issabella Derrick,
+Willford Kelley. ffrancis Hunt who m. Issabella Derrick holds her land by said
+Marriage. Surv. 23 Feb. 1692/3 by Theodorick Bland. 26 Sept. 1704.",False,True
+GRAY_1_355,3-59: Capt,50.0,1704.0,,"3-59: Capt. William Jones of Northumberland Co. [See 3-52] Edmond Kelley of
+Stafford Co. in behalf of his son John a minor, possessed 50 A. conveyed to
+Adj. Mr. George Brent, ffrancis Hunt, upon Machotique Dam. 27 Sept. 1704.",False,True
+GRAY_1_357,3-61: Capt,200.0,1704.0,,"3-61: Capt. William Jones of Northumberland Co. [See 3-52] Edward Humston of
+Stafford Co. possessed 200 A. conveyed by Robert Howsen to Edward Humston his
+father & descended to Edward the son. Grant to Humston. On Upper Machotique
+Dam, adj. Richard Pierce, Robert King, Capt. John Alexander. 4 Dec. 1704.",False,True
+GRAY_1_361,3-65: Robert Clerk,1954.0,1704.0,,"3-65: Robert Clerk of Richmond Co. 1954 A. in Richmond Co. Wrnt. 9 Sept. Last.
+Surv. by Thomas Gregg. Adj. Edward Lewis, Marshy Sw., John Hartley, Br. of
+Toduskey, Capt. John Hull, William Morgan. 4 Dec. 1704.",False,True
+GRAY_1_364,3-68: John Mathew,112.0,1704.0,,"3-68: John Mathew of Lancaster Co. 112 A. Wrnt. 11 Mar. Last. Surv. by Edwin
+Conway. Adj. Pittman's land, Duke Sanders, Bryan Stott, Tomlin's line, Mathew's
+land, Brumley's land, John Taylor, Deep Cr., Battrand's line. 13 Dec. 1704.",False,True
+GRAY_1_365,3-69: John Stott,55.0,1704.0,,"3-69: John Stott of Lancaster Co. 55 A. Wrnt. 19 Jume Last. Surv. by Edwin
+Conway. Adj. Mr. Bryan Stott & Thomas Stott, John Callehan. 16 Dec. 1704.",False,True
+GRAY_1_366,3-70: Lem Cox & William Berry,349.0,1704.0,,"3-70: Lem Cox & William Berry of Richmond Co. 349 A. Wrnt. 2 June last. Surv.
+by William Thornton. Adj. James Phillips, Robert Harrison, James Key, Col.
+Gawin Corbin. 19 Dec. 1704.",False,True
+GRAY_1_367,3-71: Christopher Newton,83.0,1704.0,,"3-71: Christopher Newton of Northumberland Co. 83 A. Wrnt. 12 June last.
+Surv. by George Cooper. Adj. Gibble's line & Charles Betts, John Bennalls,
+Elizabeth Downing. 9 Jan. 1704.",False,True
+GRAY_1_368,3-72: William Jones,70.0,1704.0,,"3-72: William Jones of Northumberland Co. [See 3-52] John Hudson of Westmoreland Co. eldest son of Joshua Hudson of said Co. dec'd is in possession of 70 A.
+derived to Joshua from Robert Howsen. Joshua by Will 6 June 1704 bequeathed
+land to John. Grant to John Hudson. On Horse Rd. to Berryman's Mill, adj.
+Joseph Trueman's formerly Phillip Peyton's. 10 Jan. 1704.",False,True
+GRAY_1_369,,,1704.0,Westmoreland,"3-73: William Jones of Northumberland Co. [See 3-52] Joshua Hudson of Westmoreland Co. second son of Joshua Hudson of said Co. dec'd, is in possession of 100
+the son. On Upper Machotique in Westmoreland Co., commonly called Rusher Old
+Plantation. 10 Jan. 1704.",True,False
+GRAY_1_371,3-75: Capt,185.0,1704.0,,"3-75: Capt. William Jones of Northumberland Co. [See 3-51] Joseph King of
+Stafford Co. son & Heir of Robert King dec'd is in possession of 185 A. by Will
+of his father who bought of Robert Howsen. Grant to Joseph King. On Beaver Dam,
+Upper Machotique Cr., five Cabbin ffield, Richard Ailiffe. 11 Jan. 1704.",False,True
+GRAY_1_379,3-83: Thomas Read Died Seized Of,1000.0,1704.0,,"3-83: Thomas Read died seized of 1000 A. [See 3-82]. Malachi Burbury of
+Northumberland Co. possesses 136 A. Certificate by Thomas Hobson Clk of said
+Co. Grant to Burbury. On ffishing Cr. adj. Capt. John Howsen. 16 Feb. 1704.",False,True
+GRAY_1_380,3-84: Thomas Read Died Seized Of,1000.0,1704.0,,"3-84: Thomas Read died seized of 1000 A. [See 3-82]. John Howsen of Northumberland Co. possesses 136 A. of said land. Certificate by Thomas Hobson Clk of
+said Co. Surv. by Edwin Conway shows 364 A. (158 A. in bounds & 206 A.
+surplus.) Grant to Howsen. On ffishing Cr. of Wickomoco R. 21 Feb. 1704.",False,True
+GRAY_1_382,3-86: Capt,727.0,1694.0,,"3-86: Capt. William Downing of Stafford Co. 727 A. (499 A. ungranted & adj. 228
+A. granted him 4 Oct. 1694.) Surv. by Thomas Gregg. On Reedy Br. on Potomock
+Run, adj. Capt. John Alexander, land granted one Willkinson. 23 Feb. 1704.",False,True
+GRAY_1_383,3-87: Joseph Belfield,555.0,1704.0,,"3-87: Joseph Belfield of Richmond Co. 555 A. on Deep Run of Rappahannock R.,
+ay ath Robert Carter Esq. Wrnt. 25 Oct. Last. Surv. by Edwin Conway. 23
+eb. 1704.",False,True
+GRAY_1_385,3-89: Thomas Walter,1352.0,1703.0,,"3-89: Thomas Walter of Stafford Co. 1352 A. adj. Capt. Edward Mountjoy. Wrnt.
+15 Feb. 1703. Surv. by Thomas Gregg. 8 Mar. 1704.",False,True
+GRAY_1_387,3-91: Capt,2.0,1705.0,,"3-91: Capt. William Jones [See 3-52]. Charles Calvert possessed 418 1/2 A. of
+said land as marrying Mary dau. of Rob't Howson.  Escheat Grant to Calvert 218
+1/2 A. of 418 1/2 A. for himself during lifetime and afterwards to Sarah Howsen
+Calvert & Ann Calvert his daus. Adj. Joseph King, main Sw. of upper Machotick
+or Howsin's Dam. 3 Apr. 1705.",False,True
+GRAY_1_391,3-95: Joh(john) Turbervile,798.0,1705.0,,"3-95: Joh(John) Turbervile of Lancaster Co. 798 A. on Horsepenn Run above falls
+of Rappahannock in Richmond Co. Wrnt. 9 Sept. Last. Surv. by Thomas Gregg.
+Adj. Mr. Hancock Lee, Col. Robert Carter, Thomas Brooks. 18 Apr. 1705.",False,True
+GRAY_1_392,3-96: Hancock Lee,1100.0,1705.0,,"3-96: Hancock Lee of Northumberland Co. 1100 A. on Rappahanock R. in Richmond
+Co. adj. Thomas Knight, on Rocky Penn Run, Capt. Edward Mountjoy & Thomas Walter
+near Richmond Run. Wrnt. 28 Aug. Last. Surv. by Thomas Gregg. 18 Apr. 1705.",False,True
+GRAY_1_393,3-97: John Addams,393.0,1705.0,,"3-97: John Addams of Stafford Co. 393 A. Wrnt. 4 Nov. Last. Surv. by Thomas
+Gregg. Adj. Mr. Thomas Walter, by Accokeeks run. 10 Apr. 1705.",False,True
+GRAY_1_394,3-98: Thomas Read Died Seized Of,1000.0,1705.0,,"3-98: Thomas Read died seized of 1000 A. [See 3-82]. Edmund Baysey of Northumberland Co. possessed 157 A. of Read's land. Certificate by Thomas Hobson,
+Clk of said Co. Surv. by George Cooper. Near Thomas Knight, adj. Thomas
+Walters, Capt. Knight's Main Sw., Mr. Tayler. 25 Apr. 1705.",False,True
+GRAY_1_396,3-101: Hancock Lee,470.0,1705.0,,"3-101: Hancock Lee of Northumberland Co. 470 A. on Rappahanock Horsepenn Run
+adj. his land in Richmond Co. Wrnt. 10 Nov. Last. Surv. by Thomas Gregg. 26
+May 1705.",False,True
+GRAY_1_399,3-104: Thomas Read Died Seized Of,1000.0,1705.0,,"3-104: Thomas Read died seized of 1000 A. [See 3-82]. Thomas Waters of Northumberland Co. possessed 90 A. of said land. Endorsement by Thomas Hobson Clk of
+said Co. On Capt. Howson's Sw. Br. of ffishing Cr., adj. Thomas Knight, Lazarus
+Taylor. 16 July 1705.",False,True
+GRAY_1_402,3-107: James Innis,73.0,1705.0,,"3-107: James Innis of Lancaster Co. a 73 A. Island in Rappahanock R. above the
+lower falls & 31 A. on N. side adj. Martha Vicaris & James Storey in Richmond
+Co. 3 Aug. 1705.",False,True
+GRAY_1_404,3-109: John Symons,130.0,1705.0,,"3-109: John Symons of Richmond Co. 130 A. in Richmond Co. Surv. by Edwin
+Conway. Adj. William Smoot Sr., Abraham Goad, John Ingo, James Ingo, & Richard
+Fowler, adj. Mr. John Grimes, Thomas Yeats, John White. 15 Aug. 1705.",False,True
+GRAY_1_416,3-122: John Smith,392.0,1705.0,,"3-122: John Smith of Westmoreland Co. 392 A. in Richmond Co. on Shorts Sw. of
+Totosskey Cr., land formerly Thomas Robinson & Edward Lewis now heirs of John
+Landman dec'd, Col. John Hull dec'd, Marshey Sw. Wrnt. 17 July Last. Surv. by
+Thomas Thompson. 23 Jan. 1705.",False,True
+GRAY_1_421,3-127: Mathew Teneson,283.0,1705.0,,"3-127: Mathew Teneson of Stafford Co. Wrnt. 10 Dec. last. for 283 A. in said
+Jordans Bridge, by Jordans Dam. 14 Feb. 1705.",False,True
+GRAY_1_422,3-128: Catherine,500.0,1705.0,,"3-128: Catherine, dau. & Heir of Hugh Williams, wife of John Rowley dec'd, died
+seized of 500 A. in Richmond Co. Escheat Grant to William Wood of Richmond Co.
+next of kin to Catherine. Endorsement by Mr. James Sherlock, Clk of said Co.
+Adj. Richard Rosser, by Pasbytansey, Evan Williams, Mr. Hails. 23 Feb. 1705.",False,True
+GRAY_1_428,3-134: William Pannell,45.0,1706.0,,"3-134: William Pannell of Richmond Co. 45 A. marsh in Richmond Co. Wrnt. 5 Dec.
+Last. Surv. by Mr. William Thornton. Adj. land of Pannell. 30 July 1706.",False,True
+GRAY_1_429,3-135: | Thomas Rout,120.0,1706.0,,"3-135: | Thomas Rout of Northumberland Co. 120 A. in Richmond Co. Wrnt. 5 Dec.
+Last. Surv. by Col. George Cooper. Adj. Hugh Campbell, Madam Griffin, Br. of
+ffarnham Cr. 30 July 1706.",False,True
+GRAY_1_440,3-147: Nicholas Brent,711.0,1706.0,,"3-147: Nicholas Brent of Stafford Co. Wrnt. 9 Oct. 1705. He assigned his Right
+to Marques Calmelz of said Co. 11 May Last. Surv. by Thomas Gregg. Grant to
+Calmez for 711 A. on Ocquia, adj. Nicholas Brent. 7 Dec. 1706.",False,True
+GRAY_1_441,3-148: Capt,1093.0,1706.0,,"3-148: Capt. William Ball of Lancaster Co. 1093 A. in Richmond Co. Adj. Capt.
+Mountjoy, E. side Richland Run, on Horsepen Run, Richland Run Sw. 9 Dec. 1706.",False,True
+GRAY_1_449,3-157: John Higgins & Augustine Higgins,110.0,1706.0,,"3-157: John Higgins & Augustine Higgins of Westmoreland Co. 110 A. in Richmond
+Co. Wrnt. 13 Sept. Last. Surv. by Thomas Gregg. On Deep Run above the falls
+of Rappahannock R. 10 Mar. 1706.",False,True
+GRAY_1_451,3-159: James Thomas,729.0,1705.0,,"3-159: James Thomas of Westmoreland Co. 729 A. in Richmond Co. on Totoskey adj.
+Col. John Hull dec'd, Thomas ffreshwater, Hewgills land, Hull's Patent, Marshy
+Sw. of Totoskey. Wrnt. 5 Dec. 1705. Surv. by Thomas Thompson. 17 Sept. 1707.",False,True
+GRAY_1_455,3-163: Capt,75.0,1707.0,,"3-163: Capt. William Jones [See 3-160]. Anthony Haynie of Northumberland Co.
+has possession of 75 A. derived to John Haynie his father who by Will gave to
+Anthony. Grant to Anthony Haynie adj. where James Nipper formerly lived, John
+Haynie's land. 17 Sept. 1707. [Note: ""This Deed is recorded in Page 160 & by
+mistake inserted here. Tho: Hooper, Clk of said Ct. .]",False,True
+GRAY_1_478,3-187: Nath: Pope,330.0,1706.0,,"3-187: Nath: Pope of Westmoreland 23 Jan 1706 set forth that John Quigly died
+seized of 330 A. in said Co. and by Will gave 1/3 to his bro. Gerrard Quigley,
+1/3 to his neice Mrs. Allice Lincoln, & 1/3 to his Godson, John Spencer. Allice
+Lincoln died without heirs & her 1/3 came to Gerrard who died seized of 2/3 or
+220 A. Certificate by Jacob Martin of said Co. made it appear that land at this
+time was his by m. with Sarah wid. of John Scott, alledging Right of Escheat.
+Pope consented to decline further pretentions. It appeared that Scott paid
+Thomas Mountjoy for land & had deed for same. Scott by Will devised land.
+Escheat Deed to Jacob Martin & his wife Sarah & after decease of Jacob & Sarah,
+land to heirs of John Scott & for want of such heirs to Sarah & heirs of her
+body, to Jacob & his heirs forever. On Mattox Cr. in Westmoreland Co. Lands by
+Quigley divided as follows: 150 A. to William ffreck & Rich'd Hills 3 Sept. 1651
+& derived to Quigley; 100 A. to William ffreck 18 Mar. 1662 and conveyed to said",False,True
+GRAY_1_493,3-202: Capt,85.0,1706.0,,"3-202: Capt. Charles Barber of Richmond Co. 85 A. on Totaskey Cr. in Richmond
+Co. adj. William Glew, Col. Peachey, Sam'l Samford, Barbers other land. Wrnt. 6
+Feb. 1706. Surv. by William Thornton. 13 Dec. 1708.",False,True
+GRAY_1_497,3-206: Capt,80.0,1708.0,,"3-206: Capt. William Barber of Richmond Co. 80 A. marsh on Totoskey Cr. in
+Richmond Co. adj. Edward Brumbuloe, Miery Sw., Quintilian Sherman, Robinsons now
+Barbers land. Wrnt. 12 Nov. Last. Surv. by William Thornton. 13 Dec. 1708.",False,True
+GRAY_1_499,3-208: George Green,885.0,1705.0,,"3-208: George Green of Richmond Co. 885 A. in Richmond Co. Wrnt. 18 May 1705.
+Surv. by William Thornton. Adj. Maj. Wright, by Main Rd., in Bald Eagle Neck,
+Estate of Esq. Wormley dec'd, Capt. Slaughter, William Brown, Maxfield Brown,
+William Thornton. 15 Dec. 1708.",False,True
+GRAY_1_508,3-217: Malachi Peale,489.0,1694.0,,3-217: Malachi Peale of Stafford Co. obtained Grant 5 Oct. 1694 for 489 A. on,False,True
+GRAY_1_509,,,1698.0,Stafford,"Patowmack Cr. in Stafford Co. Peale died in 1698 never having paid rent and by
+Will devised to Mr. John Pim merchant of Exon in Devon in England. Mr. Pim also
+Peale, day of __—*1708.",True,False
+GRAY_1_510,3-218: Charles Carter Son,330.0,1709.0,,"3-218: Charles Carter son of Robert Carter of Lancaster Co. Esq. 330 A. in
+Richmond Co. Surv. by Thomas Gregg. Grant to Charles Carter and want of heirs,
+to Robert Carter Jr. bro. of Charles and for want of such heirs to John Carter
+Eldest son of Rob't Carter Esq. & for want of such heirs to next heirs at Law to
+Charles Carter. Above falls of Rappahannock R. adj. Robert Carter Esq., Mr.
+Hancock Lee. Also an Island of about 20 A. on said R. 1 June 1709.",False,True
+GRAY_1_516,3-224: Edward Mountjoy & Thomas Brooks,800.0,1709.0,,"3-224: Edward Mountjoy & Thomas Brooks of Stafford Co. 800 A.in Richmond Co. on
+Deep Run of Rapp'a R. Wrnt. 8 Nov. Last. Surv. by Thomas Gregg. 1 Sept. 1709.",False,True
+GRAY_1_521,3-229: James Coward,121.0,1707.0,,"3-229: James Coward of Richmond Co. 121 A. on Totoskey Cr. in Richmond Co. adj.
+Capt. Wm. Barber, Mr. Sam'l Samford, Mr. Joseph Deeke, John Write, Howells Old
+Field, John Alliway. Wrnt. 10 Sept. 1707. Surv. by William Thornton. 20 Dec.
+1709.",False,True
+GRAY_1_522,3-230: William Brown,38.0,1709.0,,"3-230: William Brown of Richmond Co. 38 A. on Clifts Cr. in Richmond Co. Adj.
+John Burkett, Mr. Harrison, Capt. John Battaile, Mr. Gardnar. 20 Dec. 1709.",False,True
+GRAY_1_524,3-232: Henry Gallop,109.0,1709.0,,"3-232: Henry Gallop of Richmond Co. 109 A. 108 Per. on Poplar Sw. in Richmond
+Co. Wrnt. 15 June Last. Surv. by Charles Smith. Adj. line formerly Rolts now
+James Elkins, John Owen, Thomas White, land formerly Evan Williams now Elkins.
+21 Dec. 1709.",False,True
+GRAY_1_527,3-236: John Spry,67.0,1709.0,,"3-236: John Spry of Northumberland Co. 67 A. on Lambdens Cr., Great Wiccocomoco
+R., adj. Edward Killpatrick, orphants of Wm. Smith, Wm. Thomas, land of Henry
+Smiths orphants now Charles Betts. Wrnt. 28 Feb. Last. Surv. by George
+Cooper. 5 Jan. 1709.",False,True
+GRAY_1_535,3-244: John Waddington,2.0,1709.0,,"3-244: John Waddington of Northumberland Co. 98 1/2 A. on Herring Cr. in
+Church to Col. Peter Hacks, Capt. Thomas Hobson. 14 Jan. 1709.",False,True
+GRAY_1_537,3-246: Parish (parrish) Garner,92.0,1709.0,,"3-246: Parish (Parrish) Garner of Northumberland Co. 92 A. in Cherry Point Neck
+of Northumberland Co., on Keens Cr., Long Gutt, adj. John Keen, Mr. George Heals
+dec'd. Surv. by Thomas Thompson. 14 Jan. 1709.",False,True
+GRAY_1_546,3-255: Charles Carter,1100.0,1709.0,,"3-255: Charles Carter, son of Robert Carter of Lancaster Co. Esq. 1100 A. in
+Richmond Co. [See 3-218] Surv. by Thomas Gregg. On Rocky Run above Deep Run
+above ffalls of Rappahannock R. 1 Mar. 1709.",False,True
+GRAY_1_549,,,1709.0,,"Richmond Co. Surv. by Thomas Gregg. [See 3-218] On Northern Br. of Rappahannock R. above Deep Run, on Passimmon Run. 6 Mar. 1709.
+opposite where Buckner lives below Talliaferro's Mount. _— day 1709.",True,True
+GRAY_1_562,3-273: Richard Ridgwell,166.0,1709.0,,"3-273: Richard Ridgwell of Stafford Co. 166 A. on Occoquan R. & Woolf Run. Wrnt.
+20 Sept. 1709. Surv. by Thomas Gregg. 24 Sept. 1710.",False,True
+GRAY_1_580,4-21: John Brown & William Allen,427.0,1710.0,,"4-21: John Brown & William Allen of Stafford Co. 427 A. on Marsh Run in Richmond
+Co. adj. Allen's land. Wrnt. 20 May last. Surv. by Thomas Gregg. 1 Jan. 1710.",False,True
+GRAY_1_584,4-25: Rawleigh Downman,2.0,1710.0,,"4-25: Rawleigh Downman of Richmond Co. 30 1/2 A. in Richmond Co. adj. Mr.
+Thomas Griffin, Mr. John White, Mr. John Simmons & Downmans other land (formerly
+Ingoes). Wrnt. 9 Aug. last. Surv. by Edwin Conway. 13 Jan 1710.",False,True
+GRAY_1_585,4-26: George English,500.0,1710.0,,"4-26: George English of Stafford Co. 500 A. on Beaver Dam Run of Ocquia. Wrnt.
+1 May last. 23 Jan. 1710.",False,True
+GRAY_1_594,4-35: Mark Tune,289.0,1711.0,,"4-35: Mark Tune of Richmond Co. Wrnt. 12 Oct. last. Surv. by Thomas Thompson.
+289 A. adj Mr. Thomas Griffin, Austin Brockenbury, Andrew Dew, Tune's other land
+in Richmond Co., ffarnham Cr.(called Edwards Spring Br.). 13 July 1711.",False,True
+GRAY_1_599,4-41: John Hartley,153.0,1711.0,,"4-41: John Hartley of Westmoreland Co. 153 A. in Richmond Co. on Marshey Sw. Br.
+of Totoskey, adj. Edw'd & Thomas Lewis, John Alverson, Doct'r Rob't Clark dec'd,
+Mr. John Hartley. Wrnt. 9 Aug. last. Surv. by Thomas Thompson. 28 July 1711.",False,True
+GRAY_1_605,4-47: William Page,436.0,1711.0,,"4-47: William Page of Stafford Co. 436 A. in Richmond Co. on Marsh Run above
+ffalls of Rappa: R. Wrnt. 13 Dec. Last. Surv. by Thomas Hooper. 29 Aug. 1711.",False,True
+GRAY_1_623,4-67: Edward Fagan,150.0,1712.0,,"4-67: Edward Fagan of Richmond Co. 150 A. adj. George Green, Francis Thornton,
+Thomas Hows, Wm. Combs, in Richmond Co., Maxfield Brown. Wrnt. 15 Mar. Last.
+Surv. by Capt. Edward Barrow. 9 May 1712.",False,True
+GRAY_1_625,4-69: John Oldham,401.0,1712.0,,"4-69: John Oldham of Richmond Co. 401 A. 51 Per. on Totoskey Cr. in Richmond
+Co. adj. Col. Sam'll Griffin dec'd, on Ridge Rd. Wrnt. 13 Aug. Last. Surv. by
+Charles Barber. 23 May 1712.",False,True
+GRAY_1_626,4-70: John Oldham,140.0,1712.0,,"4-70: John Oldham of Richmond Co. 140 A. in Richmond Co. adj. Col. Travers's
+corner, Mile Br. out of Hogg Town Sw., Mr. Wm. ffauntleroy, George Glascocks
+Mill. Wrnt. 24 Dec. Last. Surv. by Capt. Edward Barrow. 23 May 1712.",False,True
+GRAY_1_628,4-72: Thomas Jesper,86.0,1712.0,,"4-72: Thomas Jesper of Richmond Co. 12 Jan. last obtained Wrnt. Surv. by Capt.
+Edward Barrow. 86 A. adj. Barber Sanford, Mr. Jos: Deek in Richmond Co. on
+Totskey Cr. 23 May 1712.",False,True
+GRAY_1_632,4-76: William Bennett,250.0,1712.0,,"4-76: William Bennett of Stafford Co. suggested on behalf of his bro. Thomas
+now a minor 250 A. of 5211 A. formerly belonging to Samuel Matthews Gent. who
+devised to Alice Scofield dec'd. Thomas is next Heir to Alice. Deed to Thomas
+Bennett. 26 May 1712.",False,True
+GRAY_1_633,4-77: Edward Brimlow,18.0,1712.0,,"4-77: Edward Brimlow of Richmond Co. Wrnt. 15 Jan. last. Surv. by Capt. Edward
+Barrow. 18 A. adj. Capt. William Barber, Quintilian Sherman, Totoskey Cr. in
+Richmond Co., Indian Town Gutt. 26 May 1712.",False,True
+GRAY_1_634,4-78: William Marshall,2.0,1711.0,,"4-78: William Marshall of Richmond Co. Wrnt. 2 Apr. 1711. Surv. by Capt. Edward
+Barrow. 268 A. on E. side Gingateaque Cr. in Richmond Co. adj. Doctor Spence,
+Sam'l Wharton, Capt. Francis Slaughter. 26 May 1712.",False,True
+GRAY_1_635,4-79: Stephen Gupteen,288.0,1712.0,,"4-79: Stephen Gupteen of Richmond Co. Wrnt. 12 Sept. last. Surv. by Capt.
+Charles Barber. 288 A. on Totoskey Cr. in Richmond Co. adj. Live Oak Br., Hogg
+Town Sw., Hugh Harris, Mr. George Glascocks Mill. 26 May 1712.",False,True
+GRAY_1_638,4-83: Charles Lewis,200.0,1712.0,,"4-83: Charles Lewis of Richmond Co. Wrnt. 24 Dec. last. Surv. by Capt. Edward
+Barrow. 200 A. adj William Lambert, Charles Lund, Capt. John Tarpley, William
+Hammock, in Richmond Co., Clarks line. 26 May 1712.",False,True
+GRAY_1_648,4-93: William Allen,314.0,1712.0,,"4-93: William Allen of Stafford Co. Wrnt. 19 Oct. last. Surv. by Mr. Thomas
+Hooper. 314 A. on Marsh Run of Rappahanock R. about 30 mi. above the ffalls in
+Richmond Co. 30 June 1712.",False,True
+GRAY_1_650,,588.0,1712.0,,"Mr. Thomas Hooper. 588 A. in Richmond Co. on Horse Pen Br. of Great Marsh Run.
+30 June 1712.",True,True
+GRAY_1_656,4-100: William Russell,316.0,1712.0,,"4-100: William Russell of Stafford Co. Wrnt. 24 Sept. last. Surv. by Mr. Thomas
+Hooper. 316 A. in Richmond Co. on Horse Penn Br. of Marsh Runn, N. side Rappahanock R. about 30 mi. above the ffalls, adj Great Horse Penn of said Russell,
+John Marr, Jr. & John Hopper. 2 July 1712.",False,True
+GRAY_1_657,4-101: Jeffry Johnson,232.0,1712.0,,"4-101: Jeffry Johnson of Stafford Co. Wrnt. 9 May last. Surv. by Mr. Thomas
+Hooper. 232 A. on Marsh Run of Rappahanock R. in Richmond Co. 20 July 1712.",False,True
+GRAY_1_658,4-102: William Russell,14.0,1712.0,,"4-102: William Russell of Stafford Co. Wrnt. 14 Apr. last. Surv. by Mr. Thomas
+Hooper. 214 A. in Richmond Co. on Elk Marsh Run. 24 July 1712.",False,True
+GRAY_1_660,4-104: Isaac Lee,223.0,1712.0,,"4-104: Isaac Lee of Northumberland Co. Wrnt. 15 May 1711. Surv. by Mr. Thomas
+Hooper. 223 A. in Richmond Co. adj. Mr. John Waugh Clk. dec'd, Mr. John
+Turbervile, Thomas Brooks, Mr. Hancock Lee dec'd, Thomas Knight dec'd, above
+ffalls of Rappahanock R. 30 July 1712.",False,True
+GRAY_1_664,4-108: Capt,482.0,1712.0,,"4-108: Capt. Alexander Doniphan & Mr. Robert Doniphan of Richmond Co. 482 A. in
+Richmond Co. adj Capt. Doniphan, on Rappahanock R. Wrnt. 3 Apr. last. Surv. by
+Mr. Thomas Hooper. 5 Aug. 1712.",False,True
+GRAY_1_678,5-3: (marked Out),384.0,1714.0,,"5-3: (Marked out) of Richmond Co. Wrnt. 1 Sept. 1707. Surv. by Mr. Wm.
+Thornton. 384 A. in Richmond Co. forrest of Totoskey, adj. Mr. Jno: Loyd, Capt.
+Tho's Beale. 31 July 1714. [Deed to Mr. David Berrick - cancelled - no
+composition paid.] #",False,True
+GRAY_1_680,5-5: John Owen,239.0,1715.0,,"5-5: John Owen of Richmond Co. & William Rowley of Stafford Co. Wrnt. 22 Nov.
+1708. Surv. by Mr. William Thornton. 239 A. in Richmond Co. on Lambs Cr. near
+Corbins rowling Road, Mr. Bronaugh, George Bronaugh, near Turkey raker's Sw.,
+Owen's corner, Rozier's Patent now Wm. Rowleys. 21 Dec. 1715. #",False,True
+GRAY_1_690,5-15: Roger Abbot,186.0,1714.0,,"5-15: Roger Abbot of Stafford Co. Wrnt. 4 Sept. 1713. Surv. by Mr. Tho.
+Hooper. 186 A. in Richmond Co. on Deep Run of Rappahanock R. about 12 mi. above
+falls. 23 Sber 1714. #",False,True
+GRAY_1_691,5-16: R'd Bramham,101.0,1714.0,,"5-16:  R'd Bramham of Richmond Co. Wrnt. 21 Sept. 1713. Surv. by Mr. Cha:
+Barber. 101 A. surplus in his Patent in Richmond Co. N. Farnham Par. adj. his
+other land, near Totoskey Cr. 23 9ber 1714. #",False,True
+GRAY_1_696,5-21: Mr,226.0,1713.0,,"5-21: Mr. John Doyle of Richmond Co. 226 A. in Richmond Co. on Jingotigue?,
+adj. land of Prosser & Chetwood now in possession of Jonathan Gibson, Simon
+Miller & others, Jno. Berry, Tho's Arnold. Wrnt. 29 Sept. 1713. Surv. by Mr. Wm.
+Thornton. 23 Jan. 1716/7. #",False,True
+GRAY_1_698,5-23: Mr,46.0,1712.0,,"5-23: Mr. Edw'd Jones of Richmond Co. 46 A. in Richmond Co. being surplus in
+Patent belonging to Jones granted Giles Hugill, near Church Road, Mr Sam']
+Samford, Cha: Barber, Simon Taylor. Wrnt. 3 Sept. 1712. Surv. by Capt. Cha:
+Barber. 23 9ber 1714. [This Deed not paid for June 3, 1719.] #",False,True
+GRAY_1_701,5-26: Patrick Quiff,52.0,1714.0,,"5-26: Patrick Quiff of Northumberland Co. 52 A. that came to him as follows VIZ:
+Will he excepts the 52 A. out of land given his son. Adj. Jno. Hadwell, Tho's
+Webb, little Wiccomokoe, Ralph Waddington dec'd, Jno. Hardwell. 3 Jan. 1714/5.",False,True
+GRAY_1_719,5-45: (marked Out),450.0,1714.0,,"5-45: (Marked out) of Stafford Co. 450 A. in Richmond Co. Wrnt. 6 Apr. 1714.
+Surv. by Mr. Tho's Hooper. On Horsepin Br. of Marsh Run of Rappahannock R.
+above falls adj. Mr. Jno. Hopper, Jno. Marr Jr. & Wm. Russel. 21 Jan. 1714/5.
+(James Haggard sold to Mr. Alex'r Scot & recorded in his name. fo. 122.)",False,True
+GRAY_1_734,5-59: Thomas Hooper,355.0,1713.0,,"5-59: Thomas Hooper of Stafford Co. 355 A. in s'd Co. on Broad Run of Occaquan
+R., adj. Clement Chevalle & Lewis Renoe. Wrnt. 30 Nov. 1713. Mr. Tho: Hooper
+srvr. 3 Feb. 1714/5. #",False,True
+GRAY_1_735,5-60: Henry Harding,564.0,1713.0,,"5-60: Henry Harding of Stafford Co. 564 A. in s'd Co. Wrnt. 30 Nov. 1713. Mr.
+Tho's Hooper srvr. On Acquia Cr. adj. Rob't Carter, Esq., Dan'l Crosby. 4 Feb.
+1714/5. #",False,True
+GRAY_1_736,5-61: (marked Out),2060.0,1713.0,,"5-61: (Marked out) of Richmond Co. 2060 A. in s'd Co. Wrnt. 4 Sept. 1713. Mr.
+Tho. Hooper srvr. On Great Marsh Run of Rappa: R. about 30 mi. above falls, on
+Elk Marsh, Mr. Innis Hooper, Wm. Russell, Jeffery Johnson. 22 Jan 1714/5.
+(Cancelled & granted Capt. Geo: Eskridge. See fo. 171.)",False,True
+GRAY_1_737,5-62: Patrick Fisher & Maurice Biving,296.0,1714.0,,"5-62: Patrick Fisher & Maurice Biving of Stafford Co. 296 A. in s'd Co. Wrnt.
+8 Sept. 1714. Mr. Tho's Hooper srvr. On Occaquan R. 23 Feb. 1714/5. #",False,True
+GRAY_1_738,5-63: Patrick Fisher & Maurice Biving,320.0,1714.0,,"5-63: Patrick Fisher & Maurice Biving of Stafford Co. 320 A. in s'd Co. Wrnt.
+8 Sept. 1714. Mr. Tho's Hooper srvr. On Occaquan R., Slaty Neck of Broad Run
+adj. Wm. Spiller, Jno. Hogan. 7 Feb. 1714/5. #",False,True
+GRAY_1_740,5-65: Henry Filkins & Mathew Moss,700.0,1714.0,,"5-65: Henry Filkins & Mathew Moss of Stafford Co. 700 A. in s'd Co. Wrnt. 14
+Aug. 1714. Mr. Tho's Hooper. On Occaquan R. opposite Lewis Reno & Lewis
+Taquet. 26 Jan. 1714/5. #",False,True
+GRAY_1_741,5-66: Bryan Foley & Robert Gollop,250.0,1714.0,,"5-66: Bryan Foley & Robert Gollop of Stafford & Richmond Cos. 250 A. in
+Richmond Co. Wrnt. 16 Aug. 1714. Mr. Thomas Hooper srvr. On Deep Run of
+Rappa: R. about 12 mi. above falls, adj. Roger Abbot. 27 Feb. 1714/5. #",False,True
+GRAY_1_742,5-67: Mary & John Taquet,226.0,1714.0,,"5-67: Mary & John Taquet of Stafford Co. 226 A. on Occaquan R. adj. Lewis Renoe
+& Lewis Taquet, Lewis Renoe & Philemon Walters. Wrnt. 14 Aug. 1714. Mr. Thomas
+Hooper srvr. 28 Feb. 1714/5.",False,True
+GRAY_1_744,Surveyed For Tho's Carpenter & Tho's Young Dec'd & By Consent Of Carpenter & Exrs. Of Young Surveyed For Norris. Adj. Tho's Collman Dec'd,140.0,1714.0,,"surveyed for Tho's Carpenter & Tho's Young dec'd & by consent of Carpenter &
+Exrs. of Young surveyed for Norris. Adj. Tho's Collman dec'd, Tho's Young dec'd,
+5-69: Thomas Beal of Westmoreland Co. 140 A. in s'd Co. Wrnt. 19 June 1714.
+Mr. Tho's Thompson srvr. In Cople Par., in Yeocommoco forrest, adj. dno.
+Williams now Stephen Self, ur., Bloyces Run, Jillians Spring Br., Jno. Kersey,
+Jno. Williams dec'd. 2 Dec 1715. #",False,True
+GRAY_1_748,5-73: Mr,79.0,1714.0,,"5-73: Mr. Rich'd Watts of Westmoreland Co. 79 A. in s'd Co. Wrnt. 6 Sept. 1714.
+Mr. Tho's Thompson srvr. In Washington Par., N. of Mattox Cr., adj. Thomas
+Bowcock, Geo. Beard, Thomas Robins, Grant of 331 A. to Bunce Roe dec'd 12 July
+1692, Wm. Monroe, Capt. Andrew Monroe dec'd. 22 Apr. 1715. #",False,True
+GRAY_1_749,5-74: Nathaniel Harris,640.0,1714.0,,"5-74: Nathaniel Harris of Stafford Co. 640 A. called Buckhall in s'd Co. on
+Jones's Br. of Occaquan R. Wrnt. 20 Xber 1714. Mr. Thomas Hooper srvr. 31 Jan.
+1716/7. #",False,True
+GRAY_1_751,5-76: Mr,70.0,1715.0,,"5-76: Mr. Thomas Glascock of Richmond Co. 70 A. 70 Per. in Richmond Co. in
+ffarnham Par.. Surv. by Capt Charles Barber. Near Maratico Cr., Glascock's
+Patent, ffantleroy's Patent, Capt. Woodbridge. 20 June 1715. #",False,True
+GRAY_1_754,5-79: Mr,770.0,1716.0,,"5-79: Mr. Alex'r Scot of Stafford Co. 770 A. ins'd Co. Wrnt. 7 Apr. 1716.
+Mr. Thomas Hooper srvr. Near Pimmets Run of Patowmack R. below & near the
+falls, adj. Mr. William Dorel] dec'd, Scots Run. 13 Jan. 1716/7. #",False,True
+GRAY_1_755,5-80: Dames Warren,168.0,1715.0,,"5-80: dames Warren of Richmond Co. 168 A. in s'd Co. Capt. Edw'd Barrow srvr.
+In Hannover Par. adj. William Russel, Horsepen Run. 26 May 1715. #",False,True
+GRAY_1_757,5-82: Thomas Kingcart & Jno,6.0,1715.0,,"5-82: Thomas Kingcart & Jno. Marr, ur. of Stafford Co. Wrnt. 6 Apr. 1715.",False,True
+GRAY_1_758,5-83: Capt,663.0,1714.0,,"5-83: Capt. Benjamin Berryman of Westmoreland Co. 663 A. in Richmond Co. in
+Hanover Par., adj. Jeffery Johnson. Wrnt. 3 Mar. 1714/5. Surv. by Capt. Edw'd
+Barrow. 25 Mar. 1717. #",False,True
+GRAY_1_759,5-84: Joshua Buttler,283.0,1715.0,,"5-84: Joshua Buttler of Richmond Co. 283 A. in Richmond Co. in Hannover Par.
+adj. Charles Emmons, Horsepen Run, Wm. Russell. Wrnt. 22 Apr. 1715. Capt. Edw'd
+Barrow srvr. 29 July 1715. #",False,True
+GRAY_1_760,5-85: Joseph King,232.0,1715.0,,"5-85: Joseph King of Stafford Co. 232 A. in Richmond Co. in Hannover Par. adj.
+Wm. Russell. Wrnt. 19 Apr. 1715. Capt. Edw'd Barrow srvr. 30 July 1715. #",False,True
+GRAY_1_762,5-87: Mr,301.0,1715.0,,"5-87: Mr. William Thornton of Richmond Co. 301 A. in Richmond Co. Mr. William
+Thornton srvr. On Rapahanock Marsh, by Mt. Pleasant. 1 Aug. 1715. #",False,True
+GRAY_1_763,5-88: William Thornton,438.0,1715.0,,"5-88: William Thornton of Richmond Co. 438 A. in Richmond Co. Mr. William
+Thornton srvr. On Elk Marsh, Tin pot Run, adj. William Russell. 1 Aug. 1715.",False,True
+GRAY_1_766,5-91: Mr,2658.0,1715.0,,"5-91: Mr. William Thornton of Richmond Co. 2658 A. in Richmond Co. on Elk Marsh
+& Tinpot Run, adj. Wm. Russell, 438 A. granted 1 Aug. 1715 & 2220 A. residue
+now in one. Mr. Wm. Thornton srvr. 19 Sept. 1715. #",False,True
+GRAY_1_767,5-92: Jno,313.0,1715.0,,"5-92: Jno. Smith (Tanner) of Richmond Co. 313 A. in Richmond Co. on Elk Marsh,
+adj. Mr. Hooper. Wrnt. 6 Apr. 1715. Mr Wm. Thornton srvr. 20 Sept. 1715. #",False,True
+GRAY_1_769,5-94: Mary Kingcart,125.0,1715.0,,"5-94: Mary Kingcart of Richmond Co. 125 A. in Richmond Co. near Great Marsh
+adj. Jno. Marr Jr., Jno. Hopper, Horsepen Run. Mr. Wm. Thornton srvr. 22 Sept.
+1715. #",False,True
+GRAY_1_770,5-95: Blackgrove Hopper,246.0,1715.0,,"5-95:  Blackgrove Hopper of Richmond Co. 246 A. in Richmond Co. on Deep Run,
+Jeffrys Run. Mr. Wm. Thornton srvr. 21 Sept. 1715. #",False,True
+GRAY_1_773,Adj. Thomas Simpson,,1714.0,,"adj. Thomas Simpson, land Guess lives on. Wrnt. 6 Nov. 1714. Mr. Thomas Hooper
+srvr. 1 Nov. 1715. #
+srvr. 10 Dec. 1715. #",False,True
+GRAY_1_776,5-102: John Wheeler,266.0,1714.0,,"5-102: John Wheeler of Stafford Co. 266 A. on Summer duck Run of Rappahanock R.
+& Deep Run in Richmond Co. Wrnt. 30 Dec. 1714. Mr. Thomas Hooper srvr. 2 Nov.
+1715. #",False,True
+GRAY_1_779,5-105: Mr,714.0,1714.0,,"5-105: Mr. William Darell of Stafford Co. 714 A. on Pimmitts Run falling into
+Potomack R. near the falls, adj. land called upper Chestnut ground. Wrnt. 9
+Sept. 1714. Mr. Thomas Hooper srvr. 21 Nov. 1715. #",False,True
+GRAY_1_781,5-107: John Jackson,576.0,1715.0,,"5-107: John Jackson of Stafford Co. 576 A. on Great Run of Rappa: R. in
+Richmond Co. adj. Mr. James Withers. Mr. Thomas Hooper srvr. 14 Dec. 1715. #",False,True
+GRAY_1_784,5-110: Christopher Marr,171.0,1714.0,,"5-110: Christopher Marr of Stafford Co. 171 A. in Richmond Co. adj. Wm. Page,
+John Marr, Jr, John Hooper, Horsepen Run. Wrnt. 6 Dec. 1714. Mr. Thomas Hooper
+srvr. 20 Nov. 1715.",False,True
+GRAY_1_785,5-111: Thomas Stanton,236.0,1714.0,,"5-111: Thomas Stanton of Stafford Co. 236 A. on Deep Run of Rappa: R. above
+falls in Richmond Co. adj. Mr. Andrew Jackson dec'd now Mr. Jno. Greyson. Wrnt.
+7 Jan. 1714/15. Mr. Tho's Hooper srvr. 26 Dec. 1715. #",False,True
+GRAY_1_787,5-113: (marked Out),222.0,1715.0,,"5-113: (Marked out) of Stafford Co. 222 A. in Richmond Co. adj. Wm. Allen. Mr
+Tho's Hooper srvr. 9 Dec. 1715. # Issued to Alexander Cummings & cancelled.",False,True
+GRAY_1_789,5-115: George Gayden,92.0,1715.0,,"5-115: George Gayden of Richmond Co. 92 A. 52 Per. in s'd Co. adj. Thomas
+Taylor. Capt. Charles Barber srvr. 13 Xber 1715. #
+Eleanor assigned to Abraham Field 4 Feb. 1664/5 who left 1 son Dan'l Field who
+assigned to Tobias Buttler 29 Sept. 1697. Tobias left 1 son, James Buttler who
+died without Heirs. Surv. by Mr. Thomas Thompson. S'd 282 A. now in possession
+of Ann, mother of James in Washington Par., on Pope's Cr., adj. Xtpher Buttler &
+Abraham Field, Lawrence Pope, Jacob Martin, John Ward. John Motherset. Grant to
+Gerrard 18 Oct. 1715. (*Ann Smith - Cancelled)",False,True
+GRAY_1_790,5-117: John Williams,40.0,1715.0,,"5-117: John Williams of Westmoreland Co. 40 A. 2 Ro. 20 Per. in s'd Co. Cople
+Par. in forrest of Yeocommoco adj. Stephen Self Sr. formerly Minty's & Stephen
+Self Jr. Surv. by Mr. Thomas Thompson. 28 Oct. 1715. #",False,True
+GRAY_1_794,5-121: Capt,2298.0,1715.0,,"5-121: Capt. George Eskridge of Westmoreland Co. 2298 A. called Flat Lick in
+s'd Co. on Cubb Run out of Bull Run of Occaquan R. Mr. Thomas Thompson srvr. 31
+Dec. 1715. #",False,True
+GRAY_1_795,5-122: James Haggard,6.0,1714.0,,"5-122: James Haggard of Stafford Co. Wrnt. 6 Apr. 1714. Mr. Tho's Hooper
+srvr. Haggard assigned to Mr. Alexd'r Scott of Stafford Co. 450 A. in Richmond
+Co. on Marsh Run called Horsepen Br. of Rappa: R. about 30 mi. above the falls,
+adj. Jno. Hopper, Jno. Marr Jr., William Russell. 21 Jan. 1714/5. # Recorded
+in the deed book fo: 450.",False,True
+GRAY_1_797,5-124: Christopher Butler,150.0,1715.0,,"5-124: Christopher Butler of Westmoreland 150 A. in said Co. adj. William Lord,
+Christopher Buttler, Gerrard Oneal, near Potomack Rd. Lawrence Buttler, Head of
+Rappa: Cr. Wrnt. 26 Nov. 1715. Capt. Edward Barrow Srvr. 7 Xber 1716. #",False,True
+GRAY_1_811,5-140: Capt,28.0,1714.0,,"5-140: Capt. William Woodbridge of Richmond Co. 28 A. 28 Per. in Farnham Par. of
+Richmond Co. on Muratico Cr. adj. his own land, Fauntleroy's line, Mr. Thomas
+Glascock. Wrnt. 11 July 17141. Surv. Mr. Charles Barber. 4 Apr. 1717. #",False,True
+GRAY_1_815,5-144: William Powel Possessed,100.0,1714.0,,"5-144: William Powel possessed 100 A. in Richmond Co. N. Farnham Par. 1 June
+1714 from Catherine Powel now dec'd. Surv. Capt. Edw'd Barrow. Grant to
+Nicholas Minor of Westmoreland Co. adj. Loyd's Patent, John Champ, Wm. Powel now
+dead. 7 Oct. 1715. #",False,True
+GRAY_1_819,5-148: Giles Tillet,416.0,1717.0,,"5-148: Giles Tillet of Stafford possesses 416 A. in said Co. part of 1200 A.
+granted William Harris, Thomas Baxter, & Burr Harrison. Tillet bought from
+Giles Vandecastell who bought of Harris, Baxter, & Harrison. Regrant to Tillet.
+Above Occaquan R. 26 Nov. 1717.",False,True
+GRAY_1_822,5-151: Alexander Clement,200.0,1716.0,,"5-151: Alexander Clement of Northumberland Co. 200 A. in Richmond Co. Hannover
+Par. adj. Thomas Evans. Wrnt. 3 Dec. 1716. Surv. Capt. Edw'd. Barrow. 4 June
+1716. #",False,True
+GRAY_1_826,5-156: Thomas Taylor,408.0,1716.0,,"5-156: Thomas Taylor of Richmond Co. 408 A. (210 A. formerly granted John
+Sherlock which Taylor now possesses & 198 A. surplus) in Farmham Par. in
+Richmond Co. on Totuskey. Surv. Capt. Charles Barber. 4 June 1716. #",False,True
+GRAY_1_835,5-165: Charles Morgan,83.0,1717.0,,"5-165: Charles Morgan of Richmond Co. 83 A. in Richmond Co. near bushey ridge
+adj. Morgan Darnel. Surv. Mr. William Thornton. 6 June 1717. #",False,True
+GRAY_1_840,5-171: Innis Hooper,2060.0,1717.0,,"5-171: Innis Hooper of Richmond Co. Wrnt. 4 Sept. 1713. Surv. by Mr. Thomas
+Hooper. Lapsed. Grant to Capt. George Eskridge of Westmoreland Co. for 2060
+A. on Great Marsh Run, on Rappahanock R. in Richmond Co. Elk Marsh, adj. Mr.
+William Russel, Jeffery Johnson. 27 Dec. 1717. #",False,True
+GRAY_1_844,5-175: Marmaduk Beckwith,167.0,1694.0,,"5-175: Marmaduk Beckwith of Richmond Co. on behalf of Metcalf Dickinson son of
+Thomas Dickinson dec'd set forth that Henry Lewis possessed 167 A. granted 1
+Oct. 1694 and by Will 11 Apr. 1698 recorded in Richmond Co. records 6 July 1698
+devised to his wife Mary Lewis. Mary m. Thomas Dickinson and died without
+disposing of same. Land escheats. Mary Brookenbrough who formerly desired the
+Escheat m. John Spicer and relinquished their right. Grant to Metcalf
+Dickinson 167 A. on Rappahanock Cr. in Richmond Co. adj. Col. John Stone, Col.
+William Peirce, Luke Thornton, Col. John Walker. 2 Sept. 1718.",False,True
+GRAY_1_853,5-184: Jno,2900.0,1718.0,,"5-184: Jno. & Price Hooe of Stafford Co. 2900 A. in Richmond Co. called North
+Wales, on Occaquan , 10 Nov. 1718. #",False,True
+GRAY_1_860,5-191: Jonas Williams,282.0,1718.0,,"5-191: Jonas Williams of Westmoreland Co. 282 A. in Richmond Co. Surv. by Capt.
+Edw'd Barrow. In Hannover Par. on Elk Marsh Main Run. 6 Mar. 1718/9. #",False,True
+GRAY_1_865,5-197: John Rust,560.0,1718.0,,"5-197: John Rust, bro. of Benjamin Rust, of Westmoreland Co. 560 A. on Great
+Marsh Run or Jeffery Johnson's Marsh, in Richmond Co. adj. Jeffery Johnson,
+Innis Hooper, Daniel Feild, Charles Emmons. Surv. by Mr. Thomas Hooper. 16
+Mar. 1718/9. #",False,True
+GRAY_1_889,5-222: William Sturman,52.0,1719.0,,"5-222: William Sturman of West'land Co. 52 A. in Westmorelnd Co. adj. line of
+Baldridge, Cook's line, Potommack R. Surv. Mr. Edward Barrow. 8 Aug. 1719. #",False,True
+GRAY_1_890,5-223: Samuel Samford,9.0,1719.0,,"5-223: Samuel Samford of Richmond Co. (blank) A. in Richmond Co. adj. Samford's
+land, Richardson Cr. corner to Bayley & Cannedy. Surv. Mr. Charles Barber. 9
+Aug. 1719.",False,True
+GRAY_1_897,5-230: Alexander Beach,606.0,1719.0,,"5-230: Alexander Beach of Richmond Co. 606 A. on Horsepen Br. adj. his land,
+Charles Morgan, Morgan Darnell, Edw'd Price, Mr. Alexander Scott, Mark Harding,
+William Russel in Richmond Co. Surv. Mr. Thomas Hooper. 15 Dec. 1719 #",False,True
+GRAY_1_898,5-231: Edmund Jenings Esq,1725.0,1716.0,,"5-231: Edmund Jenings Esq. of York Co. 1725 A. in Richmond Co. in Hannover Par.
+near Rapp. R. adj. Mr. Thomas Hooper, Jeffery Johnson, Jno. Smith. Surv. Capt.
+Edw'd Barrow. 8 May 1716. #",False,True
+GRAY_1_906,5-239: Thomas Lee Esq,4200.0,1718.0,,"5-239: Thomas Lee Esq. of Westmoreland Co. 4200 A. on Great Run of
+Rappahannock R., Ceader Run Br. of Occaquon R., Turkey Run & Sinking Runs. adj.
+Col. Rice Hooe, Naked Mt., in Richmond Co. Surv. Mr. Thomas Hooper. 28 Nov.
+1718. #",False,True
+GRAY_1_912,5-245: Mr,325.0,1719.0,,"5-245: Mr. John fferguson of Richmond Co. 325 A. on Brs. of Rotkey Run of
+Rappahannock R. in Richmond Co. Surv. Mr. Thomas Hooper. 4 Aug. 1719.",False,True
+GRAY_1_938,A-26: John Brown,541.0,1710.0,,"A-26: John Brown of Northumberland Co. 541 A. on Browns Run in King George Co.
+278 A. surplus in 263 A. granted him & Wm. Allen 5 Sept. 1710. Inclusive Deed.
+Wrnt. 10 Dec. last. Surv. by Capt. Tho's Hooper. Adj. Daniel Marr, John
+Hopper, Christopher Marr, William Allen. 8 Apr. 1723.",False,True
+GRAY_1_943,A-32: Will'm Garland,101.0,1695.0,,"A-32: Will'm Garland of Westmoreland Co. 101 A. 2 Ro. 14 Per. including 38 A. 1
+Ro. surplus) in Richmond Co. N. Farnham Par. in 63 A. 2 Ro. 14 Per. of Patent
+to Henry Thornton 5 July 1695. Adj. Joseph Russel, Angell Jacobus, Garland's
+land, land of Burditt, Roger Thornton, Wm. Smith, Wm. Phillips. 4 Feb. 1723/4.",False,True
+GRAY_1_957,A-47: Capt,304.0,1722.0,,"A-47: Capt. Thomas Carter of Lancaster Co. 304 A. in King George Co. Wrnt. 2
+July 1722. Surv. by John Savage 2? Apr. 1723. 21 July 1724.",False,True
+GRAY_1_963,A-53: John Brown,278.0,1710.0,,"A-53: John Brown of Northumberland Co. 278 A. surplus in his 263 A. in King
+George Co. part of Patent of Jno. Brown & Wm. Allen 5 Sept. 1710. Wrnt. 10 Dec.
+1722. Surv. by Mr. John Coppedge dec'd 22 Jan. 1723. Grant for 541 A. Adj.
+land of Marr, Browns Run, John Hopper, Christopher Marr, Wm. Allen, Daniel Marr.
+28 July 1724.",False,True
+GRAY_1_967,A-58: William Peck,306.0,1724.0,,"A-58: William Peck of King George Co. Wrnt. 10 Jan. 1722 & he assigned Right to
+Henry Berry of said Co. Surv. by Mr. John Savage. 306 A. in Hannover Par., King
+George Co. Adj. James Key, Hales Cart Path, Berry's land. 3 Aug. 1724.",False,True
+GRAY_1_981,Little Fork Of Rappahannock R.,,1724.0,,"Little Fork of Rappahannock R., on Indian Br. 21 Sept. 1724. (Included in Col.
+Beverlys Land. )
+22 Sept. 1724.",False,True
+GRAY_1_982,A-74: Joseph Nutt,280.0,1724.0,,"A-74: Joseph Nutt of Northumberland Co. 280 A. in King George Co. adj. Blagrove
+Hopper, Jno. Bayley, on Jefferys Run, line of Brooks & Conway. 23 Sept. 1724.",False,True
+GRAY_1_986,A-78: | Richard Gill,400.0,1724.0,,"A-78: | Richard Gill of Stafford Co. 400 A. in King George Co. on Deep Run, adj.
+Edwin Conway. 28 Sept. 1724.",False,True
+GRAY_1_987,A-79: James Jones,400.0,1724.0,,"A-79: James Jones 400 A. in King George Co. on Small Br. of Deep Run. 29 Sept.
+1724.",False,True
+GRAY_1_995,,,1724.0,Stafford,"A-88: Thomas Welch of King George Co. (blank) A. in Stafford & King George Cos.
+adj. Nathaniel Hedgeman, Thomas Gardiner, Capt. Eskeredge, Charles Morgan,
+Tinpot run. 9 Oct. 1724. (This Deed be accounted as nothing. Granted by a
+Deed in Fol: 138.",True,False
+GRAY_1_999,,300.0,1724.0,Stafford,".
+A-93: Henry Wiggington of Stafford Co. 300 A. in said Co. adj. Maj. Gwin, Giles
+Brent. 15 Oct. 1724.",True,False
+GRAY_1_1007,A-101: Samuel Skinker Returned,542.0,1715.0,,"A-101: Samuel Skinker returned 542 A. including 250 A. granted Patrick Grady 2
+June 1715 and transferred to Skinker. Surv. by Mr. John Savage 30 June 1724. In
+King George Co. on Great Marsh Run adj. Phillip Ludwell Esq. & Wm. Allen. 7 Jan
+1724.",False,True
+GRAY_1_1010,A-104: John Blackman,541.0,1724.0,,"A-104: John Blackman of Richmond Co. 541 A. in Staf: Co. on Town Run, adj. land
+Wm. Hackney sold Blackman, Michael Dorment. 11 Jan. 1724.",False,True
+GRAY_1_1032,A-127: Michael Meldrum,635.0,1724.0,,"A-127: Michael Meldrum of Westmoreland Co. 635 A. 38 Per. in King George Co. on
+Great Run of Rappahanock. 9 Feb. 1724.",False,True
+GRAY_1_1040,A-136: Charles Carter Gent,2525.0,1709.0,,"A-136: Charles Carter Gent. son of Robert Carter Esq. of Lancaster Co. 2525 A.
+in King George Co. 1100 A. granted him 1 Mar. 1709 & 1425 A. ungranted. Surv.
+by John Savage 8 Mar. 1724. On Rocky Run & Summerduck Run adj. John Wheeler.
+14 Apr. 1725.",False,True
+GRAY_1_1060,A-157: William Gleeks,224.0,1725.0,,"A-157: William Gleeks of Northumberland Co. 224 A. 144 Po. in King George Co.
+on Deep Run adj. Mr. William Skrine, Thom's Brooks. 22 June 1725.",False,True
+GRAY_1_1067,A-164: John Edy,4.0,1725.0,,"A-164: John Edy of Northumberland Co. 279 3/4 A. in King George Co. adj. John
+Brown, Henry Chalfee, Brown's Br., John Crump. 20 Aug 1725.",False,True
+GRAY_1_1077,A-175: Sam'l Earl Jr,454.0,1725.0,,"A-175:  Sam'l Earl Jr. of Westmoreland Co. 454 A. in King George Co. on Rocky
+Run adj. John Allen, Tho's Brooks, Blackgrove Hopper. 15 Nov. 1725.",False,True
+GRAY_1_1078,A-176: Dennis Morgan,424.0,1725.0,,"A-176: Dennis Morgan of Spotsilvania Co. 424 A. in King George Co. on upper
+Great Run above Capt. Thomas Carter. 15 Nov. 1725. Deed returned 16 Oct. 1729
+and cancelled. New deed to Joseph Chambers to whom Morgan sold. Bk. C. fo. 63.",False,True
+GRAY_1_1106,A-205: Robert Carter,255.0,1695.0,,"A-205: Robert Carter of Lancaster Co. father of John bought of Martha Norriss
+wid. & relct of David Miles & mother of Elizabeth 255 A. 30 Nov. 1695. Tobias
+Purcell formerly of said Co. also bought of Martha 150 A. 5 Feb. 1689 which
+Robert bought of Purcell 1696. Grant to John Carter 405 A. near Corotoman R.
+adj. land of Walter Heard now Tho's Purcell, Mill of Robert Carter. __
+1725. This Deed never signed.",False,True
+GRAY_1_1123,A-222: Mary Shealds,10.0,1724.0,,"A-222: Mary Shealds of Stafford Co. 10 Apr. 1724 set forth that William Shealds
+&c. Land granted Ambrose Farlow dec'd by Deed 15 Sept. 1704. He devised to
+Shealds. Escheat Grant to Mary Shealds on Machotick Dam adj. Rob't King, Rich'd
+Alife, John Pratt, Jr., land formerly Kings now William Fitzhugh. 16 Aug. 1726.",False,True
+GRAY_1_1126,A-225: William Garland,499.0,1726.0,,"A-225: William Garland of Westmoreland Co. 499 A. 1 Ro. 16 Per. in Richmond Co.
+N. Farnham Par. adj. his other land, Roger Thornton, Henry Burditt, Col. John
+Tayloe, Capt. Moor Fantleroy, Jno. Harford. 19 Aug. 1726. Deed never signed.",False,True
+GRAY_1_1145,B-17: Edward Newgent,322.0,1726.0,,"B-17: Edward Newgent of King George Co. 322 A. in King George Co. on lower
+Great Run adj. Thom's Welch, Maj. Geo: Eskridge. 13 Oct. 1726.",False,True
+GRAY_1_1150,B-23: Lazarus Dameron,838.0,1726.0,,"B-23: Lazarus Dameron of King George Co. 838 A. in King George Co. on Deep Run
+& Rocky Run adj. Mr. Cha's Carter, Brooks's land, Joseph Nutt. 18 Oct. 1726.",False,True
+GRAY_1_1151,B-24: John Edy,497.0,1726.0,,"B-24: John Edy of Northumberland Co. 497 A. in King George Co. on Deep Run
+adj. Lazarus Damaron, Mr. Charles Carter. 19 Oct. 1726.",False,True
+GRAY_1_1158,B-31: Peter Rout,714.0,1726.0,,"B-31: Peter Rout of Northumberland Co. 714 A. in King George Co. on Great Run
+of Rappahannock R. adj. Nathaniel Hedgeman, Thomas Welch. 22 Jan. 1726.",False,True
+GRAY_1_1160,B-33: Ralph Ffalkner,80.0,1726.0,,"B-33: Ralph ffalkner of King George Co. 80 A. in King George Co. on Marrs Run
+adj. James Warren, Joseph King, Mr. Coppedge. 23 Jan. 1726.",False,True
+GRAY_1_1161,Horsepen Run Of Great Hunting Cr. Adj. Henry Fitzhugh's Land Called Ravensworth,,1726.0,,"Horsepen Run of Great Hunting Cr. adj. Henry Fitzhugh's land called
+Ravensworth, Simon Pearson. 24 Jan. 1726.",False,True
+GRAY_1_1162,1726,5.0,1727.0,,"1726. Grant to Moore Fantleroy adj. Capt. Beal, Tho's Williams. 5 Apr. 1727.",False,True
+GRAY_1_1164,B-73: John Blowers,453.0,1727.0,,"B-73: John Blowers of Stafford Co. 453 A. in King George Co. on Great Run or
+N. Br. of Rappahannock R. 9 Apr. 1727.",False,True
+GRAY_1_1165,B-74: John Farguson,378.0,1727.0,,"B-74: John Farguson of Stafford Co. 378 A. in King George Co. on Rocky & Deep
+Runs adj. Henry Gallop, John Corbin, Giles Traverse, Roger Abbott. 9 Apr. 1727.",False,True
+GRAY_1_1172,B-81: John Edy,954.0,1727.0,,"B-81: John Edy of Northumberland Co. 954 A. in King George Co. by Roberts Road,
+Summerduck Run. 17 Apr. 1727.",False,True
+GRAY_1_1184,B-94: Grace Butler,259.0,1727.0,,"B-94: Grace Butler of King George Co. 259 A. in King George Co. on Horsepen Br.
+of Marsh Run adj. William Russell, Joshua Butler, Joseph King, Mark Hardings,
+14 July 1727.",False,True
+GRAY_1_1187,B-97: Mr,549.0,1727.0,,"B-97: Mr. James Carter of Stafford Co. 549 A. 78 Per. in King George Co. on Elk
+Marsh Run adj. Morgan Darnall, Licking Run Marsh, Jonas Williams. 18 Oct. 1727.
+This Deed for lands granted John Dunwidee Bk. A. fo. 121.",False,True
+GRAY_1_1197,B-107: Daniel Marr,260.0,1727.0,,"B-107: Daniel Marr of King George Co. 260 A. in King George Co. on Marrs Run
+adj. John Bradford, John Marr, John Hopper, William McBee. 25 Jan. 1727/8.",False,True
+GRAY_1_1210,B-121: Capt,85.0,1728.0,,"B-121: Capt. John Williams of King George Co. 85 A. in King George Co. on Marrs
+Run adj. Wm. McBee, Daniel Marr, John Bradford. 28 May 1728.",False,True
+GRAY_1_1215,B-126: John Corbin,298.0,1728.0,,"B-126: John Corbin of King George Co. 298 A. in King George Co. on Great Run of
+Watry Mt. adj. John Blowers. 10 June 1728.",False,True
+GRAY_1_1216,B-127: Walter Anderson,395.0,1728.0,,"B-127: Walter Anderson of King George Co. 395 A. in King George Co. on Watry
+Mt. adj. John Blowers, Jno. Hudnall, on Cedar Run. 15 June 1728.",False,True
+GRAY_1_1218,B-130: Charles Carter,765.0,1703.0,,"B-130: Charles Carter of Lancaster Co. Gent. 765 A. in King George Co. above
+falls of Rappahannock R. adj. Richland Tract granted Tho's Walters & Edw'd
+Montjoy 10 Mar. 1703, Col. Wm. Ball. 27 June 1728.",False,True
+GRAY_1_1219,B-131: Robert Jones,632.0,1728.0,,"B-131: Robert Jones of King George Co. 632 A. in King George Co. adj. land Mau:
+Griffen conveyed to Jos. Nutt, Capt. Augustine Washington, land Lazarus Dameron
+sold John & Jos. Stewert. 28 June 1728.",False,True
+GRAY_1_1271,C-$1: Anthony Sydnor,35.0,1729.0,,"C-$1: Anthony Sydnor of Richmond Co. 35 A. in Richmond Co. on Main Sw. of
+Miratico adj. Mr. Davenport, Sydnor's line. 24 Mar. 1729.",False,True
+GRAY_1_1272,Of Acquia Adj. Land Of Washington,,1730.0,,"of Acquia adj. land of Washington, line of Walters, line of Lee, line of
+Whitson. 25 Mar. 1730.
+Grave Br. of Quantiquo Cr., Francis Stone, on Powel's Cr., land of William
+Bland, James Bland, John Bland, & Robert Bland. 26 Mar. 1730.",False,True
+GRAY_1_1282,C-63: Joseph Chambers,424.0,1725.0,,"C-63: Joseph Chambers of Stafford Co. 424 A. in King George Co. on Upper Great
+Run near Capt. Thomas Carter. 15 Nov. 1725. Deed granted Dennis Morgan now
+cancelled. Bk. A, fo. 176.",False,True
+GRAY_1_1313,C-96: Owen Grinan(grinnon,119.0,1730.0,,"C-96: Owen Grinan(Grinnon, Greening) of King George Co. 119 A. in King George
+Co. adj. his land, John Hudnall, William Gleague, Col. Carter, Brooks's line,
+corner of Montjoy alias Brooks. 4 Feb. 1730.",False,True
+GRAY_1_1316,C-99: Catesby Cocke,420.0,1730.0,,"C-99: Catesby Cocke of Stafford Co. 420 A. in King George Co. on Deep Run adj.
+Conway, Morgan Griffin, Robert Jones, line of Dameron. (unreadable) Feb. 1730.",False,True
+GRAY_1_1325,C-110: George Williams Jr,798.0,1730.0,,"C-110: George Williams Jr. & Richard Williams both of Stafford Co. 798 A. in
+King George Co. on Brs. of Great Run adj. Hooe's land, John Kemper. 23 Feb.
+1730.",False,True
+GRAY_1_1340,C-126: Catesby Cocke,481.0,1730.0,,"C-126: Catesby Cocke of Stafford Co. Gent. 481 A. in King George Co. on Elk
+Marsh & Tinpot Runs adj. land of Hedgeman, line of Garner, James Carter. 16
+Mar. 1730.",False,True
+GRAY_1_1343,C-129: George Nevill,275.0,1730.0,,"C-129: George Nevill of Pr. William Co. 275 A. in Pr. William Co. adj. Col.
+Page, Col. Carter, William Hackney, Mr. Debutts, Baldwin's line. 22 Mar. 1730.",False,True
+GRAY_1_1344,C-130: Charles Taylor,180.0,1731.0,,"C-130: Charles Taylor of Pr. William Co. 180 A. in Pr. Wm. Co. on Broad Run of
+Occoquon adj. Mr. Debutts, Col. Carter, E. side S. Run Mts. 29 Mar. 1731.",False,True
+GRAY_1_1345,C-131: Catesby Cocke,338.0,1731.0,,"C-131: Catesby Cocke of Pr. William Co. Gent. 338 A. in Pr. William Co. on
+Broad Run of Occoquon adj. Valentine Peyton, Thomas Dallas, land of Dawkins and
+William Bean?, line of Arrington. 1 Apr. 1731. [May 24, 1736. Thomas Dallas
+put in claim to this Deed. Patented & recorded in his name. Bk. E. fol. 15.]",False,True
+GRAY_1_1347,C-133: Simon Connel,190.0,1731.0,,"C-133: Simon Connel of Pr. William Co. 190 A. in Pr. William Co. on N. Run of
+Pohick adj. Connel's other land. 13 Apr. 1731.",False,True
+GRAY_1_1349,C-135: James Robertson,338.0,1731.0,,"C-135: James Robertson of Pr. William Co. 338 A. in Pr. William Co. Brickin's
+line, Gabriel Adams. (Unreadable). 20 Apr. 1731.",False,True
+GRAY_1_1350,C-136: Gabriel Adams,338.0,1731.0,,"C-136: Gabriel Adams of Pr. William Co. 338 A. in Pr. William Co. adj. Parson
+Brichin, James Robertson, land of Broadwater and Dorrel, on Lubber's Br. 20
+Apr. 1731.",False,True
+GRAY_1_1351,C-137: Catesby Cocke,182.0,1731.0,,"C-137: Catesby Cocke of Pr. William Co. Gent. 182 A. in Pr. William Co. on S.
+Run of Pohick, adj. Nathaniel Shepperd. 21 Apr. 1731.",False,True
+GRAY_1_1355,C-142: Valentine Peyton,130.0,1731.0,,"C-142: Valentine Peyton of Pr. William Co. 130 A. in Pr. William Co. adj. Col.
+Mason by Occoquon R., on Gravelly Br. 12 May 1731.",False,True
+GRAY_1_1356,C-143: Catesby Cocke,230.0,1731.0,,"C-143: Catesby Cocke of Pr. William Co. Gent. 230 A. in Pr. William Co. adj.
+Capt. Simon Pearson, on Great Hunting Cr., Edward Embs, on Pimmits Run. 30 May
+1731.",False,True
+GRAY_1_1358,C-145: Edward Graham,790.0,1731.0,,"C-145: Edward Graham of Pr. William Co. 790 A. in Pr. William Co. on Bull Run
+adj. Hon'ble Robert Cocke Esq. 15 May 1731.",False,True
+GRAY_1_1360,C-147: Alexander Bell,1435.0,1731.0,,"C-147: Alexander Bell of Stafford Co. 1435 A. in Pr. William Co. on Broad Run
+of Occoquon & Cedar Run adj. his own land, Waugh Darnell(Darnel), John MacGuire,
+Samuel Skinker, John Blowers, Hudnall's land, Dr. Alexander Bell. 1 June 1731.",False,True
+GRAY_1_1361,C-148: James Norris,209.0,1731.0,,"C-148: James Norris of Stafford Co. 209 A. in Pr. William Co. on Tuskorora Br.
+among the Broken Hills, adj. Thomsa Owens, on Secklin's Br. 2 June 1731.",False,True
+GRAY_1_1362,C-149: (blank),200.0,1731.0,,"C-149: (Blank) 200 A. in Pr. William Co. adj. John Warner near Foot of the Blew
+Ridge, on Goose Cr. and Kittokton. 3 June 1731.",False,True
+GRAY_1_1364,C-151: Charles Cornwall,131.0,1731.0,,"C-151: Charles Cornwall of Pr. William Co. 131 A. in Pr. William Co. near head
+of N. Br. of Quanticot, adj. Charles Harris & Richard Davis, John Parker. 5
+June 1731.",False,True
+GRAY_1_1366,C-153: Bradley Garner,348.0,1731.0,,"C-153: Bradley Garner of Westmoreland Co. 348 A. in Pr. William Co. between
+Thoroughfare Mt. & Broad Run of Occoquan adj. John Glasscock. 7 June 1731.",False,True
+GRAY_1_1367,C-154: John Warner,792.0,1731.0,,"C-154: John Warner of Stafford Co. Surveyor 792 A. in Pr. William Co. adj.
+Dennis Connyers, Thomas Savage (now Bryan OBannion) William MacBee, John Toward,
+John Fischback, Samuel Nelmes. 8 June 1731.",False,True
+GRAY_1_1368,C-155: John Blackley,630.0,1731.0,,"C-155: John Blackley of Pr. William Co. 630 A. in Pr. William Co. adj. S. Run
+Mt., his own land, line of Mr. Debutts, John Flitter, on Wolf Trap Br. of Broad
+Run. 9 June 1731.",False,True
+GRAY_1_1369,C-156: John Toward,757.0,1731.0,,"C-156: John Toward of Stafford Co. 757 A. in Pr. William Co. on small Br. of
+C-157: George Mariner of Northumberland Co. 157 A. in Pr. William Co. on Br. of
+Cedar Run adj. Mr. Thomas Barber, Hudnall's land. 11 June 1731.",False,True
+GRAY_1_1370,C-158: John Fischback,1028.0,1731.0,,"C-158: John Fischback of Pr. William Co. 1028 A. in Pr. William Co. on Broad
+Run of Occoquon adj. John Toward, on Goose Cr. 12 June 1731.",False,True
+GRAY_1_1371,C-159: James Carter,607.0,1731.0,,"C-159: James Carter of Stafford Co. 607 A. in Pr. William Co. above the Falls
+of Potomack adj. his own land. 13 June 1731.",False,True
+GRAY_1_1372,C-160: John Grymes,700.0,1731.0,,"C-160: John Grymes of Middlesex Co. Esq. 700 A. in Pr. William Co. adj. Mark
+Harding, Alexander Clements, Daniel Feagens, John Windwright, Ralph Hughes, on
+Elk Run. 13 June 1731.",False,True
+GRAY_1_1373,C-161: Richard Buckner,411.0,1731.0,,"C-161: Richard Buckner of Caroline Co. Gent. 411 A. in Pr. William Co. adj.
+William MacBee, Joshua Butler, Mark Harding, Joseph King, Mr. Falkner, Alexander
+Clements, Daniel Feagen's now Mr. Crump's land. 14 June 1731.",False,True
+GRAY_1_1374,C-162: Charles Burges,879.0,1731.0,,"C-162: Charles Burges of Lancaster Co. Gent. 13,879 A. in Pr. William Co. on
+Goose Cr., near Crummy's Run, on Hunger Run. 15 June 1731.",False,True
+GRAY_1_1375,C-163: Charles Burges,3230.0,1731.0,,"C-163: Charles Burges of Lancaster Co. Gent. 3230 A. in Pr. William Co. on
+Coblers Mts., Br. of Rappahannock, Carter's Run, Blowers's line. 15 June 1731.",False,True
+GRAY_1_1376,C-164: Charles Burges,3046.0,1731.0,,"C-164: Charles Burges of Lancaster Co. Gent. 3046 A. in Pr. William Co. on N.
+Run of Rappahannock R. 15 June 1731.",False,True
+GRAY_1_1377,C-165: James Macdonnel,600.0,1731.0,,"C-165: James MacDonnel of Pr. William Co. 600 A. in Pr. William Co. adj. Mr.
+Barber's now Mr. Burges's land, Brs. of Kettle Run, William MacBee. 16 June
+1731.",False,True
+GRAY_1_1378,C-166: Charles Burges,439.0,1731.0,,"C-166: Charles Burges of Lancaster Co. Gent. 439 A. in Pr. William Co. adj.
+James MacDonnel, on Kettle Run. 17 June 1731.",False,True
+GRAY_1_1379,C-167: Charles Burges,1176.0,1731.0,,"C-167: Charles Burges of Lancaster Co. Gent. 1176 A. in Pr. William Co. on
+Goose Cr., on N. Coblers Mt. 17 June 1731.",False,True
+GRAY_1_1380,C-168: William Smith,223.0,1731.0,,"C-168: William Smith of Westmoreland Co. 223 A. in Pr. William Co. adj. Richard
+Britt, on Cub Run, Robert Carter Jr. Esq., Mr. Landon Carter. 18 June 1731.
+(Mar. 6, 1737 Capt. Willoughby Newton producing Original Deed signed by Col.
+Carter late agent, which was obtained of Dr. Rich'd Chapman Clk. in Jan. last
+past. Registered in name of Smith.)",False,True
+GRAY_1_1381,C-169: George Sleator,548.0,1731.0,,"C-169: George Sleator of Pr. William Co. 548 A. in Pr. William Co. on Rocky
+Cedar Run, adj. Maj. George Eskridge, William Lynton, Mr. Francis Awbrey. 27
+June 1731.",False,True
+GRAY_1_1382,C-170: George Sleator,217.0,1731.0,,"C-170: George Sleator of Pr. William Co. 217 A. in Pr. William Co. on Cub Run
+adj. Richard Britt. 28 June 1731.",False,True
+GRAY_1_1383,C-171: George Sleator,350.0,1731.0,,"C-171: George Sleator of Pr. William Co. 350 A. in Pr. William Co. adj. Thomas
+Asbury, on Elk Lick Run. 28 June 1731.",False,True
+GRAY_1_1384,C-172: Landon Carter,2693.0,1731.0,,"C-172: Landon Carter of Lancaster Co. Gent. 2693 A. in Pr. William Co. above
+Goose Cr. on Seconnel's Br. adj. Jacob Binks, George Sleator, Mr. Francis
+Awbrey, Valentine Holefield, Path from Sleaters to John Lasswell's, Jacob
+Lasswell. 29 June 1731.",False,True
+GRAY_1_1385,C-173: George Carter Son,2941.0,1731.0,,"C-173: George Carter son of Robert Carter Esq. of Lancaster Co. 2941 A. in Pr.
+William Co. at Williams's Gap alias The Indian Thorowfare of Blue Ridge, adj.
+William Williams, Williams's Br. of Goose Cr. -29 June 1731.",False,True
+GRAY_1_1386,,,1731.0,,"William Co. at Ashby's Bent (upper thorrowfare) of Blew Ridge, Meeting House
+Thoroughfair, upper Beaverdam Br., adj. Capt. Ball. 29 June 1731.",True,True
+GRAY_1_1387,C-176: Landon Carter,895.0,1731.0,,"C-176: Landon Carter of Lancaster Co. Gent. 895 A. in Pr. William Co. on W.
+side of Blue Ridge Mts. and Sherrando R. above Ashby's Bent Thoroughfare. 30
+June 1731.",False,True
+GRAY_1_1388,C-177: Landon Carter,5487.0,1731.0,,"C-177: Landon Carter of Lancaster Co. Gent. 5487 A. in Pr. William Co. on
+Beaverdam Br. & Ashbys's Bent Br. of Goose Cr., adj. Mr. George Carter, Landon
+Carter's other land. 30 June 1731.",False,True
+GRAY_1_1389,C-178: Landon Carter,2157.0,1731.0,,"C-178: Landon Carter of Lancaster Co. Gent. 2157 A. in Pr. William Co. on Goose
+Cr., adj. Path from Jacob Binks's to John Lasswell's, Isaac Lasswell, Valentine
+Holifield, Carter's other land, on Seconnel's Br., Col. Lee, Beaverdam Br. of
+Broad Run of Potomack, William Sturman. 30 June 1731.",False,True
+GRAY_1_1390,C-179: Capt,7883.0,1731.0,,"C-179: Capt. James Ball of Lancaster Co. 7883 A. in Pr. William Co. on Ashby's
+Bent Run adj. Mr. Landon Carter. 1 July 1731.",False,True
+GRAY_1_1391,C-180: Francis Awbrey,4000.0,1731.0,,"C-180: Francis Awbrey of Pr. William Co. 4000 A. in Pr. William Co. on Brs. of
+Kittoktan Cr., among the broken hills. 2 July 1731.",False,True
+GRAY_1_1392,C-181: Joseph Dixson,322.0,1731.0,,"C-181: Joseph Dixson of Pr. William Co. 322 A. in Pr. William Co. on Brs. of
+Limestone Run. 2 July 1731.",False,True
+GRAY_1_1393,C-182: Edward Embs,296.0,1731.0,,"C-182: Edward Embs of Pr. William Co. 296 A. in Pr. William Co. on Secolin's
+Br. of Goose Cr. 3 July 1731.",False,True
+GRAY_1_1394,C-183: Catesby Cocke,240.0,1731.0,,"C-183: Catesby Cocke of Pr. William Co. Gent. 240 A. in Pr. William Co. on
+Secolin's Br. of Goose Cr. 4 July 1731.",False,True
+GRAY_1_1396,C-185: Francis Awbrey,423.0,1731.0,,"C-185: Francis Awbrey of Pr. William Co. 423 A. in Pr. William Co. on Brs. of
+Goose Cr. adj. John Awbrey. 6 July 1731.",False,True
+GRAY_1_1397,C-186: John Richardson,200.0,1731.0,,"C-186: John Richardson of Pr. William Co. 200 A. on Brs. of Goose Cr. in Pr.
+William Co. on Tuskorora Run. 7 July 1731.",False,True
+GRAY_1_1398,C-187: John Matthews,124.0,1731.0,,"C-187: John Matthews of Pr. William Co. 124 A. on Brs. of Goose Cr. in Pr.
+William Co. adj. George Matthews, foot of Blue Ridge. 7 July 1731.",False,True
+GRAY_1_1399,C-188: Robert Booth,600.0,1731.0,,"C-188: Robert Booth of Pr. William Co. 600 A. in Pr. William Co. on Potomack R.
+& Dutchman's Cr. 7 July 1731.",False,True
+GRAY_1_1400,C-189: Thomas Davis,250.0,1731.0,,"C-189: Thomas Davis of Pr. William Co. 250 A. in Pr. William Co. on Bull Run
+adj. land of Arrington, Davis's own land, on Buckhall Br., George Reeves,
+Buckhall's corner, Joshua Davis. 7 July 1731.",False,True
+GRAY_1_1401,C-190: John Mercer,963.0,1731.0,,"C-190: John Mercer of Stafford Co. Gent. 963 A. in Pr. William Co. on Bull Run,
+W. side of Bull Run Mts., on Goose Cr. 7 July 1731.",False,True
+GRAY_1_1402,C-191: John Awbrey,247.0,1731.0,,"C-191: John Awbrey of Pr. William Co. 247 A. in Pr. William Co. on Goose Cr.,
+at foot of Blue Ridge, adj. George Matthews. 8 July 1731.",False,True
+GRAY_1_1408,C-198: Jacob Holtzclaw,362.0,1731.0,,"C-198: Jacob Holtzclaw of Pr. William Co. 362 A. in Pr. William Co. on Goose
+Cr. and Broad Run Mts. adj. John Fischback. 9 July 1731.",False,True
+GRAY_1_1409,C-199: John Warner,400.0,1731.0,,"C-199: John Warner of Stafford Co. Surveyor 400 A. in Pr. William Co. on Goose
+Cr. opposite mouth of Tuskorora Br. adj. Col. Lee. 10 July 1731. (Plat: Adj.
+Mr. Thomas Lee, Landon Carter, Plat of John Warner now William Fairfax Esq.)",False,True
+GRAY_1_1410,C-200: Charles Taylor,100.0,1731.0,,"C-200: Charles Taylor of Pr. William Co. 100 A. in Pr. William Co. adj. Doctor
+Bell, John Hudnall, Col. Barber. 11 July 1731.",False,True
+GRAY_1_1411,C-201: Stephen Clayton,300.0,1730.0,,"C-201: Stephen Clayton of Stafford Co. (now Pr. William Co.) 4 Sept. 1730 set
+forth that William Harwood of Stafford Co. died seized of land between Brs. of
+Occoquon & Niapsco and by Will devised to his son Francis and if he died without
+Hirs to his daus. Anne and Jane and to the survivor. Inquisition 11 Nov. 1730
+by George Eskridge Gent. Deputy Eschr. and 12 Freeholders of Stafford Co. (now
+Pr. Wm.) to wit: Jacob Gibson &c. Anne Haywood the surviving child died seized
+of 300 A. by Deed from Thomas Gregg to William Harwood father of Anne and
+another parcel by Deed from Thomas Wallace to Harwood. Land Escheats. Abraham
+Farrow of Pr. William Co. set forth he has most equitable Right to land making
+it appear that by Harwood's Will in case of Death of all the children without
+heirs, land was devised to Harwood's bro. Robert Forster? living in Jamaica.
+Farrow's father Abraham Farrow dec'd as Trustee appointed by said Will entered
+land and made improvements, and after death of Anne did expect Robert Forster to
+come but believing he would never come, upon his Death Bed advised his children
+to escheat the land, & it was clandestinely anticipated therein by Stephen
+Clayton before their Father's Funeral was over. Farrow had a Warrant to John
+Warner to survey said land in behalf of himself and his bro. William Farrow.
+Escheat Deed to Abraham Farrow & William Farrow both of Pr. William Co. 375 A.
+in Pr. William Co. Adj. Col. John Tayloe, the Grand Patent. 11 July 1731.",False,True
+GRAY_1_1412,C-202: Enoch Innis,960.0,1731.0,,"C-202: Enoch Innis of Richmond Co. 960 A. in Pr. William Co. on Bull Run Mt.,
+on Great Br. of Broad Run of Occoquon. 12 July 1731.",False,True
+GRAY_1_1413,C-203: Richard Farthing,307.0,1731.0,,"C-203: Richard Farthing of St. Mary's Co. Maryland 307 A. in Pr. William Co. on
+Broad Run, adj. Andrew Russel. 13 July 1731.",False,True
+GRAY_1_1414,C-204: Catesby Cocke,2200.0,1731.0,,"C-204: Catesby Cocke of Pr. William Co. Gent. 2200 A. in Pr. William Co. on
+Broad Run of Potomack adj. Andrew Russel. 14 July 1731.",False,True
+GRAY_1_1415,C-205: Edward Embs,450.0,1731.0,,"C-205: Edward Embs of Pr. William Co. 450 A. in Pr. William Co. adj. John
+Parker, on Clark's Br. out of Potomack R. 15 July 1731.",False,True
+GRAY_1_1416,C-206: Edward Embs,512.0,1731.0,,"C-206: Edward Embs, William Harle & John Harle of Pr. William Co. 512 A. in Pr.
+William Co. adj. John Parker, on Mill Br., William Harrison. 15 July 1731.",False,True
+GRAY_1_1417,C-208: Thomas Whitledge Jr,765.0,1731.0,,"C-208: Thomas Whitledge Jr. & Thomas Barton Jr. both of Pr. William Co. 765 A.
+in Pr. William Co. on Kettle Run, adj. John Creel?. 27 July 1731.",False,True
+GRAY_1_1419,C-210: Robert Carter Jr,800.0,1731.0,,"C-210: Robert Carter Jr. Esq. of Westmoreland Co. 800 A. in Pr. William Co. adj.
+John Savage, near Falls of Potomack, Difficult Run, Scot's Run, John Trammell,
+Robert Alexander. 29 July 1731.",False,True
+GRAY_1_1420,C-211: Benjamin Grayson,1214.0,1731.0,,"C-211: Benjamin Grayson of Pr. William Co. 1214 A. in Pr. William Co. adj. John
+Warner, near head of S. Brs. of Kittoktan. 30 July 1731.",False,True
+GRAY_1_1421,C-212: Catesby Cocke,166.0,1731.0,,"C-212: Catesby Cocke of Pr. William Co. Gent. 166 A. in Pr. William Co. on Bull
+Run adj. Thomas Stribling, Valentine Barton, John Young. 31 July 1731.",False,True
+GRAY_1_1422,C-213: Benjamin Tasker,132.0,1731.0,,"C-213: Benjamin Tasker of City of Annapolis, Maryland, Gent. 132 A. in Pr.
+William Co. on Broad Run of Occoquon adj. John Owens, William Been, George
+Dawkins, Thomas Stribling, John Diskins, Anthony Teale, Winter's Br. of Broad
+Run. 1 Aug. 1731.",False,True
+GRAY_1_1423,C-214: Benjamin Grayson,711.0,1731.0,,"C-214: Benjamin Grayson of Pr. William Co. 711 A. in Pr. William Co. on Walnut
+Br. of Bull Run and Brs. of Elk liking Run. 2 Aug. 1731.",False,True
+GRAY_1_1424,C-215: John Warner,255.0,1731.0,,"C-215: John Warner of Stafford Co. Surveyor 255 A. in Pr. William Co. on
+Licking Br. of Broad Run of Poto'k adj. corner of Ashton. 3 Aug. 1731.",False,True
+GRAY_1_1425,C-216: John Warner,1030.0,1731.0,,"C-216: John Warner of Stafford Co. Surveyor 1030 A. in Pr. William Co. at the
+Blew Ridge, adj. Benj'n Grayson's now Col. Taylor's land. 4 Aug. 1731.",False,True
+GRAY_1_1429,C-221: William Stamps,1533.0,1731.0,,"C-221: William Stamps of Lancaster Co. 1533 A. in Pr. William Co. adj. Mr.
+Charles Burges, Br. of Hunger Run. 19 Aug. 1731.",False,True
+GRAY_1_1430,C-222: Thomas Thornton,1475.0,1731.0,,"C-222: Thomas Thornton of Lancaster Co. 1475 A. in Pr. William Co. adj. Mr.
+William Stamps, Mr. Burges. 19 Aug. 1731.",False,True
+GRAY_1_1431,C-223: John Walker,447.0,1731.0,,"C-223: John Walker of in Kingdom of Great Britain 447 A. in Pr. William
+Co. on Clark's Run adj. George Sleater, Limestone Run. 20 Aug. 1731.",False,True
+GRAY_1_1432,C-224: Catesby Cocke,1303.0,1731.0,,"C-224: Catesby Cocke of Pr. William Co. 1303 A. in Pr. William Co. on Brs. of
+Kittockton, Dutchmans Run, adj. Mr. Francis Awbrey. 20 Aug. 1731.",False,True
+GRAY_1_1433,C-225: Henry Connyers,202.0,1731.0,,"C-225: Henry Connyers of Pr. William Co. 202 A. in Pr. William Co. on Goose Cr.
+among broken Hills that adj. Cr. 20 Aug. 1731.",False,True
+GRAY_1_1434,C-226: William Hall,1415.0,1731.0,,"C-226: William Hall of Pr. William Co. 1415 A. in Pr. William Co. on Goose Cr.
+adj. Thomas Owseley. 21 Aug. 1731.",False,True
+GRAY_1_1435,C-227: Thomas Botts,498.0,1731.0,,"C-227: Thomas Botts of Stafford Co. 498 A. in Pr. William Co. on Middle Run of
+Chappawomsick adj. his other land, Mr. Barber. 21 Aug. 1731.",False,True
+GRAY_1_1436,End Northern Neck Grants C 1729 - 1731 D-1: William Bennett,400.0,1731.0,,"End Northern Neck Grants C 1729 - 1731
+D-1: William Bennett of Pr. William Co. 400 A. in Pr. William Co. on S. Run of
+Quantico adj. where he now lives. 21 Aug. 1731.",False,True
+GRAY_1_1437,D-2: William Bennett,110.0,1731.0,,"D-2: William Bennett of Pr. William Co. 110 A. in Pr. William Co. on N. Run of
+Chappawamsick adj. Richard Fristow. 21 Aug. 1731.",False,True
+GRAY_1_1438,D-3: Joseph Chapman,412.0,1731.0,,"D-3: Joseph Chapman of Pr. William Co. 412 A. in Pr. William Co. on Little Cr.
+adj. Wm. Bourn. 23 Aug. 1731.",False,True
+GRAY_1_1440,D-5: John Creel,870.0,1731.0,,"D-5: John Creel of Pr. William Co. 870 A. in Pr. William Co. on Broad Run of
+Occaquan adj. Capt. Hooper, Charles Burgess. 24 Aug. 1731.",False,True
+GRAY_1_1441,D-6: George Walker,1506.0,1731.0,,"D-6: George Walker of Westmoreland Co. 1506 A. in Pr. William Co. on Piney Br.
+of Pope's Head Run adj. Walter Griffin, Capt. Burdett Ashton, Thomas Hooper,
+Waugh's land now land of Conyers. 24 Aug. 1731.",False,True
+GRAY_1_1442,D-7: James Thomas,1000.0,1731.0,,"D-7: James Thomas of Westmoreland Co. 1000 A. in Pr. William Co. on Piney Br.
+of Difficult Run adj. Wm. Gunnel(Gunnell), John Lewis, John Read, Francis
+Awbrey. 25 Aug. 1731.",False,True
+GRAY_1_1443,D-8: James Thomas,1504.0,1731.0,,"D-8: James Thomas of Westmoreland Co. 1504 A. in Pr. William Co. on Johnney
+More & Little Toskey Runs of Occaquan adj. John Waugh dec'd, Richard Britt, Wm.
+Linton, Geo: Walker, Thomas Hooper dec'd. 26 Aug. 1731. Surv. by James Thomas.",False,True
+GRAY_1_1444,D-9: Catesby Cocke,222.0,1731.0,,"D-9: Catesby Cocke of Pr. William Co. Gent. 222 A. in Pr. William Co. on N. Run
+of Quantico. 26 Aug. 1731.",False,True
+GRAY_1_1445,D-10: John Farrow,724.0,1731.0,,"D-10: John Farrow of Pr. William Co. 724 A. in Pr. William Co. on Quantico Brs.
+adj. Robert Hedges, Francis Jackson, Samuel Jackson. 27 Aug. 1731D-11: William Bowele(Bowell?) of Pr. William Co. 602 A. in Pr. William Co. on
+S. Drafts of Kittockton adj. Richard Coleman, Tuskarora. 27 Aug. 1731.",False,True
+GRAY_1_1446,D-12: Catesby Cocke,1537.0,1731.0,,"D-12: Catesby Cocke of Pr. William Co. Gent. 1537 A. in Pr. William Co. on
+Limestone Run above Goose Cr., under the Broken Mts. 27 Aug. 1731.",False,True
+GRAY_1_1447,D-13: Catesby Cocke,703.0,1731.0,,"D-13: Catesby Cocke of Pr. William Co. Gent. 703 A. in Pr. William Co. on
+Drafts of Kittockton. 28 Aug. 1731.",False,True
+GRAY_1_1448,D-14: John Russel,400.0,1731.0,,"D-14: John Russel of Pr. William Co. 400 A. in Pr. William Co. on Difficult Run
+adj. Burdit Ashton, Piney Br. of Popeshead Run. 28 Aug. 1731.",False,True
+GRAY_1_1449,D-15: Catesby Cocke,856.0,1731.0,,"D-15: Catesby Cocke of Pr. William Co. Gent. 856 A. in Pr. William Co. adj.
+Robert Carter Jr. Esq., Mr. Owsley's Cabin Br. of Little R. of Goose Cr. 28
+Aug. 1731.",False,True
+GRAY_1_1450,D-16: Catesby Cocke,235.0,1731.0,,"D-16: Catesby Cocke of Pr. William Co. Gent. 235 A. in Pr. William Co. on N.
+Run of Quantico adj. Richard Davis, John Calvert, Jacob Gibson. 28 Aug. 1731.",False,True
+GRAY_1_1451,D-17: John Lewis,254.0,1731.0,,"D-17: John Lewis of Pr. William Co. 254 A. in Pr. William Co. on Difficult Run,
+near the Cool Spring, road to Sugarlands. 30 Aug. 1731.",False,True
+GRAY_1_1453,D-20: William Diggs,1074.0,1731.0,,"D-20: William Diggs of Pr. Georges Co. Maryland Gent. 1074 A. in Pr. William
+Co. adj. Middleton Shaw on Tuskorora Br. among the broken hills. 30 Aug. 1731.",False,True
+GRAY_1_1454,D-21: Catesby Cocke,180.0,1731.0,,"D-21: Catesby Cocke of Pr. William Co. Gent. 180 A. in Pr. William Co. on
+Secolin Br. of Goose Cr. 30 Aug. 1731",False,True
+GRAY_1_1455,D-22: Capt,1310.0,1731.0,,"D-22: Capt. John Elliott of Westmoreland Co. 1310 A. in Pr. William Co. on Elk
+lick Run adj. Thomas Astbury, Daniel & Hugh Thomas, Francis Russell, Capt.
+George Turberville, Capt. Henry Lee. 31 Aug. 1731.",False,True
+GRAY_1_1456,D-23: Francis Awbery,2250.0,1731.0,,"D-23: Francis Awbery of Pr. William Co. 2250 A. in Pr. William Co. on Potomack
+R. above Kittockton Cr. adj. Nath'l Wood, land of Awbrey. 31 Aug. 1731.",False,True
+GRAY_1_1457,D-24: Catesby Cocke,112.0,1731.0,,"D-24: Catesby Cocke of Pr. William Co. Gent. 112 A. in Pr. William Co. on
+Seconnels Br. under the Broken hills. 1 Sept. 1731.",False,True
+GRAY_1_1458,D-25: Catesby Cocke,417.0,1731.0,,"D-25: Catesby Cocke of Pr. William Co. Gent 417 A. in Pr. William Co. adj.
+Michael Reagen, Capt. Pearson, Holms's Run on Great Hunting Cr. 1 Sept. 1731.",False,True
+GRAY_1_1459,D-26: Catesby Cocke,88.0,1731.0,,"D-26: Catesby Cocke of Pr. William Co. Gent. 88 A. in Pr. William Co. adj.
+Richard Longman, Thomas Karney near Little Hunting Cr., William Reagen. 1 Sept.
+1731.",False,True
+GRAY_1_1460,D-27: Richard Wood,1238.0,1731.0,,"D-27: Richard Wood of Pr. William Co. 1238 A. in Pr. William Co. adj. William
+Hawlin above Goose Cr. below the Yellow Rocks, Francis Awbrey. 1 Sept. 1731.",False,True
+GRAY_1_1461,D-28: Owin Grinan,481.0,1731.0,,"D-28: Owin Grinan of Pr. William Co. 481 A. in Pr. William Co. on Broad Run
+adj. land of Brian OBannion formerly Tho's Jarmyn, John Toward, near Parson
+Scott, Carter's Run. 1 Sept. 1731.",False,True
+GRAY_1_1462,D-29: Catesby Cocke,292.0,1731.0,,"D-29: Catesby Cocke of Pr. William Co. Gent. 292 A. in Pr. William Co. on Broad
+Run of Occoquon between Col. Carter & the Mts., on Catlet's Br. 2 Sept. 1731.",False,True
+GRAY_1_1463,D-30: Joseph Gibson,642.0,1731.0,,"D-30: Joseph Gibson of Spotsylvania Co. 642 A. in Pr. William Co. on N. fork of
+Broad Run, Goose Cr., on an outlet of Bull Run Mt. adj. Matthew Moss. 3 Sept.
+1731.",False,True
+GRAY_1_1464,D-31: Catesby Cocke,860.0,1731.0,,"D-31: Catesby Cocke of Pr. William Co. Gent. 860 A. in Pr. William Co. on Ivy
+Br. of Potomack R. above Little Hunting Cr. adj. Col. Mason, Mr. Brent, Capt.
+George Turberville, William Reagen, Tho's Karney, Thomas Stanford. 3 Sept. 1731.",False,True
+GRAY_1_1465,D-32: John Mercer,1077.0,1731.0,,"D-32: John Mercer of Stafford Co. Gent. 1077 A. in Pr. William Co. between N. &
+S. Runs of Pohick adj. Simon Connel, Joseph Jones. 3 Sept. 1731.",False,True
+GRAY_1_1466,D-33: John Savage,800.0,1731.0,,"D-33: John Savage of Stafford Co. Surveyor 800 A. in Pr. William Co. on Cabin
+Br. & Broad Run of Potomack. 3 Sept. 1731.",False,True
+GRAY_1_1467,D-34: Catesby Cocke,267.0,1731.0,,"D-34: Catesby Cocke of Pr. William Co. Gent 267 A. in Pr. William on N. Run of
+Pohick adj. Fitzhugh's Great Patent. 4 Sept. 1731.",False,True
+GRAY_1_1468,D-35: John Grant,852.0,1731.0,,"D-35: John Grant of Pr. William Co. 852 A. in Pr. William Co. near John Lewis
+on Difficult Run, Sugarland Rowling Road. 4 Sept. 1731.",False,True
+GRAY_1_1469,D-36: Catesby Cocke,866.0,1731.0,,"D-36: Catesby Cocke of Pr. William Co. Gent. 866 A. in Pr. William Co. on
+Kittockton, on side of Blew Ridge. 4 Sept. 1731.",False,True
+GRAY_1_1470,D-37: John Summers,201.0,1731.0,,"D-37: John Summers of Pr. William Co. 201 A. in Pr. William Co. on Holm's Run
+and Turkey Cock Br. adj. Gabriel Addams, Capt. Thomas Harrison. 4 Sept. 1731.",False,True
+GRAY_1_1471,D-77: Frances White Alias Lampton,35.0,1712.0,,"D-77: Frances White alias Lampton of Richmond now King George Co. died seized
+of 35 A. in Richmond now King George Co. No legal disposition. Land is part of
+268 A. granted Wm. Marshall 26 May 1712. Marshall sold to Tho's White 24 Oct.
+1713. White bequeathed by Will to his wife, Frances. Inquisition 4 Feb. this
+instant by George Eskridge Gent. Eschr. & oaths of 12 freeholders: Thomas Berry
+&c. found land Escheats. Grant to Thomas Turner of King George Co. 35 A. in
+King George Co. adj. Capt. Francis Sleator, Rusel? Wormley Jr., Sam'l Wharton.
+Feb. 173).",False,True
+GRAY_1_1472,D-78: John Edy,710.0,1726.0,,"D-78: John Edy of Westmoreland Co. had Deed for 710 A. in King George Co.
+granted 4 Mar. 1726 now returned and Cancelled by Edy not paying Composition.
+Deed to Simon Sallard for 710 A. in King George Co. on Deep Run, adj. Roger
+Abbott, Roger Gallop, John Farguson. 25 Feb. 1731. Deed never signed by reason
+of Col. Carter's Death.",False,True
+GRAY_1_1473,D-79: Rawleigh Chinn,504.0,1731.0,,"D-79: Rawleigh Chinn of Stafford Co. 504 A. in King George or Pr. William Co.
+on Deep Run adj. Wm. Jones, Bailey? (alias) Samuel Earle, by Russell's Path, Elk
+Run, corner of Crump, William Skrine, line of Gleeks, Wm. Brooks. 24 Feb.
+1731. Deed never signed by reason of Col. Carter's Death.",False,True
+GRAY_1_1474,D-80: Alexander Beach,185.0,1731.0,,"D-80: Alexander Beach of Stafford Co. 185 A. in King George or Pr. William Co.
+on Deep Run adj. Rob't Jones, Capt. Augustine Washington. 1 Mar. 1731. Deed
+never sent out, Col. Carter died before it could be signed.",False,True
+GRAY_1_1475,D-81: (blank),614.0,1731.0,,"D-81: (blank) 614 A. in Pr. William Co. adj. Jno. Wareing now Jeffrey Johnson,
+John Toward, Tho's Jackman now Peter Bryan, Waugh Darnell, on Pignut Ridge. 1
+Mar. 1731. Deed never issued, Col. Carter died before it could be signed.",False,True
+GRAY_1_1476,D-82: Benjamin Grayson,1009.0,1731.0,,"D-82: Benjamin Grayson of Pr. William Co. 1009 A. in Pr. William Co. on Brs. of
+Goose Cr. 16 Mar. 1731.",False,True
+GRAY_1_1477,D-83: Benjamin Grayson,495.0,1731.0,,"D-83: Benjamin Grayson of Pr. William Co. 495 A. in Pr. William Co. on
+Secoline's Br. adj. Edwards Embs, Mr. William Digges. 17 Mar. 1731.",False,True
+GRAY_1_1478,D-84: Benjamin Grayson,973.0,1731.0,,"D-84: Benjamin Grayson of Pr. William Co. 973 A. in Pr. William Co. on S. fork
+of Lymestone Br. of Potomack R. & Tuskorora. 18 Mar. 1731.",False,True
+GRAY_1_1479,D-85: Benjamin Grayson,700.0,1731.0,,"D-85: Benjamin Grayson of Pr. William Co. 700 A. in Pr. William Co. adj.
+Middleton Shaw on N. side of Tuskorora Br. 18 Mar. 1731.",False,True
+GRAY_1_1480,D-86: Richard Coleman & Peter Rust,1000.0,1731.0,,"D-86: Richard Coleman & Peter Rust of Westmoreland Co. 1000 A. in Pr. Wm. Co.
+on N. Br. of Tuskorora Run of Goose Cr. 20 Mar. 1731.",False,True
+GRAY_1_1481,D-87: James Ball,2003.0,1732.0,,"D-87: James Ball of Lancaster Co. Gent. 2003 A. in Pr. William Co. on Piney Br.
+of Broad Run of Occoquon, by the Horsepen and Brs. of Goose Cr. adj. Mr.
+Scot(Parson Scot), John Blowers, Br. of Carter's Run, Chattin's Run, Cromwell's
+Run. 5 May 1732.",False,True
+GRAY_1_1482,D-88: James Ball,871.0,1732.0,,"D-88: James Ball of Lancaster Co. Gent. 871 A. in Pr. William Co. on N. R. of
+Rappahannock, foot of Ball's Mount. 6 May 1732.",False,True
+GRAY_1_1483,D-89: (blank),578.0,1732.0,,"D-89: (blank) 578 A. in Pr. William Co. on Great Cobler Mt. and Brs. of
+Rappahan'k R. adj. Mr. Cha's Burgiss. 8 May 1732. Deed never sent out, Col.
+Carter dying before it could be signed.",False,True
+GRAY_1_1484,D-90: (blank),1700.0,1732.0,,"D-90: (blank) of Pr. William Co. 1700 A. in Pr. William Co. on N. Cobler Mt.
+adj. Capt. James Ball, John Blowers, on Goose Cr. 9 May 1732. This Deed to
+have been granted Charles Taylor but left unsigned at Col. Carter's death.",False,True
+GRAY_1_1485,D-91: (blank),260.0,1732.0,,"D-91: (blank) 260 A. in Pr. William Co. on Difficult Run adj. John Lewis, John
+Grant. 10 May 1732. Deed never issued, left unsigned at Col. Carter's Death.",False,True
+GRAY_1_1486,D-92: Henry Watson,288.0,1732.0,,"D-92: Henry Watson of Pr. William Co. 288 A. in Pr. William Co. on Pimmit's Run
+D-93: (Blank) 900 A. in Pr. William Co. on Kittockton adj. Richard Averill,
+John Mead. 19 May 1732. Deed left unsigned at Col. Carter's Death.",False,True
+GRAY_1_1487,D-94: (blank),296.0,1732.0,,"D-94: (Blank) 296 A. in Pr. William Co. on Morunsco Run adj. Robert Church,
+Capt. Scarlett. 20 May 1732. Deed left unsigned at Col. Carter's Death.",False,True
+GRAY_1_1488,D-95: (blank),1015.0,1732.0,,"D-95: (Blank) 1015 A. in Pr. William Co. between the Short Hill and the Blew
+Ridge. 22 May 1732. Col. Carter died, Deed never signed.",False,True
+GRAY_1_1489,D-96: (blank),300.0,1732.0,,"D-96: (Blank) 300 A. in Pr. William Co. adj. land of Davies(Davis), land of
+Reeves on N. side of Occoquon, William Bland, Shibling's line, John Flowrence.
+23 May 1732.",False,True
+GRAY_1_1490,D-97: (blank),528.0,1732.0,,"D-97: (Blank) 528 A. in Pr. William Co. between Little Rocky & Johnnymore Runs
+of Bull Run adj. Linton's former land, Rich'd Britt, path from Linton's Quarter
+to Russell's. 7 July 1732.",False,True
+GRAY_1_1491,D-98: John Mercer,2131.0,1732.0,,"D-98: John Mercer of Stafford Co. 2131 A. in Pr. William Co. adj. land assigned
+to Mercer by Maurice Veal, on Bull Run, Rob't Carter Esq., on Hunger Run, on
+Goose Cr., John Young. 8 July 1732.",False,True
+GRAY_1_1492,D-99: Jeremiah Murdock,94.0,1694.0,,"D-99: Jeremiah Murdock of King George Co. 94 A. surplus in 280 A. granted John
+Nichols 21 Feb. 1694. Nichols sold to Thomas Hews & heir of Hews sold to
+Murdock. Deed for whole 374 A. in King George Co. adj. ffrancis Wright, line of
+Wright afterwards Washington & Thornton's land. 22 July 1732.",False,True
+GRAY_1_1501,E-8: Simon Sallard,710.0,1737.0,,"E-8: Simon Sallard of Westmoreland Co. New Deed for 710 A. in King George Co.
+Col. Carter Agt. died before Old Deed was signed. On Deep Run adj. Roger Abbot,
+Roger Gallop, John Farguson, Br. of Rocky Run. 9 May 1737.",False,True
+GRAY_1_1503,E-10: Mr,2131.0,1737.0,,"E-10: Mr. John Mercer of Stafford Co. 2131 A. in Pr. William Co. Col. Carter
+died before Deed signed Bk. D, fol. 98. New Deed to Mercer. Adj. land Maurice
+Veal sold Mercer, on Bull Run, Robert Carter Esq., Hunger Run of Goose Cr.,
+along W. side of Mts., John Young. 9 June 1737. #",False,True
+GRAY_1_1505,E-12: Mr,3500.0,1737.0,,"E-12: Mr. John Mercer of Stafford Co. obtained Wrnt. from Col. Carter. Surv.
+Mercer for 3500 A. in Pr. William Co. including part of Bull Run Mts. adj.
+Mercer's own land, Main Br. of Bull Run, Robert Carter Esq., Hunger Run. 11
+June 1737. #",False,True
+GRAY_1_1507,E-14: Godfrey Ridge,292.0,1737.0,,"E-14: Godfrey Ridge of Spotsylvania Co. 292 A. in Pr. William Co. from Col.
+Carter. Bk. D. fol. 29. New Deed to Ridge. On Broad Run of Occoquan adj. Col.
+Carter, the Mt., on Catlett Br. 24 June 1737. #",False,True
+GRAY_1_1509,E-16: Richard Sutton Sr,50.0,1737.0,,"E-16: Richard Sutton Sr. of Westmoreland Co. Wrnt. 3 Jan. Last. Surv. by Mr.
+James Thomas. 50 A. adj. his own land, William Robinson dec'd, Br. of Coss Coss
+Cr., land formerly Thomas Glover's now possessed by Jacob Remy's and belonging
+to Heirs of John Fryer dec'd, Andrew Hutcheson. 15 Aug. 1737. #",False,True
+GRAY_1_1511,E-18: William Fairfax Esq,1015.0,1737.0,,"E-18: William Fairfax Esq. of King George Co. 1015 A. in Pr. William Co. between
+Short Hills and Blew Ridge Mts. Surv. by Mr. John Warner. 20 Sept. 1737. #",False,True
+GRAY_1_1514,(e-20): [fol,296.0,1736.0,,"(E-20): [Fol. 40] Pr. William Co. Apr. 10, 1736. Survey for William Fairfax Esq.
+Tract on Potomack R. about 7 Mi. above Kitocktan Cr. adj. the Short Hill, Maj.
+John Colvill, Col. John Tayloe, Mr. Catesby Cocke, Mr. George Atwood, Robert
+Booth, Dutchman's run, surv. of Francis Awbrey now Maj. Colvill, Cox's Cabbin
+Br., [Fol 42] land of John Mills now Mr. Catesby Cocke's, Mr. George Atwood.
+17,296 A. Surv. by John Awbrey.",False,True
+GRAY_1_1515,E-21: John Phillips Obtained Promise,240.0,1737.0,,"E-21: John Phillips obtained promise of Deed. Deed not signed at time of Agt's
+decease; Bk. C, fol. 183 14 July 1731. Phillips never applied to have said
+Deed. Catesby Cocke of Pr. William Gent. obtained Grant for 240 A. in Pr.
+William Co. on Secolin Br. of Goose Cr. 23 Sept. 1737.",False,True
+GRAY_1_1516,E-22: William Coram Obtained Promise,516.0,1737.0,,"E-22: William Coram obtained promise of Deed for land in Pr. William Co. from
+Col. Carter late Agt. Deed registred in Bk. C fol. 111, 24 Feb. 1730. Coram
+never afterwards applied for Deed. Catesby Cocke of Pr. William Gent. obtained
+Grant for 516 A. in Pr. William Co. on Neapsco near John Wallis, adj. William
+Coram, Mr. Farrow, John Peak Jr. 23 Sept. 1737.",False,True
+GRAY_1_1517,,22.0,1736.0,Stafford,"E-22a: Pr. William Co. 10 Feb. 1736/7. Surveyed for William Fairfax Esq. Tract
+on Blew Ridge and on of Shannondoah R. adj. Col. Mann Page, on Potomack R.,
+Shannondoah Falls of Potomack R. adj. Mr. George Atwood, Mr. Fairfax's 17,296 A.
+survey, John Mills now Mr. Cockes, Br. of Kitocktan, Capt. Awbrey now Col.
+Tayloes, Capt. Samuel Johson, between Williams's & Gregory's Gap,[cont. fol.
+23a] 33,353 A., including 3 Tracts of Mr. Catesby Cocke, 1762 A., 866 A., & 540
+A. Likewise a Tract for Morgan Bryan of 1015 A. but granted said Fairfax, so
+E-23: Joseph Jacobs had promise of land in Stafford Co. from Col. Carter Agt.
+dec'd. Bk. C fol. 112, 25 Feb. 1730. Jacobs never reapplied. Deed to Catesby
+Cocke of Pr. William Gent. 934 A. in Stafford Co. on Beaverdam Br. of Occoquan
+adj. Capt. Elliott, William Coram, John Peak, Capt. Ashton. 23 Sept. 1737.",True,False
+GRAY_1_1518,E-24: Thomas Owins,31.0,1731.0,,"E-24: Thomas Owins of Pr. William Co. obtained Deed from Col. Carter late Agt.
+dec'd, Bk. D fol: 21, 31 Aug. 1731. Owins never reapplied for Deed. Grant to
+Catesby Cocke of Pr. William Co. Gent. 180 A. in Pr. William Co. on Secolin Br.
+of Goose Cr. 23 Sept. 1737.",False,True
+GRAY_1_1520,E-26: Mr,1092.0,1737.0,,"E-26: Mr. George Attwood of Pr. Georges Co., Maryland obtained promise of Deed
+from Col. Carter late Agt. dec'd. Surv. by Mr. John Warner. Attwood renewed
+request. 1092 A. in Pr. William Co. on Goose Cr. & Kitoktan N.W. of Broken
+Hills adj. William Bowell. 24 Sept. 1737. #",False,True
+GRAY_1_1521,E-27: Mr,2340.0,1737.0,,"E-27: Mr. George Atwood of Pr. Georges Co., Maryland obtained promise of Deed
+from Col. Carter late Agt. dec'd. Surv. by Mr. John Warner. 2340 A. Grant to
+George Atwood in Pr. William Co. between the short Hills and Blew Ridge, by
+Potomack R. 26 Sept. 1737. #",False,True
+GRAY_1_1522,,852.0,1736.0,,"E-28: Pursuant to the Orders received from the Right Honorable Thomas Lord
+Fairfax Proprietor of the Northern Neck of Virginia Survey'd for his Lordships
+use and Reserved for a Manor one certain Tract or Parcel of land in Pr. William
+Co. on N'most Br of Rappahanock R. called Hedgman on the upper side of Carter's
+Run, on the Brs. of Goose Cr. on the lower side of Shannondoah and below Happy
+Cr. including the Blew Ridgw between the Happy Cr. Gap and Ashby's Bent Gap,
+adj. Mr. George Carter, Capt. James Ball on Ivy Point on side of Bent Br.,
+Thomas Ashby, Manasses Run, Mr. Burgess, Mr. Mercer, Capt. James Ball, Mr.
+George Carter, Broad Run of Occoquan, Mr. Alex'r Scott, Mr. Walter Anderson.
+125,852 A. there is included as surveyed for Capt. James Ball 71 A. at Balls
+Mt. also 2125 A. on Goose Cr. for Mr. Charles Burgess dec'd. By command of his
+Lordship. W. Fairfax. John Warner Srvr. Nov. 15, 1736. #",True,True
+GRAY_1_1523,E-34: See E-28 Thomas Lord Fairfax 26,535.0,1736.0,,"E-34: See E-28 Thomas Lord Fairfax 26,535 A. in Pr. William Co. on Shannondoah
+including the Blew Ridge between Ashbys Bent and William's Gap. Adj. Mann Page,
+Robert Carter Esq., Marquis Calmeze, Maj. Beesley, John Fishback, Mr. Landon
+Carter, Lord Fairfax, Mr. Geo. Carter, John Warner, by Meeting House Gap, Col.
+Tayloe, Thomas Ashford. John Warner survr. 29 Nov. 1736. Bk 0, fol: 207? #",False,True
+GRAY_1_1524,E-38: Thomas Lord Fairfax Land In Pr,588.0,1739.0,,"E-38: Thomas Lord Fairfax land in Pr. William Co. on Difficult Run near Falls of
+Potomack R. adj. Maj. Dennis McCarty's Sugarland Tract, Mr. Wm Harrison, Messrs
+Will'm Harle & John Harle, John Parker(now Mr. Watson), above Clark's Br.,
+Edward Emmes, Guy Broadwater, Thomas Simmonds, Mr. Lewis Elzey, on Difficult
+Run, Will'm Norris, line of Mr. John Grant now Maj. John Colvill, Piney Br. of
+Difficult Run, John Lewis, John Warner, John Reid's now Rhodam Neale, Mr. James
+Thomas, Col. Carter, Wm. Berkley. Surv. by Jno. Warner 8 June 1739. 12,588 A.
+granted Bryan Fairfax Esq. Bk F. fol: 124. #",False,True
+GRAY_1_1526,E-47: Capt,4063.0,1739.0,,"E-47: Capt. Francis Awbrey of Pr. William Co. obtained promise of Deed from
+Col. Carter late Agt. dec'd. Surv. by Mr. James Thomas. Awbrey assigned his
+Right to Maj. John Colvill of Pr. William Co. 4063 A. Grant to Colvill in Pr.
+Wn. Co. on Kittoktan Cr. adj. Samuel Marksberry, Patrick Lynch, John Tuton, on
+Indian Cabin Br., Awbrey's former land, Potomack R., Dutchman's Run, Cox's
+Cabbin Br. 18 May 1739. #
+Lynch(now Mr. Cocke's), Samuel Marksberry. 18 May 1739.",False,True
+GRAY_1_1527,E-51: Mr,1066.0,1739.0,,"E-51: Mr. Edward Washington of Pr. William Co. 1066 A. in Pr. William Co. near
+Kittoktan adj. Benjamin Grayson, William Bowell. Surv. by Mr. John Warner. 19
+May 1739. #",False,True
+GRAY_1_1528,E-53: Catesby Cocke,540.0,1739.0,,"E-53: Catesby Cocke of Pr. William Gent. obtained Promise of Deed from Col.
+Carter late Agt. Surv by Mr. John Warner. Cocke renewed request for 540 A. in
+Pr. William Co. on S. Run of N. Br. of Kittoktan. 21 May 1739. #",False,True
+GRAY_1_1532,E-57: Jacob Lasswell,200.0,1739.0,,"E-57: Jacob Lasswell of Pr. William Co. had promise of Deed, Bk. B fol. 217, 14
+Mar. 1728. Deed lapsed. New Deed to Catesby Cocke of Pr. William Co. for 200
+A. on Goose Cr., Secolin's Br., Hon. Robert Carter Esq. 21 May 1739.",False,True
+GRAY_1_1533,E-58: William Hawkins Had Promise,481.0,1739.0,,"E-58: William Hawkins had promise of Deed from Col. Carter, Bk. C fol. 106.
+Deed not issued. Catesby Cocke of Pr. William Co. Gent. 481 A. in King George
+Co. on Elk Marsh Run & Tinpot Run adj. land of Hedgman, line of Garner, James
+Carter. 22 May 1739.",False,True
+GRAY_1_1534,E-59: Thomas Stribling Had Promise,166.0,1739.0,,"E-59: Thomas Stribling had promise of Deed from Col. Carter, Bk. C fol. 212, 31
+July 1731. Deed not issued. Catesby Cocke of Pr. William Co. Gent. 166 A. in
+Pr. William Co. on Bull Run adj. Thomas Stribling, Valentine Barton, John Young.
+22 May 1739.",False,True
+GRAY_1_1535,E-60: Thomas Owsley Had Promise,2200.0,1739.0,,"E-60: Thomas Owsley had promise of Deed from Col. Carter, Bk. C fol. 204, 14
+July 1731. No Deed issued. Catesby Cocke of Pr. William Co. Gent. 2200 A. in
+Pr. William Co. on Broad Run of Potomack R. adj. Andrew Russel. 22 May 1739.",False,True
+GRAY_1_1536,E-61: John Mills Had Promise,20.0,1731.0,,"E-61: John Mills had promise of Deed from Col. Carter, Bk. C fol. 224, 20 Aug.
+1731. No Deed issued. Catesby Cocke of Pr. William Co. Gent. 1303 A. in Pr.
+William Co. on N. Brs. of Kittocktan, Dutchman's Run, foot of Short Hills, adj.
+Mr. Francis Awbrey. 22 May 1739.",False,True
+GRAY_1_1537,E-62: John Philips Had Promise,112.0,1739.0,,"E-62: John Philips had promise of Deed from Col. Carter, Bk. D, fol. 21, 1
+Sept. 1731. Catesby Cocke of Pr. William Co. Gent. 112 A. on S. Fork Secolin
+Br. under the broken Hills in Pr. William Co. 23 May 1739.",False,True
+GRAY_1_1538,E-63: Michael Reagan Had Promise,230.0,1739.0,,"E-63: Michael Reagan had promise of Deed, Bk. C, fol. 143, 13 May 1731. Grant
+to Catesby Cocke 230 A. in Pr. William Co. adj. Capt. Simon Pearson, on Great
+Hunting Cr., Edward Emms. 23 May 1739.",False,True
+GRAY_1_1539,E-64: P,21.0,1731.0,,"E-64: P. Turley had promise of Deed, Bk. C, fol. 137, 21 Apr. 1731. Grant to
+Catesby Cocke 182 A. in Pr. William Co. on S. Run of Pohick adj. Nathaniel
+Sheppard. 23 May 1739.",False,True
+GRAY_1_1540,From Col,300.0,1728.0,,"from Col. Carter late Agt. registered in Book B. fol. 158 bearing Date the 19
+Oct. 1728, But John & Jacob Lasswell never afterwards applied to have the said
+Cause if any Why the Deeds left as aforesaid should not lapse and be further
+Granted. Grant to Catesby Cocke of Prince William Co. Gent. 300 A. on the NW
+side of Goose Creek on the Drains of a Br. called Tuskarora alias Secolin's Br-h
+and bounded according to Survey as followeth, viz: Beginning.",False,True
+GRAY_1_1541,E-66: John Middleton Had Promise,28.0,1731.0,,"E-66: John Middleton had promise of Deed, Bk. D, fol. 15, 28 Aug. 1731. Grant to
+Catesby Cocke 1856 A. in Pr. William Co. adj. Robert Carter Jr. Esq., on Goose
+Cr., Robert Carter Esq., Mr. Owsley's Cabbin Br. of Little River of Goose Cr.
+24 May 1739.",False,True
+GRAY_1_1542,E-67: Patrick Lynch Had Promise,27.0,1731.0,,"E-67: Patrick Lynch had promise of Deed, Bk. D, fol. 12, 27 Aug. 1731. Grant to
+Catesby Cocke 1537 A. in Pr. William Co. on Limestone Run above Goose Cr. under
+the Broken Mts. 24 May 1739.",False,True
+GRAY_1_1544,E-69: Jasper Billing Had Promise,77.0,1739.0,,"E-69: Jasper Billing had promise of Deed, Bk. D, fol. 46, 7 Sept. 1731. Catesby
+Cocke Grant for 77 A. in Pr. William Co. on Elk Marsh adj. David Darnell, Maj.
+Wm. Thornton, John Smith, George Whitley. 24 May 1739.",False,True
+GRAY_1_1545,E-70: John Gregory Had Promise,866.0,1739.0,,"E-70: John Gregory had promise of Deed,, Bk. D. fol. 36, 14 Sept. 1731. Catesby
+Cocke of Pr. William Co. Gent. Grant for 866 A. in Pr. William on Kitocktan
+above the short Hill along the Blue Ridge. 25 May 1739.",False,True
+GRAY_1_1546,E-71: Alexander Mccarthy Had Promise,417.0,1739.0,,"E-71: Alexander McCarthy had promise of Deed,, Bk. OD, fol. 25, 5 Sept. 1731.
+Catesby Cocke of Pr. William Co. 417 A. in Pr. William Co. on Four Mile Run adj.
+Michael Regan, Capt. Pearson, Holms Run or Great Hunting Cr. 25 May 1739.",False,True
+GRAY_1_1547,E-72: Alexander Mccarty Had Promise,88.0,1739.0,,"E-72: Alexander McCarty had promise of Deed, Bk. D, fol. 26, 5 Sept. 1731.
+Catesby Cocke 88 A. in Pr. William Co. adj. Richard Longman, Thomas Karney near
+little Hunting Cr., William Reagan. 26 May 1739.",False,True
+GRAY_1_1548,E-73: Alexander Mccarty Had Promise,860.0,1739.0,,"E-73: Alexander McCarty had promise of Deed, Bk. D, fol. 31, 3 Sept. 1731.
+Catesby Cocke 860 A. Grant in Pr. William Co. on Fork of Ivy Br. of Potomack
+R., above Little Hunting Cr. adj. Col. Mason, Capt. George Turberville, William
+Reagan, Thomas Karney, Mr. Brent, Thomas Stanford. 26 May 1739.",False,True
+GRAY_1_1549,E-74: Patrick Lynch Obtained Promise,597.0,1739.0,,"E-74: Patrick Lynch obtained promise of Deed, Bk. D, fol. 50, 8 Sept. 1731.
+Lynch being dec'd, Deed to Catesby Cocke of Pr. William Co. Gent. for 597 A. in
+Pr. Wm. Co. on Clark's Run adj. George Slater, near the Indian Fort, the
+Kitocktan Mt. 28 May 1739.",False,True
+GRAY_1_1550,E-75: Patrick Lynch Obtained Promise,1488.0,1739.0,,"E-75: Patrick Lynch obtained promise of Deed, Bk. D, fol. 51, 9 Sept. 1731.
+Lynch being dec'd, Deed to Catesby Cocke of Pr. William Co. for 1488 A. in Pr.
+William Co. on Clark's Run, side of Kittocktin, Samuel Marksberry. 28 May 1739.",False,True
+GRAY_1_1551,E-76: Richard Kirkland,142.0,1739.0,,"E-76: Richard Kirkland of Pr. William Co. obtained promise of Deed, Bk. D, fol.
+49, 8 Sept. 1731. Catesby Cocke of Pr. William Co. Gent. Grant for 142 A. in
+Pr. William Co. on Wolf Run & Bull Run adj. Richard Kirkland, Capt. John Waugh.
+28 May 1739.",False,True
+GRAY_1_1552,E-77: Capt,1260.0,1739.0,,"E-77: Capt. Richard Blackburn of Pr. William Co. 1260 A. in Pr. William Co. on
+Broad Run of Occoquan adj. Wansford Arrington, Daniel Tebbs, Dawkins line,
+Valentine Barton, Col. Carter. Surv. by Mr. John Warner. 28 May 1739.",False,True
+GRAY_1_1553,E-79: Mr,815.0,1739.0,,"E-79: Mr. Edward Berry of Pr. William Co. 815 A. in Pr. William Co. at Watry
+Mt. adj. dames Henderson, Joseph Right, Thomas Jackman, John Blowers, John
+Corbin, near Great Run, Walter Anderson, Cedar Run. Surv. by Mr. John Warner.
+29 May 1739. #",False,True
+GRAY_1_1554,E-80: Mr,400.0,1739.0,,"E-80: Mr. Edward Washington of Pr. William Co. 400 A. in Pr. William Co. on
+Pohick Brs. adj. Col. Carter, Mr. John Mercer, Rocky Br. Surv. by Mr. John
+E-81: Mr. John Awbrey of Pr. William Co. 86 A. in Pr. William Co. Co. on
+Potomack R. below Great or lower Falls adj. William Strutfield, Thomas Owsley,
+Mr. Robert Alexander, Thomas Gowing, Woncopin Br. Surv. by Mr. James Thomas.
+29 May 1739. #",False,True
+GRAY_1_1555,E-83: Thomas Davies,300.0,1739.0,,"E-83: Thomas Davies of Pr. William 300 A. in Pr. William Co. from Col. Carter
+late Agt. Bk. D. fol. 96. Davies renewing Request. Grant to Davis adj. land
+of Davies and Reeves, on N. side of Occoquan, William Bland, Reeves Br.,
+Stribling's line, John Florence. 30 May 1739. #",False,True
+GRAY_1_1556,E-84: John Blackley,630.0,1739.0,,"E-84: John Blackley of Pr. William Co. dec'd obtained promise of Deed. Samuel
+Sumack of Pr. William m. dau. of John Blackley and moved for said land. There
+being no Son or better Claimant Grant to Shumack 630 A. in PR. Wm. Co. on S.
+Run Mts. adj. Rev. Mr. Debutts, John Flitter, on Broad Run, Blackley's land,
+Wolftrap Br. of Broad Run. Survey by John Warner. 30 May 1739. #",False,True
+GRAY_1_1557,E-85: John Mcmillan,400.0,1739.0,,"E-85: John McMillan of Pr. William Co. 400 A. in Pr. William Co. on Quantico
+Brs. adj. Philemon Waters, Francis Jackson. Surv. by Mr. John Warner. 30 May
+1739. #",False,True
+GRAY_1_1558,E-87: Alexander Beach,185.0,1739.0,,"E-87: Alexander Beach of Stafford Co. 185 A. in King George & Pr. William Cos.
+on Deep Run adj. Robert Jones, Capt. Augustine Washington. 31 May 1739. #",False,True
+GRAY_1_1559,E-88: Mr,17.0,1739.0,,"E-88: Mr. Rowland Thornton of King George Co. 17 A. 1 Ro. 24 Per. in King
+George Co. adj. his land, Isaac Green, John Kendall, Samuel Moon, Green's Patent
+now Thornton's land. Surv. by Mr. John Warner. 31 May 1739. #",False,True
+GRAY_1_1560,E-89: Rawleigh Chinn,504.0,1739.0,,"E-89: Rawleigh Chinn of Stafford Co. 504 A. in King George & Pr. William Cos.
+on Deep Run adj. William Jones, land of Bailey alias Samuel Earle, Russel's
+Path, Crump's line, William Skrine, Gleek's line, William Brooks. 31 May 1739.
+#",False,True
+GRAY_1_1567,E-102: (survey) Orders From William Fairfax Esq,5568.0,1739.0,,"E-102: (Survey) Orders from William Fairfax Esq. Agt. of Lord Fairfax. William
+Fairfax 5568 A. in Pr. William Co. on Difficult Run and Great Falls of Potomack
+R., Wolftrap Br. adj. John Lewis, William Gunnell, Thomas Lewis, John Read, Guy
+Broadwater, Robert Carter Jr., Rev. Mr. Alexander Scot, Robert Alexander, Samuel
+Wilson, corner of Watts & Harrison, Francis Awbrey, line of Guniuland? Lewis.
+John Warner Surv'r. Aug. 17, 1739. #",False,True
+GRAY_1_1569,E-107: John Ralls,500.0,1739.0,,"E-107: John Ralls of Caroline Co. but intending to remove himself and family
+informed the Office that there were about 500 A. in Pr. William Co. adj. Richard
+Tidwell on John's Br., Lucky Run, Goose Run, & Beaver Run, Brs. of Cedar Run.
+Mr. John Warner to Survey. Grant to Ralls. Adj. Leonard Helms, Tidwell's now
+Floyd's, near Chappawamick Lick, Chappawamsick Br. 676 A. 23 Nov. 1739. #",False,True
+GRAY_1_1570,E-108: Mr,528.0,1739.0,,"E-108: Mr. Edward Washington of Pr. William Co. 528 A. in Pr. William Co. on
+Brs. on Little Rocky Run & Johnnymore Run of Bull Run. Surv. by Mr. James
+Thomas. Adj. William Linton, Richard Brit, Nathaniel Russel. 26 Nov. 1739. #",False,True
+GRAY_1_1571,E-109: Capt,2998.0,1739.0,,"E-109: Capt. Francis Awbrey of Pr. William Co. 2998 A. in Pr. William Co. Surv.
+by Mr. James Thomas was erroneous. Resurvey by Mr. John Warner. Above Goose
+Cr., adj. Awbrey's Cool Spring Tract, Richard Wood, George Sleator, land of
+Lynch, Joseph Dixon, end of Piney Mt., John Richardson. 26 Nov. 1739. #",False,True
+GRAY_1_1574,E-114: Mr,160.0,1739.0,,"E-114: Mr. Lewis Elzey of Pr. William Co. 160 A. on borders of Stafford & King
+George Cos. late the Estate of Daniel Macpherson who dyed without Heirs. Messrs
+Turner & Taylor Clks. of said Cos. Escheat Grant to Elzey. Surv. by Mr. John
+Grant. Adj. Seldon's line, John Bell. 29 Nov. 1739. #",False,True
+GRAY_1_1575,E-115: Mr,614.0,1739.0,,"E-115: Mr. Edward Washington of Pr. William Co. 614 A. in Pr. William Co. adj.
+James Waring now Jeffry Johnson, John Toward, Thomas Jackman, on Pignut Ridge,
+Peter Byram, Waugh Darnell. Surv. by Mr. John Warner. 12 Dec. 1739. #",False,True
+GRAY_1_1576,E-117: Mr,1010.0,1739.0,,"E-117: Mr. Edward Washington of Pr. William Co. 1010 A. in Pr. William Co. at
+Rappahanock Mt. in the Thorough-fare of Cedar Run adj. John Hudnall, Jeffry
+Johnson, John Toward, Rev. Mr. Alexander Scot, Walter Anderson. Surv. by Mr.
+John Warner. 12 Dec. 1739. #",False,True
+GRAY_1_1577,E-119: Mr,470.0,1739.0,,"E-119: Mr. John Graham of Pr. William Co. Merchant 470 A. in Pr. William. Co. on
+Goose Cr. adj. Jacob Laswell, William Matthew?, Beaver Dam Br., near Woods
+corner. Surv. by Mr. Jonn Grant. 17 Dec. 1739. #",False,True
+GRAY_1_1579,E-123: John Allen,796.0,1718.0,,"E-123: John Allen of Pr. William Co. Gent. 796 A. of 1490 A. granted his father
+William Allen 7 Feb. 1718/9. Surv. by Mr. John Warner. In Pr. William Co. on
+Marsh Run adj. William Page, Philip Ludwell Esq., Brown's Run. 19 Dec. 1739. #",False,True
+GRAY_1_1582,E-127: Maj,316.0,1739.0,,"E-127: Maj. John Colvill of Pr. William Co. 316 A. in Pr. William Co. adj. his
+land formerly John Grant's, John Lewis. Surv. by Mr. John Warrant. On Piney
+Br. of Difficult Run. 31 Jan. 1739.",False,True
+GRAY_1_1583,E-128: Maj,285.0,1739.0,,"E-128: Maj. John Colvill of Pr. William Co. 285 A. in Pr. William Co. on
+Difficult Run adj. John Lewis, William Gunnel, Rodham Neal, Grant's now
+Colvill's land, William Norris. Surv. by Mr. John Warner. 1 Feb. 1739. #",False,True
+GRAY_1_1584,E-129: Mr,538.0,1739.0,,"E-129: Mr. Lovell Jackson of Pr. William Co. 538 A. in Pr. William Co. on Goose
+Cr. Surv. by Mr. John Awbrey. 2 Feb. 1739. #",False,True
+GRAY_1_1585,E-131: Maj,1246.0,1739.0,,"E-131: Maj. John Colvill of Pr. William Co. 1246 A. on Lubber's Br. of Four
+Mile Run adj. land Colvill bought of Gabriel Adams, James Robertson, the late
+Rev. Mr. Brechin, corner to Gunnel, James Going, Simon Pearson, Robert Bates.
+Surv. by Mr. John Warner. 4 Feb. 1739. #",False,True
+GRAY_1_1586,E-133: Rev,296.0,1739.0,,"E-133: Rev. Dr. Charles Green of Pr. William Co. 296 A. in Pr. William Co. on
+Brs. of Morumsco adj. Robert Church, Capt. Martin Scarlet, Moses Linton. Surv.
+by Mr. John Warner. 23 Oct. 1739 #",False,True
+GRAY_1_1591,Neck Adj. Samuel Kent,,1739.0,,"Neck adj. Samuel Kent, Col. Mason, land of Shelton & Lynton, Leonard Barker.
+Surv. by Mr. John Warner. 15 Feb. 1739. #
+Rout, Robert Bryan, said John & Moses Oldham. 11 Mar. 1739. #",False,True
+GRAY_1_1592,E-142: Charles Carter Esq,1997.0,1739.0,,"E-142: Charles Carter Esq. of K. George Co. obtained promise of Deed from his
+Father Col. Carter, Agt., who died before Deed issued. Plat 4 Feb. 1731/2.
+Surv. by Mr. John Warner. Grant to Carter for 1997 A. in K. George Co. adj. Mr.
+John Waugh, Mr. James Innis, Wilkinson's line, Catlet's line, Vicary's Patent
+now Col. Todd's, Clayburn's Run. 11 Mar. 1739. #",False,True
+GRAY_1_1593,E-143: Mr,522.0,1739.0,,"E-143: Mr. Josiah Clapham of Pr. William Co. 522 A. in Pr. William Co. above
+Goose Cr. Surv. by Mr. John Awbrey. Adj. George Slater, Patrick Lynch, Amos
+Sinclair, Capt. Francis Awbrey. 18 Mar. 1739. #",False,True
+GRAY_1_1594,E-145: Rev,1497.0,1740.0,,"E-145: Rev. Dr. Charles Green of Pr. William Co. 1497 A. called Peggy's Green
+in Pr. William Co. on Broad Run of Potomack adj. Mr. Andrew Russel, land of Mr.
+Catesby Cocke but surveyed for Mr. John Middleton, Goose Cr. Surv. by Mr. John
+Awbrey. 2 Apr. 1740. #",False,True
+GRAY_1_1595,E-146: William West,495.0,1740.0,,"E-146: William West of Pr. William Co. 495 A. in Pr. William Co. Surv. by Mr.
+John Awbrey. Adj. William Hall, Piney Br. of Broad Run, Mr. Cocke, Capt.
+Carter. 3 Apr. 1740. #",False,True
+GRAY_1_1596,E-147: William West,284.0,1740.0,,"E-147: William West of Pr. William Co. 284 A. in Pr. William Co. Surv. by Mr.
+John Awbrey. Adj. Beaver Dam Fork of Goose Cr., Godfrey's land, Lovelle
+Jackson. 4 Apr. 1740. #",False,True
+GRAY_1_1597,E-149: Samuel Moon,60.0,1740.0,,"E-149: Samuel Moon of King George Co. 60 A. in King George Co. below Muddy Cr.
+adj. land Moon purchased of Francis Strother, on Rappahanock R., Mott's Patent.
+Surv. by Mr. John Warner. 4 Apr. 1740. #",False,True
+GRAY_1_1598,E-150: Mr,196.0,1740.0,,"E-150: Mr. George Byrn of Pr. William Co. 196 A. in Pr. William Co. Surv. by
+Mr. James Thomas the Younger. Adj. Powell's Run, Heirs of William Browne dec'd,
+William Bland, Leonard Barker. 5 Apr. 1740. #",False,True
+GRAY_1_1601,E-154: Thomas Owsley,1449.0,1740.0,,"E-154: Thomas Owsley of Pr. William Co. 1449 A. in Pr. William Co. adj. Col.
+Carter, William Hall, Mr. Mercer, Little River Br. of Goose Cr., Bull Run Mts.,
+Hunger Run. Surv. by Mr. John Awbrey. 14 May 1740. #",False,True
+GRAY_1_1603,E-157: William Baylis,246.0,1720.0,,"E-157: William Baylis of Pr. William Co. 246 A. in Pr. William Co. on Brs. of
+Neapsco Run adj. John Tayloe Esq., John Wallis, William Fickel. Surv. by Mr.
+James Thomas Sr. Main Br. of Little Cr., Jane Wallis. 23 May 1720. #",False,True
+GRAY_1_1604,E-159: Thomas Fairfax Gent,1390.0,1740.0,,"E-159: Thomas Fairfax Gent. son of William Fairfax of King George Co. 1390 A.
+in Pr. William Co. between Carter's Run & Watry Mt. and on Rappahanock Run.
+Surv. by Mr. James Thomas. Adj. Mr. John Payne, Michael Meldram, Thomas
+Jackman, Walter Anderson, Thomas Colson, Wm. Fairfax Esq. July 1740. #
+8 July 1740. #",False,True
+GRAY_1_1605,E-162: Thomas Davies,133.0,1740.0,,"E-162: Thomas Davies of Pr. William Co. 133 A. in Pr. William Co. on Brs. of
+Bull Run adj. Richard Melton, Nathaniel Harris, George Reeves, Howsen Hooe,
+William Davis. Surv. by Mr. John Warner. 11 July 1740. #",False,True
+GRAY_1_1606,E-163: Thomas Davies,257.0,1740.0,,"E-163: Thomas Davies of Pr. William Co. 257 A. in Pr. William Co. on Bull Run
+adj. Col. Carter, Thomas Osborn, William Davis, John Creel, Nathaniel Russel,
+Maj. Champe. Surv. by Mr. John Warner. 11 July 1740. #",False,True
+GRAY_1_1607,E-164: Rev,1085.0,1740.0,,"E-164: Rev. Dr. Charles Green & Cap. Jeremiah Bronaugh both of Pr. William Co.
+1085 A. in Pr. William Co. on Beaver Dam Fork of Goose Cr. and Wancapin Br.
+Surv. by Mr. John Awbrey. 22 July 1740. #",False,True
+GRAY_1_1608,E-165: Mr,325.0,1740.0,,"E-165: Mr. Robert Coleclough of Stafford Co. 325 A. in Pr. Wm Co. on Walnut
+Cabbin Br. and Piney Br. of Bull Run, adj. Col. Carter, Rachel Coleclough wid.
+24 July 1740. #",False,True
+GRAY_1_1609,E-166: Thomas Johns Late From Pensylvania But Now,502.0,1740.0,,"E-166: Thomas Johns late from Pensylvania but now of Pr. William Co. 502 A.
+adj. John Mead, Kitocktan Cr., Col. John Colvill, Jacob Janney, Messrs Cocke &
+Mercer. Surv. by Mr. John Awbrey. 31 July 1740. # (Above land included by
+Cocke & Mercer & Deed never issued.)",False,True
+GRAY_1_1611,E-169: Henry Norman,390.0,1740.0,,"E-169: Henry Norman of Pr. William Co. 390 A. in Pr. William Co. on Piney Br.
+of Bull Run and Walnut pit Br. or Trap Br. adj. George Adams, Col. Carter, John
+Ralls, John Owens. Surv. by Mr. John Warner. 17 Sept. 1740. #",False,True
+GRAY_1_1612,E-170: George Foster,416.0,1740.0,,"E-170: George Foster of Pr. William Co. 416 A. in Pr. William Co. on Broad Run
+of Potomack adj. Mr. Will'm Diggs now Mr. Cocke's, Henry Norman. Surv. by Mr.
+James Thomas the Younger. 18 Sept. 1740. #",False,True
+GRAY_1_1613,E-172: Capt,1719.0,1740.0,,"E-172: Capt. Willoughby Newton of Westmoreland Co. 1719 A. in Pr. William Co.
+on Great Rocky Cedar Run of Occoquan. Surv. by Mr. James Thomas the Elder.
+Adj. George Eskridge, Francis Awbrey, Henry Netherton, Maj. Geo. Turberville,
+George Walker, James Thomas, William Lynton. 18 Sept. 1740. #",False,True
+GRAY_1_1614,E-173: Capt,1049.0,1740.0,,"E-173: Capt. Willoughby Newton of Westmoreland Co. 1049 A. in Pr. William Co.
+on Brs. of Goose Cr. and Bull Run adj. Mr. Mercer's Tract of 963 A. surveyed for
+Maurice Veal. Surv. by Mr. John Warner. On Barton's Br., Samuel Crumpton, Maj.
+Dennis McCarty, Br. of Hunger Run. 19 Sept. 1740.",False,True
+GRAY_1_1616,E-176: Mr,49.0,1740.0,,"E-176: Mr. Richard Bryant of King George Co. 49 A. in King George Co. Surv. by
+Mr. John Grant. Adj. Mr. Thomas Monteith, said Bryant's land, David Anderson,
+William Grigsby. 22 Oct. 1740 #",False,True
+GRAY_1_1617,E-177: Mr,3400.0,1740.0,,"E-177: Mr. Bryan Fairfax son of William Fairfax of King George Co. Esq. 3400 A.
+called Deerfield in Pr. William Co. Surv. by Mr. Thomas Davies. Adj. Maj.
+McCarty, Nankoping or Racoon Br., Goose Cr., Cha: Sample, Rev. Dr. Green, Mr.
+Rawleigh Chinn, on Hunger Run. 1 Nov. 1740. #",False,True
+GRAY_1_1618,E-178: Mr,3000.0,1740.0,,"E-178: Mr. Gedney Clarke of Barbados Merch't [but intending to settle the same]
+3000 A. in Pr. William Co. on Goose Cr. Surv. by Amos Janney. Adj. John Mead,
+Will'm Fairfax Esq., Thomas Gregg, Thomas Janney. 3 Nov. 1740. # before p. 25.",False,True
+GRAY_1_1620,E-182: Col,1429.0,1740.0,,"E-182: Col. John Colvill of Pr. William Co. 1429 A. on Brs. of Accotinck,
+Wolftrap, Pimmets Run and Scot's Run. Surv. by Mr. John Warner. Adj. Emms now
+Colvill's land, Capt. Broadwater, William Scutt, Stephen Lewis, Path from Edward
+Emms to Patrick Dunkins, Samuel Wilson, John Lewis, Mr. Scott. 6 Nov. 1740. #",False,True
+GRAY_1_1624,E-187: Samuel Conner & John Melton,393.0,1740.0,,"E-187: Samuel Conner & John Melton of Pr. William Co. 393 A. in Pr. Wm. Co. on
+falling Brs. of Pohick Run adj. Col. Fitzhugh, Simon Connell, John Roberts.
+Surv. by Mr. John Warner. Adj. Edward Doyle, Br. of Accotink. 14 Nov. 1740. #",False,True
+GRAY_1_1626,E-189: Mr,1748.0,1740.0,,"E-189: Mr. John Clarke of Salem in New England Merchant but proposing to settle
+in Pr. William Co. on Goose Cr. Surv. by Mr. John Warner. 1748 A. adj. land of
+Fishback, Jacob Holtzclaw, Maj. James Ball, Brs. of Crummys Run, Dr. Thornton.
+15 Nov. 1740. #",False,True
+GRAY_1_1629,E-192: Mr,418.0,1740.0,,"E-192: Mr. Daniel Tebbs of Westmoreland Co. 418 A. in Pr. William Co. on Broad
+Run of Occoquan. Surv. by Mr. James Thomas the Younger. Adj. Thomas Atwell,
+Thomas Hogan, Mr. Burges, Brenttown Tract. 17 Nov. 1740. #",False,True
+GRAY_1_1630,E-194: John Siers,639.0,1740.0,,"E-194: John Siers of Pr. William Co. 639 A. in Pr. William Co. on Br. of Broad
+Run of Occoquan called Fornicating Br. Surv. by Mr. James Thomas the Younger.
+Adj. Valentine Barton. 18 Nov. 1740. #",False,True
+GRAY_1_1631,E-195: Thomas Barton,491.0,1740.0,,"E-195: Thomas Barton 491 A. in Pr. William Co. Surv. by Mr. James Thomas the
+Younger. Adj. George Rogers, Br. of Hunger Run, Joseph Gibson, John Glascock.
+18 Nov. 1740. #",False,True
+GRAY_1_1632,E-196: George Rogers,227.0,1740.0,,"E-196: George Rogers of Pr. William Co. 227 A. in Pr. William Co. on Br. of
+Broad Run of Occoquan Surv. by Mr. James Thomas the Younger. Adj. Valentine
+Barton, John Siers, Thomas Barton, Bradley Garner. 18 Nov. 1740. #",False,True
+GRAY_1_1633,E-198: Mr,1700.0,1732.0,,"E-198: Mr. Harry Turner of King George Co. 1700 A. in Pr. William Co. near N.
+Cobbler Mt. adj. Maj. James Ball, Manor of Leeds. Bounded by survey made in
+1732 by Mr. John Warner for Charles Taylor dec'd. Adj. John Blowers now Mr.
+Mercer's, Br. of Goose Cr. 18 Nov. 1740.",False,True
+GRAY_1_1635,E-202: Messrs,406.0,1740.0,,"E-202: Messrs. John Grant & John Crump of Pr. William Co. 406 A. in Hamilton
+Par. on Marsh Run adj. survey made by Capt. Joseph Berry, Crump's land, Col.
+Ludwell, Robert's Road, John Edy, Br. of Summerduck Run, Thomas Hudnall, Capt.
+Skinker. 21 Nov. 1740. #",False,True
+GRAY_1_1636,E-203: Thomas Jackman,419.0,1740.0,,"E-203: Thomas Jackman of Pr. Wm. Co. 419 A. in Pr. William Co. Surv. by James
+Thomas Jr. Adj. Michael Meldrum, Carter's Run. 22 Nov. 1740. #",False,True
+GRAY_1_1637,E-204: Robert Elliston,484.0,1740.0,,"E-204: Robert Elliston of K Geo. Co. 484 A. in Pr. William Co. Surv. by Mr.
+James Thomas the Younger. On Rocky Run adj. Giles Traverse, John Courtney, Col.
+Charles Carter, William Brooks, Cool Spring Br. 22 Nov. 1740",False,True
+GRAY_1_1638,E-205: Thomas Fairfax Gent,2255.0,1740.0,,"E-205: Thomas Fairfax Gent, son of William Fairfax of King George Co. Esq. 2255
+A. at Rappahanock Mt. in Pr. William Co. on Cedar Run near the Thoroughfare,
+adj. Jeffry Johnson, line of Hudnall, John Toward dec'd, Mr. Scott, Walter
+Anderson, Carter's Run. Resurv. by Mr. James Thomas the Younger. 22 Nov. 1740.",False,True
+GRAY_1_1641,E-208: Mr,12.0,1740.0,,"E-208: Mr. Daniel Jenings of Westmoreland Co. 12 A. in Pr. William Co. below
+Falls of Potomacck R. between Col. George Mason & Capt. Simon Pearson. Survey
+Mr. James Thomas the Younger. 25 Nov. 1740. #",False,True
+GRAY_1_1644,E-212: Thomas Staunton(stanton),160.0,1740.0,,"E-212: Thomas Staunton(Stanton) of Orange Co. 160 A. in Pr. William Co. Surv.
+by Mr. James Thomas the Younger. Adj. Rappahanock R., land of Robert Duncan now
+Howsen Kenner, Summerduck Run, Field's Rd., James Hackley, Edward Twentyman,
+opposite Stanton's Island. 3 Dec. 1740. #",False,True
+GRAY_1_1651,E-224: Patrick Hamrick,118.0,1740.0,,"E-224: Patrick Hamrick of King George Co. 118 A. in Pr. William Co. Surv. by
+Mr. dames Thomas the Younger. Adj. William Davis, Winters middle Br., Cruppers
+Cabbin Br., Br. of Buckhall, Richard Melton, Edward Graham, Roger Day(now
+claimed by Hamrick), George Eaves, Thomas Davis. 10 Dec. 1740. #",False,True
+GRAY_1_1658,E-233: Mr,1114.0,1740.0,,"E-233: Mr. Will'm Hy. Fairfax son of William Fairfax Esq. 1114 A. in Pr. Wm.
+Co. surveyed for Cornelius Ellinger but found Erroneous. Resurv. by Mr. John
+Awbrey. Adj. Maj. Colvill, near Read's Br. of Kittocktan, Mead & Janneys land,
+Corner to Coleman & Critcher, Linestone Run, Bowell's land. 17 Dec. 1740. #",False,True
+GRAY_1_1661,E-236: Daniel Thomas & Hugh Thomas,667.0,1740.0,,"E-236: Daniel Thomas & Hugh Thomas of Williamoreland[sic] Co. 667 A. in Pr. Wm.
+Co. on Bull Run & Pope's head Run. Surv. by Mr. James Thomas the Younger. Adj.
+Peter Smith, Warnsford Arrington dec'd, Richart Kirtling Jr., Francis Beaver,
+Mr. Hancock Lee dec'd, land of James Smith & William Kirtling. 23 Jan. 1740. #",False,True
+GRAY_1_1666,E-244: George Dunbar,501.0,1741.0,,"E-244: George Dunbar of Westmoreland Co. 501 A. in Pr. William Co. on Pope's
+head Run of Bull Run Surv. by Mr. James Thomas. Adj. George Walker, land
+formerly one Conyer's. 13 Apr. 1741. #",False,True
+GRAY_1_1667,E-246: James Hackley,126.0,1741.0,,"E-246: James Hackley of King George Co. 126 A. in Pr. Wm. Co. on Summerduck Run.
+Surv. by Mr. James Thomas Jr. Adj. Col. Carter's Red Oak Tract, Hackley's land,
+John Eady. 18 Apr. 1741. #",False,True
+GRAY_1_1668,E~247: William Davis,200.0,1728.0,,"E~247: William Davis of Pr. William Co. set forth surplus in survey for him by
+Mr. James Thomas. Deed granted for only 200 A. 4 Mar. 1728/9. Resurv. by Mr.
+Thomas Davis 633 A. Adj. Winters lower Br. Crupper's Cabbin Br. Melton's corner,
+Howsen Hoe, Davys land. 11 May 1741. #",False,True
+GRAY_1_1670,E-250: Peter Rust,154.0,1741.0,,"E-250: Peter Rust of Westmoreland Co. 154 A. in Pr. William Co. on Piney Br. of
+Popes head Run. Surv. by Mr. James Thomas the Younger. Adj. George Walker,
+Rev. Mr. Lawrance Debutts, Geroge Dunbar. 15 May 1741. #",False,True
+GRAY_1_1672,E-252: Mr,380.0,1741.0,,"E-252: Mr. Thomas Dent of Stafford Co. 380 A. in Pr. William Co. adj. Col.
+Carter, Godfrey Ridge, Charles Taylor, South Run Mts, Blackley's Mt. Surv. by
+Mr. John Grant. 16 May 1741. #",False,True
+GRAY_1_1676,E-258: Capt,593.0,1741.0,,"E-258: Capt. John Middleton late of Maryland but now of Pr. William Co. 593 A.
+between Litttle R. of Goose Cr. and line of Col. Carter, Thomas Owsley. Surv.
+Mr. John Awbrey. 8 June 1741. #",False,True
+GRAY_1_1677,E-259: Rachel Colclough,447.0,1741.0,,"E-259: Rachel Colclough of Stafford Co. wid. 447 A. in Pr. William Co. on Brs.
+of Bull Run & Broad Run of Potomack, adj. Col. Carter, John Ralls. Surv. by Mr.
+James Thomas the Younger. 9 June 1741. #",False,True
+GRAY_1_1678,E-260: John Ralls,533.0,1741.0,,"E-260: John Ralls of Caroline Co. 533 A. in Pr. William Co. on Piney Br. of
+Bull Run and Walnut Pit alias Trap Br. adj. George Adams, Col. Carter. Surv. by
+Mr. John Warner. On Cedar Br. of Bull Run. 10 June 1741. #",False,True
+GRAY_1_1679,E-263: Richard Mcgraw,296.0,1741.0,,"E-263: Richard McGraw of King George Co. 296 A. in Pr. William Co. Surv. by
+Mr. dames Thomas the Younger. Adj. John Youngs now Francis Wright, Mr. John
+Diskins, Walnut Cabbin Br. of Bull Run. 10 June 1741. #",False,True
+GRAY_1_1683,E-268: Rev,600.0,1741.0,,"E-268: Rev. Dr. Charles Green of Pr. William Co. 600 A. in Pr. William Co. on
+Br. of Cedar Run of Quantico. Surv. by Mr. George Byrnes. Adj. Henry Halley
+dec'd, Philemon Waters the Elder, Mr. Threlkeld, Philemon Waters the Younger,
+John McMillan, Philemon Br. 12 June 1741. #",False,True
+GRAY_1_1684,E-269: Miss Ann Fairfax Dau,1840.0,1741.0,,"E-269: Miss Ann Fairfax dau. of William Fairfax Esq. of King George Co. 1840 A.
+in Pr. William Co. on Elk Licking Run of Cub Run. Surv. by Mr. William West.
+Adj. Mr. Nimrod Hott, Col. Eskridge, Col. Henry Lee, Mr. John Diskins, Richard
+Brentt now Williams's land. 12 June 1741.",False,True
+GRAY_1_1685,E-270: Leonard Courtney,100.0,1741.0,,"E-270: Leonard Courtney of Westmoreland Co. 100 A. on Deep Run in Pr. William
+Co. adj. Robert Gollop, George James. Surv. by Mr. John Savage. 13 June 1741. #",False,True
+GRAY_1_1686,E-271: Col,364.0,1741.0,,"E-271: Col. Thomas Turner of King George Co. 364 A. in Pr. William Co. on Deep
+Run adj. George James, Leonard Courtney. Surv. by Mr. John Savage. 15 June
+1741.",False,True
+GRAY_1_1687,E-272: Col,364.0,1741.0,,"E-272: Col. William Beverley of Essex Co. 364 A. in Pr. William Co. on Deep
+Run. Surv. by Mr. John Savage. Adj. Capt. William Strother, William Brook,
+Robert Elliston, John Courtney, Mr. Howsen Kenner, Capt. Skinker, George James,
+Leonard Courtney, Col. Turner. 15 June 1741. #",False,True
+GRAY_1_1688,E-274: Mr,524.0,1741.0,,"E-274: Mr. William Walker of Stafford Co. 524 A. in Pr. William Co. adj. Mr.
+Burgess Challin, John Fishback, on Goose Cr. and Hunger Run towards the Bull Run
+Mts. Surv. by Mr. John Warner. Adj. Jacob Holtzclaw. 16 June 1741. #",False,True
+GRAY_1_1689,E-275: Dr,530.0,1741.0,,"E-275: Dr. William Scott of Stafford Co. 530 A. in Pr. William Co. adj. Mr.
+Burgess Challin, John Fishback, on Goose Cr. & Hunger Run. Surv. by Mr. John
+Warner. Adj. Jacob Holtzclaw. 16 June 1741.",False,True
+GRAY_1_1690,E-276: Mr,465.0,1741.0,,"E-276: Mr. John Short of Stafford Co. 465 A. in Pr. William Co. adj. Mr. Walker,
+Dr. Scott, on Goose Cr. and Hunger Run. Surv. Mr. John Warner. 16 June 1741. #",False,True
+GRAY_1_1691,E-277: Miss Ann Fairfax Dau,1400.0,1741.0,,"E-277: Miss Ann Fairfax dau. of William Fairfax Esq. of King George Co. 1400 A.
+in Pr. Wm. Co. on Bull Run & Patomack R. Surv. by Mr. William West. Adj. John
+Ralls, Rachael Colclough wid., Walnut Br., Col. Carter's Bull Run Tract, John
+Young or Francis Wright, Rich'd McGraw, on the Mt. Road, Mr. John Diskins,
+Daniel Diskins, Daniel & Hugh Thomas, Thomas Asbury, Andrew Russell, Capt. John
+Elliot, Mr. Catesby Cocke. 16 June 1741.",False,True
+GRAY_1_1694,E-281: Mr,236.0,1741.0,,"E-281: Mr. Bryan Fairfax son of William Fairfax Esq. of Pr. William Co. 236 A.
+im Pr William Co. Surv. by Mr. Wm. West. On Hunger Run of Goose Cr., adj.
+Bryan Fairfax's other land, Mr. Rawleigh Chinn, William Stamp. 18 June 1741.",False,True
+GRAY_1_1696,E-283 William Brown,105.0,1723.0,,"E-283 William Brown of Westmoreland Co. 105 A. in Washington Par. Bound by
+survey made for John Binks 27 Feb. 1723 who left to Brown the Survivor by
+Agreement. Adj. John & William Brown's corner, Peter Bashaw, line of Jett now
+Anthony Paton, Windsor's now Steel's corner, Nanjaitico Path. 19 June 1741.",False,True
+GRAY_1_1697,E-284: Brian Obanion,197.0,1741.0,,"E-284: Brian Obanion of King George Co. 197 A. in Pr. William Co. adj. his own
+land near Pignutt Ridge, Capt. William Russell. Surv. by Mr. John Warner. On
+Broad Run. 19 June 1741. #",False,True
+GRAY_1_1701,E-290: William Tassy & John Tassy,1157.0,1741.0,,"E-290: William Tassy & John Tassy of Pr. William Co. 1157 A. in Pr. Wm. Co.
+adj. Capt. John Middleton, Thomas Owsley, Col. Carter, land of Dr. Green late
+Compton's, on Little R. of Goose Cr. Surv. by Mr. John Awbrey. 23 June 1741. #",False,True
+GRAY_1_1703,E-292: Mr,186.0,1741.0,,"E-292: Mr. John Peyton of Stafford Co. 186 A. in Pr. William Co. adj. Rev. Mr.
+Lawrence Debutts, John Flitter, Mr. Mercer. Surv. by Mr. John Warner. Adj.
+Peyton's land, Br. of Cedar Run, John Blowers. 25 June 1741. #",False,True
+GRAY_1_1704,E-294: John Wainwright,122.0,1741.0,,"E-294: John Wainwright of Stafford Co. 122 A. in Pr. William Co. on Elk Run.,
+Surv. by Mr. James Thomas the Younger. Adj. Ralph Hughs, Wainwright's former
+land. 25 June 1741. #",False,True
+GRAY_1_1708,E-299:; Rev,300.0,1736.0,,"E-299:; Rev. Dr. Charles Green of Pr. William Co. stated there are about 300 A.
+London Mariner many years ago. Rankins or any person in his name or behalf
+never seated Tract called Rankin's Point between Pohick or Accotink & Doggs Run
+in Pr. Wm. Co. In 1736 Notice was given that land was Escheatable. Grant for
+320 A. to Rev. Dr. Green. Surv. by Mr. John Warner in presence of Mr. Hugh
+West, Thomas Owsley, Mr. Zephaniah Wade, Mr. John Manley, William Berkley &
+Charles Griffin all inhabitants of the neighborhood. On Potomack R. 1 July
+1741. #",False,True
+GRAY_1_1709,E-300: Rev,60.0,1737.0,,"E-300: Rev. Dr. Charles Green of Pr. Wm. Co. suggested 60 A. in Pr. Wm. Co.
+belonging to Ann Harwood dau. & Heir of William Harwood who purchased of Thomas
+Wallin, did Escheat as Ann died without Heirs. Advertisement under hand of Mr.
+Catesby Cocke Clk of said Co. in March, April & May of 1737. Escheat Grant to
+Green, Surv. by Mr. George Byrn. On Neabisco Cr., adj. Heirs of Charles
+Taylor, Capt. Catesby Cocke, Heirs of Mr. Thomas Osborne dec'd. 2 Nov. 1741. #",False,True
+GRAY_1_1714,E-308: John Jackson,576.0,1741.0,,"E-308: John Jackson of Stafford Co. 14 Dec. 1715 obtained 576 A. on Great Run
+of Rappahanock R. in Richmond Co. adj. Mr. James Withers. Surv. by Mr. Thomas
+Hooper. Deed lost by fire. Francis Jackson only son & Heir of John asked new
+Deed in names of Francis & Thomas Jordan his Bro.-in-Law. Resurv. by Capt.
+Joseph Berry. Adj. James Withers. 524 A. now in Pr. William Co. 11 Aug. 1741.",False,True
+GRAY_1_1721,E-319: Nathaniel Brown,303.0,1741.0,,"E-319: Nathaniel Brown of Westmoreland Co. 303 A. in Pr. William Co. on Goose
+Cr. adj. James Wiatt, Amos Janney & Joseph Garret, Jeffry's Br., Francis
+Triplet. Surv. by Mr. John Awbrey. 2 Sept. 1741. #",False,True
+GRAY_1_1723,E-322: William Fryer The Younger,61.0,1741.0,,"E-322: William Fryer the Younger of Westmoreland Co. 61 A. in Nominy Forest.
+Surv. by Elias Davis. Adj. George Brown, Elias Morris dec'd, Richard Sutton the
+Elder, Coss Coss Cr., Thomas Browning, Andrew Hutchinson, Rappahanock Cr.,
+Daniel Jackson, William Fryer. 3 Sept. 1741. #",False,True
+GRAY_1_1726,E-327: Charles Morgan The Elder,392.0,1741.0,,"E-327: Charles Morgan the Elder 392 A. in Pr. William Co. on Great Run of
+Rappahannock. Surv. by Mr. John Grant. Adj. Col. Corbin, Maj. Murdock,
+Morgan's old land, Thomas Welch. 4 Sept. 1741. #",False,True
+GRAY_1_1732,E-335: Mr,377.0,1741.0,,"E-335: Mr. Timothy Thornton of Lancaster Co. 377 A. in Pr. William Co. adj.
+Col. Carter, Mr. Thomas Thornton, Dr. Thomas Thornton, Mathew Moss. Surv. by
+Mr. John Warner. 8 Sept. 1741. #",False,True
+GRAY_1_1735,E-339: John Lasswell,465.0,1741.0,,"E-339: John Lasswell 465 A. in Pr. William Co. on Goose Cr. above Blew Ridge
+Rd.  Resurv. by Mr. Amos Janney, first surv. by Mr. John Awbrey was erroneous.
+17 Sept. 1741. #",False,True
+GRAY_1_1739,E-346: William Aylett,1590.0,1741.0,,"E-346: William Aylett of Westmoreland Co. Gent. 1590 A. in Pr. William Co. on
+Hunger Run. Surv. by Mr. Thomas Davies. Adj. Mr. Bryan Fairfax, Racoon Br.,
+Chinn's corner. 19 Oct. 1741. #",False,True
+GRAY_1_1740,E-347: William Aylett,609.0,1741.0,,"E-347: William Aylett of Westmoreland Co. Gent. 609 A. in Pr. William Co. on
+Racoon Br. of Goose Cr. adj. Mr. Bryan Fairfax, Maj. McCarty, Charles Sample.
+Surv. by Mr. Thomas Davies. 19 Oct. 1741. #",False,True
+GRAY_1_1741,E-348: William Aylett,200.0,1741.0,,"E-348: William Aylett of Westmoreland Co. Gent. 200 A. in Pr. William Co. on
+Goose Cr. Surv. by Capt. Joseph Berry. 19 Oct. 1741. #",False,True
+GRAY_1_1746,E-355: Maj,2628.0,1741.0,,"E-355: Maj. Richard Blackburn of Pr. William Co. 2628 A. on Beaver Dam Br. of
+Goose Cr. Surv. by Mr. Thomas Davies but included in bounds of Surv. made for
+Thomas Gregg of 200 A. Adj. Jeremiah Bronaugh, Amos Janney, on Buckhorn Br. 23
+Oct. 1741.",False,True
+GRAY_1_1756,E-368: William Spiller,116.0,1725.0,,"E-368: William Spiller of Stafford Co. now Pr. William Co. has Patent for 116
+A. on Main Run of Occoquan R. & Long Cabbin Br. Feb. 1725. Surv. erroneous.
+Spiller returned original Grant and desires his son Warrington Spiller to have
+said land in Deed with 217 A. adjoining waste land. 333 A. Grant to Warrington
+Spiller. Surv. by Mr. John Warner. Adj. Samuel Dishman, Maurice Bevan, John
+Florence, William Spiller, Mr. George Byrn, Francis Jackson. 23 Nov. 1741. #",False,True
+GRAY_1_1758,E-371: Richard Fristow The Elder,121.0,1741.0,,"E-371: Richard Fristow the Elder of Stafford Co. 121 A. in Pr. William Co. on
+Main Run of Chappawamsick, adj. Capt. William Brent, Robert Hedges. Surv. by
+Mr. John Warner. 24 Nov. 1741. #",False,True
+GRAY_1_1763,,,1741.0,,"E-378: Richard Brown late of Pensilvania 630 Po. in Pr. William Co. on Brs. of
+Kitocktan. Surv. by Mr. Amos Janney. Adj. John Crutcher, George Atwood, Amos
+Janney. 27 Nov. 1741. #",True,True
+GRAY_1_1764,E-379: Richard Brown,600.0,1741.0,,"E-379: Richard Brown of Pensilvania 600 A. in Pr. William Co. on Kitocktan Cr.,
+adj. Samuel Maxbury, line Capt. Cocks surv'd for Patrick Lynch. Surv. by Mr.
+Amos Janney. 27 Nov. 1741. #",False,True
+GRAY_1_1765,E-380: Richard Brown,505.0,1741.0,,"E-380: Richard Brown of Pensilvania 505 A. in Pr. William Co. on Goose Cr.
+Surv. by Mr. Amos Janney. Adj. John Laswell, Mattox Fork of Goose Cr. 27 Nov.
+1741. #",False,True
+GRAY_1_1766,On Goose Cr.,,1741.0,,"on Goose Cr., on Racoon Br. adj. Maj. Dennis McCarty, Capt. William Aylett.
+Surv. by Mr. Thomas Davies for James Drummond who refused Deed. 28 Nov. 1741.
+Fairfax Esq. 28 Nov. 1741. #",False,True
+GRAY_1_1767,E-383: William Cox Late,676.0,1741.0,,"E-383: William Cox late of Pensilvania but now of Va. 676 A. in Pr. William Co.
+Surv. by Mr. Amos Janney. Adj. Beaver Dam Run of Goose Cr., Blew Ridge Path to
+house where Benjamin Stinnet dwells and belonging to my Manor of Leeds. 28 Nov.
+1741.",False,True
+GRAY_1_1768,E-384: Francis Wilks Late,250.0,1741.0,,"E-384: Francis Wilks late of Pensilvania 250 A. in Pr. Wm. Co. adj. Goose Cr.,
+Mr. George Atwood, Joseph Janney. Surv. by Mr. Amos Janney. 30 Nov. 1741. #",False,True
+GRAY_1_1777,E-395: Capt,333.0,1711.0,,"E-395: Capt. Samuel Skinker of King George Co. land joining 2 tracts containing
+333 A. granted William Page 29 Aug 1711 who sold to Skinker, and 82 A. of Deed
+granted John Hopper who gave to his son-in-law Thomas Duncan who sold to
+Skinker. Deed for whole 545 A. to Skinker in Pr. William Co. on Marsh Run.
+Surv. by Mr. James Thomas the Younger. Adj. Capt. John Allen. 12 Jan. 1741.",False,True
+GRAY_1_1779,E-398: Nathaniel Brown,303.0,1741.0,,"E-398: Nathaniel Brown of Pr. William Co. 303 A. in Pr. William Co. Surv. by
+Mr. John Awbrey. On Goose Cr. adj. James Wiatt, Amos Janney, Joseph Garret, on
+Jeffry Br., Francis Triplet. 19 Jan. 1741. ""Entered fol. 319 by mistake here
+entered.""",False,True
+GRAY_1_1780,E-399: Mr,780.0,1730.0,,"E-399: Mr. John Savage of Stafford Co. obtained 780 A on Elk Run 3 Jan. 1730
+and conveyed 580 A. to Mr. Benjamin Bullet of Pr. William Co. 25 Mar. 1739.
+Wrnt. to Bullet to surv. adj. land bought of Savage, Mr. Thomas Hooper, on Brent
+Town Run, Champ's Run, and extra in bounds of Deeds from Savage. Deed for whole
+1015 A. (435 A. surplus) to Bullet. Surv. by Mr. John Warner. Adj. John
+Johnson, land Savage sold Mr. Dodd now Willard McGraw's. 14 Jan. 1741. #",False,True
+GRAY_1_1785,E-406: Gabriel Adams,112.0,1741.0,,"E-406: Gabriel Adams of Pr. Wm. Co. 112 A. on Holmes's Run adj. his own land,
+West, Pearson & Harrison's land. Surv. by Mr. John Warner. 20 Jan. 1741. #",False,True
+GRAY_1_1793,E-416: Mr,570.0,1725.0,,"E-416: Mr. Cuthbert Harrison m. wid. of Capt. Thomas Osborn of Pr. William Co.
+dec'd who purchased of Richard Tidwell remainder of land Tidwell had sold to
+Todd. Tidwell & Todd sold John Holmes for 570 A. 20 Aug. 1725. Surplus in said
+patent. Grant to Mary, Margaret, Ann, & Prudence Osborne daus of Thomas Osborn
+dec'd. 164 A. Surv. by Mr. Joseph Berry. Adj. John Holmes. 6 Mar. 1741. #",False,True
+GRAY_1_1795,Occoquan Adj. Mr. Burgess Dec'd. Surv. By Mr. George Byrn. Line Of Brent Town Survey,,1741.0,,"Occoquan adj. Mr. Burgess dec'd. Surv. by Mr. George Byrn. line of Brent Town
+Survey, Daniel Tebbs the Younger. 9 Mar. 1741.
+James Thomas the Younger. 10 Mar. 1741. #",False,True
+GRAY_1_1797,E-421: John Miles,515.0,1741.0,,"E-421: John Miles of Pr. William Co. 515 A. in siad Co. on Goose Run adj. Maj.
+Blackburn, Beaverdam of Acquia, Capt. Willoughby Newton, Brent Town Road. Surv.
+by Mr. John Warner. 11 Mar. 1741.",False,True
+GRAY_1_1798,E-422: Mr,203.0,1741.0,,"E-422: Mr. Henry Will'm Fairfax son of William Fairfax Esq. 203 A. in Pr.
+William Co. on Beaver Dam Brs. of Goose Cr. & Broad Run of Potomack adj. Rev.
+Dr. Charles Green, Andrew Russell's Heirs, Capt. Thomas Pearson, Col. Henry
+Ashton. Surv. by Mr. William West. 12 Mar. 1741.",False,True
+GRAY_1_1802,E-426: Thomas Janney,302.0,1741.0,,"E-426: Thomas Janney 302 A. in Pr. William Co. Surv. by Mr. Amos Janney. Adj.
+said Janney's former Tract, Mr. Gedney Clark, Goose Cr. 16 Mar. 1741. #",False,True
+GRAY_1_1803,E-427: Abel Janney From Pensylvania,626.0,1741.0,,"E-427: Abel Janney from Pensylvania 626 A. in Pr. William Co. Surv. by Amos
+Janney. On Goose Cr. 17 Mar. 1741. #",False,True
+GRAY_1_1809,E-435: Richard Beeson's __? Grant To Amos Janney For,640.0,1742.0,,"E-435: Richard Beeson's __? Grant to Amos Janney for 640 A. in Pr. William
+Co. Surv. by Amos Janney. Adj. John Lasswell, on Goose Cr., Jacob Lasswell,
+Hogback Mts., John Laswell. 8 Apr. 1742. #",False,True
+GRAY_1_1810,E-436: Jacob Lasswell,240.0,1742.0,,"E-436: Jacob Lasswell of Pr. William Co. obtained Deed 18 Sept. 1741 for 240 A.
+adj. land Surv'd by Amos Janney. Both Deeds into one for 670 A. in Pr. William
+Co. on Beaver Dam Br. of Goose Cr. 9 Apr. 1742.",False,True
+GRAY_1_1812,By Mr. William West. Adj. Col. Carter's Goose Cr. Tract,10.0,1742.0,,"by Mr. William West. Adj. Col. Carter's Goose Cr. Tract, Mr. John Graham, Hogg
+Black Mt., near Blew Ridge Tract. 10 Apr. 1742. #
+Edward Ennis now Col. Colvill's, Rev. Mr. Alexander Scott. 12 Apr. 1742. #",False,True
+GRAY_1_1814,E-443: Mr,420.0,1742.0,,"E-443: Mr. George Williams of Stafford Co. 420 A. in Pr. William Co. on
+Rappahanpck R. adj. his other land. Surv. by Mr. John Savage. Adj. Richard
+Rosser, William Settle. 14 Apr. 1742.",False,True
+GRAY_1_1815,E-445: Mr,227.0,1742.0,,"E-445: Mr. George Williams of Stafford Co. 227 A. he purchased of John
+Fishback. Surv. by Mr. John Savage. 14 Apr. 1742.",False,True
+GRAY_1_1817,E-447: Charles Barton Son,639.0,1742.0,,"E-447: Charles Barton son of Valent'e Barton dec'd 639 A. in Pr. William Co. on
+Broad Run of Occoquan. Surv. by Mr. James Thomas the Younger. On Glady Br.,
+adj. Bradly Garner, Capt. Catesby Cocke, John Siers. 15 Apr. 1742.",False,True
+GRAY_1_1819,E-450: Mr,570.0,1742.0,,"E-450: Mr. Thomas Robinson of King George Co. 570 A. in Pr. William Co. on N.
+Br. of Goose Cr. Surv. by Mr. William West. Adj. Will'm Nichols & Frances
+Triplet, Col. Carter, Maj. Blackburn. 19 Apr. 1742. #",False,True
+GRAY_1_1822,E-453: Joseph Hollingsworth Late,360.0,1742.0,,"E-453: Joseph Hollingsworth late of Pensylvania 360 A. in Pr. William Co. Surv.
+Mr. by Amos Janney. Adj. Amos Janney, William Fairfax Esq, near S. Fork of
+Kittocktan. 20 Apr. 1742. #",False,True
+GRAY_1_1823,E-454: Samuel Harris,670.0,1742.0,,"E-454: Samuel Harris of Fairfax Co. 670 A. in Pr. William Co. Surv. by Mr. Amos
+Janney. Adj. Joseph Dixon, on Beaver Dam Br. of Goose Cr. 21 Apr. 1742. #",False,True
+GRAY_1_1828,William West. Adj. Samuel Compton Now Rev. Dr. Charles Green,27.0,1742.0,,"William West. Adj. Samuel Compton now Rev. Dr. Charles Green, William & James
+Tassy, Dennis McCarty, Bryan Fairfax, Little R. of Goose Cr. 27 Apr. 1742. #
+Resurv. by Capt. Thomas Barber. Deed for whole 348 A. Adj. Sisson's? land,
+Robert Smith, corner to Mitchell, Austin's line. 9 July 1742. #",False,True
+GRAY_1_1838,E-472: Stacey Beaks,515.0,1742.0,,"E-472: Stacey Beaks of Pensylvania 515 A. in Pr. William Co. Surv. by Mr.
+Amos Janney. Adj. Secolin Br., Mr. Landon Carter. 20 July 1742. #",False,True
+GRAY_1_1839,E-473: William Yeardly,650.0,1742.0,,"E-473: William Yeardly of Pensylvania 650 A. in Pr. William Co. Surv. by Mr.
+Amos Janney. Adj. Hannah Janney. 20 July 1742. #",False,True
+GRAY_1_1841,E-476: Mr,2360.0,1742.0,,"E-476: Mr. William Fairfax son of William Fairfax Esq. 2360 A. in Pr. William
+Co. Surv. by Amos Janney. On Goose Cr., Kittocton Mt., adj. Francis Wilks,
+Mahlon Janney, Mr. Robert Carter, Mr. John Graham, Mr. John Muschall, Richard
+Beeson. 22 July 1742. #",False,True
+GRAY_1_1843,E-482: Richard Wright,275.0,1742.0,,"E-482: Richard Wright of Pr. William Co. 275 A. on Cedar Run in Pr. William Co.
+Surv. by Capt. Joseph Berry. Adj. Henry Halley, Br. of Spillers Run, Capt.
+Thomas Chilton, Thomas Whitledge. 24 July 1742.",False,True
+GRAY_1_1845,E-484: Richard Young,414.0,1742.0,,"E-484: Richard Young of Stafford Co. 414 A. in Pr. William Co. Surv. by Thomas
+Davis. Adj. Br. of Acquiak Run, corner to Paisy, Capt. Jones. 24 July 1742. #",False,True
+GRAY_1_1853,E-492: (blank),568.0,1742.0,,"E-492: (blank) of Stafford Co. 568 A. in Pr. William Co. adj. Hunger Run, corner
+to Walker, Short, & Scott, William Powell. Surv. by George Byrn. 2 Aug. 1742. #",False,True
+GRAY_1_1855,E-494: Thomas Ashby,320.0,1742.0,,"E-494: Thomas Ashby 320 A. in Pr. William Co. on Rd. to Shannandoah, adj.
+Charles Taylor, Capt. James Ball upon Goose Cr. Surv. by Mr. John Warner. Adj.
+Mr. Landon Carter, Mr. Burgess's North Cobler Tract, Manor of Leeds, land of
+Charles Taylor now Col. Turner's. 4 Aug. 1742. #",False,True
+GRAY_1_1856,E-495: William H'y Fairfax Son,600.0,1742.0,,"E-495: William H'y Fairfax son of William Fairfax Esq. 600 A. in Pr. William
+Co. on Chatten's (Cattin's)Run and Goose Cr. Surv. by Mr. John Warner. Adj.
+Thomas Ashby, land of Charles Taylor now Col. Turner's, late Mr. Burgess's Goose
+Cr. Tract. 4 Aug. 1742. #",False,True
+GRAY_1_1858,E-497: William Champe,418.0,1742.0,,"E-497: William Champe of Pr. William Co. set forth he possessed land Granted 10
+Feb. 1725 for 418 A. Resurv. by Mr. George Byrn & certified by Mr. John Warner.
+452 A. surplus. Deed for whole 870 A. Adj. his land. 5 Aug. 1742. #",False,True
+GRAY_1_1860,E-500: Rev,296.0,1742.0,,"E-500: Rev. Dr. Charles Green 296 A. in Pr. Wm. Co. on Morumsco Brs. Surv. by
+Mr. Gerorge Byrn. Adj. Richard Nevittt now John McMillan, John Crouch, Moses
+Linton, William Fairfax Esq. 4 Oct. 1742. #",False,True
+GRAY_1_1862,E-502-5: Col,461.0,1728.0,,"E-502-5: Col. John Colvill of Pr. William 'Co. set *~th he possessed 11,461 A.
+in said Co. granted by several Deeds (746 A. granted Francis Awbrey 18 Dec.
+1728, 2250 A. granted said Awbrey 31 Aug. 1731, 4063 A. ganted Colvill 18 May
+1739.) Surplus in bounds of same. Surv. by Mr. John Warner. 4835 A. surplus.
+Inclusive Deed. On Potomack R., Kittocktan Run or Cr., Br. of Beaver Dam Run,
+the Waggon Rd.to Vestall's Gap, Cornelius Ellery? now Esq. Fairfax's, Messre
+Cock & Mercer, John Mead, Samuel Marksbury now Richard Brown's. 14,766 A. &1124
+A. adj. John Tuton now Capt. Francis Awbrey, Indian Cabbin Br. 16,296 A. 6
+Oct. 1742. (4895 A. surplus.) [Acerage as stated in Deed. ]",False,True
+GRAY_1_1866,E-509: Michael Gregg,510.0,1742.0,,"E-509: Michael Gregg 510 A. in Pr. William Co. Surv. by Mr. Amos Janney. Adj.
+John Garrett, Thomas Gregg joyner, Sam'l Harris. 9 Oct. 1742.",False,True
+GRAY_1_1867,E-510: Samuel Davis,202.0,1711.0,,"E-510: Samuel Davis of Westmoreland Co. has 202 A. in Pr. William Co. granted
+Samuel Duchiminia 30 Aug. 1711. 42 A. surplus. Inclusive Deed for 344 A,
+Resurv. by Mr. George Byrn. Adj. Occoquan R., Br. of Broad Run. 27 Oct. 1742.",False,True
+GRAY_1_1871,Surv. By Mr. George Byrn. On Neabscoe Run Adj. Capt. Charles Ewell,,1742.0,,"Surv. by Mr. George Byrn. On Neabscoe Run adj. Capt. Charles Ewell, George
+Byrn, James Bland. 29 Oct. 1742.
+Run. Surv. by Mr. John Warner. 31 Oct. 1742.",False,True
+GRAY_1_1873,E-518: Joseph Dixon Bro,670.0,1742.0,,"E-518: Joseph Dixon bro. to John Dixon late of Pensylvania 670 A. in Co. of New
+Castle. Surv. by Amos Janney. On Goose Cr., adj. Thomas Janney. 1 Nov. 1742.",False,True
+GRAY_1_1877,E-524: Lord Thomas Fairfax Additions To Manor,920.0,1747.0,,"E-524: Lord Thomas Fairfax additions to Manor of Leeds adj. Capt. William
+Russell, dividing line of Frederick & Augusta Cos., Br. of Gooney Run alias
+Sugar Tree Cr., Dickey's Hills, path to Gooney Run Inhabitants, Russell's land.
+13,920 A. Wm. Green. 10 Mar. 1747/9.",False,True
