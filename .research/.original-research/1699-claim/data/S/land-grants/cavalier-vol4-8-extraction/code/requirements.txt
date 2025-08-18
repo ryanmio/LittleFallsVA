@@ -1,0 +1,4 @@
+ocrmypdf>=15.0.0
+pypdf>=3.0.0
+pandas>=2.0.0
+tqdm>=4.0.0 
