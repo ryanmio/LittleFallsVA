@@ -19,3 +19,17 @@ resources
 /.research/primary_sources/pdfs
 .research/.original-research/1699-claim/data/S/land-grants/1977_Patents_and_Northern_Neck_Grants.pdf
 /.research/.original-research/1699-claim/data/S/land-grants/cavalier-vol4-8-extraction/pdf-scans
+# Ignore large binaries and OCR outputs
+*.pdf
+*.PDF
+*.pdfa
+*.PDF/A
+*.tif
+*.tiff
+*.png
+*.jpg
+*.jpeg
+# OCR outputs and intermediates
+/research/**/OCR-output/**
+.research/.original-research/1699-claim/data/S/land-grants/**/OCR-output/**
+# Generated combined and extracted CSVs can be committed; keep them.

@@ -320,6 +320,76 @@ _COUNTY_ABBR_MAP: Dict[str, str] = {
     "YORKE": "York",
     # City shorthand for Charles City
     "CHES CITY": "Charles City",
+    # Volume IV–VIII counties (canonical and common OCR/abbr variants)
+    "ALBEMARLE": "Albemarle",
+    "AUGUSTA": "Augusta",
+    "AMELIA": "Amelia",
+    "AMHERST": "Amherst",
+    "BEDFORD": "Bedford",
+    "BOTETOURT": "Botetourt",
+    "BOTETORT": "Botetourt",
+    "BRUNSWICK": "Brunswick",
+    "BUCKINGHAM": "Buckingham",
+    "CHARLOTTE": "Charlotte",
+    "CHESTERFIELD": "Chesterfield",
+    "CUMBERLAND": "Cumberland",
+    "DINWIDDIE": "Dinwiddie",
+    "FLUVANNA": "Fluvanna",
+    "GOOCHLAND": "Goochland",
+    "HALIFAX": "Halifax",
+    "HANOVER": "Hanover",
+    "HENRY": "Henry",
+    "JEFFERSON": "Jefferson",
+    "KENTUCKY": "Kentucky",
+    "LINCOLN": "Lincoln",
+    "LOUISA": "Louisa",
+    "LUNENBURG": "Lunenburg",
+    "LUNENBURGH": "Lunenburg",
+    "MECKLENBURG": "Mecklenburg",
+    "ORANGE": "Orange",
+    "PITTSYLVANIA": "Pittsylvania",
+    "PITTSILVANIA": "Pittsylvania",
+    "PR EDWARD": "Prince Edward",
+    "PR. EDWARD": "Prince Edward",
+    "PR EDW": "Prince Edward",
+    "PREDWARD": "Prince Edward",
+    "PRINCE EDWARD": "Prince Edward",
+    "ROCKBRIDGE": "Rockbridge",
+    "ROCKINGHAM": "Rockingham",
+    "SOUTHAMPTON": "Southampton",
+    "SUSSEX": "Sussex",
+    # Also support ACS/IN prefixes via cleaner; keep a few direct shortcuts
+    "IN ALBEMARLE": "Albemarle",
+    "IN AUGUSTA": "Augusta",
+    "IN AMELIA": "Amelia",
+    "IN AMHERST": "Amherst",
+    "IN BEDFORD": "Bedford",
+    "IN BOTETOURT": "Botetourt",
+    "IN BRUNSWICK": "Brunswick",
+    "IN BUCKINGHAM": "Buckingham",
+    "IN CHARLOTTE": "Charlotte",
+    "IN CHESTERFIELD": "Chesterfield",
+    "IN CUMBERLAND": "Cumberland",
+    "IN DINWIDDIE": "Dinwiddie",
+    "IN FLUVANNA": "Fluvanna",
+    "IN GO OCHLAND": "Goochland",
+    "IN GOOCHLAND": "Goochland",
+    "IN HALIFAX": "Halifax",
+    "IN HANOVER": "Hanover",
+    "IN HENRY": "Henry",
+    "IN JEFFERSON": "Jefferson",
+    "IN KENTUCKY": "Kentucky",
+    "IN LINCOLN": "Lincoln",
+    "IN LOUISA": "Louisa",
+    "IN LUNENBURG": "Lunenburg",
+    "IN MECKLENBURG": "Mecklenburg",
+    "IN ORANGE": "Orange",
+    "IN PITTSYLVANIA": "Pittsylvania",
+    "IN PR EDWARD": "Prince Edward",
+    "IN ROCKBRIDGE": "Rockbridge",
+    "IN ROCKINGHAM": "Rockingham",
+    "IN SOUTHAMPTON": "Southampton",
+    "IN SUSSEX": "Sussex",
 }
 
 _CANONICAL_COUNTIES = {
@@ -328,7 +398,13 @@ _CANONICAL_COUNTIES = {
     "PRINCESS ANNE","CHARLES CITY","MIDDLESEX","JAMES CITY","GLOUCESTER","ACCOMACK",
     "CAROLINE","WARWICK","YORK","NORTHAMPTON","ELIZABETH CITY",
     # Volume II earlier counties
-    "RAPPAHANNOCK","LANCASTER","STAFFORD","NORTHUMBERLAND","WESTMORELAND"
+    "RAPPAHANNOCK","LANCASTER","STAFFORD","NORTHUMBERLAND","WESTMORELAND",
+    # Volume IV–VIII expansion counties
+    "ALBEMARLE","AUGUSTA","AMELIA","AMHERST","BEDFORD","BOTETOURT","BRUNSWICK",
+    "BUCKINGHAM","CHARLOTTE","CHESTERFIELD","CUMBERLAND","DINWIDDIE","FLUVANNA",
+    "HALIFAX","HANOVER","HENRY","JEFFERSON","KENTUCKY","LINCOLN","LOUISA",
+    "LUNENBURG","MECKLENBURG","ORANGE","PITTSYLVANIA","PRINCE EDWARD","ROCKBRIDGE",
+    "ROCKINGHAM","SOUTHAMPTON","SUSSEX"
 }
 
 
@@ -425,6 +501,17 @@ def _extract_from_text(text: str) -> Tuple[Optional[str], Optional[float], Optio
             return 'Is of Wight'
         if raw.upper().startswith(('ACS ', 'AES ')):
             raw = raw[4:].strip()
+        # Handle NL/N.L. in <County>
+        raw = re.sub(r'^(?:N\.?\s*L\.?\s+IN|NL\s+IN)\s+', '', raw, flags=re.IGNORECASE)
+        # If phrase contains " in <County>", prefer trailing county segment
+        if re.search(r"\bin\b", raw, flags=re.IGNORECASE):
+            parts = re.split(r"\bin\b", raw, flags=re.IGNORECASE)
+            tail = parts[-1].strip()
+            if tail:
+                raw = tail
+        # Remove qualifiers like "that part of " or "to be " before county name
+        raw = re.sub(r"\b(?:THAT\s+)?PART\s+OF\s+", "", raw, flags=re.IGNORECASE)
+        raw = re.sub(r"^TO\s+BE\s+", "", raw, flags=re.IGNORECASE)
         raw = re.sub(r'^[\d% ]+', '', raw)
         return raw
 
@@ -460,7 +547,7 @@ def _extract_from_text(text: str) -> Tuple[Optional[str], Optional[float], Optio
 
     # Parish of X → X
     if county is None:
-        m_par = re.search(r"\b(?:UP\.?|LOW\.?|UPPER|LOWER)?\s*(?:PAR\.?|PARISH|FER\.?)[\s,]+OF\s+([A-Z][A-Za-z '\.\-\u2018\u2019]{2,20})(?:\s+(?:Co|Cnty|County|City|Citty)\.?\b)?", head, re.IGNORECASE)
+        m_par = re.search(r"\b(?:UP\.?|LOW\.?|UPPER|LOWER)?\s*(?:PAR\.?|PARISH|FER\.?|PER\.?)\s*,?\s+OF\s+([A-Z][A-Za-z '\\.\-\u2018\u2019]{2,20})(?:\s+(?:Co|Cnty|County|City|Citty)\.?\b)?", head, re.IGNORECASE)
         if m_par:
             raw_cty = _clean_raw_cty(m_par.group(1))
             norm_cty = _normalise_county(raw_cty)
@@ -470,6 +557,15 @@ def _extract_from_text(text: str) -> Tuple[Optional[str], Optional[float], Optio
     # Is. of W. → Isle Of Wight
     if county is None and re.search(r"\bIS\.?\s+OF\s+W\.?\b", head, re.IGNORECASE):
         county = "Isle Of Wight"
+
+    # Generic "in <County>" cue when not followed by Co/Cnty (e.g., "in Hanover")
+    if county is None:
+        m_in = re.search(r"\b(?:IN|WITHIN)\s+([A-Z][A-Za-z '\\.\-\u2018\u2019]{2,25})(?:\s+(?:Co|Cnty|County|City|Citty)\.?\b)?", head, re.IGNORECASE)
+        if m_in:
+            raw_cty = _clean_raw_cty(m_in.group(1))
+            norm_cty = _normalise_county(raw_cty)
+            if norm_cty:
+                county = norm_cty
 
     county_candidates: List[str] = []
     if acre_end > 0:
@@ -502,7 +598,9 @@ def _extract_from_text(text: str) -> Tuple[Optional[str], Optional[float], Optio
     else:
         # Fallback: standalone county tokens commonly seen in Volume II
         fallback_pat = re.compile(
-            r"\b(RAPPA\.?|RAPPAHANNOCK|LANCASTER|LANCAS|STAFF\.?|STAFFORD|STAFFD|W'?MORELAND|WESTMORELAND|NORF\.?|NORFOLK|GLOSTER|GLOUCESTER|MIDLESEX|MIDDLESEX|NANZ?EMOND|NANSIMOND|NANSEMUND|YORK|ESSEX|ACCOMACK|ACCOMACKE|ACCAMACK|NEW\s+KENT|NORTHUMBERLAND|NORTHUMBL|NTHUMBERLAND)\b",
+            r"\b("
+            r"RAPPA\.?|RAPPAHANNOCK|LANCASTER|LANCAS|STAFF\.?|STAFFORD|STAFFD|W'?MORELAND|WESTMORELAND|NORF\.?|NORFOLK|GLOSTER|GLOUCESTER|MIDLESEX|MIDDLESEX|NANZ?EMOND|NANSIMOND|NANSEMUND|YORK|ESSEX|ACCOMACK|ACCOMACKE|ACCAMACK|NEW\s+KENT|NORTHUMBERLAND|NORTHUMBL|NTHUMBERLAND|"
+            r"HANOVER|GOOCHLAND|ALBEMARLE|AUGUSTA|AMELIA|AMHERST|BEDFORD|BOTETOURT|BRUNSWICK|BUCKINGHAM|CHARLOTTE|CHESTERFIELD|CUMBERLAND|DINWIDDIE|FLUVANNA|HENRY|JEFFERSON|LINCOLN|LOUISA|LUNENBURG|MECKLENBURG|ORANGE|PITTSYLVANIA|PRINCE\s+EDWARD|ROCKBRIDGE|ROCKINGHAM|SOUTHAMPTON|SUSSEX)\b",
             re.IGNORECASE,
         )
         for m in fallback_pat.finditer(head):
