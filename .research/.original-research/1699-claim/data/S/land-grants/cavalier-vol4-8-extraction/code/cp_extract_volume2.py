@@ -30,7 +30,7 @@ import pandas as pd
 # Title words to strip
 _TITLE_RE = re.compile(r"^(?:COL\.|CAPT\.|MR\.?\,|MRS\.|LT\.|MAJ\.|GEN\.|DR\.)\s+", re.IGNORECASE)
 # Name ends at first comma
-_NAME_RE = re.compile(r"^([A-Za-z .'&\-]{3,}?),")
+_NAME_RE = re.compile(r"^([A-Za-z .'\/&\-]{3,}?),")
 # Acreage like "5000a", "400 acres", "99.5 acs." etc.
 _ACRE_RE = re.compile(r"(\d+(?:\.\d+)?)\s*a(?:c|cs|cres|res)?\.?", re.IGNORECASE)
 # 4-digit year pattern
@@ -412,6 +412,8 @@ def _normalise_name(raw: str) -> str:
     raw = _TITLE_RE.sub("", raw).strip()
     if "," in raw:
         raw = raw.split(",", 1)[0]
+    # If multiple variants are present (slash, aka, alias), keep leftmost
+    raw = re.split(r"\s*/\s*|\baka\b|\balias\b|\bals\.?\b", raw, maxsplit=1, flags=re.IGNORECASE)[0].strip()
     return " ".join(w.capitalize() for w in raw.split())
 
 
