@@ -1,0 +1,3 @@
+# Ignore PDF scans and OCR-output PDFs in this research subtree
+data/S/land-grants/**/pdf-scans/*.pdf
+data/S/land-grants/**/OCR-output/*.pdf
