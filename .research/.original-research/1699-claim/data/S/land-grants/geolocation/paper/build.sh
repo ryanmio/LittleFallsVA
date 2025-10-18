@@ -394,6 +394,107 @@ echo "  - $TEMPLATE_DIR/article_blind.tex"
 echo "  - $TEMPLATE_DIR/content_blind.tex"
 echo "  - $TEMPLATE_DIR/article_blind.pdf (if LaTeX compilation succeeded)"
 
+# ---------------- latexdiff (tracked changes) build ----------------
+#   Generates diff PDFs showing changes from the submitted version (josis-submitted tag)
+#   to the current revision. This creates the tracked-changes version required for
+#   journal submission.
+# --------------------------------------------------------
+
+echo ""
+echo "==== Generating tracked-changes PDF with latexdiff ===="
+
+BASELINE_DIR="$PAPER_DIR/_baseline"
+
+# 1. Preserve baseline files from josis-submitted tag (run once)
+if [ ! -d "$BASELINE_DIR" ]; then
+  echo "Creating baseline directory and extracting submitted versions..."
+  mkdir -p "$BASELINE_DIR"
+  
+  # Extract baseline files from the josis-submitted tag
+  git show josis-submitted:"Journal of Spatial Information Science template/article_blind.tex" > "$BASELINE_DIR/article_blind_v1.tex" 2>/dev/null || {
+    echo "⚠️  Could not extract article_blind.tex from josis-submitted tag."
+    echo "    Baseline files will not be created. Skipping diff generation."
+  }
+  
+  git show josis-submitted:"Journal of Spatial Information Science template/content_blind.tex" > "$BASELINE_DIR/content_blind_v1.tex" 2>/dev/null || {
+    echo "⚠️  Could not extract content_blind.tex from josis-submitted tag."
+  }
+  
+  if [ -f "$BASELINE_DIR/article_blind_v1.tex" ] && [ -f "$BASELINE_DIR/content_blind_v1.tex" ]; then
+    echo "✓ Baseline files created in $BASELINE_DIR"
+  fi
+fi
+
+# 2. Generate diff files if baseline exists and latexdiff is available
+if [ -d "$BASELINE_DIR" ] && [ -f "$BASELINE_DIR/article_blind_v1.tex" ] && command -v latexdiff &> /dev/null; then
+  
+  echo "Generating latexdiff markup..."
+  
+  # Generate diff for main article (with --flatten to inline \input{content_blind.tex})
+  # Note: --flatten processes \input commands to create a single-file diff
+  latexdiff --flatten \
+    --exclude-textcmd="cite,ref" \
+    --disable-citation-markup \
+    "$BASELINE_DIR/article_blind_v1.tex" \
+    "$TEMPLATE_DIR/article_blind.tex" \
+    > "$TEMPLATE_DIR/diff_article_blind.tex" 2>/dev/null || {
+    echo "⚠️  latexdiff failed on article_blind.tex - trying without --flatten..."
+    # Fallback: try without flatten
+    latexdiff \
+      --exclude-textcmd="cite,ref" \
+      --disable-citation-markup \
+      "$BASELINE_DIR/article_blind_v1.tex" \
+      "$TEMPLATE_DIR/article_blind.tex" \
+      > "$TEMPLATE_DIR/diff_article_blind.tex" 2>/dev/null || {
+      echo "⚠️  latexdiff failed completely. Skipping diff PDF generation."
+      rm -f "$TEMPLATE_DIR/diff_article_blind.tex"
+    }
+  }
+  
+  # Optional: Generate diff for content only (cleaner view of body changes)
+  if [ -f "$BASELINE_DIR/content_blind_v1.tex" ]; then
+    latexdiff \
+      --exclude-textcmd="cite,ref" \
+      --disable-citation-markup \
+      "$BASELINE_DIR/content_blind_v1.tex" \
+      "$TEMPLATE_DIR/content_blind.tex" \
+      > "$TEMPLATE_DIR/diff_content_blind.tex" 2>/dev/null || {
+      echo "⚠️  latexdiff failed on content_blind.tex"
+    }
+  fi
+  
+  # 3. Compile tracked-changes PDF if diff file was generated
+  if [ -f "$TEMPLATE_DIR/diff_article_blind.tex" ] && command -v latexmk &> /dev/null; then
+    (
+      cd "$TEMPLATE_DIR" || exit 1
+      echo "Compiling tracked-changes PDF..."
+      latexmk -pdf -silent diff_article_blind.tex 2>&1 | grep -E "(Error|Warning:.*undefined)" || true
+      latexmk -c # clean aux files
+    )
+    
+    if [ -f "$TEMPLATE_DIR/diff_article_blind.pdf" ]; then
+      echo "✓ Tracked-changes PDF created: $TEMPLATE_DIR/diff_article_blind.pdf"
+      echo "  This PDF shows all changes from the submitted version (additions in blue, deletions in red)"
+    else
+      echo "⚠️  Tracked-changes PDF compilation failed - check LaTeX logs"
+    fi
+  else
+    if ! command -v latexdiff &> /dev/null; then
+      echo "⚠️  latexdiff not available - install with: brew install latexdiff"
+      echo "    Tracked-changes PDF cannot be generated without latexdiff"
+    fi
+  fi
+  
+else
+  if [ ! -d "$BASELINE_DIR" ]; then
+    echo "⚠️  No baseline directory found - diff generation skipped"
+    echo "    The baseline is created automatically on first run from the josis-submitted tag"
+  elif ! command -v latexdiff &> /dev/null; then
+    echo "⚠️  latexdiff not installed - tracked changes PDF cannot be generated"
+    echo "    Install with: brew install latexdiff"
+  fi
+fi
+
 echo "JOSIS update complete." 
 
 # ---------------- arXiv build ----------------
