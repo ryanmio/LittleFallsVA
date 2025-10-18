@@ -1,0 +1,29 @@
+# Baseline files for latexdiff (extracted from josis-submitted tag)
+_baseline/
+
+# Generated diff files
+Journal of Spatial Information Science template/diff_*.tex
+Journal of Spatial Information Science template/diff_*.pdf
+
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Build outputs
+paper_preview.pdf
+build_errors.log
+styling.tex
+extracted-media/
+
+# Temporary files
+*.backup
+*.bak
+.DS_Store
+
