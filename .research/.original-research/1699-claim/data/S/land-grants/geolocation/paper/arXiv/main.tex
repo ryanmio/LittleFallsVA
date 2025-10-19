@@ -89,9 +89,9 @@ prior to this work. Key uncertainties addressed in this study included:
 Addressing these questions required a rigorously annotated test bench
 that blended historical sources, modern GIS ground truth, and controlled
 prompt engineering. The methodological design seeks to embody principles
-of rigorous and responsible GeoAI research, as outlined by Li et al.
-{[}@Li2024\_geoai{]} and detailed further in Section 2.4, and---relative
-to classic geoparsers such as Stanford NER/GeoTxt
+of rigorous and responsible GeoAI research, as outlined by Li et
+al.~{[}@Li2024\_geoai{]} and detailed further in Section 2.4,
+and---relative to classic geoparsers such as Stanford NER/GeoTxt
 {[}@karimzadeh2019geotxt{]}, Mordecai‑3 {[}@halterman2023mordecai{]},
 and the map‑aware CamCoder {[}@Gritta2018\_camcoder{]}---centers on
 long, archaic abstracts with nested landmarks and surveyor bearings
@@ -238,9 +238,9 @@ names. Neural architectures such as CamCoder {[}@Gritta2018\_camcoder{]}
 subsequently improved performance through learned contextual
 representations. Most recently, fine-tuned large language models have
 demonstrated substantial breakthroughs in toponym resolution accuracy. A
-representative example of this latest approach comes from Hu et al.
-{[}@Hu2024\_toponym\_llm{]}, who fine-tuned Llama 2-7B to generate an
-unambiguous administrative string for each toponym before invoking a
+representative example of this latest approach comes from Hu et
+al.~{[}@Hu2024\_toponym\_llm{]}, who fine-tuned Llama 2-7B to generate
+an unambiguous administrative string for each toponym before invoking a
 standard geocoding API. Their model achieved an Accuracy@161 km of 0.90
 on the GeoCorpora set {[}@wallgrun2017geocorpora{]}, outperforming
 previous neural methods and improving toponym resolution accuracy by
@@ -252,20 +252,20 @@ parameter‑efficient fine‑tuning is feasible without data‑centre
 hardware---underscoring the practicality of parameter-efficient
 fine-tuning for large corpora.
 
-Addressing the persistent challenge of annotation scarcity, Wu et al.
-{[}@wu2025geosg{]} introduced GeoSG, a self-supervised graph neural
+Addressing the persistent challenge of annotation scarcity, Wu et
+al.~{[}@wu2025geosg{]} introduced GeoSG, a self-supervised graph neural
 network that learns spatial semantics from Point-of-Interest (POI)--text
 relationships. This approach predicts document coordinates without any
 annotated training samples, nearly matching supervised baselines on two
-urban benchmarks. In a similar vein, Savarro et al.
-{[}@savarro2024geolingit{]} demonstrated that Italian tweets can be
+urban benchmarks. In a similar vein, Savarro et
+al.~{[}@savarro2024geolingit{]} demonstrated that Italian tweets can be
 geolocated to both regional and point coordinates by fine-tuning
 decoder-only LLMs on the GeoLingIt shared task, further confirming that
 pretrained language models can internalize subtle linguistic cues of
 place.
 
 Despite these advances, significant limitations remain. O'Sullivan et
-al. {[}@Osullivan2024\_metric{]} demonstrated that GPT-class models
+al.~{[}@Osullivan2024\_metric{]} demonstrated that GPT-class models
 mis-calibrate qualitative distance terms: \emph{near} in a neighborhood
 scenario is treated similarly to \emph{near} at continental scale,
 revealing a lack of geometric grounding. Such biases caution against
@@ -298,17 +298,17 @@ outputs in authoritative data and deterministic algorithms.
 
 This hybrid approach has evolved through several distinct
 implementations, each targeting different aspects of the geolocation
-challenge. Early evidence for its effectiveness comes from Hu et al.
-{[}@Hu2024\_toponym\_llm{]}, who coupled a fine-tuned Llama 2-7B with a
-cascading trio of geocoders---GeoNames {[}@geonames\_about{]}, Nominatim
-{[}@nominatim\_project{]}, and ArcGIS Online
+challenge. Early evidence for its effectiveness comes from Hu et
+al.~{[}@Hu2024\_toponym\_llm{]}, who coupled a fine-tuned Llama 2-7B
+with a cascading trio of geocoders---GeoNames {[}@geonames\_about{]},
+Nominatim {[}@nominatim\_project{]}, and ArcGIS Online
 {[}@esri\_arcgis\_online{]}---to resolve toponyms the model had already
 disambiguated linguistically. Their experiments demonstrated that this
 hybrid pipeline raised Accuracy@161 km by 7--17 percentage points
 relative to either component used in isolation.
 
 Extending this concept to more complex natural language descriptions,
-Huang et al. {[}@Huang2024\_geoagent{]} developed GeoAgent for free-form
+Huang et al.~{[}@Huang2024\_geoagent{]} developed GeoAgent for free-form
 address normalization. This system enables the LLM to convert colloquial
 descriptions (e.g., ``two blocks east of the old courthouse'') into
 structured cues, orchestrate vector-database lookups and offset
@@ -339,11 +339,11 @@ and research contexts.
 Across these diverse implementations, a consistent finding emerges:
 granting an LLM controlled access to trusted GIS services reduces
 hallucination, improves numerical accuracy, and broadens task coverage
-(Hu et al. {[}@Hu2024\_toponym\_llm{]}; Huang et al.
-{[}@Huang2024\_geoagent{]}). The present work builds on this pattern by
-testing whether a similar benefit materializes for colonial land‑grant
-geolocation---comparing a pure one‑shot prompt to a tool‑augmented
-chain‑of‑thought that can issue mid‑prompt geocoding and
+(Hu et al.~{[}@Hu2024\_toponym\_llm{]}; Huang et
+al.~{[}@Huang2024\_geoagent{]}). The present work builds on this pattern
+by testing whether a similar benefit materializes for colonial
+land‑grant geolocation---comparing a pure one‑shot prompt to a
+tool‑augmented chain‑of‑thought that can issue mid‑prompt geocoding and
 distance‑calculation calls while processing English‑language colonial
 abstracts---and by reporting accuracy alongside end‑to‑end costs and
 latency. Unlike GeoAgent's address‑normalization and GeoGLUE tasks
@@ -359,7 +359,7 @@ Recent calls within the GeoAI community emphasize the need for empirical
 studies that are not only traditionally scientifically sound but also
 actively engage with the foundational tenets of \textbf{predictability},
 \textbf{interpretability}, \textbf{reproducibility}, and \textbf{social
-responsibility}, which Li et al. {[}@Li2024\_geoai{]} identify as four
+responsibility}, which Li et al.~{[}@Li2024\_geoai{]} identify as four
 essential pillars for solidifying GeoAI's scientific rigor and ensuring
 its lasting, beneficial impact.
 
@@ -772,9 +772,9 @@ on 15 May 2025. The per-call cost is calculated as:
 \]
 
 where \(p_{\text{in}}\) and \(p_{\text{out}}\) are USD prices per
-million tokens (see Table\textasciitilde{}\ref{tbl:prices}). Google
-Geocoding calls remain comfortably within the free-tier quota and
-therefore do not accrue additional fees.
+million tokens (see Table \ref{tbl:prices}). Google Geocoding calls
+remain comfortably within the free-tier quota and therefore do not
+accrue additional fees.
 
 \begin{table}[H]
 \centering
@@ -853,15 +853,14 @@ traditional GIS baseline and all automated predictions were subsequently
 written to the same tabular structure, ensuring uniform error
 computation across methods.
 
-For each method listed in Tables\textasciitilde{}\ref{tbl:mmodels}
-and\textasciitilde{}\ref{tbl:tmodels}, an evaluation driver sequentially
-processed the 43 abstracts with verified ground truth, invoking the
-OpenAI \emph{Responses} API under stable April-2025 model versions.
-Tool-chain variants interacted with the Google Geocoding API and an
-in-process centroid function exposed via JSON-Schema. Token usage,
-latency, and any tool traces were logged in real time; intermediate
-artifacts and final result sets are archived in the accompanying
-repository.
+For each method listed in Tables \ref{tbl:mmodels} and
+\ref{tbl:tmodels}, an evaluation driver sequentially processed the 43
+abstracts with verified ground truth, invoking the OpenAI
+\emph{Responses} API under stable April-2025 model versions. Tool-chain
+variants interacted with the Google Geocoding API and an in-process
+centroid function exposed via JSON-Schema. Token usage, latency, and any
+tool traces were logged in real time; intermediate artifacts and final
+result sets are archived in the accompanying repository.
 
 When supported (e.g., GPT‑4.1/4o/3.5), we set temperature t = 0.2;
 OpenAI's o‑series uses fixed decoding and does not expose temperature.
