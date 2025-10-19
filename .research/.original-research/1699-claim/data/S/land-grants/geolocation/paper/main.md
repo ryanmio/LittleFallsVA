@@ -49,7 +49,7 @@ These findings demonstrate LLMs' potential for scalable, accurate, cost-effectiv
 
 Virginia's colonial land patents are a cornerstone resource for scholars studying settlement patterns, the political economy of plantation agriculture, and Indigenous dispossession in the seventeenth and eighteenth centuries. Yet the spatial dimension of these sources remains under-exploited: most patents survive only as narrative metes-and-bounds descriptions in printed abstract volumes such as *Cavaliers and Pioneers* (C&P) [@Nugent1979_cavaliers3]. Without geographic coordinates, historians and archaeologists cannot readily visualise how land ownership evolved or test hypotheses with modern Geographic Information System (GIS) tools. Creating a machine-readable, georeferenced version of C&P would unlock new quantitative approaches to long-standing questions about colonial Virginia's social and environmental history.
 
-Digitising and geo-locating the abstracts, however, is notoriously labor-intensive. Even professional GIS analysts can spend several hours per grant reconciling archaic place-names, inconsistent spellings, and low-resolution boundary calls. Recent breakthroughs in large language models (LLMs) suggest a new pathway: language-driven spatial reasoning where a model reads the patent text and predicts latitude/longitude directly or with minimal tool assistance. This study explores whether current-generation LLMs can shoulder that burden accurately and cheaply enough to matter for digital history.
+Digitizing and geo-locating the abstracts, however, is notoriously labor-intensive. Even professional GIS analysts can spend several hours per grant reconciling archaic place-names, inconsistent spellings, and low-resolution boundary calls. Recent breakthroughs in large language models (LLMs) suggest a new pathway: language-driven spatial reasoning where a model reads the patent text and predicts latitude/longitude directly or with minimal tool assistance. This study explores whether current-generation LLMs can shoulder that burden accurately and cheaply enough to matter for digital history.
 
 ## 1.2 Problem Statement
 
@@ -508,7 +508,7 @@ Several caveats temper the preceding claims.
 
 Building on the present findings, several avenues warrant exploration.
 
-* **Corpus expansion.**  Digitising the remaining volumes of *Cavaliers and Pioneers* [@Nugent1979_cavaliers3]—and analogous land books from Maryland and North Carolina—would permit a cross-colonial analysis of settlement diffusion.
+* **Corpus expansion.**  Digitizing the remaining volumes of *Cavaliers and Pioneers* [@Nugent1979_cavaliers3]—and analogous land books from Maryland and North Carolina—would permit a cross-colonial analysis of settlement diffusion.
 * **Prompt engineering at scale.**  A reinforcement-learning loop that scores predictions against partial gazetteers could iteratively refine prompts or select between tool and non-tool paths.
 * **Polygon recovery.**  Combining the model's point estimate with chained GIS operations (bearing decoding, river buffering) could approximate parcel outlines, unlocking environmental history applications.
 * **Human-in-the-loop interfaces.**  Lightweight web tools that display the model's candidate coordinates alongside archival imagery would enable rapid expert validation and correction.
