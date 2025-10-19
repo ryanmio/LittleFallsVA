@@ -232,14 +232,15 @@ representative example of this latest approach comes from Hu et al.
 {[}@Hu2024\_toponym\_llm{]}, who fine-tuned Llama 2-7B to generate an
 unambiguous administrative string for each toponym before invoking a
 standard geocoding API. Their model achieved an Accuracy@161 km of 0.90
-on the GeoCorpora set, outperforming previous neural methods and
-improving toponym resolution accuracy by 13\% over the previous best
-neural system. On the less ambiguous WikToR corpus the same architecture
-reached 0.98. Crucially, these gains were realized on commodity
-hardware---the entire experiment ran on a single NVIDIA V100 with 14 GB
-VRAM, showing that parameter‑efficient fine‑tuning is feasible without
-data‑centre hardware---underscoring the practicality of
-parameter-efficient fine-tuning for large corpora.
+on the GeoCorpora set {[}@wallgrun2017geocorpora{]}, outperforming
+previous neural methods and improving toponym resolution accuracy by
+13\% over the previous best neural system. On the less ambiguous WikToR
+corpus {[}@gritta2018whatsmissing{]} the same architecture reached 0.98.
+Crucially, these gains were realized on commodity hardware---the entire
+experiment ran on a single NVIDIA V100 with 14 GB VRAM, showing that
+parameter‑efficient fine‑tuning is feasible without data‑centre
+hardware---underscoring the practicality of parameter-efficient
+fine-tuning for large corpora.
 
 Addressing the persistent challenge of annotation scarcity, Wu et al.
 {[}@wu2025geosg{]} introduced GeoSG, a self-supervised graph neural
@@ -284,11 +285,12 @@ This hybrid approach has evolved through several distinct
 implementations, each targeting different aspects of the geolocation
 challenge. Early evidence for its effectiveness comes from Hu et al.
 {[}@Hu2024\_toponym\_llm{]}, who coupled a fine-tuned Llama 2-7B with a
-cascading trio of geocoders---GeoNames, Nominatim, and ArcGIS---to
-resolve toponyms the model had already disambiguated linguistically.
-Their experiments demonstrated that this hybrid pipeline raised
-Accuracy@161 km by 7--17 percentage points relative to either component
-used in isolation.
+cascading trio of geocoders---GeoNames {[}@geonames\_about{]}, Nominatim
+{[}@nominatim\_project{]}, and ArcGIS Online
+{[}@esri\_arcgis\_online{]}---to resolve toponyms the model had already
+disambiguated linguistically. Their experiments demonstrated that this
+hybrid pipeline raised Accuracy@161 km by 7--17 percentage points
+relative to either component used in isolation.
 
 Extending this concept to more complex natural language descriptions,
 Huang et al. {[}@Huang2024\_geoagent{]} developed GeoAgent for free-form
@@ -298,8 +300,9 @@ structured cues, orchestrate vector-database lookups and offset
 calculations, and then retrieve precise coordinates from mapping APIs.
 Their ablation study confirmed that this agentic variant outperforms
 both rule-based and LLM-only baselines on the public GeoGLUE benchmark
-and an in-house Chinese address dataset, demonstrating improved F1
-scores and edit-distance metrics.
+{[}@li2023geogluegeographiclanguageunderstanding{]} and an in-house
+Chinese address dataset, demonstrating improved F1 scores and
+edit-distance metrics.
 
 These specialized implementations build upon a more general design
 pattern known as the ReAct prompting paradigm {[}@yao2023react{]}, which
@@ -2888,13 +2891,22 @@ trails: A GIS land-grant analysis. \emph{Social Science Computer
 Review}, \emph{27}(3), 331--347.
 \url{https://doi.org/10.1177/0894439308329760}
 
+\bibitem[\citeproctext]{ref-esri_arcgis_online}
+Esri. (2025). \emph{ArcGIS online}. Cloud-based GIS platform.
+\url{https://www.arcgis.com/}
+
 \bibitem[\citeproctext]{ref-Fausz1971_settlement}
 Fausz, J. F. (1971). \emph{Patterns of settlement in the {James} {River}
 {Basin}, 1607-1642} {[}Master\textquotesingle s thesis, College of
 William; Mary{]}. \url{https://dx.doi.org/doi:10.21220/s2-jedw-z031}
 
+\bibitem[\citeproctext]{ref-gritta2018whatsmissing}
+Gritta, M., Pilehvar, M. T., \& Collier, N. (2018a). What's missing in
+geographical parsing? \emph{Language Resources and Evaluation},
+\emph{52}(2), 603--623. \url{https://doi.org/10.1007/s10579-017-9385-8}
+
 \bibitem[\citeproctext]{ref-Gritta2018_camcoder}
-Gritta, M., Pilehvar, M. T., \& Collier, N. (2018). Which melbourne?
+Gritta, M., Pilehvar, M. T., \& Collier, N. (2018b). Which melbourne?
 Augmenting geocoding with maps. \emph{Proceedings of the 56th Annual
 Meeting of the Association for Computational Linguistics (ACL 2018)},
 1285--1296. \url{https://doi.org/10.17863/CAM.27796}
@@ -2926,6 +2938,12 @@ Karimzadeh, M., Pezanowski, S., MacEachren, A., \& Wallgrün, J. O.
 (2019). GeoTxt: A scalable geoparsing system for unstructured text
 geolocation. \emph{Transactions in GIS}, \emph{23}, 118--136.
 \url{https://doi.org/10.1111/tgis.12510}
+
+\bibitem[\citeproctext]{ref-li2023geogluegeographiclanguageunderstanding}
+Li, D., Ding, R., Zhang, Q., Li, Z., Chen, B., Xie, P., Xu, Y., Li, X.,
+Guo, N., Huang, F., \& He, X. (2023). \emph{GeoGLUE: A GeoGraphic
+language understanding evaluation benchmark}.
+\url{https://arxiv.org/abs/2305.06545}
 
 \bibitem[\citeproctext]{ref-Li2024_geoai}
 Li, W., Janowicz, K., Mai, G., Goodchild, M. F., Gautier, J., Kuhn, W.,
@@ -2972,6 +2990,11 @@ One Shared Story. (2020). \emph{Early virginia land patent - estimated
 polygons {[}CentralVAPatents\_PLY{]}}. ArcGIS Online Feature Service.
 \url{https://www.arcgis.com/home/item.html?id=6fc329e0694b497196435beba8244a47}
 
+\bibitem[\citeproctext]{ref-nominatim_project}
+OpenStreetMap Contributors. (2025). \emph{Nominatim: Open-source
+geocoding with OpenStreetMap data}. Open-source geocoding software.
+\url{https://nominatim.org/}
+
 \bibitem[\citeproctext]{ref-savarro2024geolingit}
 Savarro, D., Zago, D., \& Zoia, S. (2024). Leveraging large language
 models to geolocate linguistic variations in social media posts.
@@ -2983,6 +3006,17 @@ Schottlander, D., \& Shekel, T. (2025). \emph{Geospatial reasoning:
 Unlocking insights with generative AI and multiple foundation models}.
 Google Research Blog.
 \url{https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/}
+
+\bibitem[\citeproctext]{ref-geonames_about}
+The GeoNames Team. (2025). \emph{GeoNames}. Geographical database and
+web services. \url{https://www.geonames.org/about.html}
+
+\bibitem[\citeproctext]{ref-wallgrun2017geocorpora}
+Wallgrün, J. O., Karimzadeh, M., MacEachren, A., \& Pezanowski, S.
+(2017). GeoCorpora: Building a corpus to test and train microblog
+geoparsers. \emph{International Journal of Geographical Information
+Science}, \emph{32}, 1--29.
+\url{https://doi.org/10.1080/13658816.2017.1368523}
 
 \bibitem[\citeproctext]{ref-wu2025geosg}
 Wu, Y., Zeng, Z., Liu, K., Xu, Z., Ye, Y., Zhou, S., Yao, H., \& Li, S.
