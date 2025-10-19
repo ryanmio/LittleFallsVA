@@ -326,9 +326,9 @@ To focus on the head-to-head comparison between the language-model approaches an
 
 ![Error distributions for LLMs vs. GIS analyst only, isolating core methods from heuristic baselines.](../analysis/figures/error_violin_core_methods.pdf){#fig:violin_core width="0.7\linewidth"}
 
-Figure \ref{fig:cdf_models} presents the cumulative distribution of errors for each evaluated method as the share of grants within a given distance threshold. This curve allows comparison of accuracy across all thresholds (e.g., 5–100 km), not just a single cutoff.
+Figure \ref{fig:cdf_models} plots cumulative accuracy as a function of distance threshold; curves that are higher and further left indicate stronger performance across thresholds.
 
-![Cumulative accuracy by distance threshold (km): for each method, the curve shows the percentage of grants whose error is below each threshold, enabling full‑range comparison of accuracy.](../analysis/figures/cdf_graphs/cdf_models_combined.pdf){#fig:cdf_models width="0.9\linewidth"}
+![Cumulative accuracy vs. distance threshold (km); higher‑left curves indicate better performance across thresholds.](../analysis/figures/cdf_graphs/cdf_models_combined.pdf){#fig:cdf_models width="0.9\linewidth"}
 
 Table \ref{tbl:reasoning} examines how varying the *reasoning_effort* parameter within the same o3-2025-04-16 model (M-2) affects spatial accuracy. The differences are minor: mean error shifts by less than 1 km across effort levels, while the share of highly-accurate predictions (≤ 10 km) increases by approximately 7 percentage points from low to medium/high effort.
 
@@ -843,7 +843,7 @@ Table \ref{tbl:error_ci} provides comprehensive error statistics for each evalua
 | T-1 | o4-mini-2025-04-16 + tools | 43 | 37.65 | [30.86, 44.99] |
 | T-4 | gpt-4.1-2025-04-14 + tools | 43 | 37.23 | [30.11, 45.03] |
 
-Table: Mean error with 95% bootstrap confidence intervals by method; complements the main-text accuracy summary. {#tbl:error_ci}
+Table: Mean error with 95% bootstrap CIs by method; reference for Figure~\ref{fig:accuracy_bar}. {#tbl:error_ci}
 
 ### B.2 Performance by Method
 
@@ -866,7 +866,7 @@ Table \ref{tbl:method_performance} provides the complete performance statistics 
 | T-1 | 43 | 37.65 | 33.61 | 24.54 | 0.59 | 18.57 | 62.30 | 110.19 | 14.0% | 32.6% | 69.8% |
 | T-4 | 43 | 37.23 | 34.22 | 23.94 | 0.59 | 21.78 | 53.35 | 101.85 | 16.3% | 32.6% | 74.4% |
 
-Table: Detailed performance metrics by method, including dispersion and accuracy bands (≤10/25/50 km). {#tbl:method_performance}
+Table: Full performance profile per method (dispersion and ≤10/25/50 km bands). {#tbl:method_performance}
 
 ### B.3 Cost-Accuracy Trade-off
 
@@ -883,7 +883,7 @@ Table \ref{tbl:cost_accuracy} examines the cost-accuracy relationship, emphasizi
 | o3-mini-2025-01-31 | 50.25 | 4.7% | $14.15 | $3.04 |
 | human-gis | 71.40 | 4.7% | $3,255.81 | $700.00 |
 
-Table: Cost–accuracy summary by model family (mean error, ≤10 km hit-rate, cost per 1,000 located, and marginal cost per +1% ≤10 km). {#tbl:cost_accuracy}
+Table: Cost–accuracy summary by model family; use with Figure~\ref{fig:pareto_cost} to select an operating point. {#tbl:cost_accuracy}
 
 ### B.4 Processing Time Analysis
 
@@ -900,7 +900,7 @@ Table \ref{tbl:time_usage} quantifies the latency advantage of automated methods
 | o4-mini-2025-04-16 | 0.0091 | 9.145 | 24× |
 | human-gis | 0.2170 | 216.977 | 1× |
 
-Table: Processing time by model: hours per located, scaled hours per 1,000 located, and speedup versus the GIS analyst baseline. {#tbl:time_usage}
+Table: Processing time by model; companion to Section~6.3 for throughput estimates. {#tbl:time_usage}
 
 ### B.5 Token Usage Statistics
 
@@ -916,7 +916,7 @@ Table \ref{tbl:token_usage} provides detailed token consumption data across all 
 | o3-mini-2025-01-31 | 6,653 | 142,020 | 6,739,372 |
 | o4-mini-2025-04-16 | 274,903 | 146,590 | 6,340,337 |
 
-Table: Token consumption by model across all runs (input, output, and tokens per 1,000 located grants). {#tbl:token_usage}
+Table: Token consumption by model; informs compute budgeting and reproducibility. {#tbl:token_usage}
 
 Tool-augmented methods consumed on average 1.49× more tokens than pure-prompt counterparts (4,985,953 vs. 3,355,078 tokens per 1,000 located grants). However, this effect varied dramatically by model architecture: adding tools to gpt-4.1-2025-04-14 increased token usage by 18.3× (176,698 → 3,229,140), while o4-mini showed only a 1.14× increase (5,937,907 → 6,742,767).
 
@@ -931,7 +931,7 @@ Table \ref{tbl:human_benchmark} provides a more detailed analysis of the profess
 | Medium (County centroid) | 6 | 14.0 | 87.95 | 82.11 |
 | Low (State-level) | 18 | 41.9 | 68.55 | 63.26 |
 
-Table: Professional GIS benchmark results by precision category (overall and by High/Medium/Low placement). {#tbl:human_benchmark}
+Table: Professional GIS benchmark by placement precision (overall; High/Medium/Low). {#tbl:human_benchmark}
 
 Notably, even the "High" precision category (where both county boundaries and specific landmarks were identified) still resulted in a mean error of 68.88 km—substantially higher than all the automated methods except gpt-3.5-turbo (M-6). This underscores the inherent difficulty of the task and further highlights the significance of the accuracy improvements achieved by the LLM approaches.
 
@@ -941,11 +941,11 @@ Notably, even the "High" precision category (where both county boundaries and sp
 
 Figure \ref{fig:error_boxplot} shows the distribution of geolocation error for each method as a boxplot, complementing the violin plot and CDF already presented in the main text. The boxplot highlights the median error (central line), interquartile range (box), and outliers (points) for each method, providing a clear view of error distribution and central tendency.
 
-![Error boxplots by method: medians and interquartile ranges with whiskers; complements the violin and CDF views.](../analysis/figures/error_boxplot.pdf){#fig:error_boxplot width="\linewidth" fig-pos="H"}
+![Error boxplots by method; complementary to violin and CDF plots.](../analysis/figures/error_boxplot.pdf){#fig:error_boxplot width="\linewidth" fig-pos="H"}
 
 ### C.2 Error Maps
 
-![Contact sheet of all mapped grants: ground truth (black stars) and predictions, with dashed error lines.](../analysis/mapping_workflow/contact_sheet.png){#fig:contactsheet width="0.95\\linewidth"}
+![All mapped grants with ground truth (black stars) and predictions; dashed lines indicate errors.](../analysis/mapping_workflow/contact_sheet.png){#fig:contactsheet width="0.95\\linewidth"}
 
 Figure \ref{fig:contactsheet} plots all six methods for every locatable grant against ground truth coordinates (black stars). Error distances are shown as dashed lines connecting predictions to ground truth. For cartographic clarity the H-2, H-3, and H-4 baselines are omitted; their substantially larger positional errors would require a map extent so broad that the fine-scale patterns of interest would be lost.
 
@@ -964,14 +964,14 @@ Table \ref{tbl:cost_marginal} reports how many U.S. dollars each method requires
 | o3-mini-2025-01-31 | 4.7 % | $14.15 | $3.04 |
 | human-gis | 4.7 % | $3,255.81 | $700.00 |
 
-Table: Marginal cost to raise the ≤10 km hit-rate by one percentage point for each model. {#tbl:cost_marginal}
+Table: Marginal cost per +1 pp gain in ≤10 km accuracy. {#tbl:cost_marginal}
 
 The numbers reveal why **gpt-4o-2024-08-06** is so attractive in budget-constrained settings: each percentage-point gain in "high-precision" accuracy costs only six cents—roughly two orders of magnitude cheaper than even the *o3* ensemble, and over 10,000 × cheaper than a professional GIS analyst.
 
 ### C.4 Latency-Accuracy Tradeoff
 Processing time presents another critical dimension for evaluation. The figure below shows how each method balances computational latency against geolocation accuracy. LLM methods cluster in the bottom-left quadrant, delivering results in seconds rather than minutes, while maintaining lower error rates than the professional GIS approach.
 
-![Latency–accuracy scatter: mean error (km) versus processing time per grant (seconds; log-scale x-axis).](../analysis/figures/pareto_latency_tradeoff.pdf){#fig:pareto_latency width="\linewidth" fig-pos="H"}
+![Latency–accuracy scatter (seconds, log x‑axis vs mean error).](../analysis/figures/pareto_latency_tradeoff.pdf){#fig:pareto_latency width="\linewidth" fig-pos="H"}
 
 Figure \ref{fig:pareto_latency}: Latency-Accuracy Tradeoff. This figure plots mean error (km) against processing time per grant (seconds) for each evaluated method. All automatic methods produce coordinates in 0.2–13 s of computation time, compared to the GIS analyst's labor time of ≈502 s per grant. Note the logarithmic scale on the x-axis.
 
@@ -990,7 +990,7 @@ Table \ref{tbl:tool_direct_comparison} provides a head-to-head comparison of ide
 | o4-mini-2025-04-16 | one shot | 41.65 | 27.39 | 27.32 | 7.59 | 103.49 | 0.0% | 0.0% | 7.0% | 37.2% | 62.8% |
 | o4-mini-2025-04-16 | tool chain | 37.65 | 33.61 | 24.54 | 0.59 | 110.19 | 4.7% | 11.6% | 14.0% | 32.6% | 69.8% |
 
-Table: Direct comparison of identical models with and without tool access (controls for architecture effects). {#tbl:tool_direct_comparison}
+Table: Identical models with and without tool access; isolates the effect of tools. {#tbl:tool_direct_comparison}
 
 ### D.2 Quantified Tool Effect
 
@@ -1001,7 +1001,7 @@ Table \ref{tbl:tool_effect} quantifies the precise impact of tool access, showin
 | gpt-4.1-2025-04-14 | 28.51 | 37.23 | -30.6% | +2.3 pp | +9.3 pp | -4.7 pp | -16.3 pp | -11.6 pp |
 | o4-mini-2025-04-16 | 41.65 | 37.65 | 9.6% | +4.7 pp | +11.6 pp | +7.0 pp | -4.7 pp | +7.0 pp |
 
-Table: Quantified effect of tool augmentation on mean error and accuracy-band percentages (Δ indicates change with tools). {#tbl:tool_effect}
+Table: Effect of tool augmentation (Δ on mean error and accuracy bands). {#tbl:tool_effect}
 
 While the o4-mini model showed a modest improvement with tools, gpt-4.1-2025-04-14 performed substantially worse when given tool access. 
 
@@ -1014,7 +1014,7 @@ Table \ref{tbl:best_methods} shows a direct head-to-head comparison of the best-
 | M (M-2) | 23.39 | 14.27 | 19.86 | 2.67 | 8.17 | 36.85 | 87.35 | 30.2% | 60.5% | 93.0% |
 | T (T-4) | 37.23 | 34.22 | 23.94 | 0.59 | 21.78 | 53.35 | 101.85 | 16.3% | 32.6% | 74.4% |
 
-Table: Best-performing non-tool method versus best tool-augmented method—head-to-head comparison across error metrics. {#tbl:best_methods}
+Table: Head‑to‑head of best non‑tool vs best tool‑augmented method. {#tbl:best_methods}
 
 At the category level, the best non-tool method (M-2) significantly outperformed the best tool-augmented method (T-4) across all error metrics.
 
@@ -1029,7 +1029,7 @@ Table \ref{tbl:tool_distribution} expands on the tool usage patterns discussed i
 | T-4 (gpt-4.1) | geocode_place | 2.05 | 1.78 | 1 | 1 | 7 |
 | T-4 (gpt-4.1) | compute_centroid | 0.25 | 0.43 | 0 | 0 | 1 |
 
-Table: Distribution of tool calls by method and tool type (geocode versus centroid). {#tbl:tool_distribution}
+Table: Distribution of tool calls by method and tool type. {#tbl:tool_distribution}
 
 ### D.5 ToolSearch Efficiency
 
@@ -1040,7 +1040,7 @@ Table: Distribution of tool calls by method and tool type (geocode versus centro
 | T-1 (o4-mini) | 2.29 | 1 | 69.0% |
 | T-4 (gpt-4.1) | 1.95 | 1 | 72.7% |
 
-Table: Tool search efficiency metrics: selected-call index and first-call success rate. {#tbl:search_efficiency}
+Table: Tool search efficiency (selected‑call index; first‑call success). {#tbl:search_efficiency}
 
 The more economical approach of gpt-4.1-2025-04-14 is evident in both the distribution of calls and search efficiency. While T-1 (o4-mini) made nearly twice as many geocoding calls on average (3.79 vs. 2.05), it achieved a slightly lower first-call success rate (69.0% vs. 72.7%). This pattern aligns with the overall finding that tool augmentation does not consistently improve accuracy; in fact, the additional API calls may introduce noise through spurious matches to modern place names that bear little relation to colonial-era settlements.
 

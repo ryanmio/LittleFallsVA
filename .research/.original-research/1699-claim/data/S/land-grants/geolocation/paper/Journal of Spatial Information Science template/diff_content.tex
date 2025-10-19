@@ -925,20 +925,17 @@ outperform manual geocoding.
 core methods from heuristic baselines.}\DIFaddendFL }\label{fig:violin_core}
 \end{figure}
 
-Figure \ref{fig:cdf_models} presents the cumulative distribution of
-errors for each evaluated method \DIFdelbegin \DIFdel{.
-}\DIFdelend \DIFaddbegin \DIFadd{as the share of grants within a given
-distance threshold. This curve allows comparison of accuracy across all
-thresholds (e.g., 5--100 km), not just a single cutoff.
-}\DIFaddend 
+Figure \ref{fig:cdf_models} \DIFdelbegin \DIFdel{presents the cumulative distribution of
+errors for each evaluated method}\DIFdelend \DIFaddbegin \DIFadd{plots cumulative accuracy as a function of
+distance threshold; curves that are higher and further left indicate
+stronger performance across thresholds}\DIFaddend .
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/cdf_graphs/cdf_models_combined.pdf}
-\caption{Cumulative \DIFdelbeginFL \DIFdelFL{error distribution }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{accuracy }\DIFaddendFL by \DIFaddbeginFL \DIFaddFL{distance threshold (km): for each
-}\DIFaddendFL method\DIFaddbeginFL \DIFaddFL{, the curve shows the percentage of grants whose error is below
-each threshold, enabling full‑range comparison of
-accuracy.}\DIFaddendFL }\label{fig:cdf_models}
+\caption{Cumulative \DIFdelbeginFL \DIFdelFL{error distribution by method}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{accuracy vs.~distance threshold (km); higher‑left
+curves indicate better performance across
+thresholds.}\DIFaddendFL }\label{fig:cdf_models}
 \end{figure}
 
 Table \ref{tbl:reasoning} examines how varying the
@@ -2016,9 +2013,10 @@ approach, M-2 (o3-2025-04-16), achieves a mean error of 23.39 km with a
 95\% confidence interval of {[}17.57, 29.54{]} km.
 
 \begin{longtable}[]{@{}lllll@{}}
-\caption{\label{tbl:error_ci}Mean error with 95\% \DIFaddbegin \DIFadd{bootstrap }\DIFaddend confidence
-intervals \DIFdelbegin \DIFdel{for each }\DIFdelend \DIFaddbegin \DIFadd{by }\DIFaddend method\DIFaddbegin \DIFadd{; complements the main-text accuracy
-summary}\DIFaddend .}\tabularnewline
+\caption{\label{tbl:error_ci}Mean error with 95\% \DIFdelbegin \DIFdel{confidence intervals
+for each }\DIFdelend \DIFaddbegin \DIFadd{bootstrap CIs by
+}\DIFaddend method\DIFaddbegin \DIFadd{; reference for
+Figure\textasciitilde{}\ref{fig:accuracy_bar}}\DIFaddend .}\tabularnewline
 \toprule\noalign{}
 Method & Model & n & Mean km & 95\% CI \\
 \midrule\noalign{}
@@ -2066,9 +2064,9 @@ kilometers of ground truth.
   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0833}}
   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0833}}
   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0833}}@{}}
-\caption{\label{tbl:method_performance}Detailed performance metrics by
-method\DIFaddbegin \DIFadd{, including dispersion and accuracy bands (≤10/25/50
-km)}\DIFaddend .}\tabularnewline
+\caption{\label{tbl:method_performance}\DIFdelbegin \DIFdel{Detailed }\DIFdelend \DIFaddbegin \DIFadd{Full }\DIFaddend performance \DIFdelbegin \DIFdel{metrics by
+}\DIFdelend \DIFaddbegin \DIFadd{profile per
+}\DIFaddend method \DIFaddbegin \DIFadd{(dispersion and ≤10/25/50 km bands)}\DIFaddend .}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Method
@@ -2172,9 +2170,9 @@ high-precision prediction rate by one percentage point.
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1500}}@{}}
-\caption{\label{tbl:cost_accuracy}\DIFdelbegin \DIFdel{Cost-accuracy trade-off }\DIFdelend \DIFaddbegin \DIFadd{Cost--accuracy summary }\DIFaddend by model family
-\DIFaddbegin \DIFadd{(mean error, ≤10 km hit-rate, cost per 1,000 located, and marginal cost
-per +1\% ≤10 km)}\DIFaddend .}\tabularnewline
+\caption{\label{tbl:cost_accuracy}\DIFdelbegin \DIFdel{Cost-accuracy trade-off }\DIFdelend \DIFaddbegin \DIFadd{Cost--accuracy summary }\DIFaddend by model
+family\DIFaddbegin \DIFadd{; use with Figure\textasciitilde{}\ref{fig:pareto_cost} to select
+an operating point}\DIFaddend .}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model
@@ -2227,9 +2225,8 @@ improvement over the traditional GIS baseline.
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
-\caption{\label{tbl:time_usage}Processing time by model\DIFaddbegin \DIFadd{: hours per
-located, scaled hours per 1,000 located, and speedup versus the GIS
-analyst baseline}\DIFaddend .}\tabularnewline
+\caption{\label{tbl:time_usage}Processing time by model\DIFaddbegin \DIFadd{; companion to
+Section\textasciitilde6.3 for throughput estimates}\DIFaddend .}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model
@@ -2273,9 +2270,9 @@ Table \ref{tbl:token_usage} provides detailed token consumption data
 across all models, offering insight into computational efficiency.
 
 \begin{longtable}[]{@{}llll@{}}
-\caption{\label{tbl:token_usage}Token consumption by model across all
-\DIFdelbegin \DIFdel{test }\DIFdelend runs \DIFaddbegin \DIFadd{(input, output, and tokens per 1,000 located
-grants)}\DIFaddend .}\tabularnewline
+\caption{\label{tbl:token_usage}Token consumption by model\DIFdelbegin \DIFdel{across all
+test runs}\DIFdelend \DIFaddbegin \DIFadd{; informs
+compute budgeting and reproducibility}\DIFaddend .}\tabularnewline
 \toprule\noalign{}
 Model & Input tokens & Output tokens & Tokens per 1k located \\
 \midrule\noalign{}
@@ -2320,9 +2317,9 @@ county-centroid placement; ``Low'' indicates state-level precision only.
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}@{}}
-\caption{\label{tbl:human_benchmark}Professional GIS benchmark results
-by \DIFdelbegin \DIFdel{accuracy }\DIFdelend \DIFaddbegin \DIFadd{precision }\DIFaddend category \DIFaddbegin \DIFadd{(overall and by High/Medium/Low
-placement)}\DIFaddend .}\tabularnewline
+\caption{\label{tbl:human_benchmark}Professional GIS benchmark \DIFdelbegin \DIFdel{results
+}\DIFdelend by
+\DIFdelbegin \DIFdel{accuracy category}\DIFdelend \DIFaddbegin \DIFadd{placement precision (overall; High/Medium/Low)}\DIFaddend .}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Accuracy Category
@@ -2382,9 +2379,8 @@ and central tendency.
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/error_boxplot.pdf}
-\caption{Error \DIFdelbeginFL \DIFdelFL{Distribution Boxplot }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{boxplots }\DIFaddendFL by \DIFdelbeginFL \DIFdelFL{Method}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{method: medians and interquartile ranges with
-whiskers; complements the violin and CDF
-views.}\DIFaddendFL }\label{fig:error_boxplot}
+\caption{Error \DIFdelbeginFL \DIFdelFL{Distribution Boxplot }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{boxplots }\DIFaddendFL by \DIFdelbeginFL \DIFdelFL{Method}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{method; complementary to violin and CDF
+plots.}\DIFaddendFL }\label{fig:error_boxplot}
 \end{figure}
 
 \subsection{Error Maps}\label{c.2-error-maps}
@@ -2392,8 +2388,8 @@ views.}\DIFaddendFL }\label{fig:error_boxplot}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/contact_sheet.png}
-\caption{\DIFdelbeginFL \DIFdelFL{Grid view }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Contact sheet }\DIFaddendFL of all \DIFdelbeginFL \DIFdelFL{43 }\DIFdelendFL mapped grants\DIFdelbeginFL \DIFdelFL{showing }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{: }\DIFaddendFL ground truth \DIFaddbeginFL \DIFaddFL{(black stars)
-}\DIFaddendFL and predictions\DIFaddbeginFL \DIFaddFL{, with dashed error lines}\DIFaddendFL .}\label{fig:contactsheet}
+\caption{\DIFdelbeginFL \DIFdelFL{Grid view of all 43 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{All }\DIFaddendFL mapped grants \DIFdelbeginFL \DIFdelFL{showing }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{with }\DIFaddendFL ground truth \DIFaddbeginFL \DIFaddFL{(black stars) }\DIFaddendFL and
+predictions\DIFaddbeginFL \DIFaddFL{; dashed lines indicate errors}\DIFaddendFL .}\label{fig:contactsheet}
 \end{figure}
 
 Figure \ref{fig:contactsheet} plots all six methods for every locatable
@@ -2418,8 +2414,8 @@ alone.
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
-\caption{\label{tbl:cost_marginal}Marginal cost to \DIFdelbegin \DIFdel{improve }\DIFdelend \DIFaddbegin \DIFadd{raise }\DIFaddend the ≤10 km
-hit-rate by one percentage point \DIFaddbegin \DIFadd{for each model}\DIFaddend .}\tabularnewline
+\caption{\label{tbl:cost_marginal}Marginal cost \DIFdelbegin \DIFdel{to improve the }\DIFdelend \DIFaddbegin \DIFadd{per +1 pp gain in }\DIFaddend ≤10 km
+\DIFdelbegin \DIFdel{hit-rate by one percentage point}\DIFdelend \DIFaddbegin \DIFadd{accuracy}\DIFaddend .}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model
@@ -2474,8 +2470,8 @@ maintaining lower error rates than the professional GIS approach.
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/pareto_latency_tradeoff.pdf}
-\caption{\DIFdelbeginFL \DIFdelFL{Latency-Accuracy Tradeoff}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Latency--accuracy scatter: mean error (km) versus processing
-time per grant (seconds; log-scale x-axis).}\DIFaddendFL }\label{fig:pareto_latency}
+\caption{\DIFdelbeginFL \DIFdelFL{Latency-Accuracy Tradeoff}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Latency--accuracy scatter (seconds, log x‑axis vs mean
+error).}\DIFaddendFL }\label{fig:pareto_latency}
 \end{figure}
 
 Figure \ref{fig:pareto_latency}: Latency-Accuracy Tradeoff. This figure
@@ -2514,9 +2510,9 @@ access alone.
   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0732}}
   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0732}}
   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0732}}@{}}
-\caption{\label{tbl:tool_direct_comparison}\DIFdelbegin \DIFdel{Side-by-side }\DIFdelend \DIFaddbegin \DIFadd{Direct }\DIFaddend comparison of
-identical models with and without tool access \DIFaddbegin \DIFadd{(controls for architecture
-effects)}\DIFaddend .}\tabularnewline
+\caption{\label{tbl:tool_direct_comparison}\DIFdelbegin \DIFdel{Side-by-side comparison of
+identical }\DIFdelend \DIFaddbegin \DIFadd{Identical }\DIFaddend models with and
+without tool access\DIFaddbegin \DIFadd{; isolates the effect of tools}\DIFaddend .}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model
@@ -2605,9 +2601,8 @@ with tools.
   >{\raggedright\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1071}}
   >{\raggedright\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1071}}
   >{\raggedright\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1071}}@{}}
-\caption{\label{tbl:tool_effect}Quantified effect of tool augmentation
-\DIFaddbegin \DIFadd{on mean error and accuracy-band percentages (Δ indicates change with
-tools)}\DIFaddend .}\tabularnewline
+\caption{\label{tbl:tool_effect}\DIFdelbegin \DIFdel{Quantified effect }\DIFdelend \DIFaddbegin \DIFadd{Effect }\DIFaddend of tool augmentation \DIFaddbegin \DIFadd{(Δ on mean
+error and accuracy bands)}\DIFaddend .}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model
@@ -2684,10 +2679,9 @@ nearly double the proportion of predictions within 10 km.
   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0909}}@{}}
-\caption{\label{tbl:best_methods}Best-performing \DIFdelbegin \DIFdel{methods per
-category}\DIFdelend \DIFaddbegin \DIFadd{non-tool method versus
-best tool-augmented method---head-to-head comparison across error
-metrics}\DIFaddend .}\tabularnewline
+\caption{\label{tbl:best_methods}\DIFdelbegin \DIFdel{Best-performing methods per
+category}\DIFdelend \DIFaddbegin \DIFadd{Head‑to‑head of best non‑tool vs best
+tool‑augmented method}\DIFaddend .}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Method
@@ -2762,7 +2756,7 @@ tools.
 
 \begin{longtable}[]{@{}lllllll@{}}
 \caption{\label{tbl:tool_distribution}Distribution of tool calls by
-method and tool type \DIFaddbegin \DIFadd{(geocode versus centroid)}\DIFaddend .}\tabularnewline
+method and tool type.}\tabularnewline
 \toprule\noalign{}
 Method & Tool Type & Mean & SD & Median & Min & Max \\
 \midrule\noalign{}
@@ -2787,8 +2781,8 @@ produced the coordinates used in the final answer. Lower values indicate
 more efficient search strategies.
 
 \begin{longtable}[]{@{}llll@{}}
-\caption{\label{tbl:search_efficiency}Tool search efficiency metrics\DIFaddbegin \DIFadd{:
-selected-call index and first-call success rate}\DIFaddend .}\tabularnewline
+\caption{\label{tbl:search_efficiency}Tool search efficiency
+\DIFdelbegin \DIFdel{metrics}\DIFdelend \DIFaddbegin \DIFadd{(selected‑call index; first‑call success)}\DIFaddend .}\tabularnewline
 \toprule\noalign{}
 Method & Mean selected call index & Median & First-call success rate \\
 \midrule\noalign{}
