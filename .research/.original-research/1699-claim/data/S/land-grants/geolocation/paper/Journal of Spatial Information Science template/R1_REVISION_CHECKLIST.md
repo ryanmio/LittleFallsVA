@@ -1,7 +1,7 @@
 # R1 Revision Checklist
 ## JOSIS Manuscript: "Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants"
 
-**Status:** 6 of 56 items completed
+**Status:** 7 of 56 items completed
 
 ---
 

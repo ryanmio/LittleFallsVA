@@ -498,11 +498,13 @@ Several caveats temper the preceding claims.
 
 4. **OCR and transcription noise.**  Although the best-performing OCR pipeline available was applied, minor character errors persist.  Because the language models ingested this noisy text directly, a fraction of the residual error may stem from imperfect input rather than conceptual failure.
 
-5. **Tool bias.**  Google's geocoder is optimised for modern place names; its deterministic output may shift marginally over time as the underlying database updates, complicating longitudinal reproducibility.
+5. **Model family scope.**  Our LLM experiments are restricted to OpenAI’s GPT/o‑series snapshots from April–May 2025. Results may not transfer to other proprietary or open‑source families (e.g., Llama, Mistral) without replication; we treat cross‑model generalization as future work.
 
-6. **GIS benchmark generality.** The GIS analyst baseline [@Bashorun2025_gis] relies on a single expert-authored geocoding procedure. Accuracy and efficiency might vary significantly with different gazetteer sources, methods, parameter tuning, or analyst expertise. Therefore, this single-practitioner workflow is best interpreted as a practical lower bound or illustrative benchmark, rather than a representative or statistically powered estimate of typical or best-case professional GIS performance. The human GIS analyst baseline and other comparison methods were limited to 43 test cases due to practical constraints (budget, scope). Expanding the evaluation set would incur substantial additional costs and is left to future work, depending on community interest and initial benchmark traction.
+6. **Tool bias.**  Google's geocoder is optimised for modern place names; its deterministic output may shift marginally over time as the underlying database updates, complicating longitudinal reproducibility.
 
-7. **Cost assumptions.**  Monetary estimates are tied to the May-2025 OpenAI pricing schedule (see Table \ref{tbl:prices}); rate changes would alter the cost frontier.
+7. **GIS benchmark generality.** The GIS analyst baseline [@Bashorun2025_gis] relies on a single expert-authored geocoding procedure. Accuracy and efficiency might vary significantly with different gazetteer sources, methods, parameter tuning, or analyst expertise. Therefore, this single-practitioner workflow is best interpreted as a practical lower bound or illustrative benchmark, rather than a representative or statistically powered estimate of typical or best-case professional GIS performance. The human GIS analyst baseline and other comparison methods were limited to 43 test cases due to practical constraints (budget, scope). Expanding the evaluation set would incur substantial additional costs and is left to future work, depending on community interest and initial benchmark traction.
+
+8. **Cost assumptions.**  Monetary estimates are tied to the May-2025 OpenAI pricing schedule (see Table \ref{tbl:prices}); rate changes would alter the cost frontier.
 
 # 9 Future Work
 

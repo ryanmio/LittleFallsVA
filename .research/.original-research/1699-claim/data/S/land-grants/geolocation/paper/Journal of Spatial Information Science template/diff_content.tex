@@ -1502,7 +1502,13 @@ Several caveats temper the preceding claims.
   fraction of the residual error may stem from imperfect input rather
   than conceptual failure.
 \item
-  \textbf{Tool bias.} Google's geocoder is optimised for modern place
+  \DIFaddbegin \textbf{\DIFadd{Model family scope.}} \DIFadd{Our LLM experiments are restricted to
+  OpenAI's GPT/o‑series snapshots from April--May 2025. Results may not
+  transfer to other proprietary or open‑source families (e.g., Llama,
+  Mistral) without replication; we treat cross‑model generalization as
+  future work.
+}\item
+  \DIFaddend \textbf{Tool bias.} Google's geocoder is optimised for modern place
   names; its deterministic output may shift marginally over time as the
   underlying database updates, complicating longitudinal
   reproducibility.
