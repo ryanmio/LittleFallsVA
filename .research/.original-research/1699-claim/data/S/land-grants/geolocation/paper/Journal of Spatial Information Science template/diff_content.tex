@@ -1503,10 +1503,26 @@ Several caveats temper the preceding claims.
   than conceptual failure.
 \item
   \DIFaddbegin \textbf{\DIFadd{Model family scope.}} \DIFadd{Our LLM experiments are restricted to
-  OpenAI's GPT/o‑series snapshots from April--May 2025. Results may not
-  transfer to other proprietary or open‑source families (e.g., Llama,
-  Mistral) without replication; we treat cross‑model generalization as
-  future work.
+  OpenAI's GPT/o‑series snapshots from April--May 2025. This choice is
+  methodological rather than proprietary: cross‑provider comparisons
+  confound architecture with implementation details that are neither
+  standardized nor fully documented. Tokenization schemes,
+  context‑window management, nucleus/temperature scheduling,
+  system‑prompt handling, tool‑call middleware, safety filters, and
+  log‑prob reporting differ subtly across vendors and often across
+  endpoints within the same vendor. Even when nominal hyperparameters
+  share names (e.g., temperature, top‑p, frequency/penalty), their
+  effective semantics---clamping ranges, annealing schedules,
+  interaction with decoding heuristics---are provider‑specific. Holding
+  to a single provider keeps the evaluation manifold fixed: identical
+  tokenization, identical server‑side decoding policies, identical
+  tool‑call semantics and error surfaces, and identical billing/latency
+  instrumentation. This design decision reduces between‑system variance
+  and preserves internal validity for cost/latency/accuracy trade‑offs
+  on historical abstracts. Results may not transfer to other proprietary
+  or open‑source families (e.g., Llama, Mistral) without replication
+  under equivalently controlled conditions; we treat cross‑model
+  generalization as future work.
 }\item
   \DIFaddend \textbf{Tool bias.} Google's geocoder is optimised for modern place
   names; its deterministic output may shift marginally over time as the

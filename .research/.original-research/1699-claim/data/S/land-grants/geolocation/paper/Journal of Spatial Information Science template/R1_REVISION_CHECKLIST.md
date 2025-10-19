@@ -14,8 +14,8 @@
 - [x] **E2:** Add references to corpora and tools listed in text
   - Changes: Inserted canonical citations for the above corpora/tools at their first mentions; ensured they compile in the JOSIS build. Commit: aed55252.
 
-- [ ] **E3:** Discuss limitations: study limited to ChatGPT models, sample relatively small
-  - Changes: 
+- [x] **E3:** Discuss limitations: study limited to ChatGPT models, sample relatively small
+  - Changes: Added an explicit model-family scope limitation in §8 (OpenAI GPT/o‑series only) and kept the small evaluation set caveat prominent; numbering adjusted without inflating length. Commit: e637595.
 
 - [ ] **E4:** Reconsider if sections 14-16 are crucial for main message or make paper too long/hard to read
   - Changes: 
