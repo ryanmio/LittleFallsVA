@@ -384,7 +384,7 @@ Examining the latency dimension, Figure \ref{fig:latency_box} shows that automat
 
 ## 6.4 Qualitative Examples
 
-To illustrate how the two prompting paradigms differ, the chain of thought for grant_04 ("WILLIAM WILLIAMS) is distilled into key stages. The full grant text shown to the model was: 
+To illustrate how the two prompting paradigms differ, the chain of thought for grant_04 (WILLIAM WILLIAMS) is distilled into key stages. The full grant text shown to the model was: 
 
 \begin{quote}
 "WILLIAM WILLIAMS, 400 acs., on 8. side of the main Black Water Swamp; by run of Holloway Sw; 24 Apr. 1703, p. 519. Trans. of 8 pers: Note: 8 tights paid for to Wm, Byrd, Esqr., Auditor."
@@ -414,7 +414,7 @@ Two configurations—T-1 and T-4—were granted access to the external function 
 
 Table: Tool‑chain behavior on the 43‑grant test set—calls per entry (mean), geocode:centroid ratio, and first‑call success rate. {#tbl:tooluse}
 
-For both pipelines the Google `geocode_place` endpoint dominated the call mix, whereas the auxiliary `compute_centroid` function appeared in fewer than one call per ten.  gpt-4.1-2025-04-14 (T-4) adopted a more economical strategy, issuing on average 2.3 calls per grant while succeeding on the first query in 73% of cases.  The gpt-4o-mini-2025-04-16 model (T-1), by contrast, averaged 4.0 calls with a 67% first-call success rate.  This greater query volume manifests as the higher token usage and latency reported in Section 6.3, yet it conferred no observable advantage in positional accuracy (Section 6.1).
+For both pipelines the Google geocode_place endpoint dominated the call mix, whereas the auxiliary compute_centroid function appeared in fewer than one call per ten.  gpt-4.1-2025-04-14 (T-4) adopted a more economical strategy, issuing on average 2.3 calls per grant while succeeding on the first query in 73% of cases.  The gpt-4o-mini-2025-04-16 model (T-1), by contrast, averaged 4.0 calls with a 67% first-call success rate.  This greater query volume manifests as the higher token usage and latency reported in Section 6.3, yet it conferred no observable advantage in positional accuracy (Section 6.1).
 
 ## 6.6 Robustness / Ablation Studies
 
