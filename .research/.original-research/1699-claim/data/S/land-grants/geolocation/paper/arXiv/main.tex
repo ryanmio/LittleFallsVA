@@ -863,8 +863,9 @@ coarsest gazetteer cues.
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2609}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1304}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1304}}@{}}
-\caption{\label{tbl:accuracy}Coordinate-accuracy metrics on 43 grants
-(mean ± 95\% CI, median, and ≤10 km share).}\tabularnewline
+\caption{\label{tbl:accuracy}Comparative coordinate accuracy by method;
+mean ± 95\% CI and median indicate central tendency, and the ≤10 km
+column highlights high‑precision hits.}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 ID
@@ -961,14 +962,17 @@ core methods from heuristic baselines.}\label{fig:violin_core}
 \end{figure}
 
 Figure \ref{fig:cdf_models} presents the cumulative distribution of
-errors for each evaluated method. LLMs exhibit higher ≤10 km rates and
-stochastically dominate the baselines across most of the range.
+errors for each evaluated method as the share of grants within a given
+distance threshold. This curve allows comparison of accuracy across all
+thresholds (e.g., 5--100 km), not just a single cutoff.
 
 \begin{figure}
 \centering
 \pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/cdf_graphs/cdf_models_combined.pdf}}
-\caption{Cumulative error distributions; supports comparing ≤10 km rates
-and tail behavior across methods.}\label{fig:cdf_models}
+\caption{Cumulative accuracy by distance threshold (km): for each
+method, the curve shows the percentage of grants whose error is below
+each threshold, enabling full‑range comparison of
+accuracy.}\label{fig:cdf_models}
 \end{figure}
 
 Table \ref{tbl:reasoning} examines how varying the

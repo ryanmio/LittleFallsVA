@@ -310,7 +310,7 @@ Table \ref{tbl:accuracy} summarises distance‐error statistics for all 43 grant
 | H-4 | County Centroid | 80.3 [66.0, 95.9] | 70.5 | 4.7 |
 | H-3 | Mordecai-3 | 94.3 [68.8, 124.6] | 55.5 | 7.0 |
 
-Table: Coordinate-accuracy metrics on 43 grants (mean ± 95% CI, median, and ≤10 km share). {#tbl:accuracy}
+Table: Comparative coordinate accuracy by method; mean ± 95% CI and median indicate central tendency, and the ≤10 km column highlights high‑precision hits. {#tbl:accuracy}
 
 Bootstrap confidence intervals confirm ensemble superiority over single-shot predictions, indicating ensemble methods reduce mean error by approximately 4–11 km compared to single-shot methods.
 
@@ -326,9 +326,9 @@ To focus on the head-to-head comparison between the language-model approaches an
 
 ![Error distributions for LLMs vs. GIS analyst only, isolating core methods from heuristic baselines.](../analysis/figures/error_violin_core_methods.pdf){#fig:violin_core width="0.7\linewidth"}
 
-Figure \ref{fig:cdf_models} presents the cumulative distribution of errors for each evaluated method. LLMs exhibit higher ≤10 km rates and stochastically dominate the baselines across most of the range.
+Figure \ref{fig:cdf_models} presents the cumulative distribution of errors for each evaluated method as the share of grants within a given distance threshold. This curve allows comparison of accuracy across all thresholds (e.g., 5–100 km), not just a single cutoff.
 
-![Cumulative error distributions; supports comparing ≤10 km rates and tail behavior across methods.](../analysis/figures/cdf_graphs/cdf_models_combined.pdf){#fig:cdf_models width="0.9\linewidth"}
+![Cumulative accuracy by distance threshold (km): for each method, the curve shows the percentage of grants whose error is below each threshold, enabling full‑range comparison of accuracy.](../analysis/figures/cdf_graphs/cdf_models_combined.pdf){#fig:cdf_models width="0.9\linewidth"}
 
 Table \ref{tbl:reasoning} examines how varying the *reasoning_effort* parameter within the same o3-2025-04-16 model (M-2) affects spatial accuracy. The differences are minor: mean error shifts by less than 1 km across effort levels, while the share of highly-accurate predictions (≤ 10 km) increases by approximately 7 percentage points from low to medium/high effort.
 

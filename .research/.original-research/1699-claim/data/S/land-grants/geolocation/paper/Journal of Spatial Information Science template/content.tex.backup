@@ -617,8 +617,8 @@ remain at their service defaults. Each abstract is processed with a
 single API call; no external tools are available in this condition.
 
 \begin{longtable}[]{@{}ll@{}}
-\caption{\label{tbl:mmodels}One-shot model variants
-(M-series).}\tabularnewline
+\caption{\label{tbl:mmodels}Evaluated one-shot model variants
+(M‑series).}\tabularnewline
 \toprule\noalign{}
 ID & Model \\
 \midrule\noalign{}
@@ -662,8 +662,8 @@ costs and processing times without yielding distinct results or further
 insights into tool-augmented performance.
 
 \begin{longtable}[]{@{}ll@{}}
-\caption{\label{tbl:tmodels}Tool-augmented model variants
-(T-series).}\tabularnewline
+\caption{\label{tbl:tmodels}Evaluated tool‑augmented model variants
+(T‑series).}\tabularnewline
 \toprule\noalign{}
 ID & Model \\
 \midrule\noalign{}
@@ -824,8 +824,9 @@ coarsest gazetteer cues.
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2609}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1304}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1304}}@{}}
-\caption{\label{tbl:accuracy}Coordinate-accuracy metrics on 43 grants
-(mean ± 95\% CI, median, and ≤10 km share).}\tabularnewline
+\caption{\label{tbl:accuracy}Comparative coordinate accuracy by method;
+mean ± 95\% CI and median indicate central tendency, and the ≤10 km
+column highlights high‑precision hits.}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 ID
@@ -1134,8 +1135,9 @@ function suite. Their invocation patterns are summarised in Table
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}@{}}
-\caption{\label{tbl:tooluse}LLM tool-chain behavior on the 43-grant test
-set.}\tabularnewline
+\caption{\label{tbl:tooluse}Tool‑chain behavior on the 43‑grant test
+set---calls per entry (mean), geocode:centroid ratio, and first‑call
+success rate.}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Method

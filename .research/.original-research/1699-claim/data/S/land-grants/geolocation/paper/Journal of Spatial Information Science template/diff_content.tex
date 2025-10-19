@@ -824,8 +824,10 @@ coarsest gazetteer cues.
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2609}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1304}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1304}}@{}}
-\caption{\label{tbl:accuracy}Coordinate-accuracy metrics \DIFaddbegin \DIFadd{on 43 grants
-(mean ± 95\% CI, median, and ≤10 km share)}\DIFaddend .}\tabularnewline
+\caption{\label{tbl:accuracy}\DIFdelbegin \DIFdel{Coordinate-accuracy
+metrics}\DIFdelend \DIFaddbegin \DIFadd{Comparative coordinate accuracy by method;
+mean ± 95\% CI and median indicate central tendency, and the ≤10 km
+column highlights high‑precision hits}\DIFaddend .}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 ID
@@ -924,15 +926,19 @@ core methods from heuristic baselines.}\DIFaddendFL }\label{fig:violin_core}
 \end{figure}
 
 Figure \ref{fig:cdf_models} presents the cumulative distribution of
-errors for each evaluated method. \DIFaddbegin \DIFadd{LLMs exhibit higher ≤10 km rates and
-stochastically dominate the baselines across most of the range.
+errors for each evaluated method \DIFdelbegin \DIFdel{.
+}\DIFdelend \DIFaddbegin \DIFadd{as the share of grants within a given
+distance threshold. This curve allows comparison of accuracy across all
+thresholds (e.g., 5--100 km), not just a single cutoff.
 }\DIFaddend 
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/cdf_graphs/cdf_models_combined.pdf}
-\caption{Cumulative error \DIFdelbeginFL \DIFdelFL{distribution by method}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{distributions; supports comparing ≤10 km rates
-and tail behavior across methods.}\DIFaddendFL }\label{fig:cdf_models}
+\caption{Cumulative \DIFdelbeginFL \DIFdelFL{error distribution }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{accuracy }\DIFaddendFL by \DIFaddbeginFL \DIFaddFL{distance threshold (km): for each
+}\DIFaddendFL method\DIFaddbeginFL \DIFaddFL{, the curve shows the percentage of grants whose error is below
+each threshold, enabling full‑range comparison of
+accuracy.}\DIFaddendFL }\label{fig:cdf_models}
 \end{figure}
 
 Table \ref{tbl:reasoning} examines how varying the
