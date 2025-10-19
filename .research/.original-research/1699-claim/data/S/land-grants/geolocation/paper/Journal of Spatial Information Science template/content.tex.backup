@@ -922,16 +922,18 @@ outperform manual geocoding.
 core methods from heuristic baselines.}\label{fig:violin_core}
 \end{figure}
 
-Figure \ref{fig:cdf_models} plots cumulative accuracy as a function of
-distance threshold; curves that are higher and further left indicate
-stronger performance across thresholds.
+Figure \ref{fig:cdf_models} presents the cumulative distribution of
+errors for each evaluated method as the share of grants within a given
+distance threshold. This curve allows comparison of accuracy across all
+thresholds (e.g., 5--100 km), not just a single cutoff.
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/cdf_graphs/cdf_models_combined.pdf}
-\caption{Cumulative accuracy vs.~distance threshold (km); higher‑left
-curves indicate better performance across
-thresholds.}\label{fig:cdf_models}
+\caption{Cumulative accuracy by distance threshold (km): for each
+method, the curve shows the percentage of grants whose error is below
+each threshold, enabling full‑range comparison of
+accuracy.}\label{fig:cdf_models}
 \end{figure}
 
 Table \ref{tbl:reasoning} examines how varying the
@@ -2008,9 +2010,9 @@ approach, M-2 (o3-2025-04-16), achieves a mean error of 23.39 km with a
 95\% confidence interval of {[}17.57, 29.54{]} km.
 
 \begin{longtable}[]{@{}lllll@{}}
-\caption{\label{tbl:error_ci}Mean error with 95\% bootstrap CIs by
-method; reference for
-Figure\textasciitilde{}\ref{fig:accuracy_bar}.}\tabularnewline
+\caption{\label{tbl:error_ci}Mean error with 95\% bootstrap confidence
+intervals by method; complements the main-text accuracy
+summary.}\tabularnewline
 \toprule\noalign{}
 Method & Model & n & Mean km & 95\% CI \\
 \midrule\noalign{}
@@ -2058,8 +2060,9 @@ kilometers of ground truth.
   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0833}}
   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0833}}
   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0833}}@{}}
-\caption{\label{tbl:method_performance}Full performance profile per
-method (dispersion and ≤10/25/50 km bands).}\tabularnewline
+\caption{\label{tbl:method_performance}Detailed performance metrics by
+method, including dispersion and accuracy bands (≤10/25/50
+km).}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Method
@@ -2163,9 +2166,9 @@ high-precision prediction rate by one percentage point.
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1500}}@{}}
-\caption{\label{tbl:cost_accuracy}Cost--accuracy summary by model
-family; use with Figure\textasciitilde{}\ref{fig:pareto_cost} to select
-an operating point.}\tabularnewline
+\caption{\label{tbl:cost_accuracy}Cost--accuracy summary by model family
+(mean error, ≤10 km hit-rate, cost per 1,000 located, and marginal cost
+per +1\% ≤10 km).}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model
@@ -2218,8 +2221,9 @@ improvement over the traditional GIS baseline.
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
-\caption{\label{tbl:time_usage}Processing time by model; companion to
-Section\textasciitilde6.3 for throughput estimates.}\tabularnewline
+\caption{\label{tbl:time_usage}Processing time by model: hours per
+located, scaled hours per 1,000 located, and speedup versus the GIS
+analyst baseline.}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model
@@ -2263,8 +2267,9 @@ Table \ref{tbl:token_usage} provides detailed token consumption data
 across all models, offering insight into computational efficiency.
 
 \begin{longtable}[]{@{}llll@{}}
-\caption{\label{tbl:token_usage}Token consumption by model; informs
-compute budgeting and reproducibility.}\tabularnewline
+\caption{\label{tbl:token_usage}Token consumption by model across all
+runs (input, output, and tokens per 1,000 located
+grants).}\tabularnewline
 \toprule\noalign{}
 Model & Input tokens & Output tokens & Tokens per 1k located \\
 \midrule\noalign{}
@@ -2309,8 +2314,9 @@ county-centroid placement; ``Low'' indicates state-level precision only.
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}@{}}
-\caption{\label{tbl:human_benchmark}Professional GIS benchmark by
-placement precision (overall; High/Medium/Low).}\tabularnewline
+\caption{\label{tbl:human_benchmark}Professional GIS benchmark results
+by precision category (overall and by High/Medium/Low
+placement).}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Accuracy Category
@@ -2370,8 +2376,9 @@ and central tendency.
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/error_boxplot.pdf}
-\caption{Error boxplots by method; complementary to violin and CDF
-plots.}\label{fig:error_boxplot}
+\caption{Error boxplots by method: medians and interquartile ranges with
+whiskers; complements the violin and CDF
+views.}\label{fig:error_boxplot}
 \end{figure}
 
 \subsection{Error Maps}\label{c.2-error-maps}
@@ -2379,8 +2386,8 @@ plots.}\label{fig:error_boxplot}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/contact_sheet.png}
-\caption{All mapped grants with ground truth (black stars) and
-predictions; dashed lines indicate errors.}\label{fig:contactsheet}
+\caption{Contact sheet of all mapped grants: ground truth (black stars)
+and predictions, with dashed error lines.}\label{fig:contactsheet}
 \end{figure}
 
 Figure \ref{fig:contactsheet} plots all six methods for every locatable
@@ -2405,8 +2412,8 @@ alone.
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
-\caption{\label{tbl:cost_marginal}Marginal cost per +1 pp gain in ≤10 km
-accuracy.}\tabularnewline
+\caption{\label{tbl:cost_marginal}Marginal cost to raise the ≤10 km
+hit-rate by one percentage point for each model.}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model
@@ -2461,8 +2468,8 @@ maintaining lower error rates than the professional GIS approach.
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/pareto_latency_tradeoff.pdf}
-\caption{Latency--accuracy scatter (seconds, log x‑axis vs mean
-error).}\label{fig:pareto_latency}
+\caption{Latency--accuracy scatter: mean error (km) versus processing
+time per grant (seconds; log-scale x-axis).}\label{fig:pareto_latency}
 \end{figure}
 
 Figure \ref{fig:pareto_latency}: Latency-Accuracy Tradeoff. This figure
@@ -2501,8 +2508,9 @@ access alone.
   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0732}}
   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0732}}
   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0732}}@{}}
-\caption{\label{tbl:tool_direct_comparison}Identical models with and
-without tool access; isolates the effect of tools.}\tabularnewline
+\caption{\label{tbl:tool_direct_comparison}Direct comparison of
+identical models with and without tool access (controls for architecture
+effects).}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model
@@ -2591,8 +2599,9 @@ with tools.
   >{\raggedright\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1071}}
   >{\raggedright\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1071}}
   >{\raggedright\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1071}}@{}}
-\caption{\label{tbl:tool_effect}Effect of tool augmentation (Δ on mean
-error and accuracy bands).}\tabularnewline
+\caption{\label{tbl:tool_effect}Quantified effect of tool augmentation
+on mean error and accuracy-band percentages (Δ indicates change with
+tools).}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model
@@ -2669,8 +2678,9 @@ nearly double the proportion of predictions within 10 km.
   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0909}}@{}}
-\caption{\label{tbl:best_methods}Head‑to‑head of best non‑tool vs best
-tool‑augmented method.}\tabularnewline
+\caption{\label{tbl:best_methods}Best-performing non-tool method versus
+best tool-augmented method---head-to-head comparison across error
+metrics.}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Method
@@ -2745,7 +2755,7 @@ tools.
 
 \begin{longtable}[]{@{}lllllll@{}}
 \caption{\label{tbl:tool_distribution}Distribution of tool calls by
-method and tool type.}\tabularnewline
+method and tool type (geocode versus centroid).}\tabularnewline
 \toprule\noalign{}
 Method & Tool Type & Mean & SD & Median & Min & Max \\
 \midrule\noalign{}
@@ -2770,8 +2780,8 @@ produced the coordinates used in the final answer. Lower values indicate
 more efficient search strategies.
 
 \begin{longtable}[]{@{}llll@{}}
-\caption{\label{tbl:search_efficiency}Tool search efficiency
-(selected‑call index; first‑call success).}\tabularnewline
+\caption{\label{tbl:search_efficiency}Tool search efficiency metrics:
+selected-call index and first-call success rate.}\tabularnewline
 \toprule\noalign{}
 Method & Mean selected call index & Median & First-call success rate \\
 \midrule\noalign{}
