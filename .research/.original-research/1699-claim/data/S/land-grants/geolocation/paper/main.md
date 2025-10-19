@@ -212,7 +212,7 @@ Six OpenAI model variants spanning three architecture families constitute the M-
 | M-5 | `gpt-4o-2024-08-06` |
 | M-6 | `gpt-3.5-turbo` |
 
-Table: One-shot model variants (M-series). {#tbl:mmodels}
+Table: Evaluated one-shot model variants (M‑series). {#tbl:mmodels}
 
 ## Tool-augmented Chain-of-Thought (T-series)
 
@@ -228,7 +228,7 @@ Table \ref{tbl:tmodels} shows the five model variants initially considered for t
 | T-4 | `gpt-4.1-2025-04-14` |
 | T-5 | `computer-use-preview-2025-03-11` |
 
-Table: Tool-augmented model variants (T-series). {#tbl:tmodels}
+Table: Evaluated tool‑augmented model variants (T‑series). {#tbl:tmodels}
 
 ## Five-call Ensemble (E-series)
 
@@ -410,7 +410,7 @@ Two configurations—T-1 and T-4—were granted access to the external function 
 | T-1 | o4-mini-2025-04-16 | 3.98 | 22.86:1 | 66.7% |
 | T-4 | gpt-4.1-2025-04-14 | 2.23 | 7.73:1 | 72.1% |
 
-Table: LLM tool-chain behavior on the 43-grant test set. {#tbl:tooluse}
+Table: Tool‑chain behavior on the 43‑grant test set—calls per entry (mean), geocode:centroid ratio, and first‑call success rate. {#tbl:tooluse}
 
 For both pipelines the Google `geocode_place` endpoint dominated the call mix, whereas the auxiliary `compute_centroid` function appeared in fewer than one call per ten.  gpt-4.1-2025-04-14 (T-4) adopted a more economical strategy, issuing on average 2.3 calls per grant while succeeding on the first query in 73% of cases.  The gpt-4o-mini-2025-04-16 model (T-1), by contrast, averaged 4.0 calls with a 67% first-call success rate.  This greater query volume manifests as the higher token usage and latency reported in § 6.3, yet it conferred no observable advantage in positional accuracy (§ 6.1).
 
