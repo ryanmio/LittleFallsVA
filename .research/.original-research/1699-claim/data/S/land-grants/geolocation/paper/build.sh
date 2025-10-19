@@ -464,3 +464,20 @@ else
 fi
 
 echo "arXiv package is ready. Compress $ARXIV_DIR into a zip/tar.gz and upload to Overleaf or arXiv." 
+
+# ---------------- Latexdiff for Revision Tracking ----------------
+# Optional: Generate diff files for revision tracking
+# Before first use: mkdir -p _baseline
+#                   cp "Journal of Spatial Information Science template/article.tex" _baseline/
+#                   cp "Journal of Spatial Information Science template/content.tex" _baseline/
+# Then run build.sh after making edits to generate diffs
+# Upload diff_article.tex and diff_content.tex to Overleaf to see highlighted changes
+# --------------------------------------------------------
+
+if [ -f "$PAPER_DIR/_baseline/article.tex" ] && [ -f "$PAPER_DIR/_baseline/content.tex" ] && command -v latexdiff &> /dev/null; then
+  echo "\n==== Generating revision diff files ===="
+  latexdiff --exclude-textcmd="cite,ref" "$PAPER_DIR/_baseline/content.tex" "$TEMPLATE_DIR/content.tex" > "$TEMPLATE_DIR/diff_content.tex"
+  latexdiff "$PAPER_DIR/_baseline/article.tex" "$TEMPLATE_DIR/article.tex" > "$TEMPLATE_DIR/diff_article.tex"
+  sed -i '' 's/\\input{content.tex}/\\input{diff_content.tex}/' "$TEMPLATE_DIR/diff_article.tex"
+  echo "✓ Created diff_article.tex and diff_content.tex (upload these to Overleaf to see changes highlighted)"
+fi
