@@ -1,7 +1,7 @@
 # R1 Revision Checklist
 ## JOSIS Manuscript: "Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants"
 
-**Status:** 0 of 56 items completed
+**Status:** 2 of 56 items completed
 
 ---
 
@@ -104,9 +104,8 @@
 ## Reviewer B (4 items)
 
 ### Major Requirement
-- [ ] **B1:** All table and figure captions need to be more descriptive with context
-  - Example: "Figure 1: Coordinate accuracy by method" → "Figure 1: The coordinate accuracy shows ... performing best with a mean error of ... [details]..."
-  - Changes: 
+- [x] **B1:** All table and figure captions need to be more descriptive with context
+  - Changes: Revised captions across main text and appendices to state purpose and how to read each artifact (not restating columns or results). Added concise first‑mention takeaways in §6.1 and fixed figure reference mismatch in §6.3. Commits: 9a738a2, b692b3c, d3d0e81, 51ec750, 9394196, dbda28a, 3276d8d.
 
 ### Optional/Minor
 - [ ] **B2:** [OPTIONAL] Consider adding Google geoparsing pipeline comparison (spatial reasoning AI + geocoding)
@@ -183,8 +182,8 @@
 ## Global Sweeps (7 items)
 
 ### Cross-cutting Quality Checks
-- [ ] **G1:** Descriptive captions pass – each figure/table states what it shows and why it matters; ensure in-text references near first mention.
-  - Changes: 
+- [x] **G1:** Descriptive captions pass – each figure/table states what it shows and why it matters; ensure in-text references near first mention.
+  - Changes: Added one‑line takeaways at first mention for §6.1 figures; clarified captions for cost/latency figures and all appendix tables/figures; ensured consistent labels and references. Commits: 9a738a2, b692b3c, d3d0e81, 51ec750, 9394196, dbda28a, 3276d8d.
 
 - [ ] **G2:** Cross-reference normalization – replace § with "Section …"; ensure appendix vs numbered sections are consistent.
   - Changes: 
