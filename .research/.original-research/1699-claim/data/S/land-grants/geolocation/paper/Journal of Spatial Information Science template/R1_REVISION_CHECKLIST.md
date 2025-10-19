@@ -8,8 +8,8 @@
 ## Editor-in-Chief (4 items)
 
 ### Major Themes
-- [ ] **E1:** Better embed the work in current literature
-  - Changes: 
+- [x] **E1:** Better embed the work in current literature
+  - Changes: Added concise positioning in §1.2 (vs. GeoTxt/Mordecai/CamCoder), benchmark context in §2.2 (GeoCorpora/WikToR task mismatch), and tool‑augmented alignment in §2.3 (relation to GeoAgent/GeoGLUE); minimal prose, no duplication. Commit: 6816de4.
 
 - [x] **E2:** Add references to corpora and tools listed in text
   - Changes: Inserted canonical citations for the above corpora/tools at their first mentions; ensured they compile in the JOSIS build. Commit: aed55252.

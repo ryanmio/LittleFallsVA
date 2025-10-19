@@ -90,19 +90,17 @@ Addressing these questions required a rigorously annotated test bench
 that blended historical sources, modern GIS ground truth, and controlled
 prompt engineering. The methodological design seeks to embody principles
 of rigorous and responsible GeoAI research, as outlined by Li et al.
-{[}@Li2024\_geoai{]} and detailed further in §2.4.
-
-Relative to classic geoparsers---gazetteer‑driven Stanford NER/GeoTxt
-{[}@karimzadeh2019geotxt{]}, neural Mordecai‑3
-{[}@halterman2023mordecai{]}, and map‑aware CamCoder
-{[}@Gritta2018\_camcoder{]}---our inputs are long, archaic abstracts
-whose nested landmarks and surveyor bearings differ markedly from the
-short, contemporary texts common in prior benchmarks. We therefore
-compare a pure text‑only pipeline to an LLM‑plus‑tools variant that can
-call geocoders mid‑reasoning, and we treat accuracy, monetary cost, and
-latency as first‑class outcomes. This situates the present study
-alongside modern LLM geolocation pipelines while targeting a distinct
-colonial corpus and evaluation protocol.
+{[}@Li2024\_geoai{]} and detailed further in §2.4, and---relative to
+classic geoparsers such as Stanford NER/GeoTxt
+{[}@karimzadeh2019geotxt{]}, Mordecai‑3 {[}@halterman2023mordecai{]},
+and the map‑aware CamCoder {[}@Gritta2018\_camcoder{]}---centers on
+long, archaic abstracts with nested landmarks and surveyor bearings
+rather than the short, contemporary texts common in prior benchmarks.
+Accordingly, we compare a pure text‑only pipeline to an LLM‑plus‑tools
+variant that can call geocoders mid‑reasoning, and we report accuracy,
+monetary cost, and latency as first‑class outcomes to situate our study
+within modern LLM geolocation while targeting a distinct colonial corpus
+and evaluation protocol.
 
 \subsection{1.3 Contributions}\label{contributions}
 
@@ -276,19 +274,17 @@ dealing with archaic toponyms or surveyor jargon. Even the most advanced
 automated systems leave a long tail of ambiguous or obsolete place
 names---precisely the cases that plague colonial patent abstracts.
 
-In summary, fine-tuned LLMs now surpass previous neural approaches on
-toponym resolution and can support colony-scale spatial inference, yet
-their reasoning remains sensitive to context and scale. The next section
-(§ 2.3) explores tool-augmented prompting frameworks that grant LLMs
-access to external geocoders and vector databases---potentially
-mitigating some of the failure modes identified above.
-
-Most of these evaluations center on short, contemporary snippets (e.g.,
-tweets and Wikipedia) with modern toponyms as in GeoCorpora and WikToR
-{[}@wallgrun2017geocorpora; @gritta2018whatsmissing{]}. By contrast, our
-inputs are long‑form colonial abstracts with obsolete place names and
-surveyor jargon, motivating a tailored evaluation on 43 curated grants
-with archival ground truth.
+In summary, fine‑tuned LLMs now surpass previous neural approaches on
+toponym resolution and can support colony‑scale spatial inference, yet
+their reasoning remains sensitive to context and scale---findings
+established largely on short, contemporary corpora such as GeoCorpora
+and WikToR {[}@wallgrun2017geocorpora; @gritta2018whatsmissing{]}. By
+contrast, we evaluate long‑form colonial abstracts with obsolete
+toponyms and surveyor jargon against 43 curated ground‑truth points. The
+next section (§ 2.3) explores tool‑augmented prompting frameworks that
+grant LLMs access to external geocoders and vector
+databases---potentially mitigating some of the failure modes identified
+above.
 
 \subsection{2.3 Tool-Augmented Prompting
 Techniques}\label{tool-augmented-prompting-techniques}
@@ -345,16 +341,13 @@ granting an LLM controlled access to trusted GIS services reduces
 hallucination, improves numerical accuracy, and broadens task coverage
 (Hu et al. {[}@Hu2024\_toponym\_llm{]}; Huang et al.
 {[}@Huang2024\_geoagent{]}). The present work builds on this pattern by
-testing whether a similar benefit materializes for colonial land-grant
-geolocation---comparing a pure one-shot prompt to a tool-augmented
-chain-of-thought that can issue mid-prompt geocoding and
-distance-calculation calls while processing historical texts with
-archaic toponyms and surveying terminology.
-
-Concretely, our experiments interleave geocoder queries and distance
-checks within English‑language colonial abstracts and report accuracy
-together with end‑to‑end costs and latency. Unlike GeoAgent's address
-normalization and GeoGLUE tasks {[}@Huang2024\_geoagent;
+testing whether a similar benefit materializes for colonial land‑grant
+geolocation---comparing a pure one‑shot prompt to a tool‑augmented
+chain‑of‑thought that can issue mid‑prompt geocoding and
+distance‑calculation calls while processing English‑language colonial
+abstracts---and by reporting accuracy alongside end‑to‑end costs and
+latency. Unlike GeoAgent's address‑normalization and GeoGLUE tasks
+{[}@Huang2024\_geoagent;
 @li2023geogluegeographiclanguageunderstanding{]}, our outputs are point
 estimates aligned to archival ground truth for multi‑sentence, long‑form
 descriptions.
