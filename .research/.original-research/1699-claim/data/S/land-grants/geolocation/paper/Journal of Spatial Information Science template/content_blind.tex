@@ -52,8 +52,8 @@ prior to this work. Key uncertainties addressed in this study included:
 Addressing these questions required a rigorously annotated test bench
 that blended historical sources, modern GIS ground truth, and controlled
 prompt engineering. The methodological design seeks to embody principles
-of rigorous and responsible GeoAI research, as outlined by Li et al.
-\citep{Li2024_geoai} and detailed further in §2.4.
+of rigorous and responsible GeoAI research, as outlined by Li et
+al.\textasciitilde{}\citep{Li2024_geoai} and detailed further in §2.4.
 
 \subsection{Contributions}\label{contributions}
 
@@ -195,14 +195,17 @@ representative example of this latest approach comes from Hu et al.
 \citep{Hu2024_toponym_llm}, who fine-tuned Llama 2-7B to generate an
 unambiguous administrative string for each toponym before invoking a
 standard geocoding API. Their model achieved an Accuracy@161 km of 0.90
-on the GeoCorpora set, outperforming previous neural methods and
-improving toponym resolution accuracy by 13\% over the previous best
-neural system. On the less ambiguous WikToR corpus the same architecture
-reached 0.98. Crucially, these gains were realized on commodity
-hardware---the entire experiment ran on a single NVIDIA V100 with 14 GB
-VRAM, showing that parameter‑efficient fine‑tuning is feasible without
-data‑centre hardware---underscoring the practicality of
-parameter-efficient fine-tuning for large corpora.
+on the GeoCorpora set (a benchmark of geotagged microtexts for toponym
+resolution) \citep{karimzadeh2019geocorpora}, outperforming previous
+neural methods and improving toponym resolution accuracy by 13\% over
+the previous best neural system. On the less ambiguous WikToR corpus (a
+Wikipedia-based corpus for region classification and toponym resolution)
+\citep{gritta2018wiktor} the same architecture reached 0.98. Crucially,
+these gains were realized on commodity hardware---the entire experiment
+ran on a single NVIDIA V100 with 14 GB VRAM, showing that
+parameter‑efficient fine‑tuning is feasible without data‑centre
+hardware---underscoring the practicality of parameter-efficient
+fine-tuning for large corpora.
 
 Addressing the persistent challenge of annotation scarcity, Wu et al.
 \citep{wu2025geosg} introduced GeoSG, a self-supervised graph neural
@@ -247,11 +250,12 @@ This hybrid approach has evolved through several distinct
 implementations, each targeting different aspects of the geolocation
 challenge. Early evidence for its effectiveness comes from Hu et al.
 \citep{Hu2024_toponym_llm}, who coupled a fine-tuned Llama 2-7B with a
-cascading trio of geocoders---GeoNames, Nominatim, and ArcGIS---to
-resolve toponyms the model had already disambiguated linguistically.
-Their experiments demonstrated that this hybrid pipeline raised
-Accuracy@161 km by 7--17 percentage points relative to either component
-used in isolation.
+cascading trio of geocoders---GeoNames gazetteer \citep{geonames},
+Nominatim (OpenStreetMap geocoder) \citep{nominatim}, and ArcGIS World
+Geocoding Service \citep{arcgis_world_geocoding}---to resolve toponyms
+the model had already disambiguated linguistically. Their experiments
+demonstrated that this hybrid pipeline raised Accuracy@161 km by 7--17
+percentage points relative to either component used in isolation.
 
 Extending this concept to more complex natural language descriptions,
 Huang et al. \citep{Huang2024_geoagent} developed GeoAgent for free-form
@@ -261,8 +265,8 @@ structured cues, orchestrate vector-database lookups and offset
 calculations, and then retrieve precise coordinates from mapping APIs.
 Their ablation study confirmed that this agentic variant outperforms
 both rule-based and LLM-only baselines on the public GeoGLUE benchmark
-and an in-house Chinese address dataset, demonstrating improved F1
-scores and edit-distance metrics.
+\citep{geoglue} and an in-house Chinese address dataset, demonstrating
+improved F1 scores and edit-distance metrics.
 
 These specialized implementations build upon a more general design
 pattern known as the ReAct prompting paradigm \citep{yao2023react},
@@ -299,9 +303,9 @@ Recent calls within the GeoAI community emphasize the need for empirical
 studies that are not only traditionally scientifically sound but also
 actively engage with the foundational tenets of \textbf{predictability},
 \textbf{interpretability}, \textbf{reproducibility}, and \textbf{social
-responsibility}, which Li et al. \citep{Li2024_geoai} identify as four
-essential pillars for solidifying GeoAI's scientific rigor and ensuring
-its lasting, beneficial impact.
+responsibility}, which Li et al.\textasciitilde{}\citep{Li2024_geoai}
+identify as four essential pillars for solidifying GeoAI's scientific
+rigor and ensuring its lasting, beneficial impact.
 
 Li et al.~(2024) define \textbf{predictability} as the combination of a
 model's accuracy, computational efficiency, and robustness when

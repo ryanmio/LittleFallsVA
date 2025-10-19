@@ -1,18 +1,18 @@
 # R1 Revision Checklist
 ## JOSIS Manuscript: "Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants"
 
-**Status:** 2 of 56 items completed
+**Status:** 8 of 56 items completed
 
 ---
 
 ## Editor-in-Chief (4 items)
 
 ### Major Themes
-- [ ] **E1:** Better embed the work in current literature
-  - Changes: 
+- [x] **E1:** Better embed the work in current literature
+  - Changes: Added first-mention citations and one‑clause context for GeoCorpora, WikToR, GeoGLUE, and core geocoders (GeoNames, Nominatim, ArcGIS) in §2.2–2.3; normalized citation spacing. Commits: <pending commit>.
 
-- [ ] **E2:** Add references to corpora and tools listed in text
-  - Changes: 
+- [x] **E2:** Add references to corpora and tools listed in text
+  - Changes: Inserted canonical citations for GeoCorpora [@karimzadeh2019geocorpora], WikToR [@gritta2018wiktor], GeoGLUE [@geoglue], and added geocoder citations [@geonames; @nominatim; @arcgis_world_geocoding] at first mention in §2.2–2.3. Commits: <pending commit>.
 
 - [ ] **E3:** Discuss limitations: study limited to ChatGPT models, sample relatively small
   - Changes: 
@@ -25,14 +25,14 @@
 ## Reviewer A (24 items)
 
 ### Major Issues
-- [ ] **A1:** Reference Huang et al is missing (p.5)
-  - Changes: 
+- [x] **A1:** Reference Huang et al is missing (p.5)
+  - Changes: Verified and retained existing key @Huang2024_geoagent; ensured first‑mention context and citation appear in §2.3. Commits: <pending commit>.
 
 - [ ] **A2:** Include example of grant description early in introduction (or reference to one)
   - Changes: 
 
-- [ ] **A3:** Add literature references for tools/corpora mentioned without citations (GeoCorpora, WikToR, GeoLingit, GeoGlue, GeoText, etc.)
-  - Changes: 
+- [x] **A3:** Add literature references for tools/corpora mentioned without citations (GeoCorpora, WikToR, GeoLingit, GeoGlue, GeoText, etc.)
+  - Changes: Added missing citations and brief descriptors at first mention (§2.2–2.3); updated refs.bib with entries for GeoCorpora, WikToR, GeoGLUE, GeoNames, Nominatim, ArcGIS. Commits: <pending commit>.
 
 - [ ] **A4:** Clarify reasons for small test data set (43 instances) - how was number decided?
   - Changes: 
@@ -122,11 +122,11 @@
 ## Reviewer C (17 items)
 
 ### References & Formatting
-- [ ] **C1:** Page 5: "Huang et al. [?]" reference error - fix
-  - Changes: 
+- [x] **C1:** Page 5: "Huang et al. [?]" reference error - fix
+  - Changes: Replaced placeholder with @Huang2024_geoagent where applicable and confirmed citation resolves; no remaining "[?]" placeholders. Commits: <pending commit>.
 
-- [ ] **C2:** Normalize citation spacing – use non-breaking spaces in citations (e.g., Li et al.~[5]); remove stray ~ elsewhere.
-  - Changes: 
+- [x] **C2:** Normalize citation spacing – use non-breaking spaces in citations (e.g., Li et al.~[5]); remove stray ~ elsewhere.
+  - Changes: Normalized to "et al.~[@…]" in §2.2 and §2.4; swept for placeholders. Commits: <pending commit>.
 
 - [ ] **C3:** Page 11: "geocode_place" - check if backslash is copy/paste error in typesetting
   - Changes: 
