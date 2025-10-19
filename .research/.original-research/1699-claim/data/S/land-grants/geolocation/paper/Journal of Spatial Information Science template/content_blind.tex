@@ -1471,27 +1471,13 @@ Several caveats temper the preceding claims.
   fraction of the residual error may stem from imperfect input rather
   than conceptual failure.
 \item
-  \textbf{Model family scope.} Our LLM experiments are restricted to
-  OpenAI's GPT/o‑series snapshots from April--May 2025. This choice is
-  methodological rather than proprietary: cross‑provider comparisons
-  confound architecture with implementation details that are neither
-  standardized nor fully documented. Tokenization schemes,
-  context‑window management, nucleus/temperature scheduling,
-  system‑prompt handling, tool‑call middleware, safety filters, and
-  log‑prob reporting differ subtly across vendors and often across
-  endpoints within the same vendor. Even when nominal hyperparameters
-  share names (e.g., temperature, top‑p, frequency/penalty), their
-  effective semantics---clamping ranges, annealing schedules,
-  interaction with decoding heuristics---are provider‑specific. Holding
-  to a single provider keeps the evaluation manifold fixed: identical
-  tokenization, identical server‑side decoding policies, identical
-  tool‑call semantics and error surfaces, and identical billing/latency
-  instrumentation. This design decision reduces between‑system variance
-  and preserves internal validity for cost/latency/accuracy trade‑offs
-  on historical abstracts. Results may not transfer to other proprietary
-  or open‑source families (e.g., Llama, Mistral) without replication
-  under equivalently controlled conditions; we treat cross‑model
-  generalization as future work.
+  \textbf{Model family scope.} We limit models to OpenAI's GPT/o‑series
+  (Apr--May 2025) to control cross‑vendor confounders.
+  Tokenization/decoding and tool‑call semantics differ across providers
+  even when hyperparameters share names, so mixing vendors would add
+  noise and weaken internal validity for accuracy/cost/latency
+  comparisons. Generalization to other families (e.g., Llama, Mistral)
+  is left to future replication under matched settings.
 \item
   \textbf{Tool bias.} Google's geocoder is optimised for modern place
   names; its deterministic output may shift marginally over time as the
