@@ -1,7 +1,7 @@
 # R1 Revision Checklist
 ## JOSIS Manuscript: "Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants"
 
-**Status:** 0 of 53 items completed
+**Status:** 0 of 56 items completed
 
 ---
 
@@ -22,7 +22,7 @@
 
 ---
 
-## Reviewer A (22 items)
+## Reviewer A (24 items)
 
 ### Major Issues
 - [ ] **A1:** Reference Huang et al is missing (p.5)
@@ -51,6 +51,9 @@
   - Changes: 
 
 - [ ] **A9:** Section 4: Switch order of 4.3 and 4.4, or put 4.4 before 4.2
+  - Changes: 
+
+- [ ] **A9b:** Add a one-sentence transition when you reorder §4 subsections so the flow reads naturally.
   - Changes: 
 
 - [ ] **A10:** Section 4.5: Explain meaning of temperature parameter in context of LLMs
@@ -91,6 +94,8 @@
   - Changes: 
 
 ### Appendix Issues
+- [ ] **A7b:** Put cut sections in repo and cite the repo with a stable tag so the editor sees nothing was "lost," just moved.
+  - Changes: 
 - [ ] **A22:** Several references to "appendix" but only 16.5.1 labeled as appendix - resolve inconsistency
   - Changes: 
 
@@ -175,7 +180,7 @@
 
 ---
 
-## Global Sweeps (6 items)
+## Global Sweeps (7 items)
 
 ### Cross-cutting Quality Checks
 - [ ] **G1:** Descriptive captions pass – each figure/table states what it shows and why it matters; ensure in-text references near first mention.
@@ -196,15 +201,18 @@
 - [ ] **G6:** Figure references – ensure all figures mentioned (incl. Figure 4 and 8) are referenced with a one-line takeaway.
   - Changes: 
 
+- [ ] **G7:** First-mention placement – ensure each figure/table is referenced with a one-line takeaway at first mention and appears after that mention. This operationalizes B1 and G6.
+  - Changes: 
+
 ---
 
 ## Summary Counts
-- **Total Items:** 53
+- **Total Items:** 56
 - **Editor:** 4
-- **Reviewer A:** 22
+- **Reviewer A:** 24
 - **Reviewer B:** 4 (1 major, 3 optional/minor)
 - **Reviewer C:** 17 (13 actionable, 4 positive/acknowledged)
-- **Global Sweeps:** 6
+- **Global Sweeps:** 7
 
 ---
 
