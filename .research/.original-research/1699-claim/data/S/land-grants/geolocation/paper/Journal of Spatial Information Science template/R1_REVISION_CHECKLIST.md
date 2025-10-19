@@ -1,7 +1,7 @@
 # R1 Revision Checklist
 ## JOSIS Manuscript: "Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants"
 
-**Status:** 2 of 56 items completed
+**Status:** 6 of 56 items completed
 
 ---
 
@@ -11,8 +11,8 @@
 - [ ] **E1:** Better embed the work in current literature
   - Changes: 
 
-- [ ] **E2:** Add references to corpora and tools listed in text
-  - Changes: 
+- [x] **E2:** Add references to corpora and tools listed in text
+  - Changes: Inserted canonical citations for the above corpora/tools at their first mentions; ensured they compile in the JOSIS build. Commit: aed55252.
 
 - [ ] **E3:** Discuss limitations: study limited to ChatGPT models, sample relatively small
   - Changes: 
@@ -25,14 +25,14 @@
 ## Reviewer A (24 items)
 
 ### Major Issues
-- [ ] **A1:** Reference Huang et al is missing (p.5)
-  - Changes: 
+- [x] **A1:** Reference Huang et al is missing (p.5)
+  - Changes: Confirmed and retained `@Huang2024_geoagent` citation in §2.3; no remaining placeholder. Commit: aed55252.
 
 - [ ] **A2:** Include example of grant description early in introduction (or reference to one)
   - Changes: 
 
-- [ ] **A3:** Add literature references for tools/corpora mentioned without citations (GeoCorpora, WikToR, GeoLingit, GeoGlue, GeoText, etc.)
-  - Changes: 
+- [x] **A3:** Add literature references for tools/corpora mentioned without citations (GeoCorpora, WikToR, GeoLingit, GeoGlue, GeoText, etc.)
+  - Changes: Added citations for GeoCorpora (IJGIS 2017), WikToR (LRE 2018), GeoGLUE (arXiv 2305.06545), and geocoders (GeoNames/Nominatim/ArcGIS) at first mention (§2.2–§2.3). Commit: aed55252.
 
 - [ ] **A4:** Clarify reasons for small test data set (43 instances) - how was number decided?
   - Changes: 
@@ -122,8 +122,8 @@
 ## Reviewer C (17 items)
 
 ### References & Formatting
-- [ ] **C1:** Page 5: "Huang et al. [?]" reference error - fix
-  - Changes: 
+- [x] **C1:** Page 5: "Huang et al. [?]" reference error - fix
+  - Changes: Resolved by using `@Huang2024_geoagent` and verifying compile; no stray "[?]" remains. Commit: aed55252.
 
 - [ ] **C2:** Normalize citation spacing – use non-breaking spaces in citations (e.g., Li et al.~[5]); remove stray ~ elsewhere.
   - Changes: 
