@@ -52,9 +52,9 @@ prior to this work. Key uncertainties addressed in this study included:
 Addressing these questions required a rigorously annotated test bench
 that blended historical sources, modern GIS ground truth, and controlled
 prompt engineering. The methodological design seeks to embody principles
-of rigorous and responsible GeoAI research, as outlined by Li et al.
-\citep{Li2024_geoai} and detailed further in Section 2.4, and---relative
-to classic geoparsers such as Stanford NER/GeoTxt
+of rigorous and responsible GeoAI research, as outlined by Li et
+al.~\citep{Li2024_geoai} and detailed further in Section 2.4,
+and---relative to classic geoparsers such as Stanford NER/GeoTxt
 \citep{karimzadeh2019geotxt}, Mordecai‑3 \citep{halterman2023mordecai},
 and the map‑aware CamCoder \citep{Gritta2018_camcoder}---centers on
 long, archaic abstracts with nested landmarks and surveyor bearings
@@ -201,8 +201,8 @@ names. Neural architectures such as CamCoder \citep{Gritta2018_camcoder}
 subsequently improved performance through learned contextual
 representations. Most recently, fine-tuned large language models have
 demonstrated substantial breakthroughs in toponym resolution accuracy. A
-representative example of this latest approach comes from Hu et al.
-\citep{Hu2024_toponym_llm}, who fine-tuned Llama 2-7B to generate an
+representative example of this latest approach comes from Hu et
+al.~\citep{Hu2024_toponym_llm}, who fine-tuned Llama 2-7B to generate an
 unambiguous administrative string for each toponym before invoking a
 standard geocoding API. Their model achieved an Accuracy@161 km of 0.90
 on the GeoCorpora set \citep{wallgrun2017geocorpora}, outperforming
@@ -215,20 +215,20 @@ that parameter‑efficient fine‑tuning is feasible without data‑centre
 hardware---underscoring the practicality of parameter-efficient
 fine-tuning for large corpora.
 
-Addressing the persistent challenge of annotation scarcity, Wu et al.
-\citep{wu2025geosg} introduced GeoSG, a self-supervised graph neural
+Addressing the persistent challenge of annotation scarcity, Wu et
+al.~\citep{wu2025geosg} introduced GeoSG, a self-supervised graph neural
 network that learns spatial semantics from Point-of-Interest (POI)--text
 relationships. This approach predicts document coordinates without any
 annotated training samples, nearly matching supervised baselines on two
-urban benchmarks. In a similar vein, Savarro et al.
-\citep{savarro2024geolingit} demonstrated that Italian tweets can be
+urban benchmarks. In a similar vein, Savarro et
+al.~\citep{savarro2024geolingit} demonstrated that Italian tweets can be
 geolocated to both regional and point coordinates by fine-tuning
 decoder-only LLMs on the GeoLingIt shared task, further confirming that
 pretrained language models can internalize subtle linguistic cues of
 place.
 
 Despite these advances, significant limitations remain. O'Sullivan et
-al. \citep{Osullivan2024_metric} demonstrated that GPT-class models
+al.~\citep{Osullivan2024_metric} demonstrated that GPT-class models
 mis-calibrate qualitative distance terms: \emph{near} in a neighborhood
 scenario is treated similarly to \emph{near} at continental scale,
 revealing a lack of geometric grounding. Such biases caution against
@@ -261,17 +261,17 @@ outputs in authoritative data and deterministic algorithms.
 
 This hybrid approach has evolved through several distinct
 implementations, each targeting different aspects of the geolocation
-challenge. Early evidence for its effectiveness comes from Hu et al.
-\citep{Hu2024_toponym_llm}, who coupled a fine-tuned Llama 2-7B with a
-cascading trio of geocoders---GeoNames \citep{geonames_about}, Nominatim
-\citep{nominatim_project}, and ArcGIS Online
+challenge. Early evidence for its effectiveness comes from Hu et
+al.~\citep{Hu2024_toponym_llm}, who coupled a fine-tuned Llama 2-7B with
+a cascading trio of geocoders---GeoNames \citep{geonames_about},
+Nominatim \citep{nominatim_project}, and ArcGIS Online
 \citep{esri_arcgis_online}---to resolve toponyms the model had already
 disambiguated linguistically. Their experiments demonstrated that this
 hybrid pipeline raised Accuracy@161 km by 7--17 percentage points
 relative to either component used in isolation.
 
 Extending this concept to more complex natural language descriptions,
-Huang et al. \citep{Huang2024_geoagent} developed GeoAgent for free-form
+Huang et al.~\citep{Huang2024_geoagent} developed GeoAgent for free-form
 address normalization. This system enables the LLM to convert colloquial
 descriptions (e.g., ``two blocks east of the old courthouse'') into
 structured cues, orchestrate vector-database lookups and offset
@@ -302,11 +302,11 @@ and research contexts.
 Across these diverse implementations, a consistent finding emerges:
 granting an LLM controlled access to trusted GIS services reduces
 hallucination, improves numerical accuracy, and broadens task coverage
-(Hu et al. \citep{Hu2024_toponym_llm}; Huang et al.
-\citep{Huang2024_geoagent}). The present work builds on this pattern by
-testing whether a similar benefit materializes for colonial land‑grant
-geolocation---comparing a pure one‑shot prompt to a tool‑augmented
-chain‑of‑thought that can issue mid‑prompt geocoding and
+(Hu et al.~\citep{Hu2024_toponym_llm}; Huang et
+al.~\citep{Huang2024_geoagent}). The present work builds on this pattern
+by testing whether a similar benefit materializes for colonial
+land‑grant geolocation---comparing a pure one‑shot prompt to a
+tool‑augmented chain‑of‑thought that can issue mid‑prompt geocoding and
 distance‑calculation calls while processing English‑language colonial
 abstracts---and by reporting accuracy alongside end‑to‑end costs and
 latency. Unlike GeoAgent's address‑normalization and GeoGLUE tasks
@@ -321,7 +321,7 @@ Recent calls within the GeoAI community emphasize the need for empirical
 studies that are not only traditionally scientifically sound but also
 actively engage with the foundational tenets of \textbf{predictability},
 \textbf{interpretability}, \textbf{reproducibility}, and \textbf{social
-responsibility}, which Li et al. \citep{Li2024_geoai} identify as four
+responsibility}, which Li et al.~\citep{Li2024_geoai} identify as four
 essential pillars for solidifying GeoAI's scientific rigor and ensuring
 its lasting, beneficial impact.
 
@@ -1100,7 +1100,7 @@ o-series models (particularly o3-2025-04-16) taking up to 48 seconds.
 \subsection{Qualitative Examples}\label{qualitative-examples}
 
 To illustrate how the two prompting paradigms differ, the chain of
-thought for grant\_04 (``WILLIAM WILLIAMS) is distilled into key stages.
+thought for grant\_04 (WILLIAM WILLIAMS) is distilled into key stages.
 The full grant text shown to the model was:
 
 \begin{quote}
@@ -1199,9 +1199,8 @@ T-1 & o4-mini-2025-04-16 & 3.98 & 22.86:1 & 66.7\% \\
 T-4 & gpt-4.1-2025-04-14 & 2.23 & 7.73:1 & 72.1\% \\
 \end{longtable}
 
-For both pipelines the Google \passthrough{\lstinline!geocode\_place!}
-endpoint dominated the call mix, whereas the auxiliary
-\passthrough{\lstinline!compute\_centroid!} function appeared in fewer
+For both pipelines the Google geocode\_place endpoint dominated the call
+mix, whereas the auxiliary compute\_centroid function appeared in fewer
 than one call per ten. gpt-4.1-2025-04-14 (T-4) adopted a more
 economical strategy, issuing on average 2.3 calls per grant while
 succeeding on the first query in 73\% of cases. The

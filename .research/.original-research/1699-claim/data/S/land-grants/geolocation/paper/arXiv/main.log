@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  19 OCT 2025 18:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  19 OCT 2025 19:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -32959,7 +32959,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.752 ...e clustered with the DBSCAN algorithm (ε
-                                                   = 0.5 km).
+                                                   = 0.5 km,
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -32969,6 +32969,15 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 5 in font nullfont!
 Missing character: There is no k in font nullfont!
 Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no I in font nullfont!
@@ -46102,8 +46111,6 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no ( in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
 Missing character: There is no W in font nullfont!
 Missing character: There is no I in font nullfont!
 Missing character: There is no L in font nullfont!
@@ -48878,6 +48885,18 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
@@ -48925,6 +48944,21 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no y in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -49342,16 +49376,6 @@ Missing character: There is no . in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 1242--1251
 []
- []
-
-
-Overfull \hbox (66.7794pt too wide) in paragraph at lines 1242--1251
-\OT1/cmtt/m/n/10 geocode[]place
- []
-
-
-Overfull \hbox (82.52927pt too wide) in paragraph at lines 1242--1251
-\OT1/cmtt/m/n/10 compute[]centroid
  []
 
 ! Undefined control sequence.
@@ -52502,6 +52526,16 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -52529,8 +52563,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1336 ...AN clustering, reduces mean error to ≈
-                                                  19 km,
+l.1336 ... (MinPts = 3), reduces mean error to ≈
+                                                  19
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -52611,8 +52645,9 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1338 of ≈
-             USD 0.20 and approximately 3 seconds of additional latency per
+l.1338 cost of ≈
+                  USD 0.20 and approximately 3 seconds of additional latency...
+
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -57540,6 +57575,15 @@ Missing character: There is no C in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no ( in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ; in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -57580,7 +57624,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1453 ...ethod E-1) pushes mean error down to ≈
-                                                  19 km at a
+                                                  19
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -57614,8 +57658,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1454 per-grant cost of ≈
-                            \$0.20. Because the ensemble averages away the
+l.1454 km at a per-grant cost of ≈
+                                    \$0.20. Because the ensemble averages away
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -57730,9 +57774,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1456 low (≈
-               1.1 k tokens) instead of medium (≈3.2 k tokens), so the acc...
-
+l.1456 reasoning\_effort = low (≈
+                                   1.1 k tokens) instead of medium (≈3.2 k
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -57772,8 +57815,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1456 ...(≈1.1 k tokens) instead of medium (≈
-                                                  3.2 k tokens), so the accu...
-
+                                                  3.2 k
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -57889,8 +57931,8 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ...rence `tbl:reasoning' on page \thepage 
                                                   \space undefined\on@line .
-l.1458 ...ontext window. Table \ref{tbl:reasoning}
-                                                   shows that raising
+l.1459 \ref{tbl:reasoning}
+                           shows that raising reasoning\_effort in a single
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -57898,7 +57940,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `tbl:reasoning' on page  undefined on input line 1458.
+LaTeX Warning: Reference `tbl:reasoning' on page  undefined on input line 1459.
 
 
 Missing character: There is no s in font nullfont!
@@ -63309,6 +63351,16 @@ Missing character: There is no S in font nullfont!
 Missing character: There is no C in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no N in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -63343,8 +63395,9 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1589 ≈
-          19 km while adding only ≈US \$0.07 and three seconds per deed. In
+l.1589 further to ≈
+                     19 km while adding only ≈US \$0.07 and three seconds per
+
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -63375,8 +63428,9 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1589 ≈19 km while adding only ≈
-                                     US \$0.07 and three seconds per deed. In
+l.1589 further to ≈19 km while adding only ≈
+                                                US \$0.07 and three seconds per
+
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -81836,7 +81890,7 @@ l.2211 M-3 & 43 & 50.25 & 48.40 & 24.93 & 6.29 &
 Here is how much of TeX's memory you used:
  177 strings out of 474662
  2921 string characters out of 5751110
- 437792 words of memory out of 5000000
+ 437765 words of memory out of 5000000
  23305 multiletter control sequences out of 15000+600000
  559994 words of font info for 40 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191

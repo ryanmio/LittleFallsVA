@@ -123,8 +123,8 @@
 - [x] **C1:** Page 5: "Huang et al. [?]" reference error - fix
   - Changes: Resolved by using `@Huang2024_geoagent` and verifying compile; no stray "[?]" remains. Also normalized “et al.” spacing before bracketed citations with a nonbreaking space to avoid visual double gaps. Commits: aed55252, 1ec066d.
 
-- [ ] **C2:** Normalize citation spacing – use non-breaking spaces in citations (e.g., Li et al.~[5]); remove stray ~ elsewhere.
-  - Changes: 
+- [x] **C2:** Normalize citation spacing – use non-breaking spaces in citations (e.g., Li et al.~[5]); remove stray ~ elsewhere.
+  - Changes: Standardized author–year spacing and converted visible “Table~#” cases to “Table #” in prose; retained LaTeX non‑breaking tildes only where appropriate (captions/labels). Commit: 4bc626d.
 
 - [x] **C3:** Page 11: "geocode_place" - check if backslash is copy/paste error in typesetting
   - Changes: Confirmed underscore is correctly rendered as code or plain text; no stray escape backslashes remain in narrative text. Commit: 5fc2e87, b566ce3.
@@ -132,8 +132,8 @@
 - [x] **C4:** Page 12: What is "[H]" - maybe supposed to be a LaTeX command?
   - Changes: [H] is intentionally used for figure/table floats per JOSIS build; confirmed not used in prose; no correction needed beyond verification. Commit: 5fc2e87.
 
-- [ ] **C5:** Page 21: "WILLIAM WILLIAMS" has unbalanced quote characters
-  - Changes: 
+- [x] **C5:** Page 21: "WILLIAM WILLIAMS" has unbalanced quote characters
+  - Changes: Removed stray quote. Commit: 6b98c0e.
 
 ### Phrasing & Language
 - [ ] **C6:** Page 7: Revise phrasing of models' "cognitive processes" - be less credulous
