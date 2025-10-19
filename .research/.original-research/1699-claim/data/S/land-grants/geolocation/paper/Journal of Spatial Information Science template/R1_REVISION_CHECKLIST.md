@@ -37,8 +37,8 @@
 - [ ] **A4:** Clarify reasons for small test data set (43 instances) - how was number decided?
   - Changes: 
 
-- [ ] **A5:** Acknowledge limitation that study is limited to ChatGPT models, not other LLMs
-  - Changes: 
+- [x] **A5:** Acknowledge limitation that study is limited to ChatGPT models, not other LLMs
+  - Changes: Added concise OpenAI-only scope rationale in §8 (controls cross‑provider confounders; preserves internal validity); kept generalization note. Commits: 8acc5a7, aff8d40.
 
 - [ ] **A6:** Bibliography is comparatively short - add more references where possible
   - Changes: 

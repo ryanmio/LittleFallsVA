@@ -824,6 +824,12 @@ latency, and any tool traces were logged in real time; intermediate
 artifacts and final result sets are archived in the accompanying
 repository.
 
+In decoding, the temperature parameter (t) controls sampling randomness
+during token selection: lower values approach deterministic outputs;
+higher values increase variability. Unless otherwise noted, we use t =
+0.8 for single‑shot runs; § 6.6 reports an ablation showing accuracy is
+largely insensitive to t over the tested range.
+
 \section{Results}\label{results}
 
 \subsection{Accuracy}\label{accuracy}
