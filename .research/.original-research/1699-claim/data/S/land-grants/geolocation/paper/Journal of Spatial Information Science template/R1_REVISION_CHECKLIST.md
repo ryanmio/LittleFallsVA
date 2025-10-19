@@ -56,8 +56,8 @@
 - [ ] **A9b:** Add a one-sentence transition when you reorder §4 subsections so the flow reads naturally.
   - Changes: 
 
-- [ ] **A10:** Section 4.5: Explain meaning of temperature parameter in context of LLMs
-  - Changes: 
+- [x] **A10:** Section 4.5: Explain meaning of temperature parameter in context of LLMs
+  - Changes: Added concise definition of temperature at first implementation mention (Setup §5.2 paragraph); referenced §6.6 ablation. Commit: 5134818.
 
 - [ ] **A11:** Remove stray ~ in table/figure references; standardize formatting.
   - Changes: 
@@ -152,8 +152,8 @@
 - [ ] **C9:** Page 10: How often did H-2 fall back to Virginia's geographic center? Would pull up average
   - Changes: 
 
-- [ ] **C10:** Briefly justify temperature where it is first introduced; add forward reference to detailed discussion if needed.
-  - Changes: 
+- [x] **C10:** Briefly justify temperature where it is first introduced; add forward reference to detailed discussion if needed.
+  - Changes: Clarified t as sampling randomness, noted default (0.8) and limited sensitivity per §6.6; added forward reference. Commit: 5134818.
 
 - [ ] **C11:** Page 12, re: DBSCAN: Clarify - is that basically MinPts=3?
   - Changes: 

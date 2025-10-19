@@ -287,7 +287,7 @@ Ground-truth coordinates were established for 43 of the 125 test abstracts follo
 
 For each method listed in Tables~\ref{tbl:mmodels} and~\ref{tbl:tmodels}, an evaluation driver sequentially processed the 43 abstracts with verified ground truth, invoking the OpenAI *Responses* API under stable April-2025 model versions. Tool-chain variants interacted with the Google Geocoding API and an in-process centroid function exposed via JSON-Schema. Token usage, latency, and any tool traces were logged in real time; intermediate artifacts and final result sets are archived in the accompanying repository.
 
-In decoding, the temperature parameter (t) controls sampling randomness during token selection: lower values approach deterministic outputs; higher values increase variability. Unless otherwise noted, we use t = 0.8 for single‑shot runs; § 6.6 reports an ablation showing accuracy is largely insensitive to t over the tested range.
+In decoding, the temperature parameter (t) controls sampling randomness during token selection: lower values approach deterministic outputs; higher values increase variability. When supported (e.g., GPT‑4.1, 4o, 3.5), we set t = 0.2; OpenAI’s o‑series uses fixed reasoning/decoding and does not expose temperature. § 6.6 reports an ablation indicating limited sensitivity to t within the tested range.
 
 # 6 Results
 
