@@ -121,7 +121,7 @@
 
 ### References & Formatting
 - [x] **C1:** Page 5: "Huang et al. [?]" reference error - fix
-  - Changes: Resolved by using `@Huang2024_geoagent` and verifying compile; no stray "[?]" remains. Commit: aed55252.
+  - Changes: Resolved by using `@Huang2024_geoagent` and verifying compile; no stray "[?]" remains. Also normalized “et al.” spacing before bracketed citations with a nonbreaking space to avoid visual double gaps. Commits: aed55252, 1ec066d.
 
 - [ ] **C2:** Normalize citation spacing – use non-breaking spaces in citations (e.g., Li et al.~[5]); remove stray ~ elsewhere.
   - Changes: 
