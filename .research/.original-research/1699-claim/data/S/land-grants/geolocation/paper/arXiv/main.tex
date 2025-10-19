@@ -47,7 +47,7 @@ eighteenth centuries. Yet the spatial dimension of these sources remains
 under-exploited: most patents survive only as narrative metes-and-bounds
 descriptions in printed abstract volumes such as \emph{Cavaliers and
 Pioneers} (C\&P) {[}@Nugent1979\_cavaliers3{]}. Without geographic
-coordinates, historians and archaeologists cannot readily visualise how
+coordinates, historians and archaeologists cannot readily visualize how
 land ownership evolved or test hypotheses with modern Geographic
 Information System (GIS) tools. Creating a machine-readable,
 georeferenced version of C\&P would unlock new quantitative approaches
@@ -478,8 +478,8 @@ sources. Thus, we treat the text as out-of-distribution for contemporary
 language models; a formal training-data-leakage audit remains infeasible
 due to the proprietary nature of major LLM corpora.
 
-\subsection{3.2 Digitisation \&
-Pre-processing}\label{digitisation-pre-processing}
+\subsection{3.2 Digitization \&
+Pre-processing}\label{digitization-pre-processing}
 
 The bound volume was destructively scanned at 600 dpi. After
 benchmarking multiple optical-character-recognition (OCR) engines and
@@ -703,14 +703,13 @@ M-6 & \texttt{gpt-3.5-turbo} \\
 (T-series)}\label{tool-augmented-chain-of-thought-t-series}
 
 The second automated condition equips the model with two specialized
-tools: \texttt{geocode\_place}, an interface to the Google Geocoding API
-limited to Virginia and adjoining counties, and
-\texttt{compute\_centroid}, which returns the spherical centroid of two
-or more points. The system prompt (Appendix A.2.2) encourages an
-iterative search strategy where the model can issue up to twelve tool
-calls, evaluate the plausibility of each result, and optionally average
-multiple anchors before emitting a final answer in decimal degrees with
-six fractional places.
+tools: geocode\_place, an interface to the Google Geocoding API limited
+to Virginia and adjoining counties, and compute\_centroid, which returns
+the spherical centroid of two or more points. The system prompt
+(Appendix A.2.2) encourages an iterative search strategy where the model
+can issue up to twelve tool calls, evaluate the plausibility of each
+result, and optionally average multiple anchors before emitting a final
+answer in decimal degrees with six fractional places.
 
 Table \ref{tbl:tmodels} shows the five model variants initially
 considered for this tool suite. Of these, only T-1 and T-4 were carried
@@ -1720,30 +1719,30 @@ defined available tools, workflow, and constraints:
 \NormalTok{Your job is to provide precise latitude/longitude coordinates for the land{-}grant description the user supplies.}
 
 \NormalTok{Available tools}
-\NormalTok{• \textasciigrave{}geocode\_place(query, strategy)\textasciigrave{}}
+\NormalTok{• geocode\_place(query, strategy)}
 \NormalTok{    – Look up a place name via the Google Geocoding API (Virginia{-}restricted).}
-\NormalTok{    – Returns JSON: \textasciigrave{}\{lat, lng, formatted\_address, strategy, query\_used\}\textasciigrave{}.}
-\NormalTok{• \textasciigrave{}compute\_centroid(points)\textasciigrave{}}
-\NormalTok{    – Accepts **two or more** objects like \textasciigrave{}\{lat: 37.1, lng: {-}76.7\}\textasciigrave{} and returns their average.}
+\NormalTok{    – Returns JSON: \{lat, lng, formatted\_address, strategy, query\_used\}.}
+\NormalTok{• compute\_centroid(points)}
+\NormalTok{    – Accepts **two or more** objects like \{lat: 37.1, lng: {-}76.7\} and returns their average.}
 
 \NormalTok{Workflow}
 \NormalTok{0. Craft the most specific initial search string you can (creek, branch, river{-}mouth, parish, neighbor surname + county + "Virginia").}
 
-\NormalTok{1. Call \textasciigrave{}geocode\_place\textasciigrave{} with that string. If the result is in the expected or an adjacent county *and* the feature lies in Virginia (or an NC border county), treat it as **plausible**. A matching feature keyword in \textasciigrave{}formatted\_address\textasciigrave{} is *preferred* but not mandatory after several attempts.}
+\NormalTok{1. Call geocode\_place with that string. If the result is in the expected or an adjacent county *and* the feature lies in Virginia (or an NC border county), treat it as **plausible**. A matching feature keyword in formatted\_address is *preferred* but not mandatory after several attempts.}
 
-\NormalTok{2. If the first call is not plausible, iteratively refine the query (alternate spelling, nearby landmark, bordering county, etc.) and call \textasciigrave{}geocode\_place\textasciigrave{} again until you obtain *at least one* plausible point **or** you have made six tool calls, whichever comes first.}
+\NormalTok{2. If the first call is not plausible, iteratively refine the query (alternate spelling, nearby landmark, bordering county, etc.) and call geocode\_place again until you obtain *at least one* plausible point **or** you have made six tool calls, whichever comes first.}
 
-\NormalTok{3. Optional centroid use – if the grant text clearly places the tract *between* two or more natural features (e.g., "between the mouth of Cypress Swamp and Blackwater River") **or** you have two distinct plausible anchor points (creek{-}mouth, swamp, plantation), you may call \textasciigrave{}compute\_centroid(points)\textasciigrave{} exactly once to average them. Otherwise skip this step.}
+\NormalTok{3. Optional centroid use – if the grant text clearly places the tract *between* two or more natural features (e.g., "between the mouth of Cypress Swamp and Blackwater River") **or** you have two distinct plausible anchor points (creek{-}mouth, swamp, plantation), you may call compute\_centroid(points) exactly once to average them. Otherwise skip this step.}
 
 \NormalTok{4. You may make up to **ten** total tool calls. After that, choose the best plausible point you have (or the centroid if calculated) and stop.}
 
-\NormalTok{5. Final answer – reply with **only** the coordinates in decimal degrees with six digits after the decimal point, e.g., \textasciigrave{}36.757059, {-}77.836728\textasciigrave{}. No explanatory text.}
+\NormalTok{5. Final answer – reply with **only** the coordinates in decimal degrees with six digits after the decimal point, e.g., 36.757059, {-}77.836728. No explanatory text.}
 
 \NormalTok{Important rules}
-\NormalTok{• Always perform at least one successful \textasciigrave{}geocode\_place\textasciigrave{} call before any other tool.}
-\NormalTok{• Invoke \textasciigrave{}compute\_centroid\textasciigrave{} only when you already have two or more plausible anchor points and averaging will help locate a "between" description.}
+\NormalTok{• Always perform at least one successful geocode\_place call before any other tool.}
+\NormalTok{• Invoke compute\_centroid only when you already have two or more plausible anchor points and averaging will help locate a "between" description.}
 \NormalTok{• Never invent coordinates—derive them from tool output.}
-\NormalTok{• Return no explanatory text, symbols, or degree signs—just \textasciigrave{}lat, lon\textasciigrave{}.}
+\NormalTok{• Return no explanatory text, symbols, or degree signs—just lat, lon.}
 \end{Highlighting}
 \end{Shaded}
 

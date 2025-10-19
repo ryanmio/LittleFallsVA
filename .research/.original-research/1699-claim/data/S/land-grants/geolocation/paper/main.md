@@ -47,7 +47,7 @@ These findings demonstrate LLMs' potential for scalable, accurate, cost-effectiv
 
 ## 1.1 Historical Context & Motivation
 
-Virginia's colonial land patents are a cornerstone resource for scholars studying settlement patterns, the political economy of plantation agriculture, and Indigenous dispossession in the seventeenth and eighteenth centuries. Yet the spatial dimension of these sources remains under-exploited: most patents survive only as narrative metes-and-bounds descriptions in printed abstract volumes such as *Cavaliers and Pioneers* (C&P) [@Nugent1979_cavaliers3]. Without geographic coordinates, historians and archaeologists cannot readily visualise how land ownership evolved or test hypotheses with modern Geographic Information System (GIS) tools. Creating a machine-readable, georeferenced version of C&P would unlock new quantitative approaches to long-standing questions about colonial Virginia's social and environmental history.
+Virginia's colonial land patents are a cornerstone resource for scholars studying settlement patterns, the political economy of plantation agriculture, and Indigenous dispossession in the seventeenth and eighteenth centuries. Yet the spatial dimension of these sources remains under-exploited: most patents survive only as narrative metes-and-bounds descriptions in printed abstract volumes such as *Cavaliers and Pioneers* (C&P) [@Nugent1979_cavaliers3]. Without geographic coordinates, historians and archaeologists cannot readily visualize how land ownership evolved or test hypotheses with modern Geographic Information System (GIS) tools. Creating a machine-readable, georeferenced version of C&P would unlock new quantitative approaches to long-standing questions about colonial Virginia's social and environmental history.
 
 Digitizing and geo-locating the abstracts, however, is notoriously labor-intensive. Even professional GIS analysts can spend several hours per grant reconciling archaic place-names, inconsistent spellings, and low-resolution boundary calls. Recent breakthroughs in large language models (LLMs) suggest a new pathway: language-driven spatial reasoning where a model reads the patent text and predicts latitude/longitude directly or with minimal tool assistance. This study explores whether current-generation LLMs can shoulder that burden accurately and cheaply enough to matter for digital history.
 
@@ -134,7 +134,7 @@ By embedding these considerations into the experimental design and reporting, th
 
 No publicly available digital transcription of *Cavaliers & Pioneers, Vol. 3* currently exists: the Internet Archive copy is page-image only, print-disabled, and circulating PDFs contain no selectable text. Google queries of random 15-word sequences returned no hits, further confirming the corpus's absence from indexed public web sources. Thus, we treat the text as out-of-distribution for contemporary language models; a formal training-data-leakage audit remains infeasible due to the proprietary nature of major LLM corpora.
 
-## 3.2 Digitisation & Pre-processing
+## 3.2 Digitization & Pre-processing
 The bound volume was destructively scanned at 600 dpi.  After benchmarking multiple optical-character-recognition (OCR) engines and post-processing pipelines, the highest-fidelity workflow was applied to every page.  The resulting text was normalised and exported to CSV—one row per abstract—yielding the complete 5 471-row corpus.
 
 To facilitate reproducible experimentation three deterministic splits were drawn with fixed random seeds:
@@ -216,7 +216,7 @@ Table: Evaluated one-shot model variants (M‑series). {#tbl:mmodels}
 
 ## Tool-augmented Chain-of-Thought (T-series)
 
-The second automated condition equips the model with two specialized tools: `geocode_place`, an interface to the Google Geocoding API limited to Virginia and adjoining counties, and `compute_centroid`, which returns the spherical centroid of two or more points. The system prompt (Appendix A.2.2) encourages an iterative search strategy where the model can issue up to twelve tool calls, evaluate the plausibility of each result, and optionally average multiple anchors before emitting a final answer in decimal degrees with six fractional places.
+The second automated condition equips the model with two specialized tools: geocode_place, an interface to the Google Geocoding API limited to Virginia and adjoining counties, and compute_centroid, which returns the spherical centroid of two or more points. The system prompt (Appendix A.2.2) encourages an iterative search strategy where the model can issue up to twelve tool calls, evaluate the plausibility of each result, and optionally average multiple anchors before emitting a final answer in decimal degrees with six fractional places.
 
 Table \ref{tbl:tmodels} shows the five model variants initially considered for this tool suite. Of these, only T-1 and T-4 were carried forward into the final evaluation. The remaining models—T-2 (o3-2025-04-16), T-3 (o3-mini-2025-01-31), and T-5 (computer-use-preview-2025-03-11)—were excluded after developmental testing revealed the outputs were largely identical given that the primary tool, Google's Geocoding API, is deterministic. Proceeding with these additional models would have substantially increased computational costs and processing times without yielding distinct results or further insights into tool-augmented performance.
 
@@ -287,7 +287,7 @@ Ground-truth coordinates were established for 43 of the 125 test abstracts follo
 
 For each method listed in Tables~\ref{tbl:mmodels} and~\ref{tbl:tmodels}, an evaluation driver sequentially processed the 43 abstracts with verified ground truth, invoking the OpenAI *Responses* API under stable April-2025 model versions. Tool-chain variants interacted with the Google Geocoding API and an in-process centroid function exposed via JSON-Schema. Token usage, latency, and any tool traces were logged in real time; intermediate artifacts and final result sets are archived in the accompanying repository.
 
-When supported (e.g., GPT‑4.1/4o/3.5), we set temperature t = 0.2; OpenAI’s o‑series uses fixed decoding and does not expose temperature. Temperature controls sampling randomness during token selection (higher t → more variability; lower t → more deterministic). Section 6.6 ablates t and finds limited sensitivity over the tested range.
+When supported (e.g., GPT‑4.1/4o/3.5), we set temperature t = 0.2; OpenAI's o‑series uses fixed decoding and does not expose temperature. Temperature controls sampling randomness during token selection (higher t → more variability; lower t → more deterministic). Section 6.6 ablates t and finds limited sensitivity over the tested range.
 
 # 6 Results
 
@@ -577,30 +577,30 @@ You are an expert historical geographer specialising in colonial-era Virginia la
 Your job is to provide precise latitude/longitude coordinates for the land-grant description the user supplies.
 
 Available tools
-• `geocode_place(query, strategy)`
+• geocode_place(query, strategy)
     – Look up a place name via the Google Geocoding API (Virginia-restricted).
-    – Returns JSON: `{lat, lng, formatted_address, strategy, query_used}`.
-• `compute_centroid(points)`
-    – Accepts **two or more** objects like `{lat: 37.1, lng: -76.7}` and returns their average.
+    – Returns JSON: {lat, lng, formatted_address, strategy, query_used}.
+• compute_centroid(points)
+    – Accepts **two or more** objects like {lat: 37.1, lng: -76.7} and returns their average.
 
 Workflow
 0. Craft the most specific initial search string you can (creek, branch, river-mouth, parish, neighbor surname + county + "Virginia").
 
-1. Call `geocode_place` with that string. If the result is in the expected or an adjacent county *and* the feature lies in Virginia (or an NC border county), treat it as **plausible**. A matching feature keyword in `formatted_address` is *preferred* but not mandatory after several attempts.
+1. Call geocode_place with that string. If the result is in the expected or an adjacent county *and* the feature lies in Virginia (or an NC border county), treat it as **plausible**. A matching feature keyword in formatted_address is *preferred* but not mandatory after several attempts.
 
-2. If the first call is not plausible, iteratively refine the query (alternate spelling, nearby landmark, bordering county, etc.) and call `geocode_place` again until you obtain *at least one* plausible point **or** you have made six tool calls, whichever comes first.
+2. If the first call is not plausible, iteratively refine the query (alternate spelling, nearby landmark, bordering county, etc.) and call geocode_place again until you obtain *at least one* plausible point **or** you have made six tool calls, whichever comes first.
 
-3. Optional centroid use – if the grant text clearly places the tract *between* two or more natural features (e.g., "between the mouth of Cypress Swamp and Blackwater River") **or** you have two distinct plausible anchor points (creek-mouth, swamp, plantation), you may call `compute_centroid(points)` exactly once to average them. Otherwise skip this step.
+3. Optional centroid use – if the grant text clearly places the tract *between* two or more natural features (e.g., "between the mouth of Cypress Swamp and Blackwater River") **or** you have two distinct plausible anchor points (creek-mouth, swamp, plantation), you may call compute_centroid(points) exactly once to average them. Otherwise skip this step.
 
 4. You may make up to **ten** total tool calls. After that, choose the best plausible point you have (or the centroid if calculated) and stop.
 
-5. Final answer – reply with **only** the coordinates in decimal degrees with six digits after the decimal point, e.g., `36.757059, -77.836728`. No explanatory text.
+5. Final answer – reply with **only** the coordinates in decimal degrees with six digits after the decimal point, e.g., 36.757059, -77.836728. No explanatory text.
 
 Important rules
-• Always perform at least one successful `geocode_place` call before any other tool.
-• Invoke `compute_centroid` only when you already have two or more plausible anchor points and averaging will help locate a "between" description.
+• Always perform at least one successful geocode_place call before any other tool.
+• Invoke compute_centroid only when you already have two or more plausible anchor points and averaging will help locate a "between" description.
 • Never invent coordinates—derive them from tool output.
-• Return no explanatory text, symbols, or degree signs—just `lat, lon`.
+• Return no explanatory text, symbols, or degree signs—just lat, lon.
 ```
 
 #### A.2.3 Model Configurations

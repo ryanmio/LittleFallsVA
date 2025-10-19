@@ -10,7 +10,7 @@ eighteenth centuries. Yet the spatial dimension of these sources remains
 under-exploited: most patents survive only as narrative metes-and-bounds
 descriptions in printed abstract volumes such as \emph{Cavaliers and
 Pioneers} (C\&P) \citep{Nugent1979_cavaliers3}. Without geographic
-coordinates, historians and archaeologists cannot readily visualise how
+coordinates, historians and archaeologists cannot readily visualize how
 land ownership evolved or test hypotheses with modern Geographic
 Information System (GIS) tools. Creating a machine-readable,
 georeferenced version of C\&P would unlock new quantitative approaches
@@ -440,8 +440,8 @@ sources. Thus, we treat the text as out-of-distribution for contemporary
 language models; a formal training-data-leakage audit remains infeasible
 due to the proprietary nature of major LLM corpora.
 
-\subsection{Digitisation \&
-Pre-processing}\label{digitisation-pre-processing}
+\subsection{Digitization \&
+Pre-processing}\label{digitization-pre-processing}
 
 The bound volume was destructively scanned at 600 dpi. After
 benchmarking multiple optical-character-recognition (OCR) engines and
@@ -569,7 +569,7 @@ prediction coverage across all 43 test grants. While this represents a
 more systematic approach than the single-analyst GIS baseline, it
 demonstrates the challenges that automated systems face when dealing
 with historical toponyms that may have shifted meaning or location over
-centuries, as detailed in the case study analysis (§7.2.1).
+centuries, as detailed in the case study analysis (Section 7.2.1).
 
 \subsection{Mordecai-3 Heuristic Geoparser
 (H-3)}\label{mordecai-3-heuristic-geoparser-h-3}
@@ -827,8 +827,8 @@ repository.
 When supported (e.g., GPT‑4.1/4o/3.5), we set temperature t = 0.2;
 OpenAI's o‑series uses fixed decoding and does not expose temperature.
 Temperature controls sampling randomness during token selection (higher
-t → more variability; lower t → more deterministic). § 6.6 ablates t and
-finds limited sensitivity over the tested range.
+t → more variability; lower t → more deterministic). Section 6.6 ablates
+t and finds limited sensitivity over the tested range.
 
 \section{Results}\label{results}
 
@@ -1633,8 +1633,8 @@ Materials}\label{appendix-a-supplementary-methods-materials}
 \subsection{OCR \& Text-Normalisation
 Pipeline}\label{a.1-ocr-text-normalisation-pipeline}
 
-The corpus preparation described in §3.2 comprised a multi-stage optical
-character recognition (OCR) and text normalisation pipeline.
+The corpus preparation described in Section 3.2 comprised a multi-stage
+optical character recognition (OCR) and text normalisation pipeline.
 \emph{Cavaliers and Pioneers} Volume 3 was scanned at 600 DPI, yielding
 high-resolution page images in PDF format.
 

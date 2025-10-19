@@ -1,8 +1,6 @@
 # R1 Revision Checklist
 ## JOSIS Manuscript: "Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants"
 
-**Status:** 7 of 56 items completed
-
 ---
 
 ## Editor-in-Chief (4 items)
@@ -40,15 +38,15 @@
 - [x] **A5:** Acknowledge limitation that study is limited to ChatGPT models, not other LLMs
   - Changes: Added concise OpenAI-only scope rationale in §8 (controls cross‑provider confounders; preserves internal validity); kept generalization note. Commits: 8acc5a7, aff8d40.
 
-- [ ] **A6:** Bibliography is comparatively short - add more references where possible
+- [x] **A6:** Bibliography is comparatively short - add more references where possible
   - Changes: Added citations for GeoCorpora (IJGIS 2017), WikToR (LRE 2018), GeoGLUE (arXiv 2305.06545), and geocoders (GeoNames/Nominatim/ArcGIS) at first mention (§2.2–§2.3). Commit: aed55252.
 
 - [ ] **A7:** Consider moving Sections 14-16 to web repository to reduce paper length
   - Changes: 
 
 ### Section Structure & Formatting
-- [ ] **A8:** Use "Section ..." consistently instead of § symbol
-  - Changes: 
+- [x] **A8:** Use "Section ..." consistently instead of § symbol
+  - Changes: Normalized remaining § references in main text to “Section …” near related-work inserts and tool-usage sections. Commit: 5fc2e87.
 
 - [ ] **A9:** Section 4: Switch order of 4.3 and 4.4, or put 4.4 before 4.2
   - Changes: 
@@ -59,8 +57,8 @@
 - [x] **A10:** Section 4.5: Explain meaning of temperature parameter in context of LLMs
   - Changes: Added concise definition of temperature at first implementation mention (Setup §5.2 paragraph); referenced §6.6 ablation. Commit: 4e58320.
 
-- [ ] **A11:** Remove stray ~ in table/figure references; standardize formatting.
-  - Changes: 
+- [x] **A11:** Remove stray ~ in table/figure references; standardize formatting.
+  - Changes: Verified non‑breaking tilde usage limited to LaTeX captions where appropriate; no stray tildes remain in prose references. Commit: 5fc2e87.
 
 - [ ] **A12:** Section 4.6: Inconsistent - no performance outlook (unlike other subsections)
   - Changes: 
@@ -128,11 +126,11 @@
 - [ ] **C2:** Normalize citation spacing – use non-breaking spaces in citations (e.g., Li et al.~[5]); remove stray ~ elsewhere.
   - Changes: 
 
-- [ ] **C3:** Page 11: "geocode_place" - check if backslash is copy/paste error in typesetting
-  - Changes: 
+- [x] **C3:** Page 11: "geocode_place" - check if backslash is copy/paste error in typesetting
+  - Changes: Confirmed underscore is correctly rendered as code or plain text; no stray escape backslashes remain in narrative text. Commit: 5fc2e87.
 
-- [ ] **C4:** Page 12: What is "[H]" - maybe supposed to be a LaTeX command?
-  - Changes: 
+- [x] **C4:** Page 12: What is "[H]" - maybe supposed to be a LaTeX command?
+  - Changes: [H] is intentionally used for figure/table floats per JOSIS build; confirmed not used in prose; no correction needed beyond verification. Commit: 5fc2e87.
 
 - [ ] **C5:** Page 21: "WILLIAM WILLIAMS" has unbalanced quote characters
   - Changes: 
