@@ -53,8 +53,8 @@ Addressing these questions required a rigorously annotated test bench
 that blended historical sources, modern GIS ground truth, and controlled
 prompt engineering. The methodological design seeks to embody principles
 of rigorous and responsible GeoAI research, as outlined by Li et al.
-\citep{Li2024_geoai} and detailed further in §2.4, and---relative to
-classic geoparsers such as Stanford NER/GeoTxt
+\citep{Li2024_geoai} and detailed further in Section 2.4, and---relative
+to classic geoparsers such as Stanford NER/GeoTxt
 \citep{karimzadeh2019geotxt}, Mordecai‑3 \citep{halterman2023mordecai},
 and the map‑aware CamCoder \citep{Gritta2018_camcoder}---centers on
 long, archaic abstracts with nested landmarks and surveyor bearings
@@ -186,9 +186,9 @@ scale.
 \subsection{Large Language Models for
 Geolocation}\label{large-language-models-for-geolocation}
 
-Building on the manual coordinate-extraction bottleneck outlined in §
-2.1, recent advances in large language models (LLMs) suggest that much
-of the geoparsing pipeline can now be automated. Coordinate
+Building on the manual coordinate-extraction bottleneck outlined in
+Section 2.1, recent advances in large language models (LLMs) suggest
+that much of the geoparsing pipeline can now be automated. Coordinate
 extraction---sometimes called \emph{geoparsing}---comprises two
 subtasks: (i) identifying candidate toponyms in running text and (ii)
 resolving each mention to a unique set of latitude/longitude
@@ -244,8 +244,8 @@ established largely on short, contemporary corpora such as GeoCorpora
 and WikToR \citep{wallgrun2017geocorpora, gritta2018whatsmissing}. By
 contrast, we evaluate long‑form colonial abstracts with obsolete
 toponyms and surveyor jargon against 43 curated ground‑truth points. The
-next section (§ 2.3) explores tool‑augmented prompting frameworks that
-grant LLMs access to external geocoders and vector
+next section (Section 2.3) explores tool‑augmented prompting frameworks
+that grant LLMs access to external geocoders and vector
 databases---potentially mitigating some of the failure modes identified
 above.
 
@@ -253,8 +253,8 @@ above.
 Techniques}\label{tool-augmented-prompting-techniques}
 
 Integrating large language models with external geospatial utilities has
-emerged as a promising way to address the limitations identified in §
-2.2. In a \emph{tool-augmented} workflow, the LLM interprets
+emerged as a promising way to address the limitations identified in
+Section 2.2. In a \emph{tool-augmented} workflow, the LLM interprets
 unstructured language but can invoke specialized geocoding, database, or
 cartographic services during its reasoning process, grounding its
 outputs in authoritative data and deterministic algorithms.
@@ -337,7 +337,7 @@ cost-versus-accuracy and latency-versus-accuracy Pareto frontiers
 demonstrating reductions of two to five orders-of-magnitude in dollar
 cost and turnaround time relative to human baselines while preserving or
 improving spatial accuracy; and by examining robustness through targeted
-ablations reported in § 6.6, showing that accuracy is essentially
+ablations reported in Section 6.6, showing that accuracy is essentially
 unaffected by changes in temperature, reasoning-budget, and abstract
 length, and that removing the five largest residuals alters mean error
 by less than two kilometres---confirming that results are not driven by
@@ -824,11 +824,11 @@ latency, and any tool traces were logged in real time; intermediate
 artifacts and final result sets are archived in the accompanying
 repository.
 
-In decoding, the temperature parameter (t) controls sampling randomness
-during token selection: lower values approach deterministic outputs;
-higher values increase variability. Unless otherwise noted, we use t =
-0.8 for single‑shot runs; § 6.6 reports an ablation showing accuracy is
-largely insensitive to t over the tested range.
+When supported (e.g., GPT‑4.1/4o/3.5), we set temperature t = 0.2;
+OpenAI's o‑series uses fixed decoding and does not expose temperature.
+Temperature controls sampling randomness during token selection (higher
+t → more variability; lower t → more deterministic). § 6.6 ablates t and
+finds limited sensitivity over the tested range.
 
 \section{Results}\label{results}
 
@@ -1150,7 +1150,7 @@ spelling variants or county qualifiers, and finally aggregate anchors
 with a centroid tool. Each call--observe--reflect loop is logged,
 exposing an auditable chain of evidence. The trade-off is latency and
 verbosity: ten turns of querying and self-reflection can be slower and,
-as § 6.1 showed, not necessarily more accurate.
+as Section 6.1 showed, not necessarily more accurate.
 
 \subsection{Tool-usage patterns}\label{tool-usage-patterns}
 
@@ -1209,8 +1209,8 @@ economical strategy, issuing on average 2.3 calls per grant while
 succeeding on the first query in 73\% of cases. The
 gpt-4o-mini-2025-04-16 model (T-1), by contrast, averaged 4.0 calls with
 a 67\% first-call success rate. This greater query volume manifests as
-the higher token usage and latency reported in § 6.3, yet it conferred
-no observable advantage in positional accuracy (§ 6.1).
+the higher token usage and latency reported in Section 6.3, yet it
+conferred no observable advantage in positional accuracy (Section 6.1).
 
 \subsection{Robustness / Ablation
 Studies}\label{robustness-ablation-studies}

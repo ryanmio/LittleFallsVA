@@ -41,7 +41,7 @@
   - Changes: Added concise OpenAI-only scope rationale in §8 (controls cross‑provider confounders; preserves internal validity); kept generalization note. Commits: 8acc5a7, aff8d40.
 
 - [ ] **A6:** Bibliography is comparatively short - add more references where possible
-  - Changes: 
+  - Changes: Added citations for GeoCorpora (IJGIS 2017), WikToR (LRE 2018), GeoGLUE (arXiv 2305.06545), and geocoders (GeoNames/Nominatim/ArcGIS) at first mention (§2.2–§2.3). Commit: aed55252.
 
 - [ ] **A7:** Consider moving Sections 14-16 to web repository to reduce paper length
   - Changes: 
@@ -57,7 +57,7 @@
   - Changes: 
 
 - [x] **A10:** Section 4.5: Explain meaning of temperature parameter in context of LLMs
-  - Changes: Added concise definition of temperature at first implementation mention (Setup §5.2 paragraph); referenced §6.6 ablation. Commit: 5134818.
+  - Changes: Added concise definition of temperature at first implementation mention (Setup §5.2 paragraph); referenced §6.6 ablation. Commit: 4e58320.
 
 - [ ] **A11:** Remove stray ~ in table/figure references; standardize formatting.
   - Changes: 
@@ -153,7 +153,7 @@
   - Changes: 
 
 - [x] **C10:** Briefly justify temperature where it is first introduced; add forward reference to detailed discussion if needed.
-  - Changes: Clarified t as sampling randomness, noted default (0.8) and limited sensitivity per §6.6; added forward reference. Commit: 5134818.
+  - Changes: Clarified t as sampling randomness, noted default (0.2) when supported and that o‑series does not expose temperature; added forward reference to §6.6. Commit: 4e58320.
 
 - [ ] **C11:** Page 12, re: DBSCAN: Clarify - is that basically MinPts=3?
   - Changes: 
@@ -230,9 +230,4 @@ Submit THREE items:
 **Note:** R1 revisions are NOT blind - reviewers already know who you are.
 
 ## Workflow
-1. **First time:** Run `./build.sh` → automatically creates baselines in `_baseline/` directory
-2. **Edit:** Update `main.md` with your revisions
-3. **Build:** Run `./build.sh` → regenerates `article.tex` and `content.tex`, creates diff files automatically
-4. **Review:** Check `diff_article.tex` and `diff_content.tex` to verify changes are correct
-5. **Upload to Overleaf (optional):** Compile diff files there to see highlighted PDF
-6. **Iterate:** Repeat steps 2-5 until all checklist items addressed
+1. **First time:** Run `./build.sh` → automatically creates baselines in `

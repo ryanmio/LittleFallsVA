@@ -53,9 +53,9 @@ Addressing these questions required a rigorously annotated test bench
 that blended historical sources, modern GIS ground truth, and controlled
 prompt engineering. The methodological design seeks to embody principles
 of rigorous and responsible GeoAI research, as outlined by Li et al.
-\citep{Li2024_geoai} and detailed further in §2.4\DIFdelbegin \DIFdel{.
-}\DIFdelend \DIFaddbegin \DIFadd{, and---relative to
-classic geoparsers such as Stanford NER/GeoTxt
+\citep{Li2024_geoai} and detailed further in \DIFdelbegin \DIFdel{§}\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 2.4\DIFdelbegin \DIFdel{.
+}\DIFdelend \DIFaddbegin \DIFadd{, and---relative
+to classic geoparsers such as Stanford NER/GeoTxt
 \mbox{%DIFAUXCMD
 \citep{karimzadeh2019geotxt}}\hskip0pt%DIFAUXCMD
 , Mordecai‑3 \mbox{%DIFAUXCMD
@@ -194,9 +194,10 @@ scale.
 \subsection{Large Language Models for
 Geolocation}\label{large-language-models-for-geolocation}
 
-Building on the manual coordinate-extraction bottleneck outlined in §
-2.1, recent advances in large language models (LLMs) suggest that much
-of the geoparsing pipeline can now be automated. Coordinate
+Building on the manual coordinate-extraction bottleneck outlined in
+\DIFdelbegin \DIFdel{§
+}\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 2.1, recent advances in large language models (LLMs) suggest
+that much of the geoparsing pipeline can now be automated. Coordinate
 extraction---sometimes called \emph{geoparsing}---comprises two
 subtasks: (i) identifying candidate toponyms in running text and (ii)
 resolving each mention to a unique set of latitude/longitude
@@ -258,8 +259,8 @@ and WikToR \mbox{%DIFAUXCMD
 . By
 contrast, we evaluate long‑form colonial abstracts with obsolete
 toponyms and surveyor jargon against 43 curated ground‑truth points. }\DIFaddend The
-next section (§ 2.3) explores \DIFdelbegin \DIFdel{tool-augmented }\DIFdelend \DIFaddbegin \DIFadd{tool‑augmented }\DIFaddend prompting frameworks that
-grant LLMs access to external geocoders and vector
+next section (\DIFdelbegin \DIFdel{§ }\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 2.3) explores \DIFdelbegin \DIFdel{tool-augmented }\DIFdelend \DIFaddbegin \DIFadd{tool‑augmented }\DIFaddend prompting frameworks
+that grant LLMs access to external geocoders and vector
 databases---potentially mitigating some of the failure modes identified
 above.
 
@@ -267,8 +268,9 @@ above.
 Techniques}\label{tool-augmented-prompting-techniques}
 
 Integrating large language models with external geospatial utilities has
-emerged as a promising way to address the limitations identified in §
-2.2. In a \emph{tool-augmented} workflow, the LLM interprets
+emerged as a promising way to address the limitations identified in
+\DIFdelbegin \DIFdel{§
+}\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 2.2. In a \emph{tool-augmented} workflow, the LLM interprets
 unstructured language but can invoke specialized geocoding, database, or
 cartographic services during its reasoning process, grounding its
 outputs in authoritative data and deterministic algorithms.
@@ -368,7 +370,7 @@ cost-versus-accuracy and latency-versus-accuracy Pareto frontiers
 demonstrating reductions of two to five orders-of-magnitude in dollar
 cost and turnaround time relative to human baselines while preserving or
 improving spatial accuracy; and by examining robustness through targeted
-ablations reported in § 6.6, showing that accuracy is essentially
+ablations reported in \DIFdelbegin \DIFdel{§ }\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 6.6, showing that accuracy is essentially
 unaffected by changes in temperature, reasoning-budget, and abstract
 length, and that removing the five largest residuals alters mean error
 by less than two kilometres---confirming that results are not driven by
@@ -600,7 +602,7 @@ prediction coverage across all 43 test grants. While this represents a
 more systematic approach than the single-analyst GIS baseline, it
 demonstrates the challenges that automated systems face when dealing
 with historical toponyms that may have shifted meaning or location over
-centuries, as detailed in the case study analysis (§7.2.1).
+centuries, as detailed in the case study analysis (\DIFdelbegin \DIFdel{§}\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 7.2.1).
 
 \subsection{Mordecai-3 Heuristic Geoparser
 (H-3)}\label{mordecai-3-heuristic-geoparser-h-3}
@@ -855,12 +857,11 @@ latency, and any tool traces were logged in real time; intermediate
 artifacts and final result sets are archived in the accompanying
 repository.
 
-\DIFaddbegin \DIFadd{In decoding, the temperature parameter (t) controls sampling randomness
-during token selection: lower values approach deterministic outputs;
-higher values increase variability. When supported (e.g., GPT‑4.1, 4o,
-3.5), we set t = 0.2; OpenAI's o‑series uses fixed reasoning/decoding
-and does not expose temperature. § 6.6 reports an ablation indicating
-limited sensitivity to t within the tested range.
+\DIFaddbegin \DIFadd{When supported (e.g., GPT‑4.1/4o/3.5), we set temperature t = 0.2;
+OpenAI's o‑series uses fixed decoding and does not expose temperature.
+Temperature controls sampling randomness during token selection (higher
+t → more variability; lower t → more deterministic). Section 6.6 ablates
+t and finds limited sensitivity over the tested range.
 }
 
 \DIFaddend \section{Results}\label{results}
@@ -1183,7 +1184,7 @@ spelling variants or county qualifiers, and finally aggregate anchors
 with a centroid tool. Each call--observe--reflect loop is logged,
 exposing an auditable chain of evidence. The trade-off is latency and
 verbosity: ten turns of querying and self-reflection can be slower and,
-as § 6.1 showed, not necessarily more accurate.
+as \DIFdelbegin \DIFdel{§ }\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 6.1 showed, not necessarily more accurate.
 
 \subsection{Tool-usage patterns}\label{tool-usage-patterns}
 
@@ -1242,8 +1243,8 @@ economical strategy, issuing on average 2.3 calls per grant while
 succeeding on the first query in 73\% of cases. The
 gpt-4o-mini-2025-04-16 model (T-1), by contrast, averaged 4.0 calls with
 a 67\% first-call success rate. This greater query volume manifests as
-the higher token usage and latency reported in § 6.3, yet it conferred
-no observable advantage in positional accuracy (§ 6.1).
+the higher token usage and latency reported in \DIFdelbegin \DIFdel{§ }\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 6.3, yet it
+conferred no observable advantage in positional accuracy (\DIFdelbegin \DIFdel{§ }\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 6.1).
 
 \subsection{Robustness / Ablation
 Studies}\label{robustness-ablation-studies}
@@ -1666,8 +1667,8 @@ Materials}\label{appendix-a-supplementary-methods-materials}
 \subsection{OCR \& Text-Normalisation
 Pipeline}\label{a.1-ocr-text-normalisation-pipeline}
 
-The corpus preparation described in §3.2 comprised a multi-stage optical
-character recognition (OCR) and text normalisation pipeline.
+The corpus preparation described in \DIFdelbegin \DIFdel{§}\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 3.2 comprised a multi-stage
+optical character recognition (OCR) and text normalisation pipeline.
 \emph{Cavaliers and Pioneers} Volume 3 was scanned at 600 DPI, yielding
 high-resolution page images in PDF format.
 
