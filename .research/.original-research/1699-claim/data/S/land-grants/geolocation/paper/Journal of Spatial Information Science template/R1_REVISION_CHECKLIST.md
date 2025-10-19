@@ -154,7 +154,7 @@
   - Changes: Clarified t as sampling randomness, noted default (0.2) when supported and that o‑series does not expose temperature; added forward reference to §6.6. Commit: 4e58320.
 
 - [ ] **C11:** Page 12, re: DBSCAN: Clarify - is that basically MinPts=3?
-  - Changes: 
+  - Changes: Clarified ensemble clustering as DBSCAN with ε = 0.5 km and MinPts = 3 in the Five‑call Ensemble description, Discussion §7.1 and §7.3 language, and Conclusion. Commit: ad3e7430ab5b93c79171b264b1afedb84882d5dc.
 
 - [ ] **C12:** Clarify what 'script development time' includes and whether subsequent grants would be faster.
   - Changes: 
