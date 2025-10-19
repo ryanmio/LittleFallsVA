@@ -879,21 +879,29 @@ single-shot predictions, indicating ensemble methods reduce mean error
 by approximately 4--11 km compared to single-shot methods.
 
 Figure \ref{fig:accuracy_bar} displays the mean error with corresponding
-95\% confidence intervals.
+95\% confidence intervals. This figure enables direct comparison of
+method accuracy across LLMs and baselines; in this study, all LLMs
+outperform the human and heuristic baselines, and the o3 ensemble
+attains the lowest mean error.
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/accuracy_bar.pdf}
-\caption{Coordinate accuracy by method}\label{fig:accuracy_bar}
+\caption{Mean geolocation error by method with 95\% CIs on 43 grants;
+enables direct accuracy comparison across LLMs and
+baselines.}\label{fig:accuracy_bar}
 \end{figure}
 
 The violin plot in Figure \ref{fig:violin} shows that most LLM errors
 cluster below 40 km, with a long tail driven by a handful of outliers.
+This view emphasises the tighter concentration for LLMs and the broader
+dispersion for baselines.
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/error_violin_methods.pdf}
-\caption{Error Distribution by Method}\label{fig:violin}
+\caption{Error distributions by method; shows spread, skew, and outliers
+for LLMs versus baselines.}\label{fig:violin}
 \end{figure}
 
 To focus on the head-to-head comparison between the language-model
@@ -909,17 +917,19 @@ outperform manual geocoding.
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/error_violin_core_methods.pdf}
-\caption{Core error distribution (LLMs vs.~GIS
-baseline)}\label{fig:violin_core}
+\caption{Error distributions for LLMs vs.~GIS analyst only, isolating
+core methods from heuristic baselines.}\label{fig:violin_core}
 \end{figure}
 
 Figure \ref{fig:cdf_models} presents the cumulative distribution of
-errors for each evaluated method.
+errors for each evaluated method. LLMs exhibit higher ≤10 km rates and
+stochastically dominate the baselines across most of the range.
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/cdf_graphs/cdf_models_combined.pdf}
-\caption{Cumulative error distribution by method}\label{fig:cdf_models}
+\caption{Cumulative error distributions; supports comparing ≤10 km rates
+and tail behavior across methods.}\label{fig:cdf_models}
 \end{figure}
 
 Table \ref{tbl:reasoning} examines how varying the
@@ -1041,19 +1051,18 @@ the Pareto frontier that best balances budget and precision.
 \subsection{Latency--Accuracy
 Trade-off}\label{latencyaccuracy-trade-off}
 
-Examining the latency dimension, Figure \ref{fig:pareto_latency} shows
-that automatic methods produce coordinates in 0.7--48 seconds of
-computation time, still three orders of magnitude faster than the GIS
-analyst's labor time (≈502 s per grant). This range reflects substantial
-variation across model families, with the fastest models
-(gpt-4o-2024-08-06 and gpt-3.5-turbo) requiring less than 1 second per
-grant, while the o-series models (particularly o3-2025-04-16) taking up
-to 48 seconds.
+Examining the latency dimension, Figure \ref{fig:latency_box} shows that
+automatic methods produce coordinates in 0.7--48 seconds of computation
+time, still three orders of magnitude faster than the GIS analyst's
+labor time (≈502 s per grant). This range reflects substantial variation
+across model families, with the fastest models (gpt-4o-2024-08-06 and
+gpt-3.5-turbo) requiring less than 1 second per grant, while the
+o-series models (particularly o3-2025-04-16) taking up to 48 seconds.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\linewidth]{figures/latency_boxplot.pdf}
-\caption{Distribution of per-grant latency by method.}
+\caption{Per-grant latency by method (x-axis in seconds, log scale). Boxes indicate interquartile ranges with median lines; whiskers extend to 1.5×IQR. Use this plot to compare runtime profiles of automated pipelines against the GIS analyst workflow.}
 \label{fig:latency_box}
 \end{figure}
 
@@ -1224,7 +1233,9 @@ main findings:
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/length_vs_error.png}
-\caption{Length vs.~Error}\label{fig:length-vs-error}
+\caption{Abstract length versus error; tests whether longer texts
+improve geolocation accuracy (no meaningful relationship
+found).}\label{fig:length-vs-error}
 \end{figure}
 
 These results suggest that abstract length explains essentially none of

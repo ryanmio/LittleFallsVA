@@ -376,7 +376,7 @@ Examining the latency dimension, Figure \ref{fig:latency_box} shows that automat
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\linewidth]{../analysis/figures/latency_boxplot.pdf}
-\caption{Per-grant latency by method; automated inferences complete in 0.7–48 s versus ≈502 s for the GIS analyst baseline.}
+\caption{Per-grant latency by method (seconds; log-scale x-axis). Boxplots show medians and interquartile ranges; whiskers indicate the 1.5 IQR range; outliers are omitted.}
 \label{fig:latency_box}
 \end{figure}
 

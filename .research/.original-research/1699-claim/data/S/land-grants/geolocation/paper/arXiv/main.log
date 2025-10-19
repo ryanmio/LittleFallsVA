@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  19 OCT 2025 08:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  19 OCT 2025 08:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -44214,30 +44214,10 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1104 \caption
-               {Per-grant latency by method; automated inferences complete i...
+               {Per-grant latency by method (seconds; log-scale x-axis). Box...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 1104.
-
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 1104.
-
-
-! LaTeX Error: Unicode character ≈ (U+2248)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1104 ...rences complete in 0.7–48 s versus ≈
-                                                  502 s for the GIS analyst ...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
 
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
@@ -44280,7 +44260,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 1101--1107
  []
 
 
-Overfull \hbox (530.37889pt too wide) in paragraph at lines 1101--1107
+Overfull \hbox (763.33575pt too wide) in paragraph at lines 1101--1107
 []\OML/cmm/m/it/10 oxplot:pdf[][]$ 
  []
 
@@ -79725,7 +79705,7 @@ l.2169 M-3 & 43 & 50.25 & 48.40 & 24.93 & 6.29 &
 Here is how much of TeX's memory you used:
  178 strings out of 474662
  2936 string characters out of 5751110
- 437757 words of memory out of 5000000
+ 437803 words of memory out of 5000000
  23306 multiletter control sequences out of 15000+600000
  559994 words of font info for 40 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
