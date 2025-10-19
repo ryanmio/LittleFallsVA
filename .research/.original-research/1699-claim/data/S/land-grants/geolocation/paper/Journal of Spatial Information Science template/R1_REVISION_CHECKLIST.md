@@ -1,7 +1,7 @@
 # R1 Revision Checklist
 ## JOSIS Manuscript: "Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants"
 
-**Status:** 0 of 47 items completed
+**Status:** 0 of 53 items completed
 
 ---
 
@@ -56,7 +56,7 @@
 - [ ] **A10:** Section 4.5: Explain meaning of temperature parameter in context of LLMs
   - Changes: 
 
-- [ ] **A11:** Remove ~ symbol in table references (e.g. Section 4.8)
+- [ ] **A11:** Remove stray ~ in table/figure references; standardize formatting.
   - Changes: 
 
 - [ ] **A12:** Section 4.6: Inconsistent - no performance outlook (unlike other subsections)
@@ -72,10 +72,10 @@
 - [ ] **A15:** Section 6.2: No reference to Table 6 in text - add reference
   - Changes: 
 
-- [ ] **A16:** Section 6.2: No good reason for listing both costs per grant AND per 1000 requests - choose one
+- [ ] **A16:** Choose one cost normalization (per-grant or per-1,000), justify, and align table + prose.
   - Changes: 
 
-- [ ] **A17:** Figure 6: Has no values for H# - either explain or remove from table
+- [ ] **A17:** Figure 6 H# column – populate with values and explain, or remove.
   - Changes: 
 
 - [ ] **A18:** Section 6.4: Table reference should be "Table 7", table is lacking number + caption
@@ -121,7 +121,7 @@
 - [ ] **C1:** Page 5: "Huang et al. [?]" reference error - fix
   - Changes: 
 
-- [ ] **C2:** Page 6, Section 2.4, line 4: "Li et al. [5]" has large space - use ~ (non-breaking space)
+- [ ] **C2:** Normalize citation spacing – use non-breaking spaces in citations (e.g., Li et al.~[5]); remove stray ~ elsewhere.
   - Changes: 
 
 - [ ] **C3:** Page 11: "geocode_place" - check if backslash is copy/paste error in typesetting
@@ -148,13 +148,13 @@
 - [ ] **C9:** Page 10: How often did H-2 fall back to Virginia's geographic center? Would pull up average
   - Changes: 
 
-- [ ] **C10:** Page 11: Why this temperature? (discussed later but mention here too)
+- [ ] **C10:** Briefly justify temperature where it is first introduced; add forward reference to detailed discussion if needed.
   - Changes: 
 
 - [ ] **C11:** Page 12, re: DBSCAN: Clarify - is that basically MinPts=3?
   - Changes: 
 
-- [ ] **C12:** Page 13: Would be nice to know what "script development time" entails and if further grants would be quicker
+- [ ] **C12:** Clarify what 'script development time' includes and whether subsequent grants would be faster.
   - Changes: 
 
 - [ ] **C13:** Page 14: Mean column hard to read - adjust column widths (make other columns less wide)
@@ -175,12 +175,36 @@
 
 ---
 
+## Global Sweeps (6 items)
+
+### Cross-cutting Quality Checks
+- [ ] **G1:** Descriptive captions pass – each figure/table states what it shows and why it matters; ensure in-text references near first mention.
+  - Changes: 
+
+- [ ] **G2:** Cross-reference normalization – replace § with "Section …"; ensure appendix vs numbered sections are consistent.
+  - Changes: 
+
+- [ ] **G3:** Numbering/labels – every figure/table has a number + caption; fix mismatches (e.g., "Table 7").
+  - Changes: 
+
+- [ ] **G4:** Rounding/units – harmonize rounding between prose and tables; apply chosen cost unit consistently.
+  - Changes: 
+
+- [ ] **G5:** Typesetting artifacts – resolve [H], geocode\\_place backslash, large spaces, legend color mismatches, empty H# columns.
+  - Changes: 
+
+- [ ] **G6:** Figure references – ensure all figures mentioned (incl. Figure 4 and 8) are referenced with a one-line takeaway.
+  - Changes: 
+
+---
+
 ## Summary Counts
-- **Total Items:** 47
+- **Total Items:** 53
 - **Editor:** 4
 - **Reviewer A:** 22
 - **Reviewer B:** 4 (1 major, 3 optional/minor)
 - **Reviewer C:** 17 (13 actionable, 4 positive/acknowledged)
+- **Global Sweeps:** 6
 
 ---
 
@@ -190,9 +214,18 @@
 3. **Priority 3:** Language/phrasing improvements (C6, C7) and structural improvements
 4. **Priority 4:** Minor formatting and clarifications
 
-**Next Steps:**
-1. Create baseline copies for latexdiff: `cp article.tex _baseline/` and `cp content.tex _baseline/`
-2. Edit main.md source file with revisions
-3. Run `build.sh` to regenerate content.tex and create diff files
-4. Upload `diff_article.tex` and `diff_content.tex` to Overleaf for review
+## R1 Submission Requirements (per Judith's email)
+Submit THREE items:
+1. **Plain revised manuscript** → `article.pdf` (non-blind, with author name)
+2. **Highlighted changes version** → `diff_article.pdf` (shows what changed from v0 to v1)
+3. **Response letter** → Document addressing each reviewer comment with manuscript changes noted
 
+**Note:** R1 revisions are NOT blind - reviewers already know who you are.
+
+## Workflow
+1. **First time:** Run `./build.sh` → automatically creates baselines in `_baseline/` directory
+2. **Edit:** Update `main.md` with your revisions
+3. **Build:** Run `./build.sh` → regenerates `article.tex` and `content.tex`, creates diff files automatically
+4. **Review:** Check `diff_article.tex` and `diff_content.tex` to verify changes are correct
+5. **Upload to Overleaf (optional):** Compile diff files there to see highlighted PDF
+6. **Iterate:** Repeat steps 2-5 until all checklist items addressed
