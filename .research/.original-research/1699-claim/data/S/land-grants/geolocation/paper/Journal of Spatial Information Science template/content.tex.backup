@@ -1062,7 +1062,7 @@ o-series models (particularly o3-2025-04-16) taking up to 48 seconds.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\linewidth]{figures/latency_boxplot.pdf}
-\caption{Per-grant latency by method (x-axis in seconds, log scale). Boxes indicate interquartile ranges with median lines; whiskers extend to 1.5×IQR. Use this plot to compare runtime profiles of automated pipelines against the GIS analyst workflow.}
+\caption{Per-grant latency by method (seconds; log-scale x-axis). Boxplots show medians and interquartile ranges; whiskers indicate the 1.5 IQR range; outliers are omitted.}
 \label{fig:latency_box}
 \end{figure}
 

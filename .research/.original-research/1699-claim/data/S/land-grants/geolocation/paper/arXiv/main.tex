@@ -863,8 +863,8 @@ coarsest gazetteer cues.
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2609}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1304}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1304}}@{}}
-\caption{\label{tbl:accuracy}Coordinate-accuracy
-metrics.}\tabularnewline
+\caption{\label{tbl:accuracy}Coordinate-accuracy metrics on 43 grants
+(mean ± 95\% CI, median, and ≤10 km share).}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 ID
@@ -1049,8 +1049,9 @@ and a mean error under 28 km, despite not achieving the absolute lowest
 error.
 
 \begin{longtable}[]{@{}llll@{}}
-\caption{\label{tbl:cost}Cost efficiency of evaluated
-methods.}\tabularnewline
+\caption{\label{tbl:cost}Cost metrics by method---cost per located grant
+(USD) and cost per 1,000 located grants (USD), with mean error
+(km).}\tabularnewline
 \toprule\noalign{}
 ID & Cost / located (USD) & Cost per 1k & Mean error (km) \\
 \midrule\noalign{}
@@ -1080,7 +1081,9 @@ H-3 & 0.00000 & 0.00 & 94.3 \\
 \begin{figure}
 \centering
 \pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/pareto_tradeoff.pdf}}
-\caption{Cost-Accuracy Tradeoff}\label{fig:pareto_cost}
+\caption{Cost--accuracy Pareto frontier: mean error (km) versus cost per
+1,000 located grants (USD). Points nearer the lower-left frontier
+represent better cost--accuracy trade-offs.}\label{fig:pareto_cost}
 \end{figure}
 
 The o3-2025-04-16 model (M-2) is more accurate but \textasciitilde100×
@@ -1382,7 +1385,7 @@ modes:
   \caption{Failure-mode example: Grant 19.}
   \label{fig:grant19}
 \end{subfigure}
-\caption{Grant examples: Grant 1 (left) shows a success case where the o3 model (M-2) and tool-chain gpt-4.1 (T-4) are close to ground truth. Grant 19 (right) illustrates a failure mode where an early spurious geocoder hit sends the tool-chain prediction far from ground truth, whereas the unguided model remains closer to the actual location. Basemap © OSM.}
+\caption{Grant examples comparing predicted points against ground truth (black stars). Left: success case with close agreement; right: failure mode where an early spurious geocoder hit drives the tool-chain far from ground truth while the unguided model remains nearer. Basemap © OSM.}
 \label{fig:grant_maps}
 \end{figure}
 
