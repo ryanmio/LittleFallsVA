@@ -6,17 +6,16 @@ Motivation}\label{historical-context-motivation}
 Virginia's colonial land patents are a cornerstone resource for scholars
 studying settlement patterns, the political economy of plantation
 agriculture, and Indigenous dispossession in the seventeenth and
-eighteenth centuries. {[}VERIFICATION TEST: Only this bracketed text
-should be highlighted.{]} Yet the spatial dimension of these sources
-remains under-exploited: most patents survive only as narrative
-metes-and-bounds descriptions in printed abstract volumes such as
-\emph{Cavaliers and Pioneers} (C\&P) \citep{Nugent1979_cavaliers3}.
-Without geographic coordinates, historians and archaeologists cannot
-readily visualise how land ownership evolved or test hypotheses with
-modern Geographic Information System (GIS) tools. Creating a
-machine-readable, georeferenced version of C\&P would unlock new
-quantitative approaches to long-standing questions about colonial
-Virginia's social and environmental history.
+eighteenth centuries. Yet the spatial dimension of these sources remains
+under-exploited: most patents survive only as narrative metes-and-bounds
+descriptions in printed abstract volumes such as \emph{Cavaliers and
+Pioneers} (C\&P) \citep{Nugent1979_cavaliers3}. Without geographic
+coordinates, historians and archaeologists cannot readily visualise how
+land ownership evolved or test hypotheses with modern Geographic
+Information System (GIS) tools. Creating a machine-readable,
+georeferenced version of C\&P would unlock new quantitative approaches
+to long-standing questions about colonial Virginia's social and
+environmental history.
 
 Digitising and geo-locating the abstracts, however, is notoriously
 labor-intensive. Even professional GIS analysts can spend several hours

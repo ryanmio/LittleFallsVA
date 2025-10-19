@@ -314,21 +314,21 @@ Table: Coordinate-accuracy metrics. {#tbl:accuracy}
 
 Bootstrap confidence intervals confirm ensemble superiority over single-shot predictions, indicating ensemble methods reduce mean error by approximately 4–11 km compared to single-shot methods.
 
-Figure \ref{fig:accuracy_bar} displays the mean error with corresponding 95% confidence intervals.
+Figure \ref{fig:accuracy_bar} displays the mean error with corresponding 95% confidence intervals. This figure enables direct comparison of method accuracy across LLMs and baselines; in this study, all LLMs outperform the human and heuristic baselines, and the o3 ensemble attains the lowest mean error.
 
-![Coordinate accuracy by method](../analysis/figures/accuracy_bar.pdf){#fig:accuracy_bar width="0.9\linewidth"}
+![Mean geolocation error by method with 95% CIs on 43 grants; enables direct accuracy comparison across LLMs and baselines.](../analysis/figures/accuracy_bar.pdf){#fig:accuracy_bar width="0.9\linewidth"}
 
-The violin plot in Figure \ref{fig:violin} shows that most LLM errors cluster below 40 km, with a long tail driven by a handful of outliers.
+The violin plot in Figure \ref{fig:violin} shows that most LLM errors cluster below 40 km, with a long tail driven by a handful of outliers. This view emphasises the tighter concentration for LLMs and the broader dispersion for baselines.
 
-![Error Distribution by Method](../analysis/figures/error_violin_methods.pdf){#fig:violin width="0.7\linewidth"}
+![Error distributions by method; shows spread, skew, and outliers for LLMs versus baselines.](../analysis/figures/error_violin_methods.pdf){#fig:violin width="0.7\linewidth"}
 
 To focus on the head-to-head comparison between the language-model approaches and the strongest non-AI baseline, Figure \ref{fig:violin_core} repeats the violin plot but limits the panel to the six LLM variants and the human–GIS workflow (H-1).  Removing the long-tail baselines (county centroids, rule-based NER, etc.) reveals a much tighter performance band: every large-model distribution lies well inside the inter-quartile range of the GIS analyst and displays a shorter upper whisker, underscoring how frequently even weaker LLMs outperform manual geocoding.
 
-![Core error distribution (LLMs vs. GIS baseline)](../analysis/figures/error_violin_core_methods.pdf){#fig:violin_core width="0.7\linewidth"}
+![Error distributions for LLMs vs. GIS analyst only, isolating core methods from heuristic baselines.](../analysis/figures/error_violin_core_methods.pdf){#fig:violin_core width="0.7\linewidth"}
 
-Figure \ref{fig:cdf_models} presents the cumulative distribution of errors for each evaluated method. 
+Figure \ref{fig:cdf_models} presents the cumulative distribution of errors for each evaluated method. LLMs exhibit higher ≤10 km rates and stochastically dominate the baselines across most of the range.
 
-![Cumulative error distribution by method](../analysis/figures/cdf_graphs/cdf_models_combined.pdf){#fig:cdf_models width="0.9\linewidth"}
+![Cumulative error distributions; supports comparing ≤10 km rates and tail behavior across methods.](../analysis/figures/cdf_graphs/cdf_models_combined.pdf){#fig:cdf_models width="0.9\linewidth"}
 
 Table \ref{tbl:reasoning} examines how varying the *reasoning_effort* parameter within the same o3-2025-04-16 model (M-2) affects spatial accuracy. The differences are minor: mean error shifts by less than 1 km across effort levels, while the share of highly-accurate predictions (≤ 10 km) increases by approximately 7 percentage points from low to medium/high effort.
 
@@ -371,12 +371,12 @@ The o3-2025-04-16 model (M-2) is more accurate but ~100× costlier than gpt-4o-2
 
 ## 6.3 Latency–Accuracy Trade-off
 
-Examining the latency dimension, Figure \ref{fig:pareto_latency} shows that automatic methods produce coordinates in 0.7–48 seconds of computation time, still three orders of magnitude faster than the GIS analyst's labor time (≈502 s per grant). This range reflects substantial variation across model families, with the fastest models (gpt-4o-2024-08-06 and gpt-3.5-turbo) requiring less than 1 second per grant, while the o-series models (particularly o3-2025-04-16) taking up to 48 seconds.
+Examining the latency dimension, Figure \ref{fig:latency_box} shows that automatic methods produce coordinates in 0.7–48 seconds of computation time, still three orders of magnitude faster than the GIS analyst's labor time (≈502 s per grant). This range reflects substantial variation across model families, with the fastest models (gpt-4o-2024-08-06 and gpt-3.5-turbo) requiring less than 1 second per grant, while the o-series models (particularly o3-2025-04-16) taking up to 48 seconds.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\linewidth]{../analysis/figures/latency_boxplot.pdf}
-\caption{Distribution of per-grant latency by method.}
+\caption{Per-grant latency by method; automated inferences complete in 0.7–48 s versus ≈502 s for the GIS analyst baseline.}
 \label{fig:latency_box}
 \end{figure}
 
@@ -428,7 +428,7 @@ Several additional analyses were conducted to test the robustness of the main fi
   * Median split — "Short" (≤ 36 words) vs "long" (> 36 words) abstracts yielded mean errors of 36.8 km and 34.9 km respectively (95% CIs overlap), indicating no practical difference.  
   * Continuous fit — An ordinary-least-squares regression \(\text{error}_{km}=42.3-0.18\,\text{length}_{words}\) gives a slope of –0.18 km ± 0.44 km (95% CI) per extra word with R² = 0.004 and Pearson r = –0.06.  Figure \ref{fig:length-vs-error} visualizes the scatter and confidence band.
 
-![Length vs. Error](../analysis/figures/length_vs_error.png){#fig:length-vs-error width="\linewidth" fig-pos="H"}
+![Abstract length versus error; tests whether longer texts improve geolocation accuracy (no meaningful relationship found).](../analysis/figures/length_vs_error.png){#fig:length-vs-error width="\linewidth" fig-pos="H"}
 
   These results suggest that abstract length explains essentially none of the variation in LLM accuracy.
 
