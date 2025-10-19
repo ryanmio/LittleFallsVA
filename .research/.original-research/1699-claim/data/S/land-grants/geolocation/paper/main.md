@@ -61,6 +61,8 @@ Despite the promise of LLMs, their ability to extract usable coordinates from ea
 
 Addressing these questions required a rigorously annotated test bench that blended historical sources, modern GIS ground truth, and controlled prompt engineering. The methodological design seeks to embody principles of rigorous and responsible GeoAI research, as outlined by Li et al. [@Li2024_geoai] and detailed further in §2.4.
 
+Relative to classic geoparsers—gazetteer‑driven Stanford NER/GeoTxt [@karimzadeh2019geotxt], neural Mordecai‑3 [@halterman2023mordecai], and map‑aware CamCoder [@Gritta2018_camcoder]—our inputs are long, archaic abstracts whose nested landmarks and surveyor bearings differ markedly from the short, contemporary texts common in prior benchmarks. We therefore compare a pure text‑only pipeline to an LLM‑plus‑tools variant that can call geocoders mid‑reasoning, and we treat accuracy, monetary cost, and latency as first‑class outcomes. This situates the present study alongside modern LLM geolocation pipelines while targeting a distinct colonial corpus and evaluation protocol.
+
 ## 1.3 Contributions
 
 This study makes four principal contributions:
@@ -99,6 +101,8 @@ Despite these advances, significant limitations remain. O'Sullivan et al. [@Osul
 
 In summary, fine-tuned LLMs now surpass previous neural approaches on toponym resolution and can support colony-scale spatial inference, yet their reasoning remains sensitive to context and scale. The next section (§ 2.3) explores tool-augmented prompting frameworks that grant LLMs access to external geocoders and vector databases—potentially mitigating some of the failure modes identified above.
 
+Most of these evaluations center on short, contemporary snippets (e.g., tweets and Wikipedia) with modern toponyms as in GeoCorpora and WikToR [@wallgrun2017geocorpora; @gritta2018whatsmissing]. By contrast, our inputs are long‑form colonial abstracts with obsolete place names and surveyor jargon, motivating a tailored evaluation on 43 curated grants with archival ground truth.
+
 ## 2.3 Tool-Augmented Prompting Techniques
 Integrating large language models with external geospatial utilities has emerged as a promising way to address the limitations identified in § 2.2. In a *tool-augmented* workflow, the LLM interprets unstructured language but can invoke specialized geocoding, database, or cartographic services during its reasoning process, grounding its outputs in authoritative data and deterministic algorithms.
 
@@ -111,6 +115,8 @@ These specialized implementations build upon a more general design pattern known
 At enterprise scale, Google Research's *Geospatial Reasoning* initiative [@GoogleResearch2025_geospatial] exemplifies the integration of foundation models with Earth Engine, BigQuery, and Maps Platform. This system enables agentic LLMs to chain satellite imagery, socioeconomic layers, and routing services to answer compound spatial queries in seconds—a capability relevant to both consumer applications and research contexts.
 
 Across these diverse implementations, a consistent finding emerges: granting an LLM controlled access to trusted GIS services reduces hallucination, improves numerical accuracy, and broadens task coverage (Hu et al. [@Hu2024_toponym_llm]; Huang et al. [@Huang2024_geoagent]). The present work builds on this pattern by testing whether a similar benefit materializes for colonial land-grant geolocation—comparing a pure one-shot prompt to a tool-augmented chain-of-thought that can issue mid-prompt geocoding and distance-calculation calls while processing historical texts with archaic toponyms and surveying terminology.
+
+Concretely, our experiments interleave geocoder queries and distance checks within English‑language colonial abstracts and report accuracy together with end‑to‑end costs and latency. Unlike GeoAgent’s address normalization and GeoGLUE tasks [@Huang2024_geoagent; @li2023geogluegeographiclanguageunderstanding], our outputs are point estimates aligned to archival ground truth for multi‑sentence, long‑form descriptions.
 
 ## 2.4 Emerging GeoAI Research Principles
 
