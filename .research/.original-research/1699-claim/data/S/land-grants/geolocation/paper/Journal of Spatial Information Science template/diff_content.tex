@@ -1667,8 +1667,9 @@ Several caveats temper the preceding claims.
 Building on the present findings, several avenues warrant exploration.
 
 \begin{itemize}
-\tightlist
-\item
+\DIFdelbegin %DIFDELCMD < \tightlist
+%DIFDELCMD < %%%
+\DIFdelend \item
   \textbf{Corpus expansion.} \DIFdelbegin \DIFdel{Digitising }\DIFdelend \DIFaddbegin \DIFadd{Digitizing }\DIFaddend the remaining volumes of
   \emph{Cavaliers and Pioneers} \citep{Nugent1979_cavaliers3}---and
   analogous land books from Maryland and North Carolina---would permit a
@@ -1686,7 +1687,17 @@ Building on the present findings, several avenues warrant exploration.
   \textbf{Human-in-the-loop interfaces.} Lightweight web tools that
   display the model's candidate coordinates alongside archival imagery
   would enable rapid expert validation and correction.
-\end{itemize}
+\DIFaddbegin \item
+  \textbf{\DIFadd{Compare to Google's geospatial agent stack.}} \DIFadd{A follow‑on study
+  could benchmark end‑to‑end pipelines built with Google's nascent
+  Geospatial Reasoning framework (Gemini + geospatial foundation models
+  + Maps/Earth Engine tooling). This system is proprietary and still
+  evolving, requires significant engineering to reproduce fairly, and
+  has unclear academic access terms; incorporating it rigorously is
+  therefore beyond the present scope but worth assessing once stable
+  APIs are available
+  }\href{https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/}{\DIFadd{link}}\DIFadd{.
+}\DIFaddend \end{itemize}
 
 \section{Conclusion}\label{conclusion}
 

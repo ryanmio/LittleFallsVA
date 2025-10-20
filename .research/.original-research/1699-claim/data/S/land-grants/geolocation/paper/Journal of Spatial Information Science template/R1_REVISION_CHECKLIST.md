@@ -48,11 +48,11 @@
 - [x] **A8:** Use "Section ..." consistently instead of § symbol
   - Changes: Normalized remaining § references in main text to “Section …” near related-work inserts and tool-usage sections. Commit: 5fc2e87.
 
-- [ ] **A9:** Section 4: Switch order of 4.3 and 4.4, or put 4.4 before 4.2
-  - Changes: 
+- [x] **A9:** Section 4: Switch order of 4.3 and 4.4, or put 4.4 before 4.2
+  - Changes: Reordered Section 4 so that 4.1 = GIS Analyst (H‑1), 4.2 = County‑Centroid (H‑4), 4.3 = Stanford NER (H‑2), 4.4 = Mordecai‑3 (H‑3). Commit: b025143.
 
-- [ ] **A9b:** Add a one-sentence transition when you reorder §4 subsections so the flow reads naturally.
-  - Changes: 
+- [x] **A9b:** Add a one-sentence transition when you reorder §4 subsections so the flow reads naturally.
+  - Changes: Inserted a bridging sentence after 4.1 that introduces H‑4 as a simple deterministic floor before the two geoparsers (H‑2/H‑3). Commit: b025143.
 
 - [x] **A10:** Section 4.5: Explain meaning of temperature parameter in context of LLMs
   - Changes: Added concise definition of temperature at first implementation mention (Setup §5.2 paragraph); referenced §6.6 ablation. Commit: 4e58320.

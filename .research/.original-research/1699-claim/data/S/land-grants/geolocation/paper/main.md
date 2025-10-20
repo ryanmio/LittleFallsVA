@@ -516,6 +516,8 @@ Building on the present findings, several avenues warrant exploration.
 * **Polygon recovery.**  Combining the model's point estimate with chained GIS operations (bearing decoding, river buffering) could approximate parcel outlines, unlocking environmental history applications.
 * **Human-in-the-loop interfaces.**  Lightweight web tools that display the model's candidate coordinates alongside archival imagery would enable rapid expert validation and correction.
 
+* **Compare to Google's geospatial agent stack.**  A follow‑on study could benchmark end‑to‑end pipelines built with Google's nascent Geospatial Reasoning framework (Gemini + geospatial foundation models + Maps/Earth Engine tooling). This system is proprietary and still evolving, requires significant engineering to reproduce fairly, and has unclear academic access terms; incorporating it rigorously is therefore beyond the present scope but worth assessing once stable APIs are available [link](https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/).
+
 # 10 Conclusion
 
 This study delivers the first rigorous benchmark of large language models on the longstanding problem of geolocating early-modern Virginia land patents directly from their narrative metes-and-bounds abstracts.  A new, copyright-compliant dataset of 5 471 transcribed grants and 43 gold-standard coordinates accompanies a reproducible evaluation framework that compares six OpenAI model variants against four deterministic or human baselines.
