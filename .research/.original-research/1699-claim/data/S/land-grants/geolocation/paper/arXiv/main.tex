@@ -715,13 +715,14 @@ M-6 & \texttt{gpt-3.5-turbo} \\
 (T-series)}\label{tool-augmented-chain-of-thought-t-series}
 
 The second automated condition equips the model with two specialized
-tools: geocode\_place, an interface to the Google Geocoding API limited
-to Virginia and adjoining counties, and compute\_centroid, which returns
-the spherical centroid of two or more points. The system prompt
-(Appendix A.2.2) encourages an iterative search strategy where the model
-can issue up to twelve tool calls, evaluate the plausibility of each
-result, and optionally average multiple anchors before emitting a final
-answer in decimal degrees with six fractional places.
+tools: \texttt{geocode\_place}, an interface to the Google Geocoding API
+limited to Virginia and adjoining counties, and
+\texttt{compute\_centroid}, which returns the spherical centroid of two
+or more points. The system prompt (Appendix A.2.2) encourages an
+iterative search strategy where the model can issue up to twelve tool
+calls, evaluate the plausibility of each result, and optionally average
+multiple anchors before emitting a final answer in decimal degrees with
+six fractional places.
 
 Table \ref{tbl:tmodels} shows the five model variants initially
 considered for this tool suite. Of these, only T-1 and T-4 were carried

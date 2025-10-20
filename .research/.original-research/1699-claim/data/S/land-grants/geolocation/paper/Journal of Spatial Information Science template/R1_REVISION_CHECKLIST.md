@@ -193,7 +193,7 @@
   - Changes: 
 
 - [ ] **G5:** Typesetting artifacts – resolve [H], geocode\\_place backslash, large spaces, legend color mismatches, empty H# columns.
-  - Changes: Partially addressed by A20 fix (legend color mismatch resolved). Remaining items tracked separately.
+  - Changes: Legend color mismatch resolved via A20; §7.2 now renders tool names with code formatting (\\texttt{geocode\\_place}, \\texttt{compute\\_centroid}). Remaining items tracked separately.
 
 - [ ] **G6:** Figure references – ensure all figures mentioned (incl. Figure 4 and 8) are referenced with a one-line takeaway.
   - Changes: 
