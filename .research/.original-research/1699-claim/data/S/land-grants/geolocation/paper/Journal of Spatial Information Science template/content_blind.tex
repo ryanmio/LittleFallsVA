@@ -449,8 +449,9 @@ post-processing pipelines, the highest-fidelity workflow was applied to
 every page. The resulting text was normalised and exported to CSV---one
 row per abstract---yielding the complete 5 471-row corpus.
 
-To facilitate reproducible experimentation three deterministic splits
-were drawn with fixed random seeds:
+To facilitate reproducible experimentation, the dev/test split and
+validation samples were generated deterministically with a fixed random
+seed (42):
 
 \begin{itemize}
 \tightlist
@@ -460,10 +461,6 @@ were drawn with fixed random seeds:
 \item
   Test -- 125 abstracts, mutually exclusive from the dev sets.
 \end{itemize}
-
-Splits and validation sampling were produced by a deterministic
-procedure with a fixed random seed (42), yielding the test partition
-used for subsequent archival vetting.
 
 \subsection{Ground-Truth
 Coordinates}\label{ground-truth-coordinates}

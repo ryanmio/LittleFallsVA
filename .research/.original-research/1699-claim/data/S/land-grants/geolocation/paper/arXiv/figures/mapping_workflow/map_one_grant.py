@@ -133,31 +133,23 @@ def main():
     # ---------------- PLOT ----------------
     fig, ax = plt.subplots(figsize=(6, 6))
 
+    # Fixed series colours for reproducibility and legend consistency
+    M_COLOR = "#1f77b4"  # blue
+    T_COLOR = "#d62728"  # red
+
     style = {
         "GT": ("*", "black"),
         "H-1": ("o", "orange"),
     }
 
-    # Assign distinct colours to each AI method using matplotlib colour cycle
-    colour_cycle = plt.rcParams["axes.prop_cycle"].by_key().get("color", [])
-    used_colours = {v[1] for v in style.values()}
-    cycler_len = len(colour_cycle)
-    for i, meth in enumerate(METHODS):
+    # Assign fixed colours by series
+    for meth in METHODS:
         if meth.startswith("T"):
-            marker = "^"
+            style[meth] = ("^", T_COLOR)
+        elif meth.startswith("M"):
+            style[meth] = ("s", M_COLOR)
         else:
-            marker = "s"
-
-        # pick next unused colour to avoid clashes with GT/H-1
-        offset = 0
-        while True:
-            colour = colour_cycle[(i + offset) % cycler_len] if cycler_len else "steelblue"
-            if colour not in used_colours:
-                used_colours.add(colour)
-                break
-            offset += 1
-
-        style[meth] = (marker, colour)
+            style[meth] = ("s", "gray")
 
     # --- plot points and optionally annotate ---
     # first compute map extents for label offset
@@ -256,9 +248,9 @@ def main():
     # Add dummy lines for the legend to represent M-series and T-series
     from matplotlib.lines import Line2D
     
-    # Get colors from the first M and T series models to use as representatives
-    m_color = next((style[m][1] for m in METHODS if m.startswith("M-")), "blue")
-    t_color = next((style[m][1] for m in METHODS if m.startswith("T-")), "purple")
+    # Use fixed representative colours to match plotted markers
+    m_color = M_COLOR
+    t_color = T_COLOR
     
     # Create custom legend elements
     legend_elements = [

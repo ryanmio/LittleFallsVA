@@ -32,8 +32,8 @@
 - [x] **A3:** Add literature references for tools/corpora mentioned without citations (GeoCorpora, WikToR, GeoLingit, GeoGlue, GeoText, etc.)
   - Changes: Added citations for GeoCorpora (IJGIS 2017), WikToR (LRE 2018), GeoGLUE (arXiv 2305.06545), and geocoders (GeoNames/Nominatim/ArcGIS) at first mention (§2.2–§2.3). Commit: aed55252.
 
-- [ ] **A4:** Clarify reasons for small test data set (43 instances) - how was number decided?
-  - Changes: 
+- [x] **A4:** Clarify reasons for small test data set (43 instances) - how was number decided?
+  - Changes: Integrated rationale in §3.3 (random draw + archival vetting; auditability vs convenience‑sampling bias) and noted deterministic seed in §3.2. Future expansion noted as polygons are curated. Commit: 70e96e4.
 
 - [x] **A5:** Acknowledge limitation that study is limited to ChatGPT models, not other LLMs
   - Changes: Added concise OpenAI-only scope rationale in §8 (controls cross‑provider confounders; preserves internal validity); kept generalization note. Commits: 8acc5a7, aff8d40.
