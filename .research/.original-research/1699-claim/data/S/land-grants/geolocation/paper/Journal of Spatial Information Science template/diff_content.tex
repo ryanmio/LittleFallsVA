@@ -1180,7 +1180,10 @@ The full grant text shown to the model was:
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2039}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.5146}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2816}}@{}}
-\toprule\noalign{}
+\DIFaddbegin \caption{\label{tbl:grant04_steps}\DIFadd{Qualitative step‑by‑step comparison
+for grant\_04 (WILLIAM WILLIAMS): tool‑augmented chain versus one‑shot
+prompt.}}\tabularnewline
+\DIFaddend \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Stage
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -1189,7 +1192,17 @@ Tool-Chain (T-2)
 One-Shot (M-2)
 \end{minipage} \\
 \midrule\noalign{}
-\endhead
+\DIFaddbegin \endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\DIFadd{Stage
+}\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\DIFadd{Tool-Chain (T-2)
+}\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\DIFadd{One-Shot (M-2)
+}\end{minipage} \\
+\midrule\noalign{}
+\DIFaddend \endhead
 \bottomrule\noalign{}
 \endlastfoot
 1. Feature ID & Holloway Branch, Blackwater Swamp & run of Holloway

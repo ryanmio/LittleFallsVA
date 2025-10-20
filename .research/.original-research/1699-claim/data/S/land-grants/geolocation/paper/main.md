@@ -399,6 +399,8 @@ To illustrate how the two prompting paradigms differ, the chain of thought for g
 | 5. Anchor averaging | compute_centroid([…])                               | —                           |
 | 6. Final output     | 37.166303, -77.244091                               | 37°00'07.2"N 77°07'58.8"W   |
 
+Table: Qualitative step‑by‑step comparison for grant_04 (WILLIAM WILLIAMS): tool‑augmented chain versus one‑shot prompt. {#tbl:grant04_steps}
+
 Full reasoning chains are available in appendix.
 
 The *one-shot* paradigm asks the model to read the abstract, reason internally, and emit coordinates in a single response.  All cognition is "in the head" of the network: it interprets archaic toponyms, performs mental triangulation against its latent world map, and produces a best-guess point estimate.  By contrast, the *tool-chain* paradigm externalises part of that reasoning.  The model may call a geocoder to retrieve candidate coordinates for surface forms (e.g. "Holloway Swamp"), inspect the returned JSON, run additional look-ups with spelling variants or county qualifiers, and finally aggregate anchors with a centroid tool.  Each call–observe–reflect loop is logged, exposing an auditable chain of evidence.  The trade-off is latency and verbosity: ten turns of querying and self-reflection can be slower and, as Section 6.1 showed, not necessarily more accurate.
