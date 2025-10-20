@@ -1,1 +1,7 @@
 [WARNING] Citeproc: citation key not found
+Error producing PDF.
+! Undefined control sequence.
+<argument> \begingroup \breaklines 
+                                   geocode\_place\endgroup 
+l.1652 ...: once the first \texttt{geocode\_place}
+

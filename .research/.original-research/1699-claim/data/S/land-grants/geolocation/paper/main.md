@@ -451,7 +451,7 @@ Inspection of the largest residuals uncovers three recurring failure modes:
 
 2. **Bearing-only metes-and-bounds descriptions.** Some abstracts give nothing beyond a perimeter walked from one neighbour or landmark to the next—for example, the John Pigg patent that "beg[ins] in the path from William Rickett's house to the Indian towne; to Capt. William Smith … to land where John Barrow liveth … to the Ridge Path … along Watkins's line … to Maj. Payton." Because there is no unambiguous place-name anchor, both the LLM and gazetteer-driven baselines must rely on weak contextual cues, and median errors for these deeds rise above 70 km.
 
-3. **Cascading search bias.** Tool-enabled runs introduce an additional failure channel: once the first `geocode_place` call returns a spurious coordinate, subsequent `compute_centroid` operations often average anchors that are already flawed, locking in the error. Raising the threshold for calling the centroid function—or providing the model with a quality heuristic—may mitigate this issue.
+3. **Cascading search bias.** Tool-enabled runs introduce an additional failure channel: once the first \texttt{geocode\_place} call returns a spurious coordinate, subsequent \texttt{compute\_centroid} operations often average anchors that are already flawed, locking in the error. Raising the threshold for calling the centroid function—or providing the model with a quality heuristic—may mitigate this issue.
 
 
 \begin{figure}[H]

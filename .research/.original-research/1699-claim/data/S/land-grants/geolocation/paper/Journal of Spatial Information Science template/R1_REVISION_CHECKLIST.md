@@ -85,8 +85,8 @@
 - [x] **A19:** Section 6.5: Rounding of numbers in text is odd (compare to numbers in table)
   - Changes: Synchronized §6.5 narrative with Table \ref{tbl:tooluse}: T‑4 uses 2.23 calls/grant with 72.1% first‑call success; T‑1 uses 3.98 calls with 66.7% success; corrected model naming. Commit: 2a30fc7.
 
-- [ ] **A20:** Figure 8: Color of triangle in map does not match legend
-  - Changes: 
+- [x] **A20:** Figure 8: Color of triangle in map does not match legend
+  - Changes: Standardized series colours in mapping scripts: T‑series fixed to red (#d62728) and M‑series fixed to blue (#1f77b4). Regenerated Grant 1 and Grant 19 maps and rebuilt manuscript so legend and markers are consistent across figures. Commit: 32194f0.
 
 - [x] **A21:** Figure 8: Not referenced in text - add reference
   - Changes: Added a lead sentence explicitly referencing Figure \ref{fig:grant_maps} before the Grant 1/19 narrative in §6.4, framing the pair as representative success/failure cases. Commit: 26a8bfb.
@@ -193,7 +193,7 @@
   - Changes: 
 
 - [ ] **G5:** Typesetting artifacts – resolve [H], geocode\\_place backslash, large spaces, legend color mismatches, empty H# columns.
-  - Changes: 
+  - Changes: Partially addressed by A20 fix (legend color mismatch resolved). Remaining items tracked separately.
 
 - [ ] **G6:** Figure references – ensure all figures mentioned (incl. Figure 4 and 8) are referenced with a one-line takeaway.
   - Changes: 

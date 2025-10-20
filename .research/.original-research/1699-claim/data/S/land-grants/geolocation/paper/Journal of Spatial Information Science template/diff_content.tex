@@ -1477,13 +1477,15 @@ modes:
   and median errors for these deeds rise above 70 km.
 \item
   \textbf{Cascading search bias.} Tool-enabled runs introduce an
-  additional failure channel: once the first
-  \passthrough{\lstinline!geocode\_place!} call returns a spurious
-  coordinate, subsequent \passthrough{\lstinline!compute\_centroid!}
-  operations often average anchors that are already flawed, locking in
-  the error. Raising the threshold for calling the centroid
-  function---or providing the model with a quality heuristic---may
-  mitigate this issue.
+  additional failure channel: once the first \DIFdelbegin %DIFDELCMD < \passthrough{\lstinline!geocode\_place!} %%%
+\DIFdelend \DIFaddbegin \texttt{\DIFadd{geocode\_place}}
+  \DIFaddend call returns a spurious coordinate, subsequent
+  \DIFdelbegin %DIFDELCMD < \passthrough{\lstinline!compute\_centroid!}
+%DIFDELCMD <   %%%
+\DIFdelend \DIFaddbegin \texttt{\DIFadd{compute\_centroid}} \DIFaddend operations often average anchors that are
+  already flawed, locking in the error. Raising the threshold for
+  calling the centroid function---or providing the model with a quality
+  heuristic---may mitigate this issue.
 \end{enumerate}
 
 \begin{figure}[H]
