@@ -88,8 +88,8 @@
 - [ ] **A20:** Figure 8: Color of triangle in map does not match legend
   - Changes: 
 
-- [ ] **A21:** Figure 8: Not referenced in text - add reference
-  - Changes: 
+- [x] **A21:** Figure 8: Not referenced in text - add reference
+  - Changes: Added a lead sentence explicitly referencing Figure \ref{fig:grant_maps} before the Grant 1/19 narrative in §6.4, framing the pair as representative success/failure cases. Commit: 26a8bfb.
 
 ### Appendix Issues
 - [ ] **A7b:** Put cut sections in repo and cite the repo with a stable tag so the editor sees nothing was "lost," just moved.

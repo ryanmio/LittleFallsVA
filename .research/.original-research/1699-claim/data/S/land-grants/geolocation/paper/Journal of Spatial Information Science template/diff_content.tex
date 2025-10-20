@@ -998,9 +998,16 @@ outperform manual geocoding.
 core methods from heuristic baselines.}\label{fig:violin_core}
 \end{figure}
 
-Figure \ref{fig:cdf_models} plots cumulative accuracy as a function of
-distance threshold; curves that are higher and further left indicate
-stronger performance across thresholds.
+Figure \ref{fig:cdf_models} plots \DIFdelbegin \DIFdel{cumulative }\DIFdelend \DIFaddbegin \DIFadd{the cumulative distribution function
+(CDF) of }\DIFaddend accuracy as a function of distance threshold\DIFdelbegin \DIFdel{; curves that are higher and further left indicate
+stronger performance across thresholds. }\DIFdelend \DIFaddbegin \DIFadd{. The CDFs
+disentangle near‑field precision from tail robustness: a steep early
+rise (≤10--20 km) signals high yield at fine tolerances, whereas late
+gains diagnose heavy‑tail errors that inflate means despite acceptable
+medians. Curve crossings expose threshold‑dependent dominance, implying
+that the ``best'' model depends on a project's operational error budget
+(e.g., county‑ versus watershed‑scale tolerances).
+}\DIFaddend 
 
 \begin{figure}
 \centering

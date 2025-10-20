@@ -328,7 +328,7 @@ To focus on the head-to-head comparison between the language-model approaches an
 
 ![Error distributions for LLMs vs. GIS analyst only, isolating core methods from heuristic baselines.](../analysis/figures/error_violin_core_methods.pdf){#fig:violin_core width="0.7\linewidth"}
 
-Figure \ref{fig:cdf_models} plots cumulative accuracy as a function of distance threshold; curves that are higher and further left indicate stronger performance across thresholds.
+Figure \ref{fig:cdf_models} plots the cumulative distribution function (CDF) of accuracy as a function of distance threshold. The CDFs disentangle near‑field precision from tail robustness: a steep early rise (≤10–20 km) signals high yield at fine tolerances, whereas late gains diagnose heavy‑tail errors that inflate means despite acceptable medians. Curve crossings expose threshold‑dependent dominance, implying that the “best” model depends on a project’s operational error budget (e.g., county‑ versus watershed‑scale tolerances).
 
 ![Cumulative accuracy vs. distance threshold (km); higher‑left curves indicate better performance across thresholds.](../analysis/figures/cdf_graphs/cdf_models_combined.pdf){#fig:cdf_models width="0.9\linewidth"}
 
