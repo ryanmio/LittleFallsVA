@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  19 OCT 2025 20:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  19 OCT 2025 20:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -43943,6 +43943,47 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no d in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+! Undefined control sequence.
+<write> ... Reference `tbl:cost' on page \thepage 
+                                                  \space undefined\on@line .
+l.1079 \ref{tbl:cost}
+                     . All automated variants dominate the GIS script baseline
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `tbl:cost' on page  undefined on input line 1079.
+
 Missing character: There is no . in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no l in font nullfont!
@@ -44372,27 +44413,32 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1076--1087
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1076--1088
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 1076--1087
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 1076--1088
 []
  []
 
 
-Overfull \hbox (28.74982pt too wide) in paragraph at lines 1076--1087
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 1076--1088
+[]
+ []
+
+
+Overfull \hbox (28.74982pt too wide) in paragraph at lines 1076--1088
 \OT1/cmr/m/it/10 dollar-
  []
 
 
-Overfull \hbox (15.9721pt too wide) in paragraph at lines 1076--1087
+Overfull \hbox (15.9721pt too wide) in paragraph at lines 1076--1088
 \OT1/cmr/m/it/10 for-
  []
 
 
-Overfull \hbox (37.43858pt too wide) in paragraph at lines 1076--1087
+Overfull \hbox (37.43858pt too wide) in paragraph at lines 1076--1088
 \OT1/cmr/m/it/10 accuracy
  []
 
@@ -44403,8 +44449,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1088 \begin{longtable}
-                        []{@{}llll@{}}
+l.1089 \begin{longtable}
+                        []{@{}lll@{}}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -44412,7 +44458,6 @@ or  <return>  to continue without it.
 Missing character: There is no [ in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no @ in font nullfont!
-Missing character: There is no l in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no l in font nullfont!
@@ -44424,8 +44469,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1089 \caption
-               {\label{tbl:cost}Cost metrics by method---cost per located grant
+l.1090 \caption
+               {\label{tbl:cost}Cost metrics by method---cost per 1,000 located
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -44459,33 +44504,6 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no U in font nullfont!
-Missing character: There is no S in font nullfont!
-Missing character: There is no D in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
@@ -44509,11 +44527,9 @@ Missing character: There is no U in font nullfont!
 Missing character: There is no S in font nullfont!
 Missing character: There is no D in font nullfont!
 Missing character: There is no ) in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -44547,34 +44563,7 @@ Missing character: There is no I in font nullfont!
 Missing character: There is no D in font nullfont!
 ! Misplaced alignment tab character &.
 l.1093 ID &
-            Cost / located (USD) & Cost per 1k & Mean error (km) \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no C in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no U in font nullfont!
-Missing character: There is no S in font nullfont!
-Missing character: There is no D in font nullfont!
-Missing character: There is no ) in font nullfont!
-! Misplaced alignment tab character &.
-l.1093 ID & Cost / located (USD) &
-                                   Cost per 1k & Mean error (km) \\
+            Cost per 1,000 located (USD) & Mean error (km) \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -44590,10 +44579,25 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no 1 in font nullfont!
-Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no ) in font nullfont!
 ! Misplaced alignment tab character &.
-l.1093 ID & Cost / located (USD) & Cost per 1k &
-                                                 Mean error (km) \\
+l.1093 ID & Cost per 1,000 located (USD) &
+                                           Mean error (km) \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -44659,34 +44663,7 @@ Missing character: There is no I in font nullfont!
 Missing character: There is no D in font nullfont!
 ! Misplaced alignment tab character &.
 l.1097 ID &
-            Cost / located (USD) & Cost per 1k & Mean error (km) \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no C in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no U in font nullfont!
-Missing character: There is no S in font nullfont!
-Missing character: There is no D in font nullfont!
-Missing character: There is no ) in font nullfont!
-! Misplaced alignment tab character &.
-l.1097 ID & Cost / located (USD) &
-                                   Cost per 1k & Mean error (km) \\
+            Cost per 1,000 located (USD) & Mean error (km) \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -44702,10 +44679,25 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no 1 in font nullfont!
-Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no ) in font nullfont!
 ! Misplaced alignment tab character &.
-l.1097 ID & Cost / located (USD) & Cost per 1k &
-                                                 Mean error (km) \\
+l.1097 ID & Cost per 1,000 located (USD) &
+                                           Mean error (km) \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -44781,24 +44773,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1102 E-1 &
-             0.19565 & 195.65 & 18.7 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-! Misplaced alignment tab character &.
-l.1102 E-1 & 0.19565 &
-                       195.65 & 18.7 \\
+             195.65 & 18.7 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -44813,8 +44788,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 6 in font nullfont!
 Missing character: There is no 5 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1102 E-1 & 0.19565 & 195.65 &
-                                18.7 \\
+l.1102 E-1 & 195.65 &
+                      18.7 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -44831,24 +44806,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 2 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1103 E-2 &
-             0.20003 & 200.03 & 20.4 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-! Misplaced alignment tab character &.
-l.1103 E-2 & 0.20003 &
-                       200.03 & 20.4 \\
+             200.03 & 20.4 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -44863,8 +44821,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 3 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1103 E-2 & 0.20003 & 200.03 &
-                                20.4 \\
+l.1103 E-2 & 200.03 &
+                      20.4 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -44881,24 +44839,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 2 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1104 M-2 &
-             0.12746 & 127.46 & 23.4 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-! Misplaced alignment tab character &.
-l.1104 M-2 & 0.12746 &
-                       127.46 & 23.4 \\
+             127.46 & 23.4 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -44913,8 +44854,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no 6 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1104 M-2 & 0.12746 & 127.46 &
-                                23.4 \\
+l.1104 M-2 & 127.46 &
+                      23.4 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -44931,24 +44872,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 5 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1105 M-5 &
-             0.00105 & 1.05 & 27.9 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-! Misplaced alignment tab character &.
-l.1105 M-5 & 0.00105 &
-                       1.05 & 27.9 \\
+             1.05 & 27.9 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -44961,8 +44885,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 5 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1105 M-5 & 0.00105 & 1.05 &
-                              27.9 \\
+l.1105 M-5 & 1.05 &
+                    27.9 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -44979,24 +44903,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 4 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1106 M-4 &
-             0.00046 & 0.46 & 28.5 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-! Misplaced alignment tab character &.
-l.1106 M-4 & 0.00046 &
-                       0.46 & 28.5 \\
+             0.46 & 28.5 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45009,8 +44916,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no 6 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1106 M-4 & 0.00046 & 0.46 &
-                              28.5 \\
+l.1106 M-4 & 0.46 &
+                    28.5 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45027,24 +44934,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 4 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1107 T-4 &
-             0.00323 & 3.23 & 37.2 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-! Misplaced alignment tab character &.
-l.1107 T-4 & 0.00323 &
-                       3.23 & 37.2 \\
+             3.23 & 37.2 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45057,8 +44947,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 3 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1107 T-4 & 0.00323 & 3.23 &
-                              37.2 \\
+l.1107 T-4 & 3.23 &
+                    37.2 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45075,24 +44965,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1108 T-1 &
-             0.01142 & 11.42 & 37.7 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-! Misplaced alignment tab character &.
-l.1108 T-1 & 0.01142 &
-                       11.42 & 37.7 \\
+             11.42 & 37.7 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45106,8 +44979,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1108 T-1 & 0.01142 & 11.42 &
-                               37.7 \\
+l.1108 T-1 & 11.42 &
+                     37.7 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45124,24 +44997,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1109 M-1 &
-             0.01069 & 10.69 & 41.7 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-! Misplaced alignment tab character &.
-l.1109 M-1 & 0.01069 &
-                       10.69 & 41.7 \\
+             10.69 & 41.7 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45155,8 +45011,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 6 in font nullfont!
 Missing character: There is no 9 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1109 M-1 & 0.01069 & 10.69 &
-                               41.7 \\
+l.1109 M-1 & 10.69 &
+                     41.7 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45173,24 +45029,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 6 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1110 M-6 &
-             0.00010 & 0.10 & 43.1 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Misplaced alignment tab character &.
-l.1110 M-6 & 0.00010 &
-                       0.10 & 43.1 \\
+             0.10 & 43.1 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45203,8 +45042,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1110 M-6 & 0.00010 & 0.10 &
-                              43.1 \\
+l.1110 M-6 & 0.10 &
+                    43.1 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45221,24 +45060,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 3 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1111 M-3 &
-             0.01415 & 14.15 & 50.3 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-! Misplaced alignment tab character &.
-l.1111 M-3 & 0.01415 &
-                       14.15 & 50.3 \\
+             14.15 & 50.3 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45252,8 +45074,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no 5 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1111 M-3 & 0.01415 & 14.15 &
-                               50.3 \\
+l.1111 M-3 & 14.15 &
+                     50.3 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45270,24 +45092,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1112 H-1 &
-             3.25581 & 3,255.81 & 71.4 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-! Misplaced alignment tab character &.
-l.1112 H-1 & 3.25581 &
-                       3,255.81 & 71.4 \\
+             3,255.81 & 71.4 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45304,8 +45109,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 8 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1112 H-1 & 3.25581 & 3,255.81 &
-                                  71.4 \\
+l.1112 H-1 & 3,255.81 &
+                        71.4 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45322,24 +45127,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 2 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1113 H-2 &
-             0.00000 & 0.00 & 79.0 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Misplaced alignment tab character &.
-l.1113 H-2 & 0.00000 &
-                       0.00 & 79.0 \\
+             0.00 & 79.0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45352,8 +45140,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1113 H-2 & 0.00000 & 0.00 &
-                              79.0 \\
+l.1113 H-2 & 0.00 &
+                    79.0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45370,24 +45158,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 4 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1114 H-4 &
-             0.00000 & 0.00 & 80.3 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Misplaced alignment tab character &.
-l.1114 H-4 & 0.00000 &
-                       0.00 & 80.3 \\
+             0.00 & 80.3 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45400,8 +45171,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1114 H-4 & 0.00000 & 0.00 &
-                              80.3 \\
+l.1114 H-4 & 0.00 &
+                    80.3 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45418,24 +45189,7 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no 3 in font nullfont!
 ! Misplaced alignment tab character &.
 l.1115 H-3 &
-             0.00000 & 0.00 & 94.3 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Misplaced alignment tab character &.
-l.1115 H-3 & 0.00000 &
-                       0.00 & 94.3 \\
+             0.00 & 94.3 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45448,8 +45202,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 ! Misplaced alignment tab character &.
-l.1115 H-3 & 0.00000 & 0.00 &
-                              94.3 \\
+l.1115 H-3 & 0.00 &
+                    94.3 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -45475,7 +45229,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1088--1117
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1089--1117
 []
  []
 
@@ -82343,10 +82097,10 @@ l.2219 M-3 & 43 & 50.25 & 48.40 & 24.93 & 6.29 &
                                                  27.36 & 69.53 & 123.04 & 4.7\%
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 177 strings out of 474662
- 2921 string characters out of 5751110
- 437777 words of memory out of 5000000
- 23305 multiletter control sequences out of 15000+600000
+ 178 strings out of 474662
+ 2931 string characters out of 5751110
+ 437779 words of memory out of 5000000
+ 23306 multiletter control sequences out of 15000+600000
  559994 words of font info for 40 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  24i,9n,32p,416b,221s stack positions out of 10000i,1000n,20000p,200000b,200000s

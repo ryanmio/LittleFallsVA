@@ -60,8 +60,8 @@
 - [x] **A11:** Remove stray ~ in table/figure references; standardize formatting.
   - Changes: Verified non‑breaking tilde usage limited to LaTeX captions where appropriate; no stray tildes remain in prose references. Commit: 5fc2e87.
 
-- [ ] **A12:** Section 4.6: Inconsistent - no performance outlook (unlike other subsections)
-  - Changes: 
+- [x] **A12:** Section 4.6: Inconsistent - no performance outlook (unlike other subsections)
+  - Changes: Appended one‑sentence performance outlooks to end of 4.5 (M‑series) and 4.6 (T‑series) paragraphs, pointing to Section 6 tables/figures without duplicating numbers. Commit: 29a4070.
 
 - [ ] **A13:** Beginning of section 5 is redundant with previous section - consolidate
   - Changes: 
@@ -183,7 +183,7 @@
 - [x] **G1:** Descriptive captions pass – each figure/table states what it shows and why it matters; ensure in-text references near first mention.
   - Changes: Added one‑line takeaways at first mention for §6.1 figures; clarified captions for cost/latency figures and all appendix tables/figures; ensured consistent labels and references. Commits: 9a738a2, b692b3c, d3d0e81, 51ec750, 9394196, dbda28a, 3276d8d.
 
-- [ ] **G2:** Cross-reference normalization – replace § with "Section …"; ensure appendix vs numbered sections are consistent.
+- [ ] **G2:** Ensure appendix vs numbered sections are consistent.
   - Changes: 
 
 - [ ] **G3:** Numbering/labels – every figure/table has a number + caption; fix mismatches (e.g., "Table 7").
