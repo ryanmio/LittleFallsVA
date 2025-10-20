@@ -127,7 +127,7 @@
   - Changes: Standardized author–year spacing and converted visible “Table~#” cases to “Table #” in prose; retained LaTeX non‑breaking tildes only where appropriate (captions/labels). Commit: 4bc626d.
 
 - [x] **C3:** Page 11: "geocode_place" - check if backslash is copy/paste error in typesetting
-  - Changes: Confirmed underscore is correctly rendered as code or plain text; no stray escape backslashes remain in narrative text. Commit: 5fc2e87, b566ce3.
+  - Changes: Confirmed underscore is correctly rendered as code or plain text; no stray escape backslashes remain in narrative text. Commit: 5fc2e87, b566ce3, 365314a.
 
 - [x] **C4:** Page 12: What is "[H]" - maybe supposed to be a LaTeX command?
   - Changes: [H] is intentionally used for figure/table floats per JOSIS build; confirmed not used in prose; no correction needed beyond verification. Commit: 5fc2e87.

@@ -166,7 +166,13 @@ This baseline reflects the results from a single experienced analyst and should 
 
 These baseline coordinates are stored directly in the evaluation file, allowing the experiment script to access them through the static pipeline. A labor cost of USD 140 (six billable hours) is assigned to the benchmark when reporting cost metrics.
 
-## 4.2 Stanford NER Baseline (H-2)
+To ground the reader before introducing stronger automated pipelines, we next establish a simple deterministic reference via a county‑centroid baseline (H‑4), and only then turn to two geoparsers (H‑2 and H‑3).
+
+## 4.2 County-Centroid Baseline (H-4)
+
+Method H-4 provides a transparent deterministic floor.  A regex extracts any Virginia county name (handling forms like "Henrico Co.", "City of Norfolk", etc.); if successful, the script returns the pre-computed TIGER/Line centroid of that county.  When no county is detected it defaults to the geographic centre of Virginia (37.4316 °N, -78.6569 °W).  On the 43-validation-grant set this logic produced 36 county-centroid predictions and 7 statewide-centroid fallbacks.  Although trivial to implement and lightning-fast (<2 ms per deed), the approach yields a mean error of 80.3 km, serving mainly as a sanity check that more sophisticated pipelines clear with ease.
+
+## 4.3 Stanford NER Baseline (H-2)
 
 To provide a more rigorous deterministic baseline, a Stanford Named Entity Recognition (NER) approach was implemented using the GeoTxt framework. This method represents a state-of-the-art automated geoparsing pipeline that combines linguistic analysis with gazetteer lookup, providing a systematic comparison point for the LLM-based approaches.
 
@@ -176,7 +182,7 @@ The system implements a robust fallback hierarchy: if no geographic entities are
 
 The Stanford NER method achieved a mean error of 79.02 km with 100% prediction coverage across all 43 test grants. While this represents a more systematic approach than the single-analyst GIS baseline, it demonstrates the challenges that automated systems face when dealing with historical toponyms that may have shifted meaning or location over centuries, as detailed in the case study analysis (Section 7.2.1).
 
-## 4.3 Mordecai-3 Heuristic Geoparser (H-3)
+## 4.4 Mordecai-3 Heuristic Geoparser (H-3)
 
 Benchmark H-3 employs the open-source *Mordecai-3* neural geoparser [@halterman2023mordecai], augmented with domain-specific heuristics tuned for colonial Virginia deeds (full details in Appendix B.1).  In brief, the pipeline
 
@@ -187,10 +193,6 @@ Benchmark H-3 employs the open-source *Mordecai-3* neural geoparser [@halterman2
 5. falls back to county- or state-centroid coordinates when no qualified entity survives.
 
 A three-parameter grid search on the 43 gold-standard grants selected the optimal confidence, bounding-box margin, and distance-gate values.  This configuration attains a 94.3 km mean error—worse than both the Stanford NER pipeline and the county-centroid baseline.
-
-## 4.4 County-Centroid Baseline (H-4)
-
-Method H-4 provides a transparent deterministic floor.  A regex extracts any Virginia county name (handling forms like "Henrico Co.", "City of Norfolk", etc.); if successful, the script returns the pre-computed TIGER/Line centroid of that county.  When no county is detected it defaults to the geographic centre of Virginia (37.4316 °N, -78.6569 °W).  On the 43-validation-grant set this logic produced 36 county-centroid predictions and 7 statewide-centroid fallbacks.  Although trivial to implement and lightning-fast (<2 ms per deed), the approach yields a mean error of 80.3 km, serving mainly as a sanity check that more sophisticated pipelines clear with ease.
 
 ## One-shot Prompting (M-series)
 

@@ -586,7 +586,27 @@ allowing the experiment script to access them through the static
 pipeline. A labor cost of USD 140 (six billable hours) is assigned to
 the benchmark when reporting cost metrics.
 
-\subsection{Stanford NER Baseline
+\DIFaddbegin \DIFadd{To ground the reader before introducing stronger automated pipelines, we
+next establish a simple deterministic reference via a county‑centroid
+baseline (H‑4), and only then turn to two geoparsers (H‑2 and H‑3).
+}
+
+\subsection{\DIFadd{County-Centroid Baseline
+(H-4)}}\label{county-centroid-baseline-h-4}
+
+\DIFadd{Method H-4 provides a transparent deterministic floor. A regex extracts
+any Virginia county name (handling forms like ``Henrico Co.'', ``City of
+Norfolk'', etc.); if successful, the script returns the pre-computed
+TIGER/Line centroid of that county. When no county is detected it
+defaults to the geographic centre of Virginia (37.4316 °N, -78.6569 °W).
+On the 43-validation-grant set this logic produced 36 county-centroid
+predictions and 7 statewide-centroid fallbacks. Although trivial to
+implement and lightning-fast (\textless2 ms per deed), the approach
+yields a mean error of 80.3 km, serving mainly as a sanity check that
+more sophisticated pipelines clear with ease.
+}
+
+\DIFaddend \subsection{Stanford NER Baseline
 (H-2)}\label{stanford-ner-baseline-h-2}
 
 To provide a more rigorous deterministic baseline, a Stanford Named
@@ -651,10 +671,14 @@ the optimal confidence, bounding-box margin, and distance-gate values.
 This configuration attains a 94.3 km mean error---worse than both the
 Stanford NER pipeline and the county-centroid baseline.
 
-\subsection{County-Centroid Baseline
-(H-4)}\label{county-centroid-baseline-h-4}
+\DIFdelbegin \subsection{\DIFdel{County-Centroid Baseline
+(H-4)}}%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < \label{county-centroid-baseline-h-4}
+%DIFDELCMD < 
 
-Method H-4 provides a transparent deterministic floor. A regex extracts
+%DIFDELCMD < %%%
+\DIFdel{Method H-4 provides a transparent deterministic floor. A regex extracts
 any Virginia county name (handling forms like ``Henrico Co.'', ``City of
 Norfolk'', etc.); if successful, the script returns the pre-computed
 TIGER/Line centroid of that county. When no county is detected it
@@ -664,8 +688,10 @@ predictions and 7 statewide-centroid fallbacks. Although trivial to
 implement and lightning-fast (\textless2 ms per deed), the approach
 yields a mean error of 80.3 km, serving mainly as a sanity check that
 more sophisticated pipelines clear with ease.
+}%DIFDELCMD < 
 
-\subsection{One-shot Prompting
+%DIFDELCMD < %%%
+\DIFdelend \subsection{One-shot Prompting
 (M-series)}\label{one-shot-prompting-m-series}
 
 In the first automatic condition, the language model receives the grant
