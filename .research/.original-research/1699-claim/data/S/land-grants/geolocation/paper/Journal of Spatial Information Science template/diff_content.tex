@@ -1287,12 +1287,12 @@ For both pipelines the Google \DIFdelbegin %DIFDELCMD < \passthrough{\lstinline!
 mix, whereas the auxiliary \DIFdelbegin %DIFDELCMD < \passthrough{\lstinline!compute\_centroid!} %%%
 \DIFdelend \DIFaddbegin \DIFadd{compute\_centroid }\DIFaddend function appeared in fewer
 than one call per ten. gpt-4.1-2025-04-14 (T-4) adopted a more
-economical strategy, issuing on average 2.3 calls per grant while
-succeeding on the first query in 73\% of cases. The
-gpt-4o-mini-2025-04-16 model (T-1), by contrast, averaged 4.0 calls with
-a 67\% first-call success rate. This greater query volume manifests as
-the higher token usage and latency reported in \DIFdelbegin \DIFdel{§ }\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 6.3, yet it
-conferred no observable advantage in positional accuracy (\DIFdelbegin \DIFdel{§ }\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 6.1).
+economical strategy, issuing on average \DIFdelbegin \DIFdel{2.3 }\DIFdelend \DIFaddbegin \DIFadd{2.23 }\DIFaddend calls per grant while
+succeeding on the first query in \DIFdelbegin \DIFdel{73}\DIFdelend \DIFaddbegin \DIFadd{72.1}\DIFaddend \% of cases. The \DIFdelbegin \DIFdel{gpt-4o-mini-2025-04-16 }\DIFdelend \DIFaddbegin \DIFadd{o4-mini-2025-04-16
+}\DIFaddend model (T-1), by contrast, averaged \DIFdelbegin \DIFdel{4.0 }\DIFdelend \DIFaddbegin \DIFadd{3.98 }\DIFaddend calls with a \DIFdelbegin \DIFdel{67}\DIFdelend \DIFaddbegin \DIFadd{66.7}\DIFaddend \% first-call
+success rate. This greater query volume manifests as the higher token
+usage and latency reported in \DIFdelbegin \DIFdel{§ }\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 6.3, yet it conferred no
+observable advantage in positional accuracy (\DIFdelbegin \DIFdel{§ }\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 6.1).
 
 \subsection{Robustness / Ablation
 Studies}\label{robustness-ablation-studies}
