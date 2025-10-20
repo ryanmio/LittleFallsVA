@@ -137,15 +137,15 @@ No publicly available digital transcription of *Cavaliers & Pioneers, Vol. 3* cu
 ## 3.2 Digitization & Pre-processing
 The bound volume was destructively scanned at 600 dpi.  After benchmarking multiple optical-character-recognition (OCR) engines and post-processing pipelines, the highest-fidelity workflow was applied to every page.  The resulting text was normalised and exported to CSV—one row per abstract—yielding the complete 5 471-row corpus.
 
-To facilitate reproducible experimentation three deterministic splits were drawn with fixed random seeds:
+To facilitate reproducible experimentation, the dev/test split and validation samples were generated deterministically with a fixed random seed (42):
 
 * Dev-1 and Dev-2 – 20 abstracts each, used exclusively for prompt engineering and hyper-parameter tuning.
 * Test – 125 abstracts, mutually exclusive from the dev sets.
 
 ## 3.3 Ground-Truth Coordinates
-From the 125-item test partition, 43 abstracts were matched to polygons in the *Central VA Patents* GIS layer curated by One Shared Story in partnership with the University of Virginia's Institute for Public History [@central_va_patents_gis].  Matching relied on grantee name, grant year, and acreage.  Each candidate polygon was visually audited against modern hydrography, historic county boundaries, and the neighbouring patent topology; only polygons whose centroid plausibly sat on the rivers, creeks, or adjoining grants described in the abstract were retained.  The centroid of each verified polygon serves as the reference coordinate for that land grant.
+From the 125‑item test partition, 43 abstracts were matched to polygons in the *Central VA Patents* GIS layer curated by One Shared Story in partnership with the University of Virginia's Institute for Public History [@central_va_patents_gis].  Matching relied on grantee name, grant year, and acreage.  Each candidate polygon was visually audited against modern hydrography, historic county boundaries, and the neighbouring patent topology; only polygons whose centroid plausibly sat on the rivers, creeks, or adjoining grants described in the abstract were retained.  The centroid of each verified polygon serves as the reference coordinate for that land grant.  
 
-The 43 points arise from a simple random draw (125 abstracts) followed by archival verification; they were not cherry-picked for textual clarity or spatial convenience.
+The 43 cases come from a simple random draw (125 abstracts) followed by archival verification—chosen to balance external validity with auditability. Because manual polygon vetting (hydrography, historical counties, neighbour topology) requires hours per deed, scaling naively would incentivize convenience sampling toward easily locatable instruments and thus introduce selection bias; the random‑draw‑plus‑vetting protocol retains representativeness while yielding a fully auditable benchmark suitable for method development and power‑constrained ablations. Future releases will expand coverage as additional polygons are curated.
 
 The OSS polygon layer survives a quartet of statistically independent, methodologically orthogonal validation tests that interrogate location, geometry, scale, and extreme-case performance.  Key findings are summarised below: 
 

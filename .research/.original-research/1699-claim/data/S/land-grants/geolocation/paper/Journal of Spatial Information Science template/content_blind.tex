@@ -461,10 +461,14 @@ were drawn with fixed random seeds:
   Test -- 125 abstracts, mutually exclusive from the dev sets.
 \end{itemize}
 
+Splits and validation sampling were produced by a deterministic
+procedure with a fixed random seed (42), yielding the test partition
+used for subsequent archival vetting.
+
 \subsection{Ground-Truth
 Coordinates}\label{ground-truth-coordinates}
 
-From the 125-item test partition, 43 abstracts were matched to polygons
+From the 125‑item test partition, 43 abstracts were matched to polygons
 in the \emph{Central VA Patents} GIS layer curated by One Shared Story
 in partnership with the University of Virginia's Institute for Public
 History \citep{central_va_patents_gis}. Matching relied on grantee name,
@@ -475,9 +479,16 @@ on the rivers, creeks, or adjoining grants described in the abstract
 were retained. The centroid of each verified polygon serves as the
 reference coordinate for that land grant.
 
-The 43 points arise from a simple random draw (125 abstracts) followed
-by archival verification; they were not cherry-picked for textual
-clarity or spatial convenience.
+The 43 cases come from a simple random draw (125 abstracts) followed by
+archival verification---chosen to balance external validity with
+auditability. Because manual polygon vetting (hydrography, historical
+counties, neighbour topology) requires hours per deed, scaling naively
+would incentivize convenience sampling toward easily locatable
+instruments and thus introduce selection bias; the
+random‑draw‑plus‑vetting protocol retains representativeness while
+yielding a fully auditable benchmark suitable for method development and
+power‑constrained ablations. Future releases will expand coverage as
+additional polygons are curated.
 
 The OSS polygon layer survives a quartet of statistically independent,
 methodologically orthogonal validation tests that interrogate location,

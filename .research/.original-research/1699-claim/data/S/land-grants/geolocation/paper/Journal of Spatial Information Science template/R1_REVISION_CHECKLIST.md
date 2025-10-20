@@ -63,8 +63,8 @@
 - [x] **A12:** Section 4.6: Inconsistent - no performance outlook (unlike other subsections)
   - Changes: Appended one‑sentence performance outlooks to end of 4.5 (M‑series) and 4.6 (T‑series) paragraphs, pointing to Section 6 tables/figures without duplicating numbers. Commit: 29a4070.
 
-- [ ] **A13:** Beginning of section 5 is redundant with previous section - consolidate
-  - Changes: 
+- [x] **A13:** Beginning of section 5 is redundant with previous section - consolidate
+  - Changes: Removed duplicated efficiency bullets/paragraph from §5.1 and replaced with a single reference to Cost and Latency Accounting; preserves definitions in §4.8 without repetition. Commit: 6fab2ae.
 
 ### Tables & Figures
 - [x] **A14:** Section 6.1: Figure 4 only mentioned briefly - clarify what can be learned from it
@@ -156,8 +156,8 @@
 - [x] **C11:** Page 12, re: DBSCAN: Clarify - is that basically MinPts=3?
   - Changes: Clarified ensemble clustering as DBSCAN with ε = 0.5 km and MinPts = 3 in the Five‑call Ensemble description, Discussion §7.1 and §7.3 language, and Conclusion. Commit: ad3e7430ab5b93c79171b264b1afedb84882d5dc.
 
-- [ ] **C12:** Clarify what 'script development time' includes and whether subsequent grants would be faster.
-  - Changes: 
+- [x] **C12:** Clarify what 'script development time' includes and whether subsequent grants would be faster.
+  - Changes: Added brief clarification in §4.8 that script development time covers ingestion/tuning/QA; costs amortize over larger batches and LLMs scale linearly. Commit: 6fab2ae.
 
 - [ ] **C13:** Page 14: Mean column hard to read - adjust column widths (make other columns less wide)
   - Changes: 
