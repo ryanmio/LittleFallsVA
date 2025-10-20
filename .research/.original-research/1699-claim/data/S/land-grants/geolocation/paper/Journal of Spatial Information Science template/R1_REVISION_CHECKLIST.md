@@ -82,8 +82,8 @@
 - [x] **A18:** Section 6.4: Table reference should be "Table 7", table is lacking number + caption
   - Changes: Added caption and label to qualitative steps table in §6.4 — “Table: Qualitative step‑by‑step comparison… {#tbl:grant04_steps}”. Commit: 7b2ebe3.
 
-- [ ] **A19:** Section 6.5: Rounding of numbers in text is odd (compare to numbers in table)
-  - Changes: 
+- [x] **A19:** Section 6.5: Rounding of numbers in text is odd (compare to numbers in table)
+  - Changes: Synchronized §6.5 narrative with Table \ref{tbl:tooluse}: T‑4 uses 2.23 calls/grant with 72.1% first‑call success; T‑1 uses 3.98 calls with 66.7% success; corrected model naming. Commit: 2a30fc7.
 
 - [ ] **A20:** Figure 8: Color of triangle in map does not match legend
   - Changes: 
