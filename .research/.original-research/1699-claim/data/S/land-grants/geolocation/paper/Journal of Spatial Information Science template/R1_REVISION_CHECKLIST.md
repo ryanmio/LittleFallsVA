@@ -79,8 +79,8 @@
 - [x] **A17:** Figure 6 H# column – populate with values and explain, or remove.
   - Changes: Removed static H‑series baselines from the per‑grant latency figure by filtering pipeline == static in the plotting script; regenerated and synced figure. Commit: 048e467.
 
-- [ ] **A18:** Section 6.4: Table reference should be "Table 7", table is lacking number + caption
-  - Changes: 
+- [x] **A18:** Section 6.4: Table reference should be "Table 7", table is lacking number + caption
+  - Changes: Added caption and label to qualitative steps table in §6.4 — “Table: Qualitative step‑by‑step comparison… {#tbl:grant04_steps}”. Commit: 7b2ebe3.
 
 - [ ] **A19:** Section 6.5: Rounding of numbers in text is odd (compare to numbers in table)
   - Changes: 
