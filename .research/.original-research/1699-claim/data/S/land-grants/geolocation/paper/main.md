@@ -201,7 +201,7 @@ Geolocate this colonial Virginia land grant to precise latitude and longitude co
 Respond with ONLY the coordinates in this format: [DD]°[MM]'[SS].[SSSSS]"N [DDD]°[MM]'[SS].[SSSSS]"W
 ```
 
-Six OpenAI model variants spanning three architecture families constitute the M-series (\ref{tbl:mmodels}). Temperature is fixed at 0.2 for gpt-4.1-2025-04-14 and gpt-4o-2024-08-06; all other parameters remain at their service defaults. Each abstract is processed with a single API call; no external tools are available in this condition.
+Six OpenAI model variants spanning three architecture families constitute the M-series (\ref{tbl:mmodels}). Temperature is fixed at 0.2 for gpt-4.1-2025-04-14 and gpt-4o-2024-08-06; all other parameters remain at their service defaults. Each abstract is processed with a single API call; no external tools are available in this condition. Section 6.1 (Table \ref{tbl:accuracy}) shows M-series mean errors spanning ≈23–50 km across models; o3‑2025‑04‑16 is most accurate; cost/latency trade‑offs appear in Figures \ref{fig:pareto_cost} and \ref{fig:pareto_latency}.
 
 | ID | Model |
 |----|--------------------|
@@ -218,7 +218,7 @@ Table: Evaluated one-shot model variants (M‑series). {#tbl:mmodels}
 
 The second automated condition equips the model with two specialized tools: geocode_place, an interface to the Google Geocoding API limited to Virginia and adjoining counties, and compute_centroid, which returns the spherical centroid of two or more points. The system prompt (Appendix A.2.2) encourages an iterative search strategy where the model can issue up to twelve tool calls, evaluate the plausibility of each result, and optionally average multiple anchors before emitting a final answer in decimal degrees with six fractional places.
 
-Table \ref{tbl:tmodels} shows the five model variants initially considered for this tool suite. Of these, only T-1 and T-4 were carried forward into the final evaluation. The remaining models—T-2 (o3-2025-04-16), T-3 (o3-mini-2025-01-31), and T-5 (computer-use-preview-2025-03-11)—were excluded after developmental testing revealed the outputs were largely identical given that the primary tool, Google's Geocoding API, is deterministic. Proceeding with these additional models would have substantially increased computational costs and processing times without yielding distinct results or further insights into tool-augmented performance.
+Table \ref{tbl:tmodels} shows the five model variants initially considered for this tool suite. Of these, only T-1 and T-4 were carried forward into the final evaluation. The remaining models—T-2 (o3-2025-04-16), T-3 (o3-mini-2025-01-31), and T-5 (computer-use-preview-2025-03-11)—were excluded after developmental testing revealed the outputs were largely identical given that the primary tool, Google's Geocoding API, is deterministic. Proceeding with these additional models would have substantially increased computational costs and processing times without yielding distinct results or further insights into tool-augmented performance. In this setting the tool‑augmented variants do not improve accuracy; the gpt‑4.1 tool‑chain (T‑4) is ≈30% worse than its pure‑prompt counterpart (Section 6.1; Table \ref{tbl:accuracy}); see Figures \ref{fig:pareto_cost} and \ref{fig:pareto_latency} for cost/latency.
 
 | ID | Model |
 |----|--------------------|

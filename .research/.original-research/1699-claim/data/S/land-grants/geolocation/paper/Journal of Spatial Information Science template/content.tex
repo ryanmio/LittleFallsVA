@@ -637,6 +637,10 @@ constitute the M-series (\ref{tbl:mmodels}). Temperature is fixed at 0.2
 for gpt-4.1-2025-04-14 and gpt-4o-2024-08-06; all other parameters
 remain at their service defaults. Each abstract is processed with a
 single API call; no external tools are available in this condition.
+Section 6.1 (Table \ref{tbl:accuracy}) shows M-series mean errors
+spanning ≈23--50 km across models; o3‑2025‑04‑16 is most accurate;
+cost/latency trade‑offs appear in Figures \ref{fig:pareto_cost} and
+\ref{fig:pareto_latency}.
 
 \begin{longtable}[]{@{}ll@{}}
 \caption{\label{tbl:mmodels}Evaluated one-shot model variants
@@ -680,7 +684,11 @@ testing revealed the outputs were largely identical given that the
 primary tool, Google's Geocoding API, is deterministic. Proceeding with
 these additional models would have substantially increased computational
 costs and processing times without yielding distinct results or further
-insights into tool-augmented performance.
+insights into tool-augmented performance. In this setting the
+tool‑augmented variants do not improve accuracy; the gpt‑4.1 tool‑chain
+(T‑4) is ≈30\% worse than its pure‑prompt counterpart (Section 6.1;
+Table \ref{tbl:accuracy}); see Figures \ref{fig:pareto_cost} and
+\ref{fig:pareto_latency} for cost/latency.
 
 \begin{longtable}[]{@{}ll@{}}
 \caption{\label{tbl:tmodels}Evaluated tool‑augmented model variants
