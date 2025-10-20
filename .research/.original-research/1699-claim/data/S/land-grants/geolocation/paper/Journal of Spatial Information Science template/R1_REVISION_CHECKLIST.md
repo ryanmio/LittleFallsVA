@@ -67,8 +67,8 @@
   - Changes: 
 
 ### Tables & Figures
-- [ ] **A14:** Section 6.1: Figure 4 only mentioned briefly - clarify what can be learned from it
-  - Changes: 
+- [x] **A14:** Section 6.1: Figure 4 only mentioned briefly - clarify what can be learned from it
+  - Changes: Defined CDF at first mention and added two interpretive sentences explaining near‑field vs tail behavior and threshold‑dependent dominance. Commit: 846ef4b.
 
 - [x] **A15:** Section 6.2: No reference to Table 6 in text - add reference
   - Changes: Added explicit reference to Table \ref{tbl:cost} in 6.2 paragraph discussing the Pareto cost–accuracy plot. Commit: 7dc04f1.

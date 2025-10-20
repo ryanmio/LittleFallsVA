@@ -262,7 +262,7 @@ o3-mini & 1.10 & 4.40 \\
 \end{tabular}
 \end{table}
 
-Latency is measured as wall-clock time from submission of an API request until a valid coordinate string is returned, inclusive of all intermediate tool interactions. For the traditional GIS benchmark, the analyst's total working time (6 h) is divided by the number of grants processed (43), yielding an average latency of 502 s per prediction.
+Latency is measured as wall-clock time from submission of an API request until a valid coordinate string is returned, inclusive of all intermediate tool interactions. For the traditional GIS benchmark, the analyst's total working time (6 h) is divided by the number of grants processed (43), yielding an average latency of 502 s per prediction. For comparability we report billable labour time rather than calendar span (≈49 h over three days), and note that the automated GIS script's runtime was negligible (<1 s per grant). “Script development time” for the GIS workflow encompasses data ingestion, parameter tuning, and QA passes; these fixed costs amortize over larger batches (per‑grant latency and cost would drop for hundreds of deeds), whereas LLM pipelines scale linearly with corpus size from the outset.
 
 # 5 Experimental Setup
 
@@ -270,12 +270,7 @@ Latency is measured as wall-clock time from submission of an API request until a
 
 The primary outcome measure is distance error—the great-circle distance in kilometres between predicted and reference coordinates, computed with the Haversine formula. The mean, median, and 95% bootstrap confidence intervals are reported, along with accuracy bands (<1 km, 1–10 km, >10 km).
 
-Efficiency is characterized by two key metrics:
-
-1. Latency: Measured as mean labor time per grant (forward-pass time once the workflow is in place)
-2. Monetary cost: Calculated by multiplying input and output token counts returned by the OpenAI API by the official per-token prices in effect on 01 May 2025
-
-The GIS benchmark incurred a fixed fee of USD 140 for approximately six billable hours of expert labour—covering script development, parameter tuning, and quality assurance—for all 43 grants (≈ 502 s per grant). Although the calendar time from first contact to final delivery spanned roughly 49 h over three days, the latency metric uses billable labour time to remain comparable with LLM wall-clock inference; actual script execution was negligible (< 1 s per grant). For LLM methods, latency represents wall-clock time from API request to final coordinate string, inclusive of all tool interactions.
+We also report efficiency via latency and monetary cost, defined operationally in Cost and Latency Accounting above.
 
 All metrics are computed on the 43 test-set abstracts for which ground-truth coordinates are available; remaining rows are retained in the public logs but excluded from aggregate statistics.
 
