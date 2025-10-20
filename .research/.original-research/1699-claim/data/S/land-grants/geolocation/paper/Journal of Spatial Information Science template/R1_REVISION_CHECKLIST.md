@@ -70,11 +70,11 @@
 - [ ] **A14:** Section 6.1: Figure 4 only mentioned briefly - clarify what can be learned from it
   - Changes: 
 
-- [ ] **A15:** Section 6.2: No reference to Table 6 in text - add reference
-  - Changes: 
+- [x] **A15:** Section 6.2: No reference to Table 6 in text - add reference
+  - Changes: Added explicit reference to Table \ref{tbl:cost} in 6.2 paragraph discussing the Pareto cost–accuracy plot. Commit: 7dc04f1.
 
-- [ ] **A16:** Choose one cost normalization (per-grant or per-1,000), justify, and align table + prose.
-  - Changes: 
+- [x] **A16:** Choose one cost normalization (per-grant or per-1,000), justify, and align table + prose.
+  - Changes: Standardized Table 6 to per‑1,000 located grants, simplified columns and caption, and aligned 6.2 text to per‑1,000 normalization. Commit: 7dc04f1.
 
 - [ ] **A17:** Figure 6 H# column – populate with values and explain, or remove.
   - Changes: 
