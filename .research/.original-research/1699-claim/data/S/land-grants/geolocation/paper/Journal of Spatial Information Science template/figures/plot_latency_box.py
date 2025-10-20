@@ -16,7 +16,9 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 pdf = pd.read_csv(CSV_PATH)
 # numeric
 pdf['latency_s'] = pd.to_numeric(pdf['latency_s'], errors='coerce')
+# Drop rows without latency and exclude static baselines (H-series) from latency plot
 pdf = pdf.dropna(subset=['latency_s'])
+pdf = pdf[pdf['pipeline'] != 'static']
 
 order = pdf.groupby('method_id')['latency_s'].median().sort_values().index.tolist()
 
