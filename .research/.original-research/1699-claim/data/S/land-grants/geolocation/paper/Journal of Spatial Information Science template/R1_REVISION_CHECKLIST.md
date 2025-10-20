@@ -76,8 +76,8 @@
 - [x] **A16:** Choose one cost normalization (per-grant or per-1,000), justify, and align table + prose.
   - Changes: Standardized Table 6 to per‑1,000 located grants, simplified columns and caption, and aligned 6.2 text to per‑1,000 normalization. Commit: 7dc04f1.
 
-- [ ] **A17:** Figure 6 H# column – populate with values and explain, or remove.
-  - Changes: 
+- [x] **A17:** Figure 6 H# column – populate with values and explain, or remove.
+  - Changes: Removed static H‑series baselines from the per‑grant latency figure by filtering pipeline == static in the plotting script; regenerated and synced figure. Commit: 048e467.
 
 - [ ] **A18:** Section 6.4: Table reference should be "Table 7", table is lacking number + caption
   - Changes: 
