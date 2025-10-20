@@ -627,9 +627,10 @@ when multiple candidates are found.
 The system implements a robust fallback hierarchy: if no geographic
 entities are successfully resolved, it falls back to county centroid
 coordinates extracted from the patent text; if county extraction fails,
-it defaults to Virginia's geographic center (37.4316, -78.6569). This
-approach ensures 100\% prediction coverage while maintaining
-methodological consistency.
+it defaults to Virginia's geographic center (37.4316, -78.6569). \DIFaddbegin \DIFadd{On the
+43‑grant evaluation set, this statewide‑centroid default was invoked in
+4 of 43 cases (\textasciitilde9.3\%). }\DIFaddend This approach ensures 100\%
+prediction coverage while maintaining methodological consistency.
 
 The Stanford NER method achieved a mean error of 79.02 km with 100\%
 prediction coverage across all 43 test grants. While this represents a
@@ -1667,9 +1668,8 @@ Several caveats temper the preceding claims.
 Building on the present findings, several avenues warrant exploration.
 
 \begin{itemize}
-\DIFdelbegin %DIFDELCMD < \tightlist
-%DIFDELCMD < %%%
-\DIFdelend \item
+\tightlist
+\item
   \textbf{Corpus expansion.} \DIFdelbegin \DIFdel{Digitising }\DIFdelend \DIFaddbegin \DIFadd{Digitizing }\DIFaddend the remaining volumes of
   \emph{Cavaliers and Pioneers} \citep{Nugent1979_cavaliers3}---and
   analogous land books from Maryland and North Carolina---would permit a
@@ -1691,12 +1691,7 @@ Building on the present findings, several avenues warrant exploration.
   \textbf{\DIFadd{Compare to Google's geospatial agent stack.}} \DIFadd{A follow‑on study
   could benchmark end‑to‑end pipelines built with Google's nascent
   Geospatial Reasoning framework (Gemini + geospatial foundation models
-  + Maps/Earth Engine tooling). This system is proprietary and still
-  evolving, requires significant engineering to reproduce fairly, and
-  has unclear academic access terms; incorporating it rigorously is
-  therefore beyond the present scope but worth assessing once stable
-  APIs are available
-  }\href{https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/}{\DIFadd{link}}\DIFadd{.
+  + Maps/Earth Engine tooling).
 }\DIFaddend \end{itemize}
 
 \section{Conclusion}\label{conclusion}

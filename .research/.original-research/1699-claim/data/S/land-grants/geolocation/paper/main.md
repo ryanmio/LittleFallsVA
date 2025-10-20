@@ -178,7 +178,7 @@ To provide a more rigorous deterministic baseline, a Stanford Named Entity Recog
 
 The Stanford NER pipeline operates through a three-stage process: (1) Named entity extraction using Stanford's CoreNLP library to identify geographic entities within the patent abstracts, (2) Geographic resolution via the GeoNames API with Virginia-specific restrictions to prevent out-of-state matches, and (3) Coordinate selection using a population-weighted ranking system to choose the most likely location when multiple candidates are found.
 
-The system implements a robust fallback hierarchy: if no geographic entities are successfully resolved, it falls back to county centroid coordinates extracted from the patent text; if county extraction fails, it defaults to Virginia's geographic center (37.4316, -78.6569). This approach ensures 100% prediction coverage while maintaining methodological consistency.
+The system implements a robust fallback hierarchy: if no geographic entities are successfully resolved, it falls back to county centroid coordinates extracted from the patent text; if county extraction fails, it defaults to Virginia's geographic center (37.4316, -78.6569). On the 43‑grant evaluation set, this statewide‑centroid default was invoked in 4 of 43 cases (~9.3%). This approach ensures 100% prediction coverage while maintaining methodological consistency.
 
 The Stanford NER method achieved a mean error of 79.02 km with 100% prediction coverage across all 43 test grants. While this represents a more systematic approach than the single-analyst GIS baseline, it demonstrates the challenges that automated systems face when dealing with historical toponyms that may have shifted meaning or location over centuries, as detailed in the case study analysis (Section 7.2.1).
 
@@ -515,8 +515,7 @@ Building on the present findings, several avenues warrant exploration.
 * **Prompt engineering at scale.**  A reinforcement-learning loop that scores predictions against partial gazetteers could iteratively refine prompts or select between tool and non-tool paths.
 * **Polygon recovery.**  Combining the model's point estimate with chained GIS operations (bearing decoding, river buffering) could approximate parcel outlines, unlocking environmental history applications.
 * **Human-in-the-loop interfaces.**  Lightweight web tools that display the model's candidate coordinates alongside archival imagery would enable rapid expert validation and correction.
-
-* **Compare to Google's geospatial agent stack.**  A follow‑on study could benchmark end‑to‑end pipelines built with Google's nascent Geospatial Reasoning framework (Gemini + geospatial foundation models + Maps/Earth Engine tooling). This system is proprietary and still evolving, requires significant engineering to reproduce fairly, and has unclear academic access terms; incorporating it rigorously is therefore beyond the present scope but worth assessing once stable APIs are available [link](https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/).
+* **Compare to Google's geospatial agent stack.**  A follow‑on study could benchmark end‑to‑end pipelines built with Google's nascent Geospatial Reasoning framework (Gemini + geospatial foundation models + Maps/Earth Engine tooling).
 
 # 10 Conclusion
 

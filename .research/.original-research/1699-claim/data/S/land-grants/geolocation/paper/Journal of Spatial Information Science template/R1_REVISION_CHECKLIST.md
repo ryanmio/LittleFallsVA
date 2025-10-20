@@ -106,14 +106,14 @@
   - Changes: Revised captions across main text and appendices to state purpose and how to read each artifact (not restating columns or results). Added concise first‑mention takeaways in §6.1 and fixed figure reference mismatch in §6.3. Commits: 9a738a2, b692b3c, d3d0e81, 51ec750, 9394196, dbda28a, 3276d8d.
 
 ### Optional/Minor
-- [ ] **B2:** [OPTIONAL] Consider adding Google geoparsing pipeline comparison (spatial reasoning AI + geocoding)
-  - Changes: 
+- [x] **B2:** [OPTIONAL] Consider adding Google geoparsing pipeline comparison (spatial reasoning AI + geocoding)
+  - Changes: Added Future Work note proposing a follow‑on benchmark of Google’s Geospatial Reasoning stack (Gemini + geospatial FMs + Maps/Earth Engine). Declined for R1 because it is proprietary/unstable and would require substantial engineering to reproduce fairly; out of scope here. Commit: 54995fd. Link: [Google Research blog](https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/).
 
-- [ ] **B3:** [ACKNOWLEDGED] Small evaluation dataset limitation - already noted but reviewer emphasizes
-  - Changes: 
+- [x] **B3:** [ACKNOWLEDGED] Small evaluation dataset limitation - already noted but reviewer emphasizes
+  - Changes: Integrated rationale in §3.3 (random draw + archival vetting; auditability vs convenience‑sampling bias) and noted deterministic seed in §3.2. Future expansion noted as polygons are curated. Commit: 70e96e4.
 
-- [ ] **B4:** [ACKNOWLEDGED] No polygon-level reconstruction - already noted as future work
-  - Changes: 
+ - [x] **B4:** [ACKNOWLEDGED] No polygon-level reconstruction - already noted as future work
+   - Changes: Already addressed in §9 Future Work (Polygon recovery bullet). No manuscript changes required; thanks to the reviewer for flagging the limitation explicitly.
 
 ---
 
@@ -144,8 +144,8 @@
   - Changes: 
 
 ### Clarifications & Details
-- [ ] **C8:** Page 9: Having one human is a source of variance - discuss
-  - Changes: 
+- [x] **C8:** Page 9: Having one human is a source of variance - discuss
+  - Changes: Addressed in §4.1 (explicitly positions the GIS baseline as a single‑analyst illustrative lower bound) and §8.7 “GIS benchmark generality” (variance across analysts/methods; interpret as practical lower bound, not representative). No further changes required.
 
 - [ ] **C9:** Page 10: How often did H-2 fall back to Virginia's geographic center? Would pull up average
   - Changes: 
