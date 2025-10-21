@@ -1297,11 +1297,9 @@ Full reasoning chains are available in appendix.
 The \emph{one-shot} paradigm \DIFdelbegin \DIFdel{asks the model to read the abstract, reason
 internally, and emit coordinates in a single response. All cognition is
 ``in the head'' of the network: it interprets archaic toponyms, performs
-mental triangulation against its latent world map, and produces a best-guess point estimate}\DIFdelend \DIFaddbegin \DIFadd{maps the input text directly to a
-coordinate using the model's learned representations, with no external
-tools. All computation occurs within the model's parameters: the system
-produces a single coordinate based on learned statistical associations
-and implicit spatial priors; no tool calls are issued}\DIFaddend . By contrast, the
+mental triangulation against its latent world map, and produces a
+best-guess point estimate. }\DIFdelend \DIFaddbegin \DIFadd{returns a single coordinate from the input
+text in one response; no external tools are invoked. }\DIFaddend By contrast, the
 \emph{tool-chain} paradigm externalises part of \DIFdelbegin \DIFdel{that reasoning}\DIFdelend \DIFaddbegin \DIFadd{the search process}\DIFaddend . The
 model may call a geocoder to retrieve candidate coordinates for surface
 forms (e.g.~``Holloway Swamp''), inspect the returned JSON, run

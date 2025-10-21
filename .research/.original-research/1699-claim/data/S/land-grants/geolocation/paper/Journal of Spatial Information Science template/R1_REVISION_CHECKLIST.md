@@ -136,12 +136,12 @@
   - Changes: Removed stray quote. Commit: 6b98c0e.
 
 ### Phrasing & Language
-- [ ] **C6:** Page 7: Revise phrasing of models' "cognitive processes" - be less credulous
-  - Changes: 
+- [x] **C6:** Page 7: Revise phrasing of models' "cognitive processes" - be less credulous
+  - Changes: Replaced mentalistic phrasing with method-grounded terms (inference trace, inference‑time behavior, outputs/tools). Commit: 1b96c0c.
 
-- [ ] **C7:** Page 21: Very skeptical of phrasing "All cognition is 'in the head' of the network: it interprets archaic toponyms, performs mental triangulation against its latent world map..."
+- [x] **C7:** Page 21: Very skeptical of phrasing "All cognition is 'in the head' of the network: it interprets archaic toponyms, performs mental triangulation against its latent world map..."
   - Do we know this is true? Revise to be more cautious about claims of what LLM "does"
-  - Changes: 
+  - Changes: Rewrote the one‑shot vs tool‑chain contrast to avoid anthropomorphism: one‑shot maps text to a coordinate via learned representations; tool‑chain externalizes search via tool calls; no claims about cognition. Commit: 1b96c0c.
 
 ### Clarifications & Details
 - [x] **C8:** Page 9: Having one human is a source of variance - discuss
