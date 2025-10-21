@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  20 OCT 2025 19:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  20 OCT 2025 20:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -35145,14 +35145,11 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.801 \begin{table}
-                   [H]
+                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-Missing character: There is no [ in font nullfont!
-Missing character: There is no H in font nullfont!
-Missing character: There is no ] in font nullfont!
 
 ! LaTeX Error: \caption outside float.
 
@@ -35475,12 +35472,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 801--818
-[]
- []
-
-
-Overfull \hbox (30.53128pt too wide) in paragraph at lines 801--818
+Overfull \hbox (30.53128pt too wide) in paragraph at lines 803--818
 []
  []
 
@@ -46792,14 +46784,11 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1146 \begin{figure}
-                     [H]
+                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-Missing character: There is no [ in font nullfont!
-Missing character: There is no H in font nullfont!
-Missing character: There is no ] in font nullfont!
 ! Undefined control sequence.
 l.1148 \includegraphics
                        [width=0.75\linewidth]{../analysis/figures/latency_bo...
@@ -46935,13 +46924,8 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1146--1152
-[]
- []
-
-
-Overfull \hbox (763.33575pt too wide) in paragraph at lines 1146--1152
-[]\OML/cmm/m/it/10 oxplot:pdf[][]$ 
+Overfull \hbox (763.33575pt too wide) in paragraph at lines 1148--1152
+[]$[]\OML/cmm/m/it/10 oxplot:pdf[][]$ 
  []
 
 ! Undefined control sequence.
@@ -56600,14 +56584,11 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1429 \begin{figure}
-                     [H]
+                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-Missing character: There is no [ in font nullfont!
-Missing character: There is no H in font nullfont!
-Missing character: There is no ] in font nullfont!
 
 ! LaTeX Error: Environment subfigure undefined.
 
@@ -57192,23 +57173,18 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1429--1447
-[]
- []
-
-
-Overfull \hbox (287.23738pt too wide) in paragraph at lines 1429--1447
+Overfull \hbox (287.23738pt too wide) in paragraph at lines 1431--1447
 []\OML/cmm/m/it/10 orkflow=map[]utputs=grant[][]ap:png[][]$
  []
 
 
-Overfull \hbox (332.73003pt too wide) in paragraph at lines 1429--1447
+Overfull \hbox (332.73003pt too wide) in paragraph at lines 1431--1447
 []\OML/cmm/m/it/10 orkflow=map[]utputs=grant[]\/cmr/m/n/10 9[]\OML/cmm/m/it/10 
 ap:png[][]$
  []
 
 
-Overfull \hbox (11.1084pt too wide) in paragraph at lines 1429--1447
+Overfull \hbox (11.1084pt too wide) in paragraph at lines 1431--1447
 \TS1/cmr/m/n/10 ©
  []
 

@@ -246,7 +246,7 @@ $$
 
 where $p_{\text{in}}$ and $p_{\text{out}}$ are USD prices per million tokens (see Table \ref{tbl:prices}).  Google Geocoding calls remain comfortably within the free-tier quota and therefore do not accrue additional fees.
 
-\begin{table}[H]
+\begin{table}
 \centering
 \caption{OpenAI token pricing in effect on 15~May~2025 and used for all cost calculations.  Values are quoted in USD per\,1M tokens.}
 \label{tbl:prices}
@@ -372,7 +372,7 @@ The o3-2025-04-16 model (M-2) is more accurate but ~100× costlier than gpt-4o-2
 
 Examining the latency dimension, Figure \ref{fig:latency_box} shows that automatic methods produce coordinates in 0.7–48 seconds of computation time, still three orders of magnitude faster than the GIS analyst's labor time (≈502 s per grant). This range reflects substantial variation across model families, with the fastest models (gpt-4o-2024-08-06 and gpt-3.5-turbo) requiring less than 1 second per grant, while the o-series models (particularly o3-2025-04-16) taking up to 48 seconds.
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[width=0.75\linewidth]{../analysis/figures/latency_boxplot.pdf}
 \caption{Per-grant latency by method (seconds; log-scale x-axis). Boxplots show medians and interquartile ranges; whiskers indicate the 1.5 IQR range; outliers are omitted.}
@@ -456,7 +456,7 @@ Inspection of the largest residuals uncovers three recurring failure modes:
 3. **Cascading search bias.** Tool-enabled runs introduce an additional failure channel: once the first \texttt{geocode\_place} call returns a spurious coordinate, subsequent \texttt{compute\_centroid} operations often average anchors that are already flawed, locking in the error. Raising the threshold for calling the centroid function—or providing the model with a quality heuristic—may mitigate this issue.
 
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \begin{subfigure}{0.48\textwidth}
   \centering

@@ -129,8 +129,8 @@
 - [x] **C3:** Page 11: "geocode_place" - check if backslash is copy/paste error in typesetting
   - Changes: Confirmed underscore is correctly rendered as code or plain text; no stray escape backslashes remain in narrative text. Commit: 5fc2e87, b566ce3, 365314a.
 
-- [x] **C4:** Page 12: What is "[H]" - maybe supposed to be a LaTeX command?
-  - Changes: [H] is intentionally used for figure/table floats per JOSIS build; confirmed not used in prose; no correction needed beyond verification. Commit: 5fc2e87.
+- [ ] **C4:** Page 12: What is "[H]" - maybe supposed to be a LaTeX command?
+  - Changes:
 
 - [x] **C5:** Page 21: "WILLIAM WILLIAMS" has unbalanced quote characters
   - Changes: Removed stray quote. Commit: 6b98c0e.
@@ -147,8 +147,8 @@
 - [x] **C8:** Page 9: Having one human is a source of variance - discuss
   - Changes: Addressed in §4.1 (explicitly positions the GIS baseline as a single‑analyst illustrative lower bound) and §8.7 “GIS benchmark generality” (variance across analysts/methods; interpret as practical lower bound, not representative). No further changes required.
 
-- [ ] **C9:** Page 10: How often did H-2 fall back to Virginia's geographic center? Would pull up average
-  - Changes: 
+- [x] **C9:** Page 10: How often did H-2 fall back to Virginia's geographic center? Would pull up average
+  - Changes: Counted fallbacks in the results (\texttt{full\_results\_v2.csv}): H‑2 used the statewide‑centroid default in 4/43 cases (≈9.3%). Added this statistic to §4.3. Commit: a7eb522.
 
 - [x] **C10:** Briefly justify temperature where it is first introduced; add forward reference to detailed discussion if needed.
   - Changes: Clarified t as sampling randomness, noted default (0.2) when supported and that o‑series does not expose temperature; added forward reference to §6.6. Commit: 4e58320.
@@ -163,17 +163,17 @@
   - Changes: 
 
 ### Positive Sections (No Action)
-- [ ] **C14:** [POSITIVE] Section 6.2's cost/quality Pareto front discussion is nice
+- [x] **C14:** [POSITIVE] Section 6.2's cost/quality Pareto front discussion is nice
   - Changes: N/A - reviewer praise
 
-- [ ] **C15:** [POSITIVE] Section 6.6 ablation study is nice
+- [x] **C15:** [POSITIVE] Section 6.6 ablation study is nice
   - Changes: N/A - reviewer praise
 
-- [ ] **C16:** [POSITIVE] Section 7.2 "Error Analysis & Failure Modes" is good
+- [x] **C16:** [POSITIVE] Section 7.2 "Error Analysis & Failure Modes" is good
   - Changes: N/A - reviewer praise
 
-- [ ] **C17:** [ACKNOWLEDGED] Result that LLMs work well is "unsatisfying" but report is thorough
-  - Changes: N/A - general comment
+- [x] **C17:** [ACKNOWLEDGED] Result that LLMs work well is "unsatisfying" but report is thorough
+  - Changes: Acknowledged in response letter. We position the work as an empirical benchmark and reproducible corpus rather than a theoretical contribution; mechanistic claims are kept modest and limitations/future directions are emphasized (Sections 7–9). No manuscript edits required.
 
 ---
 
