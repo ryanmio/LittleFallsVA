@@ -129,8 +129,8 @@
 - [x] **C3:** Page 11: "geocode_place" - check if backslash is copy/paste error in typesetting
   - Changes: Confirmed underscore is correctly rendered as code or plain text; no stray escape backslashes remain in narrative text. Commit: 5fc2e87, b566ce3, 365314a.
 
-- [ ] **C4:** Page 12: What is "[H]" - maybe supposed to be a LaTeX command?
-  - Changes:
+ - [x] **C4:** Page 12: What is "[H]" - maybe supposed to be a LaTeX command?
+   - Changes: Removed stray [H] float specifiers from table/figures in the manuscript body; standard float placement now. Intentional [H] usage in the JOSIS build remains in the template. Commit: 67c6ed0.
 
 - [x] **C5:** Page 21: "WILLIAM WILLIAMS" has unbalanced quote characters
   - Changes: Removed stray quote. Commit: 6b98c0e.

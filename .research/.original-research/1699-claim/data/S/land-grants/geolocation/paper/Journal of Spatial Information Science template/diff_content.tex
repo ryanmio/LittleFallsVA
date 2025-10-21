@@ -37,7 +37,8 @@ prior to this work. Key uncertainties addressed in this study included:
 \tightlist
 \item
   Could large language models trained mostly on contemporary text
-  understand seventeenth-century toponyms and bearing conventions?
+  \DIFdelbegin \DIFdel{understand }\DIFdelend \DIFaddbegin \DIFadd{reliably parse }\DIFaddend seventeenth-century toponyms and bearing conventions
+  \DIFaddbegin \DIFadd{and resolve them to coordinates}\DIFaddend ?
 \item
   Would providing API-based tools (e.g., Google Places search)
   materially improve accuracy relative to a pure text approach?
@@ -384,25 +385,28 @@ includes the chain-of-thought narrative text provided by the model,
 every external function invocation---including the precise queries
 passed to the geocoding tools---and the exact JSON responses returned.
 This comprehensive logging creates a fully auditable record of the
-model's internal reasoning, enabling researchers to reconstruct exactly
-how and why a given prediction was made. For instance, as detailed in
-Section 6.4 and Appendix A.3, the logs clearly document how the models
-identify key geographic features, choose between multiple candidate
-locations, refine queries based on initial mismatches, systematically
-test alternate spellings or county qualifiers, and decide when and how
-to average coordinates using spatial centroid calculations. Capturing
+model's \DIFdelbegin \DIFdel{internal reasoning}\DIFdelend \DIFaddbegin \DIFadd{inference trace}\DIFaddend , enabling researchers to reconstruct exactly how
+and why a given prediction was \DIFdelbegin \DIFdel{made}\DIFdelend \DIFaddbegin \DIFadd{produced}\DIFaddend . For instance, as detailed in
+Section 6.4 and Appendix A.3, the logs clearly document how the
+\DIFdelbegin \DIFdel{models
+}\DIFdelend \DIFaddbegin \DIFadd{pipelines }\DIFaddend identify key geographic features, choose between multiple
+candidate locations, refine queries based on initial mismatches,
+systematically test alternate spellings or county qualifiers, and decide
+when and how to average coordinates using spatial centroid calculations.
+\DIFdelbegin \DIFdel{Capturing
 these detailed reasoning steps across both prompting paradigms (direct
-one-shot versus iterative, tool-augmented reasoning) provides
-unprecedented transparency into the models' cognitive processes. This
-explicit audit trail reveals precisely where models succeed or fail,
-highlighting systematic errors such as cascading failures after
-incorrect geocoder hits or misinterpretations of ambiguous historical
-place names. Because every intermediate reasoning step and tool
-interaction is logged, it's possible to correlate internal indicators of
-model confidence---such as the geographic spread between top-ranked
-candidate coordinates---with actual prediction error, offering insights
-that are essential for interpreting, trusting, and optimizing model
-behavior.
+one-shot versus iterative, tool-augmented reasoning) provides unprecedented }\DIFdelend \DIFaddbegin \DIFadd{Because every intermediate output and tool interaction is logged, the
+record provides trace‑level }\DIFaddend transparency into the \DIFdelbegin \DIFdel{models'cognitive processes}\DIFdelend \DIFaddbegin \DIFadd{model's inference‑time
+behavior}\DIFaddend . This explicit audit trail \DIFdelbegin \DIFdel{reveals precisely where models succeed or fail, }\DIFdelend \DIFaddbegin \DIFadd{pinpoints where the pipeline
+succeeds or fails in practice (as observed in outputs, tool
+interactions, and error metrics), }\DIFaddend highlighting systematic errors such as
+cascading failures after incorrect geocoder hits or misinterpretations
+of ambiguous historical place names. Because every intermediate
+reasoning step and tool interaction is logged, it's possible to
+correlate internal indicators of model confidence---such as the
+geographic spread between top-ranked candidate coordinates---with actual
+prediction error, offering insights that are essential for interpreting,
+trusting, and optimizing model behavior.
 
 To ensure \textbf{reproducibility}, specific snapshot versions of the
 OpenAI models from April 2025 were used and random seeds were fixed
@@ -1290,19 +1294,23 @@ Sw \\
 
 Full reasoning chains are available in appendix.
 
-The \emph{one-shot} paradigm asks the model to read the abstract, reason
+The \emph{one-shot} paradigm \DIFdelbegin \DIFdel{asks the model to read the abstract, reason
 internally, and emit coordinates in a single response. All cognition is
 ``in the head'' of the network: it interprets archaic toponyms, performs
-mental triangulation against its latent world map, and produces a
-best-guess point estimate. By contrast, the \emph{tool-chain} paradigm
-externalises part of that reasoning. The model may call a geocoder to
-retrieve candidate coordinates for surface forms (e.g.~``Holloway
-Swamp''), inspect the returned JSON, run additional look-ups with
-spelling variants or county qualifiers, and finally aggregate anchors
-with a centroid tool. Each call--observe--reflect loop is logged,
-exposing an auditable chain of evidence. The trade-off is latency and
-verbosity: ten turns of querying and self-reflection can be slower and,
-as \DIFdelbegin \DIFdel{§ }\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 6.1 showed, not necessarily more accurate.
+mental triangulation against its latent world map, and produces a best-guess point estimate}\DIFdelend \DIFaddbegin \DIFadd{maps the input text directly to a
+coordinate using the model's learned representations, with no external
+tools. All computation occurs within the model's parameters: the system
+produces a single coordinate based on learned statistical associations
+and implicit spatial priors; no tool calls are issued}\DIFaddend . By contrast, the
+\emph{tool-chain} paradigm externalises part of \DIFdelbegin \DIFdel{that reasoning}\DIFdelend \DIFaddbegin \DIFadd{the search process}\DIFaddend . The
+model may call a geocoder to retrieve candidate coordinates for surface
+forms (e.g.~``Holloway Swamp''), inspect the returned JSON, run
+additional look-ups with spelling variants or county qualifiers, and
+finally aggregate anchors with a centroid tool. Each
+call--observe--reflect loop is logged, exposing an auditable chain of
+evidence. The trade-off is latency and verbosity: ten turns of querying
+and self-reflection can be slower and, as \DIFdelbegin \DIFdel{§ }\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 6.1 showed, not
+necessarily more accurate.
 
 \subsection{Tool-usage patterns}\label{tool-usage-patterns}
 
