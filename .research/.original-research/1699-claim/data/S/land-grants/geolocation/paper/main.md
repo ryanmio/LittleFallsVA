@@ -55,7 +55,7 @@ Digitizing and geo-locating the abstracts, however, is notoriously labor-intensi
 >
 > "JOHN POYTHRESS, 609 A., 2 R., & 9 P., Chas. City Co; on S. side of James River; Beg. on S. side the Black Water; to the Nottoway Path; to the Black Water Spring; along the Sw.; near Capt. Robert Lewcy; by Townes' Quarter; to Hercules Flood; taking in a point containing 50 acs; …"
 
-This typical abstract uses abbreviations (e.g., Sw., Riv.), landmarks, and adjacency rather than coordinates; see Section 6.4 for fuller qualitative examples.
+This typical abstract uses abbreviated surveyor jargon (e.g., Sw., Riv., br.), chained landmarks, and adjacency clauses to neighboring tracts to narratively describe the parcel.
 
 ## 1.2 Problem Statement
 
