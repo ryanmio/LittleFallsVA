@@ -51,6 +51,12 @@ Virginia's colonial land patents are a cornerstone resource for scholars studyin
 
 Digitizing and geo-locating the abstracts, however, is notoriously labor-intensive. Even professional GIS analysts can spend several hours per grant reconciling archaic place-names, inconsistent spellings, and low-resolution boundary calls. Recent breakthroughs in large language models (LLMs) suggest a new pathway: language-driven spatial reasoning where a model reads the patent text and predicts latitude/longitude directly or with minimal tool assistance. This study explores whether current-generation LLMs can shoulder that burden accurately and cheaply enough to matter for digital history.
 
+> Example grant abstract (C&P, Vol. 3, 23 Oct. 1703, p. 571):
+>
+> "JOHN POYTHRESS, 609 A., 2 R., & 9 P., Chas. City Co; on S. side of James River; Beg. on S. side the Black Water; to the Nottoway Path; to the Black Water Spring; along the Sw.; near Capt. Robert Lewcy; by Townes' Quarter; to Hercules Flood; taking in a point containing 50 acs; …"
+
+This typical abstract uses abbreviations (e.g., Sw., Riv.), landmarks, and adjacency rather than coordinates; see Section 6.4 for fuller qualitative examples.
+
 ## 1.2 Problem Statement
 
 Despite the promise of LLMs, their ability to extract usable coordinates from early-modern archival prose had not been systematically evaluated prior to this work. Key uncertainties addressed in this study included:

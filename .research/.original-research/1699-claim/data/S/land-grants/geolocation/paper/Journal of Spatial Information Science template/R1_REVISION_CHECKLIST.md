@@ -141,7 +141,7 @@
 
 - [x] **C7:** Page 21: Very skeptical of phrasing "All cognition is 'in the head' of the network: it interprets archaic toponyms, performs mental triangulation against its latent world map..."
   - Do we know this is true? Revise to be more cautious about claims of what LLM "does"
-  - Changes: Rewrote the one‑shot vs tool‑chain contrast to avoid anthropomorphism: one‑shot maps text to a coordinate via learned representations; tool‑chain externalizes search via tool calls; no claims about cognition. Commit: 1b96c0c.
+  - Changes: Rewrote the one‑shot vs tool‑chain contrast to avoid anthropomorphism; simplified one‑shot description while keeping tool‑chain text unchanged. Commits: 1b96c0c, d63c548, 042aa8f.
 
 ### Clarifications & Details
 - [x] **C8:** Page 9: Having one human is a source of variance - discuss

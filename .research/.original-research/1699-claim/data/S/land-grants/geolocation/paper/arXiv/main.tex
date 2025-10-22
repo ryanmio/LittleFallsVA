@@ -64,6 +64,20 @@ directly or with minimal tool assistance. This study explores whether
 current-generation LLMs can shoulder that burden accurately and cheaply
 enough to matter for digital history.
 
+\begin{quote}
+Example grant abstract (C\&P, Vol. 3, 23 Oct.~1703, p.~571):
+
+``JOHN POYTHRESS, 609 A., 2 R., \& 9 P., Chas. City Co; on S. side of
+James River; Beg. on S. side the Black Water; to the Nottoway Path; to
+the Black Water Spring; along the Sw.; near Capt.~Robert Lewcy; by
+Townes' Quarter; to Hercules Flood; taking in a point containing 50 acs;
+\ldots{}''
+\end{quote}
+
+This typical abstract uses abbreviations (e.g., Sw., Riv.), landmarks,
+and adjacency rather than coordinates; see Section 6.4 for fuller
+qualitative examples.
+
 \subsection{1.2 Problem Statement}\label{problem-statement}
 
 Despite the promise of LLMs, their ability to extract usable coordinates
@@ -1203,8 +1217,11 @@ Sw \\
 
 Full reasoning chains are available in appendix.
 
-The \emph{one-shot} paradigm returns a single coordinate from the input
-text in one response; no external tools are invoked. By contrast, the
+The \emph{one-shot} paradigm produces a single coordinate from the input
+text without external tools. All computation occurs within the model's
+parameters: the output reflects learned statistical associations in
+training data (for example, textual co‑occurrence between toponyms and
+place names); no tool calls are issued. By contrast, the
 \emph{tool-chain} paradigm externalises part of the search process. The
 model may call a geocoder to retrieve candidate coordinates for surface
 forms (e.g.~``Holloway Swamp''), inspect the returned JSON, run

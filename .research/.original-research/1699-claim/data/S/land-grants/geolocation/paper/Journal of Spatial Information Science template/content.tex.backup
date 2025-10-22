@@ -1163,11 +1163,8 @@ Sw \\
 
 Full reasoning chains are available in appendix.
 
-The \emph{one-shot} paradigm produces a single coordinate from the input
-text without external tools. All computation occurs within the model's
-parameters: the output reflects learned statistical associations in
-training data (for example, textual co‑occurrence between toponyms and
-place names); no tool calls are issued. By contrast, the
+The \emph{one-shot} paradigm returns a single coordinate from the input
+text in one response; no external tools are invoked. By contrast, the
 \emph{tool-chain} paradigm externalises part of the search process. The
 model may call a geocoder to retrieve candidate coordinates for surface
 forms (e.g.~``Holloway Swamp''), inspect the returned JSON, run
