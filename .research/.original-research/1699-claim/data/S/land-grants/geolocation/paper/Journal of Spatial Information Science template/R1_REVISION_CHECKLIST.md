@@ -27,7 +27,7 @@
   - Changes: Confirmed and retained `@Huang2024_geoagent` citation in §2.3; no remaining placeholder. Commit: aed55252.
 
 - [ ] **A2:** Include example of grant description early in introduction (or reference to one)
-  - Changes: 
+  - Changes: Inserted a concise C&P example (JOHN POYTHRESS, 23 Oct 1703) as a blockquote at the end of §1.1 with a guiding sentence; refined the follow-on sentence to emphasize narrative description rather than coordinates. Commits: 3d9d145, b9ab080.
 
 - [x] **A3:** Add literature references for tools/corpora mentioned without citations (GeoCorpora, WikToR, GeoLingit, GeoGlue, GeoText, etc.)
   - Changes: Added citations for GeoCorpora (IJGIS 2017), WikToR (LRE 2018), GeoGLUE (arXiv 2305.06545), and geocoders (GeoNames/Nominatim/ArcGIS) at first mention (§2.2–§2.3). Commit: aed55252.
@@ -159,8 +159,8 @@
 - [x] **C12:** Clarify what 'script development time' includes and whether subsequent grants would be faster.
   - Changes: Added brief clarification in §4.8 that script development time covers ingestion/tuning/QA; costs amortize over larger batches and LLMs scale linearly. Commit: 6fab2ae.
 
-- [ ] **C13:** Page 14: Mean column hard to read - adjust column widths (make other columns less wide)
-  - Changes: 
+- [x] **C13:** Page 14: Mean column hard to read - adjust column widths (make other columns less wide)
+  - Changes: Widened the Mean column to prevent wrapping/breaks; narrowed adjacent columns slightly to maintain table width. Commit hash not recorded.
 
 ### Positive Sections (No Action)
 - [x] **C14:** [POSITIVE] Section 6.2's cost/quality Pareto front discussion is nice
@@ -203,29 +203,8 @@
 
 ---
 
-## Summary Counts
-- **Total Items:** 56
-- **Editor:** 4
-- **Reviewer A:** 24
-- **Reviewer B:** 4 (1 major, 3 optional/minor)
-- **Reviewer C:** 17 (13 actionable, 4 positive/acknowledged)
-- **Global Sweeps:** 7
-
----
-
-## Revision Strategy Notes
-1. **Priority 1:** Editor's main themes (E1-E4) and Reviewer B's caption requirement (B1)
-2. **Priority 2:** All reference/citation fixes (A1, A3, C1, C2) and figure/table issues
-3. **Priority 3:** Language/phrasing improvements (C6, C7) and structural improvements
-4. **Priority 4:** Minor formatting and clarifications
-
 ## R1 Submission Requirements (per Judith's email)
 Submit THREE items:
 1. **Plain revised manuscript** → `article.pdf` (non-blind, with author name)
 2. **Highlighted changes version** → `diff_article.pdf` (shows what changed from v0 to v1)
 3. **Response letter** → Document addressing each reviewer comment with manuscript changes noted
-
-**Note:** R1 revisions are NOT blind - reviewers already know who you are.
-
-## Workflow
-1. **First time:** Run `./build.sh` → automatically creates baselines in `
