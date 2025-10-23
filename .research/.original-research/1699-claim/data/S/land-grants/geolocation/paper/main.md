@@ -832,19 +832,27 @@ This tight integration between evaluation logic and provenance logging ensures t
 
 ## Appendix B Extended Results
 
-Appendix B (Extended Results) is available in the supplementary repository:
+Extended quantitative results and detailed performance metrics are available in the supplementary repository at [github.com/ryanmio/colonial-virginia-llm-geolocation](https://github.com/ryanmio/colonial-virginia-llm-geolocation/blob/main/paper/APPENDIX_B_Extended_Results.md).
 
-[Appendix B (supplement)](https://github.com/ryanmio/colonial-virginia-llm-geolocation/blob/main/paper/APPENDIX_B_Extended_Results.md)
+**Appendix B includes:**
 
-Contents: (i) detailed accuracy metrics with bootstrap CIs; (ii) full per‑method performance tables; (iii) cost–accuracy summaries; (iv) processing time analysis; (v) token usage statistics; (vi) professional GIS benchmark breakdown.
+- **B.1 Bootstrap Confidence Intervals:** 95% CIs for mean error across all methods, computed via 10,000-iteration bootstrap resampling
+- **B.2 Complete Performance Tables:** Per-method accuracy metrics at 1 km, 5 km, 10 km, 25 km, 50 km, and 161 km thresholds with full distributional statistics (mean, median, SD, quartiles)
+- **B.3 Cost-Accuracy Analysis:** Detailed cost per grant and cost per 1,000 located grants, with Pareto-optimal method identification
+- **B.4 Latency Breakdowns:** Processing time distributions including API response latency, tool-call overhead, and total wall-clock time
+- **B.5 Token Usage Statistics:** Input/output token consumption by method and model, with implications for batch processing costs
+- **B.6 Professional GIS Benchmark:** Expanded discussion of single-analyst baseline methodology, time investment (8.2 hours for 43 grants), and generalizability considerations
 
 ## Appendix C Supplementary Figures
 
-Appendix C (Supplementary Figures) is available in the supplementary repository:
+Additional visualizations and geographic error maps are available in the supplementary repository at [github.com/ryanmio/colonial-virginia-llm-geolocation](https://github.com/ryanmio/colonial-virginia-llm-geolocation/blob/main/paper/APPENDIX_C_Supplementary_Figures.md).
 
-[Appendix C (supplement)](https://github.com/ryanmio/colonial-virginia-llm-geolocation/blob/main/paper/APPENDIX_C_Supplementary_Figures.md)
+**Appendix C includes:**
 
-Contents: (i) error distribution plots; (ii) contact‑sheet error maps; (iii) marginal cost of ≤10 km accuracy; (iv) latency–accuracy tradeoff.
+- **C.1 Error Distribution Plots:** Violin plots and boxplots showing error distributions for all methods, including outlier identification and quartile ranges
+- **C.2 Geographic Error Maps:** 45-grant contact sheet displaying predicted vs. ground-truth coordinates on base maps, with color-coded error magnitude for spatial pattern analysis
+- **C.3 Marginal Cost Analysis:** Cost-effectiveness curves showing marginal USD investment required to achieve ≤10 km accuracy across method tiers
+- **C.4 Latency-Accuracy Pareto Front:** Scatter plot of mean error vs. processing time, identifying efficient frontier methods for time-constrained applications
 
 ## Appendix D Tool Augmentation Analysis
 
