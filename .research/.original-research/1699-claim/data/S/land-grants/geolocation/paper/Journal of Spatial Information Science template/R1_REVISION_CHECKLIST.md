@@ -94,8 +94,8 @@
 ### Appendix Issues
 - [x] **A7b:** Put cut sections in repo and cite the repo with a stable tag so the editor sees nothing was "lost," just moved.
   - Changes: Created `APPENDIX_B_Extended_Results.md`, `APPENDIX_C_Supplementary_Figures.md`, and a README in the public repo; committed and tagged `R1-supplement-2025-10-23`; linked from in-paper stubs with detailed bulleted contents and /main/ branch URLs. Commits: ab8117e, 57e3f85, b2fa78d (paper), a500196 (public repo).
-- [ ] **A22:** Several references to "appendix" but only 16.5.1 labeled as appendix - resolve inconsistency
-  - Changes: 
+- [x] **A22:** Several references to "appendix" but only 16.5.1 labeled as appendix - resolve inconsistency
+  - Changes: Kept Appendix A (essential methods & prompts) in-paper; moved Appendix B (Extended Results) and Appendix C (Supplementary Figures) to the public supplementary repository with /main/ branch links. Enhanced stubs with detailed bulleted descriptions of appendix contents. Commits: ab8117e, 57e3f85, b2fa78d. Public repo commit: a500196. Tag: R1-supplement-2025-10-23.
 
 ---
 

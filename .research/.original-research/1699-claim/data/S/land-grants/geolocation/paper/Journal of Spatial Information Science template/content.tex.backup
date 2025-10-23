@@ -1639,7 +1639,7 @@ Cavaliers and Pioneers Vol. 3); data providers had no editorial input or
 influence over the research. The author has no plans to commercialize
 any methods or create spin-off products from this research.
 
-\section{12 Use of Artificial
+\section{Use of Artificial
 Intelligence}\label{use-of-artificial-intelligence}
 
 Claude 3.7 Sonnet was used for Python debugging, code generation, Matlab
@@ -1660,7 +1660,7 @@ The researcher takes full responsibility for the final manuscript and
 has personally verified all aspects of the research process that
 involved the use of AI.
 
-\section{13 Acknowledgements}\label{acknowledgements}
+\section{Acknowledgements}\label{acknowledgements}
 
 This work builds upon the meticulous archival research of Nell Marion
 Nugent, whose \emph{Cavaliers and Pioneers} abstracts have preserved
@@ -1671,6 +1671,7 @@ are deeply grateful to Bimbola Bashorun \citep{Bashorun2025_gis} for
 providing the professional GIS benchmark that was crucial to evaluating
 model performance.
 
+\section*{Appendices}\label{appendices}
 
 \appendix\section{Supplementary Methods \&
 Materials}\label{appendix-a-supplementary-methods-materials}

@@ -197,8 +197,8 @@ sed -E -i '' 's/\\subsubsection\{[0-9]+(\.[0-9]+)+[[:space:]]+/\\subsection{/' "
 
 # Properly handle the appendix
 # Do NOT delete existing \appendix if already present; we rely on it for A–E labels
-# Remove any stray manual "Appendices" section header that Pandoc might emit
-sed -i '' '/\\section{Appendices}/d' "$CONTENT_TEX"
+# Convert any manual "Appendices" header to an unnumbered section so it shows above A–E
+sed -E -i '' 's/\\section{Appendices}/\\section*{Appendices}/' "$CONTENT_TEX"
 
 # Find the line number of the first supplementary section
 # Be robust to Pandoc output before we normalize headings. It might appear as
