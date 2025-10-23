@@ -62,7 +62,7 @@
 \usepackage{subcaption}
 
 % Added for Pandoc-crossref friendly \cref commands
-\usepackage{cleveref}
+%\usepackage{cleveref} % Optional package, comment out if not installed
 
 % Pandoc compatibility macros
 \providecommand{\tightlist}{}
@@ -70,17 +70,25 @@
 \newcommand{\pandocbounded}[1]{#1}
 
 % Text wrapping helpers
-\usepackage{fvextra}
-\DefineVerbatimEnvironment{Verbatim}{Verbatim}{breaklines=true, breakanywhere=true}
+% Reduce spacing in Verbatim environments (code blocks)
+\usepackage{etoolbox}
+\AtBeginEnvironment{Verbatim}{%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\topsep}{0.5em}%
+  \setlength{\parskip}{0pt}%
+  \linespread{0.9}\selectfont\small%
+}
 
 % Force aggressive line breaking for all code listings
 \lstset{
   breaklines=true,
   breakatwhitespace=false,
-  breakanywhere=true,
   columns=fullflexible,
   basicstyle=\small\ttfamily,
-  keepspaces=true
+  keepspaces=true,
+  aboveskip=0.5em,
+  belowskip=0.5em,
+  lineskip=-1pt
 }
 
 \renewcommand{\topfraction}{0.9} 
