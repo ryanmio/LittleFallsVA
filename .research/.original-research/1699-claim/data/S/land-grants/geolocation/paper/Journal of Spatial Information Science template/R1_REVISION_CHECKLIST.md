@@ -157,7 +157,7 @@
   - Changes: Clarified ensemble clustering as DBSCAN with ε = 0.5 km and MinPts = 3 in the Five‑call Ensemble description, Discussion §7.1 and §7.3 language, and Conclusion. Commit: ad3e7430ab5b93c79171b264b1afedb84882d5dc.
 
 - [x] **C12:** Clarify what 'script development time' includes and whether subsequent grants would be faster.
-  - Changes: Added brief clarification in §4.8 that script development time covers ingestion/tuning/QA; costs amortize over larger batches and LLMs scale linearly. Commit: 6fab2ae.
+  - Changes: Added brief clarification in Section 4.8 that script development time covers ingestion/tuning/QA; costs amortize over larger batches and LLMs scale linearly. Commit: 6fab2ae.
 
 - [x] **C13:** Page 14: Mean column hard to read - adjust column widths (make other columns less wide)
   - Changes: Widened the Mean column to prevent wrapping/breaks; narrowed adjacent columns slightly to maintain table width. Commit hash not recorded.

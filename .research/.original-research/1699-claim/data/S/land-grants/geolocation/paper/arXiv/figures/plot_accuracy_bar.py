@@ -40,18 +40,13 @@ df = df.sort_values('Mean', ascending=True)
 # -- Plot ------------------------------------------------------------------
 fig, ax = plt.subplots(figsize=(7,4))
 
-# Colors (print-friendly): 35% gray fill, black edges/error bars; highlight best in Okabe–Ito green
-fill_gray = '#A6A6A6'
+# Colors (print-friendly): Okabe–Ito sky blue for all bars
+fill_blue = '#56B4E9'
 edge_color = '#000000'
-highlight_color = '#009E73'
-
-# Determine best method (lowest mean)
-best_idx = df['Mean'].idxmin()
 
 # Draw bars individually to control colors and edges
 for i, (method, mean, lo, hi) in enumerate(zip(df['Method'], df['Mean'], df['CI_lo'], df['CI_hi'])):
-    color = highlight_color if df.index[i] == best_idx else fill_gray
-    bar = ax.barh([method], [mean], color=color, edgecolor=edge_color, linewidth=0.8)
+    bar = ax.barh([method], [mean], color=fill_blue, edgecolor=edge_color, linewidth=0.8)
     # Error bars in black
     ax.errorbar(x=mean, y=[method], xerr=[[mean - lo], [hi - mean]], fmt='none', ecolor=edge_color, elinewidth=0.8, capsize=3)
 
