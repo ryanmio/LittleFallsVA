@@ -16,7 +16,7 @@
   - Changes: Added an explicit model-family scope limitation in §8 (OpenAI GPT/o‑series only) and kept the small evaluation set caveat prominent; numbering adjusted without inflating length. Commit: e637595.
 
 - [x] **E4:** Reconsider if sections 14-16 are crucial for main message or make paper too long/hard to read
-  - Changes: Kept a lean Appendix A (methods essentials) in-paper; moved Appendix B (Extended Results) and Appendix C (Supplementary Figures) to the public supplementary repository with a stable tag. Inserted short stubs in the paper linking to the tag. Commit: ab8117e. Public repo commit: a500196. Tag: R1-supplement-2025-10-23.
+  - Changes: Kept a lean Appendix A (methods essentials) in-paper; moved Appendix B (Extended Results) and Appendix C (Supplementary Figures) to the public supplementary repository with /main/ branch links. Inserted short stubs in the paper. Commits: ab8117e, 57e3f85. Public repo commit: a500196. Tag: R1-supplement-2025-10-23.
 
 ---
 
@@ -26,7 +26,7 @@
 - [x] **A1:** Reference Huang et al is missing (p.5)
   - Changes: Confirmed and retained `@Huang2024_geoagent` citation in §2.3; no remaining placeholder. Commit: aed55252.
 
-- [ ] **A2:** Include example of grant description early in introduction (or reference to one)
+- [x] **A2:** Include example of grant description early in introduction (or reference to one)
   - Changes: Inserted a concise C&P example (JOHN POYTHRESS, 23 Oct 1703) as a blockquote at the end of §1.1 with a guiding sentence; refined the follow-on sentence to emphasize narrative description rather than coordinates. Commits: 3d9d145, b9ab080.
 
 - [x] **A3:** Add literature references for tools/corpora mentioned without citations (GeoCorpora, WikToR, GeoLingit, GeoGlue, GeoText, etc.)
@@ -42,7 +42,7 @@
   - Changes: Added citations for GeoCorpora (IJGIS 2017), WikToR (LRE 2018), GeoGLUE (arXiv 2305.06545), and geocoders (GeoNames/Nominatim/ArcGIS) at first mention (§2.2–§2.3). Commit: aed55252.
 
 - [x] **A7:** Consider moving Sections 14-16 to web repository to reduce paper length
-  - Changes: Moved Appendices B/C to public repo, retained trimmed Appendix A; added in-paper stubs and links to stable tag. Commit: ab8117e. Public repo commit: a500196. Tag: R1-supplement-2025-10-23.
+  - Changes: Moved Appendices B/C to public repo, retained trimmed Appendix A; added in-paper stubs and /main/ branch links. Commits: ab8117e, 57e3f85. Public repo commit: a500196. Tag: R1-supplement-2025-10-23.
 
 ### Section Structure & Formatting
 - [x] **A8:** Use "Section ..." consistently instead of § symbol
@@ -93,7 +93,7 @@
 
 ### Appendix Issues
 - [x] **A7b:** Put cut sections in repo and cite the repo with a stable tag so the editor sees nothing was "lost," just moved.
-  - Changes: Created `APPENDIX_B_Extended_Results.md`, `APPENDIX_C_Supplementary_Figures.md`, and a README in the public repo; committed and tagged `R1-supplement-2025-10-23`; linked from in-paper stubs. Commits: ab8117e (paper), a500196 (public repo).
+  - Changes: Created `APPENDIX_B_Extended_Results.md`, `APPENDIX_C_Supplementary_Figures.md`, and a README in the public repo; committed and tagged `R1-supplement-2025-10-23`; linked from in-paper stubs with /main/ branch URLs. Commits: ab8117e, 57e3f85 (paper), a500196 (public repo).
 - [ ] **A22:** Several references to "appendix" but only 16.5.1 labeled as appendix - resolve inconsistency
   - Changes: 
 
