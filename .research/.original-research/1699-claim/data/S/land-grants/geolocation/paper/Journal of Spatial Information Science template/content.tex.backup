@@ -2079,20 +2079,28 @@ notebooks is available at
 \section{Extended
 Results}\label{appendix-b-extended-results}
 
-This appendix has been moved to the supplementary repository for space
-and readability. See the public supplement (tag:
-R1-supplement-2025-10-23):
+Appendix B (Extended Results) is available in the supplementary
+repository (tag: R1-supplement-2025-10-23):
 
-https://github.com/ryanmio/colonial-virginia-llm-geolocation/tree/R1-supplement-2025-10-23/paper/APPENDIX\_B\_Extended\_Results.md
+\href{https://github.com/ryanmio/colonial-virginia-llm-geolocation/tree/R1-supplement-2025-10-23/paper/APPENDIX_B_Extended_Results.md}{Appendix
+B (supplement)}
+
+Contents: (i) detailed accuracy metrics with bootstrap CIs; (ii) full
+per‑method performance tables; (iii) cost--accuracy summaries; (iv)
+processing time analysis; (v) token usage statistics; (vi) professional
+GIS benchmark breakdown.
 
 \section{Supplementary
 Figures}\label{appendix-c-supplementary-figures}
 
-This appendix has been moved to the supplementary repository for space
-and readability. See the public supplement (tag:
-R1-supplement-2025-10-23):
+Appendix C (Supplementary Figures) is available in the supplementary
+repository (tag: R1-supplement-2025-10-23):
 
-https://github.com/ryanmio/colonial-virginia-llm-geolocation/tree/R1-supplement-2025-10-23/paper/APPENDIX\_C\_Supplementary\_Figures.md
+\href{https://github.com/ryanmio/colonial-virginia-llm-geolocation/tree/R1-supplement-2025-10-23/paper/APPENDIX_C_Supplementary_Figures.md}{Appendix
+C (supplement)}
+
+Contents: (i) error distribution plots; (ii) contact‑sheet error maps;
+(iii) marginal cost of ≤10 km accuracy; (iv) latency--accuracy tradeoff.
 
 \section{Tool Augmentation
 Analysis}\label{appendix-d-tool-augmentation-analysis}

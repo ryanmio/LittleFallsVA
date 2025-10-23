@@ -832,17 +832,17 @@ This tight integration between evaluation logic and provenance logging ensures t
 
 ## Appendix B Extended Results
 
-Appendix B (Extended Results) is available in the supplementary repository (tag: R1-supplement-2025-10-23):
+Appendix B (Extended Results) is available in the supplementary repository:
 
-https://github.com/ryanmio/colonial-virginia-llm-geolocation/tree/R1-supplement-2025-10-23/paper/APPENDIX_B_Extended_Results.md
+[Appendix B (supplement)](https://github.com/ryanmio/colonial-virginia-llm-geolocation/blob/a5001960a3af3a273b6ffc4dc1e0c3617fc5529c/paper/APPENDIX_B_Extended_Results.md)
 
 Contents: (i) detailed accuracy metrics with bootstrap CIs; (ii) full per‑method performance tables; (iii) cost–accuracy summaries; (iv) processing time analysis; (v) token usage statistics; (vi) professional GIS benchmark breakdown.
 
 ## Appendix C Supplementary Figures
 
-Appendix C (Supplementary Figures) is available in the supplementary repository (tag: R1-supplement-2025-10-23):
+Appendix C (Supplementary Figures) is available in the supplementary repository:
 
-https://github.com/ryanmio/colonial-virginia-llm-geolocation/tree/R1-supplement-2025-10-23/paper/APPENDIX_C_Supplementary_Figures.md
+[Appendix C (supplement)](https://github.com/ryanmio/colonial-virginia-llm-geolocation/blob/6bef5515fc3b0e8e54a95fe2e03bf4c087a37e2e/paper/APPENDIX_C_Supplementary_Figures.md)
 
 Contents: (i) error distribution plots; (ii) contact‑sheet error maps; (iii) marginal cost of ≤10 km accuracy; (iv) latency–accuracy tradeoff.
 

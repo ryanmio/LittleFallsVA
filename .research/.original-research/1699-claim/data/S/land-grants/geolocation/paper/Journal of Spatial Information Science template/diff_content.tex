@@ -2244,7 +2244,7 @@ Metrics}}%DIFAUXCMD
 %DIFDELCMD < \label{b.1-detailed-accuracy-metrics}
 %DIFDELCMD < %%%
 \DIFdelend \DIFaddbegin \DIFadd{Appendix B (Extended Results) is available in the supplementary
-repository (tag: R1-supplement-2025-10-23):
+repository:
 }\DIFaddend 
 
 \DIFdelbegin \DIFdel{Table \ref{tbl:error_ci} provides comprehensive error statistics for
@@ -2254,8 +2254,9 @@ approach, M-2 (o3-2025-04-16), achieves a mean error of 23.39 km with a
 95\% confidence interval of }%DIFDELCMD < {[}%%%
 \DIFdel{17.57, 29.54}%DIFDELCMD < {]} %%%
 \DIFdel{km.
-}\DIFdelend \DIFaddbegin \DIFadd{https://github.com/ryanmio/colonial-virginia-llm-geolocation/tree/R1-supplement-2025-10-23/paper/APPENDIX\_B\_Extended\_Results.md
-}\DIFaddend 
+}\DIFdelend \DIFaddbegin \href{https://github.com/ryanmio/colonial-virginia-llm-geolocation/blob/a5001960a3af3a273b6ffc4dc1e0c3617fc5529c/paper/APPENDIX_B_Extended_Results.md}{\DIFadd{Appendix
+B (supplement)}}
+\DIFaddend 
 
 \DIFdelbegin %DIFDELCMD < \begin{longtable}[]{@{}lllll@{}}
 %DIFDELCMD < %%%
@@ -2383,8 +2384,9 @@ Method}}%DIFAUXCMD
 %DIFDELCMD < %%%
 \DIFdel{Table \ref{tbl:method_performance} provides the complete performance
 statistics for each method, including variance measures and accuracy
-bands.The ``≤X km'' columns show the percentage of predictions within X
-kilometers of ground truth.}%DIFDELCMD < 
+bands. The ``≤X km'' columns show the percentage of predictions within X
+kilometers of ground truth.
+}%DIFDELCMD < 
 
 %DIFDELCMD < \begin{longtable}[]{@{}
 %DIFDELCMD <   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0833}}
@@ -3012,9 +3014,10 @@ state-level precision.
 ``High'' indicates grants where both county
 boundaries and specific landmarks were used; ``Medium'' indicates
 county-centroid placement; ``Low'' indicates state-level precision only.
-}%DIFDELCMD < 
+}\DIFdelend \DIFaddbegin \DIFadd{breakdown.
+}\DIFaddend 
 
-%DIFDELCMD < \begin{longtable}[]{@{}
+\DIFdelbegin %DIFDELCMD < \begin{longtable}[]{@{}
 %DIFDELCMD <   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.3684}}
 %DIFDELCMD <   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
 %DIFDELCMD <   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
@@ -3098,12 +3101,13 @@ placement precision (overall; High/Medium/Low).}}%DIFAUXCMD
 \DIFdel{Notably, even the ``High'' precision category (where both county
 boundaries and specific landmarks were identified) still resulted in a
 mean error of 68.88 km---substantially higher than all the automated
-methods except gpt-3.5-turbo (M-6)}\DIFdelend \DIFaddbegin \DIFadd{breakdown}\DIFaddend .
-\DIFdelbegin \DIFdel{This underscores the inherent
+methods except gpt-3.5-turbo (M-6). This underscores the inherent
 difficulty of the task and further highlights the significance of the
-accuracy improvements achieved by the LLM approaches.}\DIFdelend 
+accuracy improvements achieved by the LLM approaches.
+}%DIFDELCMD < 
 
-\section{Supplementary
+%DIFDELCMD < %%%
+\DIFdelend \section{Supplementary
 Figures}\label{appendix-c-supplementary-figures}
 
 \DIFdelbegin \subsection{\DIFdel{Error Distribution
@@ -3112,7 +3116,7 @@ Plots}}%DIFAUXCMD
 %DIFDELCMD < \label{c.1-error-distribution-plots}
 %DIFDELCMD < %%%
 \DIFdelend \DIFaddbegin \DIFadd{Appendix C (Supplementary Figures) is available in the supplementary
-repository (tag: R1-supplement-2025-10-23):
+repository:
 }\DIFaddend 
 
 \DIFdelbegin \DIFdel{Figure \ref{fig:error_boxplot} shows the distribution of geolocation
@@ -3120,8 +3124,9 @@ error for each method as a boxplot, complementing the violin plot and
 CDF already presented in the main text. The boxplot highlights the
 median error (central line) , interquartile range (box), and outliers
 (points) for each method, providing a clear view of error distribution and central tendency.
-}\DIFdelend \DIFaddbegin \DIFadd{https://github.com/ryanmio/colonial-virginia-llm-geolocation/tree/R1-supplement-2025-10-23/paper/APPENDIX\_C\_Supplementary\_Figures.md
-}\DIFaddend 
+}\DIFdelend \DIFaddbegin \href{https://github.com/ryanmio/colonial-virginia-llm-geolocation/blob/6bef5515fc3b0e8e54a95fe2e03bf4c087a37e2e/paper/APPENDIX_C_Supplementary_Figures.md}{\DIFadd{Appendix
+C (supplement)}}
+\DIFaddend 
 
 \DIFdelbegin %DIFDELCMD < \begin{figure}
 %DIFDELCMD < \centering
