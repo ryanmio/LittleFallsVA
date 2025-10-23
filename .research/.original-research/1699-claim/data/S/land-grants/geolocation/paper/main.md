@@ -925,7 +925,7 @@ The more economical approach of gpt-4.1-2025-04-14 is evident in both the distri
 
 Overall, both models heavily favored direct geocoding over centroid computation, with geocode:centroid ratios of 23.29:1 for T-1 and 8.18:1 for T-4. This suggests that the models primarily relied on finding exact matches for place names mentioned in the abstracts rather than triangulating from multiple reference points—a strategy that may explain their susceptibility to modern naming coincidences.
 
-### E.1 Appendix E Leakage Audit
+## Appendix E Leakage Audit
 
 Two heuristic checks were performed to assess training data leakage:
 

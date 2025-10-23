@@ -1785,7 +1785,7 @@ Cavaliers and Pioneers Vol. 3); data providers had no editorial input or
 influence over the research. The author has no plans to commercialize
 any methods or create spin-off products from this research.
 
-\section{12 Use of Artificial
+\section{\DIFdelbegin \DIFdel{12 }\DIFdelend Use of Artificial
 Intelligence}\label{use-of-artificial-intelligence}
 
 Claude 3.7 Sonnet was used for Python debugging, code generation, Matlab
@@ -1806,7 +1806,7 @@ The researcher takes full responsibility for the final manuscript and
 has personally verified all aspects of the research process that
 involved the use of AI.
 
-\section{13 Acknowledgements}\label{acknowledgements}
+\section{\DIFdelbegin \DIFdel{13 }\DIFdelend Acknowledgements}\label{acknowledgements}
 
 This work builds upon the meticulous archival research of Nell Marion
 Nugent, whose \emph{Cavaliers and Pioneers} abstracts have preserved
@@ -1818,7 +1818,7 @@ providing the professional GIS benchmark that was crucial to evaluating
 model performance.
 
 
-\section{Supplementary Methods \&
+\DIFaddbegin \appendix\DIFaddend \section{Supplementary Methods \&
 Materials}\label{appendix-a-supplementary-methods-materials}
 
 \subsection{OCR \& Text-Normalisation
@@ -3304,10 +3304,13 @@ accuracy.}}%DIFAUXCMD
   vs.~processing time}\DIFaddend , \DIFdelbegin \DIFdel{255.81 }%DIFDELCMD < & %%%
 \DIFdel{\$700.00 }%DIFDELCMD < \\
 %DIFDELCMD < \end{longtable}
-%DIFDELCMD < 
-
 %DIFDELCMD < %%%
-\DIFdel{The numbers reveal why }\textbf{\DIFdel{gpt-4o-2024-08-06}} %DIFAUXCMD
+\DIFdelend \DIFaddbegin \DIFadd{identifying efficient frontier methods for
+  time-constrained applications
+}\end{itemize}
+\DIFaddend 
+
+\DIFdelbegin \DIFdel{The numbers reveal why }\textbf{\DIFdel{gpt-4o-2024-08-06}} %DIFAUXCMD
 \DIFdel{is so attractive in
 budget-constrained settings: each percentage-point gain in
 ``high-precision'' accuracy costs only six cents---roughly two orders of
@@ -3350,12 +3353,10 @@ plots mean error
 each evaluated method. All automatic methods produce coordinates in
 0.2--13 s of computation time, compared to the GIS analyst's labor time
 of ≈502 s per grant. Note the logarithmic scale on the x-axis.
-}\DIFdelend \DIFaddbegin \DIFadd{identifying efficient frontier methods for
-  time-constrained applications
-}\end{itemize}
-\DIFaddend 
+}%DIFDELCMD < 
 
-\section{Tool Augmentation
+%DIFDELCMD < %%%
+\DIFdelend \section{Tool Augmentation
 Analysis}\label{appendix-d-tool-augmentation-analysis}
 
 Table \ref{tbl:tool_direct_comparison} isolates the impact of providing
@@ -3686,8 +3687,13 @@ matches for place names mentioned in the abstracts rather than
 triangulating from multiple reference points---a strategy that may
 explain their susceptibility to modern naming coincidences.
 
-\subsubsection{E.1 Appendix E Leakage
-Audit}\label{e.1-appendix-e-leakage-audit}
+\DIFdelbegin \subsubsection{\DIFdel{E.1 Appendix E Leakage
+Audit}}%DIFAUXCMD
+\addtocounter{subsubsection}{-1}%DIFAUXCMD
+%DIFDELCMD < \label{e.1-appendix-e-leakage-audit}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \section{\DIFadd{Leakage Audit}}\label{appendix-e-leakage-audit}
+\DIFaddend 
 
 Two heuristic checks were performed to assess training data leakage:
 

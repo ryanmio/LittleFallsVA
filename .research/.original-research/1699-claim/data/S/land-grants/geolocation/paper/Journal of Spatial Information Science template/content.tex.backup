@@ -1672,7 +1672,7 @@ providing the professional GIS benchmark that was crucial to evaluating
 model performance.
 
 
-\section{Supplementary Methods \&
+\appendix\section{Supplementary Methods \&
 Materials}\label{appendix-a-supplementary-methods-materials}
 
 \subsection{OCR \& Text-Normalisation
@@ -2470,8 +2470,7 @@ matches for place names mentioned in the abstracts rather than
 triangulating from multiple reference points---a strategy that may
 explain their susceptibility to modern naming coincidences.
 
-\subsubsection{E.1 Appendix E Leakage
-Audit}\label{e.1-appendix-e-leakage-audit}
+\section{Leakage Audit}\label{appendix-e-leakage-audit}
 
 Two heuristic checks were performed to assess training data leakage:
 

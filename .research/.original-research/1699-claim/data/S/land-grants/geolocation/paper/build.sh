@@ -162,6 +162,8 @@ sed -i '' 's/\\section{8 /\\section{/g' "$CONTENT_TEX"
 sed -i '' 's/\\section{9 /\\section{/g' "$CONTENT_TEX"
 sed -i '' 's/\\section{10 /\\section{/g' "$CONTENT_TEX"
 sed -i '' 's/\\section{11 /\\section{/g' "$CONTENT_TEX"
+# Also remove any remaining numeric prefixes like "\\section{12 ...}" (generic rule)
+sed -E -i '' 's/\\section\{[0-9]+[[:space:]]+/\\section{/' "$CONTENT_TEX"
 
 # Fix subsection numbering
 sed -i '' 's/\\subsection{1\.1 /\\subsection{/g' "$CONTENT_TEX"
@@ -189,20 +191,27 @@ sed -i '' 's/\\subsection{6\.6 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{7\.1 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{7\.2 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{7\.3 /\\subsection{/g' "$CONTENT_TEX"
+# Generic cleanup for any dotted numeric prefixes like "2.10", "12.1", etc.
+sed -E -i '' 's/\\subsection\{[0-9]+(\.[0-9]+)+[[:space:]]+/\\subsection{/' "$CONTENT_TEX"
+sed -E -i '' 's/\\subsubsection\{[0-9]+(\.[0-9]+)+[[:space:]]+/\\subsection{/' "$CONTENT_TEX"
 
 # Properly handle the appendix
-# First remove any existing appendix commands
-sed -i '' '/\\appendix/d' "$CONTENT_TEX"
+# Do NOT delete existing \appendix if already present; we rely on it for A–E labels
+# Remove any stray manual "Appendices" section header that Pandoc might emit
 sed -i '' '/\\section{Appendices}/d' "$CONTENT_TEX"
 
 # Find the line number of the first supplementary section
-SUPP_LINE=$(grep -n "section{Supplementary Methods" "$CONTENT_TEX" | head -1 | cut -d':' -f1)
+# Be robust to Pandoc output before we normalize headings. It might appear as
+#   \subsection{Appendix A Supplementary Methods ...}
+# or (after earlier runs) as
+#   \section{Supplementary Methods ...}
+SUPP_LINE=$(grep -n -E "section\{Supplementary Methods|subsection\{Appendix A[[:space:]]+Supplementary" "$CONTENT_TEX" | head -1 | cut -d':' -f1)
 
 if [ ! -z "$SUPP_LINE" ]; then
   # Insert a line before the Supplementary Methods section
   sed -i '' "${SUPP_LINE}i\\
 \\\\appendix" "$CONTENT_TEX"
-  # Fix the literal \n that might be inserted
+  # Fix the literal \n that might be inserted and ensure a single backslash
   sed -i '' 's/\\\\appendix\\n/\\\\appendix/' "$CONTENT_TEX"
   sed -i '' 's/\\\\appendix/\\appendix/' "$CONTENT_TEX"
   echo "Inserted appendix command at line $SUPP_LINE"
@@ -215,7 +224,7 @@ else
     INSERT_LINE=$((ACK_LINE + 15))
     sed -i '' "${INSERT_LINE}i\\
 \\\\appendix" "$CONTENT_TEX"
-    # Fix the literal \n that might be inserted
+    # Fix the literal \n that might be inserted and ensure a single backslash
     sed -i '' 's/\\\\appendix\\n/\\\\appendix/' "$CONTENT_TEX"
     sed -i '' 's/\\\\appendix/\\appendix/' "$CONTENT_TEX"
     echo "Inserted appendix command at line $INSERT_LINE (after Acknowledgements)"
@@ -229,6 +238,11 @@ sed -i '' 's/\\subsection{Appendix A Supplementary Methods/\\section{Supplementa
 sed -i '' 's/\\subsection{Appendix B Extended/\\section{Extended/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{Appendix C Supplementary/\\section{Supplementary/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{Appendix D Tool/\\section{Tool/g' "$CONTENT_TEX"
+# Handle Appendix E heading (force it to be its own appendix section, drop the prefix)
+# Cases: "\\subsection{Appendix E ...}", "\\section{Appendix E ...}", or "\\subsection{D.<n> Appendix E ...}"
+sed -E -i '' 's/\\subsection\{Appendix E[[:space:]]+([^}]*)\}/\\section{\1}/' "$CONTENT_TEX"
+sed -E -i '' 's/\\section\{Appendix E[[:space:]]+([^}]*)\}/\\section{\1}/' "$CONTENT_TEX"
+sed -E -i '' 's/\\subsection\{D\.[0-9]+[[:space:]]+Appendix E[[:space:]]+([^}]*)\}/\\section{\1}/' "$CONTENT_TEX"
 
 # Fix subsubsections in appendices
 sed -i '' 's/\\subsubsection{A\.1 /\\subsection{/g' "$CONTENT_TEX"
@@ -251,6 +265,8 @@ sed -i '' 's/\\subsubsection{D\.2 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsubsection{D\.3 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsubsection{D\.4 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsubsection{D\.5 /\\subsection{/g' "$CONTENT_TEX"
+# Convert any E.<n> subsubsections to subsections
+sed -i '' 's/\\subsubsection{E\.1 /\\subsection{/g' "$CONTENT_TEX"
 
 # Fix includegraphics paths and options for better JOSIS compatibility
 # IMPORTANT: Preserve the original image formatting and only change the paths
