@@ -2080,9 +2080,9 @@ notebooks is available at
 Results}\label{appendix-b-extended-results}
 
 Appendix B (Extended Results) is available in the supplementary
-repository (tag: R1-supplement-2025-10-23):
+repository:
 
-\href{https://github.com/ryanmio/colonial-virginia-llm-geolocation/tree/R1-supplement-2025-10-23/paper/APPENDIX_B_Extended_Results.md}{Appendix
+\href{https://github.com/ryanmio/colonial-virginia-llm-geolocation/blob/a5001960a3af3a273b6ffc4dc1e0c3617fc5529c/paper/APPENDIX_B_Extended_Results.md}{Appendix
 B (supplement)}
 
 Contents: (i) detailed accuracy metrics with bootstrap CIs; (ii) full
@@ -2094,9 +2094,9 @@ GIS benchmark breakdown.
 Figures}\label{appendix-c-supplementary-figures}
 
 Appendix C (Supplementary Figures) is available in the supplementary
-repository (tag: R1-supplement-2025-10-23):
+repository:
 
-\href{https://github.com/ryanmio/colonial-virginia-llm-geolocation/tree/R1-supplement-2025-10-23/paper/APPENDIX_C_Supplementary_Figures.md}{Appendix
+\href{https://github.com/ryanmio/colonial-virginia-llm-geolocation/blob/6bef5515fc3b0e8e54a95fe2e03bf4c087a37e2e/paper/APPENDIX_C_Supplementary_Figures.md}{Appendix
 C (supplement)}
 
 Contents: (i) error distribution plots; (ii) contact‑sheet error maps;
