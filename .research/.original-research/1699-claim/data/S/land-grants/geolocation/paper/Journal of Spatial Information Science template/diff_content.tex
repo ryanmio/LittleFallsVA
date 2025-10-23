@@ -2243,14 +2243,13 @@ Metrics}}%DIFAUXCMD
 \addtocounter{subsection}{-1}%DIFAUXCMD
 %DIFDELCMD < \label{b.1-detailed-accuracy-metrics}
 %DIFDELCMD < %%%
-\DIFdelend \DIFaddbegin \DIFadd{This appendix has been moved to the supplementary repository for space
-and readability. See the public supplement (tag:
-R1-supplement-2025-10-23):
+\DIFdelend \DIFaddbegin \DIFadd{Appendix B (Extended Results) is available in the supplementary
+repository (tag: R1-supplement-2025-10-23):
 }\DIFaddend 
 
 \DIFdelbegin \DIFdel{Table \ref{tbl:error_ci} provides comprehensive error statistics for
 each evaluated method, including confidence intervals derived from
-bootstrap resampling (10,000 iterations). The best-performing automated
+bootstrap resampling (10,000 iterations) . The best-performing automated
 approach, M-2 (o3-2025-04-16), achieves a mean error of 23.39 km with a
 95\% confidence interval of }%DIFDELCMD < {[}%%%
 \DIFdel{17.57, 29.54}%DIFDELCMD < {]} %%%
@@ -2384,9 +2383,8 @@ Method}}%DIFAUXCMD
 %DIFDELCMD < %%%
 \DIFdel{Table \ref{tbl:method_performance} provides the complete performance
 statistics for each method, including variance measures and accuracy
-bands. The ``≤X km'' columns show the percentage of predictions within X
-kilometers of ground truth.
-}%DIFDELCMD < 
+bands.The ``≤X km'' columns show the percentage of predictions within X
+kilometers of ground truth.}%DIFDELCMD < 
 
 %DIFDELCMD < \begin{longtable}[]{@{}
 %DIFDELCMD <   >{\raggedright\arraybackslash}p{(\linewidth - 22\tabcolsep) * \real{0.0833}}
@@ -2730,10 +2728,9 @@ an operating point.}}%DIFAUXCMD
 \DIFdel{≤10 km hit-rate
 }%DIFDELCMD < \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 %DIFDELCMD < %%%
-\DIFdel{Cost per 1k located (USD)}%DIFDELCMD < \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\DIFdel{Cost per 1k located (USD) }%DIFDELCMD < \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 %DIFDELCMD < %%%
-\DIFdel{Cost per +1\% ≤10 km hit (USD)
-}%DIFDELCMD < \end{minipage} \\
+\DIFdel{Cost per +1\% ≤10 km hit (USD) }%DIFDELCMD < \end{minipage} \\
 %DIFDELCMD < \midrule\noalign{}
 %DIFDELCMD < \endfirsthead
 %DIFDELCMD < \toprule\noalign{}
@@ -2748,8 +2745,7 @@ an operating point.}}%DIFAUXCMD
 \DIFdel{≤10 km hit-rate
 }%DIFDELCMD < \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 %DIFDELCMD < %%%
-\DIFdel{Cost per 1k located (USD)
-}%DIFDELCMD < \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\DIFdel{Cost per1k located (USD) }%DIFDELCMD < \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 %DIFDELCMD < %%%
 \DIFdel{Cost per +1\% ≤10 km hit (USD)
 }%DIFDELCMD < \end{minipage} \\
@@ -2990,9 +2986,9 @@ compute budgeting and reproducibility.}}%DIFAUXCMD
 \DIFdel{Tool-augmented methods consumed on average 1.49× more tokens than
 pure-prompt counterparts (4,985,953 vs.~3,355,078 tokens per 1,000
 located grants). However, this effect varied dramatically by model
-architecture:adding tools to gpt-4.1-2025-04-14 increased token usage
-by 18.3× (176,698 → 3,229,140), while o4-mini showed only a 1.14×
-increase (5,937,907 → 6,742,767).}%DIFDELCMD < 
+architecture: adding tools to gpt-4.1-2025-04-14 increased token usage by 18.3× (176,698 → 3,229,140) , while o4-mini showed only a 1.14×
+increase (5,937,907 → 6,742,767).
+}%DIFDELCMD < 
 
 %DIFDELCMD < %%%
 \subsection{\DIFdel{Professional GIS Benchmark
@@ -3003,13 +2999,17 @@ Analysis}}%DIFAUXCMD
 
 %DIFDELCMD < %%%
 \DIFdel{Table \ref{tbl:human_benchmark} provides a more detailed analysis of the
-professional GIS benchmark (H-1) \mbox{%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{Contents: (i) detailed accuracy metrics with bootstrap CIs; (ii) full
+per‑method performance tables; (iii) cost--accuracy summaries; (iv)
+processing time analysis; (v) token usage statistics; (vi) }\DIFaddend professional
+GIS benchmark \DIFdelbegin \DIFdel{(H-1) \mbox{%DIFAUXCMD
 \citep{Bashorun2025_gis} }\hskip0pt%DIFAUXCMD
 results,
-categorized by precision level.This breakdown reveals that even with
+categorized by precision level. This breakdownreveals that even with
 expert domain knowledge and access to specialized historical gazetteers,
 more than 41.9\% of the human-geocoded grants were located at only
-state-level precision. ``High'' indicates grants where both county
+state-level precision.
+``High'' indicates grants where both county
 boundaries and specific landmarks were used; ``Medium'' indicates
 county-centroid placement; ``Low'' indicates state-level precision only.
 }%DIFDELCMD < 
@@ -3098,13 +3098,12 @@ placement precision (overall; High/Medium/Low).}}%DIFAUXCMD
 \DIFdel{Notably, even the ``High'' precision category (where both county
 boundaries and specific landmarks were identified) still resulted in a
 mean error of 68.88 km---substantially higher than all the automated
-methods except gpt-3.5-turbo (M-6). This underscores the inherent
+methods except gpt-3.5-turbo (M-6)}\DIFdelend \DIFaddbegin \DIFadd{breakdown}\DIFaddend .
+\DIFdelbegin \DIFdel{This underscores the inherent
 difficulty of the task and further highlights the significance of the
-accuracy improvements achieved by the LLM approaches.
-}%DIFDELCMD < 
+accuracy improvements achieved by the LLM approaches.}\DIFdelend 
 
-%DIFDELCMD < %%%
-\DIFdelend \section{Supplementary
+\section{Supplementary
 Figures}\label{appendix-c-supplementary-figures}
 
 \DIFdelbegin \subsection{\DIFdel{Error Distribution
@@ -3112,18 +3111,19 @@ Plots}}%DIFAUXCMD
 \addtocounter{subsection}{-1}%DIFAUXCMD
 %DIFDELCMD < \label{c.1-error-distribution-plots}
 %DIFDELCMD < %%%
-\DIFdelend \DIFaddbegin \DIFadd{This appendix has been moved to the supplementary repository for space
-and readability. See the public supplement (tag:
-R1-supplement-2025-10-23):
+\DIFdelend \DIFaddbegin \DIFadd{Appendix C (Supplementary Figures) is available in the supplementary
+repository (tag: R1-supplement-2025-10-23):
 }\DIFaddend 
 
 \DIFdelbegin \DIFdel{Figure \ref{fig:error_boxplot} shows the distribution of geolocation
-error for each method as a boxplot, complementing the violin plot and CDF already presented in the main text. The boxplot highlights the median error (central line), interquartile range (box), and outliers
-(points) for each method, providing a clear view of error distribution
-and central tendency.
-}%DIFDELCMD < 
+error for each method as a boxplot, complementing the violin plot and
+CDF already presented in the main text. The boxplot highlights the
+median error (central line) , interquartile range (box), and outliers
+(points) for each method, providing a clear view of error distribution and central tendency.
+}\DIFdelend \DIFaddbegin \DIFadd{https://github.com/ryanmio/colonial-virginia-llm-geolocation/tree/R1-supplement-2025-10-23/paper/APPENDIX\_C\_Supplementary\_Figures.md
+}\DIFaddend 
 
-%DIFDELCMD < \begin{figure}
+\DIFdelbegin %DIFDELCMD < \begin{figure}
 %DIFDELCMD < \centering
 %DIFDELCMD < \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/error_boxplot.pdf}
 %DIFDELCMD < %%%
@@ -3154,10 +3154,11 @@ predictions; dashed lines indicate errors.}}%DIFAUXCMD
 %DIFDELCMD < 
 
 %DIFDELCMD < %%%
-\DIFdel{Figure \ref{fig:contactsheet} plots all six methods for every locatable
-grant against ground truth coordinates (black stars). Error distances
+\DIFdel{Figure \ref{fig:contactsheet} plotsall six methods for every locatable
+grant against ground truth coordinates (black stars) . Error distances
 are shown as dashed lines connecting predictions to ground truth. For
-cartographic clarity the H-2, H-3, and H-4 baselines are omitted; their
+cartographic clarity the H-2, H-3, and H-4 baselines are omitted;
+their
 substantially larger positional errors would require a map extent so
 broad that the fine-scale patterns of interest would be lost.
 }%DIFDELCMD < 
@@ -3171,10 +3172,10 @@ Accuracy}}%DIFAUXCMD
 
 %DIFDELCMD < %%%
 \DIFdel{Table \ref{tbl:cost_marginal} reports how many U.S. dollars each method
-requires to raise the ≤10 km hit-rate by one percentage point (column
-``Cost per +1 \% ≤10 km hit''). This marginal-cost view complements the
-mean-error vs.~cost Pareto plot in the main text:
-it quantifies the
+requires to raise the }\DIFdelend \DIFaddbegin \DIFadd{Contents: (i) error distribution plots; (ii) contact‑sheet error maps;
+(iii) marginal cost of }\DIFaddend ≤10 km \DIFdelbegin \DIFdel{hit-rate by one percentage point (column
+``Cost per +1 \% ≤10 km hit'') . This marginal-cost view complements the
+mean-error vs.~cost Pareto plot in the main text: it quantifies the
 price of }\emph{\DIFdel{high-confidence}} %DIFAUXCMD
 \DIFdel{geocoding rather than average error
 alone.
@@ -3201,7 +3202,8 @@ accuracy.}}%DIFAUXCMD
 \DIFdel{≤10 km hit-rate
 }%DIFDELCMD < \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 %DIFDELCMD < %%%
-\DIFdel{Cost per 1 k located (USD)}%DIFDELCMD < \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\DIFdel{Cost per 1 k located (USD)
+}%DIFDELCMD < \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 %DIFDELCMD < %%%
 \DIFdel{Cost per +1 \% ≤10 km hit (USD)
 }%DIFDELCMD < \end{minipage} \\
@@ -3271,9 +3273,8 @@ accuracy.}}%DIFAUXCMD
 %DIFDELCMD < %%%
 \DIFdel{The numbers reveal why }\textbf{\DIFdel{gpt-4o-2024-08-06}} %DIFAUXCMD
 \DIFdel{is so attractive in
-budget-constrained settings:
-each percentage-point gain in
-``high-precision'' accuracy costs only six cents---roughly two orders of
+budget-constrained settings: each percentage-point gain in
+``high-precision'' accuracycosts only six cents---roughly two orders of
 magnitude cheaper than even the }\emph{\DIFdel{o3}} %DIFAUXCMD
 \DIFdel{ensemble, and over 10,000 ×
 cheaper than a professional GIS analyst.
@@ -3307,13 +3308,11 @@ error).}}%DIFAUXCMD
 %DIFDELCMD < 
 
 %DIFDELCMD < %%%
-\DIFdel{Figure \ref{fig:pareto_latency}:Latency-Accuracy Tradeoff.This figure
+\DIFdel{Figure \ref{fig:pareto_latency}: Latency-Accuracy Tradeoff. This figure
 plots mean error (km) against processing time per grant (seconds) for
-each evaluated method.All automatic methods produce coordinates in
+each evaluated method. All automatic methods produce coordinates in
 0.2--13 s of computation time, compared to the GIS analyst's labor time
-of ≈502 s per grant. Note the logarithmic scale on the x-axis.
-}\DIFdelend \DIFaddbegin \DIFadd{https://github.com/ryanmio/colonial-virginia-llm-geolocation/tree/R1-supplement-2025-10-23/paper/APPENDIX\_C\_Supplementary\_Figures.md
-}\DIFaddend 
+of ≈502 s per grant. Note the logarithmic scale on the x-axis}\DIFdelend \DIFaddbegin \DIFadd{accuracy; (iv) latency--accuracy tradeoff}\DIFaddend .
 
 \section{Tool Augmentation
 Analysis}\label{appendix-d-tool-augmentation-analysis}

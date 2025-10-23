@@ -15,8 +15,8 @@
 - [x] **E3:** Discuss limitations: study limited to ChatGPT models, sample relatively small
   - Changes: Added an explicit model-family scope limitation in §8 (OpenAI GPT/o‑series only) and kept the small evaluation set caveat prominent; numbering adjusted without inflating length. Commit: e637595.
 
-- [ ] **E4:** Reconsider if sections 14-16 are crucial for main message or make paper too long/hard to read
-  - Changes: 
+- [x] **E4:** Reconsider if sections 14-16 are crucial for main message or make paper too long/hard to read
+  - Changes: Kept a lean Appendix A (methods essentials) in-paper; moved Appendix B (Extended Results) and Appendix C (Supplementary Figures) to the public supplementary repository with a stable tag. Inserted short stubs in the paper linking to the tag. Commit: ab8117e. Public repo commit: a500196. Tag: R1-supplement-2025-10-23.
 
 ---
 
@@ -41,8 +41,8 @@
 - [x] **A6:** Bibliography is comparatively short - add more references where possible
   - Changes: Added citations for GeoCorpora (IJGIS 2017), WikToR (LRE 2018), GeoGLUE (arXiv 2305.06545), and geocoders (GeoNames/Nominatim/ArcGIS) at first mention (§2.2–§2.3). Commit: aed55252.
 
-- [ ] **A7:** Consider moving Sections 14-16 to web repository to reduce paper length
-  - Changes: 
+- [x] **A7:** Consider moving Sections 14-16 to web repository to reduce paper length
+  - Changes: Moved Appendices B/C to public repo, retained trimmed Appendix A; added in-paper stubs and links to stable tag. Commit: ab8117e. Public repo commit: a500196. Tag: R1-supplement-2025-10-23.
 
 ### Section Structure & Formatting
 - [x] **A8:** Use "Section ..." consistently instead of § symbol
@@ -92,8 +92,8 @@
   - Changes: Added a lead sentence explicitly referencing Figure \ref{fig:grant_maps} before the Grant 1/19 narrative in §6.4, framing the pair as representative success/failure cases. Commit: 26a8bfb.
 
 ### Appendix Issues
-- [ ] **A7b:** Put cut sections in repo and cite the repo with a stable tag so the editor sees nothing was "lost," just moved.
-  - Changes: 
+- [x] **A7b:** Put cut sections in repo and cite the repo with a stable tag so the editor sees nothing was "lost," just moved.
+  - Changes: Created `APPENDIX_B_Extended_Results.md`, `APPENDIX_C_Supplementary_Figures.md`, and a README in the public repo; committed and tagged `R1-supplement-2025-10-23`; linked from in-paper stubs. Commits: ab8117e (paper), a500196 (public repo).
 - [ ] **A22:** Several references to "appendix" but only 16.5.1 labeled as appendix - resolve inconsistency
   - Changes: 
 
