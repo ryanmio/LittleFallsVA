@@ -319,6 +319,14 @@ sed -E -i '' 's/\\paragraph\{A\.[0-9]+\.[0-9]+[[:space:]]+/\\paragraph{/' "$CONT
 # 3. Copy bibliography
 cp "$REFS_BIB" "$TEMPLATE_DIR/refs.bib"
 
+# Create blind bibliography by anonymizing author self-citations
+cp "$REFS_BIB" "$TEMPLATE_DIR/refs_blind.bib"
+# Replace author name with anonymized placeholder
+sed -i '' 's/Mioduski, Ryan/[Author name removed for blind review]/g' "$TEMPLATE_DIR/refs_blind.bib"
+# Remove GitHub URLs that identify the author
+sed -i '' 's|https://github\.com/ryanmio/colonial-virginia-llm-geolocation|[Repository URL removed for blind review]|g' "$TEMPLATE_DIR/refs_blind.bib"
+sed -i '' 's|https://github\.com/ryanmioduskiimac/littlefallsva|[Repository URL removed for blind review]|g' "$TEMPLATE_DIR/refs_blind.bib"
+
 # 4. Sync figure assets used in the paper into template/figures
 if [ -d "$FIGURES_DIR" ]; then
   # Create figures directory in template if it doesn't exist
@@ -373,6 +381,8 @@ sed -i '' 's/Independent Researcher/[Affiliation removed for blind review]/g' "$
 sed -i '' 's/received={May 24, 2025}/received={[Date removed for blind review]}/g' "$TEMPLATE_DIR/article_blind.tex"
 # Redirect the main body to the blind content file
 sed -i '' 's/\\input{content.tex}/\\input{content_blind.tex}/g' "$TEMPLATE_DIR/article_blind.tex"
+# Use blind bibliography (without author self-citations)
+sed -i '' 's/\\bibliography{refs}/\\bibliography{refs_blind}/g' "$TEMPLATE_DIR/article_blind.tex"
 
 # Create blind content.tex by removing identifying information
 cp "$CONTENT_TEX" "$TEMPLATE_DIR/content_blind.tex"
@@ -408,6 +418,7 @@ fi
 echo "Double-blind versions created:"
 echo "  - $TEMPLATE_DIR/article_blind.tex"
 echo "  - $TEMPLATE_DIR/content_blind.tex"
+echo "  - $TEMPLATE_DIR/refs_blind.bib"
 echo "  - $TEMPLATE_DIR/article_blind.pdf (if LaTeX compilation succeeded)"
 
 echo "JOSIS update complete." 
@@ -486,14 +497,29 @@ echo "arXiv package is ready. Compress $ARXIV_DIR into a zip/tar.gz and upload t
 # Before first use: mkdir -p _baseline
 #                   cp "Journal of Spatial Information Science template/article.tex" _baseline/
 #                   cp "Journal of Spatial Information Science template/content.tex" _baseline/
+#                   cp "Journal of Spatial Information Science template/article_blind.tex" _baseline/
+#                   cp "Journal of Spatial Information Science template/content_blind.tex" _baseline/
+#                   cp "Journal of Spatial Information Science template/refs_blind.bib" _baseline/
 # Then run build.sh after making edits to generate diffs
 # Upload diff_article.tex and diff_content.tex to Overleaf to see highlighted changes
 # --------------------------------------------------------
 
-if [ -f "$PAPER_DIR/_baseline/article.tex" ] && [ -f "$PAPER_DIR/_baseline/content.tex" ] && command -v latexdiff &> /dev/null; then
-  echo "\n==== Generating revision diff files ===="
-  latexdiff --exclude-textcmd="cite,ref" "$PAPER_DIR/_baseline/content.tex" "$TEMPLATE_DIR/content.tex" > "$TEMPLATE_DIR/diff_content.tex"
-  latexdiff "$PAPER_DIR/_baseline/article.tex" "$TEMPLATE_DIR/article.tex" > "$TEMPLATE_DIR/diff_article.tex"
-  sed -i '' 's/\\input{content.tex}/\\input{diff_content.tex}/' "$TEMPLATE_DIR/diff_article.tex"
-  echo "✓ Created diff_article.tex and diff_content.tex (upload these to Overleaf to see changes highlighted)"
+if command -v latexdiff &> /dev/null; then
+  # Generate non-blind diffs
+  if [ -f "$PAPER_DIR/_baseline/article.tex" ] && [ -f "$PAPER_DIR/_baseline/content.tex" ]; then
+    echo "\n==== Generating revision diff files (non-blind) ===="
+    latexdiff --exclude-textcmd="cite,ref" "$PAPER_DIR/_baseline/content.tex" "$TEMPLATE_DIR/content.tex" > "$TEMPLATE_DIR/diff_content.tex"
+    latexdiff "$PAPER_DIR/_baseline/article.tex" "$TEMPLATE_DIR/article.tex" > "$TEMPLATE_DIR/diff_article.tex"
+    sed -i '' 's/\\input{content.tex}/\\input{diff_content.tex}/' "$TEMPLATE_DIR/diff_article.tex"
+    echo "✓ Created diff_article.tex and diff_content.tex (upload these to Overleaf to see changes highlighted)"
+  fi
+  
+  # Generate blind diffs
+  if [ -f "$PAPER_DIR/_baseline/article_blind.tex" ] && [ -f "$PAPER_DIR/_baseline/content_blind.tex" ]; then
+    echo "\n==== Generating revision diff files (blind) ===="
+    latexdiff --exclude-textcmd="cite,ref" "$PAPER_DIR/_baseline/content_blind.tex" "$TEMPLATE_DIR/content_blind.tex" > "$TEMPLATE_DIR/diff_content_blind.tex"
+    latexdiff "$PAPER_DIR/_baseline/article_blind.tex" "$TEMPLATE_DIR/article_blind.tex" > "$TEMPLATE_DIR/diff_article_blind.tex"
+    sed -i '' 's/\\input{content_blind.tex}/\\input{diff_content_blind.tex}/' "$TEMPLATE_DIR/diff_article_blind.tex"
+    echo "✓ Created diff_article_blind.tex and diff_content_blind.tex (upload these to Overleaf to see changes highlighted)"
+  fi
 fi

@@ -62,7 +62,7 @@
 \usepackage{subcaption}
 
 % Added for Pandoc-crossref friendly \cref commands
-%\usepackage{cleveref} % Optional package, comment out if not installed
+\usepackage{cleveref}
 
 % Pandoc compatibility macros
 \providecommand{\tightlist}{}
@@ -70,25 +70,17 @@
 \newcommand{\pandocbounded}[1]{#1}
 
 % Text wrapping helpers
-% Reduce spacing in Verbatim environments (code blocks)
-\usepackage{etoolbox}
-\AtBeginEnvironment{Verbatim}{%
-  \setlength{\partopsep}{0pt}%
-  \setlength{\topsep}{0.25em}%
-  \setlength{\parskip}{0pt}%
-  \linespread{0.9}\selectfont\small%
-}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Verbatim}{Verbatim}{breaklines=true, breakanywhere=true}
 
 % Force aggressive line breaking for all code listings
 \lstset{
   breaklines=true,
   breakatwhitespace=false,
+  breakanywhere=true,
   columns=fullflexible,
-  basicstyle=\small\linespread{0.9}\ttfamily,
-  keepspaces=true,
-  aboveskip=0.25em,
-  belowskip=0.25em,
-  lineskip=-1.5pt
+  basicstyle=\small\ttfamily,
+  keepspaces=true
 }
 
 \renewcommand{\topfraction}{0.9} 
@@ -106,9 +98,9 @@
 \josisdetails{%
    number=N, year=YYYY, firstpage=xx, lastpage=yy, 
   doi={10.5311/JOSIS.YYYY.II.NNN},
-   received={July 27, 2025}, 
-   returned={October 17, 2025},
-   revised={October 24, 2025},
+   received={[Not received]}, 
+   returned={[Not returned]},
+   revised={[Not revised]},
    accepted={[Not accepted]}, }
 
 \newcommand{\mydoi}[1]{\href{http://dx.doi.org/#1}{doi:\protect\detokenize{#1}}}
@@ -159,6 +151,6 @@ These findings demonstrate that LLMs can georeference early-modern records as ac
 
 % References
 \bibliographystyle{josisacm_unsorted}
-\bibliography{refs_blind}
+\bibliography{refs}
 
 \end{document}
