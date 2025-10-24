@@ -39,10 +39,25 @@ df = df.sort_values('Mean', ascending=True)
 
 # -- Plot ------------------------------------------------------------------
 fig, ax = plt.subplots(figsize=(7,4))
-ax.barh(df['Method'], df['Mean'], xerr=[df['Mean']-df['CI_lo'], df['CI_hi']-df['Mean']], color='steelblue', alpha=0.8)
+
+# Colors (print-friendly): Okabe–Ito sky blue for all bars
+fill_blue = '#56B4E9'
+edge_color = '#000000'
+
+# Draw bars individually to control colors and edges
+for i, (method, mean, lo, hi) in enumerate(zip(df['Method'], df['Mean'], df['CI_lo'], df['CI_hi'])):
+    bar = ax.barh([method], [mean], color=fill_blue, edgecolor=edge_color, linewidth=0.8)
+    # Error bars in black
+    ax.errorbar(x=mean, y=[method], xerr=[[mean - lo], [hi - mean]], fmt='none', ecolor=edge_color, elinewidth=0.8, capsize=3)
+
 ax.set_xlabel('Mean error (km) ± 95% CI')
-ax.set_title('Coordinate accuracy by method')
+# No in-figure title per print guidance
 ax.invert_yaxis()  # best at top
+
+# Faint gridlines already set via plot_style; ensure subtle
+ax.grid(True, axis='x')
+ax.grid(False, axis='y')
+
 plt.tight_layout()
 
 png_path = OUT_DIR / 'accuracy_bar.png'

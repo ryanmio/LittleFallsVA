@@ -1,0 +1,241 @@
+%% josis.tex 1.4   2016-09-15    JoSIS latex template
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL /Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/geolocation/paper/_baseline/article_blind.tex                                         Thu Oct 23 20:06:56 2025
+%DIF ADD /Users/ryanmioduskiimac/littlefallsva/.research/.original-research/1699-claim/data/S/land-grants/geolocation/paper/Journal of Spatial Information Science template/article_blind.tex   Fri Oct 24 18:57:42 2025
+%------------------------------------------------------------------
+% Filename: josis_template.tex
+%
+% This file is intended as a template for typesetting articles for the
+%
+%                        Journal of Spatial Information Science.
+%
+% Please edit this template to generate your own formatted manuscripts
+% for submission to JOSIS. See http://josis.org for further details.
+%
+
+
+%%% JOSIS checks in typesetting
+%%% * All titles and sections lower case *EXCEPT short title  [ ]
+%%% * Remove author postal addresses, only have geographic places and institutions [ ] 
+%%% * Consistent use of Section, Figure, Table (capitalized and in full) [ ]
+%%% * 10 keywords (and all lower case) [ ]
+%%% * Remove all avoidable footnotes [ ]
+%%% * Use double quotation marks (``'' not "" or `') [ ]
+%%% * Punctuation inside quotations [ ]
+%%% * E.g. and i.e. followed by comma [ ]
+%%% * cf. followed by tilde [ ]
+%%% * Itemize and enumerate correctly punctuated [e.g., "1. x, 2. y, and 3. x." ]
+%%% * And/or lists using American English punctuation (e.g., "x, y, and z") [ ] 
+%%% * Bibliography (e.g., en-dashes for number ranges, consistent "Proc.~" for Proceedings of..., etc.) []
+%%% * Acknowledgment style use section* [ ] 
+%%% * et al. no italics, but with dot  [ ] 
+%%% * All captions end with full stop  [ ]
+%%% * Table captions under, not over table  [ ]
+%%% * Adjust urls with burlalt [ ] 
+%%% * Check correct use of hyphens, emdashes, endashes  [ ]
+%%% * Perform spell check  [ ] 
+
+%%% JOSIS checks directly before publication 
+%%% Check DOI, page numbers on article and web site. [ ]
+%%% Update web site with final title, abstract, keywords. [ ] 
+%%% Build with distiller for DOI links. [ ]
+
+
+% Required documentclass definition for JOSIS
+\documentclass{josis}
+\usepackage{hyperref}
+\usepackage[hyphenbreaks]{breakurl}
+\usepackage{booktabs}
+\usepackage{stmaryrd}
+\usepackage[T1]{fontenc}
+\usepackage[numbers]{natbib}
+
+% Suggested packages for algorithm formatting
+\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage{algpseudocode}
+
+
+\usepackage[table]{xcolor}
+\usepackage{amssymb,amsmath}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{calc}
+\usepackage{float}
+\usepackage{subcaption}
+
+% Added for Pandoc-crossref friendly \cref commands
+%DIF 65c65
+%DIF < \usepackage{cleveref}
+%DIF -------
+%\usepackage{cleveref} % Optional package, comment out if not installed %DIF > 
+%DIF -------
+
+% Pandoc compatibility macros
+\providecommand{\tightlist}{}
+\newcommand{\real}[1]{#1}
+\newcommand{\pandocbounded}[1]{#1}
+
+% Text wrapping helpers
+%DIF 73-74c73-80
+%DIF < \usepackage{fvextra}
+%DIF < \DefineVerbatimEnvironment{Verbatim}{Verbatim}{breaklines=true, breakanywhere=true}
+%DIF -------
+% Reduce spacing in Verbatim environments (code blocks) %DIF > 
+\usepackage{etoolbox} %DIF > 
+\AtBeginEnvironment{Verbatim}{% %DIF > 
+  \setlength{\partopsep}{0pt}% %DIF > 
+  \setlength{\topsep}{0.25em}% %DIF > 
+  \setlength{\parskip}{0pt}% %DIF > 
+  \linespread{0.9}\selectfont\small% %DIF > 
+} %DIF > 
+%DIF -------
+
+% Force aggressive line breaking for all code listings
+\lstset{
+  breaklines=true,
+  breakatwhitespace=false,
+%DIF 80d86
+%DIF <   breakanywhere=true,
+%DIF -------
+  columns=fullflexible,
+%DIF 82-83c87-91
+%DIF <   basicstyle=\small\ttfamily,
+%DIF <   keepspaces=true
+%DIF -------
+  basicstyle=\small\linespread{0.9}\ttfamily, %DIF > 
+  keepspaces=true, %DIF > 
+  aboveskip=0.25em, %DIF > 
+  belowskip=0.25em, %DIF > 
+  lineskip=-1.5pt %DIF > 
+%DIF -------
+}
+
+\renewcommand{\topfraction}{0.9} 
+\renewcommand{\textfraction}{0.1}
+
+% Page setup and overhangs
+\sloppy
+\widowpenalty=10000
+\clubpenalty=10000
+\hyphenpenalty=75
+
+% Article details for accepted manuscripts will be added by editorial staff
+% Omit year if article in press
+% Omit number if article under review
+\josisdetails{%
+   number=N, year=YYYY, firstpage=xx, lastpage=yy, 
+  doi={10.5311/JOSIS.YYYY.II.NNN},
+%DIF 101-103c109-111
+%DIF <    received={[Not received]}, 
+%DIF <    returned={[Not returned]},
+%DIF <    revised={[Not revised]},
+%DIF -------
+   received={July 27, 2025},  %DIF > 
+   returned={October 17, 2025}, %DIF > 
+   revised={October 24, 2025}, %DIF > 
+%DIF -------
+   accepted={[Not accepted]}, }
+
+\newcommand{\mydoi}[1]{\href{http://dx.doi.org/#1}{doi:\protect\detokenize{#1}}}
+
+\urlstyle{rm}
+\makeatletter
+% Inspired by http://anti.teamidiot.de/nei/2009/09/latex_url_slash_spacingkerning/
+% but slightly less kern and shorter underscore
+\let\UrlSpecialsOld\UrlSpecials
+\def\UrlSpecials{\UrlSpecialsOld\do\/{\Url@slash}\do\_{\Url@underscore}}%
+\def\Url@slash{\@ifnextchar/{\kern-.11em\mathchar47\kern-.2em}%
+    {\kern-.0em\mathchar47\kern-.08em\penalty\UrlBigBreakPenalty}}
+\def\Url@underscore{\nfss@text{\leavevmode \kern.06em\vbox{\hrule\@width.3em}}}
+\makeatother
+
+\hypersetup{
+colorlinks=true,
+linkcolor=black,
+citecolor=black,
+urlcolor=black
+} 
+
+% Add the running author and running title information
+\runningauthor{\begin{minipage}{.9\textwidth}\centering [Author name removed for blind review]\end{minipage}}
+\runningtitle{Geolocating Colonial Land Grants with LLMs}
+
+% Document begins
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}} %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+%DIF AMSMATHULEM PREAMBLE %DIF PREAMBLE
+\makeatletter %DIF PREAMBLE
+\let\sout@orig\sout %DIF PREAMBLE
+\renewcommand{\sout}[1]{\ifmmode\text{\sout@orig{\ensuremath{#1}}}\else\sout@orig{#1}\fi} %DIF PREAMBLE
+\makeatother %DIF PREAMBLE
+%DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+\lstset{extendedchars=\true,inputencoding=utf8}
+
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+% Title, author, abstract, keywords and metadata
+\title{Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants}
+\author{[Author name removed for blind review]}\affil{[Affiliation removed for blind review]}
+
+\maketitle
+
+\keywords{historical GIS, large language models, geoparsing, colonial Virginia, land grants, digital humanities, spatial history, geolocation}
+
+\begin{abstract}
+Virginia's seventeenth- and eighteenth-century land patents survive primarily as narrative metes-and-bounds descriptions, limiting spatial analysis. This study systematically evaluates current-generation large language models (LLMs) in converting these prose abstracts into research-grade latitude/longitude coordinates. A digitized corpus of 5,471 Virginia patent abstracts (1695–1732) is released, with 43 rigorously verified test cases for benchmarking. Six OpenAI models across three architectures—o-series, GPT-4-class, and GPT-3.5—were tested under two paradigms: direct-to-coordinate and tool-augmented chain-of-thought invoking external geocoding APIs. Results were compared against a professional GIS workflow, Stanford NER geoparser, Mordecai-3 neural geoparser, and a county-centroid heuristic.
+
+The top single-call model, o3-2025-04-16, achieved a mean error of 23 km (median 14 km), a 67\% improvement over professional GIS methods and 70\% better than Stanford NER. A five-call ensemble further reduced errors to 19 km (median 12 km) at minimal additional cost (\textasciitilde USD 0.20 per grant). Paired Wilcoxon tests confirm ensemble superiority (W=629, p=0.03 vs. single-shot). A patentee-name redaction ablation slightly increased error (\textasciitilde 9\%), showing reliance on metes-and-bounds reasoning rather than memorization. The cost-effective gpt-4o-2024-08-06 model maintained a 28 km mean error at USD 1.09 per 1,000 grants, establishing a strong cost-accuracy benchmark. External geocoding tools offer no measurable benefit for this task.
+
+These findings demonstrate that LLMs can georeference early-modern records as accurately and significantly faster and cheaper than traditional GIS workflows, enabling scalable spatial analysis of colonial archives.
+\end{abstract}
+
+% Main body generated via Pandoc
+\input{diff_content_blind.tex}
+
+% References
+\bibliographystyle{josisacm_unsorted}
+\DIFdelbegin %DIFDELCMD < \bibliography{refs}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \bibliography{refs_blind}
+\DIFaddend 
+
+\end{document}

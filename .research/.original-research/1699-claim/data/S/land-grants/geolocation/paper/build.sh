@@ -54,6 +54,11 @@ cat > "$PAPER_DIR/styling.tex" << EOF
     urlcolor=black,
     citecolor=black
 }
+% Use uniform interword spacing (avoid extra sentence spacing after abbreviations like "et al.")
+\\frenchspacing
+# Modern paragraph style: no first-line indent, small vertical space between paragraphs
+\\setlength{\\parindent}{0pt}
+\\setlength{\\parskip}{0.6em}
 EOF
 
 # ------------------ arXiv-style title ------------------
@@ -138,6 +143,17 @@ pandoc "$MAIN_MD" \
 # 2. Post-process the content.tex file for JOSIS format...
 echo "Post-processing content.tex for JOSIS format..."
 
+# Ensure uniform interword spacing (avoid extra sentence spacing like after "et al.")
+sed -i '' "1i\\
+\\frenchspacing" "$CONTENT_TEX"
+# Normalize inline code formatting emitted by Pandoc with --listings
+# Convert: \passthrough{\lstinline!foo\_bar!} -> \texttt{foo\_bar}
+sed -E -i '' 's/\\passthrough\{\\lstinline!([^!]*)!\}/\\texttt{\1}/g' "$CONTENT_TEX"
+# Modern paragraph style (no indent + small parskip)
+sed -i '' "1a\\
+\\setlength{\\parindent}{0pt}" "$CONTENT_TEX"
+sed -i '' "2a\\
+\\setlength{\\parskip}{0.6em}" "$CONTENT_TEX"
 # FIRST: Remove the abstract section entirely since it's handled by article.tex
 # Find the Introduction section and remove everything before it
 INTRO_LINE=$(grep -n "Introduction" "$CONTENT_TEX" | head -1 | cut -d':' -f1)
@@ -162,6 +178,8 @@ sed -i '' 's/\\section{8 /\\section{/g' "$CONTENT_TEX"
 sed -i '' 's/\\section{9 /\\section{/g' "$CONTENT_TEX"
 sed -i '' 's/\\section{10 /\\section{/g' "$CONTENT_TEX"
 sed -i '' 's/\\section{11 /\\section{/g' "$CONTENT_TEX"
+# Also remove any remaining numeric prefixes like "\\section{12 ...}" (generic rule)
+sed -E -i '' 's/\\section\{[0-9]+[[:space:]]+/\\section{/' "$CONTENT_TEX"
 
 # Fix subsection numbering
 sed -i '' 's/\\subsection{1\.1 /\\subsection{/g' "$CONTENT_TEX"
@@ -189,20 +207,27 @@ sed -i '' 's/\\subsection{6\.6 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{7\.1 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{7\.2 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{7\.3 /\\subsection{/g' "$CONTENT_TEX"
+# Generic cleanup for any dotted numeric prefixes like "2.10", "12.1", etc.
+sed -E -i '' 's/\\subsection\{[0-9]+(\.[0-9]+)+[[:space:]]+/\\subsection{/' "$CONTENT_TEX"
+sed -E -i '' 's/\\subsubsection\{[0-9]+(\.[0-9]+)+[[:space:]]+/\\subsection{/' "$CONTENT_TEX"
 
 # Properly handle the appendix
-# First remove any existing appendix commands
-sed -i '' '/\\appendix/d' "$CONTENT_TEX"
-sed -i '' '/\\section{Appendices}/d' "$CONTENT_TEX"
+# Do NOT delete existing \appendix if already present; we rely on it for A–E labels
+# Convert any manual "Appendices" header to an unnumbered section so it shows above A–E
+sed -E -i '' 's/\\section{Appendices}/\\section*{Appendices}/' "$CONTENT_TEX"
 
 # Find the line number of the first supplementary section
-SUPP_LINE=$(grep -n "section{Supplementary Methods" "$CONTENT_TEX" | head -1 | cut -d':' -f1)
+# Be robust to Pandoc output before we normalize headings. It might appear as
+#   \subsection{Appendix A Supplementary Methods ...}
+# or (after earlier runs) as
+#   \section{Supplementary Methods ...}
+SUPP_LINE=$(grep -n -E "section\{Supplementary Methods|subsection\{Appendix A[[:space:]]+Supplementary" "$CONTENT_TEX" | head -1 | cut -d':' -f1)
 
 if [ ! -z "$SUPP_LINE" ]; then
   # Insert a line before the Supplementary Methods section
   sed -i '' "${SUPP_LINE}i\\
 \\\\appendix" "$CONTENT_TEX"
-  # Fix the literal \n that might be inserted
+  # Fix the literal \n that might be inserted and ensure a single backslash
   sed -i '' 's/\\\\appendix\\n/\\\\appendix/' "$CONTENT_TEX"
   sed -i '' 's/\\\\appendix/\\appendix/' "$CONTENT_TEX"
   echo "Inserted appendix command at line $SUPP_LINE"
@@ -215,7 +240,7 @@ else
     INSERT_LINE=$((ACK_LINE + 15))
     sed -i '' "${INSERT_LINE}i\\
 \\\\appendix" "$CONTENT_TEX"
-    # Fix the literal \n that might be inserted
+    # Fix the literal \n that might be inserted and ensure a single backslash
     sed -i '' 's/\\\\appendix\\n/\\\\appendix/' "$CONTENT_TEX"
     sed -i '' 's/\\\\appendix/\\appendix/' "$CONTENT_TEX"
     echo "Inserted appendix command at line $INSERT_LINE (after Acknowledgements)"
@@ -229,6 +254,11 @@ sed -i '' 's/\\subsection{Appendix A Supplementary Methods/\\section{Supplementa
 sed -i '' 's/\\subsection{Appendix B Extended/\\section{Extended/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{Appendix C Supplementary/\\section{Supplementary/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsection{Appendix D Tool/\\section{Tool/g' "$CONTENT_TEX"
+# Handle Appendix E heading (force it to be its own appendix section, drop the prefix)
+# Cases: "\\subsection{Appendix E ...}", "\\section{Appendix E ...}", or "\\subsection{D.<n> Appendix E ...}"
+sed -E -i '' 's/\\subsection\{Appendix E[[:space:]]+([^}]*)\}/\\section{\1}/' "$CONTENT_TEX"
+sed -E -i '' 's/\\section\{Appendix E[[:space:]]+([^}]*)\}/\\section{\1}/' "$CONTENT_TEX"
+sed -E -i '' 's/\\subsection\{D\.[0-9]+[[:space:]]+Appendix E[[:space:]]+([^}]*)\}/\\section{\1}/' "$CONTENT_TEX"
 
 # Fix subsubsections in appendices
 sed -i '' 's/\\subsubsection{A\.1 /\\subsection{/g' "$CONTENT_TEX"
@@ -251,6 +281,8 @@ sed -i '' 's/\\subsubsection{D\.2 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsubsection{D\.3 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsubsection{D\.4 /\\subsection{/g' "$CONTENT_TEX"
 sed -i '' 's/\\subsubsection{D\.5 /\\subsection{/g' "$CONTENT_TEX"
+# Convert any E.<n> subsubsections to subsections
+sed -i '' 's/\\subsubsection{E\.1 /\\subsection{/g' "$CONTENT_TEX"
 
 # Fix includegraphics paths and options for better JOSIS compatibility
 # IMPORTANT: Preserve the original image formatting and only change the paths
@@ -302,6 +334,14 @@ sed -E -i '' 's/\\paragraph\{A\.[0-9]+\.[0-9]+[[:space:]]+/\\paragraph{/' "$CONT
 
 # 3. Copy bibliography
 cp "$REFS_BIB" "$TEMPLATE_DIR/refs.bib"
+
+# Create blind bibliography by anonymizing author self-citations
+cp "$REFS_BIB" "$TEMPLATE_DIR/refs_blind.bib"
+# Replace author name with anonymized placeholder
+sed -i '' 's/Mioduski, Ryan/[Author name removed for blind review]/g' "$TEMPLATE_DIR/refs_blind.bib"
+# Remove GitHub URLs that identify the author
+sed -i '' 's|https://github\.com/ryanmio/colonial-virginia-llm-geolocation|[Repository URL removed for blind review]|g' "$TEMPLATE_DIR/refs_blind.bib"
+sed -i '' 's|https://github\.com/ryanmioduskiimac/littlefallsva|[Repository URL removed for blind review]|g' "$TEMPLATE_DIR/refs_blind.bib"
 
 # 4. Sync figure assets used in the paper into template/figures
 if [ -d "$FIGURES_DIR" ]; then
@@ -357,6 +397,8 @@ sed -i '' 's/Independent Researcher/[Affiliation removed for blind review]/g' "$
 sed -i '' 's/received={May 24, 2025}/received={[Date removed for blind review]}/g' "$TEMPLATE_DIR/article_blind.tex"
 # Redirect the main body to the blind content file
 sed -i '' 's/\\input{content.tex}/\\input{content_blind.tex}/g' "$TEMPLATE_DIR/article_blind.tex"
+# Use blind bibliography (without author self-citations)
+sed -i '' 's/\\bibliography{refs}/\\bibliography{refs_blind}/g' "$TEMPLATE_DIR/article_blind.tex"
 
 # Create blind content.tex by removing identifying information
 cp "$CONTENT_TEX" "$TEMPLATE_DIR/content_blind.tex"
@@ -364,6 +406,9 @@ cp "$CONTENT_TEX" "$TEMPLATE_DIR/content_blind.tex"
 # Remove GitHub references (replace with placeholder)
 sed -i '' 's|https://github\.com/ryanmio/colonial-virginia-llm-geolocation|[Repository URL removed for blind review]|g' "$TEMPLATE_DIR/content_blind.tex"
 sed -i '' 's|https://github\.com/ryanmioduskiimac/littlefallsva|[Repository URL removed for blind review]|g' "$TEMPLATE_DIR/content_blind.tex"
+
+# Ensure same inline code normalization in blind content
+sed -E -i '' 's/\\passthrough\{\\lstinline!([^!]*)!\}/\\texttt{\1}/g' "$TEMPLATE_DIR/content_blind.tex"
 
 # Anonymize the Conflict of Interest statement for blind review
 sed -i '' 's/The author is employed as a strategist at a political consulting firm/The author is employed at [Employer removed for blind review]/g' "$TEMPLATE_DIR/content_blind.tex"
@@ -392,6 +437,7 @@ fi
 echo "Double-blind versions created:"
 echo "  - $TEMPLATE_DIR/article_blind.tex"
 echo "  - $TEMPLATE_DIR/content_blind.tex"
+echo "  - $TEMPLATE_DIR/refs_blind.bib"
 echo "  - $TEMPLATE_DIR/article_blind.pdf (if LaTeX compilation succeeded)"
 
 echo "JOSIS update complete." 
@@ -428,8 +474,12 @@ pandoc "$MAIN_MD" \
   -o "$ARXIV_TEX"
 
 # 2. Fix figure paths inside main.tex so they match arXiv directory structure
-sed -i '' 's|\.{2}/analysis/figures/|figures/|g' "$ARXIV_TEX"
-sed -i '' 's|\.{2}/analysis/mapping_workflow/|figures/mapping_workflow/|g' "$ARXIV_TEX"
+sed -i '' 's|\.\{2\}/analysis/figures/|figures/|g' "$ARXIV_TEX"
+sed -i '' 's|\.\{2\}/analysis/mapping_workflow/|figures/mapping_workflow/|g' "$ARXIV_TEX"
+
+# Ensure uniform interword spacing in arXiv build
+sed -i '' "/\\begin{document}/a\\
+\\frenchspacing" "$ARXIV_TEX"
 
 # 3. Copy bibliography
 cp "$REFS_BIB" "$ARXIV_DIR/refs.bib"
@@ -464,3 +514,35 @@ else
 fi
 
 echo "arXiv package is ready. Compress $ARXIV_DIR into a zip/tar.gz and upload to Overleaf or arXiv." 
+
+# ---------------- Latexdiff for Revision Tracking ----------------
+# Optional: Generate diff files for revision tracking
+# Before first use: mkdir -p _baseline
+#                   cp "Journal of Spatial Information Science template/article.tex" _baseline/
+#                   cp "Journal of Spatial Information Science template/content.tex" _baseline/
+#                   cp "Journal of Spatial Information Science template/article_blind.tex" _baseline/
+#                   cp "Journal of Spatial Information Science template/content_blind.tex" _baseline/
+#                   cp "Journal of Spatial Information Science template/refs_blind.bib" _baseline/
+# Then run build.sh after making edits to generate diffs
+# Upload diff_article.tex and diff_content.tex to Overleaf to see highlighted changes
+# --------------------------------------------------------
+
+if command -v latexdiff &> /dev/null; then
+  # Generate non-blind diffs
+  if [ -f "$PAPER_DIR/_baseline/article.tex" ] && [ -f "$PAPER_DIR/_baseline/content.tex" ]; then
+    echo "\n==== Generating revision diff files (non-blind) ===="
+    latexdiff --exclude-textcmd="cite,ref" "$PAPER_DIR/_baseline/content.tex" "$TEMPLATE_DIR/content.tex" > "$TEMPLATE_DIR/diff_content.tex"
+    latexdiff "$PAPER_DIR/_baseline/article.tex" "$TEMPLATE_DIR/article.tex" > "$TEMPLATE_DIR/diff_article.tex"
+    sed -i '' 's/\\input{content.tex}/\\input{diff_content.tex}/' "$TEMPLATE_DIR/diff_article.tex"
+    echo "✓ Created diff_article.tex and diff_content.tex (upload these to Overleaf to see changes highlighted)"
+  fi
+  
+  # Generate blind diffs
+  if [ -f "$PAPER_DIR/_baseline/article_blind.tex" ] && [ -f "$PAPER_DIR/_baseline/content_blind.tex" ]; then
+    echo "\n==== Generating revision diff files (blind) ===="
+    latexdiff --exclude-textcmd="cite,ref" "$PAPER_DIR/_baseline/content_blind.tex" "$TEMPLATE_DIR/content_blind.tex" > "$TEMPLATE_DIR/diff_content_blind.tex"
+    latexdiff "$PAPER_DIR/_baseline/article_blind.tex" "$TEMPLATE_DIR/article_blind.tex" > "$TEMPLATE_DIR/diff_article_blind.tex"
+    sed -i '' 's/\\input{content_blind.tex}/\\input{diff_content_blind.tex}/' "$TEMPLATE_DIR/diff_article_blind.tex"
+    echo "✓ Created diff_article_blind.tex and diff_content_blind.tex (upload these to Overleaf to see changes highlighted)"
+  fi
+fi

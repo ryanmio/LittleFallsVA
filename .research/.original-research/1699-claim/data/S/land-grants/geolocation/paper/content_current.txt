@@ -52,7 +52,7 @@ georeferenced version of C\&P would unlock new quantitative approaches
 to long-standing questions about colonial Virginia's social and
 environmental history.
 
-Digitising and geo-locating the abstracts, however, is notoriously
+Digitizing and geo-locating the abstracts, however, is notoriously
 labour-intensive. Even professional GIS analysts can spend several hours
 per grant reconciling archaic place-names, inconsistent spellings, and
 low-resolution boundary calls. Recent breakthroughs in large language

@@ -62,7 +62,7 @@
 \usepackage{subcaption}
 
 % Added for Pandoc-crossref friendly \cref commands
-\usepackage{cleveref}
+%\usepackage{cleveref} % Optional package, comment out if not installed
 
 % Pandoc compatibility macros
 \providecommand{\tightlist}{}
@@ -70,17 +70,25 @@
 \newcommand{\pandocbounded}[1]{#1}
 
 % Text wrapping helpers
-\usepackage{fvextra}
-\DefineVerbatimEnvironment{Verbatim}{Verbatim}{breaklines=true, breakanywhere=true}
+% Reduce spacing in Verbatim environments (code blocks)
+\usepackage{etoolbox}
+\AtBeginEnvironment{Verbatim}{%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\topsep}{0.25em}%
+  \setlength{\parskip}{0pt}%
+  \linespread{0.9}\selectfont\small%
+}
 
 % Force aggressive line breaking for all code listings
 \lstset{
   breaklines=true,
   breakatwhitespace=false,
-  breakanywhere=true,
   columns=fullflexible,
-  basicstyle=\small\ttfamily,
-  keepspaces=true
+  basicstyle=\small\linespread{0.9}\ttfamily,
+  keepspaces=true,
+  aboveskip=0.25em,
+  belowskip=0.25em,
+  lineskip=-1.5pt
 }
 
 \renewcommand{\topfraction}{0.9} 
@@ -98,9 +106,9 @@
 \josisdetails{%
    number=N, year=YYYY, firstpage=xx, lastpage=yy, 
   doi={10.5311/JOSIS.YYYY.II.NNN},
-   received={[Not received]}, 
-   returned={[Not returned]},
-   revised={[Not revised]},
+   received={July 27, 2025}, 
+   returned={October 17, 2025},
+   revised={October 24, 2025},
    accepted={[Not accepted]}, }
 
 \newcommand{\mydoi}[1]{\href{http://dx.doi.org/#1}{doi:\protect\detokenize{#1}}}
