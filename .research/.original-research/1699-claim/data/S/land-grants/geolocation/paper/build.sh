@@ -54,6 +54,11 @@ cat > "$PAPER_DIR/styling.tex" << EOF
     urlcolor=black,
     citecolor=black
 }
+% Use uniform interword spacing (avoid extra sentence spacing after abbreviations like "et al.")
+\\frenchspacing
+# Modern paragraph style: no first-line indent, small vertical space between paragraphs
+\\setlength{\\parindent}{0pt}
+\\setlength{\\parskip}{0.6em}
 EOF
 
 # ------------------ arXiv-style title ------------------
@@ -138,6 +143,17 @@ pandoc "$MAIN_MD" \
 # 2. Post-process the content.tex file for JOSIS format...
 echo "Post-processing content.tex for JOSIS format..."
 
+# Ensure uniform interword spacing (avoid extra sentence spacing like after "et al.")
+sed -i '' "1i\\
+\\frenchspacing" "$CONTENT_TEX"
+# Normalize inline code formatting emitted by Pandoc with --listings
+# Convert: \passthrough{\lstinline!foo\_bar!} -> \texttt{foo\_bar}
+sed -E -i '' 's/\\passthrough\{\\lstinline!([^!]*)!\}/\\texttt{\1}/g' "$CONTENT_TEX"
+# Modern paragraph style (no indent + small parskip)
+sed -i '' "1a\\
+\\setlength{\\parindent}{0pt}" "$CONTENT_TEX"
+sed -i '' "2a\\
+\\setlength{\\parskip}{0.6em}" "$CONTENT_TEX"
 # FIRST: Remove the abstract section entirely since it's handled by article.tex
 # Find the Introduction section and remove everything before it
 INTRO_LINE=$(grep -n "Introduction" "$CONTENT_TEX" | head -1 | cut -d':' -f1)
@@ -391,6 +407,9 @@ cp "$CONTENT_TEX" "$TEMPLATE_DIR/content_blind.tex"
 sed -i '' 's|https://github\.com/ryanmio/colonial-virginia-llm-geolocation|[Repository URL removed for blind review]|g' "$TEMPLATE_DIR/content_blind.tex"
 sed -i '' 's|https://github\.com/ryanmioduskiimac/littlefallsva|[Repository URL removed for blind review]|g' "$TEMPLATE_DIR/content_blind.tex"
 
+# Ensure same inline code normalization in blind content
+sed -E -i '' 's/\\passthrough\{\\lstinline!([^!]*)!\}/\\texttt{\1}/g' "$TEMPLATE_DIR/content_blind.tex"
+
 # Anonymize the Conflict of Interest statement for blind review
 sed -i '' 's/The author is employed as a strategist at a political consulting firm/The author is employed at [Employer removed for blind review]/g' "$TEMPLATE_DIR/content_blind.tex"
 
@@ -455,8 +474,12 @@ pandoc "$MAIN_MD" \
   -o "$ARXIV_TEX"
 
 # 2. Fix figure paths inside main.tex so they match arXiv directory structure
-sed -i '' 's|\.{2}/analysis/figures/|figures/|g' "$ARXIV_TEX"
-sed -i '' 's|\.{2}/analysis/mapping_workflow/|figures/mapping_workflow/|g' "$ARXIV_TEX"
+sed -i '' 's|\.\{2\}/analysis/figures/|figures/|g' "$ARXIV_TEX"
+sed -i '' 's|\.\{2\}/analysis/mapping_workflow/|figures/mapping_workflow/|g' "$ARXIV_TEX"
+
+# Ensure uniform interword spacing in arXiv build
+sed -i '' "/\\begin{document}/a\\
+\\frenchspacing" "$ARXIV_TEX"
 
 # 3. Copy bibliography
 cp "$REFS_BIB" "$ARXIV_DIR/refs.bib"

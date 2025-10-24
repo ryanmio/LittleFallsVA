@@ -208,3 +208,7 @@ Submit THREE items:
 1. **Plain revised manuscript** → `article.pdf` (non-blind, with author name)
 2. **Highlighted changes version** → `diff_article.pdf` (shows what changed from v0 to v1)
 3. **Response letter** → Document addressing each reviewer comment with manuscript changes noted
+
+## Correction: Ensemble Statistics
+
+During R1 preparation, we discovered the R0 manuscript contained stale ensemble statistics (E-1: 18.7 km, E-2: 20.4 km) from before we refreshed ensemble outputs and corrected locatability flags on June 23, 2025. The actual experimental data in `full_results.csv` since June 23 shows E-1: 19.2 km and E-2: 20.6 km. We inadvertently referenced the old statistics when drafting R0. All E-1/E-2 values in R1 now correctly match our actual experimental data (unchanged since June 23). The corrections are minor (+0.5 km for E-1), do not affect our conclusions, and were verified by re-running all analysis scripts. We disclose this transparently as it changes headline numbers independent of reviewer feedback.

@@ -51,7 +51,7 @@ Virginia's colonial land patents are a cornerstone resource for scholars studyin
 
 Digitizing and geo-locating the abstracts, however, is notoriously labor-intensive. Even professional GIS analysts can spend several hours per grant reconciling archaic place-names, inconsistent spellings, and low-resolution boundary calls. Recent breakthroughs in large language models (LLMs) suggest a new pathway: language-driven spatial reasoning where a model reads the patent text and predicts latitude/longitude directly or with minimal tool assistance. This study explores whether current-generation LLMs can shoulder that burden accurately and cheaply enough to matter for digital history.
 
-> Example grant abstract (C&P, Vol. 3, 23 Oct. 1703, p. 571):
+> Example grant abstract (C&P Vol. 3, pp. 78–79; abstracting Patent Book 9, p. 571; 23 Oct. 1703):
 >
 > "JOHN POYTHRESS, 609 A., 2 R., & 9 P., Chas. City Co; on S. side of James River; Beg. on S. side the Black Water; to the Nottoway Path; to the Black Water Spring; along the Sw.; near Capt. Robert Lewcy; by Townes' Quarter; to Hercules Flood; taking in a point containing 50 acs; …"
 
@@ -862,7 +862,7 @@ Table \ref{tbl:tool_direct_comparison} isolates the impact of providing tool acc
 
 Table \ref{tbl:tool_direct_comparison} provides a head-to-head comparison of identical models with and without tool access. This controls for model architecture effects and isolates the impact of tool access alone.
 
-| Model | Category | mean | median | sd | min | max | ≤1 km | ≤5 km | ≤10 km | ≤25 km | ≤50 km |
+| Model | Category | mean | med | sd | min | max | ≤1 km | ≤5 km | ≤10 km | ≤25 km | ≤50 km |
 |------|-----|---|---|---|---|---|---|---|---|---|---|
 | gpt-4.1-2025-04-14 | one shot | 28.51 | 25.42 | 20.77 | 2.14 | 98.72 | 0.0% | 4.7% | 20.9% | 48.8% | 86.0% |
 | gpt-4.1-2025-04-14 | tool chain | 37.23 | 34.22 | 23.94 | 0.59 | 101.85 | 2.3% | 14.0% | 16.3% | 32.6% | 74.4% |

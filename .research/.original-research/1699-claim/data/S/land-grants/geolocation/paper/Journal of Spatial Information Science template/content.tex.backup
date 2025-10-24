@@ -28,7 +28,8 @@ current-generation LLMs can shoulder that burden accurately and cheaply
 enough to matter for digital history.
 
 \begin{quote}
-Example grant abstract (C\&P, Vol. 3, 23 Oct.~1703, p.~571):
+Example grant abstract (C\&P Vol. 3, pp.~78--79; abstracting Patent Book
+9, p.~571; 23 Oct.~1703):
 
 ``JOHN POYTHRESS, 609 A., 2 R., \& 9 P., Chas. City Co; on S. side of
 James River; Beg. on S. side the Black Water; to the Nottoway Path; to
@@ -751,7 +752,7 @@ km, MinPts = 3). If at least three predictions fall within the same 0.5
 km cluster, their spherical centroid becomes the final answer; otherwise
 the centroid of all five points is returned. This majority-vote strategy
 reduces random scatter and mitigates occasional large-error outliers.
-The ensemble (method E-1) achieves a mean error of 18.7 km---the best of
+The ensemble (method E-1) achieves a mean error of 19.2 km---the best of
 all evaluated methods---at roughly 5× the token cost of a single o3 call
 but still two orders of magnitude cheaper than the GIS benchmark. A
 name-redacted ablation (E-2, see Section 6.6) confirms that the gain is
@@ -860,7 +861,7 @@ grants with verified ground truth. The best single-call model, M-2
 (o3-2025-04-16), attains a mean error of 23 km---a 67\% improvement over
 the GIS analyst baseline (H-1, 71 km) and 70\% better than the Stanford
 NER geoparser (H-2, 79 km). Clustering five stochastic calls from the
-same model (E-1) tightens accuracy to 19 km, pushing nearly 40\% of
+same model (E-1) tightens accuracy to 19.2 km, pushing 35\% of
 predictions inside a 10 km radius. At the other end of the spectrum, the
 heuristic Mordecai-3 pipeline (H-3) and the county/state-centroid
 fallback (H-4) return mean errors of 94 km and 80 km, respectively,
@@ -906,8 +907,8 @@ Median (km)
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-E-1 & o3-2025-04-16 (ensemble) & 18.7 {[}13.6, 25.0{]} & 12.5 & 39.5 \\
-E-2 & ensemble name-redacted & 20.4 {[}15.1, 26.8{]} & 13.8 & 34.9 \\
+E-1 & o3-2025-04-16 (ensemble) & 19.2 {[}13.6, 25.0{]} & 12.2 & 34.9 \\
+E-2 & ensemble name-redacted & 20.6 {[}15.1, 26.8{]} & 13.4 & 30.2 \\
 M-2 & o3-2025-04-16 & 23.4 {[}17.4, 29.3{]} & 14.3 & 30.2 \\
 M-5 & gpt-4o-2024-08-06 & 27.9 {[}22.3, 33.9{]} & 25.0 & 16.3 \\
 M-4 & gpt-4.1-2025-04-14 & 28.5 {[}22.7, 35.1{]} & 25.4 & 20.9 \\
@@ -1079,8 +1080,8 @@ ID & Cost per 1,000 located (USD) & Mean error (km) \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-E-1 & 195.65 & 18.7 \\
-E-2 & 200.03 & 20.4 \\
+E-1 & 195.65 & 19.2 \\
+E-2 & 200.03 & 20.6 \\
 M-2 & 127.46 & 23.4 \\
 M-5 & 1.05 & 27.9 \\
 M-4 & 0.46 & 28.5 \\
@@ -1270,8 +1271,8 @@ main findings:
   \passthrough{\lstinline![NAME]!}. If the model had memorised
   grant-name ⟷ coordinate pairs from its pre-training corpus, removing
   this cue should have caused a sharp accuracy drop. In practice mean
-  error rose only slightly---from 18.7 km to 20.4 km---and the ≤10 km
-  hit-rate fell by just 4.6 pp (39.5 → 34.9). The mild degradation
+  error rose only slightly---from 19.2 km to 20.6 km---and the ≤10 km
+  hit-rate fell by just 4.7 pp (34.9 → 30.2). The mild degradation
   indicates that the model is drawing on the descriptive toponyms and
   spatial clues in the text rather than retrieving memorised locations.
 \item
@@ -1335,13 +1336,13 @@ with structurally similar metes-and-bounds descriptions.
 
 Further incremental improvements are attainable through modest technical
 refinements. A five-call stochastic ensemble of the same o3 model,
-integrated via DBSCAN clustering (MinPts = 3), reduces mean error to ≈19
-km, representing an 18\% accuracy improvement at a marginal incremental
-cost of ≈USD 0.20 and approximately 3 seconds of additional latency per
-grant. Bootstrap confidence intervals confirm the statistical
-significance of this enhancement versus the single-shot model. Such
-methodological refinements illustrate a pathway for rigorous yet
-computationally efficient digital historical analyses.
+integrated via DBSCAN clustering (MinPts = 3), reduces mean error to
+≈19.2 km, representing an 18\% accuracy improvement at a marginal
+incremental cost of ≈USD 0.20 and approximately 3 seconds of additional
+latency per grant. Bootstrap confidence intervals confirm the
+statistical significance of this enhancement versus the single-shot
+model. Such methodological refinements illustrate a pathway for rigorous
+yet computationally efficient digital historical analyses.
 
 Nevertheless, critical epistemological limitations must be acknowledged.
 Even the best-performing models occasionally yield significant
@@ -1454,9 +1455,9 @@ is required, two graduated options emerge. First, a single pass of
 o3-2025-04-16 at its default medium reasoning budget achieves a mean
 error of ≈23 km for roughly \$0.13 per deed. Second, stacking five
 low-temperature, low-reasoning calls of the same o3 model and clustering
-them with DBSCAN (MinPts = 3; method E-1) pushes mean error down to ≈19
-km at a per-grant cost of ≈\$0.20. Because the ensemble averages away
-the occasional outlier, each component call can run with
+them with DBSCAN (MinPts = 3; method E-1) pushes mean error down to
+≈19.2 km at a per-grant cost of ≈\$0.20. Because the ensemble averages
+away the occasional outlier, each component call can run with
 reasoning\_effort = low (≈1.1 k tokens) instead of medium (≈3.2 k
 tokens), so the accuracy gain is bought primarily with additional
 parallel calls rather than a larger context window. Table
@@ -1595,7 +1596,7 @@ prompt---achieves a mean great-circle error of 23 km, cutting the
 professional GIS benchmark by 67 \% and the Stanford NER geoparser by 70
 \%. A lightweight five-call ensemble of the same model, run at low
 reasoning effort and fused with DBSCAN (MinPts = 3), reduces mean error
-further to ≈19 km while adding only ≈US \$0.07 and three seconds per
+further to ≈19.2 km while adding only ≈US \$0.07 and three seconds per
 deed. In contrast, the fastest model (gpt-4o-2024-08-06) incurs a
 negligible cost of US \$0.001 per grant and still stays within a 30 km
 error band, defining a new speed--cost frontier.
@@ -2180,7 +2181,7 @@ Category
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 mean
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-median
+med
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 sd
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -2208,7 +2209,7 @@ Category
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 mean
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-median
+med
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 sd
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
