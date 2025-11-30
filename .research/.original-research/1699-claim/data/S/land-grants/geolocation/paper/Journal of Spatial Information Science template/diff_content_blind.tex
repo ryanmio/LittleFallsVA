@@ -385,9 +385,9 @@ bootstrap confidence intervals, and cumulative-error curves for all
 evaluated LLM variants and a professional GIS baseline (Figure
 \ref{fig:accuracy_bar} and Table \ref{tbl:accuracy}); by presenting
 cost-versus-accuracy and latency-versus-accuracy Pareto frontiers
-(Figures \ref{fig:pareto_cost} and \ref{fig:pareto_latency})
-demonstrating reductions of two to five orders-of-magnitude in dollar
-cost and turnaround time relative to human baselines while preserving or
+(Figures \ref{fig:pareto_cost} and \DIFdelbegin \DIFdel{\ref{fig:pareto_latency}}\DIFdelend \DIFaddbegin \DIFadd{\ref{fig:latency_box}}\DIFaddend ) demonstrating
+reductions of two to five orders-of-magnitude in dollar cost and
+turnaround time relative to human baselines while preserving or
 improving spatial accuracy; and by examining robustness through targeted
 ablations reported in \DIFdelbegin \DIFdel{§ }\DIFdelend \DIFaddbegin \DIFadd{Section }\DIFaddend 6.6, showing that accuracy is essentially
 unaffected by changes in temperature, reasoning-budget, and abstract
@@ -736,7 +736,7 @@ single API call; no external tools are available in this condition.
 \DIFaddbegin \DIFadd{Section 6.1 (Table \ref{tbl:accuracy}) shows M-series mean errors
 spanning ≈23--50 km across models; o3‑2025‑04‑16 is most accurate;
 cost/latency trade‑offs appear in Figures \ref{fig:pareto_cost} and
-\ref{fig:pareto_latency}.
+\ref{fig:latency_box}.
 }\DIFaddend 
 
 \begin{longtable}[]{@{}ll@{}}
@@ -794,7 +794,7 @@ insights into tool-augmented performance. \DIFaddbegin \DIFadd{In this setting t
 tool‑augmented variants do not improve accuracy; the gpt‑4.1 tool‑chain
 (T‑4) is ≈30\% worse than its pure‑prompt counterpart (Section 6.1;
 Table \ref{tbl:accuracy}); see Figures \ref{fig:pareto_cost} and
-\ref{fig:pareto_latency} for cost/latency.
+\ref{fig:latency_box} for cost/latency.
 }\DIFaddend 
 
 \begin{longtable}[]{@{}ll@{}}
@@ -1351,7 +1351,7 @@ Sw \\
 6. Final output & 37.166303, -77.244091 & 37°00'07.2''N 77°07'58.8''W \\
 \end{longtable}
 
-Full reasoning chains are available in \DIFdelbegin \DIFdel{Section \ref{app-cot-trace}}\DIFdelend \DIFaddbegin \DIFadd{appendix}\DIFaddend .
+Full reasoning chains are available in \DIFdelbegin \DIFdel{Section \ref{app-cot-trace}}\DIFdelend \DIFaddbegin \DIFadd{Appendix A.3}\DIFaddend .
 
 The \emph{one-shot} paradigm \DIFdelbegin \DIFdel{asks the model to read the abstract, reason
 internally, and emit coordinates in a single response. All cognition is

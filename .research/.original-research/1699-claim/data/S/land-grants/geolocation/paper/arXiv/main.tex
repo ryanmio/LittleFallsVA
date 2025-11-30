@@ -387,9 +387,9 @@ bootstrap confidence intervals, and cumulative-error curves for all
 evaluated LLM variants and a professional GIS baseline (Figure
 \ref{fig:accuracy_bar} and Table \ref{tbl:accuracy}); by presenting
 cost-versus-accuracy and latency-versus-accuracy Pareto frontiers
-(Figures \ref{fig:pareto_cost} and \ref{fig:pareto_latency})
-demonstrating reductions of two to five orders-of-magnitude in dollar
-cost and turnaround time relative to human baselines while preserving or
+(Figures \ref{fig:pareto_cost} and \ref{fig:latency_box}) demonstrating
+reductions of two to five orders-of-magnitude in dollar cost and
+turnaround time relative to human baselines while preserving or
 improving spatial accuracy; and by examining robustness through targeted
 ablations reported in Section 6.6, showing that accuracy is essentially
 unaffected by changes in temperature, reasoning-budget, and abstract
@@ -709,7 +709,7 @@ single API call; no external tools are available in this condition.
 Section 6.1 (Table \ref{tbl:accuracy}) shows M-series mean errors
 spanning ≈23--50 km across models; o3‑2025‑04‑16 is most accurate;
 cost/latency trade‑offs appear in Figures \ref{fig:pareto_cost} and
-\ref{fig:pareto_latency}.
+\ref{fig:latency_box}.
 
 \begin{longtable}[]{@{}ll@{}}
 \caption{\label{tbl:mmodels}Evaluated one-shot model variants
@@ -758,7 +758,7 @@ insights into tool-augmented performance. In this setting the
 tool‑augmented variants do not improve accuracy; the gpt‑4.1 tool‑chain
 (T‑4) is ≈30\% worse than its pure‑prompt counterpart (Section 6.1;
 Table \ref{tbl:accuracy}); see Figures \ref{fig:pareto_cost} and
-\ref{fig:pareto_latency} for cost/latency.
+\ref{fig:latency_box} for cost/latency.
 
 \begin{longtable}[]{@{}ll@{}}
 \caption{\label{tbl:tmodels}Evaluated tool‑augmented model variants
@@ -1216,7 +1216,7 @@ Sw \\
 6. Final output & 37.166303, -77.244091 & 37°00'07.2''N 77°07'58.8''W \\
 \end{longtable}
 
-Full reasoning chains are available in appendix.
+Full reasoning chains are available in Appendix A.3.
 
 The \emph{one-shot} paradigm produces a single coordinate from the input
 text without external tools. All computation occurs within the model's
@@ -2540,27 +2540,28 @@ heuristics.
 \protect\phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
 \bibitem[\citeproctext]{ref-Bashorun2025_gis}
-Bashorun, B. (2025). \emph{Colonial virginia land grants geocoding
-dataset}. Professional GIS Services.
+Bashorun, B. (2025). \emph{Colonial {Virginia} land grants geocoding
+dataset}. Professional {GIS} Services.
 
 \bibitem[\citeproctext]{ref-Coughlan2018_settlement}
-Coughlan, M. R., \& Nelson, D. R. (2018). Influences of native american
-land use on the colonial euro-american settlement of the south carolina
-piedmont. \emph{PLOS ONE}, \emph{13}(3), e0195036.
+Coughlan, M. R., \& Nelson, D. R. (2018). Influences of {Native
+American} land use on the colonial {Euro-American} settlement of the
+{South Carolina} {Piedmont}. \emph{PLOS ONE}, \emph{13}(3), e0195036.
 \url{https://doi.org/10.1371/journal.pone.0195036}
 
 \bibitem[\citeproctext]{ref-DeedMapper_software}
-Direct Line Software. (2010). \emph{DeedMapper 4.2}. Commercial software
-for historical deed mapping. \url{https://directlinesoftware.com/deeds/}
+Direct Line Software. (2010). \emph{{DeedMapper} 4.2}. Commercial
+software for historical deed mapping.
+\url{https://directlinesoftware.com/deeds/}
 
 \bibitem[\citeproctext]{ref-Dobbs2009_backcountry}
-Dobbs, G. R. (2009). Backcountry settlement development and indian
-trails: A GIS land-grant analysis. \emph{Social Science Computer
+Dobbs, G. R. (2009). Backcountry settlement development and {Indian}
+trails: A {GIS} land-grant analysis. \emph{Social Science Computer
 Review}, \emph{27}(3), 331--347.
 \url{https://doi.org/10.1177/0894439308329760}
 
 \bibitem[\citeproctext]{ref-esri_arcgis_online}
-Esri. (2025). \emph{ArcGIS online}. Cloud-based GIS platform.
+Esri. (2025). \emph{{ArcGIS Online}}. Cloud-based {GIS} platform.
 \url{https://www.arcgis.com/}
 
 \bibitem[\citeproctext]{ref-Fausz1971_settlement}
@@ -2574,93 +2575,95 @@ geographical parsing? \emph{Language Resources and Evaluation},
 \emph{52}(2), 603--623. \url{https://doi.org/10.1007/s10579-017-9385-8}
 
 \bibitem[\citeproctext]{ref-Gritta2018_camcoder}
-Gritta, M., Pilehvar, M. T., \& Collier, N. (2018b). Which melbourne?
-Augmenting geocoding with maps. \emph{Proceedings of the 56th Annual
-Meeting of the Association for Computational Linguistics (ACL 2018)},
+Gritta, M., Pilehvar, M. T., \& Collier, N. (2018b). Which {Melbourne}?
+{Augmenting} geocoding with maps. \emph{Proceedings of the 56th Annual
+Meeting of the Association for Computational Linguistics ({ACL} 2018)},
 1285--1296. \url{https://doi.org/10.17863/CAM.27796}
 
 \bibitem[\citeproctext]{ref-halterman2023mordecai}
-Halterman, A. (2023). \emph{Mordecai 3: A neural geoparser and event
+Halterman, A. (2023). \emph{{Mordecai} 3: A neural geoparser and event
 geocoder}. \url{https://doi.org/10.48550/arXiv.2303.13675}
 
 \bibitem[\citeproctext]{ref-Hu2024_toponym_llm}
 Hu, X., \& Kersten, J. (2024). Enhancing toponym resolution with
 fine-tuned {LLMs} ({Llama2}). \emph{Proceedings of the Second
 International Workshop on Geographic Information Extraction from Texts
-at ECIR 2024 (GeoExT@ECIR)}, 52--56.
+at {ECIR} 2024 ({GeoExT@ECIR})}, 52--56.
 
 \bibitem[\citeproctext]{ref-Huang2024_geoagent}
 Huang, C., Chen, S., Li, Z., Qu, J., Xiao, Y., Liu, J., \& Chen, Z.
-(2024). GeoAgent: To empower LLMs using geospatial tools for address
+(2024). {GeoAgent}: To empower {LLMs} using geospatial tools for address
 standardization. \emph{Findings of the Association for Computational
-Linguistics: ACL 2024}, 6048--6063.
+Linguistics: {ACL} 2024}, 6048--6063.
 \url{https://doi.org/10.18653/v1/2024.findings-acl.362}
 
 \bibitem[\citeproctext]{ref-Julian2014_tennessee}
-Julian, G. M., \& Abbitt, R. J. F. (2014). GIS and genealogy: Teaching
-GIS while learning about the past. \emph{ArcUser}.
+Julian, G. M., \& Abbitt, R. J. F. (2014). {GIS} and genealogy: Teaching
+{GIS} while learning about the past. \emph{ArcUser}.
 \url{https://www.esri.com/about/newsroom/arcuser/gis-and-genealogy}
 
 \bibitem[\citeproctext]{ref-karimzadeh2019geotxt}
 Karimzadeh, M., Pezanowski, S., MacEachren, A., \& Wallgrün, J. O.
-(2019). GeoTxt: A scalable geoparsing system for unstructured text
+(2019). {GeoTxt}: A scalable geoparsing system for unstructured text
 geolocation. \emph{Transactions in GIS}, \emph{23}, 118--136.
 \url{https://doi.org/10.1111/tgis.12510}
 
 \bibitem[\citeproctext]{ref-li2023geogluegeographiclanguageunderstanding}
 Li, D., Ding, R., Zhang, Q., Li, Z., Chen, B., Xie, P., Xu, Y., Li, X.,
-Guo, N., Huang, F., \& He, X. (2023). \emph{GeoGLUE: A GeoGraphic
+Guo, N., Huang, F., \& He, X. (2023). \emph{{GeoGLUE}: A {GeoGraphic}
 language understanding evaluation benchmark}.
 \url{https://arxiv.org/abs/2305.06545}
 
 \bibitem[\citeproctext]{ref-Li2024_geoai}
 Li, W., Janowicz, K., Mai, G., Goodchild, M. F., Gautier, J., Kuhn, W.,
-\& al., et. (2024). GeoAI for science and the science of GeoAI.
+\& al., et. (2024). {GeoAI} for science and the science of {GeoAI}.
 \emph{Journal of Spatial Information Science}, \emph{29}, 1--17.
 \url{https://doi.org/10.5311/JOSIS.2024.29.349}
 
 \bibitem[\citeproctext]{ref-lva_patents_db}
-Library of Virginia. (2025). \emph{Virginia land office patents and
+Library of Virginia. (2025). \emph{{Virginia} land office patents and
 grants online database}. Web portal.
 \url{https://lva-virginia.libguides.com/land-grants}
 
 \bibitem[\citeproctext]{ref-loudoun_grants_dataset}
 Loudoun County Office of Mapping. (2015). \emph{Original land grants of
-loudoun county, VA {[}GIS dataset{]}}. Interactive ArcGIS WebMap.
+{Loudoun County}, {VA} {[}{GIS} dataset{]}}. Interactive {ArcGIS}
+{WebMap}.
 \url{https://www.arcgis.com/apps/MapTools/index.html?appid=d3c4ba1031564f919ca28c9bb5a48350}
 
 \bibitem[\citeproctext]{ref-mioduski_2025_cvp3}
-Mioduski, R. (2025). \emph{Colonial virginia land-grant OCR corpus (vol
-3)}. Zenodo. Version 1.0.0.
+Mioduski, R. (2025). \emph{Colonial {Virginia} land-grant {OCR} corpus
+(vol 3)}. Zenodo. Version 1.0.0.
 \url{https://doi.org/10.5281/zenodo.16269949}.
 \url{https://doi.org/10.5281/zenodo.16269949}
 
 \bibitem[\citeproctext]{ref-mitchell1977whiteoak}
 Mitchell, B. (1977). \emph{Beginning at a white oak: Patents and
-northern neck grants of fairfax county, virginia}. Office of
+{Northern Neck} grants of {Fairfax County}, {Virginia}}. Office of
 Comprehensive Planning, Fairfax County.
 \url{https://www.fairfaxcounty.gov/history-commission/sites/history-commission/files/assets/documents/resources/map.pdf}
 
 \bibitem[\citeproctext]{ref-Nugent1979_cavaliers3}
 Nugent, N. M. (1979). \emph{Cavaliers and pioneers: Abstracts of
-virginia land patents and grants, volume three: 1695-1732}. Virginia
+{Virginia} land patents and grants, volume three: 1695-1732}. Virginia
 State Library.
 
 \bibitem[\citeproctext]{ref-Osullivan2024_metric}
 O'Sullivan, K., Schneider, N. R., \& Samet, H. (2024). Metric reasoning
-in large language models. \emph{Proceedings of the 32nd ACM SIGSPATIAL
-International Conference on Advances in Geographic Information Systems
-(SIGSPATIAL '24)}, 501--504.
+in large language models. \emph{Proceedings of the 32nd {ACM}
+{SIGSPATIAL} International Conference on Advances in Geographic
+Information Systems ({SIGSPATIAL} '24)}, 501--504.
 \url{https://doi.org/10.1145/3678717.3691226}
 
 \bibitem[\citeproctext]{ref-central_va_patents_gis}
-One Shared Story. (2020). \emph{Early virginia land patent - estimated
-polygons {[}CentralVAPatents\_PLY{]}}. ArcGIS Online Feature Service.
+One Shared Story. (2020). \emph{Early {Virginia} land patent - estimated
+polygons {[}{CentralVAPatents\_PLY}{]}}. {ArcGIS Online} Feature
+Service.
 \url{https://www.arcgis.com/home/item.html?id=6fc329e0694b497196435beba8244a47}
 
 \bibitem[\citeproctext]{ref-nominatim_project}
-OpenStreetMap Contributors. (2025). \emph{Nominatim: Open-source
-geocoding with OpenStreetMap data}. Open-source geocoding software.
+OpenStreetMap Contributors. (2025). \emph{{Nominatim}: Open-source
+geocoding with {OpenStreetMap} data}. Open-source geocoding software.
 \url{https://nominatim.org/}
 
 \bibitem[\citeproctext]{ref-savarro2024geolingit}
@@ -2671,17 +2674,17 @@ models to geolocate linguistic variations in social media posts.
 
 \bibitem[\citeproctext]{ref-GoogleResearch2025_geospatial}
 Schottlander, D., \& Shekel, T. (2025). \emph{Geospatial reasoning:
-Unlocking insights with generative AI and multiple foundation models}.
+Unlocking insights with generative {AI} and multiple foundation models}.
 Google Research Blog.
 \url{https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/}
 
 \bibitem[\citeproctext]{ref-geonames_about}
-The GeoNames Team. (2025). \emph{GeoNames}. Geographical database and
+The GeoNames Team. (2025). \emph{{GeoNames}}. Geographical database and
 web services. \url{https://www.geonames.org/about.html}
 
 \bibitem[\citeproctext]{ref-wallgrun2017geocorpora}
 Wallgrün, J. O., Karimzadeh, M., MacEachren, A., \& Pezanowski, S.
-(2017). GeoCorpora: Building a corpus to test and train microblog
+(2017). {GeoCorpora}: Building a corpus to test and train microblog
 geoparsers. \emph{International Journal of Geographical Information
 Science}, \emph{32}, 1--29.
 \url{https://doi.org/10.1080/13658816.2017.1368523}
@@ -2694,7 +2697,7 @@ Wu, Y., Zeng, Z., Liu, K., Xu, Z., Ye, Y., Zhou, S., Yao, H., \& Li, S.
 
 \bibitem[\citeproctext]{ref-yao2023react}
 Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., \& Cao,
-Y. (2023). ReAct: Synergizing reasoning and acting in language models.
+Y. (2023). {ReAct}: Synergizing reasoning and acting in language models.
 \emph{Proceedings of the 11th International Conference on Learning
 Representations}. \url{https://doi.org/10.48550/arXiv.2210.03629}
 
