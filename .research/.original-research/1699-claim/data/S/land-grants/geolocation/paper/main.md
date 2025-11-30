@@ -404,7 +404,7 @@ To illustrate how the two prompting paradigms differ, the chain of thought for g
 
 Table: Qualitative step‑by‑step comparison for grant_04 (WILLIAM WILLIAMS): tool‑augmented chain versus one‑shot prompt. {#tbl:grant04_steps}
 
-Full reasoning chains are available in appendix.
+Full reasoning chains are available in Appendix A.3.
 
 The *one-shot* paradigm produces a single coordinate from the input text without external tools.  All computation occurs within the model’s parameters: the output reflects learned statistical associations in training data (for example, textual co‑occurrence between toponyms and place names); no tool calls are issued.  By contrast, the *tool-chain* paradigm externalises part of the search process.  The model may call a geocoder to retrieve candidate coordinates for surface forms (e.g. "Holloway Swamp"), inspect the returned JSON, run additional look-ups with spelling variants or county qualifiers, and finally aggregate anchors with a centroid tool.  Each call–observe–reflect loop is logged, exposing an auditable chain of evidence.  The trade-off is latency and verbosity: ten turns of querying and self-reflection can be slower and, as Section 6.1 showed, not necessarily more accurate.
 
