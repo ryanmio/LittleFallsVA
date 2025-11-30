@@ -349,9 +349,9 @@ bootstrap confidence intervals, and cumulative-error curves for all
 evaluated LLM variants and a professional GIS baseline (Figure
 \ref{fig:accuracy_bar} and Table \ref{tbl:accuracy}); by presenting
 cost-versus-accuracy and latency-versus-accuracy Pareto frontiers
-(Figures \ref{fig:pareto_cost} and \ref{fig:pareto_latency})
-demonstrating reductions of two to five orders-of-magnitude in dollar
-cost and turnaround time relative to human baselines while preserving or
+(Figures \ref{fig:pareto_cost} and \ref{fig:latency_box}) demonstrating
+reductions of two to five orders-of-magnitude in dollar cost and
+turnaround time relative to human baselines while preserving or
 improving spatial accuracy; and by examining robustness through targeted
 ablations reported in Section 6.6, showing that accuracy is essentially
 unaffected by changes in temperature, reasoning-budget, and abstract
@@ -669,7 +669,7 @@ single API call; no external tools are available in this condition.
 Section 6.1 (Table \ref{tbl:accuracy}) shows M-series mean errors
 spanning ≈23--50 km across models; o3‑2025‑04‑16 is most accurate;
 cost/latency trade‑offs appear in Figures \ref{fig:pareto_cost} and
-\ref{fig:pareto_latency}.
+\ref{fig:latency_box}.
 
 \begin{longtable}[]{@{}ll@{}}
 \caption{\label{tbl:mmodels}Evaluated one-shot model variants
@@ -684,12 +684,12 @@ ID & Model \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-M-1 & \passthrough{\lstinline!o4-mini-2025-04-16!} \\
-M-2 & \passthrough{\lstinline!o3-2025-04-16!} \\
-M-3 & \passthrough{\lstinline!o3-mini-2025-01-31!} \\
-M-4 & \passthrough{\lstinline!gpt-4.1-2025-04-14!} \\
-M-5 & \passthrough{\lstinline!gpt-4o-2024-08-06!} \\
-M-6 & \passthrough{\lstinline!gpt-3.5-turbo!} \\
+M-1 & \texttt{o4-mini-2025-04-16} \\
+M-2 & \texttt{o3-2025-04-16} \\
+M-3 & \texttt{o3-mini-2025-01-31} \\
+M-4 & \texttt{gpt-4.1-2025-04-14} \\
+M-5 & \texttt{gpt-4o-2024-08-06} \\
+M-6 & \texttt{gpt-3.5-turbo} \\
 \end{longtable}
 
 \subsection{Tool-augmented Chain-of-Thought
@@ -718,7 +718,7 @@ insights into tool-augmented performance. In this setting the
 tool‑augmented variants do not improve accuracy; the gpt‑4.1 tool‑chain
 (T‑4) is ≈30\% worse than its pure‑prompt counterpart (Section 6.1;
 Table \ref{tbl:accuracy}); see Figures \ref{fig:pareto_cost} and
-\ref{fig:pareto_latency} for cost/latency.
+\ref{fig:latency_box} for cost/latency.
 
 \begin{longtable}[]{@{}ll@{}}
 \caption{\label{tbl:tmodels}Evaluated tool‑augmented model variants
@@ -733,11 +733,11 @@ ID & Model \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-T-1 & \passthrough{\lstinline!o4-mini-2025-04-16!} \\
-T-2 & \passthrough{\lstinline!o3-2025-04-16!} \\
-T-3 & \passthrough{\lstinline!o3-mini-2025-01-31!} \\
-T-4 & \passthrough{\lstinline!gpt-4.1-2025-04-14!} \\
-T-5 & \passthrough{\lstinline!computer-use-preview-2025-03-11!} \\
+T-1 & \texttt{o4-mini-2025-04-16} \\
+T-2 & \texttt{o3-2025-04-16} \\
+T-3 & \texttt{o3-mini-2025-01-31} \\
+T-4 & \texttt{gpt-4.1-2025-04-14} \\
+T-5 & \texttt{computer-use-preview-2025-03-11} \\
 \end{longtable}
 
 \subsection{Five-call Ensemble
@@ -745,7 +745,7 @@ T-5 & \passthrough{\lstinline!computer-use-preview-2025-03-11!} \\
 
 The E-series leverages \emph{ensembling} to squeeze additional accuracy
 from the best single model. For each abstract the pipeline issues five
-independent one-shot calls to \passthrough{\lstinline!o3-2025-04-16!},
+independent one-shot calls to \texttt{o3-2025-04-16},
 each with a different random seed but identical prompt. The resulting
 five coordinate pairs are clustered with the DBSCAN algorithm (ε = 0.5
 km, MinPts = 3). If at least three predictions fall within the same 0.5
@@ -1176,7 +1176,7 @@ Sw \\
 6. Final output & 37.166303, -77.244091 & 37°00'07.2''N 77°07'58.8''W \\
 \end{longtable}
 
-Full reasoning chains are available in appendix.
+Full reasoning chains are available in Appendix A.3.
 
 The \emph{one-shot} paradigm produces a single coordinate from the input
 text without external tools. All computation occurs within the model's
@@ -1268,7 +1268,7 @@ main findings:
   Patentee-name redaction (E-2) -- To test for possible
   \emph{training-data contamination}, the five-call o3 ensemble (E-1)
   was rerun after masking every patentee name in the abstract with
-  \passthrough{\lstinline![NAME]!}. If the model had memorised
+  \texttt{[NAME]}. If the model had memorised
   grant-name ⟷ coordinate pairs from its pre-training corpus, removing
   this cue should have caused a sharp accuracy drop. In practice mean
   error rose only slightly---from 19.2 km to 20.6 km---and the ≤10 km
@@ -1924,7 +1924,7 @@ Result: {
 \end{enumerate}
 
 \textbf{Final Coordinate Output:}
-\passthrough{\lstinline!37.166303, -77.240091!}
+\texttt{37.166303, -77.240091}
 
 This trace demonstrates how the tool-chain approach systematically
 refines its search, testing multiple geographic hypotheses before
@@ -1938,12 +1938,12 @@ Specifications}\label{a.4-function-tool-specifications}
 
 Two JSON-Schema tools extend the language model's native reasoning with
 external geographic capabilities. The schemas are injected into the
-OpenAI \emph{Responses} request via the \passthrough{\lstinline!tools!}
+OpenAI \emph{Responses} request via the \texttt{tools}
 parameter, allowing the model to emit
-\passthrough{\lstinline!function\_call!} objects whose arguments are
+\texttt{function\_call} objects whose arguments are
 validated and then executed by the evaluation driver. After execution
 the Python backend streams a
-\passthrough{\lstinline!function\_call\_output!} item containing the
+\texttt{function\_call\_output} item containing the
 tool's JSON result, which the model can read on the next turn---in a
 repeated action-observation loop.
 
@@ -1973,12 +1973,12 @@ repeated action-observation loop.
 }
 \end{lstlisting}
 
-The driver maps the call to \passthrough{\lstinline!google\_geocode()!}
+The driver maps the call to \texttt{google\_geocode()}
 with a hard-coded
-\passthrough{\lstinline!components=administrative\_area:VA!} filter,
+\texttt{components=administrative\_area:VA} filter,
 discards results falling outside Virginia, and returns a trimmed JSON
 object
-\passthrough{\lstinline!\{lat, lng, formatted\_address, strategy, query\_used\}!}.
+\texttt{\{lat, lng, formatted\_address, strategy, query\_used\}}.
 A single tool therefore exposes the entire Google Places knowledge graph
 while keeping the model sandboxed from the broader web.
 
@@ -2009,7 +2009,7 @@ while keeping the model sandboxed from the broader web.
 }
 \end{lstlisting}
 
-The backend converts each \passthrough{\lstinline!(lat, lng)!} pair to a
+The backend converts each \texttt{(lat, lng)} pair to a
 unit-sphere Cartesian vector, averages the components, and projects the
 mean vector back to geographic coordinates---an approach that avoids
 meridian-wrap artefacts and preserves accuracy for points separated by
@@ -2024,18 +2024,18 @@ meridian-wrap artefacts and preserves accuracy for points separated by
   \emph{Planning.} The assistant reasons in natural language and decides
   whether a geocoder query is necessary.
 \item
-  \emph{Invocation.} It emits a \passthrough{\lstinline!function\_call!}
+  \emph{Invocation.} It emits a \texttt{function\_call}
   with the chosen arguments. The evaluation script records the call for
   later provenance analysis.
 \item
   \emph{Execution \& Observation.} The Python backend executes the call,
   returning a JSON payload as a
-  \passthrough{\lstinline!function\_call\_output!} message appended to
+  \texttt{function\_call\_output} message appended to
   the conversation.
 \item
   \emph{Reflection.} Reading the payload, the model either (i) issues a
   refined query, (ii) averages multiple anchors via
-  \passthrough{\lstinline!compute\_centroid!}, or (iii) produces a final
+  \texttt{compute\_centroid}, or (iii) produces a final
   coordinate string.
 \end{enumerate}
 
@@ -2046,11 +2046,11 @@ records every intermediate query, result, and internal rationale.
 Repository}\label{a.5-evaluation-driver-code-repository}
 
 All experiments are orchestrated by a single Python script,
-\passthrough{\lstinline!run\_experiment.py!}, which exposes a
+\texttt{run\_experiment.py}, which exposes a
 reproducible command-line interface (CLI) for selecting the evaluation
 set, method roster, and runtime flags (e.g.,
-\passthrough{\lstinline!--dry-run!},
-\passthrough{\lstinline!--max-rows!}). The driver
+\texttt{--dry-run},
+\texttt{--max-rows}). The driver
 
 \begin{itemize}
 \tightlist
@@ -2060,14 +2060,14 @@ set, method roster, and runtime flags (e.g.,
   initialises the OpenAI client with deterministic seeds,
 \item
   executes each model--abstract pair in sequence, proxying any
-  \passthrough{\lstinline!function\_call!} requests to the tool back-end
+  \texttt{function\_call} requests to the tool back-end
   described above,
 \item
   logs raw API traffic---including intermediate tool traces---to
-  \passthrough{\lstinline!runs/<method>/calls.jsonl!}, and
+  \texttt{runs/<method>/calls.jsonl}, and
 \item
   emits both row-level results
-  (\passthrough{\lstinline!results\_<evalset>.csv!}) and a Markdown run
+  (\texttt{results\_<evalset>.csv}) and a Markdown run
   report summarising accuracy, cost, and latency.
 \end{itemize}
 
