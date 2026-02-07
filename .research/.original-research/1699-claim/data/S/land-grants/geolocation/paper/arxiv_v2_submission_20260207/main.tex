@@ -143,7 +143,16 @@
 \makeatletter
 \define@key{lst}{breakanywhere}[true]{}
 \makeatother
-\lstset{inputencoding=utf8}
+\lstset{
+    inputencoding=utf8,
+    basicstyle=\small\ttfamily,
+    breaklines=true,
+    breakatwhitespace=false,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    showstringspaces=false,
+    columns=flexible,
+    keepspaces=true
+}
 \DeclareUnicodeCharacter{00B0}{\textdegree}
 \DeclareUnicodeCharacter{2264}{\ensuremath{\le}}
 \DeclareUnicodeCharacter{2265}{\ensuremath{\ge}}
