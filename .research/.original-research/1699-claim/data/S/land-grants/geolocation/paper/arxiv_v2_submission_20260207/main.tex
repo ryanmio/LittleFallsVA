@@ -153,6 +153,8 @@
     columns=flexible,
     keepspaces=true
 }
+% Make verbatim wrap long lines
+\RecustomVerbatimEnvironment{verbatim}{Verbatim}{breaklines=true,breakanywhere=true,fontsize=\small}
 \DeclareUnicodeCharacter{00B0}{\textdegree}
 \DeclareUnicodeCharacter{2264}{\ensuremath{\le}}
 \DeclareUnicodeCharacter{2265}{\ensuremath{\ge}}
@@ -266,7 +268,7 @@ agriculture, and Indigenous dispossession in the seventeenth and
 eighteenth centuries. Yet the spatial dimension of these sources remains
 under-exploited: most patents survive only as narrative metes-and-bounds
 descriptions in printed abstract volumes such as \emph{Cavaliers and
-Pioneers} (C\&P) {[}@Nugent1979\_cavaliers3{]}. Without geographic
+Pioneers} (C\&P) \cite{ref-Nugent1979_cavaliers3}. Without geographic
 coordinates, historians and archaeologists cannot readily visualize how
 land ownership evolved or test hypotheses with modern Geographic
 Information System (GIS) tools. Creating a machine-readable,
@@ -316,7 +318,7 @@ prior to this work. Key uncertainties addressed in this study included:
   materially improve accuracy relative to a pure text approach?
 \item
   How did model predictions compare to single-analyst GIS workflow
-  {[}@Bashorun2025\_gis{]}, deterministic pipelines such as the GeoTxt
+  \cite{ref-Bashorun2025_gis}, deterministic pipelines such as the GeoTxt
   Stanford NER geoparser {[}@karimzadeh2019geotxt{]}, neural geoparsers
   like Mordecai-3 {[}@halterman2023mordecai{]}, and other heuristic
   benchmarks in both error and cost?
@@ -326,10 +328,10 @@ Addressing these questions required a rigorously annotated test bench
 that blended historical sources, modern GIS ground truth, and controlled
 prompt engineering. The methodological design seeks to embody principles
 of rigorous and responsible GeoAI research, as outlined by Li et
-al.~{[}@Li2024\_geoai{]} and detailed further in Section 2.4,
+al.~\cite{ref-Li2024_geoai} and detailed further in Section 2.4,
 and---relative to classic geoparsers such as Stanford NER/GeoTxt
 {[}@karimzadeh2019geotxt{]}, Mordecai‑3 {[}@halterman2023mordecai{]},
-and the map‑aware CamCoder {[}@Gritta2018\_camcoder{]}---centers on
+and the map‑aware CamCoder \cite{ref-Gritta2018_camcoder}---centers on
 long, archaic abstracts with nested landmarks and surveyor bearings
 rather than the short, contemporary texts common in prior benchmarks.
 Accordingly, we compare a pure text‑only pipeline to an LLM‑plus‑tools
@@ -347,7 +349,7 @@ This study makes four principal contributions:
 \tightlist
 \item
   Releases the first copyright-compliant, machine-readable dataset of
-  \emph{Cavaliers and Pioneers}, Vol. 3 {[}@Nugent1979\_cavaliers3{]},
+  \emph{Cavaliers and Pioneers}, Vol. 3 \cite{ref-Nugent1979_cavaliers3},
   including (i) row-level metadata---row identifier, word count, and
   SHA-256 hash---for all 5,471 abstracts, and (ii) limited,
   non-substitutable excerpts of up to 200 words for the 43 evaluation
@@ -394,7 +396,7 @@ constrained by the extensive manual labor required to convert
 metes-and-bounds descriptions into spatial data. Traditional approaches
 to georeferencing these historical records have proven prohibitively
 time-consuming - a genealogical case study by Julian and Abbitt
-{[}@Julian2014\_tennessee{]} required nearly ten years of archival
+\cite{ref-Julian2014_tennessee} required nearly ten years of archival
 sleuthing and three university-semester GIS projects to pinpoint a
 single family's land claims across three Tennessee counties.
 
@@ -420,24 +422,24 @@ with polygonal boundaries, establishing both the feasibility and
 research value of transforming metes-and-bounds descriptions into
 spatial data. Building on such foundations, scholars have leveraged
 available georeferenced grants for substantive historical analysis. In
-Virginia, seminal studies like Fausz {[}@Fausz1971\_settlement{]}
+Virginia, seminal studies like Fausz \cite{ref-Fausz1971_settlement}
 utilized narrative patent abstracts to trace settlement patterns along
 the James River basin, while noting the persistent challenges of
 transforming textual descriptions into precise spatial coordinates for
 quantitative analysis.
 
 This analytical potential extends beyond Virginia. Dobbs
-{[}@Dobbs2009\_backcountry{]} used georeferenced North Carolina grants
+\cite{ref-Dobbs2009_backcountry} used georeferenced North Carolina grants
 to demonstrate that eighteenth-century town sites often followed
 pre-existing Indigenous trails, while Coughlan and Nelson
-{[}@Coughlan2018\_settlement{]} leveraged a dataset of 1,160 South
+\cite{ref-Coughlan2018_settlement} leveraged a dataset of 1,160 South
 Carolina grants to model settlement patterns based on river access and
 soil analysis. In each case, spatial enablement of historical records
 revealed patterns difficult to discern through textual sources alone.
 
 In genealogical and historical research communities, semi-automated
 solutions have emerged to assist with this labor-intensive process.
-DeedMapper software {[}@DeedMapper\_software{]} helps researchers
+DeedMapper software \cite{ref-DeedMapper_software} helps researchers
 convert metes-and-bounds descriptions into visual plots, though it still
 requires manual entry of deed text and expert positioning of parcels on
 reference maps. Professional development courses from the Salt Lake
@@ -470,7 +472,7 @@ coordinates.
 The evolution of this field has moved through several distinct
 methodological phases. Rule-based gazetteer look-ups dominated early
 work, providing limited accuracy when dealing with ambiguous place
-names. Neural architectures such as CamCoder {[}@Gritta2018\_camcoder{]}
+names. Neural architectures such as CamCoder \cite{ref-Gritta2018_camcoder}
 subsequently improved performance through learned contextual
 representations. Most recently, fine-tuned large language models have
 demonstrated substantial breakthroughs in toponym resolution accuracy. A
@@ -501,7 +503,7 @@ pretrained language models can internalize subtle linguistic cues of
 place.
 
 Despite these advances, significant limitations remain. O'Sullivan et
-al.~{[}@Osullivan2024\_metric{]} demonstrated that GPT-class models
+al.~\cite{ref-Osullivan2024_metric} demonstrated that GPT-class models
 mis-calibrate qualitative distance terms: \emph{near} in a neighborhood
 scenario is treated similarly to \emph{near} at continental scale,
 revealing a lack of geometric grounding. Such biases caution against
@@ -536,15 +538,15 @@ This hybrid approach has evolved through several distinct
 implementations, each targeting different aspects of the geolocation
 challenge. Early evidence for its effectiveness comes from Hu et
 al.~{[}@Hu2024\_toponym\_llm{]}, who coupled a fine-tuned Llama 2-7B
-with a cascading trio of geocoders---GeoNames {[}@geonames\_about{]},
-Nominatim {[}@nominatim\_project{]}, and ArcGIS Online
+with a cascading trio of geocoders---GeoNames \cite{ref-geonames_about},
+Nominatim \cite{ref-nominatim_project}, and ArcGIS Online
 {[}@esri\_arcgis\_online{]}---to resolve toponyms the model had already
 disambiguated linguistically. Their experiments demonstrated that this
 hybrid pipeline raised Accuracy@161 km by 7--17 percentage points
 relative to either component used in isolation.
 
 Extending this concept to more complex natural language descriptions,
-Huang et al.~{[}@Huang2024\_geoagent{]} developed GeoAgent for free-form
+Huang et al.~\cite{ref-Huang2024_geoagent} developed GeoAgent for free-form
 address normalization. This system enables the LLM to convert colloquial
 descriptions (e.g., ``two blocks east of the old courthouse'') into
 structured cues, orchestrate vector-database lookups and offset
@@ -565,7 +567,7 @@ tasks requiring both linguistic interpretation and computational
 precision.
 
 At enterprise scale, Google Research's \emph{Geospatial Reasoning}
-initiative {[}@GoogleResearch2025\_geospatial{]} exemplifies the
+initiative \cite{ref-GoogleResearch2025_geospatial} exemplifies the
 integration of foundation models with Earth Engine, BigQuery, and Maps
 Platform. This system enables agentic LLMs to chain satellite imagery,
 socioeconomic layers, and routing services to answer compound spatial
@@ -576,7 +578,7 @@ Across these diverse implementations, a consistent finding emerges:
 granting an LLM controlled access to trusted GIS services reduces
 hallucination, improves numerical accuracy, and broadens task coverage
 (Hu et al.~{[}@Hu2024\_toponym\_llm{]}; Huang et
-al.~{[}@Huang2024\_geoagent{]}). The present work builds on this pattern
+al.~\cite{ref-Huang2024_geoagent}). The present work builds on this pattern
 by testing whether a similar benefit materializes for colonial
 land‑grant geolocation---comparing a pure one‑shot prompt to a
 tool‑augmented chain‑of‑thought that can issue mid‑prompt geocoding and
@@ -595,7 +597,7 @@ Recent calls within the GeoAI community emphasize the need for empirical
 studies that are not only traditionally scientifically sound but also
 actively engage with the foundational tenets of \textbf{predictability},
 \textbf{interpretability}, \textbf{reproducibility}, and \textbf{social
-responsibility}, which Li et al.~{[}@Li2024\_geoai{]} identify as four
+responsibility}, which Li et al.~\cite{ref-Li2024_geoai} identify as four
 essential pillars for solidifying GeoAI's scientific rigor and ensuring
 its lasting, beneficial impact.
 
@@ -696,7 +698,7 @@ GeoAI.
 
 \subsection{3.1 Corpus Overview}\label{corpus-overview}
 
-\emph{Cavaliers \& Pioneers}, Volume 3 {[}@Nugent1979\_cavaliers3{]}
+\emph{Cavaliers \& Pioneers}, Volume 3 \cite{ref-Nugent1979_cavaliers3}
 contains 5,471 abstracts of Virginia land patents recorded in patent
 books 9--14 (1695--1732). The digitized corpus
 {[}@mioduski\_2025\_cvp3{]} provides machine-readable versions of these
@@ -794,7 +796,7 @@ standards for historical-GIS ground truth.
 \subsection{4.1 GIS Analyst Baseline
 (H-1)}\label{gis-analyst-baseline-h-1}
 
-A certified GIS analyst {[}@Bashorun2025\_gis{]} implemented an
+A certified GIS analyst \cite{ref-Bashorun2025_gis} implemented an
 automated geolocating procedure leveraging standard geospatial libraries
 and toolsets. The analyst was selected through a competitive bidding
 process on a freelancer marketplace, where 49 qualified contractors
@@ -1522,7 +1524,7 @@ main findings:
 \item
   Outlier-robust summary -- Excluding the five largest residuals (top
   11\% of errors) lowers the overall mean error from 38.5 km to 36.9 km.
-  Method rankings remain unchanged; only H-1 {[}@Bashorun2025\_gis{]}
+  Method rankings remain unchanged; only H-1 \cite{ref-Bashorun2025_gis}
   (−6.6 km) and M-6 (−6.3 km) show material shifts.
 \item
   Patentee-name redaction (E-2) -- To test for possible
@@ -1792,7 +1794,7 @@ Several caveats temper the preceding claims.
   reproducibility.
 \item
   \textbf{GIS benchmark generality.} The GIS analyst baseline
-  {[}@Bashorun2025\_gis{]} relies on a single expert-authored geocoding
+  \cite{ref-Bashorun2025_gis} relies on a single expert-authored geocoding
   procedure. Accuracy and efficiency might vary significantly with
   different gazetteer sources, methods, parameter tuning, or analyst
   expertise. Therefore, this single-practitioner workflow is best
@@ -1818,7 +1820,7 @@ Building on the present findings, several avenues warrant exploration.
 \tightlist
 \item
   \textbf{Corpus expansion.} Digitizing the remaining volumes of
-  \emph{Cavaliers and Pioneers} {[}@Nugent1979\_cavaliers3{]}---and
+  \emph{Cavaliers and Pioneers} \cite{ref-Nugent1979_cavaliers3}---and
   analogous land books from Maryland and North Carolina---would permit a
   cross-colonial analysis of settlement diffusion.
 \item
@@ -1928,7 +1930,7 @@ Nugent, whose \emph{Cavaliers and Pioneers} abstracts have preserved
 Virginia's colonial land records for generations of scholars, and the
 rigorous GIS work of One Shared Story, whose Central VA Patents dataset
 enabled the ground truth evaluation essential to this study. The authors
-are deeply grateful to Bimbola Bashorun {[}@Bashorun2025\_gis{]} for
+are deeply grateful to Bimbola Bashorun \cite{ref-Bashorun2025_gis} for
 providing the professional GIS benchmark that was crucial to evaluating
 model performance.
 
