@@ -3,25 +3,41 @@
 \usepackage{amsmath,amssymb}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp} % \textdegree, etc.
 \usepackage{graphicx}
-\usepackage{cite}
+\usepackage[square,numbers]{natbib}
 \usepackage{hyperref}
 \usepackage{url}
 \usepackage{listings}
+\usepackage{calc} % allow width expressions in table column specs
+\usepackage{subcaption} % provides subfigure environment
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{array}
-\usepackage{multirow}
-\usepackage{wrapfig}
 \usepackage{float}
-\usepackage{colortbl}
-\usepackage{pdflscape}
-\usepackage{tabu}
-\usepackage{threeparttable}
-\usepackage{threeparttablex}
-\usepackage[normalem]{ulem}
-\usepackage{makecell}
 \usepackage{xcolor}
+
+% Pandoc compatibility: avoid "Undefined control sequence" for \tightlist
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Unicode characters that commonly appear in the manuscript
+\DeclareUnicodeCharacter{00B0}{\textdegree} % °
+\DeclareUnicodeCharacter{2011}{-} % non-breaking hyphen
+\DeclareUnicodeCharacter{2013}{--} % en-dash
+\DeclareUnicodeCharacter{2014}{---} % em-dash
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}} % −
+\DeclareUnicodeCharacter{2248}{\ensuremath{\approx}} % ≈
+\DeclareUnicodeCharacter{2260}{\ensuremath{\neq}} % ≠
+\DeclareUnicodeCharacter{2264}{\ensuremath{\le}} % ≤
+\DeclareUnicodeCharacter{2265}{\ensuremath{\ge}} % ≥
+\DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}} % Δ
+\DeclareUnicodeCharacter{03B5}{\ensuremath{\varepsilon}} % ε
+\DeclareUnicodeCharacter{27F7}{\ensuremath{\longleftrightarrow}} % ⟷
+
+% Pandoc tables sometimes use \real{...} inside width calculations.
+\providecommand{\real}[1]{#1}
 
 % Code block styling
 \definecolor{codebackground}{rgb}{0.95,0.95,0.95}
@@ -33,12 +49,22 @@
     rulecolor=\color{codeborder},
     xleftmargin=1em,
     framesep=5pt,
+    inputencoding=utf8,
     breaklines=true,
     breakatwhitespace=false,
     prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
     showstringspaces=false,
     columns=flexible,
-    keepspaces=true
+    keepspaces=true,
+    literate=
+      {°}{{\textdegree}}1
+      {–}{{--}}1
+      {—}{{---}}1
+      {‑}{{-}}1
+      {•}{{-}}1
+      {≥}{{$\ge$}}1
+      {≤}{{$\le$}}1
+      {≈}{{$\approx$}}1
 }
 
 \title{Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants*}
@@ -54,7 +80,7 @@
 
 \input{content.tex}
 
-\bibliographystyle{plain}
+\bibliographystyle{plainnat}
 \bibliography{refs}
 
 \end{document}
