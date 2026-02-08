@@ -152,6 +152,16 @@
   \setlength{\parskip}{0pt}%
   \linespread{0.9}\selectfont\small%
 }
+% Unicode character declarations for special symbols
+\DeclareUnicodeCharacter{00B0}{\textdegree}
+\DeclareUnicodeCharacter{2264}{\ensuremath{\le}}
+\DeclareUnicodeCharacter{2265}{\ensuremath{\ge}}
+\DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
+\DeclareUnicodeCharacter{2013}{--}
+\DeclareUnicodeCharacter{2014}{---}
+\DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -1150,7 +1160,7 @@ attains the lowest mean error.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/accuracy_bar.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{figures/accuracy_bar.pdf}}
 \caption{Mean geolocation error by method with 95\% CIs on 43 grants;
 enables direct accuracy comparison across LLMs and
 baselines.}\label{fig:accuracy_bar}
@@ -1163,7 +1173,7 @@ dispersion for baselines.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/error_violin_methods.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{figures/error_violin_methods.pdf}}
 \caption{Error distributions by method; shows spread, skew, and outliers
 for LLMs versus baselines.}\label{fig:violin}
 \end{figure}
@@ -1180,7 +1190,7 @@ outperform manual geocoding.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/error_violin_core_methods.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{figures/error_violin_core_methods.pdf}}
 \caption{Error distributions for LLMs vs.~GIS analyst only, isolating
 core methods from heuristic baselines.}\label{fig:violin_core}
 \end{figure}
@@ -1196,7 +1206,7 @@ that the ``best'' model depends on a project's operational error budget
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/cdf_graphs/cdf_models_combined.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{figures/cdf_graphs/cdf_models_combined.pdf}}
 \caption{Cumulative accuracy vs.~distance threshold (km); higher‑left
 curves indicate better performance across
 thresholds.}\label{fig:cdf_models}
@@ -1311,7 +1321,7 @@ H-3 & 0.00 & 94.3 \\
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/pareto_tradeoff.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{figures/pareto_tradeoff.pdf}}
 \caption{Cost--accuracy Pareto frontier: mean error (km) versus cost per
 1,000 located grants (USD). Points nearer the lower-left frontier
 represent better cost--accuracy trade-offs.}\label{fig:pareto_cost}
@@ -1334,7 +1344,7 @@ o-series models (particularly o3-2025-04-16) taking up to 48 seconds.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.75\linewidth]{../analysis/figures/latency_boxplot.pdf}
+\includegraphics[width=0.75\linewidth]{figures/latency_boxplot.pdf}
 \caption{Per-grant latency by method (seconds; log-scale x-axis). Boxplots show medians and interquartile ranges; whiskers indicate the 1.5 IQR range; outliers are omitted.}
 \label{fig:latency_box}
 \end{figure}
@@ -1519,7 +1529,7 @@ main findings:
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio]{../analysis/figures/length_vs_error.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{figures/length_vs_error.png}}
 \caption{Abstract length versus error; tests whether longer texts
 improve geolocation accuracy (no meaningful relationship
 found).}\label{fig:length-vs-error}
@@ -2708,6 +2718,6 @@ geographic information through other sources not captured by these
 heuristics.
 
 \renewcommand\refname{References}
-\bibliography{refs.bib}
+\bibliography{refs}
 
 \end{document}
