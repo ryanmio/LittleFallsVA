@@ -2,6 +2,7 @@
 \documentclass[
   11pt,
 ]{article}
+\usepackage{cite}
 \usepackage{xcolor}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
@@ -37,7 +38,7 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{color}
-\usepackage{fancyvrb}
+\IfFileExists{fvextra.sty}{\usepackage{fvextra}}{\usepackage{fancyvrb}}
 \newcommand{\VerbBar}{|}
 \newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
@@ -153,8 +154,8 @@
     columns=flexible,
     keepspaces=true
 }
-% Make verbatim wrap long lines
-\RecustomVerbatimEnvironment{verbatim}{Verbatim}{breaklines=true,breakanywhere=true,fontsize=\small}
+% Configure verbatim to use smaller font (helps with wrapping)
+\fvset{fontsize=\small}
 \DeclareUnicodeCharacter{00B0}{\textdegree}
 \DeclareUnicodeCharacter{2264}{\ensuremath{\le}}
 \DeclareUnicodeCharacter{2265}{\ensuremath{\ge}}
